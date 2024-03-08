@@ -10,3 +10,4 @@
 .include "src/audio/music/unioncave.asm"
 .include "src/audio/music/goldenrodcity.asm"
 .include "src/audio/music/gamecorner.asm"
+.include "src/audio/music/lookhiker.asm"
