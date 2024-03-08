@@ -11,19 +11,8 @@ IFDEF NSF_FILE
 	.pad $10000, $00
 ENDIF
 
-.base $8000
 ; audio
 .include "src/audio.asm"
-.pad $a000, $00
-
-.base $a000
-; music
-.pad $c000, $00
-
-.base $c000
-; dpcm
-.incbin "src/data/dmc/bank-1.bin"
-.pad $e000, $00
 
 .base $a000
 ; pokemon cries
