@@ -11,22 +11,22 @@ Music_LookYoungster_Ch1:
 	db	$da,$00,$76
 ; P1-1
 	db	$db,$03
-	db	$d8,$c,$06
+	db	$d8,$8c,$a3
 	db	$d4,$80
 	db	$90
 	db	$a0
 	db	$b0
 ; P1-2
-	db	$d8,$8c,$3e
+	db	$dc,$3e
 	db	$cf
-	db	$d8,$c,$08
+	db	$dc,$c3
 ; P1-3
 	db	$d3,$10
 	db	$02
 	db	$13
 	db	$01
 	db	$15
-	db	$d8,$c,$07
+	db	$dc,$b3
 @mainloop:
 ; P1-4
 	db	$01
@@ -70,15 +70,15 @@ Music_LookYoungster_Ch2:
 ; P2-1
 	db	$e1,$12,$26
 	db	$db,$01
-	db	$d8,$c,$06
+	db	$d8,$8c,$a3
 	db	$d4,$c0
 	db	$d3,$10
 	db	$20
 	db	$30
 ; P2-2
-	db	$d8,$8c,$3e
+	db	$d8,$8c,$2e
 	db	$8f
-	db	$d8,$c,$07
+	db	$d8,$8c,$b3
 	db	$dc,$c3
 ; P2-3
 	db	$60
@@ -88,7 +88,7 @@ Music_LookYoungster_Ch2:
 	db	$75
 @mainloop:
 	db	$db,$03
-	db	$dc,$07
+	db	$dc,$b3
 ; P2-4
 	db	$01
 	db	$d4,$c0
@@ -104,7 +104,7 @@ Music_LookYoungster_Ch2:
 	db	$60
 	db	$00
 ; P2-5
-	db	$dc,$19
+	db	$dc,$97
 	db	$db,$02
 	db	$40
 	db	$60
@@ -121,7 +121,7 @@ Music_LookYoungster_Ch2:
 	db	$90
 	db	$00
 	db	$db,$03
-	db	$dc,$07
+	db	$dc,$b3
 ; P2-6
 	db	$01
 	db	$c0
@@ -137,7 +137,7 @@ Music_LookYoungster_Ch2:
 	db	$60
 	db	$00
 	db	$db,$02
-	db	$dc,$19
+	db	$dc,$97
 ; P2-7
 	db	$90
 	db	$b0

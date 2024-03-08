@@ -15,19 +15,19 @@ Music_Bicycle_Ch1:
 	db	$e6,$00,$01
 	db	$e1,$8,$15
 ; P1-1
-	db	$d8,$c,$0a
+	db	$d8,$8c,$b4
 	db	$d4,$c5
 	db	$a5
 	db	$83
 ; P1-2
-	db	$dc,$1d
+	db	$dc,$b0
 	db	$a5
-	db	$dc,$0f
+	db	$dc,$b6
 	db	$a7
-	db	$dc,$05
+	db	$dc,$b2
 	db	$71
 @mainloop:
-	db	$dc,$05
+	db	$dc,$b2
 ; P1-3
 	db	$81
 	db	$81
@@ -94,7 +94,10 @@ Music_Bicycle_Ch1:
 	db	$71
 	db	$81
 ; P1-10
-	db	$73
+	db	$71
+	db	$dc,$82
+	db	$71
+	db	$dc,$b2
 	db	$a1
 	db	$81
 	db	$71
@@ -102,7 +105,7 @@ Music_Bicycle_Ch1:
 	db	$91
 	db	$a1
 ; P1-11
-	db	$dc,$0f
+	db	$dc,$b6
 	db	$c3
 	db	$83
 	db	$d3,$33
@@ -168,12 +171,12 @@ Music_Bicycle_Ch2:
 	db	$db,$02
 	db	$e1,$10,$24
 ; P2-1
-	db	$d8,$c,$0f
+	db	$d8,$8c,$c6
 	db	$d3,$35
 	db	$15
 	db	$d4,$c3
 ; P2-2
-	db	$dc,$05
+	db	$dc,$c2
 	db	$d3,$31
 	db	$30
 	db	$50
@@ -181,31 +184,31 @@ Music_Bicycle_Ch2:
 	db	$30
 	db	$50
 	db	$31
-	db	$dc,$08
+	db	$dc,$c3
 	db	$11
 	db	$d4,$c1
 	db	$a1
 @mainloop:
 ; P2-3
 	db	$db,$02
-	db	$dc,$08
+	db	$dc,$c3
 	db	$d4,$c3
 	db	$83
 	db	$a3
 	db	$73
 ; P2-4
-	db	$dc,$05
+	db	$dc,$c2
 	db	$81
 	db	$71
 	db	$51
 	db	$71
-	db	$dc,$0e
+	db	$dc,$c5
 	db	$37
 ; P2-5
-	db	$dc,$0b
+	db	$dc,$c4
 	db	$53
 	db	$83
-	db	$dc,$05
+	db	$dc,$c2
 	db	$51
 	db	$c1
 	db	$a1
@@ -215,27 +218,27 @@ Music_Bicycle_Ch2:
 	db	$81
 	db	$a1
 	db	$81
-	db	$dc,$0e
+	db	$dc,$c5
 	db	$77
 ; P2-7
-	db	$dc,$08
+	db	$dc,$c3
 	db	$c3
 	db	$83
 	db	$a3
 	db	$73
 ; P2-8
-	db	$dc,$05
+	db	$dc,$c2
 	db	$81
 	db	$71
 	db	$51
 	db	$71
-	db	$dc,$0e
+	db	$dc,$c5
 	db	$37
 ; P2-9
-	db	$dc,$0b
+	db	$dc,$c4
 	db	$53
 	db	$83
-	db	$dc,$05
+	db	$dc,$c2
 	db	$51
 	db	$d3,$51
 	db	$31
@@ -245,26 +248,26 @@ Music_Bicycle_Ch2:
 	db	$d3,$11
 	db	$31
 	db	$51
-	db	$dc,$0f
+	db	$dc,$c7
 	db	$77
 ; P2-11
 	db	$fe
 	dw	@sub1
 ; P2-14
 	db	$73
-	db	$dc,$08
+	db	$dc,$c3
 	db	$a1
 	db	$31
 	db	$51
 	db	$61
 	db	$73
-	db	$dc,$0f
+	db	$dc,$c7
 ; P2-15
 	db	$fe
 	dw	@sub1
 ; P2-18
 	db	$73
-	db	$dc,$08
+	db	$dc,$c3
 	db	$a1
 	db	$c1
 	db	$a1
