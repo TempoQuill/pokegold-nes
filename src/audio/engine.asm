@@ -2370,6 +2370,8 @@ ApplyEnvLength:
 	LDY #CHANNEL_ENV_LENGTH
 	LDA (zCurTrackAudioPointer), Y
 	TAX
+	AND #$f0
+	REQ
 	DEX
 	TXA
 	AND #$07
