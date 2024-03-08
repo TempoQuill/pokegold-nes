@@ -2377,6 +2377,9 @@ ApplyEnvLength:
 	BEQ @Change
 	DEX
 	TXA
+	AND #$07
+	BEQ @Change
+	TXA
 	STA (zCurTrackAudioPointer), Y
 	RTS
 @Change:
