@@ -1,16 +1,16 @@
 Music_VioletCity:
 	db	080h
-	dw	yoshino1
+	dw	Music_VioletCity_Ch1
 	db	001h
-	dw	yoshino2
+	dw	Music_VioletCity_Ch2
 	db	002h
-	dw	yoshino3
+	dw	Music_VioletCity_Ch3
 	db	003h
-	dw	yoshino4
+	dw	Music_VioletCity_Ch4
 	db	004h
-	dw	yoshino5
+	dw	Music_VioletCity_Ch5
 ;----------------------------------------
-yoshino1:
+Music_VioletCity_Ch1:
 ;----------------------------------------
 	db	$da,$00,$a4
 ; P1-1
@@ -261,7 +261,7 @@ yoshino1:
 	db	$fd,0
 	dw	@mainloop
 ;----------------------------------------
-yoshino2:
+Music_VioletCity_Ch2:
 ;----------------------------------------
 ; P2-1
 	db	$e1,$12,$24
@@ -460,7 +460,7 @@ yoshino2:
 	db	$fd,0
 	dw	@mainloop
 ;----------------------------------------
-yoshino3:
+Music_VioletCity_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$d8,$c,$5e
@@ -697,11 +697,11 @@ yoshino3:
 	db	$d5,$a3
 	db	$ff
 ;----------------------------------------
-yoshino4:
+Music_VioletCity_Ch4:
 ;----------------------------------------
 	db	$e3,$003
 ;----------------------------------------
-yoshino5:
+Music_VioletCity_Ch5:
 ;----------------------------------------
 ; P4-1
 	db	$d8,$c

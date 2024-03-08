@@ -1,16 +1,16 @@
 Music_ViridianCity:
 	db	080h
-	dw	m_nibi1
+	dw	Music_ViridianCity_Ch1
 	db	001h
-	dw	m_nibi2
+	dw	Music_ViridianCity_Ch2
 	db	002h
-	dw	m_nibi3
+	dw	Music_ViridianCity_Ch3
 	db	003h
-	dw	m_nibi4
+	dw	Music_ViridianCity_Ch4
 	db	004h
-	dw	m_nibi5
+	dw	Music_ViridianCity_Ch5
 ;----------------------------------------
-m_nibi1:
+Music_ViridianCity_Ch1:
 ;----------------------------------------
 	db	$da,$00,$9d
 ; P1-1
@@ -268,7 +268,7 @@ m_nibi1:
 	db	$00
 	db	$ff
 ;----------------------------------------
-m_nibi2:
+Music_ViridianCity_Ch2:
 ;----------------------------------------
 ; P2-1
 	db	$e1,$10,$46
@@ -511,7 +511,7 @@ m_nibi2:
 	db	$41
 	db	$ff
 ;----------------------------------------
-m_nibi3:
+Music_ViridianCity_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$12,$24
@@ -745,11 +745,11 @@ m_nibi3:
 	db	$37
 	db	$ff
 ;----------------------------------------
-m_nibi4:
+Music_ViridianCity_Ch4:
 ;----------------------------------------
 	db	$e3,$003
 ;----------------------------------------
-m_nibi5:
+Music_ViridianCity_Ch5:
 ;----------------------------------------
 ; P4-1
 	db	$d8,$c
