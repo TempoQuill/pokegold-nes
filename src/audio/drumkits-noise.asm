@@ -45,6 +45,20 @@ Drumkit3:
 	.dw Drum0_0
 	.dw Drum3_3
 	.dw Drum0_0
+Drumkit4:
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum4_7
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum3_5
+	.dw Drum4_7
+	.dw Drum4_8
+	.dw Drum4_9
+	.dw Drum4_10
+	.dw Drum0_0
+	.dw Drum0_0
 Drum0_0:
 	.db $20,$10,$00
 	.db $ff
@@ -78,3 +92,24 @@ Drum3_9:
 	.db $23,$03,$02
 	.db $20,$10,$01
 	.db $ff
+Drum4_7:
+	.db $20,$1c,$00
+	.db $20,$19,$00
+	.db $20,$10,$01
+	.db $ff
+Drum4_8:
+	.db $20,$18,$06
+	.db $20,$14,$06
+	.db $20,$10,$01
+	.db $ff
+Drum4_9:
+	.db $20,$18,$08
+	.db $20,$14,$08
+	.db $20,$10,$01
+	.db $ff
+Drum4_10:
+	.db $20,$1c,$02
+	.db $20,$19,$02
+	.db $20,$10,$01
+	.db $ff
+

@@ -151,6 +151,15 @@ DMC_3_11:	.dsb $30
 DMC_3_11_END:
 DMC_3_12:	.dsb $9c
 DMC_3_12_END:
+DMC_4_5:	.dsb $23
+DMC_4_5_END:
+	.dsb 1
+DMC_4_8:	.dsb $b
+DMC_4_8_END:
+	.dsb 1
+DMC_4_9:	.dsb $16
+DMC_4_9_END:
+	.dsb 2
 DMC_3_0:
 DMC_3_0_END:
 .ende
