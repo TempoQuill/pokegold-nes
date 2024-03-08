@@ -1,5 +1,5 @@
 FrequencyTable:
-	.dw $fff
+	.dw $ffff
 
 	.dw $d5b
 	.dw $c9c
