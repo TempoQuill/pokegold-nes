@@ -3,6 +3,7 @@ Drumkits_Noise:
 	.dw Drumkit1
 	.dw Drumkit0
 	.dw Drumkit3
+	.dw Drumkit4
 Drumkit0:
 	.dw Drum0_0
 	.dw Drum0_6

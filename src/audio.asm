@@ -12,6 +12,7 @@
 .include "src/audio/music/unioncave.asm"
 .include "src/audio/music/lookhiker.asm"
 .include "src/audio/music/cherrygrovecity.asm"
+.include "src/audio/music/gym.asm"
 .pad $a000, $00
 
 .base $a000

@@ -7,6 +7,7 @@ Music:
 	dba PRG_Audio, Music_HealPokemon
 	dba PRG_Music0, Music_Bicycle
 	dba PRG_Music0, Music_GameCorner
+	dba PRG_Audio, Music_Gym
 	dba PRG_Audio, Music_CherrygroveCity
 	dba PRG_Audio, Music_UnionCave
 	dba PRG_Audio, Music_LookYoungster
