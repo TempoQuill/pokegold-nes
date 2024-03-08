@@ -16,7 +16,7 @@ Music_UnionCave_Ch1:
 	db	$e1,$18,$34
 ; P1-1
 @mainloop:
-	db	$d8,$c,$07
+	db	$d8,$8c,$b3
 @loop1:
 	db	$fe
 	dw	@sub1
@@ -44,7 +44,7 @@ Music_UnionCave_Ch1:
 	dw	@loop3
 ; P1-17
 	db	$03	; 4bu yasumu
-	db	$dc,$18
+	db	$dc,$80
 	db	$6f
 ; P1-18
 	db	$7f
@@ -65,7 +65,7 @@ Music_UnionCave_Ch1:
 	db	$d3,$17
 	db	$d4,$a7
 ; P1-25
-	db	$dc,$0a
+	db	$dc,$95
 @loop4:
 	db	$e6,$00,$04
 	db	$fe
@@ -94,19 +94,19 @@ Music_UnionCave_Ch2:
 	db	$e1,$8,$24
 ; P2-1
 @mainloop:
-	db	$d8,$c,$0b
+	db	$d8,$8c,$c4
 	db	$fe
 	dw	@sub1
 ; P2-5
-	db	$dc,$0d
+	db	$dc,$c5
 	db	$fe
 	dw	@sub1
 ; P2-9
-	db	$dc,$0f
+	db	$dc,$c7
 	db	$fe
 	dw	@sub1
 ; P2-13
-	db	$dc,$0b
+	db	$dc,$c4
 	db	$23
 	db	$d4,$c3
 	db	$d3,$31
@@ -130,7 +130,7 @@ Music_UnionCave_Ch2:
 	db	$23
 ; P2-17
 	db	$03	; 4bu yasumu
-	db	$dc,$1a
+	db	$dc,$a0
 	db	$1f
 ; P2-18
 	db	$2f
@@ -147,7 +147,7 @@ Music_UnionCave_Ch2:
 ; P2-24
 	db	$af
 ; P2-25
-	db	$dc,$0b
+	db	$dc,$a5
 @loop1:
 	db	$e1,$6,$44
 	db	$fe

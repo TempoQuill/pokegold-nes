@@ -18,7 +18,7 @@ Music_GameCorner_Ch1:
 	db	$07
 ; P1-2
 @mainloop:
-	db	$d8,$8c,$91
+	db	$dc,$91
 	db	$0f
 ; P1-3
 	db	$0f
@@ -68,7 +68,7 @@ Music_GameCorner_Ch1:
 	db	$b1
 	db	$91
 	db	$81
-	db	$d8,$c,$00
+	db	$dc,$71
 ; P1-26
 @loop1:
 	db	$d3,$90
@@ -126,7 +126,6 @@ Music_GameCorner_Ch1:
 	db	$fd,4
 	dw	@loop7
 ; P1-33
-	db	$dc,$01
 	db	$d4,$30
 	db	$30
 	db	$32
@@ -164,16 +163,15 @@ Music_GameCorner_Ch2:
 ;----------------------------------------
 ; P2-1
 	db	$e1,$08,$24
-	db	$d8,$c,$a1
+	db	$d8,$8c,$a1
 	db	$07
 ; P2-2
 @mainloop:
-	db	$d8,$8c,$92
+	db	$dc,$92
 	db	$db,$01
 	db	$fe
 	dw	@sub1
 ; P2-13
-	db	$d8,$8c,$92
 	db	$d6,$61
 	db	$d4,$91
 	db	$d6,$60
@@ -192,11 +190,11 @@ Music_GameCorner_Ch2:
 	db	$41
 	db	$60
 	db	$41
-	db	$dc,$09
+	db	$dc,$a4
 	db	$82
 	db	$63
 	db	$db,$02
-	db	$dc,$0f
+	db	$dc,$c7
 	db	$d4,$40
 	db	$60
 ; P2-26
@@ -229,12 +227,13 @@ Music_GameCorner_Ch2:
 ; P2-32
 	db	$8f
 ; P2-33
-	db	$d8,$8c,$92
+	db	$dc,$92
 	db	$80
 	db	$80
 	db	$82
 	db	$b1
 	db	$b8
+	db	$dc,$a4
 ; P2-34
 	db	$fd,0
 	dw	@mainloop
@@ -269,7 +268,6 @@ Music_GameCorner_Ch2:
 	db	$40
 	db	$62
 ; P2-6
-	db	$d8,$c,$04
 	db	$d6,$11
 	db	$d2,$32
 	db	$d3,$b2
@@ -282,10 +280,10 @@ Music_GameCorner_Ch2:
 	db	$41
 	db	$60
 	db	$41
-	db	$dc,$09
+	db	$dc,$a4
 	db	$62
 	db	$83
-	db	$dc,$04
+	db	$dc,$92
 	db	$70
 	db	$60
 ; P2-8
@@ -302,10 +300,10 @@ Music_GameCorner_Ch2:
 	db	$41
 	db	$80
 	db	$41
-	db	$dc,$09
+	db	$dc,$a4
 	db	$b2
 	db	$a1
-	db	$dc,$04
+	db	$dc,$92
 	db	$b0
 	db	$d2,$12
 ; P2-10
@@ -321,10 +319,10 @@ Music_GameCorner_Ch2:
 	db	$41
 	db	$60
 	db	$41
-	db	$dc,$09
+	db	$dc,$a4
 	db	$62
 	db	$83
-	db	$dc,$04
+	db	$dc,$92
 	db	$70
 	db	$60
 ; P2-12
