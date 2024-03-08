@@ -44,4 +44,4 @@ SMP_3_4:
 SMP_3_11:
 	dpcm_entry $f, DMC_3_11, DMC_3_11_END
 SMP_3_12:
-	dpcm_entry $f, DMC_3_12, DMC_3_12_END
+	dpcm_entry $e, DMC_3_12, DMC_3_12_END
