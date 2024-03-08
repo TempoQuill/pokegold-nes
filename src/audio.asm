@@ -11,3 +11,4 @@
 .include "src/audio/music/goldenrodcity.asm"
 .include "src/audio/music/gamecorner.asm"
 .include "src/audio/music/lookhiker.asm"
+.include "src/audio/music/magnettrain.asm"
