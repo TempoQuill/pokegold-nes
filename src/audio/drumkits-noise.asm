@@ -7,32 +7,32 @@ Drumkits_Noise:
 	.dw Drumkit5
 Drumkit0:
 	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
 	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
+	.dw Drum0_7
+	.dw Drum0_8
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
 	.dw Drum0_c
 Drumkit1:
 	.dw Drum0_0
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
+	.dw Drum0_8
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
 	.dw Drum0_c
 	.dw Drum1_6
-	.dw Drum0_6
-	.dw Drum0_6
+	.dw Drum0_0
+	.dw Drum0_0
 	.dw Drum1_9
-	.dw Drum0_6
-	.dw Drum0_6
-	.dw Drum0_6
+	.dw Drum0_0
+	.dw Drum0_0
+	.dw Drum0_0
 Drumkit3:
 	.dw Drum0_0
 	.dw Drum0_0
@@ -80,6 +80,13 @@ Drum0_0:
 	.db $ff
 Drum0_6:
 	.db $20,$00,$84
+	.db $ff
+Drum0_7:
+	.db $21,$00,$85
+	.db $20,$00,$84
+	.db $ff
+Drum0_8:
+	.db $20,$01,$02
 	.db $ff
 Drum0_c:
 	.db $20,$02,$02

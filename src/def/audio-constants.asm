@@ -171,8 +171,22 @@ DMC_1_11_END:
 DMC_1_12:	.dsb $13
 DMC_1_12_END:
 	.dsb 1
+DMC_0_3:	.dsb $18
+DMC_0_3_END:
 .ende
 .enum $200
 DMC_0_5:	.dsb $98
 DMC_0_5_END:
+DMC_0_1:	.dsb $29
+DMC_0_1_END:
+	.dsb 3
+DMC_0_2:	.dsb $24
+DMC_0_2_END:
+DMC_0_4:	.dsb $10
+DMC_0_4_END:
+DMC_0_9:	.dsb $25
+DMC_0_9_END:
+	.dsb 3
+DMC_0_11:	.dsb $34
+DMC_0_11_END:
 .ende
