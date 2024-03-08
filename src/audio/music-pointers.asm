@@ -2,6 +2,7 @@ Music:
 	dba PRG_Audio, Music_Nothing
 	dba PRG_Music0, Music_Route1
 	dba PRG_Music0, Music_Route3
+	dba PRG_Music0, Music_Route11
 	dba PRG_Music0, Music_MagnetTrain
 	dba PRG_Audio, Music_LookHiker
 	dba PRG_Audio, Music_HealPokemon

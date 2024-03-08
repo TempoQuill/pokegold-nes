@@ -18,6 +18,7 @@
 .base $a000
 .include "src/audio/music/route1.asm"
 .include "src/audio/music/route3.asm"
+.include "src/audio/music/route11.asm"
 .include "src/audio/music/gamecorner.asm"
 .include "src/audio/music/bicycle.asm"
 .include "src/audio/music/magnettrain.asm"
