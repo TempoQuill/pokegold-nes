@@ -293,7 +293,7 @@ Music_Bicycle_Ch2:
 Music_Bicycle_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$30
+	db	$d8,$c,$20
 	db	$0f
 ; P3-2
 	db	$d4,$a1
