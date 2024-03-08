@@ -4,13 +4,42 @@ Drumkits_DPCM:
 	.dw SampleSet0
 	.dw SampleSet3
 	.dw SampleSet4
+	.dw SampleSet5
 SampleSet0:
 	.dw SMP_0
 	.dw SMP_0
 	.dw SMP_0
 	.dw SMP_0
 	.dw SMP_0
+	.dw SMP_0_5
 	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+SampleSet1:
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_1_10
+	.dw SMP_1_11
+	.dw SMP_1_12
+SampleSet2:
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_1_10
+	.dw SMP_1_11
+	.dw SMP_1_12
+	.dw SMP_0_5
 	.dw SMP_0
 	.dw SMP_0
 	.dw SMP_0
@@ -46,8 +75,29 @@ SampleSet4:
 	.dw SMP_0
 	.dw SMP_3_11
 	.dw SMP_3_12
+SampleSet5:
+	.dw SMP_0
+	.dw SMP_1_10
+	.dw SMP_1_11
+	.dw SMP_1_12
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0
+	.dw SMP_0_5
+	.dw SMP_0
+	.dw SMP_3_12
+	.dw SMP_3_2
+	.dw SMP_3_3
+	.dw SMP_3_11
 SMP_0:
 	dpcm_entry $0, DMC_3_0, DMC_3_0_END
+SMP_0_5:
+SMP_1_10:
+	dpcm_entry $e, DMC_1_10, DMC_1_10_END
+SMP_1_11:
+	dpcm_entry $e, DMC_1_11, DMC_1_11_END
+SMP_1_12:
+	dpcm_entry $e, DMC_1_12, DMC_1_12_END
 SMP_3_1:
 	dpcm_entry $f, DMC_3_1, DMC_3_1_END
 SMP_3_2:

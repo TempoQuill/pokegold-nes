@@ -21,7 +21,7 @@ ENDIF
 
 IFNDEF NSF_FILE
 	.base $2000
-	.dsb ($7b * $2000), $00
+	.dsb ($78 * $2000), $00
 
 	.base $e000
 	.include "src/home.asm"

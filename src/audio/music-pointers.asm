@@ -1,15 +1,19 @@
 Music:
 	dba PRG_Audio, Music_Nothing
+	dba PRG_Audio, Music_TitleScreen
 	dba PRG_Music0, Music_Route1
 	dba PRG_Music0, Music_Route3
 	dba PRG_Music0, Music_Route11
 	dba PRG_Music0, Music_MagnetTrain
-	dba PRG_Audio, Music_LookHiker
-	dba PRG_Audio, Music_HealPokemon
+	dba PRG_Music2, Music_LookHiker
+	dba PRG_Music1, Music_HealPokemon
 	dba PRG_Music0, Music_Bicycle
 	dba PRG_Music0, Music_GameCorner
-	dba PRG_Audio, Music_Gym
-	dba PRG_Audio, Music_CherrygroveCity
-	dba PRG_Audio, Music_UnionCave
-	dba PRG_Audio, Music_LookYoungster
+	dba PRG_Music2, Music_ViridianCity
+	dba PRG_Music2, Music_Gym
+	dba PRG_Music2, Music_CherrygroveCity
+	dba PRG_Music2, Music_UnionCave
+	dba PRG_Music1, Music_VioletCity
+	dba PRG_Music2, Music_LookYoungster
 	dba PRG_Audio, Music_GoldenrodCity
+	dba PRG_Music2, Music_PokemonMarch

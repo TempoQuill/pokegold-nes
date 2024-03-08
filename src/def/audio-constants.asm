@@ -135,6 +135,8 @@ LINEAR_LOOP = $80
 MUSIC_CUT_IN_F = 7
 
 .enum 0
+DMC_3_0:
+DMC_3_0_END:
 DMC_3_1:	.dsb $21
 DMC_3_1_END:
 	.dsb 3
@@ -160,6 +162,17 @@ DMC_4_8_END:
 DMC_4_9:	.dsb $16
 DMC_4_9_END:
 	.dsb 2
-DMC_3_0:
-DMC_3_0_END:
+DMC_1_10:	.dsb $23
+DMC_1_10_END:
+	.dsb 1
+DMC_1_11:	.dsb $1b
+DMC_1_11_END:
+	.dsb 1
+DMC_1_12:	.dsb $13
+DMC_1_12_END:
+	.dsb 1
+.ende
+.enum $200
+DMC_0_5:	.dsb $98
+DMC_0_5_END:
 .ende

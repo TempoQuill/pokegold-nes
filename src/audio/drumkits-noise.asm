@@ -4,6 +4,7 @@ Drumkits_Noise:
 	.dw Drumkit0
 	.dw Drumkit3
 	.dw Drumkit4
+	.dw Drumkit5
 Drumkit0:
 	.dw Drum0_0
 	.dw Drum0_6
@@ -60,6 +61,20 @@ Drumkit4:
 	.dw Drum4_10
 	.dw Drum0_0
 	.dw Drum0_0
+Drumkit5:
+	.dw Drum0_0
+	.dw Drum3_3
+	.dw Drum3_3
+	.dw Drum3_3
+	.dw Drum3_7
+	.dw Drum3_3
+	.dw Drum3_9
+	.dw Drum0_0
+	.dw Drum0_6
+	.dw Drum0_0
+	.dw Drum3_3
+	.dw Drum0_0
+	.dw Drum3_3
 Drum0_0:
 	.db $20,$10,$00
 	.db $ff
