@@ -193,14 +193,14 @@ Music_MagnetTrain_Ch4:
 Music_MagnetTrain_Ch5:
 ;----------------------------------------
 ; P4-1
-	db	$d8,$8c
+	db	$d8,$c
 ; P4-4
 	db	$cb
 	db	$31
 	db	$b0
 	db	$b0
 ; P4-5
-	db	$d8,$86
+	db	$d8,$6
 	db	$43
 	db	$73
 	db	$43
@@ -212,16 +212,16 @@ Music_MagnetTrain_Ch5:
 	db	$31
 ; P4-6
 	db	$fe
-	dw	dr6$
+	dw	@sub2
 ; P4-7
 	db	$fe
-	dw	dr6$
+	dw	@sub2
 ; P4-8
-	db	$d8,$8c
+	db	$d8,$c
 	db	$cf
 ; P4-9
 	db	$ff
-dr2$:
+@sub1:
 	db	$90
 	db	$80
 	db	$80
@@ -235,7 +235,7 @@ dr2$:
 	db	$80
 	db	$80
 	db	$ff
-dr6$:
+@sub2:
 	db	$91
 	db	$81
 	db	$81
