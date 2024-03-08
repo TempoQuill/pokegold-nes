@@ -14,7 +14,7 @@ Music_GoldenrodCity_Ch1:
 ;----------------------------------------
 	db	$da,$00,$b0
 ; P1-1
-	db	$d8,$c,$19
+	db	$d8,$8c,$97
 ; P1-2
 	db	$0f
 ; P1-3
@@ -37,22 +37,22 @@ Music_GoldenrodCity_Ch1:
 	db	$90
 	db	$d2,$10
 ; P1-10
-	db	$dc,$01
+	db	$dc,$71
 	db	$db,$00
 	db	$fe
 	dw	@sub2
-	db	$dc,$17
+	db	$dc,$77
 	db	$41
 	db	$61
 	db	$71
 	db	$93
 ; P1-14
-	db	$dc,$01
+	db	$dc,$71
 	db	$fe
 	dw	@sub2
 	db	$40
 	db	$70
-	db	$dc,$17
+	db	$dc,$77
 	db	$d2,$11
 	db	$d3,$91
 	db	$71
@@ -60,7 +60,7 @@ Music_GoldenrodCity_Ch1:
 ; P1-18
 ; P1-2
 	db	$db,$02
-	db	$dc,$19
+	db	$dc,$97
 	db	$fe
 	dw	@sub1
 ; P1-5
@@ -173,10 +173,10 @@ Music_GoldenrodCity_Ch2:
 ; P2-1
 	db	$e1,$12,$23
 	db	$db,$02
-	db	$d8,$c,$0e
+	db	$d8,$8c,$97
 ; P2-2
 @mainloop:
-	db	$dc,$0e
+	db	$dc,$97
 	db	$fe
 	dw	@sub1
 ; P2-5
@@ -196,7 +196,7 @@ Music_GoldenrodCity_Ch2:
 	db	$47
 ; P2-10
 	db	$db,$02
-	db	$dc,$0b
+	db	$dc,$77
 	db	$fe
 	dw	@sub2
 ; P2-13
@@ -206,7 +206,7 @@ Music_GoldenrodCity_Ch2:
 	db	$d2,$13
 ; P2-14
 	db	$db,$03
-	db	$dc,$0b
+	db	$dc,$77
 	db	$fe
 	dw	@sub2
 	db	$61
