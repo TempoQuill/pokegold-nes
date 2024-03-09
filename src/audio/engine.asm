@@ -1098,10 +1098,7 @@ ParseMusic:
 	LDA (zCurTrackAudioPointer), Y
 	SSB NOTE_NOISE_SAMPLING
 	STA (zCurTrackAudioPointer), Y
-	LDY #CHANNEL_ENV_BACKUP
-	LDA (zCurTrackAudioPointer), Y
-	LDY #CHANNEL_VOLUME_ENVELOPE
-	STA (zCurTrackAudioPointer), Y
+	JSR @ResetEnv
 	JMP LoadNote
 @Rest:
 	LDY #CHANNEL_NOTE_FLAGS
@@ -1154,6 +1151,20 @@ ParseMusic:
 	INY
 	STA (zCurTrackAudioPointer), Y
 	INY
+	STA (zCurTrackAudioPointer), Y
+	RTS
+@ResetEnv:
+	LDY #CHANNEL_ENV_LENGTH
+	LDA (zCurTrackAudioPointer), Y
+REPT 4
+	LSR A
+ENDR
+	AND #$07
+	ORA (zCurTrackAudioPointer), Y
+	STA (zCurTrackAudioPointer), Y
+	INY
+	LDA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_VOLUME_ENVELOPE
 	STA (zCurTrackAudioPointer), Y
 	RTS
 
@@ -2370,49 +2381,49 @@ ApplyEnvLength:
 	LDY #CHANNEL_ENV_LENGTH
 	LDA (zCurTrackAudioPointer), Y
 	TAX
-	AND #$f0
+	AND #$77
 	REQ
 	TXA
-	AND #$07
-	BEQ @Change
+	BMI @FadeIn
+; fadeout
 	DEX
 	TXA
+	STA (zCurTrackAudioPointer), Y
 	AND #$07
-	BEQ @Change
+	RNE
+	JSR @ResetTimer
+	DEX
+	TXA
+	AND #$1f
+	CMP #$10
+	BCS @Apply
+	RTS
+@FadeIn:
+	DEX
 	TXA
 	STA (zCurTrackAudioPointer), Y
+	AND #$07
+	RNE
+	JSR @ResetTimer
+	INX
+	TXA
+	AND #$1f
+	REQ
+@Apply:
+	STA (zCurTrackAudioPointer), Y
 	RTS
-@Change:
-	LDY #CHANNEL_VOLUME_ENVELOPE
+@ResetTimer
 	LDA (zCurTrackAudioPointer), Y
-	TAX
-	LDY #CHANNEL_ENV_LENGTH
-	LDA (zCurTrackAudioPointer), Y
+REPT 4
 	LSR A
-	LSR A
-	LSR A
-	LSR A
+ENDR
 	AND #$07
 	ORA (zCurTrackAudioPointer), Y
 	STA (zCurTrackAudioPointer), Y
-	BMI @Up
-@Down:
-	TXA
-	DEX
-	CPX #$10
-	BCC @Set
-	TXA
-	BNE @Set
-@Up:
-	TXA
-	INX
-	CPX #$20
-	BCS @Set
-	TXA
-@Set:
 	LDY #CHANNEL_VOLUME_ENVELOPE
-	STA (zCurTrackAudioPointer), Y
-	RTS
+	LDA (zCurTrackAudioPointer), Y
+	TAX
+	RTS:
 
 FetchSFXEquivalent:
 	LDA #CHANNEL_STRUCT_LENGTH * NUM_MUSIC_CHANS
