@@ -1411,16 +1411,16 @@ Music_Ret:
 	DEY
 	PHA
 	LDA (zCurTrackAudioPointer), Y
-	DEY
+	LDY #CHANNEL_MUSIC_ADDRESS
 	STA (zCurTrackAudioPointer), Y
 	PLA
-	DEY
+	INY
 	STA (zCurTrackAudioPointer), Y
 	; stack not needed anymore
-	LDY #CHANNEL_LAST_MUSIC_ADDRESS + 1
+	INY
 	LDA #0
 	STA (zCurTrackAudioPointer), Y
-	DEY
+	INY
 	STA (zCurTrackAudioPointer), Y
 	; reset sub flag
 	LDY #CHANNEL_FLAGS1
@@ -1438,9 +1438,9 @@ Music_Call:
 	INY
 	LDA #0
 	ADC (zCurTrackAudioPointer), Y
-	INY
+	LDY #CHANNEL_LAST_MUSIC_ADDRESS + 1
 	STA (zCurTrackAudioPointer), Y
-	INY
+	DEY
 	PLA
 	STA (zCurTrackAudioPointer), Y
 	JSR Music_Jump

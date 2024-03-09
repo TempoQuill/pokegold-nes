@@ -29,6 +29,7 @@
 .include "src/audio/music/gym.asm"
 .include "src/audio/music/cherrygrovecity.asm"
 .include "src/audio/music/lookyoungster.asm"
+.include "src/audio/music/tintower.asm"
 .include "src/audio/music/unioncave.asm"
 .include "src/audio/music/pokemonmarch.asm"
 .include "src/audio/music/lookhiker.asm"

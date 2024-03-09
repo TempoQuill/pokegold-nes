@@ -91,7 +91,7 @@ Music_CherrygroveCity_Ch1:
 	db	$d4,$13
 	db	$d5,$a3
 	db	$d4,$13
-	db	$fc
+	db	$fd,0
 	dw	@mainloop
 ;----------------------------------------
 Music_CherrygroveCity_Ch2:
@@ -172,7 +172,7 @@ Music_CherrygroveCity_Ch2:
 	db	$67
 	db	$dc,$a7
 	db	$67
-	db	$fc
+	db	$fd,0
 	dw	@mainloop
 ;----------------------------------------
 Music_CherrygroveCity_Ch3:
@@ -307,7 +307,7 @@ Music_CherrygroveCity_Ch3:
 	db	$a1
 	db	$61
 	db	$a1
-	db	$fc
+	db	$fd,0
 	dw	@mainloop
 ;----------------------------------------
 Music_CherrygroveCity_Ch4:
@@ -337,6 +337,6 @@ Music_CherrygroveCity_Ch5:
 	db	$73
 	db	$21
 	db	$81
-	db	$fc
+	db	$fd,0
 	dw	@mainloop
 

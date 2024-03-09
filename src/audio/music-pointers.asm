@@ -16,4 +16,5 @@ Music:
 	dba PRG_Music1, Music_VioletCity
 	dba PRG_Music2, Music_LookYoungster
 	dba PRG_Audio, Music_GoldenrodCity
+	dba PRG_Music2, Music_TinTower
 	dba PRG_Music2, Music_PokemonMarch
