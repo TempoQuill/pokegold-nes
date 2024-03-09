@@ -239,7 +239,8 @@ UpdateChannels:
 	STA rNR12
 	LDA zCurTrackPitchSweep
 	STA rNR11
-	RTS
+	TYA
+	BNE @Ch1_Check_Duty
 
 @Ch1_REST:
 	LDY #0
@@ -278,6 +279,7 @@ UpdateChannels:
 	TSB NOTE_VIBRATO_OVERRIDE
 	BNE @Ch2_VIB
 	TYA
+@Ch2_Check_Duty:
 	TSB NOTE_DUTY_OVERRIDE
 	REQ
 	LDA zCurTrackVolumeEnvAndDuty
@@ -299,7 +301,8 @@ UpdateChannels:
 	STA rNR22
 	LDA zCurTrackPitchSweep
 	STA rNR21
-	RTS
+	TYA
+	BNE @Ch2_Check_Duty
 
 @Ch2_REST:
 	LDY #0
@@ -1101,6 +1104,7 @@ ParseMusic:
 	JSR @ResetEnv
 	JMP LoadNote
 @Rest:
+	JSR @ResetEnv
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
 	SSB NOTE_REST
@@ -1156,11 +1160,13 @@ ParseMusic:
 @ResetEnv:
 	LDY #CHANNEL_ENV_LENGTH
 	LDA (zCurTrackAudioPointer), Y
+	AND #$f0
+	STA (zCurTrackAudioPointer), Y
 REPT 4
 	LSR A
 ENDR
 	AND #$07
-	ORA (zCurTrackAudioPointer), Y
+	ADC (zCurTrackAudioPointer), Y
 	STA (zCurTrackAudioPointer), Y
 	INY
 	LDA (zCurTrackAudioPointer), Y
@@ -1770,23 +1776,19 @@ Music_DutyCycle:
 	RTS
 
 Music_VolumeEnvelope:
-	JSR GetMusicByte
-	TAX
 	LDA #0
 	LDY #CHANNEL_ENV_LENGTH
 	STA (zCurTrackAudioPointer), Y
+	JSR GetMusicByte
+	TAX
 	LDY #CHANNEL_FLAGS2
 	LDA (zCurTrackAudioPointer), Y
 	BPL @Store
-	AND #$07
-	LDY #CHANNEL_ENV_LENGTH
-	STA (zCurTrackAudioPointer), Y
 	TXA
-	AND #$0f
 REPT 4
 	ASL A
 ENDR
-	ORA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_ENV_LENGTH
 	STA (zCurTrackAudioPointer), Y
 	TXA
 REPT 4
