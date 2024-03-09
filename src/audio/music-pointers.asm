@@ -13,6 +13,7 @@ Music:
 	dba PRG_Music2, Music_Gym
 	dba PRG_Music2, Music_CherrygroveCity
 	dba PRG_Music2, Music_UnionCave
+	dba PRG_Music0, Music_EcruteakCity
 	dba PRG_Music1, Music_VioletCity
 	dba PRG_Music2, Music_LookYoungster
 	dba PRG_Audio, Music_GoldenrodCity

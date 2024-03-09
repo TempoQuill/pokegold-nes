@@ -1,0 +1,673 @@
+Music_EcruteakCity:
+	db	040h
+	dw	Music_EcruteakCity_Ch1
+	db	001h
+	dw	Music_EcruteakCity_Ch2
+	db	002h
+	dw	Music_EcruteakCity_Ch3
+;----------------------------------------
+Music_EcruteakCity_Ch1:
+;----------------------------------------
+;		SUB PART
+;----------------------------------------
+	db	$da,$00,$c5
+; P1-1
+	db	$e1,$12,$25
+	db	$db,$02
+@mainloop:
+	db	$d8,$8c,$57
+; P1-2
+	db	$09
+	db	$d3,$15
+; P1-3
+	db	$09
+	db	$15
+; P1-4
+	db	$0f
+; P1-5
+	db	$d4,$c3
+	db	$d3,$13
+	db	$33
+;;;;;;;;;;;env_kirikae;;;;;;;;;;;;
+	db	$dc,$60
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db	$03
+; P1-6
+	db	$0f
+; P1-7
+	db	$09
+	db	$81
+	db	$a1
+	db	$b1
+; P1-8
+	db	$07
+	db	$91
+	db	$81
+	db	$61
+	db	$d2,$15
+	db	$d8,$86,$67
+; P1-9
+	db	$23
+	db	$39
+	db	$01
+	db	$d3,$c7
+; P1-10
+	db	$d4,$b0
+	db	$ca
+	db	$d3,$13
+	db	$53
+	db	$8b
+; P1-11
+	db	$bb
+	db	$83
+	db	$03
+	db	$b3
+	db	$d2,$23
+	db	$51
+	db	$01
+; P1-12
+	db	$d4,$a7
+	db	$d3,$17
+	db	$63
+	db	$0b
+; P1-13
+	db	$50
+	db	$6a
+	db	$81
+	db	$01
+	db	$a3
+	db	$83
+	db	$07
+;;;;;;;;;;;onshoku_kirikae;;;;;;;;;;;;
+	db	$dc,$52
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db	$fe
+	dw	@sub1
+; P1-15
+	db	$31
+	db	$d3,$c1
+	db	$a1
+	db	$c1
+	db	$a1
+	db	$c1
+	db	$d2,$31
+	db	$d3,$c1
+	db	$d2,$31
+	db	$d3,$c1
+	db	$a1
+	db	$c1
+	db	$a1
+	db	$c1
+	db	$a1
+	db	$c1
+	db	$fe
+	dw	@sub2
+;;;;;;;;;;;onshoku_kirikae;;;;;;;;;;;;
+	db	$dc,$52
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; P1-21
+	db	$b1
+	db	$81
+	db	$51
+	db	$21
+	db	$81
+	db	$51
+	db	$21
+	db	$d3,$b1
+	db	$d2,$51
+	db	$21
+	db	$d3,$b1
+	db	$81
+	db	$b1
+	db	$81
+	db	$51
+	db	$21
+; P1-22
+	db	$fe
+	dw	@sub1
+; P1-23
+	db	$31
+	db	$11
+	db	$d3,$91
+	db	$d2,$11
+	db	$d3,$91
+	db	$d2,$11
+	db	$31
+	db	$11
+	db	$31
+	db	$11
+	db	$d3,$91
+	db	$d2,$11
+	db	$d3,$91
+	db	$d2,$11
+	db	$d3,$91
+	db	$d2,$11
+; P1-24_28
+	db	$fe
+	dw	@sub2
+	db	$fd,0
+	dw	@mainloop
+;;;;;;;;;;;;Part 1 sub_loutine;;;;;;;;;;;;;;;;;;
+@sub1:
+@sub1loop1:
+; P1-14
+	db	$d2,$51
+	db	$11
+	db	$d3,$a1
+	db	$d2,$11
+	db	$d3,$a1
+	db	$d2,$11
+	db	$51
+	db	$11
+	db	$fd,2
+	dw	@sub1loop1
+	db	$ff
+@sub2:
+; P1-16
+	db	$d2,$31
+	db	$d3,$c1
+	db	$81
+	db	$c1
+	db	$81
+	db	$c1
+	db	$d2,$31
+	db	$d3,$c1
+	db	$d2,$31
+	db	$d3,$c1
+	db	$81
+	db	$c1
+	db	$81
+	db	$c1
+	db	$d2,$31
+	db	$61
+; P1-17
+	db	$a1
+	db	$51
+	db	$11
+	db	$d3,$a1
+	db	$d2,$51
+	db	$11
+	db	$d3,$a1
+	db	$51
+	db	$d2,$11
+	db	$d3,$a1
+	db	$51
+	db	$11
+	db	$a1
+	db	$51
+	db	$11
+	db	$d4,$a1
+@sub2loop1:
+; P1-18
+	db	$d3,$61
+	db	$a1
+	db	$d2,$11
+	db	$d3,$a1
+	db	$d2,$11
+	db	$d3,$a1
+	db	$d2,$11
+	db	$61
+	db	$fd,2
+	dw	@sub2loop1
+@sub2loop2:
+; P1-19
+	db	$d3,$81
+	db	$c1
+	db	$d2,$31
+	db	$d3,$c1
+	db	$d2,$31
+	db	$d3,$c1
+	db	$d2,$31
+	db	$81
+	db	$fd,2
+	dw	@sub2loop2
+;;;;;;;;;;;env_kirikae;;;;;;;;;;;;
+	db	$dc,$50
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; P1-20
+	db	$db,$00
+	db	$5f
+	db	$8f
+	db	$db,$02
+	db	$ff
+;----------------------------------------
+Music_EcruteakCity_Ch2:
+;-----------------------------------------
+;		MERO PART
+;----------------------------------------
+; P2-1
+	db	$e1,$12,$25
+	db	$db,$03
+@mainloop:
+	db	$d8,$86,$67
+; P2-2
+	db	$0f
+	db	$04
+	db	$d3,$80
+	db	$d2,$30
+	db	$58
+; P2-3
+	db	$0f
+	db	$04
+	db	$d3,$a0
+	db	$d2,$50
+	db	$68
+; P2-4
+	db	$d8,$8c,$77
+	db	$09
+	db	$31
+	db	$11
+	db	$d3,$91
+; P2-5
+	db	$83
+	db	$a3
+	db	$c3
+	db	$d8,$86,$93
+;-----------env_kirikae---------------
+	db	$dc,$97
+;-onshoku kirikae---------------------
+	db	$db,$02
+;-------------------------------------
+	db	$d4,$86
+	db	$d3,$20
+; P2-6
+	db	$3a
+	db	$00
+	db	$11
+	db	$01
+	db	$1f
+; P2-7
+	db	$67
+	db	$03
+	db	$53
+	db	$03
+	db	$53
+	db	$63
+	db	$83
+; P2-8
+	db	$53
+	db	$11
+	db	$01
+	db	$13
+	db	$d4,$a1
+	db	$60
+	db	$a0
+	db	$d3,$1f
+; P2-9
+	db	$53
+	db	$81
+	db	$01
+	db	$53
+	db	$39
+	db	$00
+	db	$48
+;-onshoku kirikae---------------------
+	db	$db,$00
+;-------------------------------------
+; P2-10
+	db	$d2,$20
+	db	$3a
+	db	$11
+	db	$01
+	db	$1f
+; P2-11
+	db	$6b
+	db	$53
+	db	$03
+	db	$53
+	db	$63
+	db	$81
+	db	$d3,$a0
+	db	$d2,$10
+; P2-12
+	db	$50
+	db	$a2
+	db	$51
+	db	$01
+	db	$53
+	db	$11
+	db	$01
+	db	$13
+	db	$d3,$a1
+	db	$01
+	db	$c3
+	db	$d2,$11
+	db	$d3,$80
+	db	$c0
+; P2-13
+	db	$d2,$40
+	db	$5a
+	db	$31
+	db	$01
+	db	$37
+;-onshoku kirikae---------------------
+	db	$db,$01
+;-------------------------------------
+	db	$d3,$53
+	db	$82
+	db	$90
+; P2-14
+	db	$af
+	db	$d4,$a3
+	db	$d3,$11
+	db	$01
+	db	$53
+;					d
+	db	$3b
+;		tai
+; P2-15 -tie
+;		tempo 8 		d
+	db	$13
+	db	$03
+	db	$d4,$c3
+	db	$03
+	db	$d3,$67
+; P2-16
+	db	$8b
+	db	$67
+	db	$03
+	db	$57
+; P2-17
+	db	$33
+	db	$11
+	db	$01
+	db	$d4,$c3
+	db	$d3,$11
+	db	$05
+	db	$d4,$c3
+	db	$03
+	db	$d3,$13
+; P2-18
+	db	$d4,$af
+	db	$03
+	db	$d3,$63
+	db	$53
+	db	$33
+; P2-19
+	db	$1b
+	db	$d4,$c3
+	db	$03
+	db	$d3,$13
+	db	$33
+	db	$43
+; P2-20
+	db	$d8,$8c,$83
+	db	$5f
+;-----------env_kirikae---------------
+	db	$dc,$80
+; P2-21
+	db	$33
+	db	$23
+	db	$63
+	db	$d8,$86,$80
+	db	$86
+	db	$90
+;-----------env_kirikae---------------
+	db	$dc,$87
+; P2-22
+	db	$ab
+	db	$51
+	db	$01
+	db	$51
+	db	$01
+	db	$52
+	db	$90
+	db	$a3
+	db	$51
+	db	$01
+; P2-23
+	db	$53
+	db	$31
+	db	$01
+	db	$23
+	db	$3b
+	db	$d4,$c3
+	db	$d3,$63
+; P2-24
+	db	$8b
+	db	$31
+	db	$01
+	db	$31
+	db	$01
+	db	$33
+	db	$83
+	db	$31
+	db	$00
+	db	$b0
+; P2-25
+	db	$cb
+	db	$d2,$13
+	db	$d3,$a7
+	db	$d4,$a3
+	db	$d3,$13
+; P2-26
+	db	$d8,$8c,$87
+	db	$69
+	db	$81
+	db	$61
+	db	$51
+; P2-27
+	db	$37
+	db	$01
+	db	$d4,$c1
+	db	$d3,$11
+	db	$31
+; P2-28
+	db	$5f
+	db	$fd,0
+	dw	@mainloop
+;----------------------------------------
+Music_EcruteakCity_Ch3:
+;----------------------------------------
+;		BASS PART
+;----------------------------------------
+; P3-1
+@mainloop:
+	db	$e1,$12,$25
+	db	$d8,$c,$37
+; P3-2
+	db	$d4,$11
+	db	$81
+	db	$d3,$31
+	db	$dc,$81
+	db	$59
+; P3-3
+	db	$dc,$37
+	db	$d4,$11
+	db	$a1
+	db	$d3,$51
+	db	$dc,$81
+	db	$69
+; P3-4
+	db	$dc,$37
+	db	$d4,$11
+	db	$81
+	db	$d3,$31
+	db	$dc,$81
+	db	$59
+; P3-5
+	db	$dc,$6e
+	db	$83
+	db	$73
+	db	$63
+	db	$dc,$37
+	db	$d4,$c1
+	db	$81
+; P3-6
+	db	$11
+	db	$81
+	db	$d3,$31
+	db	$dc,$81
+	db	$59
+; P3-7
+	db	$dc,$37
+	db	$d4,$21
+	db	$81
+	db	$b1
+	db	$d3,$31
+	db	$01
+	db	$21
+	db	$31
+	db	$51
+; P3-8
+	db	$dc,$81
+	db	$d4,$31
+	db	$a0
+	db	$00
+	db	$d3,$51
+	db	$60
+	db	$00
+	db	$97
+; P3-9
+	db	$dc,$37
+	db	$d4,$81
+	db	$d3,$31
+	db	$61
+	db	$91
+	db	$c1
+	db	$dc,$1b
+	db	$80
+	db	$dc,$81
+	db	$94
+; P3-10
+	db	$dc,$37
+	db	$d4,$11
+	db	$81
+	db	$d3,$31
+	db	$51
+	db	$81
+	db	$d2,$11
+	db	$31
+	db	$51
+; P3-11
+	db	$d4,$21
+	db	$b1
+	db	$d3,$31
+	db	$21
+	db	$51
+	db	$31
+	db	$61
+	db	$80
+	db	$00
+; P3-12
+	db	$dc,$81
+	db	$d4,$67
+	db	$d3,$a1
+	db	$d2,$10
+	db	$00
+	db	$31
+	db	$50
+	db	$00
+; P3-13
+	db	$dc,$37
+	db	$d5,$81
+	db	$d4,$31
+	db	$81
+	db	$71
+	db	$a1
+	db	$81
+	db	$c1
+	db	$d3,$31
+	db	$fe
+	dw	@sub1
+; P3-20
+	db	$d3,$17
+	db	$57
+	db	$87
+	db	$c7
+; P3-21
+	db	$b7
+	db	$87
+	db	$57
+	db	$27
+	db	$d8,$c,$81
+	db	$fe
+	dw	@sub1
+; P3-28
+	db	$d3,$17
+	db	$d4,$87
+	db	$57
+	db	$37
+	db	$fd,0
+	dw	@mainloop
+;;;;;;;;;;;;Part 3 subloutine;;;;;;;;;;;;;;;;;;
+@sub1:
+; P3-14
+	db	$dc,$81
+	db	$d4,$63
+	db	$01
+	db	$60
+	db	$00
+	db	$63
+	db	$01
+	db	$10
+	db	$00
+; P3-15
+	db	$63
+	db	$01
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$61
+	db	$01
+	db	$60
+	db	$00
+; P3-16
+	db	$53
+	db	$01
+	db	$c0
+	db	$00
+	db	$50
+	db	$00
+	db	$51
+	db	$01
+	db	$c0
+	db	$00
+; P3-17
+	db	$a3
+	db	$01
+	db	$a0
+	db	$00
+	db	$90
+	db	$00
+	db	$90
+	db	$00
+	db	$80
+	db	$00
+	db	$70
+	db	$00
+; P3-18
+	db	$33
+	db	$01
+	db	$a0
+	db	$00
+	db	$30
+	db	$00
+	db	$30
+	db	$00
+	db	$50
+	db	$00
+	db	$60
+	db	$00
+; P3-19
+	db	$83
+	db	$01
+	db	$d3,$30
+	db	$00
+	db	$d4,$80
+	db	$00
+	db	$80
+	db	$00
+	db	$a0
+	db	$00
+	db	$b0
+	db	$d8,$6,$81
+	db	$00
+	db	$c0
+	db	$ff
+;----------------------------------------
+Music_EcruteakCity_Ch4:
+;----------------------------------------
+
+
