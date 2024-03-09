@@ -2,11 +2,32 @@ LOAD:
 	JMP UpdateSound
 
 INIT:
+	JMP PLAY_NSF_SOUND
+
+PLAY:
+	JMP UpdateSound
+
+NSF_Music:
 	LDY #0
 	JSR PlayMusic
 	TAY
 	INY
 	JMP PlayMusic
 
-PLAY:
-	JMP UpdateSound
+NSF_Cries:
+	TAY
+	INY
+	JMP PlayCry
+
+NSF_SFX:
+	TAY
+	INY
+	JMP PlaySFX
+
+PLAY_NSF_SOUND = NSF_Music
+IFDEF PLAY_NSF_CRIES
+	PLAY_NSF_SOUND = NSF_Cries
+ENDIF
+IFDEF PLAY_NSF_SFX
+	PLAY_NSF_SOUND = NSF_SFX
+ENDIF
