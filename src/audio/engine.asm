@@ -900,14 +900,13 @@ ApplyPitchSlide:
 	; Otherwise, load the frequency and set two flags.
 	LDY #CHANNEL_PITCH_SLIDE_TARGET + 1
 	LDA zCurSlideRawPitch + 1
-	CLC
-	ADC #1
 	CMP (zCurTrackAudioPointer), Y
-	BCS @FinishedPitchSlide
+	BCC @FinishedPitchSlide
+	BNE @ContinuePitchSlide
 	DEY
 	LDA zCurSlideRawPitch
 	CMP (zCurTrackAudioPointer), Y
-	BCC @ContinuePitchSlide
+	BCS @ContinuePitchSlide
 @FinishedPitchSlide:
 	LDY #CHANNEL_FLAGS2
 	LDA (zCurTrackAudioPointer), Y
@@ -1949,11 +1948,11 @@ ENDR
 	TAY
 @Loop:
 	CPY #7
-	BCS @OK
+	BPL @OK
 	LSR zTempRawPitch + 1
 	ROR zTempRawPitch
 	INY
-	BNE @Loop
+	BPL @Loop
 @OK:
 	LDA zTempRawPitch + 1
 	AND #$7
@@ -2287,6 +2286,9 @@ LoadChannel:
 	INY
 	CLC
 	ADC #1
+	STA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_OCTAVE
+	LDA #$ff
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_NOTE_LENGTH
 	STA (zCurTrackAudioPointer), Y
