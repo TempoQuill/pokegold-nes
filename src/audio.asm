@@ -23,6 +23,7 @@
 .base $8000
 .include "src/audio/music/violetcity.asm"
 .include "src/audio/music/healpokemon.asm"
+.include "src/audio/music/evolution.asm"
 .pad $a000, $00
 
 .base $a000

@@ -11,12 +11,12 @@ Music_HealPokemon_Ch1:
 	db	$e6,$00,$01
 	db	$d8,$8c,$81
 	db	$01
-	db	$e0,$00,$40,$c1
-	db	$e0,$00,$55,$c1
-	db	$e0,$00,$45,$51
+	db	$e0,$00,$30,$c1
+	db	$e0,$00,$45,$c1
+	db	$e0,$00,$35,$51
 	db	$03
-	db	$e0,$00,$30,$53
-	db	$e0,$00,$40,$c3
+	db	$e0,$00,$20,$53
+	db	$e0,$00,$30,$c3
 	db	$ff
 Music_HealPokemon_Ch2:
 	db	$db,$02

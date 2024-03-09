@@ -11,6 +11,7 @@ Music:
 	dba PRG_Music0, Music_GameCorner
 	dba PRG_Music2, Music_ViridianCity
 	dba PRG_Music2, Music_Gym
+	dba PRG_Music1, Music_Evolution
 	dba PRG_Music2, Music_CherrygroveCity
 	dba PRG_Music2, Music_UnionCave
 	dba PRG_Music0, Music_EcruteakCity
