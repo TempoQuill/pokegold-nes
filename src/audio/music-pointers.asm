@@ -1,6 +1,6 @@
 Music:
-	dba PRG_Audio, Music_Nothing
-	dba PRG_Audio, Music_TitleScreen
+	dba PRG_Audio,  Music_Nothing
+	dba PRG_Music3, Music_TitleScreen
 	dba PRG_Music0, Music_Route1
 	dba PRG_Music0, Music_Route3
 	dba PRG_Music0, Music_Route11
@@ -24,9 +24,9 @@ Music:
 	dba PRG_Music0, Music_EcruteakCity
 	dba PRG_Music1, Music_VioletCity
 	dba PRG_Music1, Music_Route29
-	dba PRG_Audio,  Music_Route34
+	dba PRG_Music3, Music_Route34
 	dba PRG_Music2, Music_LookYoungster
-	dba PRG_Audio, Music_GoldenrodCity
+	dba PRG_Music3, Music_GoldenrodCity
 	dba PRG_Music2, Music_TinTower
 	dba PRG_Music2, Music_PokemonMarch
 	dba PRG_Music4, Music_TheEnd

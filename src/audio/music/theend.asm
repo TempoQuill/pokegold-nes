@@ -1,4 +1,4 @@
-Music_TheEnd
+Music_TheEnd:
 	db	020h
 	dw	Music_TheEnd_Ch1
 	db	001h

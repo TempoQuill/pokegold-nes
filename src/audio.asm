@@ -5,10 +5,6 @@
 .include "src/audio/music/nothing.asm"
 .include "src/audio/cry-pointers.asm"
 .include "src/audio/sfx-pointers.asm"
-
-.include "src/audio/music/route34.asm"
-.include "src/audio/music/goldenrodcity.asm"
-.include "src/audio/music/titlescreen.asm"
 .pad $a000, $00
 
 .base $a000
@@ -47,6 +43,9 @@
 
 .base $8000
 .include "src/audio/music/credits.asm"
+.include "src/audio/music/route34.asm"
+.include "src/audio/music/goldenrodcity.asm"
+.include "src/audio/music/titlescreen.asm"
 .pad $a000, $00
 
 .base $a000
