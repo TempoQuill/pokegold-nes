@@ -45,6 +45,10 @@
 .include "src/audio/music/lookhiker.asm"
 .pad $c000, $00
 
+.base $8000
+.include "src/audio/music/credits.asm"
+.pad $a000, $00
+
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-1.bin"

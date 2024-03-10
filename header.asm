@@ -24,7 +24,7 @@ IFNDEF NSF_FILE
 ELSE
 	.db "NESM", $1a ; handshake
 	.db $1 ; version
-	.db 28 ; songs
+	.db 29 ; songs
 	.db $1 ; starting song
 	.dw LOAD
 	.dw INIT
