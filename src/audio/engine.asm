@@ -726,12 +726,12 @@ GeneralHandler:
 	BEQ @Vibrato
 	LDY #CHANNEL_PITCH_OFFSET
 	LDA zCurTrackRawPitch
-	CLC
-	ADC (zCurTrackAudioPointer), Y
+	SEC
+	SBC (zCurTrackAudioPointer), Y
 	STA zCurTrackRawPitch
 	INY
 	LDA zCurTrackRawPitch + 1
-	ADC (zCurTrackAudioPointer), Y
+	SBC (zCurTrackAudioPointer), Y
 	STA zCurTrackRawPitch + 1
 @Vibrato:
 	; is vibrato on?
