@@ -4,6 +4,14 @@ MACRO nsf_bank_define const
 ENDM
 .org 0
 
+NSF_TRACKS = 30
+IFDEF PLAY_NSF_CRIES
+	NSF_TRACKS = 1
+ENDIF
+IFDEF PLAY_NSF_SFX
+	NSF_TRACKS = 10
+ENDIF
+
 IFNDEF NSF_FILE
 ; vulpreich header specs
 ; MAP: MMC5
@@ -24,7 +32,7 @@ IFNDEF NSF_FILE
 ELSE
 	.db "NESM", $1a ; handshake
 	.db $1 ; version
-	.db 30 ; songs
+	.db NSF_TRACKS ; songs
 	.db $1 ; starting song
 	.dw LOAD
 	.dw INIT

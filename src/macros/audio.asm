@@ -77,8 +77,9 @@ m = mode << 4
 	ELSE
 	p = param - 1
 		.db m + p
-	ENDC
-	.dw freq
+	ENDIF
+f = freq ^ $7ff
+	.dw f
 ENDM
 
 MACRO noise_note length, mode, param, freq
@@ -88,8 +89,15 @@ MACRO noise_note length, mode, param, freq
 	ELSE
 	p = param - 1
 		.db m + p
-	ENDC
+	ENDIF
 	db \4 ; frequency
+ENDM
+
+MACRO dpcm_note length, offset, sum
+	.db length
+	.db PRG_DPCM0 + (offset >> 9)
+	.db sum - offset
+	.db (offset & %111111100) >> 2
 ENDM
 
 MACRO dpcm_entry pitch, offset, sum
@@ -111,7 +119,7 @@ MACRO note_type length, mode, param
 	ELSE
 	p = param - 1
 		.db m + p
-	ENDC
+	ENDIF
 ENDM
 
 MACRO drum_speed length
@@ -138,11 +146,13 @@ ENDM
 
 MACRO pitch_sweep period, inc
 	.db pitch_sweep_cmd
-p = ((period + 8) & %1111) << 4
+p = ((period + 7) & %1111) << 4
 	IF inc < 0
-		.db p | %1000 + (inc * -1)
+	i = 8 - inc
+		.db p + (i * -1)
 	ELSE
-		.db p | inc
+	i = 8 - inc
+		.db p | %1000 + i
 	ENDIF
 ENDM
 
@@ -217,7 +227,7 @@ MACRO tempo_relative offs
 		.db $100 + offs
 	ELSE
 		.db offs
-	ENDC
+	ENDIF
 ENDM
 
 MACRO restart_channel address

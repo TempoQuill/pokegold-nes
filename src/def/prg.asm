@@ -10,8 +10,9 @@ PRG_Music3:	.dsb 1
 PRG_Music4:	.dsb 1
 PRG_DPCM0:	.dsb 1
 PRG_DPCM1:	.dsb 1
+PRG_DPCM2:	.dsb 1
 PRG_MonCries:	.dsb 1
-		.dsb $76
+		.dsb $75
 IFNDEF NSF_FILE
 	PRG_Home:
 ELSE

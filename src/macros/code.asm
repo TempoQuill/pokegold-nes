@@ -211,7 +211,7 @@ v = $50
 nm = $30
 m = $10
 	.db condition, (+b - +a)
-	JSR label
 +a
+	JSR label
 +b
 ENDM

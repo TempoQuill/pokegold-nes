@@ -174,6 +174,7 @@ DMC_1_12_END:
 DMC_0_3:	.dsb $18
 DMC_0_3_END:
 .ende
+
 .enum $200
 DMC_0_5:	.dsb $98
 DMC_0_5_END:
@@ -189,4 +190,29 @@ DMC_0_9_END:
 	.dsb 3
 DMC_0_11:	.dsb $34
 DMC_0_11_END:
+DMC_FULL_HEAL_1:	.dsb $9
+DMC_FULL_HEAL_1_END:
+	.dsb 3
+DMC_FULL_HEAL_2:	.dsb $46
+DMC_FULL_HEAL_2_END:
+	.dsb 2
 .ende
+
+.enum $400
+DMC_POTION:		.dsb $83
+DMC_POTION_END:
+	.dsb 1
+.ende
+
+C_R = $d5b
+C#R = $c9c
+D_R = $be6
+D#R = $b3b
+E_R = $a9a
+F_R = $a01
+F#R = $972
+G_R = $8ea
+G#R = $86a
+A_R = $7f1
+A#R = $77f
+B_R = $713

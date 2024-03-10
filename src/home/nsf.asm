@@ -16,12 +16,10 @@ NSF_Music:
 
 NSF_Cries:
 	TAY
-	INY
 	JMP PlayCry
 
 NSF_SFX:
 	TAY
-	INY
 	JMP PlaySFX
 
 PLAY_NSF_SOUND = NSF_Music

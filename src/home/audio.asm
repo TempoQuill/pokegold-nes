@@ -211,7 +211,12 @@ PlaySFX:
 	PHA
 	LDA #PRG_Audio
 	bsw_8000
+	LDA #PRG_Audio
 	STA zWindow1
+	bsw_a000
+	LDA #PRG_Audio
+	STA zWindow2
+	STY zCurSFX
 	JSR _PlaySFX
 	PLA
 	bsw_a000

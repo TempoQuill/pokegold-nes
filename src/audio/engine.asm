@@ -1130,9 +1130,11 @@ ParseMusic:
 	LDA zCurChannel
 	SEC
 	SBC #NUM_MUSIC_CHANS
-	CMP #CHAN2
+	CMP #CHAN3
 	BCS @OK
 	; no sweep
+	ASL A
+	ASL A
 	TAX
 	LDA #0
 	STA rNR11, X ; sweep = 0
@@ -1207,6 +1209,8 @@ ParseSFXOrCry:
 	JSR GetMusicByte
 	LDY #CHANNEL_VOLUME_ENVELOPE
 	STA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_ENV_BACKUP
+	STA (zCurTrackAudioPointer), Y
 	; update lo frequency from next param
 	JSR GetMusicByte
 	LDY #CHANNEL_FREQUENCY
@@ -1232,6 +1236,8 @@ ParseDPCM:
 	STA zDPCMLength
 	JSR GetMusicByte
 	STA zDPCMOffset
+	LDA #$0f
+	STA zDPCMPitch
 	RTS
 
 GetNoiseSample:
@@ -1960,35 +1966,43 @@ ENDR
 	RTS
 
 SetNoteDuration:
-	CLC
-	ADC #1
-	STA MMC5_Multiplier1
+;
+	; increment delay
+	TAX
+	INX
+	; note length x delay
 	LDY #CHANNEL_NOTE_LENGTH
 	LDA (zCurTrackAudioPointer), Y
-	STA MMC5_Multiplier2
-	LDA MMC5_Multiplier1
-	PHA
-	STA MMC5_Multiplier1
+	JSR @Multiply
+	; nl*d * tempo[lo]
+	STA zCurTrackTemp
+	TAX
 	LDY #CHANNEL_TEMPO
 	LDA (zCurTrackAudioPointer), Y
-	STA MMC5_Multiplier2
-	LDY #CHANNEL_NOTE_DURATION + 1
 	JSR @Multiply
-	DEY
-	LDA MMC5_Multiplier2
-	ADC #0
-	STA (zCurTrackAudioPointer), Y
-	PLA
-	STA MMC5_Multiplier1
-	LDY #CHANNEL_TEMPO + 1
-	LDA (zCurTrackAudioPointer), Y
-	STA MMC5_Multiplier2
-	LDY #CHANNEL_NOTE_DURATION
-@Multiply:
-	LDA MMC5_Multiplier1
+	LDY #CHANNEL_NOTE_DURATION + 1
 	CLC
 	ADC (zCurTrackAudioPointer), Y
 	STA (zCurTrackAudioPointer), Y
+	DEY
+	TXA
+	ADC #0
+	STA (zCurTrackAudioPointer), Y
+	; nl*d * tempo[hi]
+	LDX zCurTrackTemp
+	LDY #CHANNEL_TEMPO + 1
+	LDA (zCurTrackAudioPointer), Y
+	JSR @Multiply
+	LDY #CHANNEL_NOTE_DURATION
+	CLC
+	ADC (zCurTrackAudioPointer), Y
+	STA (zCurTrackAudioPointer), Y
+	RTS
+@Multiply:
+	STX MMC5_Multiplier1
+	STA MMC5_Multiplier2
+	LDA MMC5_Multiplier1
+	LDX MMC5_Multiplier2
 	RTS
 
 SetGlobalTempo:
@@ -2211,6 +2225,7 @@ _PlaySFX:
 	STA rNR52
 	STA rNR53
 @ChsCleared:
+	LDY zCurSFX
 	LDA #>SFX
 	STA zCurTrackAudioPointer + 1
 	LDA #<SFX
@@ -2287,10 +2302,10 @@ LoadChannel:
 	CLC
 	ADC #1
 	STA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_NOTE_LENGTH
+	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_OCTAVE
 	LDA #$ff
-	STA (zCurTrackAudioPointer), Y
-	LDY #CHANNEL_NOTE_LENGTH
 	STA (zCurTrackAudioPointer), Y
 	LDA #$7f
 	LDY #CHANNEL_SWEEP

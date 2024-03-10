@@ -5,6 +5,7 @@
 .include "src/audio/music/nothing.asm"
 .include "src/audio/cry-pointers.asm"
 .include "src/audio/sfx-pointers.asm"
+.include "src/audio/sfx-audio.asm"
 .pad $a000, $00
 
 .base $a000
@@ -60,4 +61,9 @@
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-2.bin"
+.pad $e000, $55
+
+.base $c000
+; dpcm
+.incbin "src/data/dmc/bank-3.bin"
 .pad $e000, $55
