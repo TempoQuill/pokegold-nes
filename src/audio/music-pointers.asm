@@ -6,9 +6,13 @@ Music:
 	dba PRG_Music0, Music_Route11
 	dba PRG_Music0, Music_MagnetTrain
 	dba PRG_Music2, Music_LookHiker
+	dba PRG_Music0, Music_LookLass
 	dba PRG_Music1, Music_HealPokemon
-	dba PRG_Music0, Music_Bicycle
+	dba PRG_Music0, Music_MtMoon
+	dba PRG_Music0, Music_ShowMeAround
 	dba PRG_Music0, Music_GameCorner
+	dba PRG_Music0, Music_Bicycle
+	dba PRG_Music1, Music_HallOfFame
 	dba PRG_Music2, Music_ViridianCity
 	dba PRG_Music2, Music_Gym
 	dba PRG_Music1, Music_Evolution

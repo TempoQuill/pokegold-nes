@@ -14,6 +14,9 @@
 .include "src/audio/music/route1.asm"
 .include "src/audio/music/route3.asm"
 .include "src/audio/music/route11.asm"
+.include "src/audio/music/looklass.asm"
+.include "src/audio/music/mtmoon.asm"
+.include "src/audio/music/showmearound.asm"
 .include "src/audio/music/gamecorner.asm"
 .include "src/audio/music/bicycle.asm"
 .include "src/audio/music/ecruteakcity.asm"
@@ -22,6 +25,7 @@
 
 .base $8000
 .include "src/audio/music/violetcity.asm"
+.include "src/audio/music/halloffame.asm"
 .include "src/audio/music/healpokemon.asm"
 .include "src/audio/music/evolution.asm"
 .pad $a000, $00
