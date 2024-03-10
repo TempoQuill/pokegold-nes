@@ -30,9 +30,9 @@ Drumkit1:
 	.dw Drum0_0
 	.dw Drum0_0
 	.dw Drum1_9
-	.dw Drum0_0
-	.dw Drum0_0
-	.dw Drum0_0
+	.dw Drum0_8
+	.dw Drum0_8
+	.dw Drum0_8
 Drumkit3:
 	.dw Drum0_0
 	.dw Drum0_0

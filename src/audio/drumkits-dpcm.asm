@@ -1,6 +1,6 @@
 Drumkits_DPCM:
 	.dw SampleSet0
-	.dw SampleSet0
+	.dw SampleSet1
 	.dw SampleSet0
 	.dw SampleSet3
 	.dw SampleSet4
