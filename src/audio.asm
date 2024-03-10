@@ -49,6 +49,10 @@
 .include "src/audio/music/credits.asm"
 .pad $a000, $00
 
+.base $a000
+.include "src/audio/music/theend.asm"
+.pad $c000, $00
+
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-1.bin"

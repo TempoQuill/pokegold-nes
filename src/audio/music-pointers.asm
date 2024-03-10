@@ -29,3 +29,4 @@ Music:
 	dba PRG_Audio, Music_GoldenrodCity
 	dba PRG_Music2, Music_TinTower
 	dba PRG_Music2, Music_PokemonMarch
+	dba PRG_Music4, Music_TheEnd
