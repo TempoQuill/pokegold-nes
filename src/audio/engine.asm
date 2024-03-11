@@ -51,8 +51,6 @@ _UpdateSound:
 	; start at ch1
 	LDA #0
 	STA zCurChannel
-	STA zSoundOutput ; just
-	STA zSoundOutput + 1 ; off
 @Loop:
 	JSR UpdateTrackPointer
 	; is the channel active?
@@ -140,13 +138,6 @@ _UpdateSound:
 	BCS @SoundChannelOn
 @SFXChannel:
 	JSR UpdateChannels
-	LDY #CHANNEL_FLAGS1
-	LDA (zCurTrackAudioPointer), Y
-	LSR A
-	ROR zSoundOutput
-	LDA (zCurTrackAudioPointer), Y
-	LSR A
-	ROR zSoundOutput + 1
 @SoundChannelOn:
 	; clear note flags
 	LDY #CHANNEL_NOTE_FLAGS
@@ -159,13 +150,7 @@ _UpdateSound:
 	CMP #NUM_CHANNELS ; are we done?
 	BEQ +
 	JMP @Loop
-+	LDA zSoundOutput
-	AND #$e0
-	LDX #3
--	ASL A
-	ROL zSoundOutput + 1
-	DEX
-	BNE -
++
 	JSR PlayDanger
 	JSR SilenceMusic
 	RTS
@@ -383,6 +368,11 @@ UpdateChannels:
 	TYA
 	TSB NOTE_NOISE_SAMPLING
 	BNE @Ch4_SMP
+	TYA
+	TSB NOTE_DUTY_OVERRIDE
+	REQ
+	LDA zCurTrackVolumeEnvAndDuty
+	STA rNR40
 	RTS
 
 @Ch4_REST:
@@ -498,12 +488,6 @@ PlayDanger:
 	; Enable channel 1 in case it's off
 	LDA #$7f
 	STA rNR11
-	LDA #1
-	ORA zSoundOutput
-	STA zSoundOutput
-	LDA #1
-	ORA zSoundOutput + 1
-	STA zSoundOutput + 1
 	RTS
 
 DangerSoundHigh
@@ -1103,10 +1087,10 @@ ParseMusic:
 	LDA (zCurTrackAudioPointer), Y
 	SSB NOTE_NOISE_SAMPLING
 	STA (zCurTrackAudioPointer), Y
-	JSR @ResetEnv
+	JSR ResetEnvelope
 	JMP LoadNote
 @Rest:
-	JSR @ResetEnv
+	JSR ResetEnvelope
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
 	SSB NOTE_REST
@@ -1161,7 +1145,8 @@ ParseMusic:
 	INY
 	STA (zCurTrackAudioPointer), Y
 	RTS
-@ResetEnv:
+
+ResetEnvelope:
 	LDY #CHANNEL_ENV_LENGTH
 	LDA (zCurTrackAudioPointer), Y
 	AND #$f0
@@ -1210,6 +1195,7 @@ ParseSFXOrCry:
 	JSR SetNoteDuration ; top nybble only applied to SFX / cries
 	; update volume envelope from next param
 	JSR Music_VolumeEnvelope
+	JSR ResetEnvelope
 	; update lo frequency from next param
 	JSR GetMusicByte
 	LDY #CHANNEL_FREQUENCY

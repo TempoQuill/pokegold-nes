@@ -21,7 +21,6 @@ zCurMusicByte:
 zCurChannel:
 	.dsb 1
 ;zVolume:
-zSoundOutput:
 	.dsb 1
 	.dsb 1
 zMusicID:
