@@ -24,3 +24,8 @@ SFX:
 	dba PRG_Audio, Sfx_JumpOverLedge
 	dba PRG_Audio, Sfx_GrassRustle
 	dba PRG_Audio, Sfx_Fly
+	dba PRG_Audio, Sfx_Wrong
+	dba PRG_Audio, Sfx_Squeak
+	dba PRG_Audio, Sfx_Strength
+	dba PRG_Audio, Sfx_Boat
+	dba PRG_Audio, Sfx_WallOpen

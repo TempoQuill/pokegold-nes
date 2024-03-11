@@ -124,9 +124,9 @@ Sfx_SecondPartOfItemfinder:
 Sfx_SecondPartOfItemfinder_Ch6:
 	duty_cycle 2
 	pitch_sweep 2, -4
-	square_note 4, 0, 6, 1280
+	square_note 4, 0, 6, $57a
 	pitch_sweep 2, 6
-	square_note 2, 0, 2, 1280
+	square_note 2, 0, 2, $57a
 	pitch_sweep 0, 8
 	square_note 1, 1, 0, 2047
 	sound_ret
@@ -137,11 +137,11 @@ Sfx_WarpTo_Ch6:
 	duty_cycle 1
 	pitch_sweep 1, 4
 	note_type $81, 0, 0
-	square_note 15, 13, 7, 1280
+	square_note 15, 13, 7, $57a
 	square_note 15, 11, 7, 1408
 	square_note 15, 8, 7, 1536
 	square_note 15, 4, 7, 1664
-	square_note 15, 1, 7, 1792
+	square_note 15, 1, 7, $700
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_WarpFrom:
@@ -151,11 +151,11 @@ Sfx_WarpFrom_Ch6:
 	duty_cycle 1
 	pitch_sweep 1, 4
 	note_type $81, 0, 0
-	square_note 15, 13, 7, 1792
+	square_note 15, 13, 7, $700
 	square_note 15, 11, 7, 1664
 	square_note 15, 8, 7, 1536
 	square_note 15, 4, 7, 1408
-	square_note 15, 1, 7, 1280
+	square_note 15, 1, 7, $57a
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_ChangeDexMode:
@@ -206,5 +206,90 @@ Sfx_Fly_Ch9:
 	noise_note 2, 0, 0, 0
 	noise_note 2, 4, 1, 3
 	noise_note 2, 0, 0, 0
+	sound_ret
+Sfx_Wrong:
+	db	025h
+	dw	Sfx_Wrong_Ch6
+	db	006h
+	dw	Sfx_Wrong_Ch7
+Sfx_Wrong_Ch6:
+	duty_cycle 3
+	pitch_sweep 5, -2
+	square_note 4, 1, 15, $57a
+	pitch_sweep 0, 1
+	square_note 4, 1, 0, 0
+	square_note 15, 1, 15, $57a
+	square_note 1, 1, 0, 0
+	sound_ret
+Sfx_Wrong_Ch7:
+	duty_cycle 3
+	square_note 4, 1, 15, $4a3
+	square_note 4, 1, 0, 0
+	square_note 15, 1, 15, $4a3
+	square_note 1, 1, 0, 0
+	sound_ret
+Sfx_Squeak:
+	db	005h
+	dw	Sfx_Squeak_Ch6
+Sfx_Squeak_Ch6:
+	duty_cycle 0
+	pitch_sweep 1, 5
+	note_type $81, 0, 0
+	square_note 15, 13, 2, $8729
+	pitch_sweep 0, 8
+	sound_ret
+Sfx_Strength:
+	db	008h
+	dw	Sfx_Strength_Ch9
+Sfx_Strength_Ch9:
+	drum_speed $81
+	noise_note 4, 10, 2, 5
+	noise_note 8, 15, 1, 9
+	noise_note 15, 0, 0, 0
+	noise_note 2, 15, 7, 6
+	noise_note 2, 15, 7, 9
+	noise_note 4, 15, 7, 11
+	noise_note 8, 15, 4, 13
+	noise_note 8, 15, 1, 11
+	sound_ret
+Sfx_Boat:
+	db	025h
+	dw	Sfx_Boat_Ch6
+	db	006h
+	dw	Sfx_Boat_Ch7
+Sfx_Boat_Ch6:
+	duty_cycle 2
+	square_note 15, 1, 15, $57a
+	square_note 4, 1, 0, 0
+	square_note 15, 1, 15, $57a
+	square_note 15, 1, 15, $57a
+	square_note 15, 1, 15, $57a
+	square_note 15, 1, 15, $57a
+	square_note 15, 0, 7, $57a
+	sound_ret
+Sfx_Boat_Ch7:
+	duty_cycle 3
+	square_note 15, 1, 15, $510
+	square_note 4, 1, 0, 0
+	square_note 15, 1, 15, $510
+	square_note 15, 1, 15, $510
+	square_note 15, 1, 15, $510
+	square_note 15, 1, 15, $510
+	square_note 15, 0, 7, $510
+	sound_ret
+Sfx_WallOpen:
+	db	005h
+	dw	Sfx_WallOpen_Ch6
+Sfx_WallOpen_Ch6:
+	duty_cycle 1
+	pitch_sweep 3, -6
+	square_note 4, 0, 7, $500
+	pitch_sweep 2, 6
+	square_note 4, 0, 6, $500
+	pitch_sweep 3, -6
+	square_note 4, 0, 7, $700
+	pitch_sweep 2, 6
+	square_note 15, 0, 6, $3700
+	pitch_sweep 0, 8
 	sound_ret
 
