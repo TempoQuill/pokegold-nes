@@ -171,6 +171,8 @@ _UpdateSound:
 	RTS
 
 UpdateChannels:
+; NOTE: Routine does a manual 16-bit decrement. NES saves its program counter
+; onto the stack just before incrementing to the next instruction to execute.
 	LDA zCurChannel
 	ASL A
 	TAY
@@ -1209,6 +1211,7 @@ ParseSFXOrCry:
 	JSR GetMusicByte
 	LDY #CHANNEL_VOLUME_ENVELOPE
 	STA (zCurTrackAudioPointer), Y
+	; back it up in case of gameboy env emulation
 	LDY #CHANNEL_ENV_BACKUP
 	STA (zCurTrackAudioPointer), Y
 	; update lo frequency from next param
@@ -1228,14 +1231,19 @@ ParseSFXOrCry:
 	RTS
 
 ParseDPCM:
+	; update note duration
 	LDA zCurMusicByte
-	JSR SetNoteDuration
+	JSR SetNoteDuration ; top nybble only applied to SFX / cries
+	; update bank from next param
 	JSR GetMusicByte
 	STA zDPCMBank
+	; update sample length from next param
 	JSR GetMusicByte
 	STA zDPCMLength
+	; update sample offset from next param
 	JSR GetMusicByte
 	STA zDPCMOffset
+	; pitch locked to $f, doesn't loop
 	LDA #$0f
 	STA zDPCMPitch
 	RTS
@@ -1352,6 +1360,8 @@ GetDPCMSample:
 	RTS
 
 ParseMusicCommand:
+; NOTE: Routine does a manual 16-bit decrement. NES saves its program counter
+; onto the stack just before incrementing to the next instruction to execute.
 	; reload command
 	LDA zCurMusicByte
 	; get command #
