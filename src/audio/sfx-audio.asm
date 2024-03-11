@@ -176,5 +176,35 @@ Sfx_JumpOverLedge_Ch6:
 	square_note 15, 0, 7, $a400
 	pitch_sweep 0, 1
 	sound_ret
-
+Sfx_GrassRustle:
+	db	008h
+	dw	Sfx_GrassRustle_Ch9
+Sfx_GrassRustle_Ch9:
+	noise_note 2, 0, 3, 6
+	noise_note 2, 1, 0, 0
+	noise_note 2, 0, 3, 4
+	noise_note 1, 1, 0, 0
+	sound_ret
+Sfx_Fly:
+	db	008h
+	dw	Sfx_Fly_Ch9
+Sfx_Fly_Ch9:
+	drum_speed $81
+	noise_note 2, 15, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 10, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 13, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 8, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 11, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 6, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 9, 1, 3
+	noise_note 2, 0, 0, 0
+	noise_note 2, 4, 1, 3
+	noise_note 2, 0, 0, 0
+	sound_ret
 

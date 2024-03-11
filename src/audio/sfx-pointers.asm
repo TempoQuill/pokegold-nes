@@ -22,3 +22,5 @@ SFX:
 	dba PRG_Audio, Sfx_WarpFrom
 	dba PRG_Audio, Sfx_ChangeDexMode
 	dba PRG_Audio, Sfx_JumpOverLedge
+	dba PRG_Audio, Sfx_GrassRustle
+	dba PRG_Audio, Sfx_Fly
