@@ -112,6 +112,7 @@ MACRO octave oct
 ENDM
 
 MACRO note_type length, mode, param
+m = mode << 4
 	.db note_type_cmd
 	.db length
 	IF mode ^ %01 = 1
@@ -142,6 +143,17 @@ ENDM
 MACRO duty_cycle no
 	.db duty_cycle_cmd
 	.db no
+ENDM
+
+MACRO volume_envelope mode, param
+m = mode << 4
+	.db volume_envelope_cmd
+	IF mode ^ %01 = 1
+		.db m + param
+	ELSE
+	p = param - 1
+		.db m + p
+	ENDIF
 ENDM
 
 MACRO pitch_sweep period, inc

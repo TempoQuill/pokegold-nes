@@ -202,6 +202,8 @@ DMC_FULL_HEAL_2_END:
 DMC_POTION:		.dsb $83
 DMC_POTION_END:
 	.dsb 1
+DMC_ESCAPE_ROPE:	.dsb $e4
+DMC_ESCAPE_ROPE_END:
 .ende
 
 C_R = $d5b

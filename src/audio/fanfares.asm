@@ -376,4 +376,111 @@ Sfx_DexFanfare2049_Ch10:
 	db	$0f
 ; P4-4
 	db	$ff
+Sfx_DexFanfare80109:
+	db	085h
+	dw	Sfx_DexFanfare80109_Ch6
+	db	006h
+	dw	Sfx_DexFanfare80109_Ch7
+	db	007h
+	dw	Sfx_DexFanfare80109_Ch8
+	db	008h
+	dw	Sfx_DexFanfare80109_Ch9
+	db	009h
+	dw	Sfx_DexFanfare80109_Ch10
+;----------------------------------------
+Sfx_DexFanfare80109_Ch6:
+;----------------------------------------
+	db	$df
+	db	$da,$00,$70
+	db	$e1,$8,$27
+	db	$db,$02
+; P1-2
+	db	$d8,$8c,$b1
+	db	$d3,$41
+	db	$40
+	db	$40
+	db	$d4,$b1
+	db	$b0
+	db	$b0
+	db	$d3,$41
+	db	$40
+	db	$40
+	db	$61
+	db	$60
+	db	$60
+; P1-3
+	db	$dc,$a5
+	db	$bf
+; P1-4
+	db	$ff
+;----------------------------------------
+Sfx_DexFanfare80109_Ch7:
+;----------------------------------------
+	db	$df
+	db	$e1,$8,$27
+	db	$db,$02
+; P2-2
+	db	$d8,$8c,$c1
+	db	$d3,$81
+	db	$80
+	db	$80
+	db	$41
+	db	$40
+	db	$40
+	db	$91
+	db	$90
+	db	$90
+	db	$b1
+	db	$b0
+	db	$b0
+; P2-3
+	db	$dc,$b5
+	db	$d2,$4f
+; P2-4
+	db	$ff
+;----------------------------------------
+Sfx_DexFanfare80109_Ch8:
+;----------------------------------------
+	db	$df
+; P3-2
+	db	$d8,$c,$1c
+	db	$d3,$40
+	db	$00
+	db	$d4,$b1
+	db	$d3,$40
+	db	$00
+	db	$d4,$b1
+	db	$d3,$40
+	db	$00
+	db	$11
+	db	$30
+	db	$00
+	db	$d4,$b1
+; P3-3
+	db	$dc,$54
+	db	$46
+	db	$08
+; P3-4
+	db	$ff
+;----------------------------------------
+Sfx_DexFanfare80109_Ch9:
+;----------------------------------------
+	db	$df
+	db	$f0,$04
+; P4-2
+	db	$d8,$c
+	db	$1f
+	db	$0f
+; P4-4
+	db	$ff
+;----------------------------------------
+Sfx_DexFanfare80109_Ch10:
+;----------------------------------------
+	db	$df
+; P4-2
+	db	$d8,$c
+	db	$1f
+	db	$0f
+; P4-4
+	db	$ff
 

@@ -5,6 +5,7 @@ Drumkits_DPCM:
 	.dw SampleSet3
 	.dw SampleSet4
 	.dw SampleSet5
+	.dw SfxSampleSet0
 SampleSet0:
 	.dw NoSample
 	.dw SMP_0_1
@@ -133,3 +134,19 @@ SMP_4_8:
 	dpcm_entry $e, DMC_4_8, DMC_4_8_END
 SMP_4_9:
 	dpcm_entry $e, DMC_4_9, DMC_4_9_END
+SfxSampleSet0:
+	.dw NoSample
+	.dw SMP_EscapeRope
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+	.dw NoSample
+SMP_EscapeRope:
+	dpcm_entry $e, DMC_ESCAPE_ROPE, DMC_ESCAPE_ROPE_END

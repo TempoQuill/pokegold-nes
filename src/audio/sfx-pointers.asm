@@ -9,3 +9,16 @@ SFX:
 	dba PRG_Audio, Sfx_ReadText
 	dba PRG_Audio, Sfx_ReadText
 	dba PRG_Audio, Sfx_DexFanfare2049
+	dba PRG_Audio, Sfx_DexFanfare80109
+	dba PRG_Audio, Sfx_Poison
+	dba PRG_Audio, Sfx_GotSafariBalls
+	dba PRG_Audio, Sfx_BootPc
+	dba PRG_Audio, Sfx_ShutDownPC
+	dba PRG_Audio, Sfx_ChoosePCOption
+	dba PRG_Audio, Sfx_EscapeRope
+	dba PRG_Audio, Sfx_PushButton
+	dba PRG_Audio, Sfx_SecondPartOfItemfinder
+	dba PRG_Audio, Sfx_WarpTo
+	dba PRG_Audio, Sfx_WarpFrom
+	dba PRG_Audio, Sfx_ChangeDexMode
+	dba PRG_Audio, Sfx_JumpOverLedge
