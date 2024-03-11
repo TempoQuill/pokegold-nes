@@ -706,8 +706,9 @@ GeneralHandler:
 	BEQ @PitchOffset
 	LDY #CHANNEL_DUTY_CYCLE_PATTERN
 	LDA (zCurTrackAudioPointer), Y
-	ROL A
-	ROL A
+	ASL A
+	ADC #0
+	ASL A
 	ADC #0
 	STA (zCurTrackAudioPointer), Y
 	LDA zCurTrackVolumeEnvAndDuty
@@ -1208,12 +1209,7 @@ ParseSFXOrCry:
 +	LDA zCurMusicByte
 	JSR SetNoteDuration ; top nybble only applied to SFX / cries
 	; update volume envelope from next param
-	JSR GetMusicByte
-	LDY #CHANNEL_VOLUME_ENVELOPE
-	STA (zCurTrackAudioPointer), Y
-	; back it up in case of gameboy env emulation
-	LDY #CHANNEL_ENV_BACKUP
-	STA (zCurTrackAudioPointer), Y
+	JSR Music_VolumeEnvelope
 	; update lo frequency from next param
 	JSR GetMusicByte
 	LDY #CHANNEL_FREQUENCY
@@ -1673,7 +1669,7 @@ Music_DutyCyclePattern:
 	JSR GetMusicByte
 	CLC
 REPT 2
-	ROR A
+	LSR A
 	BCC +
 	CLC
 	ADC #$80
