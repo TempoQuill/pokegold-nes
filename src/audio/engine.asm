@@ -104,6 +104,7 @@ _UpdateSound:
 	STA zCurTrackRawPitch + 1
 	; vibrato, envelope, pitch, chorus, etc
 	JSR GeneralHandler
+	JSR TranslateCryNoise
 	JSR HandleNoise
 	JSR HandleDPCM
 	; turn off music when playing sfx?
@@ -711,15 +712,7 @@ GeneralHandler:
 	LDA (zCurTrackAudioPointer), Y
 	TSB SOUND_PITCH_OFFSET
 	BEQ @Vibrato
-	LDY #CHANNEL_PITCH_OFFSET
-	LDA zCurTrackRawPitch
-	SEC
-	SBC (zCurTrackAudioPointer), Y
-	STA zCurTrackRawPitch
-	INY
-	LDA zCurTrackRawPitch + 1
-	SBC (zCurTrackAudioPointer), Y
-	STA zCurTrackRawPitch + 1
+	JSR ApplyPitchOffset
 @Vibrato:
 	; is vibrato on?
 	LDY #CHANNEL_FLAGS2
@@ -805,6 +798,33 @@ GeneralHandler:
 	SSB NOTE_VIBRATO_OVERRIDE
 	STA (zCurTrackAudioPointer), Y
 @Quit:
+	RTS
+
+ApplyPitchOffset:
+	LDY #CHANNEL_PITCH_OFFSET
+	LDA zCurChannel
+	CMP #CHAN4
+	BEQ @Noise
+	CMP #CHAN9
+	BEQ @Noise
+	LDA zCurTrackRawPitch
+	SEC
+	SBC (zCurTrackAudioPointer), Y
+	STA zCurTrackRawPitch
+	INY
+	LDA zCurTrackRawPitch + 1
+	SBC (zCurTrackAudioPointer), Y
+	STA zCurTrackRawPitch + 1
+	RTS
+@Noise:
+	LDA zCurTrackRawPitch
+	CLC
+	ADC (zCurTrackAudioPointer), Y
+	STA zCurTrackRawPitch
+	INY
+	LDA zCurTrackRawPitch + 1
+	ADC (zCurTrackAudioPointer), Y
+	STA zCurTrackRawPitch + 1
 	RTS
 
 ApplyPitchSlide:
@@ -1165,7 +1185,7 @@ ENDR
 
 ResetCryParams:
 	LDA zCurChannel
-	CMP CHAN6
+	CMP #CHAN6
 	RNE
 	LDA #0
 	LDY #CHANNEL_PITCH_OFFSET
@@ -1228,6 +1248,51 @@ ParseDPCM:
 	; pitch locked to $f, doesn't loop
 	LDA #$0f
 	STA zDPCMPitch
+	RTS
+
+TranslateCryNoise:
+; CRY NOISE PARAMS
+;	xxxxyzzz
+;	x - pitch offset 1
+;	y - periodic mode
+;	z - pitch offset 2
+	LDA zCurChannel
+	CMP #CHAN9
+	RNE
+	LDY #CHANNEL_FLAGS1
+	LDA (zCurTrackAudioPointer), Y
+	TSB SOUND_CRY
+	REQ
+	LDA #0
+	STA zCurTrackRawPitch + 1
+	LDA zCurTrackRawPitch
+REPT 4
+	LSR A
+ENDR
+	STA zCurTrackTemp
+	LDA zCurTrackRawPitch
+	AND #$08
+REPT 4
+	ASL A
+ENDR
+	STA zCurTrackRawPitch + 1
+	LDA zCurTrackRawPitch
+	AND #$07
+	CLC
+	ADC zCurTrackTemp
+	CMP #$10
+	BCS @Rest
+	ORA zCurTrackRawPitch + 1
+	STA zCurTrackRawPitch
+	RTS
+@Rest:
+	LDY #CHANNEL_VOLUME_ENVELOPE
+	LDA #$10
+	STA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_NOTE_FLAGS
+	LDA (zCurTrackAudioPointer), Y
+	SSB NOTE_REST
+	STA (zCurTrackAudioPointer), Y
 	RTS
 
 GetNoiseSample:

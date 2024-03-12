@@ -72,7 +72,11 @@ ENDM
 MACRO square_note length, mode, param, freq
 	.db length
 m = mode << 4
-	.db m + param
+	IF param < 0
+		.db m + 8 + (param * -1)
+	ELSE
+		.db m + param
+	ENDIF
 f = freq ^ $7ff
 	.dw f
 ENDM
@@ -80,7 +84,11 @@ ENDM
 MACRO noise_note length, mode, param, freq
 	.db length
 m = mode << 4
-	.db m + param
+	IF param < 0
+		.db m + 8 + (param * -1)
+	ELSE
+		.db m + param
+	ENDIF
 	.db freq
 ENDM
 
@@ -106,7 +114,11 @@ MACRO note_type length, mode, param
 m = mode << 4
 	.db note_type_cmd
 	.db length
-	.db m + param
+	IF param < 0
+		.db m + 8 + (param * -1)
+	ELSE
+		.db m + param
+	ENDIF
 ENDM
 
 MACRO drum_speed length
@@ -134,7 +146,11 @@ ENDM
 MACRO volume_envelope mode, param
 m = mode << 4
 	.db volume_envelope_cmd
-	.db m + param
+	IF param < 0
+		.db m + 8 + (param * -1)
+	ELSE
+		.db m + param
+	ENDIF
 ENDM
 
 MACRO pitch_sweep period, inc
@@ -151,9 +167,9 @@ ENDM
 
 MACRO duty_cycle_pattern duty1, duty2, duty3, duty4
 	.db duty_cycle_pattern_cmd
-a = duty1
-b = duty2
-c = duty3
+a = duty1 << 6
+b = duty2 << 4
+c = duty3 << 2
 d = duty4
 	.db a + b + c + d
 ENDM
@@ -199,7 +215,7 @@ MACRO dummy_e5
 ENDM
 
 MACRO pitch_offset mod
-	.db pitch_offset
+	.db pitch_offset_cmd
 	.dh mod
 	.dl mod
 ENDM
