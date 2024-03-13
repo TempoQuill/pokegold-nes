@@ -13,6 +13,7 @@
 .include "src/audio/music/route3.asm"
 .include "src/audio/music/route11.asm"
 .include "src/audio/music/kantogymbattle.asm"
+.include "src/audio/music/kantotrainerbattle.asm"
 .include "src/audio/music/looklass.asm"
 .include "src/audio/music/mtmoon.asm"
 .include "src/audio/music/showmearound.asm"
@@ -28,11 +29,13 @@
 .include "src/audio/music/halloffame.asm"
 .include "src/audio/music/healpokemon.asm"
 .include "src/audio/music/evolution.asm"
+.include "src/audio/music/printer.asm"
 .pad $a000, $00
 
 .base $a000
 .include "src/audio/music/viridiancity.asm"
 .include "src/audio/music/celadoncity.asm"
+.include "src/audio/music/wildpokemonvictory.asm"
 .include "src/audio/music/gym.asm"
 .include "src/audio/music/cherrygrovecity.asm"
 .include "src/audio/music/lookyoungster.asm"
@@ -44,7 +47,9 @@
 
 .base $8000
 .include "src/audio/music/credits.asm"
+
 .include "src/audio/music/route34.asm"
+.include "src/audio/music/rivalbattle.asm"
 .include "src/audio/music/goldenrodcity.asm"
 .include "src/audio/music/titlescreen.asm"
 .pad $a000, $00

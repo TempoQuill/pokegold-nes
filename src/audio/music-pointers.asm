@@ -6,6 +6,7 @@ Music:
 	dba PRG_Music0, Music_Route11
 	dba PRG_Music0, Music_MagnetTrain
 	dba PRG_Music0, Music_KantoGymBattle
+	dba PRG_Music0, Music_KantoTrainerBattle
 	dba PRG_Music2, Music_LookHiker
 	dba PRG_Music0, Music_LookLass
 	dba PRG_Music1, Music_HealPokemon
@@ -16,6 +17,7 @@ Music:
 	dba PRG_Music1, Music_HallOfFame
 	dba PRG_Music2, Music_ViridianCity
 	dba PRG_Music2, Music_CeladonCity
+	dba PRG_Music2, Music_WildPokemonVictory
 	dba PRG_Music2, Music_Gym
 	dba PRG_Music1, Music_Evolution
 	dba PRG_Music3, Music_Credits
@@ -23,10 +25,13 @@ Music:
 	dba PRG_Music2, Music_UnionCave
 	dba PRG_Music0, Music_EcruteakCity
 	dba PRG_Music1, Music_VioletCity
+	dba PRG_Music3, Music_RivalBattle
 	dba PRG_Music1, Music_Route29
 	dba PRG_Music3, Music_Route34
 	dba PRG_Music2, Music_LookYoungster
 	dba PRG_Music3, Music_GoldenrodCity
 	dba PRG_Music2, Music_TinTower
+	dba PRG_Music2, Music_SuccessfulCapture
 	dba PRG_Music2, Music_PokemonMarch
+	dba PRG_Music1, Music_Printer
 	dba PRG_Music4, Music_TheEnd

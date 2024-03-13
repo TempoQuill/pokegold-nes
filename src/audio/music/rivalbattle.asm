@@ -1,0 +1,871 @@
+Music_RivalBattle:
+	db	040h
+	dw	Music_RivalBattle_Ch1
+	db	001h
+	dw	Music_RivalBattle_Ch2
+	db	002h
+	dw	Music_RivalBattle_Ch3
+;----------------------------------------
+Music_RivalBattle_Ch1:
+;----------------------------------------
+	db	$da,$00,$66
+;	db	$e5,$77
+	db	$db,$03
+	db	$e6,$00,$02
+	db	$e1,$8,$15
+;	db	$ef,$f0
+; P1-1
+	db	$d8,$8c,$b2
+	db	$d4,$71
+	db	$b3
+	db	$dc,$b7
+	db	$b9
+; P1-2
+	db	$dc,$b2
+	db	$71
+	db	$d3,$23
+	db	$dc,$b7
+	db	$25
+	db	$53
+; P1-3
+@loop101:
+	db	$dc,$b2
+	db	$d5,$b5
+	db	$dc,$b7
+	db	$d4,$25
+	db	$dc,$b2
+	db	$43
+	db	$fd,3
+	dw	@loop101
+; P1-6
+	db	$dc,$b2
+	db	$d5,$b1
+	db	$d4,$23
+	db	$dc,$b7
+	db	$29
+; P1-7
+@loop102:
+	db	$dc,$b2
+	db	$d4,$95
+	db	$dc,$b7
+	db	$c5
+	db	$dc,$b2
+	db	$d3,$23
+	db	$fd,3
+	dw	@loop102
+; P1-10
+	db	$dc,$b2
+	db	$d4,$91
+	db	$c3
+	db	$dc,$4d
+	db	$c9
+@loop10:
+	db	$dc,$b7
+; P1-11
+	db	$b5
+	db	$75
+	db	$43
+; P1-12
+	db	$63
+	db	$73
+	db	$91
+	db	$b5
+; P1-13
+	db	$dc,$b2
+	db	$60
+	db	$40
+	db	$20
+	db	$40
+	db	$dc,$b7
+	db	$63
+	db	$dc,$b2
+	db	$90
+	db	$70
+	db	$60
+	db	$70
+	db	$dc,$b7
+	db	$93
+; P1-14
+	db	$dc,$b6
+	db	$91
+	db	$b1
+	db	$c1
+	db	$b1
+	db	$c1
+	db	$d3,$21
+	db	$d4,$c1
+	db	$d3,$51
+; P1-15
+	db	$dc,$b7
+	db	$d4,$b5
+	db	$75
+	db	$b3
+; P1-16
+	db	$d3,$23
+	db	$d4,$c3
+	db	$b1
+	db	$95
+; P1-17
+	db	$65
+	db	$d3,$25
+	db	$d4,$93
+; P1-18
+	db	$dc,$b5
+	db	$21
+	db	$61
+	db	$91
+	db	$d3,$11
+	db	$21
+	db	$d4,$91
+	db	$61
+	db	$91
+; P1-19
+	db	$dc,$b7
+	db	$79
+	db	$dc,$b4
+	db	$d5,$c1
+	db	$d4,$41
+	db	$71
+; P1-20
+	db	$dc,$b7
+	db	$63
+	db	$43
+	db	$21
+	db	$45
+; P1-21
+	db	$dc,$a0
+	db	$67
+	db	$dc,$a7
+	db	$67
+; P1-22
+	db	$dc,$a0
+	db	$d5,$b7
+	db	$dc,$a7
+	db	$b7
+; P1-23
+	db	$dc,$b7
+	db	$d4,$79
+	db	$dc,$b5
+	db	$d5,$c1
+	db	$d4,$41
+	db	$71
+; P1-24
+	db	$61
+	db	$41
+	db	$21
+	db	$41
+	db	$91
+	db	$71
+	db	$61
+	db	$91
+; P1-25
+	db	$dc,$a0
+	db	$bf
+; P1-26
+	db	$dc,$a7
+	db	$bf
+; P1-27
+	db	$dc,$a0
+	db	$c7
+	db	$dc,$a7
+	db	$c3
+	db	$dc,$b7
+	db	$93
+; P1-28
+	db	$dc,$b5
+	db	$d3,$51
+	db	$41
+	db	$21
+	db	$d4,$c1
+	db	$d3,$71
+	db	$51
+	db	$41
+	db	$21
+; P1-29
+@loop11:
+	db	$d4,$b1
+	db	$51
+	db	$b1
+	db	$d3,$41
+	db	$51
+	db	$41
+	db	$d4,$b1
+	db	$d3,$41
+; P1-30
+	db	$d4,$b1
+	db	$d3,$41
+	db	$51
+	db	$41
+	db	$d4,$b1
+	db	$41
+	db	$b1
+	db	$d3,$41
+	db	$fd,2
+	dw	@loop11
+; P1-33
+	db	$dc,$94
+	db	$d4,$47
+	db	$d5,$b7
+; P1-34
+	db	$d4,$87
+	db	$67
+; P1-35
+	db	$dc,$96
+	db	$d5,$97
+	db	$b7
+; P1-36
+	db	$c7
+	db	$d4,$27
+; P1-37
+	db	$dc,$b7
+	db	$d3,$47
+	db	$d4,$b7
+; P1-38
+	db	$d3,$87
+	db	$67
+; P1-39
+	db	$d4,$97
+	db	$b7
+; P1-40
+	db	$c7
+	db	$d3,$27
+; P1-41
+	db	$dc,$a0
+	db	$47
+	db	$dc,$a7
+	db	$47
+; P1-42
+	db	$dc,$a0
+	db	$d4,$87
+	db	$dc,$a7
+	db	$87
+; P1-43
+	db	$dc,$b7
+	db	$47
+	db	$27
+; P1-44
+	db	$43
+	db	$23
+	db	$d5,$c3
+	db	$d4,$23
+; P1-45
+	db	$dc,$c7
+	db	$d5,$b5
+	db	$d4,$25
+	db	$43
+; P1-46
+	db	$55
+	db	$45
+	db	$23
+; P1-47
+	db	$95
+	db	$55
+	db	$43
+; P1-48
+	db	$25
+	db	$45
+	db	$33
+; P1-49
+	db	$d5,$95
+	db	$c5
+	db	$d4,$23
+; P1-50
+	db	$35
+	db	$25
+	db	$d5,$c3
+; P1-51
+	db	$d4,$75
+	db	$35
+	db	$23
+; P1-52
+	db	$d5,$c5
+	db	$d4,$29
+	db	$fd,0
+	dw	@loop10
+;----------------------------------------
+Music_RivalBattle_Ch2:
+;----------------------------------------
+	db	$db,$03
+	db	$e1,$8,$36
+	db	$e6,$00,$01
+; P2-1
+	db	$d8,$8c,$c2
+	db	$d3,$50
+	db	$40
+	db	$30
+	db	$20
+	db	$30
+	db	$20
+	db	$10
+	db	$d4,$c0
+	db	$d3,$10
+	db	$d4,$c0
+	db	$b0
+	db	$a0
+	db	$b0
+	db	$a0
+	db	$90
+	db	$80
+; P1-2
+	db	$90
+	db	$80
+	db	$70
+	db	$60
+	db	$70
+	db	$60
+	db	$50
+	db	$40
+	db	$50
+	db	$40
+	db	$30
+	db	$20
+	db	$30
+	db	$20
+	db	$10
+	db	$d5,$c0
+; P2-3
+	db	$dc,$c2
+	db	$d3,$45
+	db	$dc,$c7
+	db	$d4,$75
+	db	$dc,$c2
+	db	$93
+; P2-4
+@loop201:
+	db	$dc,$c2
+	db	$45
+	db	$dc,$c7
+	db	$75
+	db	$dc,$c2
+	db	$93
+	db	$fd,2
+	dw	@loop201
+; P2-6
+	db	$dc,$c2
+	db	$41
+	db	$73
+	db	$dc,$c7
+	db	$77
+	db	$dc,$a2
+	db	$c0
+	db	$d3,$10
+; P2-7
+@loop202:
+	db	$dc,$c2
+	db	$25
+	db	$dc,$c7
+	db	$55
+	db	$dc,$c2
+	db	$73
+	db	$fd,3
+	dw	@loop202
+; P2-10
+	db	$dc,$c2
+	db	$21
+	db	$53
+	db	$dc,$b0
+	db	$53
+	db	$dc,$b7
+	db	$55
+@loop20:
+	db	$fe
+	dw	@sub2_11_13
+; P2-14
+	db	$dc,$b0
+	db	$97
+	db	$dc,$b7
+	db	$97
+; P2-15
+	db	$fe
+	dw	@sub2_11_13
+; P2-18
+	db	$dc,$4e
+	db	$97
+	db	$dc,$b7
+	db	$97
+; P2-19
+	db	$dc,$b0
+	db	$d4,$c9
+	db	$dc,$b7
+	db	$c5
+; P2-20
+	db	$dc,$b0
+	db	$d3,$27
+	db	$d4,$c7
+; P2-21
+	db	$dc,$b0
+	db	$b9
+	db	$dc,$b7
+	db	$b5
+; P2-22
+	db	$dc,$2f
+	db	$49
+	db	$dc,$b7
+	db	$45
+; P2-23
+	db	$dc,$b0
+	db	$c9
+	db	$dc,$b7
+	db	$c5
+; P2-24
+	db	$dc,$c7
+	db	$d3,$27
+	db	$d4,$c7
+; P2-25
+	db	$dc,$b0
+	db	$d3,$4f
+; P2-26
+	db	$dc,$b7
+	db	$4f
+; P2-27
+	db	$dc,$b0
+	db	$53
+	db	$dc,$b7
+	db	$55
+	db	$dc,$c7
+	db	$51
+	db	$91
+	db	$c1
+; P2-28
+	db	$d2,$27
+	db	$d3,$c7
+; P2-29
+	db	$dc,$b0
+	db	$b9
+	db	$dc,$b7
+	db	$b5
+; P2-30
+	db	$dc,$b0
+	db	$a9
+	db	$dc,$b7
+	db	$a5
+; P2-31
+	db	$dc,$b0
+	db	$99
+	db	$dc,$b7
+	db	$95
+; P2-32
+	db	$dc,$b0
+	db	$89
+	db	$dc,$b7
+	db	$85
+; P2-33
+	db	$dc,$a4
+	db	$d4,$87
+	db	$47
+; P2-34
+	db	$b7
+	db	$97
+; P2-35
+	db	$dc,$a6
+	db	$d5,$c7
+	db	$d4,$27
+; P2-36
+	db	$47
+	db	$67
+; P2-37
+	db	$dc,$c7
+	db	$d3,$87
+	db	$47
+; P2-38
+	db	$b7
+	db	$97
+; P2-39
+	db	$d4,$c7
+	db	$d3,$27
+; P2-40
+	db	$47
+	db	$67
+; P2-41
+	db	$dc,$b0
+	db	$8f
+; P2-42
+	db	$4f
+; P2-43
+	db	$d4,$c7
+	db	$b7
+; P2-44
+	db	$97
+	db	$dc,$c7
+	db	$67
+; P2-45
+@loop21:
+	db	$dc,$c2
+	db	$d4,$b5
+	db	$dc,$c7
+	db	$d3,$25
+	db	$dc,$c2
+	db	$43
+	db	$fd,3
+	dw	@loop21
+; P2-48
+	db	$dc,$c2
+	db	$d4,$b1
+	db	$d3,$23
+	db	$dc,$b7
+	db	$25
+	db	$dc,$9a
+	db	$23
+; P2-49
+@loop22:
+	db	$dc,$c2
+	db	$d4,$95
+	db	$dc,$c7
+	db	$c5
+	db	$dc,$c2
+	db	$d3,$23
+	db	$fd,3
+	dw	@loop22
+; P2-52
+	db	$dc,$c2
+	db	$d4,$91
+	db	$c3
+	db	$dc,$c7
+	db	$c5
+	db	$dc,$6a
+	db	$d3,$33
+	db	$fd,0
+	dw	@loop20
+@sub2_11_13:
+	db	$dc,$c7
+; P2-11
+	db	$49
+	db	$dc,$c4
+	db	$d4,$b1
+	db	$d3,$41
+	db	$71
+; P2-12
+	db	$dc,$c5
+	db	$63
+	db	$43
+	db	$dc,$c2
+	db	$21
+	db	$dc,$c7
+	db	$45
+; P2-13
+	db	$dc,$b0
+	db	$67
+	db	$dc,$b7
+	db	$67
+	db	$ff
+;----------------------------------------
+Music_RivalBattle_Ch3:
+;----------------------------------------
+; P3-1
+	db	$d8,$c,$19
+;
+	db	$d4,$71
+	db	$b1
+	db	$01
+	db	$dc,$7f
+	db	$b9
+; P3-2
+	db	$dc,$19
+	db	$d4,$71
+	db	$d3,$21
+	db	$01
+	db	$dc,$4b
+	db	$25
+	db	$dc,$19
+	db	$d4,$21
+	db	$31
+; P3-3
+@loop301:
+	db	$41
+	db	$21
+	db	$41
+	db	$dc,$32
+	db	$73
+	db	$dc,$19
+	db	$51
+	db	$41
+	db	$21
+	db	$fd,4
+	dw	@loop301
+; P3-7
+@loop302:
+	db	$d4,$21
+	db	$d5,$c1
+	db	$d4,$21
+	db	$dc,$32
+	db	$53
+	db	$dc,$19
+	db	$31
+	db	$21
+	db	$d5,$c1
+	db	$fd,3
+	dw	@loop302
+; P3-10
+	db	$d4,$21
+	db	$51
+	db	$21
+	db	$dc,$32
+	db	$d5,$c3
+	db	$dc,$19
+	db	$d4,$11
+	db	$21
+	db	$31
+@loop30:
+; P3-11
+	db	$fe
+	dw	@sub3_11_11
+; P3-12
+	db	$d5,$b1
+	db	$d3,$21
+	db	$d5,$b1
+	db	$d4,$c1
+	db	$d5,$b1
+	db	$d4,$b1
+	db	$d5,$b1
+	db	$d4,$91
+; P3-13
+	db	$fe
+	dw	@sub3_13_13
+; P3-14
+	db	$21
+	db	$91
+	db	$d3,$21
+	db	$dc,$32
+	db	$d4,$93
+	db	$dc,$19
+	db	$21
+	db	$11
+	db	$d5,$c1
+; P3-15
+	db	$fe
+	dw	@sub3_11_11
+; P3-16
+	db	$d5,$b1
+	db	$d4,$b1
+	db	$d5,$b1
+	db	$d4,$91
+	db	$d5,$b1
+	db	$d4,$71
+	db	$d5,$b1
+	db	$d4,$61
+; P3-17
+	db	$fe
+	dw	@sub3_13_13
+; P3-18
+@loop31:
+	db	$21
+	db	$91
+	db	$fd,4
+	dw	@loop31
+; P3-19
+	db	$fe
+	dw	@sub3_19_19
+	db	$91
+	db	$71
+; P3-21
+@loop311:
+	db	$d5,$b1
+	db	$d4,$61
+	db	$fd,4
+	dw	@loop311
+; P3-22
+	db	$d5,$b1
+	db	$d4,$71
+	db	$d5,$b1
+	db	$d4,$71
+	db	$d5,$b1
+	db	$d4,$71
+	db	$61
+	db	$41
+; P3-23
+	db	$fe
+	dw	@sub3_19_19
+	db	$d5,$c1
+	db	$d4,$31
+; P3-25
+	db	$fe
+	dw	@sub3_25_25
+	db	$d4,$41
+	db	$d3,$41
+; P3-26
+	db	$fe
+	dw	@sub3_25_25
+	db	$d4,$41
+	db	$b1
+; P3-27
+	db	$51
+	db	$c1
+	db	$d3,$51
+	db	$d4,$51
+	db	$c1
+	db	$d3,$51
+	db	$d4,$51
+	db	$d3,$51
+; P3-28
+	db	$d4,$51
+	db	$c1
+	db	$d3,$51
+	db	$d4,$51
+	db	$51
+	db	$71
+	db	$81
+	db	$91
+; P3-29
+@loop32:
+	db	$41
+	db	$b1
+	db	$fd,4
+	dw	@loop32
+; P3-30
+@loop33:
+	db	$41
+	db	$a1
+	db	$fd,4
+	dw	@loop33
+; P3-31
+@loop34:
+	db	$41
+	db	$91
+	db	$fd,4
+	dw	@loop34
+; P3-32
+@loop35:
+	db	$41
+	db	$81
+	db	$fd,12
+	dw	@loop35
+; P3-35
+@loop36:
+	db	$d5,$c1
+	db	$d4,$41
+	db	$fd,4
+	dw	@loop36
+; P3-36
+@loop37:
+	db	$d5,$c1
+	db	$d4,$71
+	db	$fd,4
+	dw	@loop37
+; P3-37
+	db	$41
+	db	$81
+	db	$b1
+	db	$41
+	db	$81
+	db	$b1
+	db	$41
+	db	$b1
+; P3-38
+	db	$41
+	db	$81
+	db	$b1
+	db	$41
+	db	$81
+	db	$b1
+	db	$41
+	db	$b1
+; P3-39
+	db	$d5,$c1
+	db	$d4,$81
+	db	$c1
+	db	$d5,$c1
+	db	$d4,$81
+	db	$c1
+	db	$d5,$c1
+	db	$d4,$c1
+; P3-40
+	db	$d5,$c1
+	db	$d4,$91
+	db	$c1
+	db	$d5,$c1
+	db	$d3,$41
+	db	$21
+	db	$d4,$c1
+	db	$91
+; P3-41
+	db	$dc,$64
+	db	$87
+	db	$47
+; P3-42
+	db	$b7
+	db	$87
+; P3-43
+	db	$d5,$c7
+	db	$d4,$27
+; P3-44
+	db	$47
+	db	$67
+; P3-45
+@loop38:
+	db	$dc,$19
+	db	$d5,$b1
+	db	$d4,$41
+	db	$fd,7
+	dw	@loop38
+; P3-46
+	db	$51
+	db	$41
+; P3-47
+@loop39:
+	db	$d5,$b1
+	db	$d4,$41
+	db	$fd,6
+	dw	@loop39
+; P3-48
+	db	$d5,$b1
+	db	$d4,$71
+	db	$61
+	db	$51
+; P3-49
+@loop3a:
+	db	$d5,$91
+	db	$d4,$21
+	db	$fd,7
+	dw	@loop3a
+	db	$31
+	db	$21
+; P3-51
+@loop3b:
+	db	$d5,$91
+	db	$d4,$21
+	db	$fd,4
+	dw	@loop3b
+; P3-52
+	db	$d5,$c1
+	db	$91
+	db	$c1
+	db	$dc,$32
+	db	$d4,$63
+	db	$dc,$19
+	db	$51
+	db	$41
+	db	$31
+	db	$fd,0
+	dw	@loop30
+@sub3_11_11:
+	db	$d5,$b1
+	db	$d4,$41
+	db	$fd,4
+	dw	@sub3_11_11
+	db	$ff
+@sub3_13_13:
+	db	$21
+	db	$91
+	db	$d3,$21
+	db	$dc,$32
+	db	$d4,$93
+	db	$dc,$19
+	db	$d3,$21
+	db	$d4,$21
+	db	$91
+	db	$ff
+@sub3_19_19:
+	db	$d5,$c1
+	db	$d4,$71
+	db	$fd,7
+	dw	@sub3_19_19
+	db	$ff
+@sub3_25_25:
+	db	$d4,$41
+	db	$b1
+	db	$d3,$41
+	db	$fd,2
+	dw	@sub3_25_25
+	db	$ff
+
+
