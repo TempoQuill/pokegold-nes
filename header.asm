@@ -4,7 +4,7 @@ MACRO nsf_bank_define const
 ENDM
 .org 0
 
-NSF_TRACKS = 35
+NSF_TRACKS = 39
 IFDEF PLAY_NSF_CRIES
 	NSF_TRACKS = 251
 ENDIF
