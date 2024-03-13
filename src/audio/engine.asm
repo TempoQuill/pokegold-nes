@@ -226,6 +226,9 @@ UpdateChannels:
 	BNE @Ch1_Check_Duty
 
 @Ch1_REST:
+	LDA rMIX
+	AND #$1e
+	STA rMIX
 	LDY #0
 	LDA #$10
 	STA rNR10
@@ -235,17 +238,22 @@ UpdateChannels:
 	RTS
 
 @Ch1_SMP:
-	LDA #$10
-	STA rNR10
-	LDA zCurTrackRawPitch
-	STA rNR12
+	LDA rMIX
+	AND #$1e
+	STA rMIX
+	LDY #$10
+	STY rNR10
+	LDY zCurTrackRawPitch
+	STY rNR12
+	LDY zCurTrackVolumeEnvAndDuty
+	STY rNR10
+	ORA #$1
+	STA rMIX
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
 	STA rNR13
 	LDA zCurTrackPitchSweep
 	STA rNR11
-	LDA zCurTrackVolumeEnvAndDuty
-	STA rNR10
 	RTS
 
 @Ch2:
@@ -286,6 +294,9 @@ UpdateChannels:
 	BNE @Ch2_Check_Duty
 
 @Ch2_REST:
+	LDA rMIX
+	AND #$1d
+	STA rMIX
 	LDY #0
 	LDA #$10
 	STA rNR20
@@ -295,17 +306,22 @@ UpdateChannels:
 	RTS
 
 @Ch2_SMP:
-	LDA #$10
-	STA rNR20
-	LDA zCurTrackRawPitch
-	STA rNR22
+	LDA rMIX
+	AND #$1d
+	STA rMIX
+	LDY #$10
+	STY rNR20
+	LDY zCurTrackRawPitch
+	STY rNR22
+	LDY zCurTrackVolumeEnvAndDuty
+	STY rNR20
+	ORA #$02
+	STA rMIX
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
 	STA rNR23
 	LDA zCurTrackPitchSweep
 	STA rNR21
-	LDA zCurTrackVolumeEnvAndDuty
-	STA rNR20
 	RTS
 
 @Ch3:
@@ -336,6 +352,9 @@ UpdateChannels:
 	RTS
 
 @Ch3_REST:
+	LDA rMIX
+	AND #$1b
+	STA rMIX
 	LDY #0
 	STY rNR30
 	STY rNR32
@@ -343,10 +362,15 @@ UpdateChannels:
 	RtS
 
 @Ch3_SMP:
-	LDA zCurTrackVolumeEnvAndDuty
-	STA rNR30
-	LDA zCurTrackRawPitch
-	STA rNR32
+	LDA rMIX
+	AND #$1b
+	STA rMIX
+	LDY zCurTrackVolumeEnvAndDuty
+	STY rNR30
+	LDY zCurTrackRawPitch
+	STY rNR32
+	ORA #$04
+	STA rMIX
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
 	STA rNR33
@@ -370,6 +394,9 @@ UpdateChannels:
 	RTS
 
 @Ch4_REST:
+	LDA rMIX
+	AND #$17
+	STA rMIX
 	LDY #0
 	LDA #$10
 	STA rNR40
@@ -378,10 +405,15 @@ UpdateChannels:
 	RTS
 
 @Ch4_SMP:
-	LDA zCurTrackVolumeEnvAndDuty
-	STA rNR40
-	LDA zCurTrackRawPitch
-	STA rNR42
+	LDA rMIX
+	AND #$17
+	STA rMIX
+	LDY zCurTrackVolumeEnvAndDuty
+	STY rNR40
+	LDY zCurTrackRawPitch
+	STY rNR42
+	ORA #$08
+	STA rMIX
 	LDA #$08
 	STA rNR43
 	RTS
