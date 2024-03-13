@@ -5,7 +5,23 @@ INIT:
 	JMP PLAY_NSF_SOUND
 
 PLAY:
-	JMP UpdateSound
+	JSR UpdateSound
+	LDY zSfxQueue
+	BNE @Sfx
+	LDY zCryQueue
+	REQ
+	DEY
+	JSR PlayCry
+	LDY #0
+	STY zCryQueue
+	RTS
+
+@Sfx:
+	DEY
+	JSR PlaySFX
+	LDY #0
+	STY zSfxQueue
+	RTS
 
 NSF_Music:
 	LDY #0

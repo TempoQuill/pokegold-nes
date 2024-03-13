@@ -34,14 +34,11 @@ PreserveIDRestart:
 MusicOn:
 	LDA #1
 	STA zMusicPlaying
-	LDA #$0f
-	STA rMIX
 	RTS
 
 MusicOff:
 	LDA #0
 	STA zMusicPlaying
-	STA rMIX
 	RTS
 
 _UpdateSound:
@@ -133,7 +130,7 @@ _UpdateSound:
 	LDA zCurChannel
 	CMP #NUM_MUSIC_CHANS
 	BCS @SFXChannel
-	LDY #CHANNEL_NOTE_FLAGS
+	LDY #CHANNEL_FLAGS1
 	JSR FetchSFXEquivalent
 	LSR A
 	BCS @SoundChannelOn
@@ -225,8 +222,6 @@ UpdateChannels:
 @Ch1_VIB:
 	LDA zCurTrackRawPitch
 	STA rNR12
-	LDA zCurTrackPitchSweep
-	STA rNR11
 	TYA
 	BNE @Ch1_Check_Duty
 
@@ -287,8 +282,6 @@ UpdateChannels:
 @Ch2_VIB:
 	LDA zCurTrackRawPitch
 	STA rNR22
-	LDA zCurTrackPitchSweep
-	STA rNR21
 	TYA
 	BNE @Ch2_Check_Duty
 

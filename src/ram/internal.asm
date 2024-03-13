@@ -287,7 +287,9 @@ zDontPlayMusicOnReload:
 	.dsb 1
 	.dsb 1
 	.dsb 1
+zSfxQueue:
 	.dsb 1
+zCryQueue:
 	.dsb 1
 zPlayerState:
 	.dsb 1

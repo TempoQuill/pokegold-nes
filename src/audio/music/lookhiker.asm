@@ -120,7 +120,7 @@ Music_LookHiker_Ch4:
 Music_LookHiker_Ch5:
 ;----------------------------------------
 ; P4-1
-	db	$d8,$8c
+	db	$d8,$c
 	db	$63
 ; P4-2
 	db	$0f

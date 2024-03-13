@@ -96,6 +96,8 @@ PlayMusic:
 	STA zWindow2
 	TYA
 	BEQ @Skip
+	LDA #$0f
+	STA rMIX
 	JSR _PlayMusic
 	BNE @Done
 @Skip:
@@ -132,6 +134,8 @@ PlayMusic2:
 	JSR _InitSound
 	TYA
 	BEQ @Skip
+	LDA #$0f
+	STA rMIX
 	JSR _PlayMusic
 @Skip:
 	PLA

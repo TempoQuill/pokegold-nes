@@ -63,7 +63,7 @@ Sfx_GotSafariBalls_Ch6:
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_BootPc:
-	db	006h
+	db	005h
 	dw	Sfx_BootPc_Ch6
 Sfx_BootPc_Ch6:
 	db	$db,$02
