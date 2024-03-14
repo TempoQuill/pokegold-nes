@@ -246,6 +246,8 @@ Sfx_Strength_Ch9:
 	noise_note 4, 10, 2, 5
 	noise_note 8, 15, 1, 9
 	noise_note 15, 0, 0, 0
+Sfx_PlacePuzzlePieceDown_Ch9:
+	drum_speed $81
 	noise_note 2, 15, 7, 6
 	noise_note 2, 15, 7, 9
 	noise_note 4, 15, 7, 11
@@ -291,5 +293,60 @@ Sfx_WallOpen_Ch6:
 	pitch_sweep 2, 6
 	square_note 15, 0, 6, $3700
 	pitch_sweep 0, 8
+	sound_ret
+Sfx_PlacePuzzlePieceDown:
+	db	008h
+	dw	Sfx_PlacePuzzlePieceDown_Ch9
+Sfx_EnterDoor:
+	db	008h
+	dw	Sfx_EnterDoor_Ch9
+Sfx_EnterDoor_Ch9:
+	drum_speed $81
+	noise_note 9, 15, 1, 11
+	noise_note 8, 13, 1, 10
+	sound_ret
+Sfx_SwitchPokemon:
+	db	009h
+	dw	Sfx_SwitchPokemon_Ch10
+Sfx_SwitchPokemon_Ch10:
+	dpcm_note 11, DMC_SWITCH_MONS, DMC_SWITCH_MONS_END
+	sound_ret
+Sfx_Tally:
+	db	009h
+	dw	Sfx_Tally_Ch10
+Sfx_Tally_Ch10:
+	dpcm_note 6, DMC_TALLY, DMC_TALLY_END
+	sound_ret
+Sfx_Transaction:
+	db	009h
+	dw	Sfx_Transaction_Ch10
+Sfx_Transaction_Ch10:
+	dpcm_note 30, DMC_TRANSACTION, DMC_TRANSACTION_END
+	sound_ret
+Sfx_ExitBuilding:
+	db	008h
+	dw	Sfx_ExitBuilding_Ch9
+Sfx_ExitBuilding_Ch9:
+	drum_speed $81
+	noise_note 2, 15, 1, 12
+	noise_note 12, 7, 1, 5
+	noise_note 2, 11, 1, 12
+	noise_note 12, 6, 1, 5
+	noise_note 6, 4, 1, 12
+	sound_ret
+Sfx_Bump:
+	db	005h
+	dw	Sfx_Bump_Ch6
+Sfx_Bump_Ch6:
+	duty_cycle 2
+	pitch_sweep 5, -4
+	square_note 15, 0, 3, 768
+	pitch_sweep 0, 8
+	sound_ret
+Sfx_Save:
+	db	009h
+	dw	Sfx_Save_Ch10
+Sfx_Save_Ch10:
+	dpcm_note 34, DMC_SAVE, DMC_SAVE_END
 	sound_ret
 

@@ -29,3 +29,12 @@ SFX:
 	dba PRG_Audio, Sfx_Strength
 	dba PRG_Audio, Sfx_Boat
 	dba PRG_Audio, Sfx_WallOpen
+	dba PRG_Audio, Sfx_PlacePuzzlePieceDown
+	dba PRG_Audio, Sfx_EnterDoor
+	dba PRG_Audio, Sfx_SwitchPokemon
+	dba PRG_Audio, Sfx_Tally
+	dba PRG_Audio, Sfx_Transaction
+	dba PRG_Audio, Sfx_ExitBuilding
+	dba PRG_Audio, Sfx_Bump
+	dba PRG_Audio, Sfx_Save
+	dba PRG_Audio, Sfx_Pokeflute

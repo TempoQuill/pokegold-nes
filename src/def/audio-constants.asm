@@ -176,19 +176,19 @@ DMC_0_3_END:
 .ende
 
 .enum $200
-DMC_0_5:	.dsb $98
+DMC_0_5:		.dsb $98
 DMC_0_5_END:
-DMC_0_1:	.dsb $29
+DMC_0_1:		.dsb $29
 DMC_0_1_END:
 	.dsb 3
-DMC_0_2:	.dsb $24
+DMC_0_2:		.dsb $24
 DMC_0_2_END:
-DMC_0_4:	.dsb $10
+DMC_0_4:		.dsb $10
 DMC_0_4_END:
-DMC_0_9:	.dsb $25
+DMC_0_9:		.dsb $25
 DMC_0_9_END:
 	.dsb 3
-DMC_0_11:	.dsb $34
+DMC_0_11:		.dsb $34
 DMC_0_11_END:
 DMC_FULL_HEAL_1:	.dsb $9
 DMC_FULL_HEAL_1_END:
@@ -196,6 +196,11 @@ DMC_FULL_HEAL_1_END:
 DMC_FULL_HEAL_2:	.dsb $46
 DMC_FULL_HEAL_2_END:
 	.dsb 2
+DMC_SWITCH_MONS:	.dsb $34
+DMC_SWITCH_MONS_END:
+DMC_TALLY:		.dsb $1f
+DMC_TALLY_END:
+	.dsb 1
 .ende
 
 .enum $400
@@ -204,6 +209,15 @@ DMC_POTION_END:
 	.dsb 1
 DMC_ESCAPE_ROPE:	.dsb $e4
 DMC_ESCAPE_ROPE_END:
+DMC_TRANSACTION:	.dsb $83
+DMC_TRANSACTION_END:
+	.dsb 1
+.ende
+
+.enum $600
+DMC_SAVE:	.dsb $95
+DMC_SAVE_END:
+	.dsb 3
 .ende
 
 C_R = $d5b

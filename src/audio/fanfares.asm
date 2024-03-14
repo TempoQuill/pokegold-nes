@@ -483,4 +483,29 @@ Sfx_DexFanfare80109_Ch10:
 	db	$0f
 ; P4-4
 	db	$ff
+Sfx_Pokeflute:
+	db	007h
+	dw	Sfx_Pokeflute_Ch8
+Sfx_Pokeflute_Ch8:
+	db	0dah,001h,000h
+	db	0dfh
+	db	0e1h,010h,014h
+; P3-1
+	db	0d8h,00ch,081h
+	db	0d2h,051h
+	db	061h
+	db	083h
+	db	0a1h
+	db	081h
+	db	0d1h,013h
+; P3-2
+	db	011h
+	db	031h
+	db	011h
+	db	0d2h,081h
+	db	0a1h
+	db	061h
+	db	087h
+	db	00bh
+	db	0ffh
 

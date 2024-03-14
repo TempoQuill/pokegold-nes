@@ -12,8 +12,9 @@ PRG_Cries:	.dsb 1
 PRG_DPCM0:	.dsb 1
 PRG_DPCM1:	.dsb 1
 PRG_DPCM2:	.dsb 1
+PRG_DPCM3:	.dsb 1
 PRG_MonCries:	.dsb 1
-		.dsb $74
+		.dsb $73
 IFNDEF NSF_FILE
 	PRG_Home:
 ELSE

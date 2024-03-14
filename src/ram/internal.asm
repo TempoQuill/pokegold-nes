@@ -286,6 +286,7 @@ zDontPlayMusicOnReload:
 	.dsb 1
 	.dsb 1
 	.dsb 1
+zCueOffset:
 	.dsb 1
 zSfxQueue:
 	.dsb 1

@@ -81,3 +81,8 @@
 ; dpcm
 .incbin "src/data/dmc/bank-3.bin"
 .pad $e000, $55
+
+.base $c000
+; dpcm
+.incbin "src/data/dmc/bank-4.bin"
+.pad $e000, $55
