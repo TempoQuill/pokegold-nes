@@ -17,9 +17,10 @@
 .include "src/audio/music/kantowildbattle.asm"
 .include "src/audio/music/pokemoncenter.asm"
 .include "src/audio/music/looklass.asm"
+.include "src/audio/music/lookofficer.asm"
+.include "src/audio/music/route2.asm"
 .include "src/audio/music/mtmoon.asm"
 .include "src/audio/music/showmearound.asm"
-.include "src/audio/music/gamecorner.asm"
 .pad $c000, $00
 
 .base $8000
@@ -36,7 +37,9 @@
 .include "src/audio/music/celadoncity.asm"
 .include "src/audio/music/wildpokemonvictory.asm"
 .include "src/audio/music/gymleadervictory.asm"
+.include "src/audio/music/mtmoonsquare.asm"
 .include "src/audio/music/gym.asm"
+.include "src/audio/music/pallettown.asm"
 .include "src/audio/music/cherrygrovecity.asm"
 .include "src/audio/music/lookyoungster.asm"
 .include "src/audio/music/tintower.asm"
@@ -53,14 +56,17 @@
 .include "src/audio/music/rocketbattle.asm"
 .include "src/audio/music/goldenrodcity.asm"
 .include "src/audio/music/titlescreen.asm"
+.include "src/audio/music/trainervictory.asm"
 .pad $a000, $00
 
 .base $a000
 .include "src/audio/music/theend.asm"
 
+.include "src/audio/music/gamecorner.asm"
 .include "src/audio/music/bicycle.asm"
 .include "src/audio/music/ecruteakcity.asm"
 .include "src/audio/music/magnettrain.asm"
+.include "src/audio/music/lavendertown.asm"
 .pad $c000, $00
 
 .base $8000

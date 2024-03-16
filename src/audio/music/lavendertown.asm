@@ -1,0 +1,579 @@
+Music_LavenderTown:
+	db	040h
+	dw	Music_LavenderTown_Ch1
+	db	001h
+	dw	Music_LavenderTown_Ch2
+	db	002h
+	dw	Music_LavenderTown_Ch3
+	db	003h
+;----------------------------------------
+Music_LavenderTown_Ch1:
+;----------------------------------------
+	db	$da,$00,$a0
+;	db	$e5,$77
+; P1-1
+;	db	$ef,$0f
+	db	$e1,$06,$24
+	db	$db,$00
+	db	$d8,$8c,$b3
+; P1-2
+	db	$0f
+; P1-3
+	db	$0f
+; P1-4
+	db	$0f
+; P1-5
+	db	$0f
+; P1-6
+@loop:
+	db	$fe
+	dw	@sub6_10
+; P1-11
+	db	$dc,$93
+	db	$d2,$31
+	db	$dc,$43
+	db	$31
+	db	$dc,$93
+	db	$71
+	db	$dc,$43
+	db	$71
+	db	$dc,$93
+	db	$c1
+	db	$dc,$43
+	db	$c1
+	db	$dc,$93
+	db	$a1
+	db	$dc,$43
+	db	$a1
+; P1-12
+	db	$fe
+	dw	@sub12
+	db	$dc,$93
+; P1-13
+	db	$dc,$93
+	db	$61
+	db	$dc,$83
+	db	$61
+	db	$dc,$93
+	db	$31
+	db	$dc,$43
+	db	$31
+	db	$dc,$93
+	db	$d3,$c1
+	db	$dc,$43
+	db	$c1
+	db	$dc,$93
+	db	$81
+	db	$dc,$43
+	db	$81
+; P1-14
+	db	$fe
+	dw	@sub6_10
+; P1-18
+	db	$dc,$93
+	db	$d2,$31
+	db	$dc,$43
+	db	$31
+	db	$dc,$93
+	db	$81
+	db	$dc,$43
+	db	$81
+	db	$dc,$93
+	db	$c1
+	db	$dc,$43
+	db	$c1
+	db	$dc,$93
+	db	$81
+	db	$dc,$43
+	db	$81
+; P1-20
+	db	$fe
+	dw	@sub12
+; P1-21
+	db	$dc,$93
+	db	$d1,$11
+	db	$dc,$43
+	db	$11
+	db	$dc,$93
+	db	$d2,$81
+	db	$dc,$43
+	db	$81
+	db	$dc,$93
+	db	$51
+	db	$dc,$43
+	db	$51
+	db	$dc,$93
+	db	$11
+	db	$dc,$43
+	db	$11
+; P1-22
+	db	$d4,$61
+	db	$a1
+	db	$d3,$11
+	db	$51
+	db	$61
+	db	$11
+	db	$d4,$a1
+	db	$61
+; P1-23
+@sub23:
+	db	$d4,$11
+	db	$51
+	db	$81
+	db	$c1
+	db	$d3,$11
+	db	$d4,$81
+	db	$51
+	db	$11
+; P1-24
+	db	$61
+	db	$a1
+	db	$d3,$11
+	db	$51
+	db	$61
+	db	$11
+	db	$d4,$a1
+	db	$61
+	db	$fd,2
+	dw	@sub23
+; P1-25
+; P1-26
+; P1-27
+	db	$71
+	db	$a1
+	db	$d3,$11
+	db	$71
+	db	$a1
+	db	$11
+	db	$d4,$a1
+	db	$71
+; P1-28
+	db	$81
+	db	$d3,$11
+	db	$31
+	db	$61
+	db	$81
+	db	$61
+	db	$31
+	db	$11
+; P1-29
+	db	$d4,$c7
+	db	$c7
+; P1-30
+	db	$fd,0
+	dw	@loop
+@sub6_10:
+	db	$dc,$83
+	db	$d2,$11
+	db	$dc,$43
+	db	$11
+	db	$dc,$83
+	db	$81
+	db	$dc,$43
+	db	$81
+	db	$dc,$83
+	db	$d1,$11
+	db	$dc,$43
+	db	$11
+	db	$dc,$83
+	db	$d2,$81
+	db	$dc,$43
+	db	$81
+; P1-7
+	db	$dc,$83
+	db	$31
+	db	$dc,$43
+	db	$31
+	db	$dc,$83
+	db	$a1
+	db	$dc,$43
+	db	$a1
+	db	$dc,$83
+	db	$d1,$31
+	db	$dc,$43
+	db	$31
+	db	$dc,$83
+	db	$d2,$a1
+	db	$dc,$43
+	db	$a1
+; P1-8
+	db	$dc,$83
+	db	$51
+	db	$dc,$43
+	db	$51
+	db	$dc,$83
+	db	$c1
+	db	$dc,$43
+	db	$c1
+	db	$dc,$83
+	db	$d1,$51
+	db	$dc,$43
+	db	$51
+	db	$dc,$83
+	db	$d2,$c1
+	db	$dc,$43
+	db	$c1
+; P1-9
+	db	$dc,$83
+	db	$21
+	db	$dc,$43
+	db	$21
+	db	$dc,$83
+	db	$81
+	db	$dc,$43
+	db	$81
+	db	$dc,$83
+	db	$b1
+	db	$dc,$43
+	db	$b1
+	db	$dc,$83
+	db	$81
+	db	$dc,$43
+	db	$81
+; P1-10
+	db	$dc,$83
+	db	$11
+	db	$dc,$43
+	db	$11
+	db	$dc,$83
+	db	$61
+	db	$dc,$43
+	db	$61
+	db	$dc,$83
+	db	$d1,$11
+	db	$dc,$43
+	db	$11
+	db	$dc,$83
+	db	$d2,$61
+	db	$dc,$43
+	db	$61
+	db	$ff
+@sub12:
+	db	$dc,$93
+	db	$d2,$81
+	db	$dc,$83
+	db	$81
+	db	$dc,$83
+	db	$61
+	db	$dc,$43
+	db	$61
+	db	$dc,$83
+	db	$31
+	db	$dc,$43
+	db	$31
+	db	$dc,$83
+	db	$81
+	db	$dc,$43
+	db	$81
+	db	$ff
+;----------------------------------------
+Music_LavenderTown_Ch2:
+;----------------------------------------
+; P2-1
+	db	$db,$01
+	db	$e1,$08,$24
+;	db	$ef,$ff
+; P2-2
+@mero2:
+	db	$d8,$8c,$a3
+	db	$d2,$11
+	db	$dc,$63
+	db	$11
+	db	$dc,$a3
+	db	$81
+	db	$dc,$63
+	db	$81
+	db	$dc,$a3
+	db	$c1
+	db	$dc,$63
+	db	$c1
+	db	$dc,$a3
+	db	$71
+	db	$dc,$63
+	db	$71
+	db	$fd,3
+	dw	@mero2
+; P2-3
+; P2-4
+; P2-5
+	db	$dc,$a3
+	db	$11
+	db	$dc,$63
+	db	$11
+	db	$dc,$a3
+	db	$81
+	db	$dc,$63
+	db	$81
+	db	$dc,$a3
+	db	$c1
+	db	$dc,$63
+	db	$c1
+	db	$dc,$a3
+	db	$d1,$31
+	db	$dc,$63
+	db	$31
+; P2-6
+@loop:
+	db	$dc,$b5
+	db	$fe
+	dw	@mero6_10
+; P2-11
+	db	$d5,$73
+	db	$d4,$13
+	db	$73
+	db	$a3
+; P2-12
+	db	$d5,$83
+	db	$d4,$13
+	db	$33
+	db	$83
+; P2-13
+	db	$63
+	db	$33
+	db	$d5,$c3
+	db	$83
+; P2-14
+	db	$fe
+	dw	@mero6_10
+; P2-11
+	db	$d5,$83
+	db	$d4,$13
+	db	$63
+	db	$83
+; P2-12
+	db	$13
+	db	$63
+	db	$83
+	db	$63
+; P2-13
+	db	$13
+	db	$53
+	db	$83
+	db	$d3,$13
+; P2-22
+	db	$dc,$b7
+	db	$d5,$6f
+; P2-23
+	db	$1f
+; P2-24
+	db	$6f
+; P2-25
+	db	$1f
+; P2-26
+	db	$6f
+; P2-27
+	db	$7f
+; P2-28
+	db	$8f
+; P2-29
+	db	$d6,$87
+	db	$dc,$57
+	db	$d2,$30
+	db	$60
+	db	$85
+; P2-30
+	db	$fd,0
+	dw	@loop
+@mero6_10:
+	db	$d5,$13
+	db	$83
+	db	$d4,$53
+	db	$d5,$83
+; P2-7
+	db	$33
+	db	$a3
+	db	$d4,$63
+	db	$d5,$a3
+; P2-8
+	db	$53
+	db	$c3
+	db	$d4,$83
+	db	$63
+; P2-9
+	db	$53
+	db	$23
+	db	$d5,$b3
+	db	$83
+; P2-10
+	db	$63
+	db	$d4,$13
+	db	$a3
+	db	$13
+	db	$ff
+;----------------------------------------
+Music_LavenderTown_Ch3:
+;----------------------------------------
+; P3-1
+	db	$e1,$12,$24
+	db	$d8,$c,$50
+;	db	$ef,$f0
+; P3-2
+	db	$0f
+; P3-3
+	db	$0f
+; P3-4
+	db	$0f
+; P3-5
+	db	$07
+	db	$d2,$53
+	db	$63
+; P3-6
+@loop:
+	db	$dc,$50
+	db	$d2,$83
+	db	$03
+	db	$83
+	db	$03
+; P3-7
+	db	$53
+	db	$03
+	db	$53
+	db	$63
+; P3-8
+	db	$83
+	db	$63
+	db	$53
+	db	$c3
+; P3-9
+	db	$dc,$81
+	db	$27
+	db	$01
+	db	$dc,$28
+	db	$21
+	db	$31
+	db	$51
+; P3-10
+	db	$dc,$81
+	db	$69
+	db	$dc,$28
+	db	$81
+	db	$61
+	db	$51
+; P3-11
+	db	$dc,$81
+	db	$37
+	db	$dc,$50
+	db	$d3,$a3
+	db	$d2,$33
+; P3-12
+	db	$dc,$81
+	db	$5b
+	db	$dc,$28
+	db	$61
+	db	$51
+; P3-13
+	db	$dc,$81
+	db	$3b
+	db	$dc,$28
+	db	$51
+	db	$61
+; P3-14
+	db	$dc,$50
+	db	$83
+	db	$03
+	db	$83
+	db	$03
+; P3-15
+	db	$53
+	db	$03
+	db	$53
+	db	$63
+; P3-16
+	db	$83
+	db	$63
+	db	$53
+	db	$c3
+; P3-17
+	db	$dc,$81
+	db	$27
+	db	$01
+	db	$dc,$28
+	db	$21
+	db	$31
+	db	$51
+; P3-18
+	db	$dc,$81
+	db	$69
+	db	$dc,$28
+	db	$81
+	db	$61
+	db	$51
+; P3-19
+	db	$dc,$81
+	db	$3b
+	db	$dc,$28
+	db	$11
+	db	$31
+; P3-20
+	db	$dc,$81
+	db	$1f
+; P3-21 -tie
+	db	$1b
+	db	$03
+; P3-22
+	db	$dc,$24
+	db	$a1
+	db	$81
+	db	$a1
+	db	$c1
+	db	$dc,$48
+	db	$d1,$13
+	db	$d2,$83
+; P3-23
+	db	$63
+	db	$53
+	db	$33
+	db	$13
+; P3-24
+	db	$dc,$24
+	db	$a1
+	db	$81
+	db	$a1
+	db	$c1
+	db	$dc,$48
+	db	$d1,$13
+	db	$d2,$83
+; P3-25
+	db	$d1,$63
+	db	$d8,$8,$18
+	db	$51
+	db	$61
+	db	$51
+	db	$d8,$c,$48
+	db	$33
+	db	$13
+; P3-26
+	db	$dc,$24
+	db	$d2,$a1
+	db	$81
+	db	$a1
+	db	$c1
+	db	$dc,$48
+	db	$d1,$13
+	db	$d2,$83
+; P3-27
+	db	$dc,$24
+	db	$a1
+	db	$81
+	db	$a1
+	db	$c1
+	db	$dc,$48
+	db	$d1,$13
+	db	$23
+; P3-28
+	db	$dc,$81
+	db	$3b
+	db	$dc,$48
+	db	$13
+; P3-29
+	db	$dc,$81
+	db	$d2,$cb
+	db	$dc,$24
+	db	$51
+	db	$61
+; P3-30
+	db	$fd,0
+	dw	@loop
+;:
+
+

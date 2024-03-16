@@ -11,17 +11,23 @@ Music:
 	dba PRG_Music0, Music_PokemonCenter
 	dba PRG_Music2, Music_LookHiker
 	dba PRG_Music0, Music_LookLass
+	dba PRG_Music0, Music_LookOfficer
 	dba PRG_Music1, Music_HealPokemon
+	dba PRG_Music4, Music_LavenderTown
+	dba PRG_Music0, Music_Route2
 	dba PRG_Music0, Music_MtMoon
 	dba PRG_Music0, Music_ShowMeAround
-	dba PRG_Music0, Music_GameCorner
+	dba PRG_Music4, Music_GameCorner
 	dba PRG_Music4, Music_Bicycle
 	dba PRG_Music1, Music_HallOfFame
 	dba PRG_Music2, Music_ViridianCity
 	dba PRG_Music2, Music_CeladonCity
+	dba PRG_Music3, Music_TrainerVictory
 	dba PRG_Music2, Music_WildPokemonVictory
 	dba PRG_Music2, Music_GymLeaderVictory
+	dba PRG_Music2, Music_MtMoonSquare
 	dba PRG_Music2, Music_Gym
+	dba PRG_Music2, Music_PalletTown
 	dba PRG_Music1, Music_Evolution
 	dba PRG_Music3, Music_Credits
 	dba PRG_Music2, Music_CherrygroveCity
