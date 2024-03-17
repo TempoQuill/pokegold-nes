@@ -1959,12 +1959,11 @@ GetMusicByte:
 	LDA (zCurTrackAudioPointer), Y
 	STA zCurTrackAudioPointer + 1
 	STX zCurTrackAudioPointer
-	AND #$3f
-REPT 5
-	LSR A
-ENDR
-	TAX
-	PLA
+	LDX #0
+	AND #$20
+	BEQ +
+	INX
++	PLA
 	JSR _LoadMusicByte
 	LDA #1
 	ADC zCurTrackAudioPointer

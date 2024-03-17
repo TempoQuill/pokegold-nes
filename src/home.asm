@@ -184,3 +184,108 @@ HideSprites:
 	TXA
 	BNE @Loop
 	RTS
+
+Farcall:
+;        b hl
+; input: A(XY)
+; NOTE: 8K Window chosen depends on address
+	PHP
+	STA zSavedBank
+	STY zSavedPointer
+	STX zSavedPointer + 1
+	PHA
+	PHX
+	PHY
+	TXA
+	LDX #0
+	AND #$20
+	BEQ +
+	INX
++	LDA zSavedBank
+	STA MMC5_PRGBankSwitch2, X
+	LDA #<@Return
+	SEC
+	SBC #1
+	PHA
+	LDA #>@Return
+	SBC #0
+	PHA
+	JMP (zSavedPointer)
+@Return:
+	LDA zWindow1
+	STA MMC5_PRGBankSwitch2
+	LDA zWindow2
+	STA MMC5_PRGBankSwitch3
+	PLY
+	PLX
+	PLA
+	PLP
+	RTS
+; ReadBuffer - VRAM buffer reading
+; place a JSR to here in NMI somewhere
+; OG routine by crySTAlmoon
+; Optimizations by Tempo Quill
+; layout:
+; iStringBufferFlag = $05ff
+; iStringBuffer = $0600 - $06ff
+ReadBuffer:
+	LDA iStringBufferFlag
+	BEQ @return
+	; byte 0 - data length
+	; byte 1 - target PPU addr hi
+	; byte 2 - target PPU addr lo
+	; byte 3 - flags
+	;	bit 0 - if set: inc 32, else: inc 1
+	;	bit 1 - rle
+	; byte 4 - byte(s)
+	LDY #0
+@checkloop:
+	LDA iStringBuffer, Y
+	BEQ @return
+	TAX
+	INY
+	LDA iStringBuffer, Y
+	STA rWORD
+	INY
+	LDA iStringBuffer, Y
+	STA rWORD
+	INY
+	LDA iStringBuffer, Y
+	AND #1
+	BNE @inc32
+	LDA zPPUCtrlMirror
+	AND #$fb
+	STA zPPUCtrlMirror
+	STA rCTRL
+	LDA iStringBuffer, Y
+	AND #2
+	BNE @rle
+@loop:
+	INY
+	LDA iStringBuffer, y
+	STA rDATA
+	DEX
+	BNE @loop
+	BEQ @checkmore
+@inc32:
+	LDA zPPUCtrlMirror
+	ORA #4
+	STA zPPUCtrlMirror
+	STA rCTRL
+	LDA iStringBuffer, Y
+	AND #2
+	BEQ @loop
+@rle:
+	DEX
+	INY
+	LDA iStringBuffer, Y
+@rle_loop:
+	STA rDATA
+	DEX
+	BNE @rle_loop
+@checkmore:
+	INY
+	CPY #128
+	BCC @checkloop
+@return:
+	RTS

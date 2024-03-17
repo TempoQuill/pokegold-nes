@@ -283,8 +283,9 @@ zDontPlayMusicOnReload:
 	.dsb 1
 	.dsb 1
 	.dsb 1
-	.dsb 1
-	.dsb 1
+zSavedPointer:
+	.dsb 2
+zSavedBank:
 	.dsb 1
 zCueOffset:
 	.dsb 1
@@ -329,20 +330,10 @@ iChannel9:
 	.dsb 50
 iChannel10:
 	.dsb 50
-; music
-	.dsb 3
-iMusicBCDUpdate:
-	.dsb 3
+	.dsb $20b
+iStringBufferFlag:
 	.dsb 1
-; cry
-	.dsb 3
-iCryBCDUpdate:
-	.dsb 3
-	.dsb 1
-; sfx
-	.dsb 3
-iSFXBCDUpdate:
-	.dsb 3
-	.dsb 1
+iStringBuffer:
+	.dsb $100
 .ende
 iVirtualOAM = $700
