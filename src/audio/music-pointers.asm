@@ -28,6 +28,7 @@ Music:
 	dba PRG_Music2, Music_MtMoonSquare
 	dba PRG_Music2, Music_Gym
 	dba PRG_Music2, Music_PalletTown
+	dba PRG_Music2, Music_ProfOaksPokemonTalk
 	dba PRG_Music1, Music_Evolution
 	dba PRG_Music3, Music_Credits
 	dba PRG_Music2, Music_CherrygroveCity

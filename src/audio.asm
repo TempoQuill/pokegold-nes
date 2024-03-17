@@ -40,6 +40,7 @@
 .include "src/audio/music/mtmoonsquare.asm"
 .include "src/audio/music/gym.asm"
 .include "src/audio/music/pallettown.asm"
+.include "src/audio/music/profoakspokemontalk.asm"
 .include "src/audio/music/cherrygrovecity.asm"
 .include "src/audio/music/lookyoungster.asm"
 .include "src/audio/music/tintower.asm"
