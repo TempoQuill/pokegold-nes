@@ -32,4 +32,5 @@ IFNDEF NSF_FILE
 		.dw NMI   ; runs every frame
 		.dw RESET ; boots up the game
 		.dw IRQ   ; dummied out
+	.include "src/chr.asm"
 ENDIF
