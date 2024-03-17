@@ -220,8 +220,15 @@ PlaySFX:
 	bsw_a000
 	LDA #PRG_Audio
 	STA zWindow2
+	JSR CheckSFX
+	BCC @Play
+	CPY zCurSFX
+	BEQ @Play
+	BCS @Skip
+@Play:
 	STY zCurSFX
 	JSR _PlaySFX
+@Skip:
 	PLA
 	bsw_a000
 	STA zWindow2
@@ -232,4 +239,13 @@ PlaySFX:
 	PLX
 	PLA
 	PLP
+	RTS
+
+CheckSFX:
+	LDA iChannel6 + CHANNEL_FLAGS1
+	ORA iChannel7 + CHANNEL_FLAGS1
+	ORA iChannel8 + CHANNEL_FLAGS1
+	ORA iChannel9 + CHANNEL_FLAGS1
+	ORA iChannel10 + CHANNEL_FLAGS1
+	LSR A
 	RTS

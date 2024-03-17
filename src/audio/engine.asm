@@ -150,8 +150,7 @@ _UpdateSound:
 	JMP @Loop
 +
 	JSR PlayDanger
-	JSR SilenceMusic
-	RTS
+	JMP SilenceMusic
 
 UpdateChannels:
 ; NOTE: Routine does a manual 16-bit decrement. NES saves its program counter
@@ -468,9 +467,18 @@ _CheckSFX:
 	LSR A
 	RTS
 
+MuteDanger:
+	LDA rMIX
+	AND #$1e
+	STA rMIX
+	LDA #0
+	STA zLowHealthAlarm
+	RTS
+
 PlayDanger:
 	LDA zLowHealthAlarm
-	RPL
+	REQ
+	BPL MuteDanger
 	AND #$1f
 	TAX
 	INC zLowHealthAlarm
@@ -541,71 +549,46 @@ SilenceMusic:
 	; cutting out?
 	LDA zMusicSilence
 	REQ
-	LDA zMusicSilenceCount
-	BEQ @Update
-	DEC zMusicSilenceCount
-	RTS
-@Update:
-	LDA zMusicSilence
-	TAX
+	LDY zMusicSilenceCount
+	BNE @Run
 	AND #$3f
 	STA zMusicSilenceCount
-	LDY zMusicSilenceOffset
-	TXA
-	BMI @CutIn
-	LDA CutOffMasks, Y
-	FAB
-	BEQ @NoAudio
-	INC zMusicSilenceOffset
-	DEX
-	BNE @UpdateAudio
+	LDA #5
+	STA zMusicSilenceOffset
 	RTS
-@NoAudio:
-	STA rMIX
-	LDA zPlayerState
-	CMP PLAYER_BIKE
-	BEQ @Bicycle
-	JSR PreserveIDRestart
-	LDY zMusicSilenceID
-	BEQ @Quit
-	JSR _PlayMusic
-@Quit:
-	LDA #0
-	STA zMusicSilence
-	RTS
-@Bicycle:
-	JSR PreserveIDRestart
-	LDA #0
-	STA zMusicSilence
-	LDY zMusicSilenceID
-	JSR _PlayMusic
-	LDA #1 << MUSIC_CUT_IN_F
-	ORA zMusicSilence
-	STA zMusicSilence
-	RTS
-@CutIn:
-	; are we done?
-	TYA
-	BEQ @MaxChannels
+@Run:
+	DEC zMusicSilenceCount
+	RNE
 	DEC zMusicSilenceOffset
-	BPL @UpdateAudio
-@MaxChannels:
-	STA zMusicSilence
-	RTS
-@UpdateAudio:
+	BMI @NewSong
+	STA zMusicSilenceCount
+	LDY zMusicSilenceOffset
+	LDA ChannelCutoffs, Y
+	STA zCurChannel
 	LDA rMIX
-	ORA CutOffMasks, Y
-	EOR #%11101111
+	AND ChannelMasks, Y
 	STA rMIX
+	JSR UpdateTrackPointer
+	LDY #CHANNEL_FLAGS1
+	LDA (zCurTrackAudioPointer), Y
+	RSB SOUND_CHANNEL_ON
+	STA (zCurTrackAudioPointer), Y
+	LDY zMusicSilenceOffset
 	RTS
+@NewSong:
+	JSR PreserveIDRestart
+	TAY
+	JMP _PlayMusic
 
-CutOffMasks:
-	.db %11100000
-	.db %11101000
-	.db %11101010
-	.db %11101011
-	.db %11101111
-	.db %11111111
+ChannelCutoffs:
+	.db CHAN3, CHAN1, CHAN5, CHAN2, CHAN4
+
+ChannelMasks:
+	.db %11011
+	.db %11110
+	.db %01111
+	.db %11101
+	.db %10111
 
 LoadNote:
 	; wait for pitch slide to finish
