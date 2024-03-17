@@ -38,3 +38,5 @@ SFX:
 	dba PRG_Audio, Sfx_Bump
 	dba PRG_Audio, Sfx_Save
 	dba PRG_Audio, Sfx_Pokeflute
+	dba PRG_Audio, Sfx_ElevatorEnd
+	dba PRG_Audio, Sfx_Elevator

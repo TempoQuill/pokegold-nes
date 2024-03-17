@@ -9,7 +9,7 @@ Sfx_PokeballsPlacedOnTable_Ch6:
 	pitch_sweep 3, 6
 	square_note 8, 14, 2, 512
 	pitch_sweep 0, 1
-	sound_ret:
+	sound_ret
 Sfx_Potion:
 	db	009h
 	dw	Sfx_Potion_Ch10
@@ -28,9 +28,9 @@ Sfx_Menu:
 	db	008h
 	dw	Sfx_Menu_Ch9
 Sfx_Menu_Ch9:
-	db	$01,$e2,$06
-	db	$08,$e1,$03
-	db	$ff
+	noise_note 1, 14, 2, 6
+	noise_note 8, 14, 1, 3
+	sound_ret
 Sfx_ReadText:
 	db	005h
 	dw	Sfx_ReadText_Ch6
@@ -68,7 +68,7 @@ Sfx_BootPc:
 Sfx_BootPc_Ch6:
 	db	$db,$02
 	db	$0f,$f2,$35,$00
-	db	$0f,$00,$00,$00
+	db	$0f,$00,$ff,$07
 	db	$03,$a1,$6b,$00
 	db	$03,$a1,$d6,$00
 	db	$03,$a1,$a1,$00
@@ -86,7 +86,7 @@ Sfx_ShutDownPC_Ch6:
 	db	$04,$f0,$ae,$01
 	db	$04,$f0,$5c,$03
 	db	$04,$f0,$0b,$05
-	db	$01,$00,$00,$00
+	db	$01,$00,$ff,$07
 	db	$ff
 Sfx_ChoosePCOption:
 	db	005h
@@ -94,9 +94,9 @@ Sfx_ChoosePCOption:
 Sfx_ChoosePCOption_Ch6:
 	db	$db,$02
 	db	$06,$f0,$d6,$00
-	db	$04,$00,$00,$00
+	db	$04,$00,$ff,$07
 	db	$06,$f0,$d6,$00
-	db	$01,$00,$00,$00
+	db	$01,$00,$ff,$07
 	db	$ff
 Sfx_EscapeRope:
 	db	009h
@@ -112,11 +112,11 @@ Sfx_PushButton:
 	dw	Sfx_PushButton_Ch6
 Sfx_PushButton_Ch6:
 	duty_cycle 2
-	square_note 4, 0, 0, 2047
+	square_note 4, 0, 0, 0
 	square_note 2, 15, 1, 1725
-	square_note 1, 0, 0, 2047
+	square_note 1, 0, 0, 0
 	square_note 4, 15, 1, 1940
-	square_note 4, 0, 0, 2047
+	square_note 4, 0, 0, 0
 	sound_ret
 Sfx_SecondPartOfItemfinder:
 	db	005h
@@ -341,4 +341,48 @@ Sfx_Save:
 Sfx_Save_Ch10:
 	dpcm_note 34, DMC_SAVE, DMC_SAVE_END
 	sound_ret
+Sfx_ElevatorEnd:
+	db	005h
+	dw	Sfx_ElevatorEnd_Ch6
+Sfx_Elevator:
+	db	085h
+	dw	Sfx_Elevator_Ch6
+	db	006h
+	dw	Sfx_Elevator_Ch7_Ch8
+	db	007h
+	dw	Sfx_Elevator_Ch7_Ch8
+	db	008h
+	dw	Sfx_Elevator_Ch9
+	db	009h
+	dw	Sfx_Elevator_Ch10
+Sfx_Elevator_Ch6:
+	duty_cycle 2
+	pitch_sweep 5, -2
+@loop:
+	square_note 2, 15, 1, 768
+	db sound_loop_cmd, 48
+	dw @loop
+	pitch_sweep 0, 1
+Sfx_ElevatorEnd_Ch6:
+	duty_cycle 2
+	square_note 15, 15, 3, 1874
+	square_note 8, 6, 5, 1874
+	square_note 15, 15, 4, 1834
+	square_note 15, 7, 4, 1834
+	square_note 15, 4, 4, 1834
+	square_note 15, 2, 4, 1834
+	sound_ret
+Sfx_Elevator_Ch7_Ch8:
+	square_note 96, 0, 0, 0
+	square_note 83, 0, 0, 0
+	sound_ret
+Sfx_Elevator_Ch9:
+	noise_note 96, 0, 0, 0
+	noise_note 83, 0, 0, 0
+	sound_ret
+Sfx_Elevator_Ch10:
+	dpcm_note 96, 0, 0
+	dpcm_note 83, 0, 0
+	sound_ret
+
 
