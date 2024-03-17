@@ -15,7 +15,7 @@ Music_EcruteakCity_Ch1:
 	db	$e1,$12,$25
 	db	$db,$02
 @mainloop:
-	db	$d8,$8c,$57
+	db	$d8,$c,$57
 ; P1-2
 	db	$09
 	db	$d3,$15
@@ -45,7 +45,7 @@ Music_EcruteakCity_Ch1:
 	db	$81
 	db	$61
 	db	$d2,$15
-	db	$d8,$86,$67
+	db	$d8,$6,$67
 ; P1-9
 	db	$23
 	db	$39
@@ -239,7 +239,7 @@ Music_EcruteakCity_Ch2:
 	db	$e1,$12,$25
 	db	$db,$03
 @mainloop:
-	db	$d8,$86,$67
+	db	$d8,$6,$67
 ; P2-2
 	db	$0f
 	db	$04
@@ -253,7 +253,7 @@ Music_EcruteakCity_Ch2:
 	db	$d2,$50
 	db	$68
 ; P2-4
-	db	$d8,$8c,$77
+	db	$d8,$c,$77
 	db	$09
 	db	$31
 	db	$11
@@ -262,7 +262,7 @@ Music_EcruteakCity_Ch2:
 	db	$83
 	db	$a3
 	db	$c3
-	db	$d8,$86,$93
+	db	$d8,$6,$93
 ;-----------env_kirikae---------------
 	db	$dc,$97
 ;-onshoku kirikae---------------------
@@ -391,7 +391,7 @@ Music_EcruteakCity_Ch2:
 	db	$33
 	db	$43
 ; P2-20
-	db	$d8,$8c,$83
+	db	$d8,$c,$83
 	db	$5f
 ;-----------env_kirikae---------------
 	db	$dc,$80
@@ -399,7 +399,7 @@ Music_EcruteakCity_Ch2:
 	db	$33
 	db	$23
 	db	$63
-	db	$d8,$86,$80
+	db	$d8,$6,$80
 	db	$86
 	db	$90
 ;-----------env_kirikae---------------
@@ -441,7 +441,7 @@ Music_EcruteakCity_Ch2:
 	db	$d4,$a3
 	db	$d3,$13
 ; P2-26
-	db	$d8,$8c,$87
+	db	$d8,$c,$87
 	db	$69
 	db	$81
 	db	$61

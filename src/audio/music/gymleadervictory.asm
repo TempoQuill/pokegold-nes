@@ -16,7 +16,7 @@ Music_GymLeaderVictory_Ch1:
 	db	$db,$03
 	db	$e6,$00,$01
 ; P1-2
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$d3,$35
 	db	$d4,$a0
 	db	$d3,$30
@@ -130,7 +130,7 @@ Music_GymLeaderVictory_Ch2:
 	db	$e1,$12,$34
 ; P2-2
 	db	$db,$03
-	db	$d8,$8c,$d7
+	db	$d8,$c,$d7
 	db	$d3,$a5
 	db	$70
 	db	$a0

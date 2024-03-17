@@ -17,7 +17,7 @@ Music_CherrygroveCity_Ch1:
 	db	$e6,$00,$01
 	db	$e1,$8,$15
 ; P1-1
-	db	$d8,$8c,$b5
+	db	$d8,$c,$b5
 	db	$09
 	db	$d4,$11
 	db	$31
@@ -99,7 +99,7 @@ Music_CherrygroveCity_Ch2:
 	db	$db,$03
 	db	$e1,$10,$36
 ; P2-1
-	db	$d8,$8c,$c3
+	db	$d8,$c,$c3
 	db	$d4,$11
 	db	$31
 	db	$51

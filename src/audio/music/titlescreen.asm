@@ -17,7 +17,7 @@ Music_TitleScreen_Ch1:
 	db	$e6,$00,$02
 	db	$e1,$10,$12
 ; P1-10
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$d4,$35
 	db	$d5,$c1
 	db	$c3
@@ -83,7 +83,7 @@ Music_TitleScreen_Ch1:
 	db	$40
 ; P1-21
 	db	$37
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$13
 	db	$d5,$c3
 	db	$d4,$13
@@ -100,20 +100,20 @@ Music_TitleScreen_Ch1:
 	db	$53
 	db	$13
 ; P1-24
-	db	$d8,$88,$a0
+	db	$d8,$8,$a0
 	db	$d5,$c5
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$c5
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$d4,$63
 	db	$53
 	db	$13
 ; P1-25
-	db	$d8,$88,$a0
+	db	$d8,$8,$a0
 	db	$35
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$35
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$02
 	db	$d5,$c2
 	db	$d4,$12
@@ -129,7 +129,7 @@ Music_TitleScreen_Ch1:
 	db	$15
 ; P1-28
 	db	$38
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$40
 	db	$50
 	db	$65
@@ -137,7 +137,7 @@ Music_TitleScreen_Ch1:
 	db	$40
 ; P1-29
 	db	$37
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$13
 	db	$d5,$c3
 	db	$d4,$13
@@ -145,7 +145,7 @@ Music_TitleScreen_Ch1:
 	db	$38
 	db	$d5,$c2
 	db	$d4,$38
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$82
 ; P1-31
 	db	$a3
@@ -161,28 +161,28 @@ Music_TitleScreen_Ch1:
 	db	$82
 ; P1-33
 ;		duty 2
-	db	$d8,$88,$54
+	db	$d8,$8,$54
 	db	$d5,$82
 	db	$c2
-	db	$d8,$88,$94
+	db	$d8,$8,$94
 	db	$d4,$32
 	db	$82
 	db	$da,$00,$88				; Tempo Change
-	db	$d8,$88,$b4
+	db	$d8,$8,$b4
 	db	$62
 	db	$a2
-	db	$d8,$88,$d4
+	db	$d8,$8,$d4
 	db	$d3,$12
 	db	$62
 	db	$da,$00,$8a				; Tempo Change
 ; P1-34
-	db	$d8,$88,$b4
+	db	$d8,$8,$b4
 ;		duty 3
 	db	$38
 	db	$18
 	db	$d4,$b5
 ; P1-35
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$60
 	db	$50
 	db	$30
@@ -193,7 +193,7 @@ Music_TitleScreen_Ch1:
 ; P1-36
 	db	$55
 	db	$d4,$81
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$a3
 	db	$83
 	db	$63
@@ -222,9 +222,9 @@ Music_TitleScreen_Ch1:
 	db	$53
 	db	$13
 ; P1-44
-	db	$d8,$8c,$a0
+	db	$d8,$c,$a0
 	db	$35
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$39
 ; P1-45
 	db	$dc,$a0
@@ -274,7 +274,7 @@ Music_TitleScreen_Ch1:
 	db	$02
 	db	$80
 	db	$02
-	db	$d8,$88,$b2
+	db	$d8,$8,$b2
 	db	$a1
 	db	$a1
 	db	$a1
@@ -282,14 +282,14 @@ Music_TitleScreen_Ch1:
 	db	$a1
 	db	$71
 ; P1-56
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$80
 	db	$02
 	db	$d6,$80
 	db	$0a
 	db	$ff
 @sub1:
-	db	$d8,$8c,$c3
+	db	$d8,$c,$c3
 	db	$30
 @sub1loop1:
 	db	$00
@@ -301,14 +301,14 @@ Music_TitleScreen_Ch1:
 	db	$00
 	db	$30
 	db	$d6,$a0
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$ff
 ;----------------------------------------
 Music_TitleScreen_Ch2:
 ;----------------------------------------
 	db	$db,$03
 	db	$e1,$14,$12
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 ; P2-10
 	db	$d4,$85
 	db	$31
@@ -392,15 +392,15 @@ Music_TitleScreen_Ch2:
 	db	$d5,$a1
 	db	$63
 	db	$a1
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$d3,$13
 	db	$d4,$c3
 	db	$d3,$13
 ; P2-24
 	db	$3b
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$d5,$a8
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$80
 	db	$a0
 ; P2-25
@@ -408,10 +408,10 @@ Music_TitleScreen_Ch2:
 	db	$50
 	db	$70
 	db	$83
-	db	$d8,$8c,$4b
+	db	$d8,$c,$4b
 	db	$a3
 ; P2-26
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$d4,$85
 	db	$c1
 	db	$d3,$37
@@ -431,7 +431,7 @@ Music_TitleScreen_Ch2:
 ; P2-29
 	db	$c5
 	db	$81
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$63
 	db	$83
 	db	$63
@@ -440,20 +440,20 @@ Music_TitleScreen_Ch2:
 	db	$c2
 	db	$d3,$3b
 ; P2-31
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$d4,$33
 	db	$13
 	db	$33
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$d3,$63
 	db	$53
 	db	$63
 ; P2-32
 	db	$88
 	db	$b2
-	db	$d8,$8c,$b0
+	db	$d8,$c,$b0
 	db	$87
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$87
 ; P2-33 -tie
 	db	$dc,$c6
@@ -500,9 +500,9 @@ Music_TitleScreen_Ch2:
 	db	$d3,$a3
 ; P2-44
 	db	$e6,$00,$00
-	db	$d8,$8c,$b0
+	db	$d8,$c,$b0
 	db	$d4,$c5
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$c9
 ; P2-45
 	db	$dc,$c7
@@ -556,7 +556,7 @@ Music_TitleScreen_Ch2:
 	db	$02
 	db	$dc,$90
 	db	$83
-	db	$d8,$88,$c2
+	db	$d8,$8,$c2
 	db	$d4,$61
 	db	$61
 	db	$61
@@ -564,14 +564,14 @@ Music_TitleScreen_Ch2:
 	db	$61
 	db	$71
 ; P2-56
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$80
 	db	$02
 	db	$d5,$80
 	db	$0a
 	db	$ff
 @sub1:
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 	db	$30
 @sub1loop1:
 	db	$d4,$a0
@@ -583,7 +583,7 @@ Music_TitleScreen_Ch2:
 	db	$d4,$a0
 	db	$d3,$30
 	db	$a0
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$d2,$13
 	db	$13
 	db	$ff

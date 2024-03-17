@@ -5,9 +5,9 @@ Sfx_PokeballsPlacedOnTable:
 Sfx_PokeballsPlacedOnTable_Ch6:
 	duty_cycle 2
 	pitch_sweep 3, -2
-	square_note 4, 0, 7, 512
+	square_note 4, 15, 2, 512
 	pitch_sweep 3, 6
-	square_note 8, 0, 7, 512
+	square_note 8, 14, 2, 512
 	pitch_sweep 0, 1
 	sound_ret:
 Sfx_Potion:
@@ -28,18 +28,18 @@ Sfx_Menu:
 	db	008h
 	dw	Sfx_Menu_Ch9
 Sfx_Menu_Ch9:
-	db	$01,$06,$06
-	db	$08,$02,$03
+	db	$01,$e2,$06
+	db	$08,$e1,$03
 	db	$ff
 Sfx_ReadText:
 	db	005h
 	dw	Sfx_ReadText_Ch6
 Sfx_ReadText_Ch6:
 	db	$db,$02
-	db	$00,$00,$35,$00
-	db	$00,$00,$27,$00
-	db	$00,$00,$35,$00
-	db	$0f,$01,$27,$00
+	db	$00,$91,$35,$00
+	db	$00,$81,$27,$00
+	db	$00,$91,$35,$00
+	db	$0f,$a1,$27,$00
 	db	$ff
 Sfx_Poison:
 	db	005h
@@ -47,9 +47,9 @@ Sfx_Poison:
 Sfx_Poison_Ch6:
 	duty_cycle 0
 	pitch_sweep 1, 6
-	square_note 4, 0, 7, $2651
+	square_note 4, 15, 2, $2651
 	sound_loop 4, Sfx_Poison_Ch6
-	square_note 15, 0, 7, $2651
+	square_note 15, 15, 3, $2651
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_GotSafariBalls:
@@ -58,8 +58,8 @@ Sfx_GotSafariBalls:
 Sfx_GotSafariBalls_Ch6:
 	duty_cycle 2
 	pitch_sweep 1, 5
-	square_note 15, 1, 15, $84f0
-	square_note 15, 0, 7, $7650
+	square_note 15, 15, 0, $84f0
+	square_note 15, 15, 2, $7650
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_BootPc:
@@ -67,36 +67,36 @@ Sfx_BootPc:
 	dw	Sfx_BootPc_Ch6
 Sfx_BootPc_Ch6:
 	db	$db,$02
-	db	$0f,$07,$35,$00
-	db	$0f,$10,$00,$00
-	db	$03,$01,$6b,$00
-	db	$03,$01,$d6,$00
-	db	$03,$01,$a1,$00
-	db	$03,$01,$d6,$00
-	db	$03,$01,$6b,$00
-	db	$03,$01,$d6,$00
-	db	$03,$01,$35,$00
-	db	$08,$01,$d6,$00
+	db	$0f,$f2,$35,$00
+	db	$0f,$00,$00,$00
+	db	$03,$a1,$6b,$00
+	db	$03,$a1,$d6,$00
+	db	$03,$a1,$a1,$00
+	db	$03,$a1,$d6,$00
+	db	$03,$a1,$6b,$00
+	db	$03,$a1,$d6,$00
+	db	$03,$a1,$35,$00
+	db	$08,$a1,$d6,$00
 	db	$ff
 Sfx_ShutDownPC:
 	db	005h
 	dw	Sfx_ShutDownPC_Ch6
 Sfx_ShutDownPC_Ch6:
 	db	$db,$02
-	db	$04,$1f,$ae,$01
-	db	$04,$1f,$5c,$03
-	db	$04,$1f,$0b,$05
-	db	$01,$10,$00,$00
+	db	$04,$f0,$ae,$01
+	db	$04,$f0,$5c,$03
+	db	$04,$f0,$0b,$05
+	db	$01,$00,$00,$00
 	db	$ff
 Sfx_ChoosePCOption:
 	db	005h
 	dw	Sfx_ChoosePCOption_Ch6
 Sfx_ChoosePCOption_Ch6:
 	db	$db,$02
-	db	$06,$1f,$d6,$00
-	db	$04,$10,$00,$00
-	db	$06,$1f,$d6,$00
-	db	$01,$10,$00,$00
+	db	$06,$f0,$d6,$00
+	db	$04,$00,$00,$00
+	db	$06,$f0,$d6,$00
+	db	$01,$00,$00,$00
 	db	$ff
 Sfx_EscapeRope:
 	db	009h
@@ -112,11 +112,11 @@ Sfx_PushButton:
 	dw	Sfx_PushButton_Ch6
 Sfx_PushButton_Ch6:
 	duty_cycle 2
-	square_note 4, 1, 0, 2047
-	square_note 2, 0, 2, 1725
-	square_note 1, 1, 0, 2047
-	square_note 4, 0, 2, 1940
-	square_note 4, 1, 0, 2047
+	square_note 4, 0, 0, 2047
+	square_note 2, 15, 1, 1725
+	square_note 1, 0, 0, 2047
+	square_note 4, 15, 1, 1940
+	square_note 4, 0, 0, 2047
 	sound_ret
 Sfx_SecondPartOfItemfinder:
 	db	005h
@@ -124,11 +124,11 @@ Sfx_SecondPartOfItemfinder:
 Sfx_SecondPartOfItemfinder_Ch6:
 	duty_cycle 2
 	pitch_sweep 2, -4
-	square_note 4, 0, 6, $57a
+	square_note 4, 15, 2, $57a
 	pitch_sweep 2, 6
-	square_note 2, 0, 2, $57a
-	pitch_sweep 0, 8
-	square_note 1, 1, 0, 2047
+	square_note 2, 15, 1, $57a
+	pitch_sweep 0, 1
+	square_note 1, 0, 0, 0
 	sound_ret
 Sfx_WarpTo:
 	db	005h
@@ -136,7 +136,6 @@ Sfx_WarpTo:
 Sfx_WarpTo_Ch6:
 	duty_cycle 1
 	pitch_sweep 1, 4
-	note_type $81, 0, 0
 	square_note 15, 13, 7, $57a
 	square_note 15, 11, 7, 1408
 	square_note 15, 8, 7, 1536
@@ -150,7 +149,6 @@ Sfx_WarpFrom:
 Sfx_WarpFrom_Ch6:
 	duty_cycle 1
 	pitch_sweep 1, 4
-	note_type $81, 0, 0
 	square_note 15, 13, 7, $700
 	square_note 15, 11, 7, 1664
 	square_note 15, 8, 7, 1536
@@ -164,7 +162,7 @@ Sfx_ChangeDexMode:
 Sfx_ChangeDexMode_Ch6:
 	duty_cycle 1
 	pitch_sweep 2, 6
-	square_note 15, 0, 6, $9500
+	square_note 15, 13, 2, $9500
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_JumpOverLedge:
@@ -173,23 +171,22 @@ Sfx_JumpOverLedge:
 Sfx_JumpOverLedge_Ch6:
 	duty_cycle 2
 	pitch_sweep 1, 5
-	square_note 15, 0, 7, $a400
+	square_note 15, 15, 2, $a400
 	pitch_sweep 0, 1
 	sound_ret
 Sfx_GrassRustle:
 	db	008h
 	dw	Sfx_GrassRustle_Ch9
 Sfx_GrassRustle_Ch9:
-	noise_note 2, 0, 3, 6
-	noise_note 2, 1, 0, 0
-	noise_note 2, 0, 3, 4
-	noise_note 1, 1, 0, 0
+	noise_note 2, 15, 1, 6
+	noise_note 2, 0, 0, 0
+	noise_note 2, 15, 1, 4
+	noise_note 1, 0, 0, 0
 	sound_ret
 Sfx_Fly:
 	db	008h
 	dw	Sfx_Fly_Ch9
 Sfx_Fly_Ch9:
-	drum_speed $81
 	noise_note 2, 15, 1, 3
 	noise_note 2, 0, 0, 0
 	noise_note 2, 10, 1, 3
@@ -215,18 +212,18 @@ Sfx_Wrong:
 Sfx_Wrong_Ch6:
 	duty_cycle 3
 	pitch_sweep 5, -2
-	square_note 4, 1, 15, $57a
+	square_note 4, 15, 0, $57a
 	pitch_sweep 0, 1
-	square_note 4, 1, 0, 0
-	square_note 15, 1, 15, $57a
-	square_note 1, 1, 0, 0
+	square_note 4, 0, 0, 0
+	square_note 15, 15, 0, $57a
+	square_note 1, 0, 0, 0
 	sound_ret
 Sfx_Wrong_Ch7:
 	duty_cycle 3
-	square_note 4, 1, 15, $4a3
-	square_note 4, 1, 0, 0
-	square_note 15, 1, 15, $4a3
-	square_note 1, 1, 0, 0
+	square_note 4, 15, 0, $4a3
+	square_note 4, 0, 0, 0
+	square_note 15, 15, 0, $4a3
+	square_note 1, 0, 0, 0
 	sound_ret
 Sfx_Squeak:
 	db	005h
@@ -234,20 +231,17 @@ Sfx_Squeak:
 Sfx_Squeak_Ch6:
 	duty_cycle 0
 	pitch_sweep 1, 5
-	note_type $81, 0, 0
 	square_note 15, 13, 2, $8729
-	pitch_sweep 0, 8
+	pitch_sweep 0, 1
 	sound_ret
 Sfx_Strength:
 	db	008h
 	dw	Sfx_Strength_Ch9
 Sfx_Strength_Ch9:
-	drum_speed $81
 	noise_note 4, 10, 2, 5
 	noise_note 8, 15, 1, 9
 	noise_note 15, 0, 0, 0
 Sfx_PlacePuzzlePieceDown_Ch9:
-	drum_speed $81
 	noise_note 2, 15, 7, 6
 	noise_note 2, 15, 7, 9
 	noise_note 4, 15, 7, 11
@@ -261,23 +255,23 @@ Sfx_Boat:
 	dw	Sfx_Boat_Ch7
 Sfx_Boat_Ch6:
 	duty_cycle 2
-	square_note 15, 1, 15, $57a
-	square_note 4, 1, 0, 0
-	square_note 15, 1, 15, $57a
-	square_note 15, 1, 15, $57a
-	square_note 15, 1, 15, $57a
-	square_note 15, 1, 15, $57a
-	square_note 15, 0, 7, $57a
+	square_note 15, 15, 0, $57a
+	square_note 4, 0, 0, 0
+	square_note 15, 15, 0, $57a
+	square_note 15, 15, 0, $57a
+	square_note 15, 15, 0, $57a
+	square_note 15, 15, 0, $57a
+	square_note 15, 15, 2, $57a
 	sound_ret
 Sfx_Boat_Ch7:
 	duty_cycle 3
-	square_note 15, 1, 15, $510
-	square_note 4, 1, 0, 0
-	square_note 15, 1, 15, $510
-	square_note 15, 1, 15, $510
-	square_note 15, 1, 15, $510
-	square_note 15, 1, 15, $510
-	square_note 15, 0, 7, $510
+	square_note 15, 15, 0, $510
+	square_note 4, 0, 0, 0
+	square_note 15, 15, 0, $510
+	square_note 15, 15, 0, $510
+	square_note 15, 15, 0, $510
+	square_note 15, 15, 0, $510
+	square_note 15, 15, 2, $510
 	sound_ret
 Sfx_WallOpen:
 	db	005h
@@ -285,14 +279,14 @@ Sfx_WallOpen:
 Sfx_WallOpen_Ch6:
 	duty_cycle 1
 	pitch_sweep 3, -6
-	square_note 4, 0, 7, $500
+	square_note 4, 15, 2, $500
 	pitch_sweep 2, 6
-	square_note 4, 0, 6, $500
+	square_note 4, 14, 2, $500
 	pitch_sweep 3, -6
-	square_note 4, 0, 7, $700
+	square_note 4, 15, 2, $700
 	pitch_sweep 2, 6
-	square_note 15, 0, 6, $3700
-	pitch_sweep 0, 8
+	square_note 15, 14, 2, $3700
+	pitch_sweep 0, 1
 	sound_ret
 Sfx_PlacePuzzlePieceDown:
 	db	008h
@@ -301,7 +295,6 @@ Sfx_EnterDoor:
 	db	008h
 	dw	Sfx_EnterDoor_Ch9
 Sfx_EnterDoor_Ch9:
-	drum_speed $81
 	noise_note 9, 15, 1, 11
 	noise_note 8, 13, 1, 10
 	sound_ret
@@ -327,7 +320,6 @@ Sfx_ExitBuilding:
 	db	008h
 	dw	Sfx_ExitBuilding_Ch9
 Sfx_ExitBuilding_Ch9:
-	drum_speed $81
 	noise_note 2, 15, 1, 12
 	noise_note 12, 7, 1, 5
 	noise_note 2, 11, 1, 12
@@ -340,8 +332,8 @@ Sfx_Bump:
 Sfx_Bump_Ch6:
 	duty_cycle 2
 	pitch_sweep 5, -4
-	square_note 15, 0, 3, 768
-	pitch_sweep 0, 8
+	square_note 15, 15, 1, 768
+	pitch_sweep 0, 1
 	sound_ret
 Sfx_Save:
 	db	009h

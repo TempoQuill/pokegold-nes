@@ -16,7 +16,7 @@ Music_Gym_Ch1:
 ; P1-1
 	db	$e1,$12,$24
 	db	$db,$01
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 @mainloop:
 ; P1-2
 	db	$d3,$71
@@ -185,7 +185,7 @@ Music_Gym_Ch2:
 	db	$db,$01
 @mainloop:
 ; P2-2
-	db	$d8,$8c,$c3
+	db	$d8,$c,$c3
 	db	$d5,$31
 	db	$d6,$30
 	db	$30

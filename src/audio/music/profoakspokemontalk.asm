@@ -15,7 +15,7 @@ Music_ProfOaksPokemonTalk_Ch1:
 ;	db	$ef,$0f
 	db	$e1,$06,$25
 	db	$db,$01
-	db	$d8,$8c,$94
+	db	$d8,$c,$94
 ; P1-2
 	db	$07
 	db	$d4,$c0
@@ -136,7 +136,7 @@ Music_ProfOaksPokemonTalk_Ch2:
 ; P2-1
 	db	$e1,$08,$24
 	db	$db,$03
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 ;	db	$ef,$ff
 ; P2-2
 	db	$d4,$c0

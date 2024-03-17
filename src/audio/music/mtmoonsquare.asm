@@ -14,7 +14,7 @@ Music_MtMoonSquare_Ch1:
 ; P1-2
 	db	$00
 @loop10:
-	db	$d8,$8c,$44
+	db	$d8,$c,$44
 @loop11:
 	db	$d3,$31
 	db	$51
@@ -64,7 +64,7 @@ Music_MtMoonSquare_Ch2:
 ; P2-1
 ; P2-2
 @loop20:
-	db	$d8,$8c,$82
+	db	$d8,$c,$82
 @loop21:
 	db	$d3,$31
 	db	$51
@@ -72,11 +72,11 @@ Music_MtMoonSquare_Ch2:
 	db	$71
 	db	$a1
 	db	$d2,$33
-	db	$d8,$8c,$62
+	db	$d8,$c,$62
 	db	$fd,2
 	dw	@loop21
 ; P2-4
-	db	$d8,$8c,$82
+	db	$d8,$c,$82
 @loop22:
 	db	$d3,$51
 	db	$71
@@ -84,11 +84,11 @@ Music_MtMoonSquare_Ch2:
 	db	$91
 	db	$c1
 	db	$d2,$53
-	db	$d8,$8c,$62
+	db	$d8,$c,$62
 	db	$fd,2
 	dw	@loop22
 ; P2-6
-	db	$d8,$8c,$82
+	db	$d8,$c,$82
 @loop23:
 	db	$d3,$21
 	db	$31
@@ -96,11 +96,11 @@ Music_MtMoonSquare_Ch2:
 	db	$51
 	db	$81
 	db	$d2,$23
-	db	$d8,$8c,$62
+	db	$d8,$c,$62
 	db	$fd,2
 	dw	@loop23
 ; P2-8
-	db	$d8,$8c,$82
+	db	$d8,$c,$82
 @loop24:
 	db	$d3,$31
 	db	$51
@@ -108,7 +108,7 @@ Music_MtMoonSquare_Ch2:
 	db	$71
 	db	$a1
 	db	$d2,$33
-	db	$d8,$8c,$62
+	db	$d8,$c,$62
 	db	$fd,2
 	dw	@loop24
 	db	$fd,0

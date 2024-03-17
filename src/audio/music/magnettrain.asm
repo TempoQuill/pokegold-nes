@@ -16,7 +16,7 @@ Music_MagnetTrain_Ch1:
 ; P1-1
 	db	$e1,$14,$23
 	db	$db,$02
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 ; P1-4
 	db	$0f
 ; P1-5
@@ -54,13 +54,13 @@ Music_MagnetTrain_Ch1:
 	db	$d3,$10
 	db	$50
 	db	$10
-	db	$d8,$86,$b7
+	db	$d8,$6,$b7
 	db	$70
 	db	$00
 	db	$70
 	db	$00
 ; P1-8
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$3f
 ; P1-9
 	db	$ff
@@ -70,12 +70,12 @@ Music_MagnetTrain_Ch2:
 ; P2-1
 	db	$e1,$14,$23
 	db	$db,$01
-	db	$d8,$8c,$d2
+	db	$d8,$c,$d2
 ; P2-4
-	db	$d8,$8c,$d8
+	db	$d8,$c,$d8
 	db	$d6,$6b
 	db	$01
-	db	$d8,$86,$d7
+	db	$d8,$6,$d7
 	db	$60
 	db	$00
 	db	$60
@@ -91,18 +91,18 @@ Music_MagnetTrain_Ch2:
 	db	$03
 ; P2-6
 	db	$db,$03
-	db	$d8,$8c,$d7
+	db	$d8,$c,$d7
 	db	$d3,$8f
 ; P2-7
 	db	$ac
 	db	$00
-	db	$d8,$86,$d7
+	db	$d8,$6,$d7
 	db	$a0
 	db	$00
 	db	$a0
 	db	$00
 ; P2-8
-	db	$d8,$8c,$d7
+	db	$d8,$c,$d7
 	db	$af
 ; P2-9
 	db	$ff

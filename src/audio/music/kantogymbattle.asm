@@ -15,7 +15,7 @@ Music_KantoGymBattle_Ch1:
 	db	$e1,$12,$15
 ;	db	$ef,$f0
 ; P1-1
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 ; P1-2
 	db	$d4,$b0
 	db	$a0
@@ -267,7 +267,7 @@ Music_KantoGymBattle_Ch2:
 	db	$e6,$00,$01
 ;	db	$ef,$0f
 ; P2-1
-	db	$d8,$8c,$c2
+	db	$d8,$c,$c2
 ; P2-2
 @loop201:
 	db	$d3,$b0

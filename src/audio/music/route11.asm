@@ -15,7 +15,7 @@ Music_Route11_Ch1:
 	db	$e6,$00,$01
 ; P1-2
 	db	$db,$03
-	db	$d8,$8c,$98
+	db	$d8,$c,$98
 	db	$d4,$90
 	db	$01
 	db	$a0
@@ -169,7 +169,7 @@ Music_Route11_Ch2:
 	db	$e1,$12,$34
 ;		chorus ff ff
 ; P2-2
-	db	$d8,$8c,$b8
+	db	$d8,$c,$b8
 	db	$d3,$50
 	db	$01
 	db	$70

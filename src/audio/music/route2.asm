@@ -17,7 +17,7 @@ Music_Route2_Ch1:
 ; P1-1
 ;	db	$ef,$0f
 	db	$e1,$06,$23
-	db	$d8,$8c,$b1
+	db	$d8,$c,$b1
 ; P1-2
 	db	$0f
 ; P1-3
@@ -160,7 +160,7 @@ Music_Route2_Ch2:
 ; P2-1
 ;	db	$ef,$ff
 	db	$e1,$08,$24
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 ; P2-2
 	db	$fe
 	dw	@mero2_5

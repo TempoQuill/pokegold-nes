@@ -15,7 +15,7 @@ Music_LookOfficer_Ch1:
 ;	db	$ef,$0f
 ; P1-2
 	db	$db,$03
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$d3,$20
 	db	$30
 	db	$40
@@ -50,7 +50,7 @@ Music_LookOfficer_Ch2:
 	db	$e1,$12,$34
 ; P2-2
 	db	$db,$03
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$d2,$40
 	db	$30
 	db	$20

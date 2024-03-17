@@ -11,7 +11,7 @@ Music_LookYoungster_Ch1:
 	db	$da,$00,$76
 ; P1-1
 	db	$db,$03
-	db	$d8,$8c,$a3
+	db	$d8,$c,$a3
 	db	$d4,$80
 	db	$90
 	db	$a0
@@ -70,15 +70,15 @@ Music_LookYoungster_Ch2:
 ; P2-1
 	db	$e1,$12,$26
 	db	$db,$01
-	db	$d8,$8c,$a3
+	db	$d8,$c,$a3
 	db	$d4,$c0
 	db	$d3,$10
 	db	$20
 	db	$30
 ; P2-2
-	db	$d8,$8c,$2e
+	db	$d8,$c,$2e
 	db	$8f
-	db	$d8,$8c,$b3
+	db	$d8,$c,$b3
 	db	$dc,$c3
 ; P2-3
 	db	$60

@@ -197,7 +197,6 @@ Cry_Mantine:
 	db	008h
 	dw	Cry_Mantine_Ch9
 Cry_Tiger_Ch6:
-	note_type $81, 0, 0
 	pitch_sweep 15, -7
 	duty_cycle_pattern 1, 2, 0, 3
 	square_note 1, 15, 8, 1528
@@ -207,7 +206,6 @@ Cry_Tiger_Ch6:
 	pitch_sweep 8, 8
 	sound_ret
 Cry_Tiger_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 3, 0, 3
 	square_note 1, 12, 8, 1600
 	square_note 6, 15, -7, 1640
@@ -215,14 +213,12 @@ Cry_Tiger_Ch7:
 	square_note 20, 10, 2, 1188
 	sound_ret
 Cry_Tiger_Ch9:
-	drum_speed $81
 	noise_note 10, 13, 6, 106
 	noise_note 6, 11, -4, 108
 	noise_note 6, 14, 2, 92
 	noise_note 32, 11, 4, 108
 	sound_ret
 Cry_Suicune_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 1, 0
 	square_note 4, 10, -7, 1824
 	square_note 2, 15, 8, 1820
@@ -233,7 +229,6 @@ Cry_Suicune_Ch6:
 	square_note 4, 9, 1, 1806
 	sound_ret
 Cry_Suicune_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 1, 11, 8, 1808
 	square_note 3, 13, 8, 1836
@@ -244,7 +239,6 @@ Cry_Suicune_Ch7:
 	square_note 4, 12, 1, 1872
 	sound_ret
 Cry_Suicune_Ch9:
-	drum_speed $81
 	noise_note 2, 14, 8, 59
 @loop:
 	noise_note 1, 15, 1, 78
@@ -254,7 +248,6 @@ Cry_Suicune_Ch9:
 	noise_note 20, 12, 2, 95
 	sound_ret
 Cry_Granbull_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 1, 15, 8, 1456
 	square_note 1, 15, 8, 1204
@@ -267,19 +260,16 @@ Cry_Granbull_Ch6:
 	pitch_sweep 8, 8
 	sound_ret
 Cry_Granbull_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 8, 11, 8, 1224
 	square_note 32, 11, 5, 1040
 	sound_ret
 Cry_Granbull_Ch9:
-	drum_speed $81
 	noise_note 3, 15, -7, 75
 	noise_note 3, 14, -7, 76
 	noise_note 32, 11, 5, 95
 	sound_ret
 Cry_Slowking_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 3, 0, 3
 	square_note 2, 15, 1, 1360
 	square_note 2, 15, 1, 1328
@@ -290,7 +280,6 @@ Cry_Slowking_Ch6:
 	square_note 16, 15, 2, 1360
 	sound_ret
 Cry_Slowking_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 2
 	square_note 4, 14, 1, 1568
 	square_note 5, 14, 2, 1280
@@ -299,7 +288,6 @@ Cry_Slowking_Ch7:
 	square_note 16, 14, 2, 1280
 	sound_ret
 Cry_Slowking_Ch9:
-	drum_speed $81
 	noise_note 2, 8, -2, 93
 	noise_note 2, 9, -2, 76
 	noise_note 5, 9, -2, 93
@@ -310,7 +298,6 @@ Cry_Slowking_Ch9:
 	noise_note 16, 11, 2, 111
 	sound_ret
 Cry_Mouse_Ch6:
-	note_type $81, 0, 0
 	duty_cycle 0
 	pitch_sweep 15, 7
 	square_note 2, 15, 8, 1933
@@ -324,7 +311,6 @@ Cry_Mouse_Ch6:
 	pitch_sweep 8, 8
 	sound_ret
 Cry_Mouse_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 0, 0
 	square_note 2, 12, 8, 1901
 	square_note 2, 12, 8, 1905
@@ -333,7 +319,6 @@ Cry_Mouse_Ch7:
 	square_note 2, 12, 8, 1944
 	sound_ret
 Cry_Mouse_Ch9:
-	drum_speed $81
 	noise_note 2, 11, 8, 1
 	noise_note 2, 11, 8, 25
 	noise_note 2, 12, 8, 24
@@ -341,7 +326,6 @@ Cry_Mouse_Ch9:
 	noise_note 8, 12, 2, 24
 	sound_ret
 Cry_Crow_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 2, 8, 8, 1752
 	square_note 8, 14, 2, 1760
@@ -352,7 +336,6 @@ Cry_Crow_Ch6:
 	square_note 8, 12, 1, 1706
 	sound_ret
 Cry_Crow_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 2, 0, 3
 	square_note 2, 6, 8, 1713
 	square_note 5, 12, 1, 1721
@@ -362,7 +345,6 @@ Cry_Crow_Ch7:
 	square_note 10, 9, 2, 1659
 	sound_ret
 Cry_Crow_Ch9:
-	drum_speed $81
 	noise_note 1, 9, -1, 108
 	noise_note 1, 9, 2, 92
 	noise_note 10, 6, 2, 76
@@ -373,7 +355,6 @@ Cry_Crow_Ch9:
 Cry_Derble1_Ch6:
 	pitch_offset 2
 Cry_Derble1_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 0, 2
 	square_note 4, 15, 1, 1942
 	square_note 4, 15, 1, 1837
@@ -383,14 +364,12 @@ Cry_Derble1_Ch7:
 Cry_Derble2_Ch6:
 	pitch_offset 2
 Cry_Derble2_Ch7:
-	note_type $81, 0, 0
 	sound_call Cry_Derble1_Ch7
 	sound_loop 2, Cry_Derble2_Ch7
 	square_note 14, 0, 0, 0
 	square_note 8, 15, 2, 1986
 	sound_ret
 Cry_Derble4_Ch6:
-	note_type $81, 0, 0
 	duty_cycle 1
 	square_note 3, 2, -4, 1988
 	square_note 1, 0, 0, 1
@@ -398,7 +377,6 @@ Cry_Derble4_Ch6:
 	square_note 6, 11, 4, 1979
 	sound_ret
 Cry_Derble4_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 2, 2
 	square_note 3, 2, -4, 1991
 	square_note 1, 0, 0, 0
@@ -406,14 +384,12 @@ Cry_Derble4_Ch7:
 	square_note 6, 11, 4, 1981
 	sound_ret
 Cry_Derble4_Ch9:
-	drum_speed $81
 	noise_note 3, 9, 2, 16
 	noise_note 1, 3, -1, 0
 	noise_note 5, 6, -1, 16
 	noise_note 6, 9, 3, 0
 	sound_ret
 Cry_Tyranitar_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 2, 0
 	square_note 2, 15, 1, 1200
 	square_note 2, 15, 7, 1424
@@ -424,7 +400,6 @@ Cry_Tyranitar_Ch6:
 	square_note 16, 15, 2, 1680
 	sound_ret
 Cry_Tyranitar_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 2
 	square_note 2, 15, 1, 1824
 	square_note 2, 14, 1, 1616
@@ -436,7 +411,6 @@ Cry_Tyranitar_Ch7:
 	square_note 16, 14, 2, 1696
 	sound_ret
 Cry_Tyranitar_Ch9:
-	drum_speed $81
 	noise_note 2, 8, -1, 46
 	noise_note 2, 9, -1, 31
 	noise_note 4, 8, -1, 78
@@ -447,7 +421,6 @@ Cry_Tyranitar_Ch9:
 	noise_note 16, 13, 2, 79
 	sound_ret
 Cry_Hoothoot_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 2, 1, 2
 	square_note 4, 7, 8, 1616
 	square_note 4, 15, 8, 1632
@@ -459,7 +432,6 @@ Cry_Hoothoot_Ch6:
 	square_note 4, 15, 1, 1652
 	sound_ret
 Cry_Hoothoot_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 2
 @loop1:
 	square_note 2, 10, 1, 1536
@@ -473,27 +445,23 @@ Cry_Hoothoot_Ch7:
 	square_note 4, 9, 1, 1592
 	sound_ret
 Cry_Hoothoot_Ch9:
-	drum_speed $81
 	noise_note 1, 6, 8, 54
 	noise_note 16, 8, 8, 106
 	noise_note 1, 9, 8, 94
 	noise_note 16, 10, 7, 110
 	sound_ret
 Cry_Phanpy_Ch6:
-	note_type $81, 0, 0
 	pitch_offset 32
 	duty_cycle 0
 	square_note 8, 3, -1, 1837
 	square_note 8, 15, 1, 1824
 	sound_ret
 Cry_Phanpy_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 2, 3
 	square_note 8, 3, -1, 1837
 	square_note 8, 15, 1, 1824
 	sound_ret
 Cry_Bleet1_Ch6:
-	note_type $81, 0, 0
 	pitch_offset 32
 	duty_cycle 0
 	square_note 4, 3, -2, 1853
@@ -502,7 +470,6 @@ Cry_Bleet1_Ch6:
 	square_note 6, 15, 1, 1886
 	sound_ret
 Cry_Bleet1_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 0, 1
 	square_note 4, 3, -2, 1853
 	square_note 6, 15, 8, 1890
@@ -512,7 +479,6 @@ Cry_Bleet1_Ch7:
 Cry_Growl_Ch6:
 	pitch_offset 32
 Cry_Growl_Ch7:
-	note_type $81, 0, 0
 	duty_cycle 2
 	square_note 8, 2, -7, 263
 @loop1:
@@ -528,14 +494,12 @@ Cry_Growl_Ch7:
 	sound_ret
 Cry_Miltank_Ch9:
 Cry_Growl_Ch9:
-	drum_speed $81
 	noise_note 8, 3, -7, 82
 	noise_note 32, 9, 3, 79
 	sound_ret
 Cry_Chikorita_Ch6:
 	pitch_offset 32
 Cry_Chikorita_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 1
 	square_note 2, 12, 8, 1601
 	square_note 2, 4, 8, 1601
@@ -544,12 +508,10 @@ Cry_Chikorita_Ch7:
 	square_note 4, 15, 1, 1931
 	sound_ret
 Cry_Chikorita_Ch9:
-	drum_speed $81
 	noise_note 4, 9, 1, 16
 	noise_note 8, 9, 4, 3
 	sound_ret
 Cry_Miltank_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 0, 2
 	square_note 4, 3, -2, 1853
 	square_note 6, 15, 8, 1890
@@ -557,7 +519,6 @@ Cry_Miltank_Ch6:
 	square_note 6, 15, 1, 1886
 	sound_ret
 Cry_Feline_Ch6:
-	note_type $81, 0, 0
 	duty_cycle 1
 	pitch_offset 4
 	square_note 4, 6, 8, 1880
@@ -567,7 +528,6 @@ Cry_Feline_Ch6:
 	square_note 7, 15, 1, 1895
 	sound_ret
 Cry_Feline_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 0, 0, 1
 	square_note 4, 6, 8, 1880
 	square_note 2, 14, 8, 1888
@@ -576,7 +536,6 @@ Cry_Feline_Ch7:
 	square_note 7, 15, 1, 1895
 	sound_ret
 Cry_Feline_Ch9:
-	drum_speed $81
 	noise_note 4, 2, -1, 0
 	noise_note 2, 3, -1, 1
 	noise_note 2, 4, -1, 2
@@ -584,7 +543,6 @@ Cry_Feline_Ch9:
 	noise_note 7, 4, 1, 0
 	sound_ret
 Cry_Hitmontop_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 1, 0, 1
 	square_note 12, 15, 2, 1958
 	square_note 4, 15, 8, 1968
@@ -593,14 +551,12 @@ Cry_Hitmontop_Ch6:
 	square_note 8, 14, 1, 656
 	sound_ret
 Cry_Hitmontop_Ch9:
-	drum_speed $81
 	noise_note 12, 11, 2, 80
 	noise_note 8, 10, 8, 96
 	noise_note 6, 10, 8, 91
 	noise_note 8, 10, 1, 92
 	sound_ret
 Cry_Ledyba_Ch6:
-	note_type $81, 0, 0
 	pitch_offset 2
 	duty_cycle 2
 	square_note 3, 15, 8, 1937
@@ -611,7 +567,6 @@ Cry_Ledyba_Ch6:
 	square_note 4, 14, 1, 1873
 	sound_ret
 Cry_Ledyba_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 0, 1
 	square_note 3, 15, 8, 1937
 	square_note 3, 13, 8, 1933
@@ -621,7 +576,6 @@ Cry_Ledyba_Ch7:
 	square_note 4, 14, 1, 1873
 	sound_ret
 Cry_Ledyba_Ch9:
-	drum_speed $81
 	noise_note 3, 5, -1, 33
 	noise_note 3, 8, 1, 0
 	noise_note 2, 2, 0, 0
@@ -631,7 +585,6 @@ Cry_Ledyba_Ch9:
 	sound_ret
 Cry_Sneasel_Ch6:
 Cry_Donphan_Ch6:
-	note_type $81, 0, 0
 	duty_cycle 2
 	square_note 2, 9, -1, 1816
 	square_note 4, 10, -3, 1826
@@ -642,7 +595,6 @@ Cry_Donphan_Ch6:
 	sound_ret
 Cry_Sneasel_Ch7:
 Cry_Donphan_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 1, 3
 	square_note 2, 11, -1, 1848
 	square_note 4, 12, -3, 1858
@@ -652,7 +604,6 @@ Cry_Donphan_Ch7:
 	square_note 8, 0, 0, 0
 	sound_ret
 Cry_Sneasel_Ch9:
-	drum_speed $81
 	noise_note 2, 5, -3, 4
 	noise_note 4, 6, 8, 19
 	noise_note 8, 6, 8, 32
@@ -660,7 +611,6 @@ Cry_Sneasel_Ch9:
 	noise_note 16, 5, 1, 4
 	sound_ret
 Cry_Donphan_Ch9:
-	drum_speed $81
 	noise_note 2, 8, -3, 89
 	noise_note 4, 10, 8, 106
 	noise_note 8, 10, 8, 112
@@ -669,7 +619,6 @@ Cry_Donphan_Ch9:
 	sound_ret
 Cry_Roar30_Ch6:
 Cry_Lugia_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 0, 2
 @loop1:
 	square_note 3, 12, 1, 1937
@@ -697,7 +646,6 @@ Cry_Lugia_Ch6:
 	sound_ret
 Cry_Roar30_Ch7:
 Cry_Lugia_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 3, 2, 0
 	square_note 8, 9, -1, 1856
 	square_note 8, 7, -1, 1862
@@ -708,14 +656,12 @@ Cry_Lugia_Ch7:
 	square_note 24, 14, 2, 1923
 	sound_ret
 Cry_Lugia_Ch9:
-	drum_speed $81
 	noise_note 16, 10, 6, 22
 	noise_note 24, 9, 8, 61
 	noise_note 32, 9, 8, 92
 	noise_note 32, 7, 5, 95
 	sound_ret
 Cry_Madame_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 1, 3, 2
 	square_note 4, 15, 8, 1969
 	square_note 4, 15, 8, 1968
@@ -726,7 +672,6 @@ Cry_Madame_Ch6:
 	sound_ret
 Cry_Madame_Ch7:
 Cry_Roar40_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 2
 	square_note 4, 15, 8, 1970
 	square_note 4, 15, 8, 1969
@@ -737,7 +682,6 @@ Cry_Roar40_Ch7:
 	sound_ret
 Cry_Madame_Ch9:
 Cry_Roar40_Ch9:
-	drum_speed $81
 	noise_note 4, 8, 8, 5
 	noise_note 4, 8, 8, 4
 	noise_note 4, 3, 8, 3
@@ -746,12 +690,10 @@ Cry_Roar40_Ch9:
 	noise_note 4, 8, 7, 4
 	sound_ret
 Cry_Roar30_Ch9:
-	drum_speed $81
 	noise_note 8, 10, 6, 58
 	noise_note 8, 10, 1, 90
 	sound_ret
 Cry_Roar40_Ch6:
-	note_type $81, 0, 0
 	duty_cycle 0
 	square_note 4, 15, 8, 1969
 	square_note 4, 15, 8, 1968
@@ -761,7 +703,6 @@ Cry_Roar40_Ch6:
 	square_note 4, 4, 8, 1972
 	sound_ret
 Cry_Mantine_Ch6:
-	note_type $81, 0, 0
 	duty_cycle 0
 	square_note 4, 15, 8, 1969
 	square_note 4, 15, 8, 1968
@@ -774,7 +715,6 @@ Cry_Mantine_Ch6:
 	square_note 4, 4, 8, 1972
 	sound_ret
 Cry_Mantine_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 2
 	square_note 4, 15, 8, 1970
 	square_note 4, 15, 8, 1969
@@ -787,7 +727,6 @@ Cry_Mantine_Ch7:
 	square_note 4, 4, 8, 1976
 	sound_ret
 Cry_Mantine_Ch9:
-	drum_speed $81
 	noise_note 4, 8, 8, 5
 	noise_note 4, 8, 8, 4
 	noise_note 4, 3, 8, 3
@@ -799,7 +738,6 @@ Cry_Mantine_Ch9:
 	noise_note 4, 8, 7, 4
 	sound_ret
 Cry_Roar50_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 1, 3, 2
 @loop:
 	square_note 1, 12, 1, 1312
@@ -812,7 +750,6 @@ Cry_Roar50_Ch6:
 	square_note 24, 12, 2, 1056
 	sound_ret
 Cry_Roar50_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 3, 0, 2
 	square_note 8, 15, 8, 1792
 	square_note 7, 15, 8, 1824
@@ -821,7 +758,6 @@ Cry_Roar50_Ch7:
 	square_note 24, 15, 2, 1840
 	sound_ret
 Cry_Roar50_Ch9:
-	drum_speed $81
 	noise_note 4, 8, 8, 109
 	noise_note 4, 13, 8, 104
 	noise_note 7, 12, 8, 105
@@ -830,7 +766,6 @@ Cry_Roar50_Ch9:
 	noise_note 24, 13, 2, 91
 	sound_ret
 Cry_Roar60_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 3, 0, 2
 	square_note 8, 15, 8, 816
 	square_note 8, 15, 8, 832
@@ -839,7 +774,6 @@ Cry_Roar60_Ch6:
 	square_note 32, 11, 2, 1972
 	sound_ret
 Cry_Roar60_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 0, 2
 	square_note 8, 14, 8, 800
 	square_note 8, 14, 8, 808
@@ -848,14 +782,12 @@ Cry_Roar60_Ch7:
 	square_note 32, 7, 2, 1924
 	sound_ret
 Cry_Roar60_Ch9:
-	drum_speed $81
 	noise_note 2, 11, -6, 73
 	noise_note 5, 11, -6, 58
 	noise_note 2, 11, -6, 41
 	noise_note 40, 13, 3, 110
 	sound_ret
 Cry_Cottoncat_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 3, 2, 1
 	pitch_sweep 15, -7
 	square_note 2, 15, 8, 1824
@@ -870,7 +802,6 @@ Cry_Cottoncat_Ch6:
 	pitch_sweep 8, 8
 	sound_ret
 Cry_Cottoncat_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 6, 11, 2, 1822
 	square_note 5, 9, 2, 1913
@@ -878,7 +809,6 @@ Cry_Cottoncat_Ch7:
 	square_note 8, 10, 1, 1845
 	sound_ret
 Cry_Cottoncat_Ch9:
-	drum_speed $81
 	noise_note 2, 6, 4, 127
 	noise_note 2, 8, 4, 125
 	noise_note 2, 10, 4, 111
@@ -887,7 +817,6 @@ Cry_Cottoncat_Ch9:
 	noise_note 2, 6, 1, 107
 	sound_ret
 Cry_HoOh_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 1, 0, 2
 	square_note 3, 15, 8, 1712
 	square_note 1, 15, 8, 1701
@@ -898,7 +827,6 @@ Cry_HoOh_Ch6:
 	square_note 20, 15, 2, 1806
 	sound_ret
 Cry_HoOh_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 1, 3
 @loop1:
 	square_note 1, 15, 1, 1972
@@ -915,7 +843,6 @@ Cry_HoOh_Ch7:
 	square_note 16, 9, 2, 1941
 	sound_ret
 Cry_HoOh_Ch9:
-	drum_speed $81
 	noise_note 0, 15, 1, 40
 	sound_loop 4, Cry_HoOh_Ch9
 	noise_note 0, 9, 1, 73
@@ -1181,7 +1108,6 @@ Cry_Weepinbell:
 	db	008h
 	dw	Cry_Weepinbell_Ch9
 Cry_Raichu_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 15, 15, 7, 1952
 	square_note 6, 14, 6, 1955
@@ -1192,7 +1118,6 @@ Cry_Raichu_Ch6:
 	square_note 15, 15, 2, 2008
 	sound_ret
 Cry_Raichu_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 1, 1
 	square_note 2, 0, 8, 0
 	square_note 15, 10, 7, 1697
@@ -1204,7 +1129,6 @@ Cry_Raichu_Ch7:
 	square_note 15, 10, 2, 1751
 	sound_ret
 Cry_Raichu_Ch9:
-	drum_speed $81
 	noise_note 2, 15, 2, 60
 	noise_note 8, 14, 4, 62
 	noise_note 15, 13, 7, 60
@@ -1215,7 +1139,6 @@ Cry_Raichu_Ch9:
 	noise_note 8, 12, 1, 59
 	sound_ret
 Cry_Vileplume_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 15, 15, 7, 1984
 	square_note 6, 14, 4, 1985
@@ -1224,7 +1147,6 @@ Cry_Vileplume_Ch6:
 	square_note 8, 12, 1, 1984
 	sound_ret
 Cry_Vileplume_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 3, 3
 	square_note 15, 9, 7, 1921
 	square_note 6, 8, 4, 1920
@@ -1232,14 +1154,12 @@ Cry_Vileplume_Ch7:
 	square_note 15, 8, 3, 1921
 	sound_ret
 Cry_Vileplume_Ch9:
-	drum_speed $81
 	noise_note 3, 15, 2, 60
 	noise_note 13, 14, 6, 44
 	noise_note 15, 13, 7, 60
 	noise_note 8, 12, 1, 44
 	sound_ret
 Cry_Vulpix_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 15, 15, 7, 1664
 	square_note 10, 14, 6, 1668
@@ -1251,7 +1171,6 @@ Cry_Vulpix_Ch6:
 	square_note 8, 12, 1, 1600
 	sound_ret
 Cry_Vulpix_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 1, 1
 	square_note 15, 11, 7, 1601
 	square_note 10, 9, 6, 1602
@@ -1263,7 +1182,6 @@ Cry_Vulpix_Ch7:
 	square_note 8, 7, 1, 1537
 	sound_ret
 Cry_Vulpix_Ch9:
-	drum_speed $81
 	noise_note 15, 14, 4, 60
 	noise_note 10, 12, 7, 76
 	noise_note 10, 12, 7, 60
@@ -1271,7 +1189,6 @@ Cry_Vulpix_Ch9:
 	noise_note 15, 10, 2, 92
 	sound_ret
 Cry_Rhydon_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 6, 15, 7, 1952
 	square_note 8, 14, 6, 1956
@@ -1282,7 +1199,6 @@ Cry_Rhydon_Ch6:
 	square_note 8, 11, 1, 1840
 	sound_ret
 Cry_Rhydon_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 4, 0, 8, 0
 	square_note 6, 10, 7, 1857
@@ -1294,7 +1210,6 @@ Cry_Rhydon_Ch7:
 	square_note 8, 7, 1, 1752
 	sound_ret
 Cry_Rhydon_Ch9:
-	drum_speed $81
 	noise_note 2, 15, 2, 76
 	noise_note 6, 14, 6, 58
 	noise_note 4, 13, 7, 58
@@ -1304,7 +1219,6 @@ Cry_Rhydon_Ch9:
 	noise_note 8, 13, 1, 44
 	sound_ret
 Cry_Weepinbell_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 1, 1
 	square_note 6, 15, 4, 1856
 	square_note 15, 14, 3, 1840
@@ -1313,7 +1227,6 @@ Cry_Weepinbell_Ch6:
 	square_note 8, 13, 1, 1872
 	sound_ret
 Cry_Weepinbell_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 3, 1, 3
 	square_note 6, 12, 3, 1810
 	square_note 15, 11, 3, 1796
@@ -1322,14 +1235,12 @@ Cry_Weepinbell_Ch7:
 	square_note 8, 11, 1, 1842
 	sound_ret
 Cry_Weepinbell_Ch9:
-	drum_speed $81
 	noise_note 8, 13, 6, 44
 	noise_note 12, 12, 6, 60
 	noise_note 10, 11, 6, 44
 	noise_note 8, 9, 1, 28
 	sound_ret
 Cry_Kangaskhan_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 4, 15, 7, 1544
 	square_note 6, 14, 6, 1536
@@ -1340,7 +1251,6 @@ Cry_Kangaskhan_Ch6:
 	square_note 8, 14, 1, 1408
 	sound_ret
 Cry_Kangaskhan_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 4, 12, 7, 1284
 	square_note 6, 10, 6, 1282
@@ -1351,14 +1261,12 @@ Cry_Kangaskhan_Ch7:
 	square_note 8, 12, 1, 1154
 	sound_ret
 Cry_Kangaskhan_Ch9:
-	drum_speed $81
 	noise_note 12, 14, 4, 76
 	noise_note 10, 12, 7, 92
 	noise_note 12, 11, 6, 76
 	noise_note 15, 10, 2, 92
 	sound_ret
 Cry_Bulbasaur_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 1
 	square_note 4, 15, 7, 1984
 	square_note 12, 14, 6, 1986
@@ -1368,7 +1276,6 @@ Cry_Bulbasaur_Ch6:
 	square_note 8, 12, 1, 1600
 	sound_ret
 Cry_Bulbasaur_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 3, 0
 	square_note 3, 12, 7, 1921
 	square_note 12, 11, 6, 1920
@@ -1378,7 +1285,6 @@ Cry_Bulbasaur_Ch7:
 	square_note 8, 10, 1, 1538
 	sound_ret
 Cry_Bulbasaur_Ch9:
-	drum_speed $81
 	noise_note 3, 14, 4, 60
 	noise_note 12, 13, 6, 44
 	noise_note 4, 14, 4, 60
@@ -1386,7 +1292,6 @@ Cry_Bulbasaur_Ch9:
 	noise_note 15, 12, 2, 93
 	sound_ret
 Cry_Spearow_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 2, 1
 	square_note 8, 15, 7, 1664
 	square_note 2, 15, 7, 1632
@@ -1398,7 +1303,6 @@ Cry_Spearow_Ch6:
 	square_note 15, 9, 1, 1824
 	sound_ret
 Cry_Spearow_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 3, 2, 1
 	square_note 10, 14, 7, 1666
 	square_note 2, 14, 7, 1634
@@ -1410,33 +1314,28 @@ Cry_Spearow_Ch7:
 	square_note 15, 8, 1, 1826
 	sound_ret
 Cry_Spearow_Ch9:
-	drum_speed $81
 	noise_note 4, 7, 4, 33
 	noise_note 4, 7, 4, 16
 	noise_note 4, 7, 1, 32
 	sound_ret
 Cry_Nidoran_M_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 1, 1
 	square_note 4, 15, 3, 1816
 	square_note 15, 14, 5, 1944
 	square_note 8, 9, 1, 1880
 	sound_ret
 Cry_Nidoran_M_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 0, 0
 	square_note 5, 11, 3, 1800
 	square_note 15, 12, 5, 1928
 	square_note 8, 7, 1, 1864
 	sound_ret
 Cry_Nidoran_M_Ch9:
-	drum_speed $81
 	noise_note 3, 10, 1, 28
 	noise_note 14, 9, 4, 44
 	noise_note 8, 8, 1, 28
 	sound_ret
 Cry_Pidgey_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 1, 1
 	square_note 4, 14, 1, 1792
 	square_note 4, 15, 2, 1920
@@ -1444,7 +1343,6 @@ Cry_Pidgey_Ch6:
 	square_note 8, 14, 1, 1536
 	sound_ret
 Cry_Pidgey_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 4, 11, 1, 1761
 	square_note 3, 12, 2, 1761
@@ -1452,13 +1350,11 @@ Cry_Pidgey_Ch7:
 	square_note 8, 11, 1, 1505
 	sound_ret
 Cry_Pidgey_Ch9:
-	drum_speed $81
 	noise_note 2, 6, 1, 50
 	noise_note 2, 6, 1, 33
 	noise_note 8, 6, 1, 17
 	sound_ret
 Cry_Voltorb_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 2, 2
 	square_note 6, 8, 3, 583
 	square_note 15, 6, 2, 550
@@ -1468,7 +1364,6 @@ Cry_Voltorb_Ch6:
 	square_note 15, 4, 2, 519
 	sound_ret
 Cry_Voltorb_Ch9:
-	drum_speed $81
 	noise_note 8, 13, 4, 140
 	noise_note 4, 14, 2, 156
 	noise_note 15, 12, 6, 140
@@ -1477,27 +1372,23 @@ Cry_Voltorb_Ch9:
 	noise_note 15, 15, 2, 172
 	sound_ret
 Cry_Muk_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 4, 15, 3, 1760
 	square_note 15, 14, 4, 1600
 	square_note 8, 12, 1, 1568
 	sound_ret
 Cry_Muk_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 3, 12, 3, 1667
 	square_note 14, 11, 4, 1538
 	square_note 8, 10, 1, 1537
 	sound_ret
 Cry_Muk_Ch9:
-	drum_speed $81
 	noise_note 4, 13, 3, 92
 	noise_note 15, 14, 6, 76
 	noise_note 8, 11, 1, 92
 	sound_ret
 Cry_Grimer_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 6, 14, 2, 1280
 	square_note 6, 14, 3, 1408
@@ -1505,7 +1396,6 @@ Cry_Grimer_Ch6:
 	square_note 8, 10, 1, 1376
 	sound_ret
 Cry_Grimer_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 1, 1
 	square_note 6, 14, 2, 1154
 	square_note 6, 13, 3, 1281
@@ -1513,7 +1403,6 @@ Cry_Grimer_Ch7:
 	square_note 8, 8, 1, 1217
 	sound_ret
 Cry_Diglett_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 3, 0
 	square_note 4, 15, 1, 1792
 	square_note 4, 14, 1, 1920
@@ -1527,7 +1416,6 @@ Cry_Diglett_Ch6:
 	square_note 8, 11, 1, 1857
 	sound_ret
 Cry_Diglett_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 0, 1, 0
 	square_note 12, 0, 8, 0
 	square_note 4, 15, 1, 1793
@@ -1538,7 +1426,6 @@ Cry_Diglett_Ch7:
 	square_note 8, 13, 1, 1793
 	sound_ret
 Cry_Diglett_Ch9:
-	drum_speed $81
 	noise_note 15, 0, 8, 0
 	noise_note 4, 0, 8, 0
 	noise_note 4, 13, 1, 76
@@ -1549,7 +1436,6 @@ Cry_Diglett_Ch9:
 	noise_note 8, 10, 1, 76
 	sound_ret
 Cry_Seel_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 3, 0
 	square_note 8, 15, 5, 1536
 	square_note 2, 13, 2, 1592
@@ -1562,7 +1448,6 @@ Cry_Seel_Ch6:
 	square_note 8, 12, 1, 1568
 	sound_ret
 Cry_Seel_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 0, 1, 0
 	square_note 12, 12, 3, 1472
 	square_note 3, 11, 1, 1529
@@ -1575,21 +1460,18 @@ Cry_Seel_Ch7:
 	square_note 8, 9, 1, 1505
 	sound_ret
 Cry_Slowpoke_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 0, 0
 	square_note 8, 15, 5, 1152
 	square_note 2, 14, 1, 1504
 	square_note 8, 13, 1, 1500
 	sound_ret
 Cry_Slowpoke_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 1, 1
 	square_note 7, 9, 5, 1089
 	square_note 2, 8, 1, 1313
 	square_note 8, 6, 1, 1306
 	sound_ret
 Cry_Drowzee_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 0, 2, 0
 	square_note 5, 15, 2, 1616
 	square_note 9, 13, 1, 1632
@@ -1600,7 +1482,6 @@ Cry_Drowzee_Ch6:
 	sound_loop 2, Cry_Drowzee_Ch6
 	sound_ret
 Cry_Drowzee_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 0, 0, 0
 	square_note 4, 0, 8, 0
 	square_note 5, 15, 2, 1617
@@ -1615,7 +1496,6 @@ Cry_Drowzee_Ch7:
 	square_note 4, 13, 1, 1569
 	sound_ret
 Cry_Drowzee_Ch9:
-	drum_speed $81
 	noise_note 6, 13, 2, 28
 	noise_note 9, 11, 1, 44
 	noise_note 8, 12, 2, 44
@@ -1628,7 +1508,6 @@ Cry_Drowzee_Ch9:
 	noise_note 4, 10, 1, 60
 	sound_ret
 Cry_Nidoran_F_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 0, 0
 	square_note 4, 15, 3, 1536
 	square_note 8, 13, 5, 1888
@@ -1636,7 +1515,6 @@ Cry_Nidoran_F_Ch6:
 	square_note 8, 13, 1, 1808
 	sound_ret
 Cry_Nidoran_F_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 2, 2
 	square_note 5, 11, 3, 1777
 	square_note 7, 12, 5, 1874
@@ -1644,14 +1522,12 @@ Cry_Nidoran_F_Ch7:
 	square_note 8, 11, 1, 1537
 	sound_ret
 Cry_Nidoran_F_Ch9:
-	drum_speed $81
 	noise_note 3, 10, 2, 60
 	noise_note 12, 9, 4, 44
 	noise_note 3, 8, 2, 28
 	noise_note 8, 7, 1, 44
 	sound_ret
 Cry_Nidoqueen_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 8, 15, 7, 1760
 	square_note 6, 14, 6, 1765
@@ -1662,7 +1538,6 @@ Cry_Nidoqueen_Ch6:
 	square_note 15, 10, 2, 1736
 	sound_ret
 Cry_Nidoqueen_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 1, 1
 	square_note 3, 0, 8, 0
 	square_note 8, 10, 7, 1697
@@ -1674,7 +1549,6 @@ Cry_Nidoqueen_Ch7:
 	square_note 15, 7, 2, 1673
 	sound_ret
 Cry_Nidoqueen_Ch9:
-	drum_speed $81
 	noise_note 2, 15, 2, 60
 	noise_note 8, 14, 4, 62
 	noise_note 8, 13, 7, 60
@@ -1685,7 +1559,6 @@ Cry_Nidoqueen_Ch9:
 	noise_note 8, 9, 1, 60
 	sound_ret
 Cry_Oddish_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 15, 15, 6, 1381
 	square_note 10, 14, 4, 1404
@@ -1693,7 +1566,6 @@ Cry_Oddish_Ch6:
 	square_note 15, 11, 2, 1340
 	sound_ret
 Cry_Oddish_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 2, 2
 	square_note 14, 13, 6, 1283
 	square_note 9, 11, 4, 1307
@@ -1701,13 +1573,11 @@ Cry_Oddish_Ch7:
 	square_note 15, 10, 2, 1243
 	sound_ret
 Cry_Oddish_Ch9:
-	drum_speed $81
 	noise_note 12, 14, 6, 76
 	noise_note 11, 13, 7, 92
 	noise_note 15, 12, 2, 76
 	sound_ret
 Cry_Charmander_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 4, 15, 7, 1696
 	square_note 8, 14, 6, 1700
@@ -1718,7 +1588,6 @@ Cry_Charmander_Ch6:
 	square_note 8, 11, 1, 1552
 	sound_ret
 Cry_Charmander_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 2, 2
 	square_note 4, 14, 7, 1537
 	square_note 8, 13, 6, 1539
@@ -1729,7 +1598,6 @@ Cry_Charmander_Ch7:
 	square_note 8, 10, 1, 1393
 	sound_ret
 Cry_Charmander_Ch9:
-	drum_speed $81
 	noise_note 7, 13, 6, 92
 	noise_note 8, 14, 6, 76
 	noise_note 4, 13, 4, 92
@@ -1738,14 +1606,12 @@ Cry_Charmander_Ch9:
 	noise_note 8, 10, 1, 92
 	sound_ret
 Cry_Clefairy_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 2, 3
 	square_note 7, 13, 2, 1856
 	square_note 15, 14, 5, 1888
 	square_note 24, 12, 1, 1840
 	sound_ret
 Cry_Clefairy_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 0, 0, 1
 	square_note 2, 12, 2, 1793
 	square_note 4, 12, 2, 1800
@@ -1753,27 +1619,23 @@ Cry_Clefairy_Ch7:
 	square_note 24, 10, 2, 1793
 	sound_ret
 Cry_Caterpie_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 15, 13, 7, 1920
 	square_note 4, 14, 6, 1952
 	square_note 15, 13, 2, 1856
 	sound_ret
 Cry_Caterpie_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 2, 2
 	square_note 15, 12, 7, 1875
 	square_note 5, 11, 6, 1906
 	square_note 15, 12, 2, 1809
 	sound_ret
 Cry_Caterpie_Ch9:
-	drum_speed $81
 	noise_note 13, 15, 6, 76
 	noise_note 4, 14, 6, 60
 	noise_note 15, 15, 2, 76
 	sound_ret
 Cry_Lapras_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 6, 15, 7, 1728
 	square_note 15, 14, 7, 1792
@@ -1782,7 +1644,6 @@ Cry_Lapras_Ch6:
 	square_note 8, 13, 1, 1744
 	sound_ret
 Cry_Lapras_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 7, 14, 6, 1665
 	square_note 14, 13, 5, 1729
@@ -1791,14 +1652,12 @@ Cry_Lapras_Ch7:
 	square_note 8, 12, 1, 1681
 	sound_ret
 Cry_Lapras_Ch9:
-	drum_speed $81
 	noise_note 10, 10, 6, 60
 	noise_note 14, 9, 4, 44
 	noise_note 5, 10, 3, 60
 	noise_note 8, 9, 1, 44
 	sound_ret
 Cry_Golem_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 1, 1
 	square_note 12, 15, 2, 1088
 	square_note 15, 14, 3, 1184
@@ -1806,7 +1665,6 @@ Cry_Golem_Ch6:
 	square_note 8, 13, 1, 1152
 	sound_ret
 Cry_Golem_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 2, 3, 2
 	square_note 11, 13, 2, 1080
 	square_note 14, 12, 6, 1176
@@ -1814,14 +1672,12 @@ Cry_Golem_Ch7:
 	square_note 8, 11, 1, 1144
 	sound_ret
 Cry_Golem_Ch9:
-	drum_speed $81
 	noise_note 10, 14, 6, 108
 	noise_note 15, 13, 2, 92
 	noise_note 3, 12, 2, 108
 	noise_note 8, 13, 1, 92
 	sound_ret
 Cry_Blastoise_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 3, 0, 3
 	square_note 15, 15, 6, 1472
 	square_note 8, 14, 3, 1468
@@ -1831,7 +1687,6 @@ Cry_Blastoise_Ch6:
 	square_note 8, 11, 1, 1536
 	sound_ret
 Cry_Blastoise_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 1, 2, 1
 	square_note 14, 12, 6, 1201
 	square_note 7, 12, 3, 1197
@@ -1841,7 +1696,6 @@ Cry_Blastoise_Ch7:
 	square_note 8, 9, 1, 1265
 	sound_ret
 Cry_Blastoise_Ch9:
-	drum_speed $81
 	noise_note 10, 14, 6, 92
 	noise_note 10, 13, 6, 108
 	noise_note 4, 12, 2, 76
@@ -1850,27 +1704,23 @@ Cry_Blastoise_Ch9:
 	noise_note 8, 10, 1, 92
 	sound_ret
 Cry_Pidgeotto_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 8, 14, 4, 1936
 	square_note 15, 15, 5, 1984
 	square_note 8, 13, 1, 2008
 	sound_ret
 Cry_Pidgeotto_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 1, 1
 	square_note 10, 12, 4, 1905
 	square_note 15, 11, 6, 1954
 	square_note 8, 10, 1, 1975
 	sound_ret
 Cry_Pidgeotto_Ch9:
-	drum_speed $81
 	noise_note 8, 14, 4, 76
 	noise_note 14, 12, 4, 60
 	noise_note 8, 13, 1, 44
 	sound_ret
 Cry_Paras_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 6, 15, 2, 1536
 	square_note 6, 14, 2, 1600
@@ -1882,7 +1732,6 @@ Cry_Paras_Ch6:
 	square_note 8, 10, 1, 1984
 	sound_ret
 Cry_Paras_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 0, 1
 	square_note 3, 0, 8, 1
 	square_note 6, 12, 2, 1473
@@ -1895,7 +1744,6 @@ Cry_Paras_Ch7:
 	square_note 8, 8, 1, 1921
 	sound_ret
 Cry_Paras_Ch9:
-	drum_speed $81
 	noise_note 6, 0, 8, 1
 	noise_note 5, 14, 2, 92
 	noise_note 5, 12, 2, 76
@@ -1907,7 +1755,6 @@ Cry_Paras_Ch9:
 	noise_note 8, 8, 1, 24
 	sound_ret
 Cry_Weedle_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 4, 15, 3, 1920
 	square_note 15, 14, 7, 1792
@@ -1917,7 +1764,6 @@ Cry_Weedle_Ch6:
 	square_note 8, 12, 1, 1760
 	sound_ret
 Cry_Weedle_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 2, 2
 	square_note 6, 12, 3, 1793
 	square_note 14, 11, 7, 1665
@@ -1927,7 +1773,6 @@ Cry_Weedle_Ch7:
 	square_note 8, 10, 1, 1633
 	sound_ret
 Cry_Weedle_Ch9:
-	drum_speed $81
 	noise_note 6, 14, 3, 92
 	noise_note 14, 13, 6, 76
 	noise_note 6, 12, 6, 60
@@ -1936,7 +1781,6 @@ Cry_Weedle_Ch9:
 	noise_note 8, 11, 1, 108
 	sound_ret
 Cry_Ekans_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 3, 3
 	square_note 15, 15, 7, 1280
 	square_note 15, 14, 7, 1288
@@ -1944,7 +1788,6 @@ Cry_Ekans_Ch6:
 	square_note 15, 10, 2, 1120
 	sound_ret
 Cry_Ekans_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 0, 1, 0
 	square_note 14, 13, 7, 1153
 	square_note 14, 12, 7, 1161
@@ -1952,14 +1795,12 @@ Cry_Ekans_Ch7:
 	square_note 15, 12, 2, 993
 	sound_ret
 Cry_Ekans_Ch9:
-	drum_speed $81
 	noise_note 14, 15, 7, 124
 	noise_note 12, 15, 6, 108
 	noise_note 9, 14, 4, 124
 	noise_note 15, 14, 2, 108
 	sound_ret
 Cry_Metapod_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 1, 1
 	square_note 7, 13, 6, 2017
 	square_note 6, 12, 6, 2018
@@ -1971,7 +1812,6 @@ Cry_Metapod_Ch6:
 	square_note 8, 10, 1, 2015
 	sound_ret
 Cry_Metapod_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 0, 1, 0
 	square_note 6, 12, 3, 1993
 	square_note 6, 11, 3, 1991
@@ -1981,7 +1821,6 @@ Cry_Metapod_Ch7:
 	square_note 15, 10, 2, 1989
 	sound_ret
 Cry_Metapod_Ch9:
-	drum_speed $81
 	noise_note 13, 1, -1, 124
 	noise_note 13, 15, 7, 140
 	noise_note 12, 13, 6, 124
@@ -1989,7 +1828,6 @@ Cry_Metapod_Ch9:
 	noise_note 15, 11, 3, 92
 	sound_ret
 Cry_Venonat_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 6, 15, 7, 1856
 	square_note 12, 14, 6, 1860
@@ -1999,7 +1837,6 @@ Cry_Venonat_Ch6:
 	square_note 8, 13, 1, 1952
 	sound_ret
 Cry_Venonat_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 6, 12, 7, 1793
 	square_note 11, 11, 6, 1794
@@ -2009,7 +1846,6 @@ Cry_Venonat_Ch7:
 	square_note 8, 9, 1, 1890
 	sound_ret
 Cry_Venonat_Ch9:
-	drum_speed $81
 	noise_note 3, 14, 2, 60
 	noise_note 8, 13, 6, 76
 	noise_note 5, 13, 4, 60
@@ -2018,7 +1854,6 @@ Cry_Venonat_Ch9:
 	noise_note 8, 13, 1, 44
 	sound_ret
 Cry_Squirtle_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 1, 0
 	square_note 15, 15, 0, 1797
 	square_note 10, 14, 0, 1792
@@ -2028,7 +1863,6 @@ Cry_Squirtle_Ch6:
 	square_note 8, 10, 1, 1572
 	sound_ret
 Cry_Squirtle_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 15, 11, 0, 1731
 	square_note 10, 10, 0, 1729
@@ -2038,7 +1872,6 @@ Cry_Squirtle_Ch7:
 	square_note 8, 6, 1, 1512
 	sound_ret
 Cry_Squirtle_Ch9:
-	drum_speed $81
 	noise_note 6, 14, 6, 76
 	noise_note 15, 13, 6, 60
 	noise_note 10, 12, 5, 74
@@ -2046,7 +1879,6 @@ Cry_Squirtle_Ch9:
 	noise_note 15, 12, 2, 76
 	sound_ret
 Cry_Fearow_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 1, 1, 0, 0
 	square_note 10, 15, 5, 1664
 	square_note 3, 14, 2, 1696
@@ -2058,7 +1890,6 @@ Cry_Fearow_Ch6:
 	square_note 8, 12, 1, 1696
 	sound_ret
 Cry_Fearow_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 0, 3, 3
 	square_note 9, 13, 5, 1585
 	square_note 3, 13, 2, 1618
@@ -2070,7 +1901,6 @@ Cry_Fearow_Ch7:
 	square_note 8, 11, 1, 1617
 	sound_ret
 Cry_Fearow_Ch9:
-	drum_speed $81
 	noise_note 6, 14, 3, 76
 	noise_note 4, 12, 3, 60
 	noise_note 5, 13, 4, 60
@@ -2079,7 +1909,6 @@ Cry_Fearow_Ch9:
 	noise_note 8, 12, 1, 44
 	sound_ret
 Cry_Growlithe_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 2, 2, 1, 1
 	square_note 3, 15, 4, 1601
 	square_note 13, 13, 6, 1825
@@ -2087,7 +1916,6 @@ Cry_Growlithe_Ch6:
 	square_note 8, 12, 1, 1818
 	sound_ret
 Cry_Growlithe_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 3, 0
 	square_note 4, 15, 4, 1408
 	square_note 14, 14, 6, 1760
@@ -2095,14 +1923,12 @@ Cry_Growlithe_Ch7:
 	square_note 8, 13, 1, 1756
 	sound_ret
 Cry_Growlithe_Ch9:
-	drum_speed $81
 	noise_note 5, 12, 4, 70
 	noise_note 13, 10, 5, 68
 	noise_note 8, 12, 4, 69
 	noise_note 8, 11, 1, 68
 	sound_ret
 Cry_Krabby_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 13, 15, 1, 1297
 	square_note 13, 14, 1, 1301
@@ -2110,7 +1936,6 @@ Cry_Krabby_Ch6:
 	square_note 8, 13, 1, 1297
 	sound_ret
 Cry_Krabby_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 1, 1
 	square_note 12, 14, 1, 1292
 	square_note 12, 13, 1, 1296
@@ -2118,14 +1943,12 @@ Cry_Krabby_Ch7:
 	square_note 8, 12, 1, 1290
 	sound_ret
 Cry_Krabby_Ch9:
-	drum_speed $81
 	noise_note 14, 15, 2, 101
 	noise_note 13, 14, 2, 85
 	noise_note 14, 13, 2, 86
 	noise_note 8, 13, 1, 102
 	sound_ret
 Cry_Psyduck_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 2, 3
 	square_note 3, 15, 3, 1380
 	square_note 2, 14, 2, 1348
@@ -2137,7 +1960,6 @@ Cry_Psyduck_Ch6:
 	square_note 8, 13, 1, 1282
 	sound_ret
 Cry_Psyduck_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 0, 3, 0
 	square_note 3, 13, 3, 1376
 	square_note 2, 12, 2, 1344
@@ -2149,7 +1971,6 @@ Cry_Psyduck_Ch7:
 	square_note 8, 12, 1, 1280
 	sound_ret
 Cry_Rattata_Ch6:
-	note_type $81, 0, 0
 	duty_cycle_pattern 0, 1, 0, 1
 	square_note 2, 3, -5, 897
 	square_note 7, 15, 5, 1537
@@ -2157,7 +1978,6 @@ Cry_Rattata_Ch6:
 	square_note 8, 9, 1, 897
 	sound_ret
 Cry_Rattata_Ch7:
-	note_type $81, 0, 0
 	duty_cycle_pattern 3, 2, 3, 2
 	square_note 2, 3, -6, 1456
 	square_note 7, 13, 5, 1885
@@ -2165,7 +1985,6 @@ Cry_Rattata_Ch7:
 	square_note 8, 6, 1, 1456
 	sound_ret
 Cry_Rattata_Ch9:
-	drum_speed $81
 	noise_note 2, 9, 2, 73
 	noise_note 7, 11, 5, 41
 	noise_note 1, 10, 2, 57

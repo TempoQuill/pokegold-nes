@@ -17,7 +17,7 @@ Music_Route29_Ch1:
 	db	$e1,$10,$15
 ;	db	$ef,$0f
 ; P1-1
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 	db	$01
 @mainloop:
 ; P1-2
@@ -161,7 +161,7 @@ Music_Route29_Ch2:
 	db	$db,$03
 	db	$e1,$12,$36
 ; P2-1
-	db	$d8,$8c,$c2
+	db	$d8,$c,$c2
 	db	$d3,$10
 	db	$30
 @mainloop:

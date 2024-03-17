@@ -471,48 +471,49 @@ _CheckSFX:
 PlayDanger:
 	LDA zLowHealthAlarm
 	RPL
-	RSB DANGER_ON_F
+	AND #$1f
 	TAX
+	INC zLowHealthAlarm
+	LDA zLowHealthAlarm
+	AND #$9f
+	STA zLowHealthAlarm
 	JSR _CheckSFX
-	BCS @Increment
+	RCS
 	TXA
-	BEQ @Begin
-	CMP #16
-	BNE @Increment
-@Halfway:
+	AND #$0f
+	RNE
+	TXA
+	AND #$10
+	BEQ @High
 	LDA #>DangerSoundLow
 	STA zCurTrackAudioPointer + 1
 	LDA #<DangerSoundLow
 	STA zCurTrackAudioPointer
-	BMI @ApplyChannel
-@Begin:
+	LDY #0
+	BEQ @Update
+@High:
+	TAY
 	LDA #>DangerSoundHigh
 	STA zCurTrackAudioPointer + 1
 	LDA #<DangerSoundHigh
 	STA zCurTrackAudioPointer
-@ApplyChannel:
-	LDY #0
+@Update:
+	LDA rMIX
+	AND #$1e
+	STA rMIX
 	LDA (zCurTrackAudioPointer), Y
 	STA rNR10
 	INY
 	LDA (zCurTrackAudioPointer), Y
 	STA rNR12
+	LDA rMIX
+	ORA #$01
+	STA rMIX
 	INY
 	LDA (zCurTrackAudioPointer), Y
 	STA rNR13
 	INY
-@Increment:
-	INX
-	CPX #30 ; Ending frame
-	TXA
-	BCS @NoReset
-	LDA #0
-@NoReset:
-	; Make sure the danger sound is kept on
-	SSB DANGER_ON_F
-	STA zLowHealthAlarm
-	; Enable channel 1 in case it's off
-	LDA #$7f
+	LDA (zCurTrackAudioPointer), Y
 	STA rNR11
 	RTS
 
@@ -1825,18 +1826,8 @@ Music_SFXToggleDrum:
 	RTS
 
 Music_NoteType:
-	LDY #CHANNEL_FLAGS2
-	LDA (zCurTrackAudioPointer), Y
-	RSB SOUND_ENV_TIMER
-	STA (zCurTrackAudioPointer), Y
 	JSR GetMusicByte
-	LDY #CHANNEL_FLAGS2
-	TSB SOUND_ENV_TIMER
-	ORA (zCurTrackAudioPointer), Y
-	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_NOTE_LENGTH
-	LDA zCurMusicByte
-	RSB SOUND_ENV_TIMER
 	STA (zCurTrackAudioPointer), Y
 	LDA zCurChannel
 	SEC
@@ -1867,17 +1858,17 @@ Music_VolumeEnvelope:
 	LDY #CHANNEL_ENV_LENGTH
 	STA (zCurTrackAudioPointer), Y
 	JSR GetMusicByte
-	TAX
-	LDY #CHANNEL_FLAGS2
-	LDA (zCurTrackAudioPointer), Y
-	BPL @Store
-	TXA
+	LDX zCurChannel
+	CPX #CHAN3
+	BEQ @Store
+	CPX #CHAN8
+	BEQ @Store
 REPT 4
 	ASL A
 ENDR
 	LDY #CHANNEL_ENV_LENGTH
 	STA (zCurTrackAudioPointer), Y
-	TXA
+	LDA zCurMusicByte
 REPT 4
 	LSR A
 ENDR
@@ -1888,7 +1879,6 @@ ENDR
 	STA (zCurTrackAudioPointer), Y
 	RTS
 @Store:
-	TXA
 	LDY #CHANNEL_VOLUME_ENVELOPE
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_ENV_BACKUP
@@ -2472,13 +2462,11 @@ ClearChannels:
 	RTS
 
 ApplyEnvLength:
-	LDY #CHANNEL_FLAGS2
-	LDA (zCurTrackAudioPointer), Y
-	RPL
-	LDY #CHANNEL_NOTE_FLAGS
-	LDA (zCurTrackAudioPointer), Y
-	SSB NOTE_DUTY_OVERRIDE
-	STA (zCurTrackAudioPointer), Y
+	LDA zCurChannel
+	CMP #CHAN3
+	REQ
+	CMP #CHAN8
+	REQ
 	LDY #CHANNEL_ENV_LENGTH
 	LDA (zCurTrackAudioPointer), Y
 	TAX
@@ -2511,6 +2499,10 @@ ApplyEnvLength:
 	AND #$1f
 	REQ
 @Apply:
+	STA (zCurTrackAudioPointer), Y
+	LDY #CHANNEL_NOTE_FLAGS
+	LDA (zCurTrackAudioPointer), Y
+	SSB NOTE_DUTY_OVERRIDE
 	STA (zCurTrackAudioPointer), Y
 	RTS
 @ResetTimer

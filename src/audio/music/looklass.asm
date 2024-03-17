@@ -17,7 +17,7 @@ Music_LookLass_Ch1:
 	db	$e6,$00,$01
 ; P1-2
 	db	$db,$02
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$d4,$c0
 	db	$00
 	db	$d3,$cd
@@ -41,7 +41,7 @@ Music_LookLass_Ch2:
 ;	db	$ef,$f0
 ; P2-2
 	db	$db,$00
-	db	$d8,$8c,$83
+	db	$d8,$c,$83
 	db	$0f
 ; P2-3
 @mainloop:

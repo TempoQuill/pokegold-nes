@@ -14,7 +14,7 @@ Music_CeladonCity_Ch1:
 ; P1-2
 @mainloop:
 ;	db	$ef,$0f
-	db	$d8,$8c,$a6
+	db	$d8,$c,$a6
 	db	$d4,$a6
 	db	$dc,$a1
 	db	$90
@@ -156,7 +156,7 @@ Music_CeladonCity_Ch2:
 	db	$db,$02
 ;	db	$ef,$f0
 ; P2-2
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$d3,$30
 	db	$20
 	db	$30

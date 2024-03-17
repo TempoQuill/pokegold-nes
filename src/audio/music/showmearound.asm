@@ -17,7 +17,7 @@ Music_ShowMeAround_Ch1:
 ; P1-1
 ;	db	$ef,$0f
 	db	$db,$02
-	db	$d8,$8c,$b1
+	db	$d8,$c,$b1
 ; P1-2
 	db	$d3,$c1
 	db	$a1
@@ -84,7 +84,7 @@ Music_ShowMeAround_Ch2:
 ; P2-1
 ;	db	$ef,$ff
 	db	$db,$02
-	db	$d8,$8c,$b1
+	db	$d8,$c,$b1
 ; P2-2
 	db	$d2,$51
 	db	$31

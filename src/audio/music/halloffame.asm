@@ -14,7 +14,7 @@ Music_HallOfFame_Ch1:
 	db	$db,$02
 	db	$e1,$c,$22
 	db	$e6,$00,$01
-	db	$d8,$8c,$93
+	db	$d8,$c,$93
 ; P1-1
 	db	$0f
 ; P1-2
@@ -63,7 +63,7 @@ Music_HallOfFame_Ch2:
 	db	$db,$03
 ; P2-1
 @mainloop:
-	db	$d8,$8c,$c4
+	db	$d8,$c,$c4
 	db	$d4,$81
 	db	$31
 	db	$81

@@ -16,7 +16,7 @@ Music_UnionCave_Ch1:
 	db	$e1,$18,$34
 ; P1-1
 @mainloop:
-	db	$d8,$8c,$b3
+	db	$d8,$c,$b3
 @loop1:
 	db	$fe
 	dw	@sub1
@@ -94,7 +94,7 @@ Music_UnionCave_Ch2:
 	db	$e1,$8,$24
 ; P2-1
 @mainloop:
-	db	$d8,$8c,$c4
+	db	$d8,$c,$c4
 	db	$fe
 	dw	@sub1
 ; P2-5

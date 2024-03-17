@@ -18,7 +18,7 @@ Music_PokemonCenter_Ch1:
 ; P1-1
 @loop10:
 ;	db	$ef,$0f
-	db	$d8,$8c,$83
+	db	$d8,$c,$83
 	db	$d4,$71
 	db	$61
 	db	$71
@@ -85,7 +85,7 @@ Music_PokemonCenter_Ch1:
 	db	$a1
 	db	$81
 ; P1-8
-	db	$d8,$8c,$b4
+	db	$d8,$c,$b4
 	db	$71
 	db	$51
 	db	$31
@@ -170,7 +170,7 @@ Music_PokemonCenter_Ch2:
 	db	$fe
 	dw	@d_a_d
 ;	db	$ef,$0f
-	db	$d8,$8c,$a5
+	db	$d8,$c,$a5
 	db	$d4,$a3
 	db	$53
 ; P2-3
@@ -181,7 +181,7 @@ Music_PokemonCenter_Ch2:
 	db	$31
 	db	$75
 ;	db	$ef,$0f
-	db	$d8,$8c,$a5
+	db	$d8,$c,$a5
 	db	$d4,$a3
 	db	$53
 ; P2-5
@@ -189,7 +189,7 @@ Music_PokemonCenter_Ch2:
 	db	$fe
 	dw	@d_a_d
 ;	db	$ef,$0f
-	db	$d8,$8c,$a5
+	db	$d8,$c,$a5
 	db	$d4,$a3
 	db	$53
 ; P2-7
@@ -199,11 +199,11 @@ Music_PokemonCenter_Ch2:
 ; P2-8
 	db	$37
 ;	db	$ef,$0f
-	db	$d8,$8c,$a5
+	db	$d8,$c,$a5
 	db	$d4,$33
 	db	$53
 ; P2-9
-	db	$d8,$8c,$c6
+	db	$d8,$c,$c6
 	db	$d3,$77
 	db	$a7
 ; P2-10
@@ -245,7 +245,7 @@ Music_PokemonCenter_Ch2:
 	dw	@loop20
 @d_a_d:
 	db	$db,$02
-	db	$d8,$8c,$c2
+	db	$d8,$c,$c2
 	db	$d3,$31
 	db	$d4,$a1
 	db	$d3,$31
@@ -258,7 +258,7 @@ Music_PokemonCenter_Ch2:
 	db	$25
 	db	$ff
 @cs_a_cs:
-	db	$d8,$8c,$c2
+	db	$d8,$c,$c2
 	db	$d3,$21
 	db	$d4,$a1
 	db	$d3,$21

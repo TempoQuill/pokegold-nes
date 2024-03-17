@@ -13,7 +13,7 @@ Music_PokemonMarch_Ch1:
 	db	$da,$00,$90
 	db	$db,$03
 	db	$e6,$00,$01
-	db	$d8,$8c,$42
+	db	$d8,$c,$42
 	db	$d4,$33
 	db	$dc,$62
 	db	$33
@@ -21,7 +21,7 @@ Music_PokemonMarch_Ch1:
 	db	$33
 	db	$dc,$a2
 	db	$33
-	db	$d8,$88,$a2
+	db	$d8,$8,$a2
 @mainloop:
 ; P1-1
 	db	$fe
@@ -145,15 +145,15 @@ Music_PokemonMarch_Ch2:
 ; P2-1
 	db	$db,$02
 	db	$e1,$10,$22
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 	db	$d4,$83
 	db	$83
 	db	$83
 	db	$83
 @mainloop:
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 	db	$d4,$9b
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$41
 	db	$91
 	db	$b1
@@ -162,9 +162,9 @@ Music_PokemonMarch_Ch2:
 	db	$0f
 	db	$05
 ; P2-3
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$d4,$9f
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$41
 	db	$93
 	db	$b1
@@ -179,9 +179,9 @@ Music_PokemonMarch_Ch2:
 	db	$d4,$b1
 	db	$91
 ; P2-5
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$bf
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$b1
 	db	$61
 	db	$b1
@@ -191,9 +191,9 @@ Music_PokemonMarch_Ch2:
 	db	$0f
 	db	$05
 ; P2-7
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$d4,$bf
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$61
 	db	$b3
 	db	$d3,$11
@@ -208,16 +208,16 @@ Music_PokemonMarch_Ch2:
 	db	$11
 	db	$d4,$c1
 ; P2-9
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$bf
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$a1
 	db	$b3
 	db	$d3,$11
 ; P2-10
-	db	$d8,$88,$b7
+	db	$d8,$8,$b7
 	db	$d4,$9f
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$b1
 	db	$93
 	db	$61

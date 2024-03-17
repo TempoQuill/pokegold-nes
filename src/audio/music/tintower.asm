@@ -16,7 +16,7 @@ Music_TinTower_Ch1:
 	db	$e1,$8,$45
 ; P1-1
 @mainloop:
-	db	$d8,$8c,$a5
+	db	$d8,$c,$a5
 	db	$d4,$83
 	db	$13
 	db	$97
@@ -108,7 +108,7 @@ Music_TinTower_Ch2:
 	db	$e1,$18,$44
 @mainloop:
 @loop1:
-	db	$d8,$8c,$b5
+	db	$d8,$c,$b5
 	db	$d3,$13
 	db	$13
 	db	$21

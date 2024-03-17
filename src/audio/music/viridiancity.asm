@@ -16,7 +16,7 @@ Music_ViridianCity_Ch1:
 ; P1-1
 	db	$db,$02
 	db	$e1,$12,$34
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 ; P1-2
 	db	$d4,$70
 	db	$02
@@ -273,7 +273,7 @@ Music_ViridianCity_Ch2:
 ; P2-1
 	db	$e1,$10,$46
 	db	$db,$01
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 ; P2-2
 	db	$d5,$33
 	db	$01

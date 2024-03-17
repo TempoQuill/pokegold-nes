@@ -16,7 +16,7 @@ Music_PalletTown_Ch1:
 ; P1-2
 @loop:
 	db	$db,$02
-	db	$d8,$8c,$78
+	db	$d8,$c,$78
 	db	$d4,$cb
 	db	$a0
 	db	$30
@@ -133,7 +133,7 @@ Music_PalletTown_Ch2:
 ;	db	$ef,$f0
 ; P2-2
 @loop:
-	db	$d8,$8c,$88
+	db	$d8,$c,$88
 	db	$d6,$81
 	db	$c1
 	db	$d5,$31

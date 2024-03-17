@@ -17,11 +17,11 @@ Music_Credits_Ch1:
 ;	db	$ef,$0f
 ; P1-1
 	db	$db,$03
-	db	$d8,$8c,$2f
+	db	$d8,$c,$2f
 ; P1-2 
 	db	$d5,$8f
 ; P1-3
-	db	$d8,$86,$a7
+	db	$d8,$6,$a7
 	db	$d4,$cb
 	db	$b1
 	db	$a1
@@ -160,7 +160,7 @@ Music_Credits_Ch1:
 	dw	@sub33_35
 	db	$d9,$00
 	db	$d4,$ab
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$30
 	db	$30
 	db	$30
@@ -193,13 +193,13 @@ Music_Credits_Ch1:
 	db	$a5
 	db	$d2,$25
 ; P1-69
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 @sub69:
 	db	$d4,$a0
 	db	$d3,$30
 	db	$fd,6
 	dw	@sub69
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$80
 	db	$00
 	db	$80
@@ -208,7 +208,7 @@ Music_Credits_Ch1:
 	db	$00
 ; P1-70
 	db	$da,$00,$99
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$d4,$10
 	db	$50
 	db	$80
@@ -221,7 +221,7 @@ Music_Credits_Ch1:
 	db	$d3,$10
 	db	$50
 	db	$80
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$10
 	db	$00
 	db	$50
@@ -229,7 +229,7 @@ Music_Credits_Ch1:
 	db	$80
 	db	$00
 ; P1-71
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$d4,$30
 	db	$70
 	db	$a0
@@ -242,7 +242,7 @@ Music_Credits_Ch1:
 	db	$00
 	db	$70
 	db	$00
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$a0
 	db	$00
 	db	$a0
@@ -251,12 +251,12 @@ Music_Credits_Ch1:
 	db	$00
 ; P1-72
 	db	$da,$00,$a0
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$d5,$80
 	db	$02
 	db	$50
 	db	$02
-	db	$d8,$88,$a7
+	db	$d8,$8,$a7
 	db	$d6,$80
 	db	$00
 	db	$80
@@ -270,7 +270,7 @@ Music_Credits_Ch1:
 	db	$20
 	db	$00
 ; P1-73
-	db	$d8,$8c,$a7
+	db	$d8,$c,$a7
 	db	$d5,$30
 	db	$06
 	db	$dc,$c7
@@ -519,7 +519,7 @@ Music_Credits_Ch2:
 ; P2-1
 	db	$db,$01
 	db	$e1,$14,$23
-	db	$d8,$8c,$2f
+	db	$d8,$c,$2f
 ; P2-2
 ;	db	$ef,$f0
 	db	$d3,$8f
@@ -529,7 +529,7 @@ Music_Credits_Ch2:
 	db	$d4,$83
 	db	$63
 ; P2-4
-	db	$d8,$86,$c7
+	db	$d8,$6,$c7
 	db	$fe
 	dw	@mero4_10
 ; P2-11
@@ -572,11 +572,11 @@ Music_Credits_Ch2:
 ; P2-26
 	db	$70
 	db	$8e
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$d2,$5e
 ; P2-27 -tie
 ;		tempo 7 		e
-	db	$d8,$86,$c7
+	db	$d8,$6,$c7
 	db	$80
 	db	$90
 	db	$a1
@@ -596,7 +596,7 @@ Music_Credits_Ch2:
 	db	$d3,$c7
 	db	$d2,$1b
 ; P2-34
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$3f
 ; P2-35
 	db	$87
@@ -614,7 +614,7 @@ Music_Credits_Ch2:
 	db	$d4,$a3
 	db	$83
 ;; P2-37
-	db	$d8,$86,$c7
+	db	$d8,$6,$c7
 	db	$d9,$02
 ;;		call @mero4_10
 ;; P2-44
@@ -635,11 +635,11 @@ Music_Credits_Ch2:
 	db	$27
 	db	$3b
 ; P2-59
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$5f
 ; P2-60
 	db	$ad
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$d5,$30
 	db	$30
 	db	$30
@@ -678,7 +678,7 @@ Music_Credits_Ch2:
 	db	$72
 	db	$02
 	db	$72
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$d5,$70
 	db	$00
 	db	$d6,$71
@@ -710,7 +710,7 @@ Music_Credits_Ch2:
 	db	$d3,$20
 ; P2-69
 	db	$d2,$3b
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$10
 	db	$00
 	db	$10
@@ -718,9 +718,9 @@ Music_Credits_Ch2:
 	db	$20
 	db	$00
 ; P2-70
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$3b
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$10
 	db	$00
 	db	$10
@@ -729,14 +729,14 @@ Music_Credits_Ch2:
 	db	$00
 ; P2-71
 	db	$38
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$d3,$70
 	db	$a0
 	db	$d2,$30
 	db	$00
 	db	$30
 	db	$00
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$30
 	db	$00
 	db	$30
@@ -744,12 +744,12 @@ Music_Credits_Ch2:
 	db	$30
 	db	$00
 ; P2-72
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$10
 	db	$02
 	db	$10
 	db	$02
-	db	$d8,$88,$c7
+	db	$d8,$8,$c7
 	db	$10
 	db	$00
 	db	$10
@@ -763,7 +763,7 @@ Music_Credits_Ch2:
 	db	$20
 	db	$00
 ; P2-73
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$30
 	db	$06
 	db	$dc,$c8
@@ -893,7 +893,7 @@ Music_Credits_Ch2:
 	db	$d2,$17
 	db	$57
 ; P2-21
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$3f
 ; P2-22
 	db	$d3,$83
@@ -902,15 +902,15 @@ Music_Credits_Ch2:
 	db	$d2,$33
 ; P2-23
 	db	$19
-	db	$d8,$86,$c7
+	db	$d8,$6,$c7
 	db	$d3,$c0
 	db	$d2,$12
 	db	$d3,$c3
 	db	$d2,$13
 ; P2-24
-	db	$d8,$8c,$c7
+	db	$d8,$c,$c7
 	db	$d3,$a9
-	db	$d8,$86,$c7
+	db	$d8,$6,$c7
 	db	$90
 	db	$a2
 	db	$c3

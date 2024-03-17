@@ -19,7 +19,7 @@ Music_Route34_Ch1:
 	db	$e1,$10,$15
 ;	db	$ef,$0f
 ; P1-1
-	db	$d8,$8c,$b3
+	db	$d8,$c,$b3
 ; P1-2
 	db	$d4,$13
 	db	$15
@@ -169,7 +169,7 @@ Music_Route34_Ch2:
 	db	$e1,$10,$36
 ;	db	$ef,$f0
 ; P2-1
-	db	$d8,$8c,$c2
+	db	$d8,$c,$c2
 ; P2-2
 	db	$d4,$61
 	db	$10

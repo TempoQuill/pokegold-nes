@@ -13,7 +13,7 @@ Music_Route1_Ch1:
 ; P1-1
 	db	$e1,$16,$11
 	db	$db,$03
-	db	$d8,$8c,$83
+	db	$d8,$c,$83
 	db	$d3,$30
 	db	$50
 ; P1-2
@@ -134,11 +134,11 @@ Music_Route1_Ch1:
 	db	$70
 ; P1-13
 	db	$83
-	db	$d8,$88,$83
+	db	$d8,$8,$83
 	db	$a0
 	db	$c0
 	db	$a0
-	db	$d8,$8c,$83
+	db	$d8,$c,$83
 	db	$80
 	db	$50
 	db	$71
@@ -193,7 +193,7 @@ Music_Route1_Ch2:
 ; P2-1
 	db	$e1,$12,$22
 	db	$db,$02
-	db	$d8,$8c,$92
+	db	$d8,$c,$92
 	db	$d3,$70
 	db	$80
 ; P2-2
@@ -270,11 +270,11 @@ Music_Route1_Ch2:
 	db	$a1
 ; P2-13
 	db	$d3,$c3
-	db	$d8,$88,$92
+	db	$d8,$8,$92
 	db	$20
 	db	$30
 	db	$20
-	db	$d8,$8c,$92
+	db	$d8,$c,$92
 	db	$d4,$c0
 	db	$d3,$20
 	db	$31
@@ -293,11 +293,11 @@ Music_Route1_Ch2:
 ; P2-16
 	db	$fe
 	dw	@sub3
-	db	$d8,$88,$92
+	db	$d8,$8,$92
 	db	$20
 	db	$30
 	db	$20
-	db	$d8,$8c,$92
+	db	$d8,$c,$92
 	db	$d3,$c0
 	db	$d2,$20
 	db	$31

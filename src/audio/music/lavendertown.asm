@@ -15,7 +15,7 @@ Music_LavenderTown_Ch1:
 ;	db	$ef,$0f
 	db	$e1,$06,$24
 	db	$db,$00
-	db	$d8,$8c,$b3
+	db	$d8,$c,$b3
 ; P1-2
 	db	$0f
 ; P1-3
@@ -275,7 +275,7 @@ Music_LavenderTown_Ch2:
 ;	db	$ef,$ff
 ; P2-2
 @mero2:
-	db	$d8,$8c,$a3
+	db	$d8,$c,$a3
 	db	$d2,$11
 	db	$dc,$63
 	db	$11

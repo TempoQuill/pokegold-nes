@@ -15,7 +15,7 @@ Music_RivalBattle_Ch1:
 	db	$e1,$8,$15
 ;	db	$ef,$f0
 ; P1-1
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 	db	$d4,$71
 	db	$b3
 	db	$dc,$b7
@@ -289,7 +289,7 @@ Music_RivalBattle_Ch2:
 	db	$e1,$8,$36
 	db	$e6,$00,$01
 ; P2-1
-	db	$d8,$8c,$c2
+	db	$d8,$c,$c2
 	db	$d3,$50
 	db	$40
 	db	$30

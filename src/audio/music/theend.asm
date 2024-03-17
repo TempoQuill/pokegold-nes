@@ -12,7 +12,7 @@ Music_TheEnd_Ch1:
 ; P1-1
 	db	$d9,$03
 	db	$db,$02
-	db	$d8,$8c,$93
+	db	$d8,$c,$93
 	db	$07
 ; P1-2
 @mainloop:
@@ -126,7 +126,7 @@ Music_TheEnd_Ch2:
 ; P2-1
 	db	$d9,$03
 	db	$db,$02
-	db	$d8,$8c,$a3
+	db	$d8,$c,$a3
 	db	$d2,$51
 	db	$dc,$73
 	db	$51

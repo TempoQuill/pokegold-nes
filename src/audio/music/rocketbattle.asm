@@ -15,7 +15,7 @@ Music_RocketBattle_Ch1:
 	db	$e1,$10,$15
 ;	db	$ef,$f0
 ; P1-1
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 	db	$d3,$50
 	db	$40
 	db	$30
@@ -399,7 +399,7 @@ Music_RocketBattle_Ch2:
 	db	$e6,$00,$01
 ;	db	$ef,$0f
 ; P2-1
-	db	$d8,$8c,$b2
+	db	$d8,$c,$b2
 	db	$d3,$a3
 	db	$b3
 	db	$c3

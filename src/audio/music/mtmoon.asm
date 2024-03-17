@@ -14,7 +14,7 @@ Music_MtMoon_Ch1:
 	db	$db,$02
 	db	$e6,$00,$01
 	db	$e1,$08,$14
-	db	$d8,$8c,$45
+	db	$d8,$c,$45
 	db	$01
 	db	$fd,0
 	dw	DUNloop
@@ -23,7 +23,7 @@ Music_MtMoon_Ch2:
 ;----------------------------------------
 	db	$e1,$0b,$15
 	db	$db,$02
-	db	$d8,$8c,$84
+	db	$d8,$c,$84
 DUNloop:
 @mainloop:
 ; P2-1

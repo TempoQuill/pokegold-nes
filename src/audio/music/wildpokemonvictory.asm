@@ -13,7 +13,7 @@ Music_WildPokemonVictory_Ch1:
 	db	$db,$03
 	db	$e6,$00,$01
 ; P1-2
-	db	$d8,$8c,$b1
+	db	$d8,$c,$b1
 	db	$d4,$c0
 	db	$a0
 	db	$90
@@ -79,7 +79,7 @@ Music_WildPokemonVictory_Ch2:
 	db	$e1,$12,$24
 	db	$db,$02
 ; P2-2
-	db	$d8,$8c,$d1
+	db	$d8,$c,$d1
 	db	$d3,$50
 	db	$70
 	db	$90
@@ -212,12 +212,12 @@ Music_SuccessfulCapture_Ch1:
 ;	db	$e5,$77
 	db	$db,$03
 	db	$e6,$00,$01
-	db	$d8,$8c,$a1
+	db	$d8,$c,$a1
 	db	$fc
 	dw	Music_WildPokemonVictory_Ch1_start
 Music_SuccessfulCapture_Ch2:
 	db	$e1,$12,$24
-	db	$d8,$8c,$c1
+	db	$d8,$c,$c1
 	db	$db,$02
 	db	$fc
 	dw	Music_WildPokemonVictory_Ch2_start

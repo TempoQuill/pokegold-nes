@@ -14,7 +14,7 @@ Music_GoldenrodCity_Ch1:
 ;----------------------------------------
 	db	$da,$00,$b0
 ; P1-1
-	db	$d8,$8c,$97
+	db	$d8,$c,$97
 ; P1-2
 	db	$0f
 ; P1-3
@@ -173,7 +173,7 @@ Music_GoldenrodCity_Ch2:
 ; P2-1
 	db	$e1,$12,$23
 	db	$db,$02
-	db	$d8,$8c,$97
+	db	$d8,$c,$97
 ; P2-2
 @mainloop:
 	db	$dc,$97

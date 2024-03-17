@@ -15,7 +15,7 @@ Music_Bicycle_Ch1:
 	db	$e6,$00,$01
 	db	$e1,$8,$15
 ; P1-1
-	db	$d8,$8c,$b4
+	db	$d8,$c,$b4
 	db	$d4,$c5
 	db	$a5
 	db	$83
@@ -171,7 +171,7 @@ Music_Bicycle_Ch2:
 	db	$db,$02
 	db	$e1,$10,$24
 ; P2-1
-	db	$d8,$8c,$c6
+	db	$d8,$c,$c6
 	db	$d3,$35
 	db	$15
 	db	$d4,$c3

@@ -18,7 +18,7 @@ SFX_LevelUp_Ch6:
 	db	$db,$02
 ;		vib 6 26
 ; P1-2
-	db	$d8,$88,$b1
+	db	$d8,$8,$b1
 	db	$d4,$c1
 	db	$c1
 	db	$c1
@@ -32,7 +32,7 @@ SFX_LevelUp_Ch7:
 ; P2-2
 ;		vib 8 27
 	db	$db,$02
-	db	$d8,$88,$c1
+	db	$d8,$8,$c1
 	db	$d3,$51
 	db	$51
 	db	$51
@@ -92,7 +92,7 @@ SFX_Item_Ch6:
 	db	$e1,$8,$27
 	db	$db,$02
 ; P1-2
-	db	$d8,$88,$b2
+	db	$d8,$8,$b2
 	db	$d3,$15
 	db	$11
 	db	$61
@@ -111,7 +111,7 @@ SFX_Item_Ch7:
 	db	$e1,$8,$27
 	db	$db,$02
 ; P2-2
-	db	$d8,$88,$c3
+	db	$d8,$8,$c3
 	db	$d3,$a5
 	db	$a1
 	db	$a1
@@ -188,7 +188,7 @@ SFX_Evolution_Ch6:
 	db	$e1,$8,$27
 	db	$db,$02
 ; P1-2
-	db	$d8,$88,$b3
+	db	$d8,$8,$b3
 	db	$d3,$15
 	db	$d4,$a5
 	db	$6b
@@ -212,7 +212,7 @@ SFX_Evolution_Ch7:
 	db	$db,$02
 	db	$e1,$8,$27
 ; P2-2
-	db	$d8,$88,$c3
+	db	$d8,$8,$c3
 	db	$d3,$a5
 	db	$65
 	db	$1b
@@ -290,7 +290,7 @@ Sfx_DexFanfare2049_Ch6:
 	db	$da,$00,$68
 	db	$db,$02
 ; P1-2
-	db	$d8,$8c,$88
+	db	$d8,$c,$88
 	db	$d4,$a3
 	db	$01
 	db	$a0
@@ -314,7 +314,7 @@ Sfx_DexFanfare2049_Ch7:
 	db	$df
 	db	$db,$02
 ; P2-2
-	db	$d8,$8c,$c1
+	db	$d8,$c,$c1
 	db	$d2,$61
 	db	$51
 	db	$31
@@ -395,7 +395,7 @@ Sfx_DexFanfare80109_Ch6:
 	db	$e1,$8,$27
 	db	$db,$02
 ; P1-2
-	db	$d8,$8c,$b1
+	db	$d8,$c,$b1
 	db	$d3,$41
 	db	$40
 	db	$40
@@ -420,7 +420,7 @@ Sfx_DexFanfare80109_Ch7:
 	db	$e1,$8,$27
 	db	$db,$02
 ; P2-2
-	db	$d8,$8c,$c1
+	db	$d8,$c,$c1
 	db	$d3,$81
 	db	$80
 	db	$80

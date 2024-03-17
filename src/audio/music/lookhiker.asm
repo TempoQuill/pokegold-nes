@@ -17,7 +17,7 @@ Music_LookHiker_Ch1:
 	db	$e1,$12,$24
 	db	$db,$02
 ; P1-1
-	db	$d8,$c,$16
+	db	$d8,$c,$60
 	db	$d4,$71
 	db	$61
 ; P1-2
@@ -44,7 +44,7 @@ Music_LookHiker_Ch2:
 ;----------------------------------------
 ; P2-1
 	db	$db,$00
-	db	$d8,$8c,$a1
+	db	$d8,$c,$a1
 	db	$03
 ; P2-2
 	db	$d6,$c0
@@ -56,7 +56,7 @@ Music_LookHiker_Ch2:
 	db	$70
 	db	$30
 ; P2-3
-	db	$d8,$8c,$a1
+	db	$d8,$c,$a1
 @mainloop:
 	db	$d6,$c0
 	db	$c1

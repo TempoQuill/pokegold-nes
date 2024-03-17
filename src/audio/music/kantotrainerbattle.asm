@@ -13,7 +13,7 @@ Music_KantoTrainerBattle_Ch1:
 ;	db	$e5,$77
 ; P1-1
 	db	$d9,$1b
-	db	$d8,$8c,$b3
+	db	$d8,$c,$b3
 	db	$e1,$12,$24
 	db	$db,$01
 ; P1-2
@@ -120,7 +120,7 @@ Music_KantoTrainerBattle_Ch1:
 	db	$61
 	db	$71
 @mainloop:
-	db	$d8,$8c,$b7
+	db	$d8,$c,$b7
 ; P1-10
 	db	$43
 	db	$01
@@ -257,7 +257,7 @@ Music_KantoTrainerBattle_Ch1:
 	db	$02
 	db	$43
 ; P1-27
-	db	$d8,$86,$67
+	db	$d8,$6,$67
 	db	$40
 	db	$00
 	db	$40
@@ -442,7 +442,7 @@ Music_KantoTrainerBattle_Ch2:
 	db	$d9,$1b
 	db	$e1,$06,$36
 	db	$db,$01
-	db	$d8,$8c,$d1
+	db	$d8,$c,$d1
 ; P2-2
 	db	$d3,$b3
 	db	$b3
@@ -511,7 +511,7 @@ Music_KantoTrainerBattle_Ch2:
 	db	$60
 ; P2-10
 @mainloop:
-	db	$d8,$8c,$d7
+	db	$d8,$c,$d7
 	db	$d5,$10
 	db	$10
 	db	$d4,$10
@@ -731,13 +731,13 @@ Music_KantoTrainerBattle_Ch2:
 	db	$d4,$93
 ; P2-26
 	db	$e1,$12,$24
-	db	$d8,$8c,$78
+	db	$d8,$c,$78
 	db	$d3,$8f
 ; P2-27 -tie
 	db	$dc,$77
 	db	$8f
 ; P2-28
-	db	$d8,$86,$88
+	db	$d8,$6,$88
 	db	$9f
 ;      -tie
 	db	$dc,$87
@@ -753,7 +753,7 @@ Music_KantoTrainerBattle_Ch2:
 	db	$65
 	db	$01
 ; P2-30
-	db	$d8,$8c,$98
+	db	$d8,$c,$98
 	db	$af
 ; P2-31 -tie
 	db	$dc,$97
@@ -788,7 +788,7 @@ Music_KantoTrainerBattle_Ch2:
 	db	$00
 	db	$d4,$41
 	db	$01
-	db	$d8,$86,$d7
+	db	$d8,$6,$d7
 	db	$d5,$10
 	db	$00
 	db	$10
