@@ -7,359 +7,554 @@
 
 ; engine/battle/core.asm
 DoBattle:
-	lda #0
-	sta wBattleParticipantsNotFainted
-	sta wBattleParticipantsIncludingFainted
-	sta wBattlePlayerAction
-	sta wBattleEnded
-	lda #1 ; there's no "inc a" on the 6502, so this is the best way
+	LDA #0
+	STA wBattleParticipantsNotFainted
+	STA wBattleParticipantsIncludingFainted
+	STA wBattlePlayerAction
+	STA wBattleEnded
+	LDA #1 ; there's no "inc a" on the 6502, so this is the best way
 	; (this takes 2 bytes, as opposed to "clc / adc #1", which takes 3)
-	sta wBattleHasJustStarted
+	STA wBattleHasJustStarted
 	; todo: 16-bit register pairs and their translation to the 6502
-	; ld hl, wOTPartyMon1HP
-	; ld bc, PARTYMON_STRUCT_LENGTH - 1
-	; ld d, BATTLEACTION_SWITCH1 - 1
+	LDA #>(wOTPartyMon1 + MON_HP)
+	STA zMonPointer + 1
+	LDA #<(wOTPartyMon1 + MON_HP)
+	STA zMonPointer
+	LDX #BATTLEACTION_SWITCH1 - 1
+@loop:
 ; .loop
-	; inc d
-	; ld a, [hli]
-	; or [hl]
-	; jr nz, .alive
-	; add hl, bc
-	; jr .loop
+	INX
+	LDY #0
+	LDA (zMonPointer), Y
+	INY
+	ORA (zMonPointer), Y
+	BNE @alive
+	LDA zMonPointer
+	CLC
+	ADC #PARTYMON_STRUCT_LENGTH
+	STA zMonPointer
+	LDA zMonPointer + 1
+	ADC #0
+	STA zMonPointer + 1
+	BPL @loop
 @alive:
-	stx wBattleAction ; assuming d is x
+	STX wBattleAction ; assuming d is x
 	; wLinkMode check
 	; hSerialConnectionStatus check
 @not_linked:
-	ldx wBattleMode
-	dex
-	beq @wild
-	lda #0
-	sta wEnemySwitchMonIndex
-	jsr NewEnemyMonStatus
-	jsr ResetEnemyStatLevels
-	jsr BreakAttraction
-	jsr EnemySwitch
+	LDX wBattleMode
+	DEX
+	BEQ @wild
+	LDA #0
+	STA wEnemySwitchMonIndex
+	JSR NewEnemyMonStatus
+	JSR ResetEnemyStatLevels
+	JSR BreakAttraction
+	JSR EnemySwitch
 	
 @wild:
-	ldx #40
-	jsr DelayFrames
-	
+	LDX #40
+	JSR DelayFrames
+
 @player_2:
-	jsr LoadTilemapToTempTilemap
-	jsr CheckPlayerPartyForFitMon
-	beq @lostbattle
-	call SafeLoadTempTilemapToTilemap
-	lda wBattleType
-	cmp #BATTLETYPE_DEBUG
-	beq @tutorial_debug
-	cmp #BATTLETYPE_TUTORIAL
-	beq @tutorial_debug
-	lda #0
-	sta wCurPartyMon
+	JSR LoadTilemapToTempTilemap
+	JSR CheckPlayerPartyForFitMon
+	BEQ @lostbattle
+	JSR SafeLoadTempTilemapToTilemap
+	LDA wBattleType
+	CMP #BATTLETYPE_DEBUG
+	BEQ @tutorial_debug
+	CMP #BATTLETYPE_TUTORIAL
+	BEQ @tutorial_debug
+	LDA #0
+	STA wCurPartyMon
 @loop2:
-	jsr CheckIfCurPartyMonIsFitToFight
-	bne @alive2
-	inc wCurPartyMon
-	jmp @loop2
+	JSR CheckIfCurPartyMonIsFitToFight
+	BNE @alive2
+	INC wCurPartyMon
+	JMP @loop2
 	
 @alive2:
-	lda wCurBattleMon
-	sta wLastPlayerMon
-	lda wCurPartyMon
-	sta wCurBattleMon
-	tax
-	inx
-	lda wPartySpecies,x
-	sta wCurPartySpecies
-	sta wTempBattleMonSpecies
+	LDA wCurBattleMon
+	STA wLastPlayerMon
+	LDA wCurPartyMon
+	STA wCurBattleMon
+	TAX
+	INX
+	LDA wPartySpecies, X
+	STA wCurPartySpecies
+	STA wTempBattleMonSpecies
 	; todo: hlcoord 1, 5
-	lda #9
-	jsr SlideBattlePicOut
-	jsr LoadTilemapToTempTilemap
-	jsr ResetBattleParticipants
-	jsr InitBattleMon
-	jsr ResetPlayerStatLevels
-	jsr SendOutMonText
-	jsr NewBattleMonStatus
-	jsr BreakAttraction
-	jsr SendOutPlayerMon
-	jsr EmptyBattleTextbox
-	jsr LoadTilemapToTempTilemap
-	jsr SetPlayerTurn
-	jsr SpikesDamage
+	OGT 2, 1, 5
+	LDA #9
+	JSR SlideBattlePicOut
+	JSR LoadTilemapToTempTilemap
+	JSR ResetBattleParticipants
+	JSR InitBattleMon
+	JSR ResetPlayerStatLevels
+	JSR SendOutMonText
+	JSR NewBattleMonStatus
+	JSR BreakAttraction
+	JSR SendOutPlayerMon
+	JSR EmptyBattleTextbox
+	JSR LoadTilemapToTempTilemap
+	JSR SetPlayerTurn
+	JSR SpikesDamage
 	; wLinkMode check
 	; hSerialConnectionStatus check
-	lda #0
-	sta wEnemySwitchMonIndex
-	jsr NewEnemyMonStatus
-	jsr ResetEnemyStatLevels
-	jsr BreakAttraction
-	jsr EnemySwitch
-	jsr SetEnemyTurn
-	jsr SpikesDamage
-	
-@not_linked_2:		jmp BattleTurn
-
-@tutorial_debug:	jmp BattleMenu
-	
-@lostbattle:		jmp LostBattle ; there's no absolute branches on 6502, so this is the best we can do
+	LDA #0
+	STA wEnemySwitchMonIndex
+	JSR NewEnemyMonStatus
+	JSR ResetEnemyStatLevels
+	JSR BreakAttraction
+	JSR EnemySwitch
+	JSR SetEnemyTurn
+	JSR SpikesDamage
+@not_linked_2:		JMP BattleTurn
+@tutorial_debug:	JMP BattleMenu
+@lostbattle:		JMP LostBattle ; there's no absolute branches on 6502, so this is the best we can do
 
 WildFled_EnemyFled_LinkBattleCanceled:
-	clc
-	jsr SafeLoadTempTilemapToTilemap
-	lda wBattleResult
-	and #BATTLERESULT_BITMASK
-	adc #DRAW
-	sta wBattleResult
+	CLC
+	JSR SafeLoadTempTilemapToTilemap
+	LDA wBattleResult
+	AND #BATTLERESULT_BITMASK
+	ADC #DRAW
+	STA wBattleResult
 	; wLinkMode check
-	lda wBattleResult
-	and #BATTLERESULT_BITMASK
-	sta wBattleResult
+	LDA wBattleResult
+	AND #BATTLERESULT_BITMASK
+	STA wBattleResult
 	; todo: ld hl, BattleText_EnemyFled
-	
+	LDA #>BattleText_EnemyFled
+	STA zTextPointer + 1
+	LDA #<BattleText_EnemyFled
+	STA zTextPointer
 @print_text:
-	jsr StdBattleTextbox
-	jsr StopDangerSound
-	ldy #SFX_RUN
-	jsr PlaySFX
-	jsr SetPlayerTurn
-	farcall DummyPredef38 ; macro
-	lda #1
-	sta wBattleEnded
-	rts
+	JSR StdBattleTextbox
+	JSR StopDangerSound
+	LDY #SFX_RUN
+	JSR PlaySFX
+	JSR SetPlayerTurn
+;	farcall DummyPredef38 ; macro
+	LDA #1
+	STA wBattleEnded
+	RTS
 	
 BattleTurn:
-	jsr CheckContestBattleOver
-	bcs @quit
-	lda #0
-	sta wPlayerIsSwitching
-	sta wEnemyIsSwitching
-	sta wBattleHasJustStarted
-	sta wPlayerJustGotFrozen
-	sta wEnemyJustGotFrozen
-	sta wCurDamage
-	sta wCurDamage + 1
-	jsr HandleBerserkGene
-	jsr UpdateBattleMonInParty
-	farcall AIChooseMove ; macro
-	jsr CheckPlayerLockedIn
-	bcs @skip_iteration
+	JSR CheckContestBattleOver
+	BCS @quit
+	LDA #0
+	STA wPlayerIsSwitching
+	STA wEnemyIsSwitching
+	STA wBattleHasJustStarted
+	STA wPlayerJustGotFrozen
+	STA wEnemyJustGotFrozen
+	STA wCurDamage
+	STA wCurDamage + 1
+	JSR HandleBerserkGene
+	JSR UpdateBattleMonInParty
+;	farcall AIChooseMove ; macro
+	JSR CheckPlayerLockedIn
+	BCS @skip_iteration
 @loop1:
-	jsr BattleMenu
-	bcs @quit
-	lda wBattleEnded
-	bne @quit
-	lda wForcedSwitch
-	bne @quit
+	JSR BattleMenu
+	BCS @quit
+	LDA wBattleEnded
+	BNE @quit
+	LDA wForcedSwitch
+	BNE @quit
 @skip_iteration:
-	jsr ParsePlayerAction
-	bne @loop1
-	jsr EnemyTriesToFlee
-	bcs @quit
-	jsr DetermineMoveOrder
-	bcs @false
-	jsr Battle_EnemyFirst
-	jmp @proceed
+	JSR ParsePlayerAction
+	BNE @loop1
+	JSR EnemyTriesToFlee
+	BCS @quit
+	JSR DetermineMoveOrder
+	BCS @false
+	JSR Battle_EnemyFirst
+	JMP @proceed
 @false:
-	jsr Battle_PlayerFirst
+	JSR Battle_PlayerFirst
 @proceed:
-	lda wForcedSwitch
-	bne @quit
-	lda wBattleEnded
-	bne @quit
-	jsr HandleBetweenTurnEffects
-	lda wBattleEnded
-	bne @quit
-	jmp BattleTurn
-	
+	LDA wForcedSwitch
+	BNE @quit
+	LDA wBattleEnded
+	BNE @quit
+	JSR HandleBetweenTurnEffects
+	LDA wBattleEnded
+	JEQ BattleTurn
 @quit:
-	rts
+	RTS
 	
 HandleBetweenTurnEffects:
 	; hSerialConnectionStatus check
-	jsr CheckFaint_PlayerThenEnemy
-	bcs @quit
-	jsr HandleFutureSight
-	jsr CheckFaint_PlayerThenEnemy
-	bcs @quit
-	jsr HandleWeather
-	jsr CheckFaint_PlayerThenEnemy
-	bcs @quit
-	jsr HandleWrap
-	jsr CheckFaint_PlayerThenEnemy
-	bcs @quit
-	jsr HandlePerishSong
-	jsr CheckFaint_PlayerThenEnemy
-	bcs @quit
-	jmp @NoMoreFaintingConditions
+	JSR CheckFaint_PlayerThenEnemy
+	BCS @quit
+	JSR HandleFutureSight
+	JSR CheckFaint_PlayerThenEnemy
+	BCS @quit
+	JSR HandleWeather
+	JSR CheckFaint_PlayerThenEnemy
+	BCS @quit
+	JSR HandleWrap
+	JSR CheckFaint_PlayerThenEnemy
+	BCS @quit
+	JSR HandlePerishSong
+	JSR CheckFaint_PlayerThenEnemy
+	BCS @quit
+	JMP @NoMoreFaintingConditions
 @quit:
-	rts ; there's no "ret c"
+	RTS ; there's no "ret c"
 	
 @NoMoreFaintingConditions:
-	jsr HandleLeftovers
-	jsr HandleMysteryberry
-	jsr HandleDefrost
-	jsr HandleSafeguard
-	jsr HandleScreens
-	jsr HandleStatBoostingHeldItems
-	jsr HandleHealingItems
-	jsr UpdateBattleMonInParty
-	jsr LoadTilemapToTempTilemap
-	jmp HandleEncore
+	JSR HandleLeftovers
+	JSR HandleMysteryberry
+	JSR HandleDefrost
+	JSR HandleSafeguard
+	JSR HandleScreens
+	JSR HandleStatBoostingHeldItems
+	JSR HandleHealingItems
+	JSR UpdateBattleMonInParty
+	JSR LoadTilemapToTempTilemap
+	JMP HandleEncore
 	
 CheckFaint_PlayerThenEnemy:
-	jsr HasPlayerFainted
-	bne @PlayerNotFainted
-	jsr HandlePlayerMonFaint
-	lda wBattleEnded
-	bne @BattleIsOver
+	JSR HasPlayerFainted
+	BNE @PlayerNotFainted
+	JSR HandlePlayerMonFaint
+	LDA wBattleEnded
+	BNE @BattleIsOver
 
 @PlayerNotFainted:
-	jsr HasEnemyFainted
-	bne @BattleContinues
-	jsr HandleEnemyMonFaint
-	lda wBattleEnded
-	bne @BattleIsOver
+	JSR HasEnemyFainted
+	BNE @BattleContinues
+	JSR HandleEnemyMonFaint
+	LDA wBattleEnded
+	BNE @BattleIsOver
 	
 @BattleContinues:
-	clc
-	rts
+	CLC
+	RTS
 	
 @BattleIsOver:
-	sec
-	rts
+	SEC
+	RTS
 	
 ; nothing uses this at the moment, but something in the future might, so I'm keeping this
 CheckFaint_EnemyThenPlayer:
-	jsr HasEnemyFainted
-	bne @EnemyNotFainted
-	jsr HandleEnemyMonFaint
-	lda wBattleEnded
-	bne @BattleIsOver
+	JSR HasEnemyFainted
+	BNE @EnemyNotFainted
+	JSR HandleEnemyMonFaint
+	LDA wBattleEnded
+	BNE @BattleIsOver
 
 @EnemyNotFainted:
-	jsr HasPlayerFainted
-	bne @BattleContinues
-	jsr HandlePlayerMonFaint
-	lda wBattleEnded
-	bne @BattleIsOver
+	JSR HasPlayerFainted
+	BNE @BattleContinues
+	JSR HandlePlayerMonFaint
+	LDA wBattleEnded
+	BNE @BattleIsOver
 	
 @BattleContinues:
-	clc
-	rts
+	CLC
+	RTS
 	
 @BattleIsOver:
-	sec
-	rts
+	SEC
+	RTS
 	
 HandleBerserkGene:
 	; hSerialConnectionStatus check
-	jsr @player
-	jmp @enemy
+	JSR @player
+	JMP @enemy
 	
 @player:
-	jsr SetPlayerTurn
-	; todo:
-	; ld de, wPartyMon1Item
-	; ld a, [wCurBattleMon]
-	; ld b, a
-	jmp @go
+	JSR SetPlayerTurn
+	LDA #>wPartyMon1 + MON_ITEM
+	STA zMonPointer + 1
+	LDA #<wPartyMon1 + MON_ITEM
+	STA zMonPointer
+	LDA wCurBattleMon
+	JMP @go
 	
 @enemy:
-	jsr SetEnemyTurn
-	; todo:
-	; ld de, wOTPartyMon1Item
-	; ld a, [wCurOTMon]
-	; ld b, a
+	JSR SetEnemyTurn
+	LDA #>wOTPartyMon1 + MON_ITEM
+	STA zMonPointer + 1
+	LDA #<wOTPartyMon1 + MON_ITEM
+	STA zMonPointer
+	LDA wCurOTMon
 	
 @go:
-	tya
-	pha
-	txa
-	pha
-	farcall GetUserItem
-	; todo: ld a, [hl]
-	sec
-	sta wNamedObjectIndex
-	sbc #BERSERK_GENE
-	pha
-	tax
-	pha
-	tay
-	bne @end
-	; do we have enough registers? todo: 
-	; ld [hl], a
+	PHA
+;	farcall GetUserItem
+	LDY #0
+	LDA (zItemPointer), Y ; ld a, [hl]
+	SEC
+	STA wNamedObjectIndex
+	SBC #BERSERK_GENE
+	BNE @end1
+	STA (zItemPointer), Y
+	PLA
+	; anything hl now means zMonPointer
 	; ld h, d
 	; ld l, e
 	; ld a, b
-	jsr GetPartyLocation
-	lda #0
-	; todo: ld [hl], a
-	lda #BATTLE_VARS_SUBSTATUS3
-	jsr GetBattleVarAddr
-	pha
+	JSR GetPartyLocation
+	LDA #0
+	TAY
+	STA (zMonPointer), Y
+	LDA #BATTLE_VARS_SUBSTATUS3
+	JSR GetBattleVarAddr
+	PHA
 	; todo: set SUBSTATUS_CONFUSED, [hl]
-	lda #BATTLE_VARS_MOVE_ANIM
-	jsr GetBattleVarAddr
-	pha
-	txa
-	pha
-	lda #0
-	; todo: ld [hl], a
-	sta wAttackMissed
-	sta wEffectFailed
-	farcall BattleCommand_AttackUp2
-	pla
-	tax
-	pla
-	; todo: ld [hl], a
-	jsr GetItemName
-	; todo: ld hl, BattleText_UsersStringBuffer1Activated
-	jsr StdBattleTextbox
-	farcall BattleCommand_StatUpMessage
-	pla
-	and #SUBSTATUS_CONFUSED
-	bne @end
-	lda #0
-	sta wNumHits
-	; todo: ld de, ANIM_CONFUSED
-	jsr Call_PlayBattleAnim_OnlyIfVisible ; who named this??
-	jsr SwitchTurnCore
+	LDA (zMonPointer), Y
+	SSB SUBSTATUS_CONFUSED
+	STA (zMonPointer), Y
+	LDA #BATTLE_VARS_MOVE_ANIM
+	JSR GetBattleVarAddr
+	PHA
+	LDA #0
+	TAY
+	STA (zMonPointer), Y
+	STA wAttackMissed
+	STA wEffectFailed
+;	farcall BattleCommand_AttackUp2
+	PLA
+	STA (zMonPointer), Y
+	JSR GetItemName
+	LDA #<BattleText_UsersStringBuffer1Activated
+	STA zTextPointer + 1
+	LDA #<BattleText_UsersStringBuffer1Activated
+	STA zTextPointer
+	JSR StdBattleTextbox
+;	farcall BattleCommand_StatUpMessage
+	PLA
+	AND #SUBSTATUS_CONFUSED
+	BNE @end2
+	LDA #0
+	STA wNumHits
+	LDA #>ANIM_CONFUSED
+	STA zMovePointer + 1
+	LDA #<ANIM_CONFUSED
+	STA zMovePointer
+	JSR Call_PlayBattleAnim_OnlyIfVisible ; who named this??
+	JSR SwitchTurnCore
 	; todo: ld hl, BecameConfusedText
-	jmp StdBattleTextbox
-@end:
-	rts
+	LDA #>BecameConfusedText
+	STA zTextPointer + 1
+	LDA #<BecameConfusedText
+	STA zTextPointer
+	JMP StdBattleTextbox
+@end1:
+	PLA
+@end2:
+	RTS
 	
 EnemyTriesToFlee:
 	; wLinkMode check that makes me believe they just used a macro for it
-	lda wBattleAction
-	cmp #BATTLEACTION_FORFEIT
-	beq @forfeit
-	clc
-	rts
+	LDA wBattleAction
+	CMP #BATTLEACTION_FORFEIT
+	BEQ @forfeit
+	CLC
+	RTS
 @forfeit:
-	jsr WildFled_EnemyFled_LinkBattleCanceled
-	sec
-	rts
+	JSR WildFled_EnemyFled_LinkBattleCanceled
+	SEC
+	RTS
 	
 DetermineMoveOrder:
 	; wLinkMode check
-	lda wBattleAction
-	cmp #BATTLEACTION_STRUGGLE
-	beq @use_move
-	cmp #BATTLEACTION_SKIPTURN
-	beq @use_move
-	sec
-	sbc #BATTLEACTION_SWITCH1
-	bcs @use_move
-	lda wBattlePlayerAction
-	cmp #BATTLEPLAYERACTION_SWITCH
-	bne @switch
+	LDA wBattleAction
+	CMP #BATTLEACTION_STRUGGLE
+	BEQ @use_move
+	CMP #BATTLEACTION_SKIPTURN
+	BEQ @use_move
+	SEC
+	SBC #BATTLEACTION_SWITCH1
+	BCS @use_move
+	LDA wBattlePlayerAction
+	CMP #BATTLEPLAYERACTION_SWITCH
+	BNE @switch
 	; hSerialConnectionStatus check
-	jsr BattleRandom
-	cmp 50 percent + 1 ; does ca65 support doing this?
-	bcs @player_first
-	jmp @enemy_first
+	JSR BattleRandom
+	BPL +e
+	JMP @player_first
++e	JMP @enemy_first
+@switch:
+;	farcall AI_Switch
+	JSR SetEnemyTurn
+	JSR SpikesDamage
+	JMP @enemy_first
+@UseMove:
+	LDA wBattlePlayerAction
+	BEQ +
+	JMP @player_first
++	JSR CompareMovePriority
+	BEQ @equal_priority
+	BCC +e
+	JMP @player_first
++e	JMP @enemy_first
+
+@equal_priority:
+	JSR SetPlayerTurn
+;	farcall GetUserItem
+;	farcall GetOpponentItem
 	; wip
-	
+
+@player_first:
+@enemy_first:
+
+NewEnemyMonStatus:
+	LDA #0
+	RTS
+
+ResetEnemyStatLevels:
+	RTS
+
+BreakAttraction:
+	RTS
+
+EnemySwitch:
+	RTS
+
+CheckPlayerPartyForFitMon:
+	RTS
+
+CheckIfCurPartyMonIsFitToFight:
+	RTS
+
+SlideBattlePicOut:
+	RTS
+
+ResetBattleParticipants:
+	RTS
+
+InitBattleMon:
+	RTS
+
+ResetPlayerStatLevels:
+	RTS
+
+SendOutMonText:
+	RTS
+
+NewBattleMonStatus:
+	RTS
+
+SendOutPlayerMon:
+	RTS
+
+EmptyBattleTextbox:
+	RTS
+
+SpikesDamage:
+	RTS
+
+BattleMenu:
+	RTS
+
+LostBattle:
+	RTS
+
+StopDangerSound:
+	RTS
+
+CheckContestBattleOver:
+	RTS
+
+UpdateBattleMonInParty:
+	RTS
+
+CheckPlayerLockedIn:
+	RTS
+
+ParsePlayerAction:
+	RTS
+
+Battle_EnemyFirst:
+	RTS
+
+Battle_PlayerFirst:
+	RTS
+
+HandleFutureSight:
+	RTS
+
+HandleWeather:
+	RTS
+
+HandleWrap:
+	RTS
+
+HandlePerishSong:
+	RTS
+
+HandleLeftovers:
+	RTS
+
+HandleMysteryberry:
+	RTS
+
+HandleDefrost:
+	RTS
+
+HandleSafeguard:
+	RTS
+
+HandleScreens:
+	RTS
+
+HandleStatBoostingHeldItems:
+	RTS
+
+HandleHealingItems:
+	RTS
+
+HandleEncore:
+	RTS
+
+HasPlayerFainted:
+	RTS
+
+HandlePlayerMonFaint:
+	RTS
+
+HasEnemyFainted:
+	RTS
+
+HandleEnemyMonFaint:
+	RTS
+
+CompareMovePriority:
+	LDA wCurPlayerMove
+	JSR GetMovePriority
+	STA iTempMovePriority
+	JSR GetMovePriority
+	CMP iTempMovePriority
+	RTS
+
+GetMovePriority:
+	STA iTempMove
+	LDY #0
+	CMP #VITAL_THROW
+	REQ
+	JSR GetMoveEffect
+	LDA #<MoveEffectPriorities
+	STA zMovePointer
+	LDA #>MoveEffectPriorities
+	STA zMovePointer + 1
+@loop:
+	LDA (zMovePointer), Y
+	INY
+	CMP iTempMove, Y
+	BEQ @done
+	INY
+	CMP #$ff
+	BNE @loop
+	LDA #BASE_PRIORITY
+	RTS
+@done:
+	LDA (zMovePointer), Y
+	RTS
+

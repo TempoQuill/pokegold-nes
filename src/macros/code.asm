@@ -215,3 +215,10 @@ m = $10
 	JSR label
 +b
 ENDM
+
+MACRO farcall bank, memory
+	LDX #>memory
+	LDY #<memory
+	LDA #bank
+	JSR Farcall
+ENDM

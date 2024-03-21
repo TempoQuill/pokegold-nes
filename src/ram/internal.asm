@@ -102,20 +102,22 @@ zMapMusic:
 	.dsb 1
 zDontPlayMusicOnReload:
 	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
+; pointers
+zMonPointer:
+	.dsb 2
+zOriginPointers:
+zOriginBC:
+	.dsb 2
+zOriginDE:
+	.dsb 2
+zOriginHL:
+	.dsb 2
+zTextPointer:
+	.dsb 2
+zItemPointer:
+	.dsb 2
+zMovePointer:
+	.dsb 2
 	.dsb 1
 	.dsb 1
 	.dsb 1
@@ -290,8 +292,10 @@ zSavedBank:
 zCueOffset:
 	.dsb 1
 zSfxQueue:
+zBattleTurn:
 	.dsb 1
 zCryQueue:
+zNMITimer:
 	.dsb 1
 zPlayerState:
 	.dsb 1
@@ -330,7 +334,12 @@ iChannel9:
 	.dsb 50
 iChannel10:
 	.dsb 50
-	.dsb $20b
+iChannelsEnd:
+
+iTempMovePriority:
+	.dsb 1
+iTempMove:
+	.dsb $20a
 iStringBufferFlag:
 	.dsb 1
 iStringBuffer:
