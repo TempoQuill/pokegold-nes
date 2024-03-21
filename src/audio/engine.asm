@@ -265,6 +265,11 @@ UpdateChannels:
 	TYA
 	TSB NOTE_NOISE_SAMPLING
 	BNE @Ch2_SMP
+IFDEF BUGFIXES
+	TYA
+	TSB NOTE_FREQ_OVERRIDE
+	BNE @Ch2_FREQ
+ENDIF
 	TYA
 	TSB NOTE_VIBRATO_OVERRIDE
 	BNE @Ch2_VIB
@@ -284,7 +289,12 @@ UpdateChannels:
 	STA rNR23
 	LDA zCurTrackPitchSweep
 	STA rNR21
+IFDEF BUGFIXES
+	CLV
+	BVC @Ch2_Check_Duty
+ELSE
 	RTS
+ENDIF
 
 @Ch2_VIB:
 	LDA zCurTrackRawPitch
@@ -333,6 +343,11 @@ UpdateChannels:
 	TYA
 	TSB NOTE_NOISE_SAMPLING
 	BNE @Ch3_SMP
+IFDEF BUGFIXES
+	TYA
+	TSB NOTE_FREQ_OVERRIDE
+	BNE @Ch3_FREQ
+ENDIF
 	TYA
 	TSB NOTE_VIBRATO_OVERRIDE
 	BNE @Ch3_VIB
@@ -994,9 +1009,13 @@ ReadNoiseSample:
 	INX
 	BEQ @Quit
 	AND #$0f
+IFNDEF BUGFIXES
 	TAX
 	INX
 	STX zNoiseSampleDelay
+ELSE
+	STA zNoiseSampleDelay
+ENDIF
 	LDA (zNoiseSampleAddress), Y
 	INY
 	STA zCurTrackVolumeEnvAndDuty
@@ -2154,9 +2173,6 @@ ENDIF
 
 _PlayCry:
 	JSR MusicOff
-	LDA #0
-	STA rNR11
-	STA rNR21
 	LDA #>Cries
 	STA zCurTrackAudioPointer + 1
 	LDA #<Cries
@@ -2283,6 +2299,8 @@ _PlaySFX:
 	BCC @ChsCleared
 	ASL A
 	STA iChannel10, Y
+	LDA #$0f
+	STA rMIX
 	LDA #0
 	STA rNR50
 	STA rNR52

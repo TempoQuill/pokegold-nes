@@ -14,6 +14,8 @@ BATTLE_SHIFT:	.dsb 1
 BATTLE_SCENE:
 .ende
 
+NUM_TM_HM = 50 + 7
+
 .enum 0
 BOX_COUNT:	.dsb 1
 BOX_SPECIES:	.dsb MONS_PER_BOX
