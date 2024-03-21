@@ -1923,6 +1923,9 @@ Music_RestartChannel:
 	STA zMusicID
 	LDY #CHANNEL_MUSIC_BANK
 	LDA (zCurTrackAudioPointer), Y
+IFNDEF NSF_FILE
+	ORA #$80
+ENDIF
 	STA zMusicBank
 	LDA zCurChannel
 	PHA
@@ -2110,6 +2113,9 @@ _PlayMusic:
 	LDY #0
 	LDA (zCurTrackAudioPointer), Y
 	INY
+IFNDEF NSF_FILE
+	ORA #$80
+ENDIF
 	STA zMusicBank
 	LDA (zCurTrackAudioPointer), Y
 	INY
@@ -2161,6 +2167,9 @@ _PlayCry:
 	LDY #0
 	LDA (zCurTrackAudioPointer), Y
 	INY
+IFNDEF NSF_FILE
+	ORA #$80
+ENDIF
 	STA zMusicBank
 	LDA (zCurTrackAudioPointer), Y
 	INY
@@ -2290,6 +2299,9 @@ _PlaySFX:
 	LDY #0
 	LDA (zCurTrackAudioPointer), Y
 	INY
+IFNDEF NSF_FILE
+	ORA #$80
+ENDIF
 	STA zMusicBank
 	LDA (zCurTrackAudioPointer), Y
 	INY
