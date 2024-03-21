@@ -307,7 +307,6 @@ HandleBerserkGene:
 	LDA #BATTLE_VARS_SUBSTATUS3
 	JSR GetBattleVarAddr
 	PHA
-	; todo: set SUBSTATUS_CONFUSED, [hl]
 	LDA (zMonPointer), Y
 	SSB SUBSTATUS_CONFUSED
 	STA (zMonPointer), Y
@@ -558,3 +557,8 @@ GetMovePriority:
 	LDA (zMovePointer), Y
 	RTS
 
+Call_PlayBattleAnim_OnlyIfVisible:
+	RTS
+
+SwitchTurnCore:
+	RTS

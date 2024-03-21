@@ -1,3 +1,4 @@
+; RAM_MAIN
 .enum $6000
 wBattleParticipantsNotFainted:
 	.dsb 1
@@ -78,6 +79,25 @@ wCurPlayerMove:
 	.dsb 1
 wCurEnemyMove::
 	.dsb 1
+wPartyCount:
+	.dsb 1
+wAttackMissed::
+	.dsb 1
+wEffectFailed::
+	.dsb 1
 
-wTilemap:
+wCurItem:
+	.dsb 1
+wNamedObjectIndex:
+	.dsb 1
+wWildMon:
+	.dsb 1
+wOptions:
+	.dsb 1
+.ende
+wTilemap = $7c00
+
+; RAM_SAVE
+.enum $6000
+sBox:
 .ende

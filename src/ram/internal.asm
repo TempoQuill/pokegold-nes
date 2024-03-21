@@ -118,33 +118,27 @@ zItemPointer:
 	.dsb 2
 zMovePointer:
 	.dsb 2
+zTemp16Bit1:
+	.dsb 2
+zTemp8Bit1:
 	.dsb 1
+; math RAM
+zMultiplicand:
+	.dsb 3
+zMultiplier:
 	.dsb 1
+zDividend:
+zProduct:
+	.dsb 4
+zDivisor:
 	.dsb 1
+zQuotient:
+	.dsb 4
+zRemainder:
 	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
+zScratchWord:
+	.dsb 6
+	.dsb 4
 	.dsb 1
 	.dsb 1
 	.dsb 1

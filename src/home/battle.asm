@@ -13,3 +13,7 @@ StdBattleTextbox:
 
 BattleRandom:
 	RTS
+
+GetPartyLocation:
+	RTS
+

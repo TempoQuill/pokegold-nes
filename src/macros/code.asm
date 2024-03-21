@@ -217,8 +217,14 @@ m = $10
 ENDM
 
 MACRO farcall bank, memory
+	PHA
+	PHX
+	PHY
 	LDX #>memory
 	LDY #<memory
 	LDA #bank
 	JSR Farcall
+	PLY
+	PLX
+	PLA
 ENDM

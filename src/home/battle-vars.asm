@@ -1,0 +1,2 @@
+GetBattleVarAddr:
+	RTS

@@ -21,3 +21,9 @@ ELSE
 	PRG_Home = 0
 ENDIF
 .ende
+
+; PRG_RAM
+.enum 0
+RAM_MAIN:	.dsb 1
+RAM_SAVE:	.dsb 1
+.ende
