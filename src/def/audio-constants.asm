@@ -218,6 +218,21 @@ DMC_TRANSACTION_END:
 DMC_SAVE:	.dsb $95
 DMC_SAVE_END:
 	.dsb 3
+DMC_THROW_BALL:	.dsb $47
+DMC_THROW_BALL_END:
+	.dsb 1
+DMC_BALL_POOF:	.dsb $47
+DMC_BALL_POOF_END:
+	.dsb 1
+DMC_FAINT:	.dsb $83
+DMC_FAINT_END:
+	.dsb 1
+.ende
+
+.enum $800
+DMC_SLOT_MACHINE_START:	.dsb $8b
+DMC_SLOT_MACHINE_START_END:
+	.dsb 1
 .ende
 
 C_R = $d5b

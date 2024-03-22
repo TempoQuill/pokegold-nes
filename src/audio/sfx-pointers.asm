@@ -39,4 +39,17 @@ SFX:
 	dba PRG_Audio, Sfx_Save
 	dba PRG_Audio, Sfx_Pokeflute
 	dba PRG_Audio, Sfx_ElevatorEnd
+	dba PRG_Audio, Sfx_ThrowBall
+	dba PRG_Audio, Sfx_BallPoof
+	dba PRG_Audio, Sfx_Unknown3A
+	dba PRG_Audio, Sfx_Run
+	dba PRG_Audio, Sfx_SlotMachineStart
+	dba PRG_Audio, Sfx_Fanfare
+	dba PRG_Audio, Sfx_Peck
+	dba PRG_Audio, Sfx_Kinesis
+	dba PRG_Audio, Sfx_Lick
+	dba PRG_Audio, Sfx_Pound
+	dba PRG_Audio, Sfx_MovePuzzlePiece
+	dba PRG_Audio, Sfx_CometPunch
+	dba PRG_Audio, Sfx_MegaPunch
 	dba PRG_Audio, Sfx_Elevator

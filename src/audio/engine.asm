@@ -1281,9 +1281,9 @@ ParseDPCM:
 TranslateCryNoise:
 ; CRY NOISE PARAMS
 ;	xxxxyzzz
-;	x - pitch offset 1
+;	x - divisor(power of 2)
 ;	y - periodic mode
-;	z - pitch offset 2
+;	z - divisor(multiple of 2, 1 if 0)
 	LDA zCurChannel
 	CMP #CHAN9
 	RNE
@@ -1291,26 +1291,26 @@ TranslateCryNoise:
 	LDA (zCurTrackAudioPointer), Y
 	TSB SOUND_CRY
 	REQ
-	LDA #0
-	STA zCurTrackRawPitch + 1
 	LDA zCurTrackRawPitch
-REPT 4
+	AND #$f0
 	LSR A
-ENDR
 	STA zCurTrackTemp
+	LDA zCurTrackRawPitch
+	AND #$07
+	ORA zCurTrackTemp
+	CMP #$51
+	BCS @Rest
+	STA zCurTrackTemp
+	TAY
 	LDA zCurTrackRawPitch
 	AND #$08
 REPT 4
 	ASL A
 ENDR
-	STA zCurTrackRawPitch + 1
-	LDA zCurTrackRawPitch
-	AND #$07
-	CLC
-	ADC zCurTrackTemp
-	CMP #$10
-	BCS @Rest
-	ORA zCurTrackRawPitch + 1
+	STA zCurTrackTemp
+	LDA CryNoise, Y
+	BMI @Rest
+	ORA zCurTrackTemp
 	STA zCurTrackRawPitch
 	RTS
 @Rest:
@@ -1927,12 +1927,12 @@ Music_TempoRelative:
 	JMP SetGlobalTempo
 
 Music_SFXPriorityOff:
-	LDA #1 << SOUND_PRIORITY_F
+	LDA #0
 	STA zSFXPriority
 	RTS
 
 Music_SFXPriorityOn:
-	LDA #0
+	LDA #1 << SOUND_PRIORITY_F
 	STA zSFXPriority
 	RTS
 
@@ -2251,7 +2251,7 @@ _PlaySFX:
 	ASL A
 	STA iChannel6, Y
 	LDA #0
-	LDX #10
+	LDX #$10
 	STX rNR10
 	STA rNR12
 	STA rNR13
@@ -2265,7 +2265,7 @@ _PlaySFX:
 	ASL A
 	STA iChannel7, Y
 	LDA #0
-	LDX #10
+	LDX #$10
 	STX rNR20
 	STA rNR22
 	STA rNR23
@@ -2289,7 +2289,7 @@ _PlaySFX:
 	ASL A
 	STA iChannel9, Y
 	LDA #0
-	LDX #10
+	LDX #$10
 	STX rNR40
 	STA rNR42
 	STA rNR43
@@ -2422,6 +2422,7 @@ ENDR
 	RTS
 
 .include "src/audio/notes.asm"
+.include "src/audio/cry-noise.asm"
 .include "src/audio/drumkits-dpcm.asm"
 .include "src/audio/drumkits-noise.asm"
 

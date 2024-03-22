@@ -197,13 +197,13 @@ Cry_Mantine:
 	db	008h
 	dw	Cry_Mantine_Ch9
 Cry_Tiger_Ch6:
-	pitch_sweep 15, -7
+	pitch_sweep 7, -7
 	duty_cycle_pattern 1, 2, 0, 3
 	square_note 1, 15, 8, 1528
 	square_note 8, 9, -7, 1240
 	square_note 6, 15, 8, 1476
 	square_note 20, 15, 2, 1396
-	pitch_sweep 8, 8
+	pitch_sweep 0, 1
 	sound_ret
 Cry_Tiger_Ch7:
 	duty_cycle_pattern 0, 3, 0, 3
@@ -255,9 +255,9 @@ Cry_Granbull_Ch6:
 	square_note 3, 15, 8, 1472
 	square_note 8, 12, 8, 1168
 	square_note 8, 12, 8, 1152
-	pitch_sweep 15, -6
+	pitch_sweep 7, -6
 	square_note 16, 12, 3, 1168
-	pitch_sweep 8, 8
+	pitch_sweep 0, 1
 	sound_ret
 Cry_Granbull_Ch7:
 	duty_cycle_pattern 0, 2, 0, 2
@@ -299,16 +299,16 @@ Cry_Slowking_Ch9:
 	sound_ret
 Cry_Mouse_Ch6:
 	duty_cycle 0
-	pitch_sweep 15, 7
+	pitch_sweep 7, 7
 	square_note 2, 15, 8, 1933
 	square_note 2, 15, 8, 1937
-	pitch_sweep 15, -7
+	pitch_sweep 7, -7
 	square_note 2, 15, 8, 1965
-	pitch_sweep 8, 8
+	pitch_sweep 0, 1
 	square_note 2, 15, 8, 1972
-	pitch_sweep 15, 7
+	pitch_sweep 7, 7
 	square_note 2, 15, 8, 1976
-	pitch_sweep 8, 8
+	pitch_sweep 0, 1
 	sound_ret
 Cry_Mouse_Ch7:
 	duty_cycle_pattern 0, 1, 0, 0
@@ -789,17 +789,17 @@ Cry_Roar60_Ch9:
 	sound_ret
 Cry_Cottoncat_Ch6:
 	duty_cycle_pattern 0, 3, 2, 1
-	pitch_sweep 15, -7
+	pitch_sweep 7, -7
 	square_note 2, 15, 8, 1824
 	square_note 2, 15, 8, 1831
 	square_note 2, 15, 8, 1920
-	pitch_sweep 8, 8
+	pitch_sweep 0, 1
 	square_note 2, 15, 8, 1913
 	square_note 4, 15, 8, 1856
 	square_note 4, 15, 8, 1852
-	pitch_sweep 15, -7
+	pitch_sweep 7, -7
 	square_note 8, 15, 1, 1847
-	pitch_sweep 8, 8
+	pitch_sweep 0, 1
 	sound_ret
 Cry_Cottoncat_Ch7:
 	duty_cycle_pattern 0, 2, 0, 2

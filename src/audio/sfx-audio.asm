@@ -384,5 +384,97 @@ Sfx_Elevator_Ch10:
 	dpcm_note 96, 0, 0
 	dpcm_note 83, 0, 0
 	sound_ret
+Sfx_ThrowBall:
+	db	009h
+	dw	Sfx_ThrowBall_Ch10
+Sfx_ThrowBall_Ch10:
+	dpcm_note 15, DMC_THROW_BALL, DMC_THROW_BALL_END
+	sound_ret
+Sfx_BallPoof:
+	db	009h
+	dw	Sfx_BallPoof_Ch10
+Sfx_BallPoof_Ch10:
+	dpcm_note 15, DMC_BALL_POOF, DMC_BALL_POOF_END
+	sound_ret
+Sfx_Unknown3A:
+	db	009h
+	dw	Sfx_Unknown3A_Ch10
+Sfx_Unknown3A_Ch10:
+	dpcm_note 29, DMC_FAINT, DMC_FAINT_END
+	sound_ret
+Sfx_Run:
+	db	008h
+	dw	Sfx_Run_Ch9
+Sfx_Run_Ch9:
+	noise_note 2, 6, 1, 5
+	noise_note 2, 10, 1, 8
+	noise_note 2, 12, 1, 8
+	noise_note 2, 5, 1, 2
+	noise_note 2, 15, 1, 8
+	noise_note 2, 4, 1, 2
+	noise_note 2, 12, 1, 8
+	noise_note 2, 3, 1, 2
+	noise_note 2, 8, 1, 8
+	noise_note 2, 3, 1, 2
+	noise_note 8, 4, 1, 8
+	sound_ret
+Sfx_SlotMachineStart:
+	db	009h
+	dw	Sfx_SlotMachineStart_Ch10
+Sfx_SlotMachineStart_Ch10:
+	dpcm_note 31, DMC_SLOT_MACHINE_START, DMC_SLOT_MACHINE_START_END
+	sound_ret
+Sfx_Peck:
+	db	008h
+	dw	Sfx_Peck_Ch9
+Sfx_Peck_Ch9:
+	noise_note 2, 10, 1, 3
+	sound_ret
+Sfx_Kinesis:
+	db	005h
+	dw	Sfx_Kinesis_Ch6
+Sfx_Kinesis_Ch6:
+	duty_cycle 1
+	pitch_sweep 2, -3
+	square_note 15, 15, 2, $794
+	pitch_sweep 0, 1
+	sound_ret
+Sfx_Lick:
+	db	005h
+	dw	Sfx_Lick_Ch6
+Sfx_Lick_Ch6:
+	duty_cycle 1
+	pitch_sweep 1, 3
+	square_note 15, 15, 2, $4a2
+	pitch_sweep 0, 1
+	sound_ret
+Sfx_Pound:
+	db	008h
+	dw	Sfx_Pound_Ch9
+Sfx_Pound_Ch9:
+	noise_note 2, 10, 1, 4
+	sound_ret
+Sfx_MovePuzzlePiece:
+	db	008h
+	dw	Sfx_MovePuzzlePiece_Ch9
+Sfx_MovePuzzlePiece_Ch9:
+	noise_note 8, 15, 1, 13
+	sound_ret
+Sfx_CometPunch:
+	db	008h
+	dw	Sfx_CometPunch_Ch9
+Sfx_CometPunch_Ch9:
+	noise_note 15, 8, -7, 2
+	noise_note 4, 15, -7, 3
+	noise_note 10, 15, 1, 13
+	sound_ret
+Sfx_MegaPunch:
+	db	008h
+	dw	Sfx_MegaPunch_Ch9
+Sfx_MegaPunch_Ch9:
+	noise_note 15, 8, -7, 9
+	noise_note 8, 15, 2, 10
+	noise_note 10, 15, 1, 13
+	sound_ret
 
 

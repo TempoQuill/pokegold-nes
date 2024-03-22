@@ -508,4 +508,102 @@ Sfx_Pokeflute_Ch8:
 	db	087h
 	db	00bh
 	db	0ffh
+Sfx_Fanfare:
+	db	045h
+	dw	Sfx_Fanfare_Ch6
+	db	006h
+	dw	Sfx_Fanfare_Ch7
+	db	007h
+	dw	Sfx_Fanfare_Ch8
+Sfx_Fanfare_Ch6:
+	db	$df
+	db	$ec
+	db	$da,$01,$00
+;	db	$e5,$77
+	db	$db,$03
+	db	$e6,$00,$01
+
+	db	$d8,$6,$b3
+	db	$d4,$63
+	db	$23
+	db	$73
+	db	$43
+
+	db	$93
+	db	$63
+	db	$b3
+	db	$73
+
+	db	$d8,$4,$b3
+	db	$b3
+	db	$c3
+	db	$d3,$13
+	db	$23
+	db	$43
+	db	$13
+
+	db	$d8,$4,$b6
+	db	$2b
+	db	$ed
+	db	$ff
+Sfx_Fanfare_Ch7:
+	db	$df
+	db	$db,$02
+
+	db	$d8,$6,$c4
+	db	$d3,$23
+	db	$d8,$4,$c4
+	db	$21
+	db	$d4,$b1
+	db	$d3,$21
+	db	$45
+	db	$41
+	db	$d4,$c1
+	db	$d3,$41
+
+	db	$65
+	db	$61
+	db	$21
+	db	$61
+	db	$75
+	db	$71
+	db	$41
+	db	$71
+
+	db	$23
+	db	$43
+	db	$53
+	db	$63
+	db	$73
+	db	$93
+
+	db	$d8,$4,$c6
+	db	$7b
+	db	$ff
+Sfx_Fanfare_Ch8:
+	db	$df
+
+	db	$d8,$6,$81
+	db	$d3,$b3
+	db	$03
+	db	$c3
+	db	$03
+
+	db	$d2,$23
+	db	$03
+	db	$43
+	db	$03
+
+	db	$d8,$4,$38
+	db	$63
+	db	$43
+	db	$23
+	db	$b3
+	db	$93
+	db	$63
+
+	db	$d8,$4,$54
+	db	$75
+	db	$ff
+
 
