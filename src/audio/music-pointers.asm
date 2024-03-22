@@ -20,19 +20,26 @@ Music:
 	dba PRG_Music4, Music_GameCorner
 	dba PRG_Music4, Music_Bicycle
 	dba PRG_Music1, Music_HallOfFame
-	dba PRG_Music2, Music_ViridianCity
-	dba PRG_Music2, Music_CeladonCity
+	dba PRG_Music1, Music_ViridianCity
+	dba PRG_Music1, Music_CeladonCity
 	dba PRG_Music3, Music_TrainerVictory
-	dba PRG_Music2, Music_WildPokemonVictory
-	dba PRG_Music2, Music_GymLeaderVictory
-	dba PRG_Music2, Music_MtMoonSquare
-	dba PRG_Music2, Music_Gym
-	dba PRG_Music2, Music_PalletTown
-	dba PRG_Music2, Music_ProfOaksPokemonTalk
+	dba PRG_Music1, Music_WildPokemonVictory
+	dba PRG_Music1, Music_GymLeaderVictory
+	dba PRG_Music1, Music_MtMoonSquare
+	dba PRG_Music1, Music_Gym
+	dba PRG_Music1, Music_PalletTown
+	dba PRG_Music1, Music_ProfOaksPokemonTalk
+	dba PRG_Music1, Music_ProfOak
+	dba PRG_Music1, Music_LookRival
+	dba PRG_Music1, Music_AfterTheRivalFight
+	dba PRG_Music1, Music_Surf
 	dba PRG_Music1, Music_Evolution
+	dba PRG_Music2, Music_NationalPark
 	dba PRG_Music3, Music_Credits
+	dba PRG_Music2, Music_AzaleaTown
 	dba PRG_Music2, Music_CherrygroveCity
 	dba PRG_Music2, Music_UnionCave
+	dba PRG_Music2, Music_JohtoWildBattle
 	dba PRG_Music4, Music_EcruteakCity
 	dba PRG_Music1, Music_VioletCity
 	dba PRG_Music3, Music_RivalBattle
@@ -42,7 +49,8 @@ Music:
 	dba PRG_Music2, Music_LookYoungster
 	dba PRG_Music3, Music_GoldenrodCity
 	dba PRG_Music2, Music_TinTower
-	dba PRG_Music2, Music_SuccessfulCapture
+	dba PRG_Music2, Music_JohtoWildBattleNight
+	dba PRG_Music1, Music_SuccessfulCapture
 	dba PRG_Music2, Music_PokemonMarch
 	dba PRG_Music1, Music_Printer
 	dba PRG_Music4, Music_TheEnd

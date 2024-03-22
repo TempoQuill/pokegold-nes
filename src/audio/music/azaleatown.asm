@@ -1,0 +1,690 @@
+Music_AzaleaTown:
+	db	080h
+	dw	Music_AzaleaTown_Ch1
+	db	001h
+	dw	Music_AzaleaTown_Ch2
+	db	002h
+	dw	Music_AzaleaTown_Ch3
+	db	003h
+	dw	Music_AzaleaTown_Ch4
+	db	004h
+	dw	Music_AzaleaTown_Ch5
+;----------------------------------------
+Music_AzaleaTown_Ch1:
+;----------------------------------------
+	db	$da,$00,$a0
+;	db	$e5,$77
+	db	$db,$02
+; P1-1
+;	db	$ef,$0f
+	db	$d8,$c,$a1
+	db	$01
+; P1-2-3
+@loop2:
+	db	$dc,$a1
+	db	$d4,$61
+	db	$dc,$61
+	db	$61
+	db	$61
+	db	$dc,$a1
+	db	$61
+	db	$dc,$61
+	db	$61
+	db	$61
+	db	$61
+	db	$61
+	db	$fd,2
+	dw	@loop2
+; P1-4-10
+@loop:
+	db	$fe
+	dw	@sub4
+; P1-11
+;	db	$ef,$f0
+	db	$dc,$a4
+	db	$91
+	db	$b0
+	db	$02
+	db	$d3,$13
+	db	$d8,$6,$a4
+	db	$80
+	db	$92
+	db	$73
+	db	$41
+	db	$01
+;	db	$ef,$0f
+; P1-12-18
+	db	$fe
+	dw	@sub4
+; P1-19
+;	db	$ef,$f0
+	db	$d8,$6,$a4
+	db	$43
+	db	$13
+	db	$02
+	db	$c0
+	db	$d3,$1b
+	db	$d4,$b3
+	db	$73
+;	db	$ef,$0f
+; P1-20
+	db	$fe
+	dw	@sub20
+; P1-21
+	db	$dc,$a3
+	db	$b3
+	db	$d3,$21
+	db	$01
+	db	$11
+	db	$01
+	db	$dc,$a1
+	db	$d4,$23
+	db	$a1
+	db	$0d
+; P1-22
+	db	$fe
+	dw	@sub20
+; P1-23
+	db	$dc,$a3
+	db	$d3,$10
+	db	$22
+	db	$61
+	db	$01
+	db	$21
+	db	$01
+	db	$dc,$a1
+	db	$d4,$83
+	db	$b3
+	db	$87
+	db	$dc,$a2
+	db	$b3
+; P1-24
+	db	$d3,$23
+	db	$d4,$b3
+	db	$73
+	db	$27
+	db	$73
+	db	$03
+	db	$b3
+; P1-25
+	db	$d3,$23
+	db	$d4,$b3
+	db	$83
+	db	$23
+	db	$03
+	db	$83
+	db	$03
+	db	$d3,$23
+; P1-26
+	db	$43
+	db	$23
+	db	$d4,$93
+	db	$43
+	db	$23
+	db	$d5,$93
+	db	$07
+; P1-27
+	db	$d8,$c,$2f
+	db	$d4,$9d
+	db	$01
+; P1-28
+	db	$fd,0
+	dw	@loop
+@sub4:
+	db	$d8,$c,$a1
+	db	$d3,$61
+	db	$dc,$61
+	db	$61
+	db	$61
+	db	$dc,$a1
+	db	$41
+	db	$dc,$61
+	db	$41
+	db	$41
+	db	$dc,$a1
+	db	$61
+	db	$dc,$61
+	db	$61
+; P1-13
+	db	$dc,$a1
+	db	$b1
+	db	$dc,$61
+	db	$b1
+	db	$b1
+	db	$dc,$a1
+	db	$91
+	db	$dc,$61
+	db	$91
+	db	$91
+	db	$dc,$a1
+	db	$a1
+	db	$dc,$61
+	db	$a1
+; P1-14
+	db	$dc,$a1
+	db	$11
+	db	$dc,$61
+	db	$11
+	db	$11
+	db	$dc,$a1
+	db	$21
+	db	$dc,$61
+	db	$21
+	db	$21
+	db	$21
+	db	$21
+; P1-15
+	db	$dc,$a1
+	db	$41
+	db	$dc,$61
+	db	$41
+	db	$41
+	db	$dc,$a1
+	db	$21
+	db	$dc,$61
+	db	$21
+	db	$21
+	db	$21
+	db	$01
+; P1-16
+	db	$dc,$a1
+	db	$d4,$61
+	db	$dc,$61
+	db	$61
+	db	$61
+	db	$dc,$a1
+	db	$71
+	db	$dc,$61
+	db	$71
+	db	$71
+	db	$71
+	db	$71
+; P1-17
+	db	$dc,$a1
+	db	$61
+	db	$dc,$61
+	db	$61
+	db	$61
+	db	$dc,$a1
+	db	$41
+	db	$dc,$61
+	db	$41
+	db	$41
+	db	$dc,$a1
+	db	$21
+	db	$dc,$61
+	db	$21
+; P1-18
+	db	$dc,$a1
+	db	$11
+	db	$dc,$61
+	db	$11
+	db	$11
+	db	$dc,$a1
+	db	$d5,$b1
+	db	$dc,$61
+	db	$b1
+	db	$b1
+	db	$dc,$a1
+	db	$d4,$21
+	db	$dc,$61
+	db	$21
+	db	$ff
+@sub20:
+	db	$dc,$61
+	db	$97
+	db	$97
+	db	$dc,$81
+	db	$a7
+	db	$dc,$a1
+	db	$a7
+	db	$ff
+;----------------------------------------
+Music_AzaleaTown_Ch2:
+;----------------------------------------
+	db	$e1,$12,$23
+	db	$db,$02
+; P2-1
+;	db	$ef,$f0
+	db	$d8,$c,$62
+	db	$00
+	db	$d3,$30
+; P2-2
+	db	$dc,$b1
+	db	$41
+	db	$dc,$71
+	db	$41
+	db	$41
+	db	$dc,$b1
+	db	$21
+	db	$dc,$71
+	db	$21
+	db	$21
+	db	$dc,$51
+	db	$21
+	db	$21
+; P2-3
+	db	$dc,$b1
+	db	$11
+	db	$dc,$71
+	db	$11
+	db	$11
+	db	$dc,$b1
+	db	$21
+	db	$dc,$71
+	db	$21
+	db	$21
+	db	$d8,$6,$b4
+	db	$66
+	db	$db,$01
+	db	$d2,$10
+; P2-4-10
+@loop:
+	db	$fe
+	dw	@melo4
+	db	$23
+; P2-11
+	db	$11
+	db	$20
+	db	$02
+	db	$d8,$6,$b4
+	db	$4a
+	db	$07
+	db	$db,$01
+	db	$d2,$10
+; P2-12
+	db	$fe
+	dw	@melo4
+	db	$01
+	db	$21
+; P2-19
+	db	$11
+	db	$d4,$91
+	db	$d8,$6,$b4
+	db	$02
+	db	$d3,$80
+	db	$9b
+	db	$73
+	db	$63
+; P2-20
+	db	$db,$00
+	db	$30
+	db	$42
+	db	$23
+	db	$11
+	db	$01
+	db	$93
+	db	$03
+	db	$73
+	db	$03
+	db	$63
+; P2-21
+	db	$43
+	db	$61
+	db	$01
+	db	$41
+	db	$01
+	db	$27
+	db	$0b
+; P2-22
+	db	$30
+	db	$42
+	db	$23
+	db	$11
+	db	$01
+	db	$93
+	db	$03
+	db	$a3
+	db	$03
+	db	$d2,$13
+; P2-23
+	db	$d3,$c0
+	db	$d2,$12
+	db	$21
+	db	$01
+	db	$11
+	db	$01
+	db	$d3,$63
+	db	$03
+	db	$43
+	db	$03
+	db	$23
+; P2-24
+	db	$db,$02
+	db	$63
+	db	$43
+	db	$23
+	db	$63
+	db	$03
+	db	$43
+	db	$03
+	db	$23
+; P2-25
+	db	$63
+	db	$43
+	db	$23
+	db	$63
+	db	$03
+	db	$b3
+	db	$03
+	db	$d2,$13
+; P2-26
+	db	$d8,$c,$b7
+	db	$d3,$9b
+	db	$43
+; P2-27
+	db	$dc,$1f
+	db	$1d
+	db	$d8,$6,$b4
+	db	$db,$01
+	db	$91
+	db	$d2,$11
+	db	$fd,0
+	dw	@loop
+@melo4:
+	db	$23
+	db	$d3,$91
+	db	$01
+	db	$d2,$11
+	db	$01
+	db	$27
+	db	$47
+	db	$61
+	db	$00
+	db	$80
+; P2-13
+	db	$9b
+	db	$61
+	db	$05
+	db	$47
+	db	$61
+	db	$00
+	db	$10
+; P2-14
+	db	$d8,$c,$a8
+	db	$e1,$00,$00
+	db	$27
+; P2-15 -tie
+	db	$dc,$a7
+	db	$e1,$12,$23
+	db	$2f
+	db	$03
+	db	$dc,$b4
+	db	$db,$02
+	db	$d4,$b1
+	db	$d3,$20
+	db	$00
+; P2-16
+	db	$77
+	db	$01
+	db	$71
+	db	$61
+	db	$40
+	db	$00
+; P2-17
+	db	$25
+	db	$11
+	db	$01
+	db	$13
+	db	$20
+	db	$d8,$6,$b4
+	db	$00
+	db	$30
+; P2-18
+	db	$d8,$c,$b7
+	db	$4b
+	db	$dc,$b4
+	db	$ff
+;----------------------------------------
+Music_AzaleaTown_Ch3:
+;----------------------------------------
+; P3-1
+;	db	$ef,$ff
+	db	$e1,$06,$26
+	db	$d8,$c,$12
+	db	$d5,$90
+	db	$d4,$10
+; P3-2
+	db	$dc,$81
+	db	$20
+	db	$04
+	db	$20
+	db	$02
+	db	$20
+	db	$00
+	db	$d5,$93
+; P3-3
+	db	$d4,$20
+	db	$04
+	db	$20
+	db	$02
+	db	$20
+	db	$00
+	db	$93
+; P3-4-11
+@loop:
+	db	$dc,$81
+	db	$fe
+	dw	@base4
+	db	$93
+	db	$41
+; P3-12-19
+	db	$fe
+	dw	@base4
+	db	$91
+	db	$01
+	db	$71
+; P3-20
+	db	$fe
+	dw	@base20
+; P3-21
+	db	$b0
+	db	$00
+	db	$d3,$20
+	db	$00
+	db	$61
+	db	$d4,$a3
+	db	$d3,$20
+	db	$02
+	db	$60
+	db	$00
+; P3-22
+	db	$fe
+	dw	@base20
+; P3-23
+	db	$d5,$b1
+	db	$d4,$60
+	db	$00
+	db	$b0
+	db	$00
+	db	$41
+	db	$d5,$b1
+	db	$d4,$40
+	db	$02
+	db	$dc,$25
+	db	$81
+; P3-24
+	db	$d5,$70
+	db	$04
+	db	$dc,$12
+	db	$70
+	db	$70
+	db	$70
+	db	$00
+	db	$dc,$81
+	db	$d4,$21
+	db	$01
+	db	$dc,$12
+	db	$d5,$60
+	db	$70
+; P3-25
+	db	$80
+	db	$04
+	db	$80
+	db	$80
+	db	$80
+	db	$00
+	db	$dc,$81
+	db	$d4,$21
+	db	$01
+	db	$dc,$12
+	db	$d5,$70
+	db	$80
+; P3-26
+	db	$90
+	db	$04
+	db	$90
+	db	$90
+	db	$90
+	db	$00
+	db	$dc,$81
+	db	$d4,$41
+	db	$01
+	db	$dc,$12
+	db	$d5,$70
+	db	$80
+; P3-27
+	db	$90
+	db	$04
+	db	$90
+	db	$90
+	db	$90
+	db	$00
+	db	$dc,$81
+	db	$d4,$41
+	db	$01
+	db	$dc,$12
+	db	$d5,$c0
+	db	$d4,$10
+	db	$fd,0
+	dw	@loop
+@base4:
+	db	$20
+	db	$04
+	db	$20
+	db	$02
+	db	$20
+	db	$00
+	db	$d5,$93
+; P3-5
+	db	$d4,$60
+	db	$04
+	db	$60
+	db	$00
+	db	$10
+	db	$00
+	db	$63
+	db	$a1
+; P3-6
+	db	$b0
+	db	$00
+	db	$d3,$20
+	db	$00
+	db	$60
+	db	$00
+	db	$d4,$a3
+	db	$d3,$20
+	db	$00
+	db	$60
+	db	$00
+	;	tempo 2 	oct 4	g#
+	db	$d4,$93
+; P3-7 -tie
+	;				g#
+	db	$b0
+	db	$00
+	db	$90
+	db	$00
+	db	$85
+	db	$03
+; P3-8
+	db	$70
+	db	$04
+	db	$70
+	db	$02
+	db	$70
+	db	$00
+	db	$23
+; P3-9
+	db	$80
+	db	$04
+	db	$80
+	db	$02
+	db	$23
+	db	$80
+	db	$00
+; P3-10
+	db	$90
+	db	$04
+	db	$90
+	db	$00
+	db	$40
+	db	$00
+	db	$23
+	db	$90
+	db	$00
+; P3-11
+	db	$90
+	db	$04
+	db	$90
+	db	$00
+	db	$10
+	db	$00
+	db	$ff
+@base20:
+	db	$d4,$60
+	db	$00
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$60
+	db	$00
+	db	$ff
+;----------------------------------------
+Music_AzaleaTown_Ch4:
+;----------------------------------------
+	db	$e3,$003
+;----------------------------------------
+Music_AzaleaTown_Ch5:
+;----------------------------------------
+; P4-1
+	db	$d8,$c
+	db	$61
+; P4-2
+@loop:
+	db	$41
+	db	$71
+	db	$31
+	db	$40
+	db	$80
+	db	$80
+	db	$80
+	db	$41
+	db	$31
+	db	$80
+	db	$80
+; P4-3
+	db	$41
+	db	$71
+	db	$31
+	db	$40
+	db	$80
+	db	$80
+	db	$80
+	db	$41
+	db	$31
+	db	$71
+	db	$fd,0
+	dw	@loop
+;:
+
+
