@@ -1,7 +1,7 @@
 PlayBattleMusic:
-	pha
-	phy
-	phx
+	PHA
+	PHY
+	PHX
 	
 	lda #0
 	sta zMusicSilence
@@ -88,9 +88,9 @@ ENDIF
 @done:
 	jsr PlayMusic
 	
-	plx
-	ply
-	pla
+	PLX
+	PLY
+	PLA
 	rts
 	
 ClearBattleRAM:
