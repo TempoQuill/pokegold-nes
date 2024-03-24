@@ -399,10 +399,66 @@ DetermineMoveOrder:
 	JSR SetPlayerTurn
 ;	farcall GetUserItem
 ;	farcall GetOpponentItem
-	; wip
-
+	; ld a, d
+	cmp #HELD_QUICK_CLAW
+	bne @player_no_quick_claw
+	; ld a, b
+	cmp #HELD_QUICK_CLAW
+	beq @both_have_quick_claw
+	jsr BattleRandom
+	; cp e
+	bcc @speed_check
+	jmp @player_first
+	
+@player_no_quick_claw:
+	; ld a, b
+	cmp #HELD_QUICK_CLAW
+	bne @speed_check
+	jsr BattleRandom
+	; cp c
+	bcc @speed_check
+	jmp @enemy_first
+	
+@both_have_quick_claw:
+	; hSerialConnectionStatus check
+	jsr BattleRandom
+	; cp c
+	bcs @enemy_first
+	jsr BattleRandom
+	; cp e
+	bcs @player_first
+	jmp @speed_check
+	
+@player_2b: ; this isn't referenced, but something in the future might reference it, so I'm keeping it
+	jsr BattleRandom
+	; cp e
+	bcs @player_first
+	jsr BattleRandom
+	; cp c
+	bcs @enemy_first
+	
+@speed_check:
+	ldy wBattleMonSpeed
+	ldx wEnemyMonSpeed
+	lda #2
+	sta zScratchByte
+	jsr CompareBytes
+	beq @speed_tie
+	bcc @player_first
+	jmp @enemy_first
+	
+@player_2c: ; this isn't referenced, but something in the future might reference it, so I'm keeping it
+	jsr BattleRandom
+	cmp #50 percent + 1
+	bcs @enemy_first
+	
 @player_first:
+	sec
+	rts
+	
 @enemy_first:
+	clc
+	rts
 
 NewEnemyMonStatus:
 	LDA #0
@@ -460,7 +516,21 @@ StopDangerSound:
 	RTS
 
 CheckContestBattleOver:
+	lda wBattleType
+	cmp #BATTLETYPE_CONTEST
+	bne @contest_not_over
+	lda wParkBallsRemaining
+	bne @contest_not_over
+	lda wBattleResult
+	and #BATTLERESULT_BITMASK
+	add #DRAW
+	sta wBattleResult
+	sec
 	RTS
+	
+@contest_not_over:
+	clc
+	rts
 
 UpdateBattleMonInParty:
 	RTS
