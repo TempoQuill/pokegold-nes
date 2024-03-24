@@ -1,7 +1,7 @@
 .include "config.asm"
 .include "header.asm"
-.include "src/ram.asm"
 .include "src/def.asm"
+.include "src/ram.asm"
 .include "src/macros.asm"
 
 IFDEF NSF_FILE

@@ -1,0 +1,317 @@
+; wInputType::
+AUTO_INPUT = $ff
+
+; wDebugFlags::
+.enum 0
+DEBUG_BATTLE_F:	.dsb 1
+DEBUG_FIELD_F:	.dsb 1
+.ende
+
+; wCurDexMode::
+.enum 0
+DEXMODE_NEW:	.dsb 1
+DEXMODE_OLD:	.dsb 1
+DEXMODE_ABC:	.dsb 1
+DEXMODE_UNOWN:	.dsb 1
+.ende
+
+; wMonType::
+.enum 0
+PARTYMON:	.dsb 1 ; 0
+OTPARTYMON:	.dsb 1 ; 1
+BOXMON:		.dsb 1 ; 2
+TEMPMON:	.dsb 1 ; 3
+WILDMON:	.dsb 1 ; 4
+.ende
+
+; wGameTimerPaused::
+GAME_TIMER_PAUSED_F = 0
+
+; wJoypadDisable::
+JOYPAD_DISABLE_MON_FAINT_F    = 6
+JOYPAD_DISABLE_SGB_TRANSFER_F = 7
+
+; wOptions1::
+TEXT_DELAY_MASK = %111
+.enum 4
+NO_TEXT_SCROLL:	.dsb 1 ; 4
+	.dsb 1 ; 5
+BATTLE_SHIFT:	.dsb 1 ; 6
+BATTLE_SCENE:	.dsb 1 ; 7
+.ende
+
+TEXT_DELAY_FAST = 1
+TEXT_DELAY_MED  = 3
+TEXT_DELAY_SLOW = 5
+
+; wTextboxFrame::
+.enum 0
+FRAME_1:	.dsb 1 ; 0
+FRAME_2:	.dsb 1 ; 1
+FRAME_3:	.dsb 1 ; 2
+FRAME_4:	.dsb 1 ; 3
+FRAME_5:	.dsb 1 ; 4
+FRAME_6:	.dsb 1 ; 5
+FRAME_7:	.dsb 1 ; 6
+FRAME_8:	.dsb 1 ; 7
+NUM_FRAMES:
+.ende
+
+; wTextboxFlags::
+.enum 0
+FAST_TEXT_DELAY_F:	.dsb 1 ; 0
+NO_TEXT_DELAY_F:	.dsb 1 ; 1
+.ende
+
+; wGBPrinterBrightness::
+GBPRINTER_LIGHTEST = $00
+GBPRINTER_LIGHTER  = $20
+GBPRINTER_NORMAL   = $40
+GBPRINTER_DARKER   = $60
+GBPRINTER_DARKEST  = $7f
+
+; wOptions2::
+.enum 0
+MENU_ACCOUNT:	.dsb 1 ; 0
+.ende
+
+; wWalkingDirection::
+STANDING = $ff
+.enum 0
+DOWN:	.dsb 1 ; 0
+UP:	.dsb 1 ; 1
+LEFT:	.dsb 1 ; 2
+RIGHT:	.dsb 1 ; 3
+NUM_DIRECTIONS:
+.ende
+
+DOWN_MASK  = 1 << DOWN
+UP_MASK    = 1 << UP
+LEFT_MASK  = 1 << LEFT
+RIGHT_MASK = 1 << RIGHT
+
+; wFacingDirection::
+FACE_DOWN    = 8
+FACE_UP      = 4
+FACE_LEFT    = 2
+FACE_RIGHT   = 1
+FACE_CURRENT = 0
+
+; wPokemonWithdrawDepositParameter::
+PC_WITHDRAW       = 0
+PC_DEPOSIT        = 1
+REMOVE_PARTY      = 0
+REMOVE_BOX        = 1
+DAY_CARE_WITHDRAW = 2
+DAY_CARE_DEPOSIT  = 3
+
+; wPlayerStepFlags::
+.enum 4
+PLAYERSTEP_MIDAIR_F:	.dsb 1 ; 4
+PLAYERSTEP_CONTINUE_F:	.dsb 1 ; 5
+PLAYERSTEP_STOP_F:	.dsb 1 ; 6
+PLAYERSTEP_START_F:	.dsb 1 ; 7
+.ende
+
+; wInitListType::
+INIT_ENEMYOT_LIST    = 1
+INIT_BAG_ITEM_LIST   = 2
+INIT_OTHER_ITEM_LIST = 3
+INIT_PLAYEROT_LIST   = 4
+INIT_MON_LIST        = 5
+
+; wTimeOfDay::
+.enum 0
+MORN_F:		.dsb 1 ; 0
+DAY_F:		.dsb 1 ; 1
+NITE_F:		.dsb 1 ; 2
+DARKNESS_F:	.dsb 1 ; 3
+NUM_DAYTIMES:
+.ende
+
+MORN     = 1 << MORN_F
+DAY      = 1 << DAY_F
+NITE     = 1 << NITE_F
+DARKNESS = 1 << DARKNESS_F
+
+ANYTIME = MORN | DAY | NITE
+
+; wTimeOfDayPalset::
+DARKNESS_PALSET = (DARKNESS_F << 6) | (DARKNESS_F << 4) | (DARKNESS_F << 2) | DARKNESS_F
+
+; wBattleAnimFlags::
+.enum 0
+BATTLEANIM_STOP_F:		.dsb 1 ; 0
+BATTLEANIM_IN_SUBROUTINE_F:	.dsb 1 ; 1
+BATTLEANIM_IN_LOOP_F:		.dsb 1 ; 2
+BATTLEANIM_KEEPSPRITES_F:	.dsb 1 ; 3
+.ende
+
+; wPlayerSpriteSetupFlags::
+PLAYERSPRITESETUP_FACING_MASK       = %11
+PLAYERSPRITESETUP_FEMALE_TO_MALE_F  = 2
+PLAYERSPRITESETUP_CUSTOM_FACING_F   = 5
+PLAYERSPRITESETUP_SKIP_RELOAD_GFX_F = 6
+PLAYERSPRITESETUP_RESET_ACTION_F    = 7
+
+; wMapStatus::
+.enum 0
+MAPSTATUS_START:	.dsb 1 ; 0
+MAPSTATUS_ENTER:	.dsb 1 ; 1
+MAPSTATUS_HANDLE:	.dsb 1 ; 2
+MAPSTATUS_DONE:		.dsb 1 ; 3
+.ende
+
+; wMapEventStatus::
+.enum 0
+MAPEVENTS_ON:	.dsb 1 ; 0
+MAPEVENTS_OFF:	.dsb 1 ; 1
+.ende
+
+; wScriptFlags::
+SCRIPT_RUNNING = 2
+
+; wScriptMode::
+.enum 0
+SCRIPT_OFF
+SCRIPT_READ
+SCRIPT_WAIT_MOVEMENT
+SCRIPT_WAIT
+.ende
+
+; wSpawnAfterChampion::
+SPAWN_LANCE = 1
+SPAWN_RED   = 2
+
+; wCurDay::
+.enum 0
+SUNDAY:		.dsb 1 ; 0
+MONDAY:		.dsb 1 ; 1
+TUESDAY:	.dsb 1 ; 2
+WEDNESDAY:	.dsb 1 ; 3
+THURSDAY:	.dsb 1 ; 4
+FRIDAY:		.dsb 1 ; 5
+SATURDAY:	.dsb 1 ; 6
+.ende
+
+; wStatusFlags::
+.enum 0
+STATUSFLAGS_POKEDEX_F:			.dsb 1 ; 0
+STATUSFLAGS_UNOWN_DEX_F:		.dsb 1 ; 1
+STATUSFLAGS_FLASH_F:			.dsb 1 ; 2
+STATUSFLAGS_CAUGHT_POKERUS_F:		.dsb 1 ; 3
+STATUSFLAGS_ROCKET_SIGNAL_F:		.dsb 1 ; 4
+STATUSFLAGS_NO_WILD_ENCOUNTERS_F:	.dsb 1 ; 5
+STATUSFLAGS_HALL_OF_FAME_F:		.dsb 1 ; 6
+.ende
+
+; wStatusFlags2::
+.enum 0
+STATUSFLAGS2_ROCKETS_IN_RADIO_TOWER_F:	.dsb 1 ; 0
+STATUSFLAGS2_SAFARI_GAME_F:		.dsb 1 ; 1
+STATUSFLAGS2_BUG_CONTEST_TIMER_F:	.dsb 1 ; 2
+STATUSFLAGS2_UNUSED_3_F:		.dsb 1 ; 3
+STATUSFLAGS2_BIKE_SHOP_CALL_F:		.dsb 1 ; 4
+STATUSFLAGS2_UNUSED_5_F:		.dsb 1 ; 5
+STATUSFLAGS2_REACHED_GOLDENROD_F:	.dsb 1 ; 6
+STATUSFLAGS2_ROCKETS_IN_MAHOGANY_F:	.dsb 1 ; 7
+.ende
+
+; wMomSavingMoney::
+MOM_SAVING_SOME_MONEY_F = 0
+MOM_SAVING_HALF_MONEY_F = 1
+MOM_SAVING_ALL_MONEY_F  = 2
+MOM_ACTIVE_F            = 7
+
+MOM_SAVING_MONEY_MASK = (1 << MOM_SAVING_SOME_MONEY_F) | (1 << MOM_SAVING_HALF_MONEY_F) | (1 << MOM_SAVING_ALL_MONEY_F)
+
+; wJohtoBadges::
+.enum 0
+ZEPHYRBADGE:	.dsb 1
+HIVEBADGE:	.dsb 1
+PLAINBADGE:	.dsb 1
+FOGBADGE:	.dsb 1
+MINERALBADGE:	.dsb 1
+STORMBADGE:	.dsb 1
+GLACIERBADGE:	.dsb 1
+RISINGBADGE:	.dsb 1
+NUM_JOHTO_BADGES:
+.ende
+
+; wKantoBadges::
+.enum 0
+BOULDERBADGE:	.dsb 1
+CASCADEBADGE:	.dsb 1
+THUNDERBADGE:	.dsb 1
+RAINBOWBADGE:	.dsb 1
+SOULBADGE:	.dsb 1
+MARSHBADGE:	.dsb 1
+VOLCANOBADGE:	.dsb 1
+EARTHBADGE:	.dsb 1
+NUM_KANTO_BADGES:
+NUM_BADGES       = NUM_JOHTO_BADGES + NUM_KANTO_BADGES
+.ende
+
+; wPokegearFlags::
+.enum 0
+POKEGEAR_MAP_CARD_F:	.dsb 1 ; 0
+POKEGEAR_RADIO_CARD_F:	.dsb 1 ; 1
+POKEGEAR_PHONE_CARD_F:	.dsb 1 ; 2
+POKEGEAR_EXPN_CARD_F:	.dsb 1 ; 3
+	.dsb 3
+POKEGEAR_OBTAINED_F:	.dsb 1 ; 7
+.ende
+
+; wWhichRegisteredItem::
+REGISTERED_POCKET = %11000000
+REGISTERED_NUMBER = %00111111
+
+; wPlayerState::
+PLAYER_NORMAL    = 0
+PLAYER_BIKE      = 1
+PLAYER_SKATE     = 2
+PLAYER_SURF      = 4
+PLAYER_SURF_PIKA = 8
+
+; wBikeFlags::
+.enum 0
+BIKEFLAGS_STRENGTH_ACTIVE_F:	.dsb 1 ; 0
+BIKEFLAGS_ALWAYS_ON_BIKE_F:	.dsb 1 ; 1
+BIKEFLAGS_DOWNHILL_F:		.dsb 1 ; 2
+.ende
+
+; wDailyFlags1::
+.enum 0
+DAILYFLAGS1_KURT_MAKING_BALLS_F:	.dsb 1 ; 0
+DAILYFLAGS1_BUG_CONTEST_F:	.dsb 1 ; 1
+DAILYFLAGS1_SWARM_F:	.dsb 1 ; 2
+DAILYFLAGS1_TIME_CAPSULE_F:	.dsb 1 ; 3
+DAILYFLAGS1_ALL_FRUIT_TREES_F:	.dsb 1 ; 4
+DAILYFLAGS1_GOT_SHUCKIE_TODAY_F:	.dsb 1 ; 5
+DAILYFLAGS1_GOLDENROD_UNDERGROUND_BARGAIN_F:	.dsb 1 ; 6
+DAILYFLAGS1_TRAINER_HOUSE_F:	.dsb 1 ; 7
+.ende
+
+; wDailyFlags2::
+.enum 0
+DAILYFLAGS2_MT_MOON_SQUARE_CLEFAIRY_F:			.dsb 1 ; 0
+DAILYFLAGS2_UNION_CAVE_LAPRAS_F:			.dsb 1 ; 1
+DAILYFLAGS2_GOLDENROD_UNDERGROUND_GOT_HAIRCUT_F:	.dsb 1 ; 2
+DAILYFLAGS2_GOLDENROD_DEPT_STORE_TM27_RETURN_F:		.dsb 1 ; 3
+DAILYFLAGS2_DAISYS_GROOMING_F:				.dsb 1 ; 4
+DAILYFLAGS2_INDIGO_PLATEAU_RIVAL_FIGHT_F:		.dsb 1 ; 5
+.ende
+
+; wLuckyNumberShowFlag::
+LUCKYNUMBERSHOW_GAME_OVER_F = 0
+
+; wDayCareMan::
+DAYCAREMAN_HAS_MON_F         = 0
+DAYCAREMAN_MONS_COMPATIBLE_F = 5
+DAYCAREMAN_HAS_EGG_F         = 6
+
+; wDayCareLady::
+DAYCARELADY_HAS_MON_F        = 0
+
+; shared flag between wDayCareMan and wDayCareLady
+DAYCARE_INTRO_SEEN_F         = 7

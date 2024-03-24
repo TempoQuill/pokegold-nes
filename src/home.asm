@@ -122,6 +122,8 @@ BCDLayout:
 BCDLayout_End:
 	db 0
 
+DelayFrame:
+	LDA #1
 DelayFrames:
 ; stop for A frames
 	STA zNMITimer

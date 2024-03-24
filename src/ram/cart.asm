@@ -94,10 +94,17 @@ wWildMon:
 	.dsb 1
 wOptions:
 	.dsb 1
+
+wOtherTrainerClass:
+	.dsb 1
+wTimeOfDay:
+	.dsb 1
+wTimeOfDayPal:
+	.dsb 1
 .ende
 wTilemap = $7c00
 
 ; RAM_SAVE
 .enum $6000
-sBox:
+sBox:	.dsb BOX_STRUCT_LENGTH
 .ende

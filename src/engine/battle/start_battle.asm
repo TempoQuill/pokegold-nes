@@ -1,144 +1,144 @@
 PlayBattleMusic:
-	pha
-	phy
-	phx
+	PHA
+	PHY
+	PHX
 	
-	lda #0
-	sta zMusicSilence
-	ldy #MUSIC_NONE
-	jsr PlayMusic
-	jsr DelayFrame
+	LDA #0
+	STA zMusicSilence
+	LDY #MUSIC_NONE
+	JSR PlayMusic
+	JSR DelayFrame
 	
 	; Are we fighting a trainer?
-	lda wOtherTrainerClass
-	bne @trainermusic
+	LDA wOtherTrainerClass
+	BNE @trainermusic
 	
 	; farcall RegionCheck
 	; ld a, e
-	bne @kantowild
+	BNE @kantowild
 	
-	ldy #MUSIC_JOHTO_WILD_BATTLE
-	lda wTimeOfDay
-	cmp #NITE_F
-	bne @done
-	ldy #MUSIC_JOHTO_WILD_BATTLE_NIGHT
-	jmp @done
+	LDY #MUSIC_JOHTO_WILD_BATTLE
+	LDA wTimeOfDay
+	CMP #NITE_F
+	BNE @done
+	LDY #MUSIC_JOHTO_WILD_BATTLE_NIGHT
+	BNE @done
 	
 @kantowild:
-	ldy #MUSIC_KANTO_WILD_BATTLE
-	jmp @done
+	LDY #MUSIC_KANTO_WILD_BATTLE
+	BNE @done
 	
 @trainermusic:
-	ldy #MUSIC_CHAMPION_BATTLE
-	cmp #CHAMPION
-	beq @done
-	cmp #RED
-	beq @done
+	LDY #MUSIC_CHAMPION_BATTLE
+	CMP #CHAMPION
+	BEQ @done
+	CMP #RED
+	BEQ @done
 	
 ; BUG: Team Rocket battle music is not used for Executives or Scientists
-	ldy #MUSIC_ROCKET_BATTLE
-	cmp #GRUNTM
-	beq @done
-	cmp #GRUNTF
-	beq @done
+	LDY #MUSIC_ROCKET_BATTLE
+	CMP #GRUNTM
+	BEQ @done
+	CMP #GRUNTF
+	BEQ @done
 IFDEF BUGFIXES
-	cmp #EXECUTIVE
-	beq @done
-	cmp #SCIENTIST
-	beq @done
+	CMP #EXECUTIVE
+	BEQ @done
+	CMP #SCIENTIST
+	BEQ @done
 ENDIF
 	
-	ldy #MUSIC_KANTO_GYM_LEADER_BATTLE
+	LDY #MUSIC_KANTO_GYM_LEADER_BATTLE
 	; farcall IsKantoGymLeader
-	bcs @done
+	BCS @done
 	
 	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
 	; but they have been taken care of before this
-	ldy #MUSIC_JOHTO_GYM_LEADER_BATTLE
+	LDY #MUSIC_JOHTO_GYM_LEADER_BATTLE
 	; farcall IsGymLeader
-	bcs @done
+	BCS @done
 	
-	ldy #MUSIC_RIVAL_BATTLE
-	lda wOtherTrainerClass
-	cmp #RIVAL1
-	beq @done
-	cmp #RIVAL2
-	bne @othertrainer
+	LDY #MUSIC_RIVAL_BATTLE
+	LDA wOtherTrainerClass
+	CMP #RIVAL1
+	BEQ @done
+	CMP #RIVAL2
+	BNE @othertrainer
 	
-	lda wOtherTrainerID
-	cmp #RIVAL2_2_CHIKORITA
-	bcs @done
-	ldy #MUSIC_CHAMPION_BATTLE
-	jmp @done
+	LDA wOtherTrainerID
+	CMP #RIVAL2_2_CHIKORITA
+	BCS @done
+	LDY #MUSIC_CHAMPION_BATTLE
+	JMP @done
 	
 @othertrainer:
 	; wLinkMode check
 	
 	; farcall RegionCheck
 	; ld a, e
-	bne @kantotrainer
+	BNE @kantotrainer
 	
 @johtotrainer:
-	ldy #MUSIC_JOHTO_TRAINER_BATTLE
-	jmp @done
+	LDY #MUSIC_JOHTO_TRAINER_BATTLE
+	JMP @done
 	
 @kantotrainer:
-	ldy #MUSIC_KANTO_TRAINER_BATTLE
+	LDY #MUSIC_KANTO_TRAINER_BATTLE
 	
 @done:
-	jsr PlayMusic
+	JSR PlayMusic
 	
-	plx
-	ply
-	pla
-	rts
+	PLX
+	PLY
+	PLA
+	RTS
 	
 ClearBattleRAM:
-	lda #0
-	sta wBattlePlayerAction
-	sta wBattleResult
+	LDA #0
+	STA wBattlePlayerAction
+	STA wBattleResult
 	
-	sta wPartyMenuCursor
-	sta wPartyMenuCursor + 1
-	sta wPartyMenuCursor + 2
-	sta wPartyMenuCursor + 3
+	STA wPartyMenuCursor
+	STA wPartyMenuCursor + 1
+	STA wPartyMenuCursor + 2
+	STA wPartyMenuCursor + 3
 	
-	sta wMenuScrollPosition
-	sta wCriticalHit
-	sta wBattleMonSpecies
-	sta wBattleParticipantsNotFainted
-	sta wCurBattleMon
-	sta wForcedSwitch
-	sta wTimeOfDayPal
-	sta wPlayerTurnsTaken
-	sta wEnemyTurnsTaken
-	sta wEvolvableFlags
+	STA wMenuScrollPosition
+	STA wCriticalHit
+	STA wBattleMonSpecies
+	STA wBattleParticipantsNotFainted
+	STA wCurBattleMon
+	STA wForcedSwitch
+	STA wTimeOfDayPal
+	STA wPlayerTurnsTaken
+	STA wEnemyTurnsTaken
+	STA wEvolvableFlags
 	
-	sta wPlayerHPPal
-	sta wPlayerHPPal + 1
+	STA wPlayerHPPal
+	STA wPlayerHPPal + 1
 	
-	sta wBattleMonDVs
-	sta wBattleMonDVs + 1
+	STA wBattleMonDVs
+	STA wBattleMonDVs + 1
 	
-	sta wEnemyMonDVs
-	sta wEnemyMonDVs + 1
+	STA wEnemyMonDVs
+	STA wEnemyMonDVs + 1
 	
 ; Clear the entire BattleMons area
-	lda #<wBattleMon
-	sta zScratchWord
-	lda #>wBattleMon
-	sta zScratchWord + 1
-	ldy #wBattleEnd - wBattle
-	lda #0
-	jsr ByteFill
+	LDA #<wBattleMon
+	STA zScratchWord
+	LDA #>wBattleMon
+	STA zScratchWord + 1
+	LDY #wBattleEnd - wBattle
+	LDA #0
+	JSR ByteFill
 	
 	; farcall ResetEnemyStatLevels
 	
-	jsr ClearWindowData
+	JSR ClearWindowData
 	
-	lda #<vBGMap0
-	sta hBGMapAddress
-	lda #>vBGMap0
-	sta hBGMapAddress + 1
-	rts
+	LDA #<vBGMap0
+	STA hBGMapAddress
+	LDA #>vBGMap0
+	STA hBGMapAddress + 1
+	RTS
 	
