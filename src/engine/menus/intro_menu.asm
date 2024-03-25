@@ -1,17 +1,17 @@
 NewGame:
-	lda #0
-	sta wDebugFlags
-	jsr ResetWRAM
-	jsr ClearTilemapEtc
-	jsr OakSpeech
-	jsr InitializeWorld
+	LDA #0
+	STA wDebugFlags
+	JSR ResetWRAM
+	JSR ClearTilemapEtc
+	JSR OakSpeech
+	JSR InitializeWorld
 	
-	lda #SPAWN_HOME
-	sta wDefaultSpawnpoint
+	LDA #SPAWN_HOME
+	STA wDefaultSpawnpoint
 	
-	lda #MAPSETUP_WARP
-	sta zMapEntryMethod
-	jmp FinishContinueFunction
+	LDA #MAPSETUP_WARP
+	STA zMapEntryMethod
+	JMP FinishContinueFunction
 	
 IFDEF DEBUG
 	; farcall _DebugRoom
@@ -19,84 +19,85 @@ IFDEF DEBUG
 ENDIF
 
 ResetWRAM:
-	lda #0
-	sta zBGMapMode
+	LDA #0
+	STA zBGMapMode
 	; call _ResetWRAM ; pointless
 	; ret
 	
 _ResetWRAM:
 	; ld hl, wShadowOAM
 	; ld bc, wOptions - wShadowOAM
-	lda #0
-	jsr ByteFill
+	LDA #0
+	JSR ByteFill
 	
 	; ld hl, wGameData
 	; ld bc, wGameDataEnd - wGameData
-	lda #0
-	jsr ByteFill
+	LDA #0
+	JSR ByteFill
 	
 	; ld a, [rLY] ; NES equivalent is?
-	sta zScratchByte
-	jsr DelayFrame ; this won't use zScratchByte, will it?
-	lda zRandomAdd
-	sta wPlayerID + 1
+	STA zScratchByte
+	JSR DelayFrame
+	LDA zRandomAdd
+	STA wPlayerID + 1
 	
-	lda #<wPartyCount
-	sta wScratchWord
-	lda #>wPartyCount
-	sta wScratchWord + 1
-	jsr @InitList
+	LDA #<wPartyCount
+	STA zScratchWord
+	LDA #>wPartyCount
+	STA zScratchWord + 1
+	JSR @InitList
 	
-	lda #0
-	sta wCurBox
-	sta wSavedAtLeastOnce
+	LDA #0
+	STA wCurBox
+	STA wSavedAtLeastOnce
 	
-	jsr SetDefaultBoxNames
+	JSR SetDefaultBoxNames
+
+	LDA #RAM_SAVE
+	STA MMC5_PRGBankSwitch1
+	LDA #<(sBox + BOX_COUNT)
+	STA zScratchWord
+	LDA #>(sBox + BOX_COUNT)
+	STA zScratchWord + 1
+	JSR @InitList
+	LDA #RAM_MAIN
+	STA MMC5_PRGBankSwitch1
+
+	LDA #<wNumItems
+	STA zScratchWord
+	LDA #>wNumItems
+	STA zScratchWord + 1
+	JSR @InitList
 	
-	; ld a, BANK(sBoxCount)
-	; call OpenSRAM
-	lda #<sBoxCount
-	sta wScratchWord
-	lda #>sBoxCount
-	sta wScratchWord + 1
-	jsr @InitList
-	; call CloseSRAM
+	LDA #<wNumKeyItems
+	STA zScratchWord
+	LDA #>wNumKeyItems
+	STA zScratchWord + 1
+	JSR @InitList
 	
-	lda #<wNumItems
-	sta wScratchWord
-	lda #>wNumItems
-	sta wScratchWord + 1
-	jsr @InitList
+	LDA #<wNumBalls
+	STA zScratchWord
+	LDA #>wNumBalls
+	STA zScratchWord + 1
+	JSR @InitList
 	
-	lda #<wNumKeyItems
-	sta wScratchWord
-	lda #>wNumKeyItems
-	sta wScratchWord + 1
-	jsr @InitList
+	LDA #<wNumPCItems
+	STA zScratchWord
+	LDA #>wNumPCItems
+	STA zScratchWord + 1
+	JSR @InitList
 	
-	lda #<wNumBalls
-	sta wScratchWord
-	lda #>wNumBalls
-	sta wScratchWord + 1
-	jsr @InitList
-	
-	lda #<wNumPCItems
-	sta wScratchWord
-	lda #>wNumPCItems
-	sta wScratchWord + 1
-	jsr @InitList
-	
-	lda #0
-	sta wRoamMon1Species
-	sta wRoamMon2Species
-	sta wRoamMon3Species
-	lda #$ff
-	sta wRoamMon1MapGroup
-	sta wRoamMon2MapGroup
-	sta wRoamMon3MapGroup
-	sta wRoamMon1MapNumber
-	sta wRoamMon2MapNumber
-	sta wRoamMon3MapNumber
+	LDA #0
+	STA wRoamMon1Species
+	STA wRoamMon2Species
+	STA wRoamMon3Species
+	LDA #$ff
+	STA wRoamMon1MapGroup
+	STA wRoamMon2MapGroup
+	STA wRoamMon3MapGroup
+	STA wRoamMon1MapNumber
+	STA wRoamMon2MapNumber
+	STA wRoamMon3MapNumber
 	
 	; we probably won't have mystery gift, will we?
 	
@@ -110,49 +111,49 @@ _ResetWRAM:
 	; ld [hl], a
 	; call CloseSRAM
 	
-	jsr LoadOrRegenerateLuckyIDNumber
-	jsr InitializeMagikarpHouse
+	JSR LoadOrRegenerateLuckyIDNumber
+	JSR InitializeMagikarpHouse
 	
-	lda #0
-	sta wMonType
+	LDA #0
+	STA wMonType
 	
-	sta wJohtoBadges
-	sta wKantoBadges
+	STA wJohtoBadges
+	STA wKantoBadges
 	
-	sta wCoins
-	sta wCoins + 1
+	STA wCoins
+	STA wCoins + 1
 	
-	sta wMoney
-	lda #<START_MONEY
-	sta wMoney + 1
-	sta #>START_MONEY
-	sta wMoney + 2
+	STA wMoney
+	STA #>START_MONEY
+	STA wMoney + 1
+	LDA #<START_MONEY
+	STA wMoney + 2
 	
-	lda #0
-	sta wWhichMomItem
+	LDA #0
+	STA wWhichMomItem
 	
-	lda #<MOM_MONEY >> 8 ; is this legal on asmf6?
-	sta wMomItemTriggerBalance
-	lda #<MOM_MONEY
-	sta wMomItemTriggerBalance + 1
-	lda #>MOM_MONEY
-	sta wMomItemTriggerBalance + 2
+	LDA #>(MOM_MONEY >> 8)
+	STA wMomItemTriggerBalance
+	LDA #>MOM_MONEY
+	STA wMomItemTriggerBalance + 1
+	LDA #<MOM_MONEY
+	STA wMomItemTriggerBalance + 2
 	
-	jsr InitializeNPCNames
+	JSR InitializeNPCNames
 	
 	; farcall InitDecorations
 	
 	; farcall DeletePartyMonMail
 	
-	jmp ResetGameTime
+	JMP ResetGameTime
 	
 @InitList:
-	lda #0
-	tay
-	sta (wScratchWord), y
-	lda #$ff
-	sta (wScratchWord), y
-	rts
+	LDA #0
+	TAY
+	STA (zScratchWord), y
+	LDA #$ff
+	STA (zScratchWord), y
+	RTS
 	
 SetDefaultBoxNames:
 	; todo: finish this
