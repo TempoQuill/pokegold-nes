@@ -17,6 +17,10 @@ ENDIF
 .base $a000
 ; pokemon cries
 .include "src/data/pokemon-cries.asm"
+CryCoord_End:
+IF CryCoord_End > $c000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
 .pad $c000, $00
 
 IFNDEF NSF_FILE

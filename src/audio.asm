@@ -6,7 +6,11 @@
 .include "src/audio/cry-pointers.asm"
 .include "src/audio/sfx-pointers.asm"
 .include "src/audio/sfx-audio.asm"
-.pad $a000, $00
+Audio_SFX_END:
+IF Audio_SFX_END > $a000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $a000
 .include "src/audio/music/route1.asm"
@@ -21,7 +25,11 @@
 .include "src/audio/music/route2.asm"
 .include "src/audio/music/mtmoon.asm"
 .include "src/audio/music/showmearound.asm"
-.pad $c000, $00
+Music0_End:
+IF Music0_End > $c000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $8000
 .include "src/audio/music/violetcity.asm"
@@ -42,7 +50,11 @@
 .include "src/audio/music/profoak.asm"
 .include "src/audio/music/lookrival.asm"
 .include "src/audio/music/surf.asm"
-.pad $a000, $00
+Music1_End:
+IF Music1_End > $a000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $a000
 .include "src/audio/music/nationalpark.asm"
@@ -54,7 +66,11 @@
 .include "src/audio/music/tintower.asm"
 .include "src/audio/music/pokemonmarch.asm"
 .include "src/audio/music/lookhiker.asm"
-.pad $c000, $00
+Music2_End:
+IF Music2_End > $c000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $8000
 .include "src/audio/music/credits.asm"
@@ -65,7 +81,11 @@
 .include "src/audio/music/goldenrodcity.asm"
 .include "src/audio/music/titlescreen.asm"
 .include "src/audio/music/trainervictory.asm"
-.pad $a000, $00
+Music3_End:
+IF Music3_End > $a000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $a000
 .include "src/audio/music/theend.asm"
@@ -75,33 +95,41 @@
 .include "src/audio/music/ecruteakcity.asm"
 .include "src/audio/music/magnettrain.asm"
 .include "src/audio/music/lavendertown.asm"
-.pad $c000, $00
+Music4_End:
+IF Music4_End > $c000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $8000
 .include "src/audio/cries.asm"
-.pad $a000, $00
+MonCries_End:
+IF MonCries_End > $a000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
 
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-1.bin"
-.pad $e000, $55
+.align $2000, $55
 
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-2.bin"
-.pad $e000, $55
+.align $2000, $55
 
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-3.bin"
-.pad $e000, $55
+.align $2000, $55
 
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-4.bin"
-.pad $e000, $55
+.align $2000, $55
 
 .base $c000
 ; dpcm
 .incbin "src/data/dmc/bank-5.bin"
-.pad $e000, $55
+.align $2000, $55
