@@ -101,6 +101,15 @@ wTimeOfDay:
 	.dsb 1
 wTimeOfDayPal:
 	.dsb 1
+
+wTextDecByte:
+	.dsb 1
+wCurPartyLevel:
+	.dsb 1
+wPlayerDamage:
+	.dsb 1
+wEnemyDamage:
+	.dsb 1
 .ende
 wTilemap = $7c00
 
