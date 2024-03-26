@@ -1,14 +1,14 @@
 Music_GoldenrodCity:
 	db	080h
-	dw	Music_GoldenrodCity_Ch1
+	dw	$ffff & Music_GoldenrodCity_Ch1
 	db	001h
-	dw	Music_GoldenrodCity_Ch2
+	dw	$ffff & Music_GoldenrodCity_Ch2
 	db	002h
-	dw	Music_GoldenrodCity_Ch3
+	dw	$ffff & Music_GoldenrodCity_Ch3
 	db	003h
-	dw	Music_GoldenrodCity_Ch4
+	dw	$ffff & Music_GoldenrodCity_Ch4
 	db	004h
-	dw	Music_GoldenrodCity_Ch5
+	dw	$ffff & Music_GoldenrodCity_Ch5
 ;----------------------------------------
 Music_GoldenrodCity_Ch1:
 ;----------------------------------------
@@ -27,7 +27,7 @@ Music_GoldenrodCity_Ch1:
 ; P1-6
 	db	$db,$00
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d4,$90
 	db	$d3,$10
 	db	$40
@@ -40,7 +40,7 @@ Music_GoldenrodCity_Ch1:
 	db	$dc,$71
 	db	$db,$00
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$dc,$77
 	db	$41
 	db	$61
@@ -49,7 +49,7 @@ Music_GoldenrodCity_Ch1:
 ; P1-14
 	db	$dc,$71
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$40
 	db	$70
 	db	$dc,$77
@@ -62,13 +62,13 @@ Music_GoldenrodCity_Ch1:
 	db	$db,$02
 	db	$dc,$97
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-5
 	db	$13
 	db	$d4,$91
 	db	$d3,$11
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d3,$21
 	db	$d4,$90
@@ -178,7 +178,7 @@ Music_GoldenrodCity_Ch2:
 @mainloop:
 	db	$dc,$97
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-5
 	db	$d3,$61
 	db	$71
@@ -187,7 +187,7 @@ Music_GoldenrodCity_Ch2:
 	db	$47
 ; P2-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-9
 	db	$91
 	db	$b1
@@ -198,7 +198,7 @@ Music_GoldenrodCity_Ch2:
 	db	$db,$02
 	db	$dc,$77
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P2-13
 	db	$d3,$91
 	db	$b1
@@ -208,7 +208,7 @@ Music_GoldenrodCity_Ch2:
 	db	$db,$03
 	db	$dc,$77
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$61
 	db	$41
 	db	$21
@@ -216,7 +216,7 @@ Music_GoldenrodCity_Ch2:
 	db	$d3,$91
 ; P2-18
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d3,$63
 	db	$23
@@ -267,13 +267,13 @@ Music_GoldenrodCity_Ch3:
 @mainloop:
 	db	$dc,$7f
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P3-13
 	db	$02
 	db	$d4,$10
@@ -284,7 +284,7 @@ Music_GoldenrodCity_Ch3:
 	db	$41
 ; P3-14
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$00
 	db	$dc,$28
 	db	$d4,$91
@@ -293,7 +293,7 @@ Music_GoldenrodCity_Ch3:
 	db	$d5,$91
 ; P3-18
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d4,$23
 	db	$01
@@ -415,55 +415,55 @@ Music_GoldenrodCity_Ch5:
 	db	$31
 	db	$71
 	db	$fd,3
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P4-7
 ; P4-8
 ; P4-9
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$80
 	db	$80
 	db	$71
 ; P4-11
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$31
 	db	$71
 ; P4-12
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$30
 	db	$30
 	db	$71
 ; P4-13
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$31
 	db	$30
 	db	$30
 ; P4-14
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$80
 	db	$80
 	db	$71
 ; P4-15
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$31
 	db	$71
 ; P4-16
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$30
 	db	$30
 	db	$71
 ; P4-17
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$31
 	db	$30
 	db	$30
@@ -478,11 +478,11 @@ Music_GoldenrodCity_Ch5:
 	db	$31
 	db	$71
 	db	$fd,3
-	dw	@loop2
+	dw	$ffff & @loop2
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$41
 	db	$71

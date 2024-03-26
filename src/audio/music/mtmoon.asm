@@ -1,12 +1,12 @@
 Music_MtMoon:
 	db	060h
-	dw	Music_MtMoon_Ch1
+	dw	$ffff & Music_MtMoon_Ch1
 	db	001h
-	dw	Music_MtMoon_Ch2
+	dw	$ffff & Music_MtMoon_Ch2
 	db	002h
-	dw	Music_MtMoon_Ch3
+	dw	$ffff & Music_MtMoon_Ch3
 	db	004h
-	dw	Music_MtMoon_Ch5
+	dw	$ffff & Music_MtMoon_Ch5
 ;----------------------------------------
 Music_MtMoon_Ch1:
 ;----------------------------------------
@@ -17,7 +17,7 @@ Music_MtMoon_Ch1:
 	db	$d8,$c,$45
 	db	$01
 	db	$fd,0
-	dw	DUNloop
+	dw	$ffff & DUNloop
 ;----------------------------------------
 Music_MtMoon_Ch2:
 ;----------------------------------------
@@ -72,7 +72,7 @@ DUNloop:
 	db	$75
 	db	$53
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_MtMoon_Ch3:
 ;----------------------------------------
@@ -89,7 +89,7 @@ Music_MtMoon_Ch3:
 	db	$d5,$c1
 	db	$d4,$41
 	db	$fd,3
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P3-4
 	db	$d5,$c1
 	db	$d4,$41
@@ -110,9 +110,9 @@ Music_MtMoon_Ch3:
 	db	$d4,$51
 	db	$91
 	db	$fd,4
-	dw	@loop2
+	dw	$ffff & @loop2
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_MtMoon_Ch5:
 ;----------------------------------------
@@ -130,6 +130,6 @@ Music_MtMoon_Ch5:
 	db	$b3
 	db	$b7
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 
 

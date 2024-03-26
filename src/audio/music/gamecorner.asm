@@ -1,14 +1,14 @@
 Music_GameCorner:
 	db	080h
-	dw	Music_GameCorner_Ch1
+	dw	$ffff & Music_GameCorner_Ch1
 	db	001h
-	dw	Music_GameCorner_Ch2
+	dw	$ffff & Music_GameCorner_Ch2
 	db	002h
-	dw	Music_GameCorner_Ch3
+	dw	$ffff & Music_GameCorner_Ch3
 	db	003h
-	dw	Music_GameCorner_Ch4
+	dw	$ffff & Music_GameCorner_Ch4
 	db	004h
-	dw	Music_GameCorner_Ch5
+	dw	$ffff & Music_GameCorner_Ch5
 ;----------------------------------------
 Music_GameCorner_Ch1:
 ;----------------------------------------
@@ -28,16 +28,16 @@ Music_GameCorner_Ch1:
 	db	$0f
 ; P1-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-12
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P1-13
 	db	$0f
 ; P1-14
@@ -50,16 +50,16 @@ Music_GameCorner_Ch1:
 	db	$0f
 ; P1-18
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-20
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-22
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-24
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P1-25
 	db	$d4,$01
 	db	$92
@@ -76,7 +76,7 @@ Music_GameCorner_Ch1:
 	db	$60
 	db	$10
 	db	$fd,4
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P1-27
 @loop2:
 	db	$d3,$b0
@@ -84,7 +84,7 @@ Music_GameCorner_Ch1:
 	db	$80
 	db	$30
 	db	$fd,4
-	dw	@loop2
+	dw	$ffff & @loop2
 ; P1-28
 @loop3:
 	db	$d3,$40
@@ -92,7 +92,7 @@ Music_GameCorner_Ch1:
 	db	$d2,$10
 	db	$d3,$80
 	db	$fd,4
-	dw	@loop3
+	dw	$ffff & @loop3
 ; P1-29
 @loop4:
 	db	$d3,$60
@@ -100,7 +100,7 @@ Music_GameCorner_Ch1:
 	db	$d2,$10
 	db	$d3,$a0
 	db	$fd,4
-	dw	@loop4
+	dw	$ffff & @loop4
 ; P1-30
 @loop5:
 	db	$d3,$90
@@ -108,7 +108,7 @@ Music_GameCorner_Ch1:
 	db	$60
 	db	$10
 	db	$fd,4
-	dw	@loop5
+	dw	$ffff & @loop5
 ; P1-31
 @loop6:
 	db	$d3,$b0
@@ -116,7 +116,7 @@ Music_GameCorner_Ch1:
 	db	$80
 	db	$30
 	db	$fd,4
-	dw	@loop6
+	dw	$ffff & @loop6
 ; P1-32
 @loop7:
 	db	$d3,$c0
@@ -124,7 +124,7 @@ Music_GameCorner_Ch1:
 	db	$80
 	db	$30
 	db	$fd,4
-	dw	@loop7
+	dw	$ffff & @loop7
 ; P1-33
 	db	$d4,$30
 	db	$30
@@ -133,7 +133,7 @@ Music_GameCorner_Ch1:
 	db	$68
 ; P1-34
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$01
 	db	$d3,$b2
@@ -170,7 +170,7 @@ Music_GameCorner_Ch2:
 	db	$dc,$92
 	db	$db,$01
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-13
 	db	$d6,$61
 	db	$d4,$91
@@ -184,7 +184,7 @@ Music_GameCorner_Ch2:
 	db	$d3,$12
 ; P2-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-25
 	db	$d3,$61
 	db	$41
@@ -236,7 +236,7 @@ Music_GameCorner_Ch2:
 	db	$dc,$a4
 ; P2-34
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d6,$11
 	db	$d4,$42
@@ -345,41 +345,41 @@ Music_GameCorner_Ch3:
 @mainloop:
 	db	$d8,$c,$14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$d3,$80
 	db	$dc,$3c
 	db	$a2
 ; P3-4
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$d3,$b0
 	db	$dc,$3c
 	db	$d2,$12
 ; P3-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-7
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P3-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-9
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P3-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-11
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P3-12
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-13
 	db	$d5,$60
 	db	$d4,$60
@@ -398,41 +398,41 @@ Music_GameCorner_Ch3:
 	db	$01
 ; P3-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$d3,$80
 	db	$dc,$3c
 	db	$a2
 ; P3-16
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$d3,$b0
 	db	$dc,$3c
 	db	$d2,$12
 ; P3-18
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-19
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P3-20
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-21
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P3-22
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-23
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P3-24
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-25
 	db	$d5,$60
 	db	$d4,$60
@@ -452,7 +452,7 @@ Music_GameCorner_Ch3:
 	db	$00
 ; P3-26
 	db	$fe
-	dw	@sub5
+	dw	$ffff & @sub5
 ; P3-28
 	db	$dc,$28
 	db	$d5,$11
@@ -493,7 +493,7 @@ Music_GameCorner_Ch3:
 	db	$d4,$60
 ; P3-30
 	db	$fe
-	dw	@sub5
+	dw	$ffff & @sub5
 ; P3-32
 	db	$dc,$28
 	db	$d5,$81
@@ -534,7 +534,7 @@ Music_GameCorner_Ch3:
 	db	$30
 ; P3-34
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$dc,$14
 	db	$d5,$10
@@ -667,7 +667,7 @@ Music_GameCorner_Ch5:
 ; P4-2
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-3
 @loop1:
 	db	$b1
@@ -679,7 +679,7 @@ Music_GameCorner_Ch5:
 	db	$31
 	db	$71
 	db	$fd,6
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P4-4
 ; P4-5
 ; P4-6
@@ -687,7 +687,7 @@ Music_GameCorner_Ch5:
 ; P4-8
 ; P4-9
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-10
 @loop2:
 	db	$b1
@@ -699,7 +699,7 @@ Music_GameCorner_Ch5:
 	db	$31
 	db	$71
 	db	$fd,3
-	dw	@loop2
+	dw	$ffff & @loop2
 ; P4-11
 ; P4-12
 ; P4-13
@@ -709,7 +709,7 @@ Music_GameCorner_Ch5:
 	db	$71
 ; P4-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-15
 @loop3:
 	db	$b1
@@ -721,7 +721,7 @@ Music_GameCorner_Ch5:
 	db	$31
 	db	$71
 	db	$fd,6
-	dw	@loop3
+	dw	$ffff & @loop3
 ; P4-16
 ; P4-17
 ; P4-18
@@ -729,7 +729,7 @@ Music_GameCorner_Ch5:
 ; P4-20
 ; P4-21
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-22
 @loop4:
 	db	$b1
@@ -741,7 +741,7 @@ Music_GameCorner_Ch5:
 	db	$31
 	db	$71
 	db	$fd,3
-	dw	@loop4
+	dw	$ffff & @loop4
 ; P4-23
 ; P4-24
 ; P4-25
@@ -771,7 +771,7 @@ Music_GameCorner_Ch5:
 	db	$31
 	db	$71
 	db	$fd,3
-	dw	@loop5
+	dw	$ffff & @loop5
 ; P4-27
 ; P4-28
 ; P4-29
@@ -805,7 +805,7 @@ Music_GameCorner_Ch5:
 	db	$31
 	db	$71
 	db	$fd,3
-	dw	@loop6
+	dw	$ffff & @loop6
 ; P4-31
 ; P4-32
 ; P4-33
@@ -819,7 +819,7 @@ Music_GameCorner_Ch5:
 	db	$30
 	db	$41
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$11
 	db	$71

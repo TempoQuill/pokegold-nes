@@ -1,10 +1,10 @@
 Music_RocketBattle:
 	db	080h
-	dw	Music_RocketBattle_Ch1
+	dw	$ffff & Music_RocketBattle_Ch1
 	db	001h
-	dw	Music_RocketBattle_Ch2
+	dw	$ffff & Music_RocketBattle_Ch2
 	db	002h
-	dw	Music_RocketBattle_Ch3
+	dw	$ffff & Music_RocketBattle_Ch3
 ;----------------------------------------
 Music_RocketBattle_Ch1:
 ;----------------------------------------
@@ -58,7 +58,7 @@ Music_RocketBattle_Ch1:
 	db	$dc,$b7
 	db	$33
 	db	$fd,3
-	dw	@loop301
+	dw	$ffff & @loop301
 ; P1-6
 	db	$dc,$b2
 	db	$15
@@ -74,7 +74,7 @@ Music_RocketBattle_Ch1:
 	db	$dc,$b7
 	db	$63
 	db	$fd,3
-	dw	@loop302
+	dw	$ffff & @loop302
 ; P1-10
 	db	$dc,$b2
 	db	$55
@@ -308,7 +308,7 @@ Music_RocketBattle_Ch1:
 	db	$a1
 	db	$83
 	db	$fd,2
-	dw	@loop11
+	dw	$ffff & @loop11
 ; P1-46
 	db	$dc,$b2
 	db	$65
@@ -390,7 +390,7 @@ Music_RocketBattle_Ch1:
 	db	$31
 	db	$61
 	db	$fd,0
-	dw	@loop10
+	dw	$ffff & @loop10
 ;----------------------------------------
 Music_RocketBattle_Ch2:
 ;----------------------------------------
@@ -441,7 +441,7 @@ Music_RocketBattle_Ch2:
 	db	$dc,$c7
 	db	$d4,$b3
 	db	$fd,3
-	dw	@loop201
+	dw	$ffff & @loop201
 ; P2-6
 	db	$dc,$c2
 	db	$a5
@@ -457,7 +457,7 @@ Music_RocketBattle_Ch2:
 	db	$dc,$c7
 	db	$d3,$b3
 	db	$fd,3
-	dw	@loop202
+	dw	$ffff & @loop202
 ; P2-10
 	db	$dc,$c2
 	db	$a5
@@ -468,7 +468,7 @@ Music_RocketBattle_Ch2:
 ; P2-11
 ;	db	$ef,$ff
 	db	$fe
-	dw	@sub2_11_12
+	dw	$ffff & @sub2_11_12
 ; P2-13
 	db	$dc,$b0
 	db	$6f
@@ -478,7 +478,7 @@ Music_RocketBattle_Ch2:
 @loop20:
 ; P2-15
 	db	$fe
-	dw	@sub2_11_12
+	dw	$ffff & @sub2_11_12
 ; P2-17
 	db	$dc,$b0
 	db	$67
@@ -625,7 +625,7 @@ Music_RocketBattle_Ch2:
 	db	$d3,$31
 	db	$13
 	db	$fd,3
-	dw	@loop21
+	dw	$ffff & @loop21
 ; P2-46
 	db	$dc,$c2
 	db	$d4,$b5
@@ -672,7 +672,7 @@ Music_RocketBattle_Ch2:
 	db	$dc,$c7
 	db	$b7
 	db	$fd,0
-	dw	@loop20
+	dw	$ffff & @loop20
 @sub2_11_12:
 	db	$dc,$c6
 	db	$d3,$a5
@@ -708,9 +708,9 @@ Music_RocketBattle_Ch3:
 ; P3-3
 @loop301:
 	db	$fe
-	dw	@sub3_3_3
+	dw	$ffff & @sub3_3_3
 	db	$fd,3
-	dw	@loop301
+	dw	$ffff & @loop301
 ; P3-6
 	db	$d5,$a1
 	db	$d4,$51
@@ -723,9 +723,9 @@ Music_RocketBattle_Ch3:
 ; P3-7
 @loop302:
 	db	$fe
-	dw	@sub3_3_3
+	dw	$ffff & @sub3_3_3
 	db	$fd,3
-	dw	@loop302
+	dw	$ffff & @loop302
 ; P3-10
 	db	$d5,$a1
 	db	$d4,$51
@@ -738,21 +738,21 @@ Music_RocketBattle_Ch3:
 ; P3-11
 ;	db	$ef,$0f
 	db	$fe
-	dw	@sub3_11_12
+	dw	$ffff & @sub3_11_12
 ; P3-13
 	db	$fe
-	dw	@sub3_13_13
+	dw	$ffff & @sub3_13_13
 	db	$d4,$61
 ; P3-14
 	db	$fe
-	dw	@sub3_14_14
+	dw	$ffff & @sub3_14_14
 @loop30:
 ; P3-15
 	db	$fe
-	dw	@sub3_11_12
+	dw	$ffff & @sub3_11_12
 ; P3-17
 	db	$fe
-	dw	@sub3_13_13
+	dw	$ffff & @sub3_13_13
 	db	$d4,$b1
 ; P3-18
 	db	$d5,$b1
@@ -765,7 +765,7 @@ Music_RocketBattle_Ch3:
 	db	$31
 ; P3-19
 	db	$fe
-	dw	@sub3_19_19
+	dw	$ffff & @sub3_19_19
 ; P3-20
 	db	$d5,$a1
 	db	$d4,$51
@@ -780,7 +780,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$b1
 	db	$d4,$61
 	db	$fd,5
-	dw	@loop31
+	dw	$ffff & @loop31
 ; P3-22
 	db	$b1
 	db	$d5,$b1
@@ -790,7 +790,7 @@ Music_RocketBattle_Ch3:
 	db	$d4,$b1
 ; P3-23
 	db	$fe
-	dw	@sub3_19_19
+	dw	$ffff & @sub3_19_19
 ; P3-24
 	db	$d5,$a1
 	db	$d4,$51
@@ -802,10 +802,10 @@ Music_RocketBattle_Ch3:
 	db	$31
 ; P3-25
 	db	$fe
-	dw	@sub3_19_19
+	dw	$ffff & @sub3_19_19
 ; P3-26
 	db	$fe
-	dw	@sub3_19_19
+	dw	$ffff & @sub3_19_19
 ; P3-27
 @loop32:
 	db	$d5,$a1
@@ -817,7 +817,7 @@ Music_RocketBattle_Ch3:
 	db	$81
 	db	$61
 	db	$fd,7
-	dw	@loop32
+	dw	$ffff & @loop32
 ; P3-34
 	db	$d5,$a1
 	db	$d4,$51
@@ -832,7 +832,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$b1
 	db	$d4,$61
 	db	$fd,4
-	dw	@loop33
+	dw	$ffff & @loop33
 ; P3-36
 	db	$d5,$b1
 	db	$d4,$61
@@ -847,7 +847,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$a1
 	db	$d4,$51
 	db	$fd,13
-	dw	@loop331
+	dw	$ffff & @loop331
 ; P3-40
 	db	$d5,$a1
 	db	$dc,$32
@@ -861,7 +861,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$a1
 	db	$d4,$51
 	db	$fd,4
-	dw	@loop34
+	dw	$ffff & @loop34
 ; P3-42
 	db	$d5,$a1
 	db	$d3,$31
@@ -877,7 +877,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$b1
 	db	$d4,$61
 	db	$fd,7
-	dw	@loop35
+	dw	$ffff & @loop35
 ; P3-44
 	db	$51
 	db	$61
@@ -886,7 +886,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$b1
 	db	$d4,$61
 	db	$fd,5
-	dw	@loop36
+	dw	$ffff & @loop36
 ; P3-46
 	db	$d4,$b1
 	db	$dc,$32
@@ -897,15 +897,15 @@ Music_RocketBattle_Ch3:
 	db	$81
 ; P3-47
 	db	$fe
-	dw	@sub3_47_47
+	dw	$ffff & @sub3_47_47
 	db	$d4,$51
 ; P3-48
 	db	$fe
-	dw	@sub3_13_13
+	dw	$ffff & @sub3_13_13
 	db	$d4,$61
 ; P3-49
 	db	$fe
-	dw	@sub3_47_47
+	dw	$ffff & @sub3_47_47
 	db	$d4,$a1
 ; P3-50
 	db	$d5,$a1
@@ -918,16 +918,16 @@ Music_RocketBattle_Ch3:
 	db	$d4,$51
 ; P3-51
 	db	$fe
-	dw	@sub3_11_12
+	dw	$ffff & @sub3_11_12
 ; P3-53
 	db	$fe
-	dw	@sub3_13_13
+	dw	$ffff & @sub3_13_13
 	db	$d4,$61
 ; P3-54
 	db	$fe
-	dw	@sub3_14_14
+	dw	$ffff & @sub3_14_14
 	db	$fd,0
-	dw	@loop30
+	dw	$ffff & @loop30
 @sub3_3_3:
 	db	$d5,$a1
 	db	$d4,$51
@@ -980,7 +980,7 @@ Music_RocketBattle_Ch3:
 	db	$d5,$a1
 	db	$d4,$51
 	db	$fd,4
-	dw	@sub3_19_19
+	dw	$ffff & @sub3_19_19
 	db	$ff
 @sub3_47_47:
 	db	$d5,$a1

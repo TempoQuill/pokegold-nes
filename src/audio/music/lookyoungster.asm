@@ -1,10 +1,10 @@
 Music_LookYoungster:
 	db	040h
-	dw	Music_LookYoungster_Ch1
+	dw	$ffff & Music_LookYoungster_Ch1
 	db	001h
-	dw	Music_LookYoungster_Ch2
+	dw	$ffff & Music_LookYoungster_Ch2
 	db	002h
-	dw	Music_LookYoungster_Ch3
+	dw	$ffff & Music_LookYoungster_Ch3
 ;----------------------------------------
 Music_LookYoungster_Ch1:
 ;----------------------------------------
@@ -62,7 +62,7 @@ Music_LookYoungster_Ch1:
 	db	$0f
 ; P1-8
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 	db	$ff
 ;----------------------------------------
 Music_LookYoungster_Ch2:
@@ -155,7 +155,7 @@ Music_LookYoungster_Ch2:
 	db	$00
 ; P2-8
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 	db	$ff
 ;----------------------------------------
 Music_LookYoungster_Ch3:
@@ -261,6 +261,6 @@ Music_LookYoungster_Ch3:
 	db	$00
 ; P3-8
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 	db	$ff
 

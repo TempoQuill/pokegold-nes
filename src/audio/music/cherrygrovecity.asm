@@ -1,14 +1,14 @@
 Music_CherrygroveCity:
 	db	080h
-	dw	Music_CherrygroveCity_Ch1
+	dw	$ffff & Music_CherrygroveCity_Ch1
 	db	001h
-	dw	Music_CherrygroveCity_Ch2
+	dw	$ffff & Music_CherrygroveCity_Ch2
 	db	002h
-	dw	Music_CherrygroveCity_Ch3
+	dw	$ffff & Music_CherrygroveCity_Ch3
 	db	003h
-	dw	Music_CherrygroveCity_Ch4
+	dw	$ffff & Music_CherrygroveCity_Ch4
 	db	004h
-	dw	Music_CherrygroveCity_Ch5
+	dw	$ffff & Music_CherrygroveCity_Ch5
 ;----------------------------------------
 Music_CherrygroveCity_Ch1:
 ;----------------------------------------
@@ -92,7 +92,7 @@ Music_CherrygroveCity_Ch1:
 	db	$d5,$a3
 	db	$d4,$13
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_CherrygroveCity_Ch2:
 ;----------------------------------------
@@ -173,7 +173,7 @@ Music_CherrygroveCity_Ch2:
 	db	$dc,$a7
 	db	$67
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_CherrygroveCity_Ch3:
 ;----------------------------------------
@@ -308,7 +308,7 @@ Music_CherrygroveCity_Ch3:
 	db	$61
 	db	$a1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_CherrygroveCity_Ch4:
 ;----------------------------------------
@@ -338,5 +338,5 @@ Music_CherrygroveCity_Ch5:
 	db	$21
 	db	$81
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 

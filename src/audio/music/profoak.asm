@@ -1,10 +1,10 @@
 Music_ProfOak:
 	db	040h
-	dw	Music_ProfOak_Ch1
+	dw	$ffff & Music_ProfOak_Ch1
 	db	001h
-	dw	Music_ProfOak_Ch2
+	dw	$ffff & Music_ProfOak_Ch2
 	db	002h
-	dw	Music_ProfOak_Ch3
+	dw	$ffff & Music_ProfOak_Ch3
 ;----------------------------------------
 Music_ProfOak_Ch1:
 ;----------------------------------------
@@ -30,47 +30,47 @@ Music_ProfOak_Ch1:
 @loop5:
 	db	$dc,$91
 	db	$fe
-	dw	@sub5
+	dw	$ffff & @sub5
 ; P1-6
 	db	$fe
-	dw	@sub5
+	dw	$ffff & @sub5
 ; P1-7
 	db	$fe
-	dw	@sub7
+	dw	$ffff & @sub7
 ; P1-8
 	db	$fe
-	dw	@sub7
+	dw	$ffff & @sub7
 	db	$fd,2
-	dw	@loop5
+	dw	$ffff & @loop5
 @loop:
 ; P1-13
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 ; P1-14
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 ; P1-15
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 ; P1-16
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 ; P1-17
 	db	$d9,$02
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 ; P1-18
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 	db	$d9,$00
 ; P1-19
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 ; P1-20
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub5:
 	db	$d5,$c1
 	db	$d4,$51
@@ -171,7 +171,7 @@ Music_ProfOak_Ch2:
 	db	$c1
 	db	$c3
 	db	$fd,2
-	dw	@loop4b
+	dw	$ffff & @loop4b
 	db	$05
 ; P2-13
 	db	$dc,$b4
@@ -220,7 +220,7 @@ Music_ProfOak_Ch2:
 ; P2-20
 	db	$9f
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 ;----------------------------------------
 Music_ProfOak_Ch3:
 ;----------------------------------------
@@ -241,51 +241,51 @@ Music_ProfOak_Ch3:
 	db	$51
 ; P3-4
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P3-5-12
 @loop5:
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P3-6
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P3-7
 	db	$fe
-	dw	@sub7
+	dw	$ffff & @sub7
 ; P3-8
 	db	$fe
-	dw	@sub7
+	dw	$ffff & @sub7
 	db	$fd,2
-	dw	@loop5
+	dw	$ffff & @loop5
 ; P3-13
 @loop:
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 ; P3-14
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 ; P3-15
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 ; P3-16
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 ; P3-17
 	db	$d9,$02
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 ; P3-18
 	db	$fe
-	dw	@sub13
+	dw	$ffff & @sub13
 	db	$d9,$00
 ; P3-19
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 ; P3-20
 	db	$fe
-	dw	@sub15
+	dw	$ffff & @sub15
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub4:
 	db	$51
 	db	$01

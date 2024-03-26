@@ -14,15 +14,6 @@ ENDIF
 ; audio
 .include "src/audio.asm"
 
-.base $a000
-; pokemon cries
-.include "src/data/pokemon-cries.asm"
-CryCoord_End:
-IF CryCoord_End > $c000
-	ERROR "Bank grew too big. Must be within 8K of memory."
-ENDIF
-.align $2000, $00
-
 IFNDEF NSF_FILE
 	.base $2000
 	.dsb ($72 * $2000), $00

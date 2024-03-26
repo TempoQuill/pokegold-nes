@@ -1,12 +1,12 @@
 Music_PokemonMarch:
 	db	060h
-	dw	Music_PokemonMarch_Ch1
+	dw	$ffff & Music_PokemonMarch_Ch1
 	db	001h
-	dw	Music_PokemonMarch_Ch2
+	dw	$ffff & Music_PokemonMarch_Ch2
 	db	002h
-	dw	Music_PokemonMarch_Ch3
+	dw	$ffff & Music_PokemonMarch_Ch3
 	db	004h
-	dw	Music_PokemonMarch_Ch5
+	dw	$ffff & Music_PokemonMarch_Ch5
 ;----------------------------------------
 Music_PokemonMarch_Ch1:
 ;----------------------------------------
@@ -25,70 +25,70 @@ Music_PokemonMarch_Ch1:
 @mainloop:
 ; P1-1
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$41
 	db	$11
 	db	$41
 	db	$11
 ; P1-2
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$41
 	db	$11
 	db	$41
 	db	$81
 ; P1-3
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$11
 	db	$11
 	db	$41
 	db	$11
 ; P1-4
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$41
 	db	$11
 	db	$21
 	db	$41
 ; P1-5
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$61
 	db	$31
 	db	$61
 	db	$31
 ; P1-6
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$61
 	db	$31
 	db	$61
 	db	$a1
 ; P1-7
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$31
 	db	$31
 	db	$61
 	db	$31
 ; P1-8
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$61
 	db	$31
 	db	$61
 	db	$81
 ; P1-9
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$61
 	db	$31
 	db	$61
 	db	$31
 ; P1-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$41
 	db	$11
 	db	$41
@@ -116,7 +116,7 @@ Music_PokemonMarch_Ch1:
 	db	$83
 	db	$b1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P1-1
 	db	$03
@@ -248,7 +248,7 @@ Music_PokemonMarch_Ch2:
 	db	$80
 	db	$04
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_PokemonMarch_Ch3:
 ;----------------------------------------
@@ -258,17 +258,17 @@ Music_PokemonMarch_Ch3:
 @mainloop:
 ; P3-1
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$01
 	db	$d3,$41
 ; P3-2
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d3,$91
 	db	$41
 ; P3-3
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$01
 	db	$d3,$41
 ; P3-4
@@ -300,7 +300,7 @@ Music_PokemonMarch_Ch3:
 	db	$d3,$61
 	db	$00
 	db	$fd,3
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P3-8
 	db	$d4,$b1
 	db	$01
@@ -365,7 +365,7 @@ Music_PokemonMarch_Ch3:
 	db	$01
 	db	$91
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P3-1
 	db	$d4,$91
@@ -385,11 +385,11 @@ Music_PokemonMarch_Ch5:
 	db	$e3,$005
 	db	$d8,$8
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 @mainloop:
 ; P4-1
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-2
 	db	$13
 	db	$11
@@ -405,28 +405,28 @@ Music_PokemonMarch_Ch5:
 ; P4-3
 	db	$d8,$8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-4
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-5
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-6
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-7
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-8
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-9
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-11
 	db	$23
 	db	$21
@@ -442,9 +442,9 @@ Music_PokemonMarch_Ch5:
 ; P4-12
 	db	$d8,$8
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$13
 	db	$11

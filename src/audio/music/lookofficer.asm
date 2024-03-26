@@ -1,10 +1,10 @@
 Music_LookOfficer:
 	db	040h
-	dw	Music_LookOfficer_Ch1
+	dw	$ffff & Music_LookOfficer_Ch1
 	db	001h
-	dw	Music_LookOfficer_Ch2
+	dw	$ffff & Music_LookOfficer_Ch2
 	db	002h
-	dw	Music_LookOfficer_Ch3
+	dw	$ffff & Music_LookOfficer_Ch3
 ;----------------------------------------
 Music_LookOfficer_Ch1:
 ;----------------------------------------
@@ -43,7 +43,7 @@ Music_LookOfficer_Ch1:
 ; P1-7
 	db	$af
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_LookOfficer_Ch2:
 ;----------------------------------------
@@ -76,17 +76,17 @@ Music_LookOfficer_Ch2:
 	db	$51
 	db	$91
 	db	$fd,2
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ; P2-6
 	db	$d9,$01
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d9,$00
 ; P2-7
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d6,$a1
 	db	$d5,$21
@@ -144,4 +144,4 @@ Music_LookOfficer_Ch3:
 	db	$57
 	db	$27
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop

@@ -1,10 +1,10 @@
 Music_PalletTown:
 	db	040h
-	dw	Music_PalletTown_Ch1
+	dw	$ffff & Music_PalletTown_Ch1
 	db	001h
-	dw	Music_PalletTown_Ch2
+	dw	$ffff & Music_PalletTown_Ch2
 	db	002h
-	dw	Music_PalletTown_Ch3
+	dw	$ffff & Music_PalletTown_Ch3
 ;----------------------------------------
 Music_PalletTown_Ch1:
 ;----------------------------------------
@@ -90,7 +90,7 @@ Music_PalletTown_Ch1:
 	db	$11
 	db	$d4,$c1
 	db	$fd,2
-	dw	@loop10
+	dw	$ffff & @loop10
 ; P1-14
 	db	$dc,$3f
 	db	$d3,$13
@@ -124,7 +124,7 @@ Music_PalletTown_Ch1:
 	db	$dc,$1f
 	db	$77
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 ;----------------------------------------
 Music_PalletTown_Ch2:
 ;----------------------------------------
@@ -203,7 +203,7 @@ Music_PalletTown_Ch2:
 	db	$31
 	db	$83
 	db	$fd,2
-	dw	@loop10
+	dw	$ffff & @loop10
 ; P2-14
 	db	$11
 	db	$d4,$53
@@ -236,7 +236,7 @@ Music_PalletTown_Ch2:
 	db	$d6,$c1
 	db	$a1
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 ;----------------------------------------
 Music_PalletTown_Ch3:
 ;----------------------------------------
@@ -375,4 +375,4 @@ Music_PalletTown_Ch3:
 	db	$c7
 	db	$a7
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop

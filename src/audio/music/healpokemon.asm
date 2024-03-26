@@ -1,10 +1,10 @@
 Music_HealPokemon:
 	db	040h
-	dw	Music_HealPokemon_Ch1
+	dw	$ffff & Music_HealPokemon_Ch1
 	db	001h
-	dw	Music_HealPokemon_Ch2
+	dw	$ffff & Music_HealPokemon_Ch2
 	db	002h
-	dw	Music_HealPokemon_Ch3
+	dw	$ffff & Music_HealPokemon_Ch3
 Music_HealPokemon_Ch1:
 	db	$da,$00,$90
 	db	$db,$02

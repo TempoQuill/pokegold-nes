@@ -1,10 +1,10 @@
 Music_LavenderTown:
 	db	040h
-	dw	Music_LavenderTown_Ch1
+	dw	$ffff & Music_LavenderTown_Ch1
 	db	001h
-	dw	Music_LavenderTown_Ch2
+	dw	$ffff & Music_LavenderTown_Ch2
 	db	002h
-	dw	Music_LavenderTown_Ch3
+	dw	$ffff & Music_LavenderTown_Ch3
 	db	003h
 ;----------------------------------------
 Music_LavenderTown_Ch1:
@@ -27,7 +27,7 @@ Music_LavenderTown_Ch1:
 ; P1-6
 @loop:
 	db	$fe
-	dw	@sub6_10
+	dw	$ffff & @sub6_10
 ; P1-11
 	db	$dc,$93
 	db	$d2,$31
@@ -47,7 +47,7 @@ Music_LavenderTown_Ch1:
 	db	$a1
 ; P1-12
 	db	$fe
-	dw	@sub12
+	dw	$ffff & @sub12
 	db	$dc,$93
 ; P1-13
 	db	$dc,$93
@@ -68,7 +68,7 @@ Music_LavenderTown_Ch1:
 	db	$81
 ; P1-14
 	db	$fe
-	dw	@sub6_10
+	dw	$ffff & @sub6_10
 ; P1-18
 	db	$dc,$93
 	db	$d2,$31
@@ -88,7 +88,7 @@ Music_LavenderTown_Ch1:
 	db	$81
 ; P1-20
 	db	$fe
-	dw	@sub12
+	dw	$ffff & @sub12
 ; P1-21
 	db	$dc,$93
 	db	$d1,$11
@@ -135,7 +135,7 @@ Music_LavenderTown_Ch1:
 	db	$d4,$a1
 	db	$61
 	db	$fd,2
-	dw	@sub23
+	dw	$ffff & @sub23
 ; P1-25
 ; P1-26
 ; P1-27
@@ -161,7 +161,7 @@ Music_LavenderTown_Ch1:
 	db	$c7
 ; P1-30
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub6_10:
 	db	$dc,$83
 	db	$d2,$11
@@ -292,7 +292,7 @@ Music_LavenderTown_Ch2:
 	db	$dc,$63
 	db	$71
 	db	$fd,3
-	dw	@mero2
+	dw	$ffff & @mero2
 ; P2-3
 ; P2-4
 ; P2-5
@@ -316,7 +316,7 @@ Music_LavenderTown_Ch2:
 @loop:
 	db	$dc,$b5
 	db	$fe
-	dw	@mero6_10
+	dw	$ffff & @mero6_10
 ; P2-11
 	db	$d5,$73
 	db	$d4,$13
@@ -334,7 +334,7 @@ Music_LavenderTown_Ch2:
 	db	$83
 ; P2-14
 	db	$fe
-	dw	@mero6_10
+	dw	$ffff & @mero6_10
 ; P2-11
 	db	$d5,$83
 	db	$d4,$13
@@ -373,7 +373,7 @@ Music_LavenderTown_Ch2:
 	db	$85
 ; P2-30
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @mero6_10:
 	db	$d5,$13
 	db	$83
@@ -573,7 +573,7 @@ Music_LavenderTown_Ch3:
 	db	$61
 ; P3-30
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 ;:
 
 

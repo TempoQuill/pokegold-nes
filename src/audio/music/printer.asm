@@ -1,6 +1,6 @@
 Music_Printer:
-	db 002h
-	dw Music_Printer_Ch3
+	db	002h
+	dw	$ffff & Music_Printer_Ch3
 
 Music_Printer_Ch3:
 	tempo 256
@@ -317,5 +317,5 @@ Music_Printer_Ch3:
 	rest 1
 	note D#, 1
 	rest 1
-	db sound_loop_cmd, 0
-	dw @mainloop
+	db	sound_loop_cmd,0
+	dw	$ffff & @mainloop

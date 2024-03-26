@@ -1,10 +1,10 @@
 Music_WildPokemonVictory:
 	db	040h
-	dw	Music_WildPokemonVictory_Ch1
+	dw	$ffff & Music_WildPokemonVictory_Ch1
 	db	001h
-	dw	Music_WildPokemonVictory_Ch2
+	dw	$ffff & Music_WildPokemonVictory_Ch2
 	db	002h
-	dw	Music_WildPokemonVictory_Ch3
+	dw	$ffff & Music_WildPokemonVictory_Ch3
 ;----------------------------------------
 Music_WildPokemonVictory_Ch1:
 ;----------------------------------------
@@ -25,13 +25,13 @@ Music_WildPokemonVictory_Ch1_start:
 ;	db	$ef,$0f
 @loop:
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 	db	$71
 	db	$71
 	db	$73
 ; P1-5-6
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P1-6
 	db	$93
 	db	$dc,$78
@@ -39,20 +39,20 @@ Music_WildPokemonVictory_Ch1_start:
 ; P1-7-8
 	db	$d9,$01
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 	db	$71
 	db	$71
 	db	$73
 ; P1-9-10
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 	db	$93
 	db	$d9,$00
 	db	$dc,$78
 	db	$d4,$73
 ; P1-11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub3:
 	db	$dc,$71
 	db	$d4,$90
@@ -91,13 +91,13 @@ Music_WildPokemonVictory_Ch2_start:
 ;	db	$ef,$f0
 @loop:
 	db	$fe
-	dw	@melo3
+	dw	$ffff & @melo3
 	db	$d3,$c1
 	db	$c1
 	db	$c3
 ; P2-5-6
 	db	$fe
-	dw	@melo3
+	dw	$ffff & @melo3
 	db	$d3,$c3
 	db	$dc,$81
 	db	$10
@@ -107,13 +107,13 @@ Music_WildPokemonVictory_Ch2_start:
 ; P2-7-8
 	db	$d9,$01
 	db	$fe
-	dw	@melo3
+	dw	$ffff & @melo3
 	db	$d3,$c1
 	db	$c1
 	db	$c3
 ; P2-9-10
 	db	$fe
-	dw	@melo3
+	dw	$ffff & @melo3
 	db	$d3,$c3
 	db	$d9,$00
 	db	$dc,$81
@@ -123,7 +123,7 @@ Music_WildPokemonVictory_Ch2_start:
 	db	$a0
 ; P2-11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @melo3:
 	db	$dc,$81
 	db	$d3,$c1
@@ -154,14 +154,14 @@ Music_WildPokemonVictory_Ch3:
 Music_WildPokemonVictory_Ch3_start:
 @loop:
 	db	$fe
-	dw	@base3
+	dw	$ffff & @base3
 	db	$41
 	db	$21
 	db	$d5,$c1
 	db	$01
 ; P3-5-6
 	db	$fe
-	dw	@base3
+	dw	$ffff & @base3
 	db	$51
 	db	$01
 	db	$dc,$4a
@@ -169,14 +169,14 @@ Music_WildPokemonVictory_Ch3_start:
 ; P3-7-8
 	db	$d9,$01
 	db	$fe
-	dw	@base3
+	dw	$ffff & @base3
 	db	$41
 	db	$21
 	db	$d5,$c1
 	db	$01
 ; P3-9-10
 	db	$fe
-	dw	@base3
+	dw	$ffff & @base3
 	db	$51
 	db	$01
 	db	$d9,$00
@@ -184,7 +184,7 @@ Music_WildPokemonVictory_Ch3_start:
 	db	$d5,$c3
 ; P3-11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @base3:
 	db	$dc,$25
 	db	$d4,$51
@@ -202,11 +202,11 @@ Music_WildPokemonVictory_Ch3_start:
 
 Music_SuccessfulCapture:
 	db	040h
-	dw	Music_SuccessfulCapture_Ch1
+	dw	$ffff & Music_SuccessfulCapture_Ch1
 	db	001h
-	dw	Music_SuccessfulCapture_Ch2
+	dw	$ffff & Music_SuccessfulCapture_Ch2
 	db	002h
-	dw	Music_SuccessfulCapture_Ch3
+	dw	$ffff & Music_SuccessfulCapture_Ch3
 Music_SuccessfulCapture_Ch1:
 	db	$da,$00,$7e
 ;	db	$e5,$77
@@ -214,16 +214,16 @@ Music_SuccessfulCapture_Ch1:
 	db	$e6,$00,$01
 	db	$d8,$c,$a1
 	db	$fc
-	dw	Music_WildPokemonVictory_Ch1_start
+	dw	$ffff & Music_WildPokemonVictory_Ch1_start
 Music_SuccessfulCapture_Ch2:
 	db	$e1,$12,$24
 	db	$d8,$c,$c1
 	db	$db,$02
 	db	$fc
-	dw	Music_WildPokemonVictory_Ch2_start
+	dw	$ffff & Music_WildPokemonVictory_Ch2_start
 Music_SuccessfulCapture_Ch3:
 	db	$d8,$c,$25
 	db	$fc
-	dw	Music_WildPokemonVictory_Ch3_start
+	dw	$ffff & Music_WildPokemonVictory_Ch3_start
 
 

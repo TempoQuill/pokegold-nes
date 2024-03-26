@@ -12,7 +12,7 @@ IF Audio_SFX_END > $a000
 ENDIF
 .align $2000, $00
 
-.base $a000
+.base $1a000
 .include "src/audio/music/route1.asm"
 .include "src/audio/music/route3.asm"
 .include "src/audio/music/route11.asm"
@@ -26,12 +26,12 @@ ENDIF
 .include "src/audio/music/mtmoon.asm"
 .include "src/audio/music/showmearound.asm"
 Music0_End:
-IF Music0_End > $c000
+IF Music0_End > $1c000
 	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00
 
-.base $8000
+.base $28000
 .include "src/audio/music/violetcity.asm"
 .include "src/audio/music/route29.asm"
 .include "src/audio/music/halloffame.asm"
@@ -51,12 +51,12 @@ ENDIF
 .include "src/audio/music/lookrival.asm"
 .include "src/audio/music/surf.asm"
 Music1_End:
-IF Music1_End > $a000
+IF Music1_End > $2a000
 	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00
 
-.base $a000
+.base $3a000
 .include "src/audio/music/nationalpark.asm"
 .include "src/audio/music/azaleatown.asm"
 .include "src/audio/music/unioncave.asm"
@@ -67,12 +67,12 @@ ENDIF
 .include "src/audio/music/pokemonmarch.asm"
 .include "src/audio/music/lookhiker.asm"
 Music2_End:
-IF Music2_End > $c000
+IF Music2_End > $3c000
 	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00
 
-.base $8000
+.base $48000
 .include "src/audio/music/credits.asm"
 
 .include "src/audio/music/route34.asm"
@@ -82,12 +82,12 @@ ENDIF
 .include "src/audio/music/titlescreen.asm"
 .include "src/audio/music/trainervictory.asm"
 Music3_End:
-IF Music3_End > $a000
+IF Music3_End > $4a000
 	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00
 
-.base $a000
+.base $5a000
 .include "src/audio/music/theend.asm"
 
 .include "src/audio/music/gamecorner.asm"
@@ -96,15 +96,24 @@ ENDIF
 .include "src/audio/music/magnettrain.asm"
 .include "src/audio/music/lavendertown.asm"
 Music4_End:
-IF Music4_End > $c000
+IF Music4_End > $5c000
 	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00
 
-.base $8000
+.base $68000
 .include "src/audio/cries.asm"
 MonCries_End:
-IF MonCries_End > $a000
+IF MonCries_End > $6a000
+	ERROR "Bank grew too big. Must be within 8K of memory."
+ENDIF
+.align $2000, $00
+
+.base $7a000
+; pokemon cries
+.include "src/data/pokemon-cries.asm"
+CryCoord_End:
+IF CryCoord_End > $7c000
 	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00

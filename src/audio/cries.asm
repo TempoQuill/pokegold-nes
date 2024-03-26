@@ -1,201 +1,201 @@
 Cry_Crow:
 	db	045h
-	dw	Cry_Crow_Ch6
+	dw	$ffff & Cry_Crow_Ch6
 	db	006h
-	dw	Cry_Crow_Ch7
+	dw	$ffff & Cry_Crow_Ch7
 	db	008h
-	dw	Cry_Crow_Ch9
+	dw	$ffff & Cry_Crow_Ch9
 Cry_Derble1:
 	db	025h
-	dw	Cry_Derble1_Ch6
+	dw	$ffff & Cry_Derble1_Ch6
 	db	006h
-	dw	Cry_Derble1_Ch7
+	dw	$ffff & Cry_Derble1_Ch7
 Cry_Derble2:
 	db	025h
-	dw	Cry_Derble2_Ch6
+	dw	$ffff & Cry_Derble2_Ch6
 	db	006h
-	dw	Cry_Derble2_Ch7
+	dw	$ffff & Cry_Derble2_Ch7
 Cry_Derble4:
 	db	045h
-	dw	Cry_Derble4_Ch6
+	dw	$ffff & Cry_Derble4_Ch6
 	db	006h
-	dw	Cry_Derble4_Ch7
+	dw	$ffff & Cry_Derble4_Ch7
 	db	008h
-	dw	Cry_Derble4_Ch9
+	dw	$ffff & Cry_Derble4_Ch9
 Cry_Tyranitar:
 	db	045h
-	dw	Cry_Tyranitar_Ch6
+	dw	$ffff & Cry_Tyranitar_Ch6
 	db	006h
-	dw	Cry_Tyranitar_Ch7
+	dw	$ffff & Cry_Tyranitar_Ch7
 	db	008h
-	dw	Cry_Tyranitar_Ch9
+	dw	$ffff & Cry_Tyranitar_Ch9
 Cry_Hoothoot:
 	db	045h
-	dw	Cry_Hoothoot_Ch6
+	dw	$ffff & Cry_Hoothoot_Ch6
 	db	006h
-	dw	Cry_Hoothoot_Ch7
+	dw	$ffff & Cry_Hoothoot_Ch7
 	db	008h
-	dw	Cry_Hoothoot_Ch9
+	dw	$ffff & Cry_Hoothoot_Ch9
 Cry_Phanpy:
 	db	025h
-	dw	Cry_Phanpy_Ch6
+	dw	$ffff & Cry_Phanpy_Ch6
 	db	006h
-	dw	Cry_Phanpy_Ch7
+	dw	$ffff & Cry_Phanpy_Ch7
 Cry_Slowking:
 	db	045h
-	dw	Cry_Slowking_Ch6
+	dw	$ffff & Cry_Slowking_Ch6
 	db	006h
-	dw	Cry_Slowking_Ch7
+	dw	$ffff & Cry_Slowking_Ch7
 	db	008h
-	dw	Cry_Slowking_Ch9
+	dw	$ffff & Cry_Slowking_Ch9
 Cry_Bleet1:
 	db	025h
-	dw	Cry_Bleet1_Ch6
+	dw	$ffff & Cry_Bleet1_Ch6
 	db	006h
-	dw	Cry_Bleet1_Ch7
+	dw	$ffff & Cry_Bleet1_Ch7
 Cry_Growl:
 	db	045h
-	dw	Cry_Growl_Ch6
+	dw	$ffff & Cry_Growl_Ch6
 	db	006h
-	dw	Cry_Growl_Ch7
+	dw	$ffff & Cry_Growl_Ch7
 	db	008h
-	dw	Cry_Growl_Ch9
+	dw	$ffff & Cry_Growl_Ch9
 Cry_Chikorita:
 	db	045h
-	dw	Cry_Chikorita_Ch6
+	dw	$ffff & Cry_Chikorita_Ch6
 	db	006h
-	dw	Cry_Chikorita_Ch7
+	dw	$ffff & Cry_Chikorita_Ch7
 	db	008h
-	dw	Cry_Chikorita_Ch9
+	dw	$ffff & Cry_Chikorita_Ch9
 Cry_Miltank:
 	db	025h
-	dw	Cry_Miltank_Ch6
+	dw	$ffff & Cry_Miltank_Ch6
 	db	008h
-	dw	Cry_Miltank_Ch9
+	dw	$ffff & Cry_Miltank_Ch9
 Cry_Feline:
 	db	045h
-	dw	Cry_Feline_Ch6
+	dw	$ffff & Cry_Feline_Ch6
 	db	006h
-	dw	Cry_Feline_Ch7
+	dw	$ffff & Cry_Feline_Ch7
 	db	008h
-	dw	Cry_Feline_Ch9
+	dw	$ffff & Cry_Feline_Ch9
 Cry_Hitmontop:
 	db	025h
-	dw	Cry_Hitmontop_Ch6
+	dw	$ffff & Cry_Hitmontop_Ch6
 	db	008h
-	dw	Cry_Hitmontop_Ch9
+	dw	$ffff & Cry_Hitmontop_Ch9
 Cry_Ledyba:
 	db	045h
-	dw	Cry_Ledyba_Ch6
+	dw	$ffff & Cry_Ledyba_Ch6
 	db	006h
-	dw	Cry_Ledyba_Ch7
+	dw	$ffff & Cry_Ledyba_Ch7
 	db	008h
-	dw	Cry_Ledyba_Ch9
+	dw	$ffff & Cry_Ledyba_Ch9
 Cry_Sneasel:
 	db	045h
-	dw	Cry_Sneasel_Ch6
+	dw	$ffff & Cry_Sneasel_Ch6
 	db	006h
-	dw	Cry_Sneasel_Ch7
+	dw	$ffff & Cry_Sneasel_Ch7
 	db	008h
-	dw	Cry_Sneasel_Ch9
+	dw	$ffff & Cry_Sneasel_Ch9
 Cry_Donphan:
 	db	045h
-	dw	Cry_Donphan_Ch6
+	dw	$ffff & Cry_Donphan_Ch6
 	db	006h
-	dw	Cry_Donphan_Ch7
+	dw	$ffff & Cry_Donphan_Ch7
 	db	008h
-	dw	Cry_Donphan_Ch9
+	dw	$ffff & Cry_Donphan_Ch9
 Cry_Lugia:
 	db	045h
-	dw	Cry_Lugia_Ch6
+	dw	$ffff & Cry_Lugia_Ch6
 	db	006h
-	dw	Cry_Lugia_Ch7
+	dw	$ffff & Cry_Lugia_Ch7
 	db	008h
-	dw	Cry_Lugia_Ch9
+	dw	$ffff & Cry_Lugia_Ch9
 Cry_Madame:
 	db	045h
-	dw	Cry_Madame_Ch6
+	dw	$ffff & Cry_Madame_Ch6
 	db	006h
-	dw	Cry_Madame_Ch7
+	dw	$ffff & Cry_Madame_Ch7
 	db	008h
-	dw	Cry_Madame_Ch9
+	dw	$ffff & Cry_Madame_Ch9
 Cry_Roar30:
 	db	045h
-	dw	Cry_Roar30_Ch6
+	dw	$ffff & Cry_Roar30_Ch6
 	db	006h
-	dw	Cry_Roar30_Ch7
+	dw	$ffff & Cry_Roar30_Ch7
 	db	008h
-	dw	Cry_Roar30_Ch9
+	dw	$ffff & Cry_Roar30_Ch9
 Cry_Roar40:
 	db	045h
-	dw	Cry_Roar40_Ch6
+	dw	$ffff & Cry_Roar40_Ch6
 	db	006h
-	dw	Cry_Roar40_Ch7
+	dw	$ffff & Cry_Roar40_Ch7
 	db	008h
-	dw	Cry_Roar40_Ch9
+	dw	$ffff & Cry_Roar40_Ch9
 Cry_Roar50:
 	db	045h
-	dw	Cry_Roar50_Ch6
+	dw	$ffff & Cry_Roar50_Ch6
 	db	006h
-	dw	Cry_Roar50_Ch7
+	dw	$ffff & Cry_Roar50_Ch7
 	db	008h
-	dw	Cry_Roar50_Ch9
+	dw	$ffff & Cry_Roar50_Ch9
 Cry_Roar60:
 	db	045h
-	dw	Cry_Roar60_Ch6
+	dw	$ffff & Cry_Roar60_Ch6
 	db	006h
-	dw	Cry_Roar60_Ch7
+	dw	$ffff & Cry_Roar60_Ch7
 	db	008h
-	dw	Cry_Roar60_Ch9
+	dw	$ffff & Cry_Roar60_Ch9
 Cry_Cottoncat:
 	db	045h
-	dw	Cry_Cottoncat_Ch6
+	dw	$ffff & Cry_Cottoncat_Ch6
 	db	006h
-	dw	Cry_Cottoncat_Ch7
+	dw	$ffff & Cry_Cottoncat_Ch7
 	db	008h
-	dw	Cry_Cottoncat_Ch9
+	dw	$ffff & Cry_Cottoncat_Ch9
 Cry_Mouse:
 	db	045h
-	dw	Cry_Mouse_Ch6
+	dw	$ffff & Cry_Mouse_Ch6
 	db	006h
-	dw	Cry_Mouse_Ch7
+	dw	$ffff & Cry_Mouse_Ch7
 	db	008h
-	dw	Cry_Mouse_Ch9
+	dw	$ffff & Cry_Mouse_Ch9
 Cry_HoOh:
 	db	045h
-	dw	Cry_HoOh_Ch6
+	dw	$ffff & Cry_HoOh_Ch6
 	db	006h
-	dw	Cry_HoOh_Ch7
+	dw	$ffff & Cry_HoOh_Ch7
 	db	008h
-	dw	Cry_HoOh_Ch9
+	dw	$ffff & Cry_HoOh_Ch9
 Cry_Granbull:
 	db	045h
-	dw	Cry_Granbull_Ch6
+	dw	$ffff & Cry_Granbull_Ch6
 	db	006h
-	dw	Cry_Granbull_Ch7
+	dw	$ffff & Cry_Granbull_Ch7
 	db	008h
-	dw	Cry_Granbull_Ch9
+	dw	$ffff & Cry_Granbull_Ch9
 Cry_Suicune:
 	db	045h
-	dw	Cry_Suicune_Ch6
+	dw	$ffff & Cry_Suicune_Ch6
 	db	006h
-	dw	Cry_Suicune_Ch7
+	dw	$ffff & Cry_Suicune_Ch7
 	db	008h
-	dw	Cry_Suicune_Ch9
+	dw	$ffff & Cry_Suicune_Ch9
 Cry_Tiger:
 	db	045h
-	dw	Cry_Tiger_Ch6
+	dw	$ffff & Cry_Tiger_Ch6
 	db	006h
-	dw	Cry_Tiger_Ch7
+	dw	$ffff & Cry_Tiger_Ch7
 	db	008h
-	dw	Cry_Tiger_Ch9
+	dw	$ffff & Cry_Tiger_Ch9
 Cry_Mantine:
 	db	045h
-	dw	Cry_Mantine_Ch6
+	dw	$ffff & Cry_Mantine_Ch6
 	db	006h
-	dw	Cry_Mantine_Ch7
+	dw	$ffff & Cry_Mantine_Ch7
 	db	008h
-	dw	Cry_Mantine_Ch9
+	dw	$ffff & Cry_Mantine_Ch9
 Cry_Tiger_Ch6:
 	pitch_sweep 7, -7
 	duty_cycle_pattern 1, 2, 0, 3
@@ -243,7 +243,7 @@ Cry_Suicune_Ch9:
 @loop:
 	noise_note 1, 15, 1, 78
 	db	sound_loop_cmd, 5
-	dw	@loop
+	dw	$ffff & @loop
 	noise_note 2, 13, 8, 63
 	noise_note 20, 12, 2, 95
 	sound_ret
@@ -436,11 +436,11 @@ Cry_Hoothoot_Ch7:
 @loop1:
 	square_note 2, 10, 1, 1536
 	db	sound_loop_cmd, 3
-	dw	@loop1
+	dw	$ffff & @loop1
 @loop2:
 	square_note 2, 10, 1, 1584
 	db	sound_loop_cmd, 4
-	dw	@loop2
+	dw	$ffff & @loop2
 	square_note 4, 10, 2, 1588
 	square_note 4, 9, 1, 1592
 	sound_ret
@@ -485,12 +485,12 @@ Cry_Growl_Ch7:
 	square_note 0, 14, 1, 1155
 	square_note 0, 5, 1, 1102
 	db	sound_loop_cmd, 4
-	dw	@loop1
+	dw	$ffff & @loop1
 @loop2:
 	square_note 0, 14, 1, 986
 	square_note 1, 5, 1, 786
 	db	sound_loop_cmd, 4
-	dw	@loop2
+	dw	$ffff & @loop2
 	sound_ret
 Cry_Miltank_Ch9:
 Cry_Growl_Ch9:
@@ -623,26 +623,26 @@ Cry_Lugia_Ch6:
 @loop1:
 	square_note 3, 12, 1, 1937
 	db	sound_loop_cmd, 3
-	dw	@loop1
+	dw	$ffff & @loop1
 @loop2:
 	square_note 3, 13, 1, 1201
 	db	sound_loop_cmd, 6
-	dw	@loop2
+	dw	$ffff & @loop2
 @loop3:
 	square_note 1, 13, 1, 1169
 	square_note 1, 11, 1, 1105
 	db	sound_loop_cmd, 6
-	dw	@loop3
+	dw	$ffff & @loop3
 @loop4:
 	square_note 1, 10, 3, 1137
 	square_note 1, 8, 1, 1089
 	db	sound_loop_cmd, 6
-	dw	@loop4
+	dw	$ffff & @loop4
 @loop5:
 	square_note 1, 4, 1, 1057
 	square_note 1, 2, 1, 1025
 	db	sound_loop_cmd, 4
-	dw	@loop5
+	dw	$ffff & @loop5
 	sound_ret
 Cry_Roar30_Ch7:
 Cry_Lugia_Ch7:
@@ -743,7 +743,7 @@ Cry_Roar50_Ch6:
 	square_note 1, 12, 1, 1312
 	square_note 1, 10, 1, 1056
 	db	sound_loop_cmd, 4
-	dw	@loop
+	dw	$ffff & @loop
 	duty_cycle 0
 	square_note 4, 7, 8, 1888
 	square_note 4, 7, 8, 1840
@@ -831,15 +831,15 @@ Cry_HoOh_Ch7:
 @loop1:
 	square_note 1, 15, 1, 1972
 	db	sound_loop_cmd, 8
-	dw	@loop1
+	dw	$ffff & @loop1
 @loop2:
 	square_note 1, 12, 1, 1936
 	db	sound_loop_cmd, 3
-	dw	@loop2
+	dw	$ffff & @loop2
 @loop3:
 	square_note 1, 11, 1, 1933
 	db	sound_loop_cmd, 2
-	dw	@loop3
+	dw	$ffff & @loop3
 	square_note 16, 9, 2, 1941
 	sound_ret
 Cry_HoOh_Ch9:
@@ -855,258 +855,258 @@ Cry_HoOh_Ch9:
 	sound_ret
 Cry_Nidoran_M:
 	db	045h
-	dw	Cry_Nidoran_M_Ch6
+	dw	$ffff & Cry_Nidoran_M_Ch6
 	db	006h
-	dw	Cry_Nidoran_M_Ch7
+	dw	$ffff & Cry_Nidoran_M_Ch7
 	db	008h
-	dw	Cry_Nidoran_M_Ch9
+	dw	$ffff & Cry_Nidoran_M_Ch9
 Cry_Nidoran_F:
 	db	045h
-	dw	Cry_Nidoran_F_Ch6
+	dw	$ffff & Cry_Nidoran_F_Ch6
 	db	006h
-	dw	Cry_Nidoran_F_Ch7
+	dw	$ffff & Cry_Nidoran_F_Ch7
 	db	008h
-	dw	Cry_Nidoran_F_Ch9
+	dw	$ffff & Cry_Nidoran_F_Ch9
 Cry_Slowpoke:
 	db	025h
-	dw	Cry_Slowpoke_Ch6
+	dw	$ffff & Cry_Slowpoke_Ch6
 	db	006h
-	dw	Cry_Slowpoke_Ch7
+	dw	$ffff & Cry_Slowpoke_Ch7
 Cry_Kangaskhan:
 	db	045h
-	dw	Cry_Kangaskhan_Ch6
+	dw	$ffff & Cry_Kangaskhan_Ch6
 	db	006h
-	dw	Cry_Kangaskhan_Ch7
+	dw	$ffff & Cry_Kangaskhan_Ch7
 	db	008h
-	dw	Cry_Kangaskhan_Ch9
+	dw	$ffff & Cry_Kangaskhan_Ch9
 Cry_Charmander:
 	db	045h
-	dw	Cry_Charmander_Ch6
+	dw	$ffff & Cry_Charmander_Ch6
 	db	006h
-	dw	Cry_Charmander_Ch7
+	dw	$ffff & Cry_Charmander_Ch7
 	db	008h
-	dw	Cry_Charmander_Ch9
+	dw	$ffff & Cry_Charmander_Ch9
 Cry_Grimer:
 	db	025h
-	dw	Cry_Grimer_Ch6
+	dw	$ffff & Cry_Grimer_Ch6
 	db	006h
-	dw	Cry_Grimer_Ch7
+	dw	$ffff & Cry_Grimer_Ch7
 Cry_Voltorb:
 	db	025h
-	dw	Cry_Voltorb_Ch6
+	dw	$ffff & Cry_Voltorb_Ch6
 	db	008h
-	dw	Cry_Voltorb_Ch9
+	dw	$ffff & Cry_Voltorb_Ch9
 Cry_Muk:
 	db	045h
-	dw	Cry_Muk_Ch6
+	dw	$ffff & Cry_Muk_Ch6
 	db	006h
-	dw	Cry_Muk_Ch7
+	dw	$ffff & Cry_Muk_Ch7
 	db	008h
-	dw	Cry_Muk_Ch9
+	dw	$ffff & Cry_Muk_Ch9
 Cry_Oddish:
 	db	045h
-	dw	Cry_Oddish_Ch6
+	dw	$ffff & Cry_Oddish_Ch6
 	db	006h
-	dw	Cry_Oddish_Ch7
+	dw	$ffff & Cry_Oddish_Ch7
 	db	008h
-	dw	Cry_Oddish_Ch9
+	dw	$ffff & Cry_Oddish_Ch9
 Cry_Raichu:
 	db	045h
-	dw	Cry_Raichu_Ch6
+	dw	$ffff & Cry_Raichu_Ch6
 	db	006h
-	dw	Cry_Raichu_Ch7
+	dw	$ffff & Cry_Raichu_Ch7
 	db	008h
-	dw	Cry_Raichu_Ch9
+	dw	$ffff & Cry_Raichu_Ch9
 Cry_Nidoqueen:
 	db	045h
-	dw	Cry_Nidoqueen_Ch6
+	dw	$ffff & Cry_Nidoqueen_Ch6
 	db	006h
-	dw	Cry_Nidoqueen_Ch7
+	dw	$ffff & Cry_Nidoqueen_Ch7
 	db	008h
-	dw	Cry_Nidoqueen_Ch9
+	dw	$ffff & Cry_Nidoqueen_Ch9
 Cry_Diglett:
 	db	045h
-	dw	Cry_Diglett_Ch6
+	dw	$ffff & Cry_Diglett_Ch6
 	db	006h
-	dw	Cry_Diglett_Ch7
+	dw	$ffff & Cry_Diglett_Ch7
 	db	008h
-	dw	Cry_Diglett_Ch9
+	dw	$ffff & Cry_Diglett_Ch9
 Cry_Seel:
 	db	025h
-	dw	Cry_Seel_Ch6
+	dw	$ffff & Cry_Seel_Ch6
 	db	006h
-	dw	Cry_Seel_Ch7
+	dw	$ffff & Cry_Seel_Ch7
 Cry_Drowzee:
 	db	045h
-	dw	Cry_Drowzee_Ch6
+	dw	$ffff & Cry_Drowzee_Ch6
 	db	006h
-	dw	Cry_Drowzee_Ch7
+	dw	$ffff & Cry_Drowzee_Ch7
 	db	008h
-	dw	Cry_Drowzee_Ch9
+	dw	$ffff & Cry_Drowzee_Ch9
 Cry_Pidgey:
 	db	045h
-	dw	Cry_Pidgey_Ch6
+	dw	$ffff & Cry_Pidgey_Ch6
 	db	006h
-	dw	Cry_Pidgey_Ch7
+	dw	$ffff & Cry_Pidgey_Ch7
 	db	008h
-	dw	Cry_Pidgey_Ch9
+	dw	$ffff & Cry_Pidgey_Ch9
 Cry_Bulbasaur:
 	db	045h
-	dw	Cry_Bulbasaur_Ch6
+	dw	$ffff & Cry_Bulbasaur_Ch6
 	db	006h
-	dw	Cry_Bulbasaur_Ch7
+	dw	$ffff & Cry_Bulbasaur_Ch7
 	db	008h
-	dw	Cry_Bulbasaur_Ch9
+	dw	$ffff & Cry_Bulbasaur_Ch9
 Cry_Spearow:
 	db	045h
-	dw	Cry_Spearow_Ch6
+	dw	$ffff & Cry_Spearow_Ch6
 	db	006h
-	dw	Cry_Spearow_Ch7
+	dw	$ffff & Cry_Spearow_Ch7
 	db	008h
-	dw	Cry_Spearow_Ch9
+	dw	$ffff & Cry_Spearow_Ch9
 Cry_Rhydon:
 	db	045h
-	dw	Cry_Rhydon_Ch6
+	dw	$ffff & Cry_Rhydon_Ch6
 	db	006h
-	dw	Cry_Rhydon_Ch7
+	dw	$ffff & Cry_Rhydon_Ch7
 	db	008h
-	dw	Cry_Rhydon_Ch9
+	dw	$ffff & Cry_Rhydon_Ch9
 Cry_Golem:
 	db	045h
-	dw	Cry_Golem_Ch6
+	dw	$ffff & Cry_Golem_Ch6
 	db	006h
-	dw	Cry_Golem_Ch7
+	dw	$ffff & Cry_Golem_Ch7
 	db	008h
-	dw	Cry_Golem_Ch9
+	dw	$ffff & Cry_Golem_Ch9
 Cry_Blastoise:
 	db	045h
-	dw	Cry_Blastoise_Ch6
+	dw	$ffff & Cry_Blastoise_Ch6
 	db	006h
-	dw	Cry_Blastoise_Ch7
+	dw	$ffff & Cry_Blastoise_Ch7
 	db	008h
-	dw	Cry_Blastoise_Ch9
+	dw	$ffff & Cry_Blastoise_Ch9
 Cry_Pidgeotto:
 	db	045h
-	dw	Cry_Pidgeotto_Ch6
+	dw	$ffff & Cry_Pidgeotto_Ch6
 	db	006h
-	dw	Cry_Pidgeotto_Ch7
+	dw	$ffff & Cry_Pidgeotto_Ch7
 	db	008h
-	dw	Cry_Pidgeotto_Ch9
+	dw	$ffff & Cry_Pidgeotto_Ch9
 Cry_Weedle:
 	db	045h
-	dw	Cry_Weedle_Ch6
+	dw	$ffff & Cry_Weedle_Ch6
 	db	006h
-	dw	Cry_Weedle_Ch7
+	dw	$ffff & Cry_Weedle_Ch7
 	db	008h
-	dw	Cry_Weedle_Ch9
+	dw	$ffff & Cry_Weedle_Ch9
 Cry_Caterpie:
 	db	045h
-	dw	Cry_Caterpie_Ch6
+	dw	$ffff & Cry_Caterpie_Ch6
 	db	006h
-	dw	Cry_Caterpie_Ch7
+	dw	$ffff & Cry_Caterpie_Ch7
 	db	008h
-	dw	Cry_Caterpie_Ch9
+	dw	$ffff & Cry_Caterpie_Ch9
 Cry_Ekans:
 	db	045h
-	dw	Cry_Ekans_Ch6
+	dw	$ffff & Cry_Ekans_Ch6
 	db	006h
-	dw	Cry_Ekans_Ch7
+	dw	$ffff & Cry_Ekans_Ch7
 	db	008h
-	dw	Cry_Ekans_Ch9
+	dw	$ffff & Cry_Ekans_Ch9
 Cry_Fearow:
 	db	045h
-	dw	Cry_Fearow_Ch6
+	dw	$ffff & Cry_Fearow_Ch6
 	db	006h
-	dw	Cry_Fearow_Ch7
+	dw	$ffff & Cry_Fearow_Ch7
 	db	008h
-	dw	Cry_Fearow_Ch9
+	dw	$ffff & Cry_Fearow_Ch9
 Cry_Clefairy:
 	db	025h
-	dw	Cry_Clefairy_Ch6
+	dw	$ffff & Cry_Clefairy_Ch6
 	db	006h
-	dw	Cry_Clefairy_Ch7
+	dw	$ffff & Cry_Clefairy_Ch7
 Cry_Venonat:
 	db	045h
-	dw	Cry_Venonat_Ch6
+	dw	$ffff & Cry_Venonat_Ch6
 	db	006h
-	dw	Cry_Venonat_Ch7
+	dw	$ffff & Cry_Venonat_Ch7
 	db	008h
-	dw	Cry_Venonat_Ch9
+	dw	$ffff & Cry_Venonat_Ch9
 Cry_Lapras:
 	db	045h
-	dw	Cry_Lapras_Ch6
+	dw	$ffff & Cry_Lapras_Ch6
 	db	006h
-	dw	Cry_Lapras_Ch7
+	dw	$ffff & Cry_Lapras_Ch7
 	db	008h
-	dw	Cry_Lapras_Ch9
+	dw	$ffff & Cry_Lapras_Ch9
 Cry_Metapod:
 	db	045h
-	dw	Cry_Metapod_Ch6
+	dw	$ffff & Cry_Metapod_Ch6
 	db	006h
-	dw	Cry_Metapod_Ch7
+	dw	$ffff & Cry_Metapod_Ch7
 	db	008h
-	dw	Cry_Metapod_Ch9
+	dw	$ffff & Cry_Metapod_Ch9
 Cry_Squirtle:
 	db	045h
-	dw	Cry_Squirtle_Ch6
+	dw	$ffff & Cry_Squirtle_Ch6
 	db	006h
-	dw	Cry_Squirtle_Ch7
+	dw	$ffff & Cry_Squirtle_Ch7
 	db	008h
-	dw	Cry_Squirtle_Ch9
+	dw	$ffff & Cry_Squirtle_Ch9
 Cry_Paras:
 	db	045h
-	dw	Cry_Paras_Ch6
+	dw	$ffff & Cry_Paras_Ch6
 	db	006h
-	dw	Cry_Paras_Ch7
+	dw	$ffff & Cry_Paras_Ch7
 	db	008h
-	dw	Cry_Paras_Ch9
+	dw	$ffff & Cry_Paras_Ch9
 Cry_Growlithe:
 	db	045h
-	dw	Cry_Growlithe_Ch6
+	dw	$ffff & Cry_Growlithe_Ch6
 	db	006h
-	dw	Cry_Growlithe_Ch7
+	dw	$ffff & Cry_Growlithe_Ch7
 	db	008h
-	dw	Cry_Growlithe_Ch9
+	dw	$ffff & Cry_Growlithe_Ch9
 Cry_Krabby:
 	db	045h
-	dw	Cry_Krabby_Ch6
+	dw	$ffff & Cry_Krabby_Ch6
 	db	006h
-	dw	Cry_Krabby_Ch7
+	dw	$ffff & Cry_Krabby_Ch7
 	db	008h
-	dw	Cry_Krabby_Ch9
+	dw	$ffff & Cry_Krabby_Ch9
 Cry_Psyduck:
 	db	025h
-	dw	Cry_Psyduck_Ch6
+	dw	$ffff & Cry_Psyduck_Ch6
 	db	006h
-	dw	Cry_Psyduck_Ch7
+	dw	$ffff & Cry_Psyduck_Ch7
 Cry_Rattata:
 	db	045h
-	dw	Cry_Rattata_Ch6
+	dw	$ffff & Cry_Rattata_Ch6
 	db	006h
-	dw	Cry_Rattata_Ch7
+	dw	$ffff & Cry_Rattata_Ch7
 	db	008h
-	dw	Cry_Rattata_Ch9
+	dw	$ffff & Cry_Rattata_Ch9
 Cry_Vileplume:
 	db	045h
-	dw	Cry_Vileplume_Ch6
+	dw	$ffff & Cry_Vileplume_Ch6
 	db	006h
-	dw	Cry_Vileplume_Ch7
+	dw	$ffff & Cry_Vileplume_Ch7
 	db	008h
-	dw	Cry_Vileplume_Ch9
+	dw	$ffff & Cry_Vileplume_Ch9
 Cry_Vulpix:
 	db	045h
-	dw	Cry_Vulpix_Ch6
+	dw	$ffff & Cry_Vulpix_Ch6
 	db	006h
-	dw	Cry_Vulpix_Ch7
+	dw	$ffff & Cry_Vulpix_Ch7
 	db	008h
-	dw	Cry_Vulpix_Ch9
+	dw	$ffff & Cry_Vulpix_Ch9
 Cry_Weepinbell:
 	db	045h
-	dw	Cry_Weepinbell_Ch6
+	dw	$ffff & Cry_Weepinbell_Ch6
 	db	006h
-	dw	Cry_Weepinbell_Ch7
+	dw	$ffff & Cry_Weepinbell_Ch7
 	db	008h
-	dw	Cry_Weepinbell_Ch9
+	dw	$ffff & Cry_Weepinbell_Ch9
 Cry_Raichu_Ch6:
 	duty_cycle_pattern 3, 3, 0, 0
 	square_note 15, 15, 7, 1952

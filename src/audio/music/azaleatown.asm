@@ -1,14 +1,14 @@
 Music_AzaleaTown:
 	db	080h
-	dw	Music_AzaleaTown_Ch1
+	dw	$ffff & Music_AzaleaTown_Ch1
 	db	001h
-	dw	Music_AzaleaTown_Ch2
+	dw	$ffff & Music_AzaleaTown_Ch2
 	db	002h
-	dw	Music_AzaleaTown_Ch3
+	dw	$ffff & Music_AzaleaTown_Ch3
 	db	003h
-	dw	Music_AzaleaTown_Ch4
+	dw	$ffff & Music_AzaleaTown_Ch4
 	db	004h
-	dw	Music_AzaleaTown_Ch5
+	dw	$ffff & Music_AzaleaTown_Ch5
 ;----------------------------------------
 Music_AzaleaTown_Ch1:
 ;----------------------------------------
@@ -34,11 +34,11 @@ Music_AzaleaTown_Ch1:
 	db	$61
 	db	$61
 	db	$fd,2
-	dw	@loop2
+	dw	$ffff & @loop2
 ; P1-4-10
 @loop:
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P1-11
 ;	db	$ef,$f0
 	db	$dc,$a4
@@ -55,7 +55,7 @@ Music_AzaleaTown_Ch1:
 ;	db	$ef,$0f
 ; P1-12-18
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P1-19
 ;	db	$ef,$f0
 	db	$d8,$6,$a4
@@ -69,7 +69,7 @@ Music_AzaleaTown_Ch1:
 ;	db	$ef,$0f
 ; P1-20
 	db	$fe
-	dw	@sub20
+	dw	$ffff & @sub20
 ; P1-21
 	db	$dc,$a3
 	db	$b3
@@ -83,7 +83,7 @@ Music_AzaleaTown_Ch1:
 	db	$0d
 ; P1-22
 	db	$fe
-	dw	@sub20
+	dw	$ffff & @sub20
 ; P1-23
 	db	$dc,$a3
 	db	$d3,$10
@@ -129,7 +129,7 @@ Music_AzaleaTown_Ch1:
 	db	$01
 ; P1-28
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub4:
 	db	$d8,$c,$a1
 	db	$d3,$61
@@ -281,7 +281,7 @@ Music_AzaleaTown_Ch2:
 ; P2-4-10
 @loop:
 	db	$fe
-	dw	@melo4
+	dw	$ffff & @melo4
 	db	$23
 ; P2-11
 	db	$11
@@ -294,7 +294,7 @@ Music_AzaleaTown_Ch2:
 	db	$d2,$10
 ; P2-12
 	db	$fe
-	dw	@melo4
+	dw	$ffff & @melo4
 	db	$01
 	db	$21
 ; P2-19
@@ -380,7 +380,7 @@ Music_AzaleaTown_Ch2:
 	db	$91
 	db	$d2,$11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @melo4:
 	db	$23
 	db	$d3,$91
@@ -465,18 +465,18 @@ Music_AzaleaTown_Ch3:
 @loop:
 	db	$dc,$81
 	db	$fe
-	dw	@base4
+	dw	$ffff & @base4
 	db	$93
 	db	$41
 ; P3-12-19
 	db	$fe
-	dw	@base4
+	dw	$ffff & @base4
 	db	$91
 	db	$01
 	db	$71
 ; P3-20
 	db	$fe
-	dw	@base20
+	dw	$ffff & @base20
 ; P3-21
 	db	$b0
 	db	$00
@@ -490,7 +490,7 @@ Music_AzaleaTown_Ch3:
 	db	$00
 ; P3-22
 	db	$fe
-	dw	@base20
+	dw	$ffff & @base20
 ; P3-23
 	db	$d5,$b1
 	db	$d4,$60
@@ -557,7 +557,7 @@ Music_AzaleaTown_Ch3:
 	db	$d5,$c0
 	db	$d4,$10
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @base4:
 	db	$20
 	db	$04
@@ -684,7 +684,7 @@ Music_AzaleaTown_Ch5:
 	db	$31
 	db	$71
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 ;:
 
 

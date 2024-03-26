@@ -1,10 +1,10 @@
 Music_JohtoWildBattle:
 	db	040h
-	dw	Music_JohtoWildBattle_Ch1
+	dw	$ffff & Music_JohtoWildBattle_Ch1
 	db	001h
-	dw	Music_JohtoWildBattle_Ch2
+	dw	$ffff & Music_JohtoWildBattle_Ch2
 	db	002h
-	dw	Music_JohtoWildBattle_Ch3
+	dw	$ffff & Music_JohtoWildBattle_Ch3
 ;----------------------------------------
 Music_JohtoWildBattle_Ch1:
 ;----------------------------------------
@@ -212,7 +212,7 @@ Floop1000:
 ; P1-38
 	db	$8f
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_JohtoWildBattle_Ch2:
 ;----------------------------------------
@@ -221,7 +221,7 @@ Music_JohtoWildBattle_Ch2:
 	db	$e6,$00,$01
 ; P2-1
 	db	$fe
-	dw	Fsub21
+	dw	$ffff & Fsub21
 ; P2-3
 	db	$d8,$c,$c2
 	db	$d3,$85
@@ -388,7 +388,7 @@ Floop2000:
 ; P2-38
 	db	$cf
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 Fsub21:
 ; P2-1
 	db	$d8,$c,$c2
@@ -470,7 +470,7 @@ Floop3000:
 	db	$81
 ; P3-5
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-6
 	db	$41
 	db	$91
@@ -485,7 +485,7 @@ Floop3000:
 	db	$31
 	db	$81
 	db	$fd,6
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P3-8
 	db	$31
 	db	$51
@@ -493,7 +493,7 @@ Floop3000:
 	db	$81
 ; P3-9
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-10
 	db	$61
 	db	$61
@@ -508,22 +508,22 @@ Floop3000:
 	db	$31
 	db	$81
 	db	$fd,7
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ; P3-12
 	db	$dc,$33
 	db	$73
 ; P3-13
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-15
 @loop2:
 	db	$31
 	db	$81
 	db	$fd,7
-	dw	@loop2
+	dw	$ffff & @loop2
 ; P3-16
 	db	$31
 	db	$a1
@@ -532,7 +532,7 @@ Floop3000:
 	db	$11
 	db	$61
 	db	$fd,5
-	dw	@loop3
+	dw	$ffff & @loop3
 ; P3-18
 	db	$51
 	db	$31
@@ -542,7 +542,7 @@ Floop3000:
 	db	$61
 ; P3-19
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-20
 	db	$41
 	db	$91
@@ -558,10 +558,10 @@ Floop3000:
 	db	$51
 	db	$a1
 	db	$fd,8
-	dw	@loop4
+	dw	$ffff & @loop4
 ; P3-23
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-24
 	db	$41
 	db	$91
@@ -594,13 +594,13 @@ Floop3000:
 	db	$31
 	db	$81
 	db	$fd,8
-	dw	@loop5
+	dw	$ffff & @loop5
 ; P3-29
 @loop6:
 	db	$11
 	db	$61
 	db	$fd,7
-	dw	@loop6
+	dw	$ffff & @loop6
 ; P3-30
 	db	$51
 	db	$11
@@ -616,13 +616,13 @@ Floop3000:
 	db	$31
 	db	$81
 	db	$fd,12
-	dw	@loop7
+	dw	$ffff & @loop7
 ; P3-35
 @loop8:
 	db	$11
 	db	$51
 	db	$fd,7
-	dw	@loop8
+	dw	$ffff & @loop8
 ; P3-36
 	db	$61
 	db	$71
@@ -631,29 +631,29 @@ Floop3000:
 	db	$31
 	db	$81
 	db	$fd,6
-	dw	@loop9
+	dw	$ffff & @loop9
 ; P3-38
 	db	$a1
 	db	$81
 	db	$71
 	db	$51
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$dc,$19
 @sub1loop1:
 	db	$41
 	db	$91
 	db	$fd,4
-	dw	@sub1loop1
+	dw	$ffff & @sub1loop1
 	db	$ff
 Music_JohtoWildBattleNight:
 	db	040h
-	dw	Music_JohtoWildBattle_Ch1_2
+	dw	$ffff & Music_JohtoWildBattle_Ch1_2
 	db	001h
-	dw	Music_JohtoWildBattle_Ch2_2
+	dw	$ffff & Music_JohtoWildBattle_Ch2_2
 	db	002h
-	dw	Music_JohtoWildBattle_Ch3
+	dw	$ffff & Music_JohtoWildBattle_Ch3
 ;----------------------------------------
 Music_JohtoWildBattle_Ch1_2:
 ;----------------------------------------
@@ -664,7 +664,7 @@ Music_JohtoWildBattle_Ch1_2:
 	db	$e1,$10,$25
 ;	db	$ef,$f0
 	db	$fd,0
-	dw	Floop1000
+	dw	$ffff & Floop1000
 ;----------------------------------------
 Music_JohtoWildBattle_Ch2_2:
 ;----------------------------------------
@@ -673,14 +673,14 @@ Music_JohtoWildBattle_Ch2_2:
 	db	$e6,$00,$01
 ; P2-1
 	db	$fe
-	dw	Fsub21
+	dw	$ffff & Fsub21
 ; P2-3
 	db	$d8,$c,$c2
 	db	$d3,$85
 	db	$e6,$00,$01
 	db	$db,$02
 	db	$fd,0
-	dw	Floop2000
+	dw	$ffff & Floop2000
 
 
 

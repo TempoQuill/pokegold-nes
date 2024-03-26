@@ -1,56 +1,56 @@
 Music:
-	dba PRG_Audio,  Music_Nothing
-	dba PRG_Music3, Music_TitleScreen
-	dba PRG_Music0, Music_Route1
-	dba PRG_Music0, Music_Route3
-	dba PRG_Music0, Music_Route11
-	dba PRG_Music4, Music_MagnetTrain
-	dba PRG_Music0, Music_KantoGymBattle
-	dba PRG_Music0, Music_KantoTrainerBattle
-	dba PRG_Music0, Music_KantoWildBattle
-	dba PRG_Music0, Music_PokemonCenter
-	dba PRG_Music2, Music_LookHiker
-	dba PRG_Music0, Music_LookLass
-	dba PRG_Music0, Music_LookOfficer
-	dba PRG_Music1, Music_HealPokemon
-	dba PRG_Music4, Music_LavenderTown
-	dba PRG_Music0, Music_Route2
-	dba PRG_Music0, Music_MtMoon
-	dba PRG_Music0, Music_ShowMeAround
-	dba PRG_Music4, Music_GameCorner
-	dba PRG_Music4, Music_Bicycle
-	dba PRG_Music1, Music_HallOfFame
-	dba PRG_Music1, Music_ViridianCity
-	dba PRG_Music1, Music_CeladonCity
-	dba PRG_Music3, Music_TrainerVictory
-	dba PRG_Music1, Music_WildPokemonVictory
-	dba PRG_Music1, Music_GymLeaderVictory
-	dba PRG_Music1, Music_MtMoonSquare
-	dba PRG_Music1, Music_Gym
-	dba PRG_Music1, Music_PalletTown
-	dba PRG_Music1, Music_ProfOaksPokemonTalk
-	dba PRG_Music1, Music_ProfOak
-	dba PRG_Music1, Music_LookRival
-	dba PRG_Music1, Music_AfterTheRivalFight
-	dba PRG_Music1, Music_Surf
-	dba PRG_Music1, Music_Evolution
-	dba PRG_Music2, Music_NationalPark
-	dba PRG_Music3, Music_Credits
-	dba PRG_Music2, Music_AzaleaTown
-	dba PRG_Music2, Music_CherrygroveCity
-	dba PRG_Music2, Music_UnionCave
-	dba PRG_Music2, Music_JohtoWildBattle
-	dba PRG_Music4, Music_EcruteakCity
-	dba PRG_Music1, Music_VioletCity
-	dba PRG_Music3, Music_RivalBattle
-	dba PRG_Music3, Music_RocketBattle
-	dba PRG_Music1, Music_Route29
-	dba PRG_Music3, Music_Route34
-	dba PRG_Music2, Music_LookYoungster
-	dba PRG_Music3, Music_GoldenrodCity
-	dba PRG_Music2, Music_TinTower
-	dba PRG_Music2, Music_JohtoWildBattleNight
-	dba PRG_Music1, Music_SuccessfulCapture
-	dba PRG_Music2, Music_PokemonMarch
-	dba PRG_Music1, Music_Printer
-	dba PRG_Music4, Music_TheEnd
+	dba_audio Music_Nothing
+	dba_audio Music_TitleScreen
+	dba_audio Music_Route1
+	dba_audio Music_Route3
+	dba_audio Music_Route11
+	dba_audio Music_MagnetTrain
+	dba_audio Music_KantoGymBattle
+	dba_audio Music_KantoTrainerBattle
+	dba_audio Music_KantoWildBattle
+	dba_audio Music_PokemonCenter
+	dba_audio Music_LookHiker
+	dba_audio Music_LookLass
+	dba_audio Music_LookOfficer
+	dba_audio Music_HealPokemon
+	dba_audio Music_LavenderTown
+	dba_audio Music_Route2
+	dba_audio Music_MtMoon
+	dba_audio Music_ShowMeAround
+	dba_audio Music_GameCorner
+	dba_audio Music_Bicycle
+	dba_audio Music_HallOfFame
+	dba_audio Music_ViridianCity
+	dba_audio Music_CeladonCity
+	dba_audio Music_TrainerVictory
+	dba_audio Music_WildPokemonVictory
+	dba_audio Music_GymLeaderVictory
+	dba_audio Music_MtMoonSquare
+	dba_audio Music_Gym
+	dba_audio Music_PalletTown
+	dba_audio Music_ProfOaksPokemonTalk
+	dba_audio Music_ProfOak
+	dba_audio Music_LookRival
+	dba_audio Music_AfterTheRivalFight
+	dba_audio Music_Surf
+	dba_audio Music_Evolution
+	dba_audio Music_NationalPark
+	dba_audio Music_Credits
+	dba_audio Music_AzaleaTown
+	dba_audio Music_CherrygroveCity
+	dba_audio Music_UnionCave
+	dba_audio Music_JohtoWildBattle
+	dba_audio Music_EcruteakCity
+	dba_audio Music_VioletCity
+	dba_audio Music_RivalBattle
+	dba_audio Music_RocketBattle
+	dba_audio Music_Route29
+	dba_audio Music_Route34
+	dba_audio Music_LookYoungster
+	dba_audio Music_GoldenrodCity
+	dba_audio Music_TinTower
+	dba_audio Music_JohtoWildBattleNight
+	dba_audio Music_SuccessfulCapture
+	dba_audio Music_PokemonMarch
+	dba_audio Music_Printer
+	dba_audio Music_TheEnd

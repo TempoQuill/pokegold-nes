@@ -1,12 +1,12 @@
 Music_Bicycle:
 	db	060h
-	dw	Music_Bicycle_Ch1
+	dw	$ffff & Music_Bicycle_Ch1
 	db	001h
-	dw	Music_Bicycle_Ch2
+	dw	$ffff & Music_Bicycle_Ch2
 	db	002h
-	dw	Music_Bicycle_Ch3
+	dw	$ffff & Music_Bicycle_Ch3
 	db	003h
-	dw	Music_Bicycle_Ch4
+	dw	$ffff & Music_Bicycle_Ch4
 ;----------------------------------------
 Music_Bicycle_Ch1:
 ;----------------------------------------
@@ -164,7 +164,7 @@ Music_Bicycle_Ch1:
 	db	$91
 	db	$a1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_Bicycle_Ch2:
 ;----------------------------------------
@@ -252,7 +252,7 @@ Music_Bicycle_Ch2:
 	db	$77
 ; P2-11
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-14
 	db	$73
 	db	$dc,$c3
@@ -264,7 +264,7 @@ Music_Bicycle_Ch2:
 	db	$dc,$c7
 ; P2-15
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-18
 	db	$73
 	db	$dc,$c3
@@ -274,7 +274,7 @@ Music_Bicycle_Ch2:
 	db	$81
 	db	$73
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P2-11
 	db	$85
@@ -308,7 +308,7 @@ Music_Bicycle_Ch3:
 @mainloop:
 ; P3-3
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-4
 	db	$50
 	db	$00
@@ -362,7 +362,7 @@ Music_Bicycle_Ch3:
 	db	$00
 ; P3-7
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-8
 	db	$50
 	db	$00
@@ -484,9 +484,9 @@ Music_Bicycle_Ch3:
 	db	$a0
 	db	$00
 	db	$fd,2
-	dw	@loop1
+	dw	$ffff & @loop1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P3-3
 	db	$d4,$80
@@ -520,7 +520,7 @@ Music_Bicycle_Ch4:
 ; P4-2
 	db	$63
 	db	$fd,12
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P4-3
 	db	$63
 	db	$63
@@ -528,5 +528,5 @@ Music_Bicycle_Ch4:
 	db	$61
 	db	$61
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 

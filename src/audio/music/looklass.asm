@@ -1,14 +1,14 @@
 Music_LookLass:
 	db	080h
-	dw	Music_LookLass_Ch1
+	dw	$ffff & Music_LookLass_Ch1
 	db	001h
-	dw	Music_LookLass_Ch2
+	dw	$ffff & Music_LookLass_Ch2
 	db	002h
-	dw	Music_LookLass_Ch3
+	dw	$ffff & Music_LookLass_Ch3
 	db	003h
-	dw	Music_LookLass_Ch4
+	dw	$ffff & Music_LookLass_Ch4
 	db	004h
-	dw	Music_LookLass_Ch5
+	dw	$ffff & Music_LookLass_Ch5
 ;----------------------------------------
 Music_LookLass_Ch1:
 ;----------------------------------------
@@ -34,7 +34,7 @@ Music_LookLass_Ch1:
 	db	$dc,$a3
 	db	$c1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_LookLass_Ch2:
 ;----------------------------------------
@@ -55,7 +55,7 @@ Music_LookLass_Ch2:
 	db	$d4,$91
 ; P2-4
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_LookLass_Ch3:
 ;----------------------------------------
@@ -105,7 +105,7 @@ Music_LookLass_Ch3:
 	db	$a1
 ; P3-7
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_LookLass_Ch4:
 ;----------------------------------------
@@ -129,4 +129,4 @@ Music_LookLass_Ch5:
 	db	$20
 ; P4-4
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop

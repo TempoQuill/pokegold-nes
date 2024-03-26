@@ -1,14 +1,14 @@
 Music_MagnetTrain:
 	db	080h
-	dw	Music_MagnetTrain_Ch1
+	dw	$ffff & Music_MagnetTrain_Ch1
 	db	001h
-	dw	Music_MagnetTrain_Ch2
+	dw	$ffff & Music_MagnetTrain_Ch2
 	db	002h
-	dw	Music_MagnetTrain_Ch3
+	dw	$ffff & Music_MagnetTrain_Ch3
 	db	003h
-	dw	Music_MagnetTrain_Ch4
+	dw	$ffff & Music_MagnetTrain_Ch4
 	db	004h
-	dw	Music_MagnetTrain_Ch5
+	dw	$ffff & Music_MagnetTrain_Ch5
 ;----------------------------------------
 Music_MagnetTrain_Ch1:
 ;----------------------------------------
@@ -212,10 +212,10 @@ Music_MagnetTrain_Ch5:
 	db	$31
 ; P4-6
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-7
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-8
 	db	$d8,$c
 	db	$cf

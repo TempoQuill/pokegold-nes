@@ -1,10 +1,10 @@
 Music_ProfOaksPokemonTalk:
 	db	040h
-	dw	Music_ProfOaksPokemonTalk_Ch1
+	dw	$ffff & Music_ProfOaksPokemonTalk_Ch1
 	db	001h
-	dw	Music_ProfOaksPokemonTalk_Ch2
+	dw	$ffff & Music_ProfOaksPokemonTalk_Ch2
 	db	002h
-	dw	Music_ProfOaksPokemonTalk_Ch3
+	dw	$ffff & Music_ProfOaksPokemonTalk_Ch3
 	db	003h
 ;----------------------------------------
 Music_ProfOaksPokemonTalk_Ch1:
@@ -129,7 +129,7 @@ Music_ProfOaksPokemonTalk_Ch1:
 	db	$00
 ; P1-11
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_ProfOaksPokemonTalk_Ch2:
 ;----------------------------------------
@@ -213,7 +213,7 @@ Music_ProfOaksPokemonTalk_Ch2:
 	db	$00
 ; P2-11
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_ProfOaksPokemonTalk_Ch3:
 ;----------------------------------------
@@ -322,4 +322,4 @@ Music_ProfOaksPokemonTalk_Ch3:
 	db	$00
 ; P3-11
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop

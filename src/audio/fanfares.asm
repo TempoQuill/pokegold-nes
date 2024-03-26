@@ -1,14 +1,14 @@
 SFX_LevelUp:
 	db	085h
-	dw	SFX_LevelUp_Ch6
+	dw	$ffff & SFX_LevelUp_Ch6
 	db	006h
-	dw	SFX_LevelUp_Ch7
+	dw	$ffff & SFX_LevelUp_Ch7
 	db	007h
-	dw	SFX_LevelUp_Ch8
+	dw	$ffff & SFX_LevelUp_Ch8
 	db	008h
-	dw	SFX_LevelUp_Ch9
+	dw	$ffff & SFX_LevelUp_Ch9
 	db	009h
-	dw	SFX_LevelUp_Ch10
+	dw	$ffff & SFX_LevelUp_Ch10
 ;----------------------------------------
 SFX_LevelUp_Ch6:
 ;----------------------------------------
@@ -74,15 +74,15 @@ SFX_LevelUp_Ch10:
 	db	$ff
 SFX_Item:
 	db	085h
-	dw	SFX_Item_Ch6
+	dw	$ffff & SFX_Item_Ch6
 	db	006h
-	dw	SFX_Item_Ch7
+	dw	$ffff & SFX_Item_Ch7
 	db	007h
-	dw	SFX_Item_Ch8
+	dw	$ffff & SFX_Item_Ch8
 	db	008h
-	dw	SFX_Item_Ch9
+	dw	$ffff & SFX_Item_Ch9
 	db	009h
-	dw	SFX_Item_Ch10
+	dw	$ffff & SFX_Item_Ch10
 ;----------------------------------------
 SFX_Item_Ch6:
 ;----------------------------------------
@@ -171,15 +171,15 @@ SFX_Item_Ch10:
 	db	$ff
 SFX_Evolution:
 	db	085h
-	dw	SFX_Evolution_Ch6
+	dw	$ffff & SFX_Evolution_Ch6
 	db	006h
-	dw	SFX_Evolution_Ch7
+	dw	$ffff & SFX_Evolution_Ch7
 	db	007h
-	dw	SFX_Evolution_Ch8
+	dw	$ffff & SFX_Evolution_Ch8
 	db	008h
-	dw	SFX_Evolution_Ch9
+	dw	$ffff & SFX_Evolution_Ch9
 	db	009h
-	dw	SFX_Evolution_Ch10
+	dw	$ffff & SFX_Evolution_Ch10
 ;----------------------------------------
 SFX_Evolution_Ch6:
 ;----------------------------------------
@@ -274,15 +274,15 @@ SFX_Evolution_Ch10:
 	db	$ff
 Sfx_DexFanfare2049:
 	db	085h
-	dw	Sfx_DexFanfare2049_Ch6
+	dw	$ffff & Sfx_DexFanfare2049_Ch6
 	db	006h
-	dw	Sfx_DexFanfare2049_Ch7
+	dw	$ffff & Sfx_DexFanfare2049_Ch7
 	db	007h
-	dw	Sfx_DexFanfare2049_Ch8
+	dw	$ffff & Sfx_DexFanfare2049_Ch8
 	db	008h
-	dw	Sfx_DexFanfare2049_Ch9
+	dw	$ffff & Sfx_DexFanfare2049_Ch9
 	db	009h
-	dw	Sfx_DexFanfare2049_Ch10
+	dw	$ffff & Sfx_DexFanfare2049_Ch10
 ;----------------------------------------
 Sfx_DexFanfare2049_Ch6:
 ;----------------------------------------
@@ -378,15 +378,15 @@ Sfx_DexFanfare2049_Ch10:
 	db	$ff
 Sfx_DexFanfare80109:
 	db	085h
-	dw	Sfx_DexFanfare80109_Ch6
+	dw	$ffff & Sfx_DexFanfare80109_Ch6
 	db	006h
-	dw	Sfx_DexFanfare80109_Ch7
+	dw	$ffff & Sfx_DexFanfare80109_Ch7
 	db	007h
-	dw	Sfx_DexFanfare80109_Ch8
+	dw	$ffff & Sfx_DexFanfare80109_Ch8
 	db	008h
-	dw	Sfx_DexFanfare80109_Ch9
+	dw	$ffff & Sfx_DexFanfare80109_Ch9
 	db	009h
-	dw	Sfx_DexFanfare80109_Ch10
+	dw	$ffff & Sfx_DexFanfare80109_Ch10
 ;----------------------------------------
 Sfx_DexFanfare80109_Ch6:
 ;----------------------------------------
@@ -485,7 +485,7 @@ Sfx_DexFanfare80109_Ch10:
 	db	$ff
 Sfx_Pokeflute:
 	db	007h
-	dw	Sfx_Pokeflute_Ch8
+	dw	$ffff & Sfx_Pokeflute_Ch8
 Sfx_Pokeflute_Ch8:
 	db	0dah,001h,000h
 	db	0dfh
@@ -510,11 +510,11 @@ Sfx_Pokeflute_Ch8:
 	db	0ffh
 Sfx_Fanfare:
 	db	045h
-	dw	Sfx_Fanfare_Ch6
+	dw	$ffff & Sfx_Fanfare_Ch6
 	db	006h
-	dw	Sfx_Fanfare_Ch7
+	dw	$ffff & Sfx_Fanfare_Ch7
 	db	007h
-	dw	Sfx_Fanfare_Ch8
+	dw	$ffff & Sfx_Fanfare_Ch8
 Sfx_Fanfare_Ch6:
 	db	$df
 	db	$ec

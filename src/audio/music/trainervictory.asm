@@ -1,10 +1,10 @@
 Music_TrainerVictory:
 	db	040h
-	dw	Music_TrainerVictory_Ch1
+	dw	$ffff & Music_TrainerVictory_Ch1
 	db	001h
-	dw	Music_TrainerVictory_Ch2
+	dw	$ffff & Music_TrainerVictory_Ch2
 	db	002h
-	dw	Music_TrainerVictory_Ch3
+	dw	$ffff & Music_TrainerVictory_Ch3
 ;----------------------------------------
 Music_TrainerVictory_Ch1:
 ;----------------------------------------
@@ -27,7 +27,7 @@ Music_TrainerVictory_Ch1:
 @loop:
 	db	$dc,$72
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P1-4
 	db	$dc,$51
 	db	$21
@@ -42,10 +42,10 @@ Music_TrainerVictory_Ch1:
 	db	$d3,$21
 	db	$55
 	db	$fd,2
-	dw	@loop
+	dw	$ffff & @loop
 ; P1-7
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P1-8
 	db	$a1
 	db	$01
@@ -62,7 +62,7 @@ Music_TrainerVictory_Ch1:
 	db	$21
 	db	$d4,$a1
 	db	$fd,3
-	dw	@loop9
+	dw	$ffff & @loop9
 	db	$71
 	db	$a1
 	db	$d3,$31
@@ -72,13 +72,13 @@ Music_TrainerVictory_Ch1:
 	db	$d4,$c1
 	db	$a1
 	db	$fd,3
-	dw	@loop10
+	dw	$ffff & @loop10
 	db	$51
 	db	$71
 	db	$81
 ; P1-11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub3:
 	db	$d4,$71
 	db	$01
@@ -109,7 +109,7 @@ Music_TrainerVictory_Ch2:
 @loop:
 	db	$d8,$8,$82
 	db	$fe
-	dw	@melo3
+	dw	$ffff & @melo3
 ; P2-4
 	db	$71
 	db	$01
@@ -120,10 +120,10 @@ Music_TrainerVictory_Ch2:
 	db	$71
 	db	$85
 	db	$fd,2
-	dw	@loop
+	dw	$ffff & @loop
 ; P2-7
 	db	$fe
-	dw	@melo3
+	dw	$ffff & @melo3
 ; P2-8
 	db	$61
 	db	$01
@@ -140,7 +140,7 @@ Music_TrainerVictory_Ch2:
 	db	$5f
 ; P2-11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @melo3:
 	db	$d3,$31
 	db	$01
@@ -171,7 +171,7 @@ Music_TrainerVictory_Ch3:
 ; P3-3-6
 @loop:
 	db	$fe
-	dw	@base3
+	dw	$ffff & @base3
 ; P3-4
 	db	$d4,$21
 	db	$01
@@ -186,10 +186,10 @@ Music_TrainerVictory_Ch3:
 	db	$dc,$3f
 	db	$a5
 	db	$fd,2
-	dw	@loop
+	dw	$ffff & @loop
 ; P3-7
 	db	$fe
-	dw	@base3
+	dw	$ffff & @base3
 ; P3-8
 	db	$d4,$11
 	db	$01
@@ -225,7 +225,7 @@ Music_TrainerVictory_Ch3:
 	db	$21
 ; P3-11
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @base3:
 	db	$dc,$15
 	db	$d5,$a1

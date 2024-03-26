@@ -1,12 +1,12 @@
 Music_GymLeaderVictory:
 	db	060h
-	dw	Music_GymLeaderVictory_Ch1
+	dw	$ffff & Music_GymLeaderVictory_Ch1
 	db	001h
-	dw	Music_GymLeaderVictory_Ch2
+	dw	$ffff & Music_GymLeaderVictory_Ch2
 	db	002h
-	dw	Music_GymLeaderVictory_Ch3
+	dw	$ffff & Music_GymLeaderVictory_Ch3
 	db	004h
-	dw	Music_GymLeaderVictory_Ch5
+	dw	$ffff & Music_GymLeaderVictory_Ch5
 ;----------------------------------------
 Music_GymLeaderVictory_Ch1:
 ;----------------------------------------
@@ -33,19 +33,19 @@ Music_GymLeaderVictory_Ch1:
 @loop:
 	db	$db,$01
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 	db	$d3,$23
 	db	$53
 ; P1-6-7
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 	db	$77
 	db	$fd,2
-	dw	@loop
+	dw	$ffff & @loop
 ; P1-12-17
 	db	$db,$02
 	db	$fe
-	dw	@sub12
+	dw	$ffff & @sub12
 	db	$a3
 	db	$83
 ; P1-18
@@ -60,7 +60,7 @@ Music_GymLeaderVictory_Ch1:
 ; P1-20-25
 	db	$db,$03
 	db	$fe
-	dw	@sub12
+	dw	$ffff & @sub12
 	db	$23
 	db	$53
 ; P1-26
@@ -74,7 +74,7 @@ Music_GymLeaderVictory_Ch1:
 	db	$7f
 ; P1-28
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub4:
 	db	$dc,$91
 	db	$d4,$71
@@ -144,29 +144,29 @@ Music_GymLeaderVictory_Ch2:
 	db	$db,$03
 	db	$dc,$a1
 	db	$fe
-	dw	@melo4
+	dw	$ffff & @melo4
 	db	$a3
 	db	$a3
 ; P2-6-7
 	db	$fe
-	dw	@melo4
+	dw	$ffff & @melo4
 	db	$35
 	db	$db,$02
 	db	$c0
 	db	$d2,$20
 ; P2-8-9
 	db	$fe
-	dw	@melo4
+	dw	$ffff & @melo4
 	db	$a3
 	db	$a3
 ; P2-10-11
 	db	$fe
-	dw	@melo4
+	dw	$ffff & @melo4
 	db	$37
 ; P2-12-17
 	db	$db,$03
 	db	$fe
-	dw	@melo12
+	dw	$ffff & @melo12
 	db	$73
 	db	$53
 ; P2-18
@@ -178,7 +178,7 @@ Music_GymLeaderVictory_Ch2:
 ; P2-20-25
 	db	$db,$02
 	db	$fe
-	dw	@melo12
+	dw	$ffff & @melo12
 	db	$d3,$a3
 	db	$d2,$23
 ; P2-26
@@ -193,7 +193,7 @@ Music_GymLeaderVictory_Ch2:
 	db	$d2,$20
 ; P2-28
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @melo4:
 	db	$d2,$31
 	db	$21
@@ -275,10 +275,10 @@ Music_GymLeaderVictory_Ch3:
 	db	$d4,$31
 	db	$05
 	db	$fd,2
-	dw	@loop
+	dw	$ffff & @loop
 ; P3-12-17
 	db	$fe
-	dw	@base12
+	dw	$ffff & @base12
 ; P3-18
 	db	$d4,$31
 	db	$01
@@ -299,7 +299,7 @@ Music_GymLeaderVictory_Ch3:
 	db	$d5,$a1
 ; P3-20-25
 	db	$fe
-	dw	@base12
+	dw	$ffff & @base12
 ; P3-26
 	db	$d4,$31
 	db	$01
@@ -320,7 +320,7 @@ Music_GymLeaderVictory_Ch3:
 	db	$d4,$21
 ; P3-28
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @base12:
 	db	$dc,$20
 	db	$d4,$31
@@ -389,14 +389,14 @@ Music_GymLeaderVictory_Ch5:
 ; P4-4-6
 @loop:
 	db	$fe
-	dw	drum4
+	dw	$ffff & drum4
 ; P4-7
 	db	$45
 	db	$41
 	db	$47
 ; P4-8-10
 	db	$fe
-	dw	drum4
+	dw	$ffff & drum4
 ; P4-11
 	db	$45
 	db	$41
@@ -416,9 +416,9 @@ Music_GymLeaderVictory_Ch5:
 	db	$31
 	db	$81
 	db	$fd,16
-	dw	@loop12
+	dw	$ffff & @loop12
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 drum4:
 	db	$45
 	db	$41
@@ -426,7 +426,7 @@ drum4:
 	db	$31
 	db	$41
 	db	$fd,3
-	dw	drum4
+	dw	$ffff & drum4
 	db	$ff
 ;:
 

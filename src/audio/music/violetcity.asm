@@ -1,14 +1,14 @@
 Music_VioletCity:
 	db	080h
-	dw	Music_VioletCity_Ch1
+	dw	$ffff & Music_VioletCity_Ch1
 	db	001h
-	dw	Music_VioletCity_Ch2
+	dw	$ffff & Music_VioletCity_Ch2
 	db	002h
-	dw	Music_VioletCity_Ch3
+	dw	$ffff & Music_VioletCity_Ch3
 	db	003h
-	dw	Music_VioletCity_Ch4
+	dw	$ffff & Music_VioletCity_Ch4
 	db	004h
-	dw	Music_VioletCity_Ch5
+	dw	$ffff & Music_VioletCity_Ch5
 ;----------------------------------------
 Music_VioletCity_Ch1:
 ;----------------------------------------
@@ -259,7 +259,7 @@ Music_VioletCity_Ch1:
 	db	$d3,$23
 	db	$03
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_VioletCity_Ch2:
 ;----------------------------------------
@@ -458,7 +458,7 @@ Music_VioletCity_Ch2:
 	db	$40
 	db	$50
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_VioletCity_Ch3:
 ;----------------------------------------
@@ -596,7 +596,7 @@ Music_VioletCity_Ch3:
 	db	$a7
 ; P3-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-15
 	db	$dc,$16
 	db	$71
@@ -612,7 +612,7 @@ Music_VioletCity_Ch3:
 	db	$01
 ; P3-16
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-17
 	db	$dc,$16
 	db	$71
@@ -678,7 +678,7 @@ Music_VioletCity_Ch3:
 	db	$dc,$25
 	db	$d5,$b3
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------
 ;	SUB 
 ;----------------------------------
@@ -714,13 +714,13 @@ Music_VioletCity_Ch5:
 	db	$73
 ; P4-2
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-3
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-4
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-5
 	db	$31
 	db	$40
@@ -731,54 +731,54 @@ Music_VioletCity_Ch5:
 @mainloop:
 ; P4-6
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-7
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-8
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-9
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-11
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-12
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-13
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-14
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-15
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-16
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-17
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-18
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-19
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-20
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-21
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;-----------------------------------------
 ;		DR SUB
 ;-----------------------------------------

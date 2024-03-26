@@ -1,14 +1,14 @@
 Music_ViridianCity:
 	db	080h
-	dw	Music_ViridianCity_Ch1
+	dw	$ffff & Music_ViridianCity_Ch1
 	db	001h
-	dw	Music_ViridianCity_Ch2
+	dw	$ffff & Music_ViridianCity_Ch2
 	db	002h
-	dw	Music_ViridianCity_Ch3
+	dw	$ffff & Music_ViridianCity_Ch3
 	db	003h
-	dw	Music_ViridianCity_Ch4
+	dw	$ffff & Music_ViridianCity_Ch4
 	db	004h
-	dw	Music_ViridianCity_Ch5
+	dw	$ffff & Music_ViridianCity_Ch5
 ;----------------------------------------
 Music_ViridianCity_Ch1:
 ;----------------------------------------
@@ -50,15 +50,15 @@ Music_ViridianCity_Ch1:
 	db	$03
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$03
 ; P1-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d3,$13
 ; P1-22
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$d3,$c1
 	db	$81
 	db	$31
@@ -123,7 +123,7 @@ Music_ViridianCity_Ch1:
 	db	$a1
 ; P1-30
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$d3,$a1
 	db	$81
 	db	$31
@@ -176,7 +176,7 @@ Music_ViridianCity_Ch1:
 	db	$b3
 ; P1-38
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P1-6
 	db	$d4,$a0
@@ -306,15 +306,15 @@ Music_ViridianCity_Ch2:
 	db	$03
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$03
 ; P2-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d5,$73
 ; P2-22
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P2-23
 	db	$83
 	db	$01
@@ -326,7 +326,7 @@ Music_ViridianCity_Ch2:
 	db	$d5,$c1
 ; P2-24
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P2-25
 	db	$01
 	db	$71
@@ -337,7 +337,7 @@ Music_ViridianCity_Ch2:
 	db	$13
 ; P2-26
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P2-27
 	db	$53
 	db	$01
@@ -367,7 +367,7 @@ Music_ViridianCity_Ch2:
 	db	$71
 ; P2-30
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P2-31
 	db	$83
 	db	$01
@@ -379,7 +379,7 @@ Music_ViridianCity_Ch2:
 	db	$81
 ; P2-32
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P2-33
 	db	$01
 	db	$71
@@ -391,7 +391,7 @@ Music_ViridianCity_Ch2:
 	db	$d5,$41
 ; P2-34
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P2-35
 	db	$53
 	db	$01
@@ -417,7 +417,7 @@ Music_ViridianCity_Ch2:
 	db	$d6,$a3
 ; P2-38
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P2-6
 	db	$d5,$33
@@ -556,13 +556,13 @@ Music_ViridianCity_Ch3:
 ; P3-6
 	db	$dc,$26
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$dc,$26
 	db	$d2,$71
 	db	$81
 ; P3-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$dc,$4c
 	db	$53
 ; P3-22
@@ -678,7 +678,7 @@ Music_ViridianCity_Ch3:
 	db	$53
 ; P3-38
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d2,$a1
 	db	$01
@@ -755,76 +755,76 @@ Music_ViridianCity_Ch5:
 	db	$d8,$c
 ; P4-2
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-4
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 @mainloop:
 ; P4-6
 ; P4-7
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-8
 ; P4-9
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-10
 ; P4-11
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-12
 ; P4-13
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-14
 ; P4-15
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-16
 ; P4-17
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-18
 ; P4-19
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-20
 ; P4-21
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-22
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-24
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P4-26
 ; P4-27
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-28
 ; P4-29
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-30
 ; P4-31
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-32
 ; P4-33
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 ; P4-34
 ; P4-35
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-36
 ; P4-37
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-38
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$51
 	db	$51

@@ -1,12 +1,12 @@
 Music_Route3:
 	db	060h
-	dw	Music_Route3_Ch1
+	dw	$ffff & Music_Route3_Ch1
 	db	001h
-	dw	Music_Route3_Ch2
+	dw	$ffff & Music_Route3_Ch2
 	db	002h
-	dw	Music_Route3_Ch3
+	dw	$ffff & Music_Route3_Ch3
 	db	004h
-	dw	Music_Route3_Ch5
+	dw	$ffff & Music_Route3_Ch5
 ;----------------------------------------
 Music_Route3_Ch1:
 ;----------------------------------------
@@ -52,7 +52,7 @@ Music_Route3_Ch1:
 	db	$90
 @Mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-7
 	db	$80
 	db	$30
@@ -180,7 +180,7 @@ Music_Route3_Ch1:
 	db	$d3,$30
 ; P1-16
 	db	$fd,0
-	dw	@Mainloop
+	dw	$ffff & @Mainloop
 @sub1:
 ; P1-4
 @sub1loop1:
@@ -189,7 +189,7 @@ Music_Route3_Ch1:
 	db	$20
 	db	$50
 	db	$fd,3
-	dw	@sub1loop1
+	dw	$ffff & @sub1loop1
 	db	$20
 	db	$50
 	db	$20
@@ -201,7 +201,7 @@ Music_Route3_Ch1:
 	db	$20
 	db	$50
 	db	$fd,3
-	dw	@sub1loop2
+	dw	$ffff & @sub1loop2
 	db	$20
 	db	$50
 	db	$20
@@ -213,7 +213,7 @@ Music_Route3_Ch1:
 	db	$d5,$c0
 	db	$d4,$30
 	db	$fd,3
-	dw	@sub1loop3
+	dw	$ffff & @sub1loop3
 	db	$d5,$c0
 	db	$d4,$30
 	db	$d5,$c0
@@ -250,7 +250,7 @@ Music_Route3_Ch2:
 @Mainloop:
 	db	$dc,$7d
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$80
 	db	$c9
 ; P2-7 -tie
@@ -263,7 +263,7 @@ Music_Route3_Ch2:
 	db	$93
 ; P2-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$c0
 	db	$dc,$7d
 	db	$d2,$34
@@ -310,7 +310,7 @@ Music_Route3_Ch2:
 	db	$90
 ; P2-16
 	db	$fd,0
-	dw	@Mainloop
+	dw	$ffff & @Mainloop
 @sub1:
 ; P2-4
 	db	$a5
@@ -365,26 +365,26 @@ Music_Route3_Ch3:
 	db	$91
 ; P3-3
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-4
 @Mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-5
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-6
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P3-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-9
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P3-12
 	db	$dc,$2f
 	db	$a1
@@ -432,7 +432,7 @@ Music_Route3_Ch3:
 	db	$90
 ; P3-16
 	db	$fd,0
-	dw	@Mainloop
+	dw	$ffff & @Mainloop
 @sub1:
 	db	$dc,$2f
 	db	$d4,$a0
@@ -509,6 +509,6 @@ Music_Route3_Ch5:
 	db	$20
 	db	$20
 	db	$fd,0
-	dw	@Mainloop
+	dw	$ffff & @Mainloop
 
 

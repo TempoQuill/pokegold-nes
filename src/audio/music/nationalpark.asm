@@ -1,14 +1,14 @@
 Music_NationalPark:
 	db	080h
-	dw	Music_NationalPark_Ch1
+	dw	$ffff & Music_NationalPark_Ch1
 	db	001h
-	dw	Music_NationalPark_Ch2
+	dw	$ffff & Music_NationalPark_Ch2
 	db	002h
-	dw	Music_NationalPark_Ch3
+	dw	$ffff & Music_NationalPark_Ch3
 	db	003h
-	dw	Music_NationalPark_Ch4
+	dw	$ffff & Music_NationalPark_Ch4
 	db	004h
-	dw	Music_NationalPark_Ch5
+	dw	$ffff & Music_NationalPark_Ch5
 ;----------------------------------------
 Music_NationalPark_Ch1:
 ;----------------------------------------
@@ -23,14 +23,14 @@ Music_NationalPark_Ch1:
 @loop:
 ; P1-2
 	db	$fe
-	dw	@sub2_13
+	dw	$ffff & @sub2_13
 ; P1-14
 	db	$fe
-	dw	@sub2_13
+	dw	$ffff & @sub2_13
 ; P1-26
 	db	$d8,$6,$67
 	db	$fe
-	dw	@sub26_27
+	dw	$ffff & @sub26_27
 ; P1-28
 	db	$d8,$c,$77
 	db	$0f
@@ -59,7 +59,7 @@ Music_NationalPark_Ch1:
 	db	$00
 ; P1-30
 	db	$fe
-	dw	@sub26_27
+	dw	$ffff & @sub26_27
 ; P1-32
 	 db	$dc,$77
 	db	$d4,$50
@@ -79,7 +79,7 @@ Music_NationalPark_Ch1:
 	db	$03
 ; P1-34
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub2_13:
 	db	$d5,$95
 	db	$d4,$61
@@ -282,11 +282,11 @@ Music_NationalPark_Ch2:
 	db	$d8,$c,$a7
 ; P2-2
 	db	$fe
-	dw	@mero2_13
+	dw	$ffff & @mero2_13
 	db	$d4,$37
 ; P2-14
 	db	$fe
-	dw	@mero2_13
+	dw	$ffff & @mero2_13
 	db	$01
 	db	$dc,$a7
 	db	$d3,$91
@@ -295,7 +295,7 @@ Music_NationalPark_Ch2:
 ; P2-26
 	db	$d8,$6,$a7
 	db	$fe
-	dw	@mero26_27
+	dw	$ffff & @mero26_27
 ; P2-28
 	db	$d4,$c0
 	db	$d3,$14
@@ -327,7 +327,7 @@ Music_NationalPark_Ch2:
 	db	$dc,$a7
 ; P2-30
 	db	$fe
-	dw	@mero26_27
+	dw	$ffff & @mero26_27
 ; P2-32
 	db	$d4,$c0
 	db	$d3,$14
@@ -348,7 +348,7 @@ Music_NationalPark_Ch2:
 	db	$31
 ; P2-34
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @mero2_13:
 	db	$d5,$25
 	db	$91
@@ -445,7 +445,7 @@ Music_NationalPark_Ch3:
 ;	db	$ef,$ff
 @loop:
 	db	$fe
-	dw	@bass2_12
+	dw	$ffff & @bass2_12
 ; P3-13
 	db	$dc,$81
 	db	$d2,$bd
@@ -454,7 +454,7 @@ Music_NationalPark_Ch3:
 	db	$b0
 ; P3-14
 	db	$fe
-	dw	@bass2_12
+	dw	$ffff & @bass2_12
 ; P3-15
 ; P3-25
 	db	$dc,$81
@@ -462,14 +462,14 @@ Music_NationalPark_Ch3:
 	db	$d3,$37
 ; P3-26
 	db	$fe
-	dw	@bass26_29
+	dw	$ffff & @bass26_29
 	db	$dc,$19
 	db	$d3,$30
 	db	$dc,$4d
 	db	$d4,$62
 ; P3-30
 	db	$fe
-	dw	@bass26_29
+	dw	$ffff & @bass26_29
 	db	$dc,$19
 	db	$d3,$30
 	db	$d4,$60
@@ -477,7 +477,7 @@ Music_NationalPark_Ch3:
 	db	$b0
 ; P3-34
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @bass2_12:
 ; P3-2
 	db	$dc,$81
@@ -612,7 +612,7 @@ Music_NationalPark_Ch5:
 @dr4:
 	db	$0f
 	db	$fd,23
-	dw	@dr4
+	dw	$ffff & @dr4
 ; P4-25
 	db	$07
 	db	$b1
@@ -634,7 +634,7 @@ Music_NationalPark_Ch5:
 	db	$31
 	db	$c1
 	db	$fd,7
-	dw	@dr26
+	dw	$ffff & @dr26
 ; P4-33
 	db	$b1
 	db	$80
@@ -651,7 +651,7 @@ Music_NationalPark_Ch5:
 	db	$40
 ; P4-34
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 ;:
 
 

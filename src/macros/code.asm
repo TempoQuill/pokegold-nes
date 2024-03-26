@@ -87,8 +87,12 @@ MACRO RPL
 ENDM
 
 MACRO dba bank, label
-	.db bank
-	.dw label
+	.db bank + >(label >> 8)
+	.dw $ffff & label
+ENDM
+
+MACRO dba_audio label
+	dba PRG_Audio, label
 ENDM
 
 MACRO bmuo

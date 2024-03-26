@@ -1,10 +1,10 @@
 Music_KantoTrainerBattle:
 	db	040h
-	dw	Music_KantoTrainerBattle_Ch1
+	dw	$ffff & Music_KantoTrainerBattle_Ch1
 	db	001h
-	dw	Music_KantoTrainerBattle_Ch2
+	dw	$ffff & Music_KantoTrainerBattle_Ch2
 	db	002h
-	dw	Music_KantoTrainerBattle_Ch3
+	dw	$ffff & Music_KantoTrainerBattle_Ch3
 	db	003h
 ;----------------------------------------
 Music_KantoTrainerBattle_Ch1:
@@ -433,7 +433,7 @@ Music_KantoTrainerBattle_Ch1:
 	db	$dc,$b7
 	db	$d3,$33
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ; P1-41
 ;----------------------------------------
 Music_KantoTrainerBattle_Ch2:
@@ -465,7 +465,7 @@ Music_KantoTrainerBattle_Ch2:
 	db	$80
 	db	$70
 	db	$fd,14
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P2-5
 ; P2-6
 ; P2-7
@@ -844,7 +844,7 @@ Music_KantoTrainerBattle_Ch2:
 	db	$d4,$c3
 ; P2-41
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_KantoTrainerBattle_Ch3:
 ;----------------------------------------
@@ -1319,7 +1319,7 @@ Music_KantoTrainerBattle_Ch3:
 	db	$d2,$83
 ; P3-41
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 
 
 

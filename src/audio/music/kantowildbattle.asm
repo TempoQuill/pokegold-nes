@@ -1,10 +1,10 @@
 Music_KantoWildBattle:
 	db	040h
-	dw	Music_KantoWildBattle_Ch1
+	dw	$ffff & Music_KantoWildBattle_Ch1
 	db	001h
-	dw	Music_KantoWildBattle_Ch2
+	dw	$ffff & Music_KantoWildBattle_Ch2
 	db	002h
-	dw	Music_KantoWildBattle_Ch3
+	dw	$ffff & Music_KantoWildBattle_Ch3
 	db	003h
 ;----------------------------------------
 Music_KantoWildBattle_Ch1:
@@ -33,14 +33,14 @@ Music_KantoWildBattle_Ch1:
 @loop:
 	db	$d8,$c,$b7
 	db	$fe
-	dw	@sub4_6
+	dw	$ffff & @sub4_6
 ; P1-7
 	db	$d3,$63
 	db	$23
 	db	$d4,$c7
 ; P1-8
 	db	$fe
-	dw	@sub4_6
+	dw	$ffff & @sub4_6
 ; P1-11
 	db	$07
 	db	$80
@@ -213,7 +213,7 @@ Music_KantoWildBattle_Ch1:
 	db	$30
 	db	$20
 	db	$fd,8
-	dw	@sub36
+	dw	$ffff & @sub36
 ; P1-38
 @sub38:
 	db	$20
@@ -221,7 +221,7 @@ Music_KantoWildBattle_Ch1:
 	db	$50
 	db	$40
 	db	$fd,8
-	dw	@sub38
+	dw	$ffff & @sub38
 ; P1-40
 @sub40:
 	db	$10
@@ -229,7 +229,7 @@ Music_KantoWildBattle_Ch1:
 	db	$30
 	db	$20
 	db	$fd,16
-	dw	@sub40
+	dw	$ffff & @sub40
 ; P1-44
 @sub44:
 	db	$20
@@ -237,7 +237,7 @@ Music_KantoWildBattle_Ch1:
 	db	$40
 	db	$30
 	db	$fd,8
-	dw	@sub44
+	dw	$ffff & @sub44
 ; P1-46
 @sub46:
 	db	$10
@@ -245,10 +245,10 @@ Music_KantoWildBattle_Ch1:
 	db	$30
 	db	$20
 	db	$fd,8
-	dw	@sub46
+	dw	$ffff & @sub46
 ; P1-48
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub4_6:
 	db	$d3,$10
 	db	$04
@@ -314,14 +314,14 @@ Music_KantoWildBattle_Ch2:
 @loop:
 	db	$d8,$c,$b7
 	db	$fe
-	dw	@mero4_7
+	dw	$ffff & @mero4_7
 	db	$d5,$61
 	db	$d6,$c0
 	db	$00
 	db	$d5,$81
 ; P2-8
 	db	$fe
-	dw	@mero4_7
+	dw	$ffff & @mero4_7
 	db	$d5,$80
 	db	$00
 	db	$d6,$c0
@@ -331,44 +331,44 @@ Music_KantoWildBattle_Ch2:
 ; P2-12
 	db	$d8,$6,$b7
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-13
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-14
 	db	$d9,$01
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-15
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-16
 	db	$d9,$00
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-17
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-18
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-19
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-20
 	db	$d9,$01
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-21
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-22
 	db	$d9,$00
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-23
 	db	$fe
-	dw	@mero12
+	dw	$ffff & @mero12
 ; P2-24
 	db	$0f
 	db	$d4,$bf
@@ -410,15 +410,15 @@ Music_KantoWildBattle_Ch2:
 ; P2-32
 	db	$d8,$6,$b7
 	db	$fe
-	dw	@mero32_33
+	dw	$ffff & @mero32_33
 ; P2-34
 	db	$d9,$01
 	db	$fe
-	dw	@mero32_33
+	dw	$ffff & @mero32_33
 ; P2-36
 	db	$d9,$00
 	db	$fe
-	dw	@mero36
+	dw	$ffff & @mero36
 ; P2-37
 	db	$d5,$11
 	db	$01
@@ -463,20 +463,20 @@ Music_KantoWildBattle_Ch2:
 	db	$01
 ; P2-40
 	db	$fe
-	dw	@mero36
+	dw	$ffff & @mero36
 ; P2-41
 	db	$fe
-	dw	@mero41
+	dw	$ffff & @mero41
 ; P2-42
 	db	$fe
-	dw	@mero36
+	dw	$ffff & @mero36
 ; P2-43
 	db	$fe
-	dw	@mero41
+	dw	$ffff & @mero41
 ; P2-44
 	db	$d9,$01
 	db	$fe
-	dw	@mero36
+	dw	$ffff & @mero36
 	db	$d9,$00
 ; P2-45
 	db	$21
@@ -494,7 +494,7 @@ Music_KantoWildBattle_Ch2:
 	db	$01
 ; P2-46
 	db	$fe
-	dw	@mero36
+	dw	$ffff & @mero36
 ; P2-47
 	db	$11
 	db	$01
@@ -511,7 +511,7 @@ Music_KantoWildBattle_Ch2:
 	db	$01
 ; P2-48
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @mero4_7:
 	db	$d5,$10
 	db	$01
@@ -1150,7 +1150,7 @@ Music_KantoWildBattle_Ch3:
 	db	$8f
 ; P3-48
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 
 
 

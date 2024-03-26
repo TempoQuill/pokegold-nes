@@ -1,10 +1,10 @@
 Music_Surf:
 	db	040h
-	dw	Music_Surf_Ch1
+	dw	$ffff & Music_Surf_Ch1
 	db	001h
-	dw	Music_Surf_Ch2
+	dw	$ffff & Music_Surf_Ch2
 	db	002h
-	dw	Music_Surf_Ch3
+	dw	$ffff & Music_Surf_Ch3
 	db	003h
 ;----------------------------------------
 Music_Surf_Ch1:
@@ -74,15 +74,15 @@ Music_Surf_Ch1:
 ; P1-6
 	db	$db,$00
 	db	$fe
-	dw	@sub6_13
+	dw	$ffff & @sub6_13
 ; P1-14
 	db	$db,$01
 	db	$d8,$8,$a7
 	db	$fe
-	dw	@sub6_13
+	dw	$ffff & @sub6_13
 ; P1-22
 	db	$fe
-	dw	@sub22_28
+	dw	$ffff & @sub22_28
 ; P1-29
 	db	$d3,$11
 	db	$d4,$81
@@ -97,7 +97,7 @@ Music_Surf_Ch1:
 	db	$db,$01
 	db	$d8,$6,$97
 	db	$fe
-	dw	@sub22_28
+	dw	$ffff & @sub22_28
 ; P1-37
 	db	$dc,$a8
 	db	$95
@@ -108,7 +108,7 @@ Music_Surf_Ch1:
 	db	$db,$01
 ; P1-38
 	db	$fe
-	dw	@sub38_44
+	dw	$ffff & @sub38_44
 ; P1-45
 	db	$d4,$47
 	db	$97
@@ -117,7 +117,7 @@ Music_Surf_Ch1:
 	db	$db,$03
 	db	$d8,$8,$98
 	db	$fe
-	dw	@sub38_44
+	dw	$ffff & @sub38_44
 ; P1-53
 	db	$d8,$c,$a7
 	db	$d4,$4b
@@ -133,7 +133,7 @@ Music_Surf_Ch1:
 	db	$d4,$41
 ; P1-56
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @sub6_13:
 	db	$d8,$c,$a7
 	db	$d4,$43
@@ -338,7 +338,7 @@ Music_Surf_Ch2:
 	db	$02
 ; P2-3
 	db	$fd,3
-	dw	@mero2
+	dw	$ffff & @mero2
 ; P2-4
 ; P2-5
 	db	$d6,$b3
@@ -388,18 +388,18 @@ Music_Surf_Ch2:
 	db	$b3
 	db	$93
 	db	$fd,2
-	dw	@mero6
+	dw	$ffff & @mero6
 ; P2-22
 	db	$dc,$c7
 	db	$fe
-	dw	@mero22_28
+	dw	$ffff & @mero22_28
 ; P2-29
 	db	$43
 	db	$33
 	db	$23
 ; P2-30
 	db	$fe
-	dw	@mero22_28
+	dw	$ffff & @mero22_28
 ; P2-37
 	db	$33
 	db	$43
@@ -407,19 +407,19 @@ Music_Surf_Ch2:
 ; P2-38
 	db	$d8,$6,$b8
 	db	$fe
-	dw	@mero38_39
+	dw	$ffff & @mero38_39
 	db	$db,$01
 	db	$dc,$b8
 	db	$fe
-	dw	@mero39_41
+	dw	$ffff & @mero39_41
 ; P2-42
 	db	$db,$02
 	db	$fe
-	dw	@mero42_43
+	dw	$ffff & @mero42_43
 	db	$db,$01
 	db	$dc,$b8
 	db	$fe
-	dw	@mero43_44
+	dw	$ffff & @mero43_44
 ; P2-45
 	db	$d4,$cf
 	db	$d3,$27
@@ -427,19 +427,19 @@ Music_Surf_Ch2:
 	db	$d9,$0c
 	db	$db,$03
 	db	$fe
-	dw	@mero38_39
+	dw	$ffff & @mero38_39
 	db	$dc,$b8
 	db	$db,$01
 	db	$fe
-	dw	@mero39_41
+	dw	$ffff & @mero39_41
 ; P2-50
 	db	$db,$03
 	db	$fe
-	dw	@mero42_43
+	dw	$ffff & @mero42_43
 	db	$dc,$b8
 	db	$db,$01
 	db	$fe
-	dw	@mero43_44
+	dw	$ffff & @mero43_44
 	db	$d9,$00
 ; P2-53
 	db	$d8,$c,$b8
@@ -455,7 +455,7 @@ Music_Surf_Ch2:
 	db	$c3
 ; P2-56
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @mero22_28:
 	db	$d6,$93
 	db	$d4,$63
@@ -722,7 +722,7 @@ Music_Surf_Ch3:
 ; P3-38
 	db	$dc,$3b
 	db	$fe
-	dw	@bass38_43
+	dw	$ffff & @bass38_43
 ; P3-44
 	db	$d5,$c3
 	db	$d4,$43
@@ -733,7 +733,7 @@ Music_Surf_Ch3:
 	db	$c3
 ; P3-46
 	db	$fe
-	dw	@bass38_43
+	dw	$ffff & @bass38_43
 ; P3-52
 	db	$d5,$c3
 	db	$d4,$43
@@ -750,7 +750,7 @@ Music_Surf_Ch3:
 	db	$d5,$c3
 ; P3-56
 	db	$fd,0
-	dw	@loop
+	dw	$ffff & @loop
 @bass38_43:
 	db	$d4,$43
 	db	$80

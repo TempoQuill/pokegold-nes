@@ -1,12 +1,12 @@
 Music_HallOfFame:
 	db	060h
-	dw	Music_HallOfFame_Ch1
+	dw	$ffff & Music_HallOfFame_Ch1
 	db	001h
-	dw	Music_HallOfFame_Ch2
+	dw	$ffff & Music_HallOfFame_Ch2
 	db	002h
-	dw	Music_HallOfFame_Ch3
+	dw	$ffff & Music_HallOfFame_Ch3
 	db	004h
-	dw	Music_HallOfFame_Ch5
+	dw	$ffff & Music_HallOfFame_Ch5
 ;----------------------------------------
 Music_HallOfFame_Ch1:
 ;----------------------------------------
@@ -49,13 +49,13 @@ Music_HallOfFame_Ch1:
 	db	$dc,$57
 	db	$67
 	db	$fd,3
-	dw	@mainloop
+	dw	$ffff & @mainloop
 	db	$0f
 	db	$0f
 	db	$0f
 	db	$0f
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_HallOfFame_Ch2:
 ;----------------------------------------
@@ -88,7 +88,7 @@ Music_HallOfFame_Ch2:
 	db	$a3
 	db	$61
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_HallOfFame_Ch3:
 ;----------------------------------------
@@ -129,7 +129,7 @@ Music_HallOfFame_Ch3:
 	db	$11
 	db	$61
 	db	$fd,3
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P3-9
 	db	$dc,$3c
 	db	$33
@@ -152,7 +152,7 @@ Music_HallOfFame_Ch3:
 	db	$53
 	db	$83
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_HallOfFame_Ch5:
 ;----------------------------------------
@@ -188,6 +188,6 @@ Music_HallOfFame_Ch5:
 	db	$b0
 	db	$b0
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 
 

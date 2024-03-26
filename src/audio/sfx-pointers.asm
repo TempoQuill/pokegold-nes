@@ -1,55 +1,55 @@
 SFX:
-	dba PRG_Audio, SFX_LevelUp
-	dba PRG_Audio, SFX_Item
-	dba PRG_Audio, SFX_Evolution
-	dba PRG_Audio, Sfx_PokeballsPlacedOnTable
-	dba PRG_Audio, Sfx_Potion
-	dba PRG_Audio, Sfx_FullHeal
-	dba PRG_Audio, Sfx_Menu
-	dba PRG_Audio, Sfx_ReadText
-	dba PRG_Audio, Sfx_ReadText
-	dba PRG_Audio, Sfx_DexFanfare2049
-	dba PRG_Audio, Sfx_DexFanfare80109
-	dba PRG_Audio, Sfx_Poison
-	dba PRG_Audio, Sfx_GotSafariBalls
-	dba PRG_Audio, Sfx_BootPc
-	dba PRG_Audio, Sfx_ShutDownPC
-	dba PRG_Audio, Sfx_ChoosePCOption
-	dba PRG_Audio, Sfx_EscapeRope
-	dba PRG_Audio, Sfx_PushButton
-	dba PRG_Audio, Sfx_SecondPartOfItemfinder
-	dba PRG_Audio, Sfx_WarpTo
-	dba PRG_Audio, Sfx_WarpFrom
-	dba PRG_Audio, Sfx_ChangeDexMode
-	dba PRG_Audio, Sfx_JumpOverLedge
-	dba PRG_Audio, Sfx_GrassRustle
-	dba PRG_Audio, Sfx_Fly
-	dba PRG_Audio, Sfx_Wrong
-	dba PRG_Audio, Sfx_Squeak
-	dba PRG_Audio, Sfx_Strength
-	dba PRG_Audio, Sfx_Boat
-	dba PRG_Audio, Sfx_WallOpen
-	dba PRG_Audio, Sfx_PlacePuzzlePieceDown
-	dba PRG_Audio, Sfx_EnterDoor
-	dba PRG_Audio, Sfx_SwitchPokemon
-	dba PRG_Audio, Sfx_Tally
-	dba PRG_Audio, Sfx_Transaction
-	dba PRG_Audio, Sfx_ExitBuilding
-	dba PRG_Audio, Sfx_Bump
-	dba PRG_Audio, Sfx_Save
-	dba PRG_Audio, Sfx_Pokeflute
-	dba PRG_Audio, Sfx_ElevatorEnd
-	dba PRG_Audio, Sfx_ThrowBall
-	dba PRG_Audio, Sfx_BallPoof
-	dba PRG_Audio, Sfx_Unknown3A
-	dba PRG_Audio, Sfx_Run
-	dba PRG_Audio, Sfx_SlotMachineStart
-	dba PRG_Audio, Sfx_Fanfare
-	dba PRG_Audio, Sfx_Peck
-	dba PRG_Audio, Sfx_Kinesis
-	dba PRG_Audio, Sfx_Lick
-	dba PRG_Audio, Sfx_Pound
-	dba PRG_Audio, Sfx_MovePuzzlePiece
-	dba PRG_Audio, Sfx_CometPunch
-	dba PRG_Audio, Sfx_MegaPunch
-	dba PRG_Audio, Sfx_Elevator
+	dba_audio SFX_LevelUp
+	dba_audio SFX_Item
+	dba_audio SFX_Evolution
+	dba_audio Sfx_PokeballsPlacedOnTable
+	dba_audio Sfx_Potion
+	dba_audio Sfx_FullHeal
+	dba_audio Sfx_Menu
+	dba_audio Sfx_ReadText
+	dba_audio Sfx_ReadText
+	dba_audio Sfx_DexFanfare2049
+	dba_audio Sfx_DexFanfare80109
+	dba_audio Sfx_Poison
+	dba_audio Sfx_GotSafariBalls
+	dba_audio Sfx_BootPc
+	dba_audio Sfx_ShutDownPC
+	dba_audio Sfx_ChoosePCOption
+	dba_audio Sfx_EscapeRope
+	dba_audio Sfx_PushButton
+	dba_audio Sfx_SecondPartOfItemfinder
+	dba_audio Sfx_WarpTo
+	dba_audio Sfx_WarpFrom
+	dba_audio Sfx_ChangeDexMode
+	dba_audio Sfx_JumpOverLedge
+	dba_audio Sfx_GrassRustle
+	dba_audio Sfx_Fly
+	dba_audio Sfx_Wrong
+	dba_audio Sfx_Squeak
+	dba_audio Sfx_Strength
+	dba_audio Sfx_Boat
+	dba_audio Sfx_WallOpen
+	dba_audio Sfx_PlacePuzzlePieceDown
+	dba_audio Sfx_EnterDoor
+	dba_audio Sfx_SwitchPokemon
+	dba_audio Sfx_Tally
+	dba_audio Sfx_Transaction
+	dba_audio Sfx_ExitBuilding
+	dba_audio Sfx_Bump
+	dba_audio Sfx_Save
+	dba_audio Sfx_Pokeflute
+	dba_audio Sfx_ElevatorEnd
+	dba_audio Sfx_ThrowBall
+	dba_audio Sfx_BallPoof
+	dba_audio Sfx_Unknown3A
+	dba_audio Sfx_Run
+	dba_audio Sfx_SlotMachineStart
+	dba_audio Sfx_Fanfare
+	dba_audio Sfx_Peck
+	dba_audio Sfx_Kinesis
+	dba_audio Sfx_Lick
+	dba_audio Sfx_Pound
+	dba_audio Sfx_MovePuzzlePiece
+	dba_audio Sfx_CometPunch
+	dba_audio Sfx_MegaPunch
+	dba_audio Sfx_Elevator

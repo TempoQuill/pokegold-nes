@@ -1,12 +1,12 @@
 Music_PokemonCenter:
 	db	060h
-	dw	Music_PokemonCenter_Ch1
+	dw	$ffff & Music_PokemonCenter_Ch1
 	db	001h
-	dw	Music_PokemonCenter_Ch2
+	dw	$ffff & Music_PokemonCenter_Ch2
 	db	002h
-	dw	Music_PokemonCenter_Ch3
+	dw	$ffff & Music_PokemonCenter_Ch3
 	db	003h
-	dw	Music_PokemonCenter_Ch4
+	dw	$ffff & Music_PokemonCenter_Ch4
 ;----------------------------------------
 Music_PokemonCenter_Ch1:
 ;----------------------------------------
@@ -159,7 +159,7 @@ Music_PokemonCenter_Ch1:
 	db	$71
 	db	$81
 	db	$fd,0
-	dw	@loop10
+	dw	$ffff & @loop10
 ;----------------------------------------
 Music_PokemonCenter_Ch2:
 ;----------------------------------------
@@ -168,7 +168,7 @@ Music_PokemonCenter_Ch2:
 @loop20:
 ;	db	$ef,$ff
 	db	$fe
-	dw	@d_a_d
+	dw	$ffff & @d_a_d
 ;	db	$ef,$0f
 	db	$d8,$c,$a5
 	db	$d4,$a3
@@ -176,7 +176,7 @@ Music_PokemonCenter_Ch2:
 ; P2-3
 ;	db	$ef,$ff
 	db	$fe
-	dw	@cs_a_cs
+	dw	$ffff & @cs_a_cs
 ; P2-4
 	db	$31
 	db	$75
@@ -187,7 +187,7 @@ Music_PokemonCenter_Ch2:
 ; P2-5
 ;	db	$ef,$ff
 	db	$fe
-	dw	@d_a_d
+	dw	$ffff & @d_a_d
 ;	db	$ef,$0f
 	db	$d8,$c,$a5
 	db	$d4,$a3
@@ -195,7 +195,7 @@ Music_PokemonCenter_Ch2:
 ; P2-7
 ;	db	$ef,$ff
 	db	$fe
-	dw	@cs_a_cs
+	dw	$ffff & @cs_a_cs
 ; P2-8
 	db	$37
 ;	db	$ef,$0f
@@ -242,7 +242,7 @@ Music_PokemonCenter_Ch2:
 	db	$51
 	db	$37
 	db	$fd,0
-	dw	@loop20
+	dw	$ffff & @loop20
 @d_a_d:
 	db	$db,$02
 	db	$d8,$c,$c2
@@ -286,10 +286,10 @@ Music_PokemonCenter_Ch3:
 	db	$00
 ; P3-2
 	db	$fe
-	dw	@e_a_e_a
+	dw	$ffff & @e_a_e_a
 ; P3-3
 	db	$fe
-	dw	@e_a_g_a
+	dw	$ffff & @e_a_g_a
 ; P3-4
 	db	$70
 	db	$04
@@ -314,10 +314,10 @@ Music_PokemonCenter_Ch3:
 	db	$00
 ; P3-6
 	db	$fe
-	dw	@e_a_e_a
+	dw	$ffff & @e_a_e_a
 ; P3-7
 	db	$fe
-	dw	@e_a_g_a
+	dw	$ffff & @e_a_g_a
 ; P3-8
 	db	$30
 	db	$04
@@ -338,7 +338,7 @@ Music_PokemonCenter_Ch3:
 ; P3-9
 ;	db	$ef,$ff
 	db	$fe
-	dw	@fs_a_fs_a
+	dw	$ffff & @fs_a_fs_a
 ; P3-10
 	db	$80
 	db	$04
@@ -372,7 +372,7 @@ Music_PokemonCenter_Ch3:
 	db	$00
 ; P3-13
 	db	$fe
-	dw	@fs_a_fs_a
+	dw	$ffff & @fs_a_fs_a
 ; P3-14
 	db	$80
 	db	$04
@@ -403,7 +403,7 @@ Music_PokemonCenter_Ch3:
 	db	$50
 	db	$00
 	db	$fd,0
-	dw	@loop30
+	dw	$ffff & @loop30
 @e_a_e_a:
 	db	$50
 	db	$04
@@ -450,6 +450,6 @@ Music_PokemonCenter_Ch4:
 	db	$81
 	db	$81
 	db	$fd,0
-	dw	@loop40
+	dw	$ffff & @loop40
 
 

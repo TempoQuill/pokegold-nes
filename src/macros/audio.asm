@@ -47,12 +47,12 @@ sound_ret_cmd:		.dsb 1
 
 MACRO sound_header total channel, address
 	.db total - 1 << 5 | channel - 1
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO sound_subheader channel, address
 	.db channel - 1
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO note pitch, length
@@ -78,7 +78,7 @@ m = mode << 4
 		.db m + param
 	ENDIF
 f = freq ^ $7ff
-	.dw f
+	.dw $ffff & f
 ENDM
 
 MACRO noise_note length, mode, param, freq
@@ -241,7 +241,7 @@ ENDM
 
 MACRO restart_channel address
 	.db restart_channel_cmd
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO new_song id
@@ -259,7 +259,7 @@ ENDM
 
 MACRO sound_jump_ram address
 	.db sound_jump_ram_cmd
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO dummy_ef
@@ -318,25 +318,26 @@ ENDM
 
 MACRO sound_jump_if address
 	.db sound_jump_if_cmd
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO sound_jump address
 	.db sound_jump_cmd
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO sound_loop repeat, address
 	.db sound_loop_cmd
 	.db repeat
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO sound_call address
 	.db sound_call_cmd
-	.dw address
+	.dw $ffff & address
 ENDM
 
 MACRO sound_ret
 	.db sound_ret_cmd
 ENDM
+

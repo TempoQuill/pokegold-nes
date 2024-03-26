@@ -1,12 +1,12 @@
 Music_Route29:
 	db	060h
-	dw	Music_Route29_Ch1
+	dw	$ffff & Music_Route29_Ch1
 	db	001h
-	dw	Music_Route29_Ch2
+	dw	$ffff & Music_Route29_Ch2
 	db	002h
-	dw	Music_Route29_Ch3
+	dw	$ffff & Music_Route29_Ch3
 	db	003h
-	dw	Music_Route29_Ch4
+	dw	$ffff & Music_Route29_Ch4
 ;----------------------------------------
 Music_Route29_Ch1:
 ;----------------------------------------
@@ -154,7 +154,7 @@ Music_Route29_Ch1:
 	db	$81
 	db	$83
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_Route29_Ch2:
 ;----------------------------------------
@@ -166,7 +166,7 @@ Music_Route29_Ch2:
 	db	$30
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-5
 	db	$60
 	db	$50
@@ -180,7 +180,7 @@ Music_Route29_Ch2:
 	db	$30
 ; P2-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P2-9
 	db	$60
 	db	$50
@@ -273,7 +273,7 @@ Music_Route29_Ch2:
 	db	$d3,$10
 	db	$30
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P2-2
 	db	$51
@@ -467,7 +467,7 @@ Music_Route29_Ch3:
 	db	$10
 	db	$02
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_Route29_Ch4:
 ;----------------------------------------
@@ -491,6 +491,6 @@ Music_Route29_Ch4:
 	db	$61
 	db	$63
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 
 

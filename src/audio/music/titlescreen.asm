@@ -1,14 +1,14 @@
 Music_TitleScreen:
 	db	080h
-	dw	Music_TitleScreen_Ch1
+	dw	$ffff & Music_TitleScreen_Ch1
 	db	001h
-	dw	Music_TitleScreen_Ch2
+	dw	$ffff & Music_TitleScreen_Ch2
 	db	002h
-	dw	Music_TitleScreen_Ch3
+	dw	$ffff & Music_TitleScreen_Ch3
 	db	003h
-	dw	Music_TitleScreen_Ch4
+	dw	$ffff & Music_TitleScreen_Ch4
 	db	004h
-	dw	Music_TitleScreen_Ch5
+	dw	$ffff & Music_TitleScreen_Ch5
 ;----------------------------------------
 Music_TitleScreen_Ch1:
 ;----------------------------------------
@@ -205,19 +205,19 @@ Music_TitleScreen_Ch1:
 ; P1-38
 	db	$da,$00,$86				; tempo 144
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d3,$13
 	db	$13
 	db	$23
 ; P1-40
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d3,$13
 	db	$13
 	db	$23
 ; P1-42
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d4,$53
 	db	$53
 	db	$13
@@ -297,7 +297,7 @@ Music_TitleScreen_Ch1:
 	db	$d6,$a0
 	db	$d5,$30
 	db	$fd,5
-	dw	@sub1loop1
+	dw	$ffff & @sub1loop1
 	db	$00
 	db	$30
 	db	$d6,$a0
@@ -488,15 +488,15 @@ Music_TitleScreen_Ch2:
 	db	$e6,$00,$01
 ; P2-38
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$23
 ; P2-40
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$23
 ; P2-42
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$d3,$a3
 ; P2-44
 	db	$e6,$00,$00
@@ -579,7 +579,7 @@ Music_TitleScreen_Ch2:
 	db	$a0
 	db	$30
 	db	$fd,5
-	dw	@sub1loop1
+	dw	$ffff & @sub1loop1
 	db	$d4,$a0
 	db	$d3,$30
 	db	$a0
@@ -1104,13 +1104,13 @@ Music_TitleScreen_Ch5:
 	db	$d8,$c
 ; P4-18							; Melody Start
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-19
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-20
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-21
 ;22222112#61111_14144111#62211
 	db	$11
@@ -1129,7 +1129,7 @@ Music_TitleScreen_Ch5:
 	db	$d8,$c
 ; P4-22
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-23
 ;222221122_141641111
 	db	$11
@@ -1143,7 +1143,7 @@ Music_TitleScreen_Ch5:
 	db	$11
 ; P4-24
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-25
 ;2222211211_1414411111
 	db	$11
@@ -1158,13 +1158,13 @@ Music_TitleScreen_Ch5:
 	db	$10
 ; P4-26
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-27
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-28
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-29
 ;22222112#61111_14144111#62332
 	db	$11
@@ -1183,10 +1183,10 @@ Music_TitleScreen_Ch5:
 	db	$d8,$c
 ; P4-30
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-31
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-32
 ;2222211211_1416411111
 	db	$11
@@ -1250,10 +1250,10 @@ Music_TitleScreen_Ch5:
 	db	$10
 ; P4-38							; Slow End First Start!
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-39
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 	db	$20
 	db	$30
 	db	$30
@@ -1261,10 +1261,10 @@ Music_TitleScreen_Ch5:
 	db	$d8,$c
 ; P4-40
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-41
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 	db	$30
 	db	$30
 	db	$20
@@ -1272,10 +1272,10 @@ Music_TitleScreen_Ch5:
 	db	$d8,$c
 ; P4-42
 	db	$fe
-	dw	@sub3
+	dw	$ffff & @sub3
 ; P4-43
 	db	$fe
-	dw	@sub4
+	dw	$ffff & @sub4
 	db	$20
 	db	$20
 	db	$20
@@ -1287,7 +1287,7 @@ Music_TitleScreen_Ch5:
 @loop1:
 	db	$0f
 	db	$fd,6
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P4-51
 	db	$0b
 	db	$d8,$6
@@ -1368,7 +1368,7 @@ Music_TitleScreen_Ch5:
 	db	$10
 	db	$10
 	db	$fd,4
-	dw	@sub3loop1
+	dw	$ffff & @sub3loop1
 	db	$ff
 @sub4:
 ; P4-39

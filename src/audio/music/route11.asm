@@ -1,12 +1,12 @@
 Music_Route11:
 	db	060h
-	dw	Music_Route11_Ch1
+	dw	$ffff & Music_Route11_Ch1
 	db	001h
-	dw	Music_Route11_Ch2
+	dw	$ffff & Music_Route11_Ch2
 	db	002h
-	dw	Music_Route11_Ch3
+	dw	$ffff & Music_Route11_Ch3
 	db	004h
-	dw	Music_Route11_Ch5
+	dw	$ffff & Music_Route11_Ch5
 ;----------------------------------------
 Music_Route11_Ch1:
 ;----------------------------------------
@@ -35,13 +35,13 @@ Music_Route11_Ch1:
 	db	$db,$02
 	db	$dc,$96
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-5
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P1-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-7
 	db	$50
 	db	$01
@@ -51,13 +51,13 @@ Music_Route11_Ch1:
 	db	$d3,$43
 ; P1-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-9
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P1-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-11
 	db	$dc,$92
 	db	$d3,$50
@@ -135,9 +135,9 @@ Music_Route11_Ch1:
 	db	$70
 	db	$93
 	db	$fd,2
-	dw	@loop1
+	dw	$ffff & @loop1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d4,$90
 	db	$00
@@ -189,7 +189,7 @@ Music_Route11_Ch2:
 	db	$db,$03
 	db	$dc,$b7
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$70
 	db	$a0
 	db	$90
@@ -210,7 +210,7 @@ Music_Route11_Ch2:
 ; P2-8-9
 	db	$db,$03
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$a0
 	db	$d2,$20
 	db	$d3,$c0
@@ -269,7 +269,7 @@ Music_Route11_Ch2:
 	db	$dc,$a4
 	db	$55
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d3,$55
 	db	$dc,$b1
@@ -312,7 +312,7 @@ Music_Route11_Ch3:
 ; P3-4-6
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-7
 	db	$dc,$10
 	db	$70
@@ -326,7 +326,7 @@ Music_Route11_Ch3:
 	db	$d5,$c3
 ; P3-8-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-11
 	db	$dc,$10
 	db	$50
@@ -398,9 +398,9 @@ Music_Route11_Ch3:
 	db	$52
 	db	$00
 	db	$fd,2
-	dw	@loop1
+	dw	$ffff & @loop1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$dc,$10
 	db	$d4,$50
@@ -452,7 +452,7 @@ Music_Route11_Ch5:
 	db	$33
 	db	$d8,$6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-4-11
 @mainloop:
 	db	$33
@@ -461,9 +461,9 @@ Music_Route11_Ch5:
 	db	$21
 	db	$37
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fd,8
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ; P4-12-15
 @loop1:
 	db	$d8,$c
@@ -481,15 +481,15 @@ Music_Route11_Ch5:
 	db	$20
 	db	$33
 	db	$fd,2
-	dw	@loop1
+	dw	$ffff & @loop1
 ; P4-16
 	db	$cf
 ; P4-17
 	db	$d8,$6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$cf
 ; P4-18-19
 @loop2:
@@ -499,11 +499,11 @@ Music_Route11_Ch5:
 	db	$21
 	db	$37
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fd,2
-	dw	@loop2
+	dw	$ffff & @loop2
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$20
 	db	$20

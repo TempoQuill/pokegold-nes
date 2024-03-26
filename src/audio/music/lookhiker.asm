@@ -1,14 +1,14 @@
 Music_LookHiker:
 	db	080h
-	dw	Music_LookHiker_Ch1
+	dw	$ffff & Music_LookHiker_Ch1
 	db	001h
-	dw	Music_LookHiker_Ch2
+	dw	$ffff & Music_LookHiker_Ch2
 	db	002h
-	dw	Music_LookHiker_Ch3
+	dw	$ffff & Music_LookHiker_Ch3
 	db	003h
-	dw	Music_LookHiker_Ch4
+	dw	$ffff & Music_LookHiker_Ch4
 	db	004h
-	dw	Music_LookHiker_Ch5
+	dw	$ffff & Music_LookHiker_Ch5
 ;----------------------------------------
 Music_LookHiker_Ch1:
 ;----------------------------------------
@@ -38,7 +38,7 @@ Music_LookHiker_Ch1:
 	db	$71
 	db	$05
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_LookHiker_Ch2:
 ;----------------------------------------
@@ -71,7 +71,7 @@ Music_LookHiker_Ch2:
 	db	$70
 	db	$30
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_LookHiker_Ch3:
 ;----------------------------------------
@@ -91,16 +91,16 @@ Music_LookHiker_Ch3:
 	db	$11
 ; P3-3-4
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$81
 	db	$91
 	db	$a1
 	db	$b1
 ; P3-5-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d3,$c1
 	db	$03
@@ -131,4 +131,4 @@ Music_LookHiker_Ch5:
 	db	$31
 	db	$81
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop

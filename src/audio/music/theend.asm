@@ -1,8 +1,8 @@
 Music_TheEnd:
 	db	020h
-	dw	Music_TheEnd_Ch1
+	dw	$ffff & Music_TheEnd_Ch1
 	db	001h
-	dw	Music_TheEnd_Ch2
+	dw	$ffff & Music_TheEnd_Ch2
 	db	002h
 ;----------------------------------------
 Music_TheEnd_Ch1:
@@ -119,7 +119,7 @@ Music_TheEnd_Ch1:
 	db	$d5,$81
 ; P1-10
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_TheEnd_Ch2:
 ;----------------------------------------
@@ -257,4 +257,4 @@ Music_TheEnd_Ch2:
 	db	$61
 ; P2-10
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop

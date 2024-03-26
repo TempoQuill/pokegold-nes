@@ -1,10 +1,10 @@
 Music_EcruteakCity:
 	db	040h
-	dw	Music_EcruteakCity_Ch1
+	dw	$ffff & Music_EcruteakCity_Ch1
 	db	001h
-	dw	Music_EcruteakCity_Ch2
+	dw	$ffff & Music_EcruteakCity_Ch2
 	db	002h
-	dw	Music_EcruteakCity_Ch3
+	dw	$ffff & Music_EcruteakCity_Ch3
 ;----------------------------------------
 Music_EcruteakCity_Ch1:
 ;----------------------------------------
@@ -82,7 +82,7 @@ Music_EcruteakCity_Ch1:
 	db	$dc,$52
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-15
 	db	$31
 	db	$d3,$c1
@@ -101,7 +101,7 @@ Music_EcruteakCity_Ch1:
 	db	$a1
 	db	$c1
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ;;;;;;;;;;;onshoku_kirikae;;;;;;;;;;;;
 	db	$dc,$52
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -124,7 +124,7 @@ Music_EcruteakCity_Ch1:
 	db	$21
 ; P1-22
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-23
 	db	$31
 	db	$11
@@ -144,9 +144,9 @@ Music_EcruteakCity_Ch1:
 	db	$d2,$11
 ; P1-24_28
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;;;;;;;;;;;;Part 1 sub_loutine;;;;;;;;;;;;;;;;;;
 @sub1:
 @sub1loop1:
@@ -160,7 +160,7 @@ Music_EcruteakCity_Ch1:
 	db	$51
 	db	$11
 	db	$fd,2
-	dw	@sub1loop1
+	dw	$ffff & @sub1loop1
 	db	$ff
 @sub2:
 ; P1-16
@@ -208,7 +208,7 @@ Music_EcruteakCity_Ch1:
 	db	$d2,$11
 	db	$61
 	db	$fd,2
-	dw	@sub2loop1
+	dw	$ffff & @sub2loop1
 @sub2loop2:
 ; P1-19
 	db	$d3,$81
@@ -220,7 +220,7 @@ Music_EcruteakCity_Ch1:
 	db	$d2,$31
 	db	$81
 	db	$fd,2
-	dw	@sub2loop2
+	dw	$ffff & @sub2loop2
 ;;;;;;;;;;;env_kirikae;;;;;;;;;;;;
 	db	$dc,$50
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -455,7 +455,7 @@ Music_EcruteakCity_Ch2:
 ; P2-28
 	db	$5f
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;----------------------------------------
 Music_EcruteakCity_Ch3:
 ;----------------------------------------
@@ -569,7 +569,7 @@ Music_EcruteakCity_Ch3:
 	db	$c1
 	db	$d3,$31
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-20
 	db	$d3,$17
 	db	$57
@@ -582,14 +582,14 @@ Music_EcruteakCity_Ch3:
 	db	$27
 	db	$d8,$c,$81
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-28
 	db	$d3,$17
 	db	$d4,$87
 	db	$57
 	db	$37
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 ;;;;;;;;;;;;Part 3 subloutine;;;;;;;;;;;;;;;;;;
 @sub1:
 ; P3-14

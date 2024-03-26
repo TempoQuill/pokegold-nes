@@ -1,14 +1,14 @@
 Music_ShowMeAround:
 	db	080h
-	dw	Music_ShowMeAround_Ch1
+	dw	$ffff & Music_ShowMeAround_Ch1
 	db	001h
-	dw	Music_ShowMeAround_Ch2
+	dw	$ffff & Music_ShowMeAround_Ch2
 	db	002h
-	dw	Music_ShowMeAround_Ch3
+	dw	$ffff & Music_ShowMeAround_Ch3
 	db	003h
-	dw	Music_ShowMeAround_Ch4
+	dw	$ffff & Music_ShowMeAround_Ch4
 	db	004h
-	dw	Music_ShowMeAround_Ch5
+	dw	$ffff & Music_ShowMeAround_Ch5
 ;----------------------------------------
 Music_ShowMeAround_Ch1:
 ;----------------------------------------
@@ -45,19 +45,19 @@ Music_ShowMeAround_Ch1:
 	db	$0f
 ; P1-8
 	db	$fe
-	dw	TourMelody4_5
+	dw	$ffff & TourMelody4_5
 ; P1-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-12
 	db	$fe
-	dw	TourMelody4_5
+	dw	$ffff & TourMelody4_5
 ; P1-14
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P1-16
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$03
 	db	$d4,$20
@@ -105,13 +105,13 @@ Music_ShowMeAround_Ch2:
 	db	$db,$01
 @mainloop:
 	db	$fe
-	dw	TourMelody4_5
+	dw	$ffff & TourMelody4_5
 ; P2-6
 	db	$fe
-	dw	TourMelody4_5
+	dw	$ffff & TourMelody4_5
 ; P2-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$a3
 ; P2-9
 	db	$d4,$a1
@@ -122,7 +122,7 @@ Music_ShowMeAround_Ch2:
 	db	$d4,$c3
 ; P2-10
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 	db	$a1
 	db	$a1
 ; P2-11
@@ -135,7 +135,7 @@ Music_ShowMeAround_Ch2:
 	db	$a3
 ; P2-12
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$a3
 ; P2-13
 	db	$d2,$21
@@ -151,7 +151,7 @@ Music_ShowMeAround_Ch2:
 	db	$50
 ; P2-14
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 	db	$a1
 	db	$d2,$51
 ; P2-15
@@ -164,7 +164,7 @@ Music_ShowMeAround_Ch2:
 	db	$a3
 ; P2-16
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$d4,$a1
 	db	$d3,$21
@@ -238,25 +238,25 @@ Music_ShowMeAround_Ch3:
 	db	$51
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P3-12
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P3-14
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P3-16
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 ; P3-4
 	db	$dc,$47
@@ -331,25 +331,25 @@ Music_ShowMeAround_Ch5:
 ; P4-4
 @mainloop:
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-6
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-8
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-10
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-12
 	db	$fe
-	dw	@sub1
+	dw	$ffff & @sub1
 ; P4-14
 	db	$fe
-	dw	@sub2
+	dw	$ffff & @sub2
 ; P4-16
 	db	$fd,0
-	dw	@mainloop
+	dw	$ffff & @mainloop
 @sub1:
 	db	$41
 	db	$71
