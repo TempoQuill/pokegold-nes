@@ -43,7 +43,7 @@ ELSE
 .pad $4e, $00
 	.db "1999 Game Freak"
 .pad $6e, $00
-	.dw $411a ; NTSC
+	.dw $40ff ; NTSC
 	.db (PRG_Audio << 2)
 	.db (PRG_Audio << 2) + 1
 	.db (PRG_Audio << 2) + 2
@@ -52,7 +52,7 @@ ELSE
 	.db (PRG_DPCM0 << 1) + 1
 	.db PRG_Home
 	.db PRG_Home + 1
-	.dw 0 ; PAL, unused
+	.dw $4e1d ; PAL, unused
 	.db 0 ; this is an NTSC file
 	.db %00001000 ; MMC5 registers enabled, 2A03 only though
 	.dsb 4, 0 ; proceeding data is program data
