@@ -1,8 +1,5 @@
 _InitSound:
-	PHP
-	PHA
-	PHX
-	PHY
+	PSH
 @ClearAPU:
 	JSR ClearChannels
 @ClearZeroPage:
@@ -17,10 +14,7 @@ _InitSound:
 	STA iChannel1, Y
 	STA iChannel6, Y
 	BNE -
-	PLY
-	PLX
-	PLA
-	PLP
+	PLL
 	RTS
 
 PreserveIDRestart:
@@ -787,6 +781,7 @@ GeneralHandler:
 	BEQ @Down
 ; up
 	; vibrato down
+	LDA (zCurTrackAudioPointer), Y
 	FSB SOUND_VIBRATO_DIR
 	STA (zCurTrackAudioPointer), Y
 	; get the delay
@@ -798,9 +793,10 @@ GeneralHandler:
 	SBC zCurTrackTemp
 	BCS @NoCarry
 	LDA #0
-	BCC @NoCarry
+	BEQ @NoCarry
 @Down:
 	; vibrato up
+	LDA (zCurTrackAudioPointer), Y
 	FSB SOUND_VIBRATO_DIR
 	STA (zCurTrackAudioPointer), Y
 	; get the delay
@@ -1971,6 +1967,7 @@ Music_NewSong:
 	JMP UpdateTrackPointer
 
 GetMusicByte:
+; input: CHANNEL_MUSIC_BANK, CHANNEL_MUSIC_ADDRESS
 	LDY #CHANNEL_MUSIC_BANK
 	LDA (zCurTrackAudioPointer), Y
 	PHA
@@ -1981,11 +1978,7 @@ GetMusicByte:
 	LDA (zCurTrackAudioPointer), Y
 	STA zCurTrackAudioPointer + 1
 	STX zCurTrackAudioPointer
-	LDX #0
-	AND #$20
-	BEQ +
-	INX
-+	PLA
+	PLA
 	JSR _LoadMusicByte
 	LDA #1
 	ADC zCurTrackAudioPointer
@@ -2410,12 +2403,6 @@ LoadChannel:
 	RTS
 
 LoadMusicByte:
-	LDA zCurTrackAudioPointer + 1
-	AND #$3F
-REPT 5
-	LSR A
-ENDR
-	TAX
 	LDA zMusicBank
 	JSR _LoadMusicByte
 	LDA zCurMusicByte

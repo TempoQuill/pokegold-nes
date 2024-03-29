@@ -44,10 +44,14 @@ ELSE
 	.db "1999 Game Freak"
 .pad $6e, $00
 	.dw $411a ; NTSC
-	nsf_bank_define PRG_Audio
-	nsf_bank_define PRG_Music0
-	nsf_bank_define PRG_DPCM0
-	nsf_bank_define PRG_Home
+	.db (PRG_Audio << 2)
+	.db (PRG_Audio << 2) + 1
+	.db (PRG_Audio << 2) + 2
+	.db (PRG_Audio << 2) + 3
+	.db (PRG_DPCM0 << 1)
+	.db (PRG_DPCM0 << 1) + 1
+	.db PRG_Home
+	.db PRG_Home + 1
 	.dw 0 ; PAL, unused
 	.db 0 ; this is an NTSC file
 	.db %00001000 ; MMC5 registers enabled, 2A03 only though

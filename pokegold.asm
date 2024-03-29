@@ -9,15 +9,19 @@ IFDEF NSF_FILE
 	.include "src/home/nsf.asm"
 	.include "src/home/audio.asm"
 	.pad $10000, $00
+	.dsb $2000, $00
 ENDIF
 
 ; audio
 .include "src/audio.asm"
 
 IFNDEF NSF_FILE
-	.base $2000
-	.dsb ($72 * $2000), $00
+	.dsb (56 * $2000), $00
+ENDIF
 
+.include "src/dmc.asm"
+
+IFNDEF NSF_FILE
 	.base $e000
 	.include "src/home.asm"
 	IRQ:

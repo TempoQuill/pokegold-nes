@@ -18,6 +18,30 @@ MACRO PLY
 	TAY
 ENDM
 
+MACRO PSH
+	PHP
+	PHA
+	PHX
+	PHY
+ENDM
+
+MACRO PLL
+	PLY
+	PLX
+	PLA
+	PLP
+ENDM
+
+MACRO PHW
+	LDA zWindow1
+	PHA
+ENDM
+
+MACRO PLW
+	PLA
+	STA zWindow1
+ENDM
+
 MACRO TSB bit
 	AND #1 << bit
 ENDM
@@ -93,57 +117,6 @@ ENDM
 
 MACRO dba_audio label
 	dba PRG_Audio, label
-ENDM
-
-MACRO bmuo
-	IFDEF NSF_FILE
-		PHA
-		TXA
-		ASL A
-		TAX
-		PLA
-	ENDIF
-ENDM
-
-MACRO bdio
-	PHA
-	TXA
-	LSR A
-	TAX
-	PLA
-ENDM
-
-MACRO bso_8000
-	IFNDEF NSF_FILE
-		STA MMC5_PRGBankSwitch2, X
-	ELSE
-		ASL A
-		STA $5ff8, X
-		ORA #1
-		STA $5ff9, X
-	ENDIF
-ENDM
-
-MACRO bsw_8000
-	IFNDEF NSF_FILE
-		STA MMC5_PRGBankSwitch2
-	ELSE
-		ASL A
-		STA $5ff8
-		ORA #1
-		STA $5ff9
-	ENDIF
-ENDM
-
-MACRO bsw_a000
-	IFNDEF NSF_FILE
-		STA MMC5_PRGBankSwitch3
-	ELSE
-		ASL A
-		STA $5ffa
-		ORA #1
-		STA $5ffb
-	ENDIF
 ENDM
 
 MACRO bsw_c000

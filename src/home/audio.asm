@@ -1,72 +1,37 @@
 InitSound:
-	PHP
-	PHA
-	PHX
-	PHY
-	LDA zWindow1
-	PHA
-	LDA zWindow2
-	PHA
-	LDA #PRG_Audio
-	bsw_8000
+	PSH
+	PHW
 	LDA #PRG_Audio
 	STA zWindow1
-	bsw_a000
-	LDA #PRG_Audio
-	STA zWindow2
+	JSR SwitchLower16K
 	JSR _InitSound
-	PLA
-	bsw_a000
-	STA zWindow2
-	PLA
-	bsw_8000
-	STA zWindow1
-	PLY
-	PLX
-	PLA
-	PLP
+	PLW
+	JSR SwitchLower16K
+	PLL
 	RTS
 
 UpdateSound:
-	PHP
-	PHA
-	PHX
-	PHY
-	LDA zWindow1
-	PHA
-	LDA zWindow2
-	PHA
-	LDA #PRG_Audio
-	bsw_8000
+	PSH
+	PHW
 	LDA #PRG_Audio
 	STA zWindow1
-	bsw_a000
-	LDA #PRG_Audio
-	STA zWindow2
+	JSR SwitchLower16K
 	JSR _UpdateSound
-	PLA
-	bsw_a000
-	STA zWindow2
-	PLA
-	bsw_8000
-	STA zWindow1
-	PLY
-	PLX
-	PLA
-	PLP
+	PLW
+	JSR SwitchLower16K
+	PLL
 	RTS
 
 _LoadMusicByte:
-	bmuo
-	bso_8000
+	LDX zWindow1
+	STA zWindow1
+	JSR SwitchLower16K
 	LDY #0
 	LDA (zCurTrackAudioPointer), Y
 	STA zCurMusicByte
-	bdio
-	LDA zWindow1, X
-	bmuo
-	bso_8000
-	RTS
+	TXA
+	STA zWindow1
+	JMP SwitchLower16K
 
 AddAudioOffset:
 	TYA
@@ -79,21 +44,11 @@ AddAudioOffset:
 	RTS
 
 PlayMusic:
-	PHP
-	PHA
-	PHX
-	PHY
-	LDA zWindow1
-	PHA
-	LDA zWindow2
-	PHA
-	LDA #PRG_Audio
-	bsw_8000
+	PSH
+	PHW
 	LDA #PRG_Audio
 	STA zWindow1
-	bsw_a000
-	LDA #PRG_Audio
-	STA zWindow2
+	JSR SwitchLower16K
 	TYA
 	BEQ @Skip
 	LDA #$0f
@@ -103,34 +58,17 @@ PlayMusic:
 @Skip:
 	JSR _InitSound
 @Done:
-	PLA
-	bsw_a000
-	STA zWindow2
-	PLA
-	bsw_8000
-	STA zWindow1
-	PLY
-	PLX
-	PLA
-	PLP
+	PLW
+	JSR SwitchLower16K
+	PLL
 	RTS
 
 PlayMusic2:
-	PHP
-	PHA
-	PHX
-	PHY
-	LDA zWindow1
-	PHA
-	LDA zWindow2
-	PHA
-	LDA #PRG_Audio
-	bsw_8000
+	PSH
+	PHW
 	LDA #PRG_Audio
 	STA zWindow1
-	bsw_a000
-	LDA #PRG_Audio
-	STA zWindow2
+	JSR SwitchLower16K
 	JSR _InitSound
 	TYA
 	BEQ @Skip
@@ -138,35 +76,17 @@ PlayMusic2:
 	STA rMIX
 	JSR _PlayMusic
 @Skip:
-	PLA
-	bsw_a000
-	STA zWindow2
-	PLA
-	bsw_8000
-	STA zWindow1
-	PLY
-	PLX
-	PLA
-	PLP
+	PLW
+	JSR SwitchLower16K
+	PLL
 	RTS
 
 PlayCry:
-	PHP
-	PHA
-	PHX
-	PHY
-	LDA zWindow1
-	PHA
-	LDA zWindow2
-	PHA
-	LDA #PRG_Audio
-	bsw_8000
-	LDA #PRG_Audio
+	PSH
+	PHW
+	LDA #PRG_MonCries
 	STA zWindow1
-	LDA #PRG_MonCries
-	bsw_a000
-	LDA #PRG_MonCries
-	STA zWindow2
+	JSR SwitchLower16K
 	LDA #>PokemonCries
 	STA zCurTrackAudioPointer + 1
 	LDA #<PokemonCries
@@ -191,35 +111,18 @@ ENDR
 	STA zCryLength + 1
 	TXA
 	TAY
-	JSR _PlayCry
-	PLA
-	bsw_a000
-	STA zWindow2
-	PLA
-	bsw_8000
+	LDA #PRG_Audio
 	STA zWindow1
-	PLY
-	PLX
-	PLA
-	PLP
+	JSR SwitchLower16K
+	JSR _PlayCry
+	PLW
+	JSR SwitchLower16K
+	PLL
 	RTS
 
 PlaySFX:
-	PHP
-	PHA
-	PHX
-	PHY
-	LDA zWindow1
-	PHA
-	LDA zWindow2
-	PHA
-	LDA #PRG_Audio
-	bsw_8000
-	LDA #PRG_Audio
-	STA zWindow1
-	bsw_a000
-	LDA #PRG_Audio
-	STA zWindow2
+	PSH
+	PHW
 	JSR CheckSFX
 	BCC @Play
 	CPY zCurSFX
@@ -227,18 +130,14 @@ PlaySFX:
 	BCS @Skip
 @Play:
 	STY zCurSFX
+	LDA #PRG_Audio
+	STA zWindow1
+	JSR SwitchLower16K
 	JSR _PlaySFX
 @Skip:
-	PLA
-	bsw_a000
-	STA zWindow2
-	PLA
-	bsw_8000
-	STA zWindow1
-	PLY
-	PLX
-	PLA
-	PLP
+	PLW
+	JSR SwitchLower16K
+	PLL
 	RTS
 
 CheckSFX:

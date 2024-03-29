@@ -1,19 +1,13 @@
 .include "src/home/audio.asm"
 
 NMI:
-	PHP
-	PHA
-	PHX
-	PHY
+	PSH
 	JSR UpdateSound
 	LDA zNMITimer
 	BEQ @Quit
 	DEC zNMITimer
 @Quit:
-	PLY
-	PLX
-	PLA
-	PLP
+	PLL
 	RTI
 
 RESET:
@@ -69,12 +63,11 @@ RESET:
 	BNE @Loop
 
 	; select the starter PRG banks
-	LDA #PRG_Audio
-	STA MMC5_PRGBankSwitch2
+	LDA #0
 	STA zWindow1
-	LDA #PRG_Music0
+	STA MMC5_PRGBankSwitch2
+	ORA #1
 	STA MMC5_PRGBankSwitch3
-	STA zWindow2
 	; starter DPCM bank
 	LDA #PRG_DPCM0
 	STA MMC5_PRGBankSwitch4
@@ -156,37 +149,23 @@ HideSprites:
 Farcall:
 ;        b hl
 ; input: A(XY)
-; NOTE: 8K Window chosen depends on address
 	PHP
 	STA zSavedBank
 	STY zSavedPointer
 	STX zSavedPointer + 1
-	PHA
-	PHX
-	PHY
-	TXA
-	LDX #0
-	AND #$20
-	BEQ +
-	INX
-+	LDA zSavedBank
-	STA MMC5_PRGBankSwitch2, X
+	JSR SwitchLower16K
 	LDA #<@Return
 	SEC
 	SBC #1
-	PHA
+	TAX
 	LDA #>@Return
 	SBC #0
 	PHA
+	PHX
 	JMP (zSavedPointer)
 @Return:
 	LDA zWindow1
-	STA MMC5_PRGBankSwitch2
-	LDA zWindow2
-	STA MMC5_PRGBankSwitch3
-	PLY
-	PLX
-	PLA
+	JSR SwitchLower16K
 	PLP
 	RTS
 ; ReadBuffer - VRAM buffer reading
@@ -262,4 +241,11 @@ LoadTilemapToTempTilemap:
 	RTS
 
 SafeLoadTempTilemapToTilemap:
+	RTS
+
+SwitchLower16K:
+	ASL A
+	STA MMC5_PRGBankSwitch2
+	ORA #1
+	STA MMC5_PRGBankSwitch3
 	RTS

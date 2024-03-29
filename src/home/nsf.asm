@@ -53,3 +53,16 @@ ENDIF
 IFDEF PLAY_NSF_SFX
 	PLAY_NSF_SOUND = NSF_SFX
 ENDIF
+
+SwitchLower16K:
+	ASL A
+	ASL A
+	STA $5ff8
+	CLC
+	ADC #1
+	STA $5ff9
+	ADC #1
+	STA $5ffa
+	ADC #1
+	STA $5ffb
+	RTS

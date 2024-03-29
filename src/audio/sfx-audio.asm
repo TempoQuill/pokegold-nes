@@ -361,7 +361,7 @@ Sfx_Elevator_Ch6:
 @loop:
 	square_note 2, 15, 1, 768
 	db sound_loop_cmd, 48
-	dw @loop
+	dw $ffff & @loop
 	pitch_sweep 0, 1
 Sfx_ElevatorEnd_Ch6:
 	duty_cycle 2
