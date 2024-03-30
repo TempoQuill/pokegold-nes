@@ -299,7 +299,7 @@ IFDEF BUGFIXES
 ENDIF
 ;	farcall GetItemHeldEffect ; todo: add its bank
 	TAX
-	CMP #HELD_ITEM_EFFECT
+	CMP #HELD_CATCH_CHANCE ; 30 march 24: correction
 	PLY
 	BNE @max_2
 	STY zTemp8Bit1
@@ -307,10 +307,446 @@ ENDIF
 	ADC zTemp8Bit1
 	BCC @max_2
 	LDA #$ff
-	; ... to be continued!
+	
 @max_2:
 @skip_hp_calc:
+	txa
+	sta wFinalCatchRate
+	jsr Random
+	
+	cpx
+	beq @catch_without_fail
+	lda #0
+	bcc @fail_to_catch
+	
+@catch_without_fail:
+	lda wEnemyMonSpecies
+	
+@fail_to_catch:
+	sta wWildMon
+	ldy #20
+	jsr DelayFrames
+	
+	lda wCurItem
+	cmp #POKE_BALL + 1 ; Assumes Master/Ultra/Great come before
+	bcs @not_kurt_ball
+	lda #POKE_BALL
+@not_kurt_ball:
+	sta wBattleAnimParam
+	
+	lda #<ANIM_THROW_POKE_BALL
+	sta wFXAnimID
+	lda #>ANIM_THROW_POKE_BALL
+	sta wFXAnimID + 1
+	lda #0
+	sta zBattleTurn
+	sta wThrownBallWobbleCount
+	sta wNumHits
+;	predef PlayBattleAnim ; we don't have this macro yet, add bank no.
 
+	lda wWildMon
+	bne @caught
+	lda wThrownBallWobbleCount
+	
+	cmp #1
+	bne +
+	LDA #<BallBrokeFreeText
+	STA zTextPointer
+	LDA #>BallBrokeFreeText
+	STA zTextPointer + 1
+	jmp @shake_and_break_free
+	
++	cmp #2
+	bne +
+	LDA #<BallAppearedCaughtText
+	STA zTextPointer
+	LDA #>BallAppearedCaughtText
+	STA zTextPointer + 1
+	jmp @shake_and_break_free
+	
++	cmp #3
+	bne +
+	LDA #<BallAlmostHadItText
+	STA zTextPointer
+	LDA #>BallAlmostHadItText
+	STA zTextPointer + 1
+	jmp @shake_and_break_free
+	
++	cmp #4
+	bne @caught
+	LDA #<BallSoCloseText
+	STA zTextPointer
+	LDA #>BallSoCloseText
+	STA zTextPointer + 1
+	jmp @shake_and_break_free
+	
+@caught:
+	lda wEnemyMonStatus
+	pha
+	lda wEnemyMonStatus + 2
+	pha
+	lda wEnemyMonStatus + 3
+	pha
+	lda wEnemyMonItem
+	pha
+	lda wEnemySubStatus5
+	pha
+	ora #SUBSTATUS_TRANSFORMED ; this is how you `SET` on 6502, right?
+	sta wEnemySubStatus5
+	
+; This code is buggy. Any wild Pokémon that has Transformed will be
+; caught as a Ditto, even if it was something else like Mew.
+; To fix, do not set wTempEnemyMonSpecies to DITTO.
+	bit #SUBSTATUS_TRANSFORMED
+	beq @ditto
+	jmp @not_ditto
+
+@ditto:
+	lda #DITTO
+	sta wTempEnemyMonSpecies
+	jmp @load_data
+	
+@not_ditto:
+	ora #SUBSTATUS_TRANSFORMED ; this is how you `SET` on 6502, right?
+	sta wEnemySubStatus5
+	lda wEnemyMonDVs
+	sta wEnemyBackupDVs
+	lda wEnemyMonDVs + 1
+	sta wEnemyBackupDVs + 1
+	
+@load_data:
+	lda wTempEnemyMonSpecies
+	sta wCurPartySpecies
+	lda wEnemyMonLevel
+	sta wCurPartyLevel
+;	farcall LoadEnemyMon
+	
+	pla
+	sta wEnemySubStatus5
+	pla
+	sta wEnemyMonItem
+	pla
+	sta wEnemyMonStatus + 3
+	pla
+	sta wEnemyMonStatus + 2
+	pla
+	sta wEnemyMonStatus
+	
+	lda wEnemySubStatus5
+	bit #SUBSTATUS_TRANSFORMED
+	bne @Transformed
+	; don't know the arguments to CopyBytes
+	; ld hl, wWildMonMoves
+	; ld de, wEnemyMonMoves
+	; ld bc, NUM_MOVES
+	jsr CopyBytes
+	
+	; ld hl, wWildMonPP
+	; ld de, wEnemyMonPP
+	; ld bc, NUM_MOVES
+	jsr CopyBytes
+	
+@Transformed:
+	lda wEnemyMonSpecies
+	sta wWildMon
+	lda wCurPartySpecies
+	sta wWildMon
+	lda wBattleType
+	cmp #BATTLETYPE_TUTORIAL
+	beq @FinishTutorial
+	
+	lda #<Text_GotchaMonWasCaught
+	sta zTextPointer
+	lda #>Text_GotchaMonWasCaught
+	sta zTextPointer + 1
+	jsr PrintText
+	
+	jsr ClearSprites
+	
+	ldx wTempSpecies
+	dex
+	jsr CheckCaughtMon
+	
+	; ld a, c
+	PHX
+	ldx wTempSpecies
+	dex
+	jsr SetSeenAndCaughtMon
+	PLX
+	bne @skip_pokedex
+	
+	jsr CheckReceivedDex
+	beq @skip_pokedex
+	
+	lda #<NewDexDataText
+	sta zTextPointer
+	lda #>NewDexDataText
+	sta zTextPointer + 1
+	jsr PrintText
+	
+	jsr ClearSprites
+	
+	lda wEnemyMonSpecies
+	sta wTempSpecies
+;	predef NewPokedexEntry
+
+@skip_pokedex:
+	lda wBattleType
+	cmp #BATTLETYPE_CONTEST
+	JEQ @catch_bug_contest_mon
+	lda wPartyCount
+	cmp #PARTY_LENGTH
+	beq @SendToPC ; only if wPartyCount is *equal* to PARTY_LENGTH
+	
+	lda #PARTYMON
+	sta wMonType
+	jsr ClearSprites
+	
+;	predef TryAddMonToParty
+	
+	lda wCurItem
+	cmp #FRIEND_BALL
+	bne @SkipPartyMonFriendBall
+	
+	ldx wPartyCount
+	dex
+	; don't know the arguments to AddNTimes
+	; ld hl, wPartyMon1Happiness
+	; ld bc, PARTYMON_STRUCT_LENGTH
+	jsr AddNTimes
+	
+	lda #FRIEND_BALL_HAPPINESS
+	sta wPartyMon1Happiness
+	
+@SkipPartyMonFriendBall:
+	lda #<AskGiveNicknameText
+	sta zTextPointer
+	lda #>AskGiveNicknameText
+	sta zTextPointer + 1
+	jsr PrintText
+	
+	lda wCurPartySpecies
+	sta wNamedObjectIndex
+	jsr GetPokemonName
+	
+	jsr YesNoBox
+	JCS @return_from_capture
+	
+	ldx wPartyCount
+	dex
+	stx wCurPartyMon
+	; ld hl, wPartyMonNicknames
+	; ld bc, MON_NAME_LENGTH
+	jsr AddNTimes
+	
+	; these next are probably unnecessary, since the pointer will probably be in RAM
+	; ld d, h
+	; ld e, l
+	lda #PARTYMON
+	sta wMonType
+	ldx #NAME_MON
+;	farcall NamingScreen
+	
+	jsr RotateThreePalettesRight
+	
+	jsr LoadStandardFont
+	
+	lda #<wStringBuffer1
+	sta zScratchWord
+	lda #>wStringBuffer1
+	sta zScratchWord + 1
+	jsr InitName
+	
+	jmp @return_from_capture
+	
+@SendToPC:
+	jsr ClearSprites
+	
+;	predef SendMonIntoBox
+	
+;	ld a, BANK(sBoxCount)
+;	call OpenSRAM
+
+	lda sBoxCount
+	cmp #MONS_PER_BOX
+	bne @BoxNotFullYet
+	lda wBattleResult
+	ora #BATTLERESULT_BOX_FULL
+@BoxNotFullYet:
+	lda wCurItem
+	cmp #FRIEND_BALL
+	bne @SkipBoxMonFriendBall
+	; The captured mon is now first in the box
+	lda #FRIEND_BALL_HAPPINESS
+	sta sBoxMon1Happiness
+@SkipBoxMonFriendBall:
+;	call CloseSRAM
+
+	lda #<AskGiveNicknameText
+	sta zTextPointer
+	lda #>AskGiveNicknameText
+	sta zTextPointer + 1
+	jsr PrintText
+	
+	lda wCurPartySpecies
+	sta wNamedObjectIndex
+	jsr GetPokemonName
+	
+	jsr YesNoBox
+	bcs @SkipBoxMonNickname
+	
+	lda #0
+	sta wCurPartyMon
+if BOXMON
+	lda #BOXMON
+endif
+	sta wMonType
+	lda #<wMonOrItemNameBuffer
+	sta zScratchWord
+	lda #>wMonOrItemNameBuffer
+	sta zScratchWord + 1
+	ldx #NAME_MON
+;	farcall NamingScreen
+	
+	; ld a, BANK(sBoxMonNicknames)
+	; call OpenSRAM
+	
+	; ld hl, wMonOrItemNameBuffer
+	; ld de, sBoxMonNicknames
+	; ld bc, MON_NAME_LENGTH
+	jsr CopyBytes
+	
+	sta wMonType
+	lda #<sBoxMonNicknames
+	sta zScratchWord
+	lda #>sBoxMonNicknames
+	sta zScratchWord + 1
+	ldx #<wStringBuffer1
+	ldy #>wStringBuffer1
+	jsr InitName
+	
+	; call CloseSRAM
+	
+@SkipBoxMonNickname:
+	; ld a, BANK(sBoxMonNicknames)
+	; call OpenSRAM
+	
+	; ld hl, sBoxMonNicknames
+	; ld de, wMonOrItemNameBuffer
+	; ld bc, MON_NAME_LENGTH
+	jsr CopyBytes
+	
+	; call CloseSRAM
+	
+	lda #<BallSentToPCText
+	sta zScratchWord
+	lda #>BallSentToPCText
+	sta zScratchWord + 1
+	jsr PrintText
+	
+	jsr RotateThreePalettesRight
+	jsr LoadStandardFont
+	jmp @return_from_capture
+	
+@catch_bug_contest_mon:
+;	farcall BugContest_SetCaughtContestMon
+	jmp @return_from_capture
+	
+@FinishTutorial:
+	lda #<Text_GotchaMonWasCaught
+	sta zTextPointer
+	lda #>Text_GotchaMonWasCaught
+	sta zTextPointer + 1
+	
+@shake_and_break_free:
+	jsr PrintText
+	jsr ClearSprites
+	
+@return_from_capture:
+	lda wBattleType
+	cmp #BATTLETYPE_TUTORIAL
+	REQ
+	cmp #BATTLETYPE_DEBUG
+	REQ
+	cmp #BATTLETYPE_CONTEST
+	beq @used_park_ball
+	
+	lda wWildMon
+	beq @toss
+	
+	jsr ClearBGPalettes
+	jsr ClearTilemap
+	
+@toss:
+	pha
+	lda #<wNumItems
+	sta zScratchWord
+	lda #>wNumItems
+	sta zScratchWord + 1
+	PLX
+	inx
+	stx wItemQuantityChange
+	jmp TossItem
+	
+@used_park_ball:
+	ldx wParkBallsRemaining
+	dex
+	stx wParkBallsRemaining
+	rts
+	
+BallMultiplierFunctionTable:
+; table of routines that increase or decrease the catch rate based on
+; which ball is used in a certain situation.
+	dbw ULTRA_BALL,  UltraBallMultiplier
+	dbw GREAT_BALL,  GreatBallMultiplier
+	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
+	dbw HEAVY_BALL,  HeavyBallMultiplier
+	dbw LEVEL_BALL,  LevelBallMultiplier
+	dbw LURE_BALL,   LureBallMultiplier
+	dbw FAST_BALL,   FastBallMultiplier
+	dbw MOON_BALL,   MoonBallMultiplier
+	dbw LOVE_BALL,   LoveBallMultiplier
+	dbw PARK_BALL,   ParkBallMultiplier
+	.db $ff
+	
+UltraBallMultiplier:
+; multiply catch rate by 2
+	lda zTemp8Bit1
+	asl a
+	RCC
+	lda #$ff
+	rts
+	
+SafariBallMultiplier:
+GreatBallMultiplier:
+ParkBallMultiplier:
+; multiply catch rate by 1.5
+	lda zTemp8Bit1
+	lsr a
+	clc
+	adc zTemp8Bit1
+	RCC
+	lda #$ff
+	rts
+
+HeavyBallMultiplier:
+	RTS
+	
+LevelBallMultiplier:
+	RTS
+	
+LureBallMultiplier:
+	RTS
+	
+FastBallMultiplier:
+	RTS
+	
+MoonBallMultiplier:
+	RTS
+	
+LoveBallMultiplier:
+	RTS
+	
 UseBallInTrainerBattle:
 	RTS
 
@@ -321,7 +757,48 @@ ReturnToBattle_UseBall:
 	RTS
 
 ItemUsedText:
-	db	TX_START,	_PLAYER_,	" used the "
-	db	TX_RAM,				wStringBuffer2
-	db					"."
-	db	TX_DONE
+;	text_far _ItemUsedText
+	text_end
+	
+BallBrokeFreeText:
+;	text_far _BallBrokeFreeText
+	text_end
+	
+BallAppearedCaughtText:
+;	text_far _BallAppearedCaughtText
+	text_end
+	
+BallAlmostHadItText:
+;	text_far _BallAlmostHadItText
+	text_end
+	
+BallSoCloseText:
+;	text_far _BallSoCloseText
+	text_end
+	
+Text_GotchaMonWasCaught:
+;	text_far _Text_GotchaMonWasCaught
+	text_asm
+	jsr WaitSFX
+	ldy #MUSIC_NONE
+	jsr PlayMusic
+	jsr DelayFrame
+	ldy #MUSIC_CAPTURE
+	jsr PlayMusic
+	lda #<WaitButtonText
+	sta zTextPointer
+	lda #>WaitButtonText
+	sta zTextPointer + 1
+	rts
+	
+NewDexDataText:
+;	text_far _NewDexDataText
+	text_end
+	
+AskGiveNicknameText:
+;	text_far _AskGiveNicknameText
+	text_end
+	
+BallSentToPCText:
+;	text_far _BallSentToPCText
+	text_end
