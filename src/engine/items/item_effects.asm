@@ -1,8 +1,8 @@
 _DoItemEffect:
 	LDA wCurItem
 	STA wNamedObjectIndex
-	JSR GetItemName
-	JSR CopyName1
+	home_ref GetItemName
+	home_ref CopyName1
 	LDA #1
 	STA wItemEffectSucceeded
 	LDX wCurItem
@@ -107,7 +107,7 @@ PokeBallEffect:
 	STA zTextPointer
 	LDA #>ItemUsedText
 	STA zTextPointer + 1
-	JSR PrintText
+	home_ref PrintText
 	
 	LDX wEnemyMonCatchRate
 	LDA wBattleMode
@@ -256,12 +256,12 @@ PokeBallEffect:
 	; ldh [hDividend], a
 	; ldh [hMultiplicand], a
 	; ldh [hMultiplicand + 1], a
-	JSR Multiply
+	home_ref Multiply
 	; call Multiply
 	PLA
 	; pop bc
 	STA hDivisor
-	JSR Divide
+	home_ref Divide
 	; ld a, b
 	; ldh [hDivisor], a
 	; ld b, 4
@@ -321,7 +321,7 @@ ReturnToBattle_UseBall:
 	RTS
 
 ItemUsedText:
-	text "<PLAYER> used the @"
-	text_ram wStringBuffer2
-	text "."
-	done
+	db	TX_START,	_PLAYER_,	" used the "
+	db	TX_RAM,				wStringBuffer2
+	db					"."
+	db	TX_DONE

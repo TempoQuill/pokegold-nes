@@ -54,6 +54,9 @@ IFDEF PLAY_NSF_SFX
 	PLAY_NSF_SOUND = NSF_SFX
 ENDIF
 
+PushLower16K:
+	STA zWindow1
+
 SwitchLower16K:
 	ASL A
 	ASL A

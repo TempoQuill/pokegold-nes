@@ -6,7 +6,7 @@ PlayBattleMusic:
 	LDA #0
 	STA zMusicSilence
 	LDY #MUSIC_NONE
-	JSR PlayMusic
+	home_ref PRG_Home1, PlayMusic
 	JSR DelayFrame
 	
 	; Are we fighting a trainer?
@@ -86,7 +86,7 @@ ENDIF
 	LDY #MUSIC_KANTO_TRAINER_BATTLE
 	
 @done:
-	JSR PlayMusic
+	home_ref PRG_Home1, PlayMusic
 	
 	PLX
 	PLY

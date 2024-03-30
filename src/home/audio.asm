@@ -1,37 +1,35 @@
 InitSound:
 	PSH
-	PHW
+	LDA zWindow1
+	PHA
 	LDA #PRG_Audio
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	JSR _InitSound
-	PLW
-	JSR SwitchLower16K
+	PLA
+	JSR PushLower16K
 	PLL
 	RTS
 
 UpdateSound:
 	PSH
-	PHW
+	LDA zWindow1
+	PHA
 	LDA #PRG_Audio
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	JSR _UpdateSound
-	PLW
-	JSR SwitchLower16K
+	PLA
+	JSR PushLower16K
 	PLL
 	RTS
 
 _LoadMusicByte:
 	LDX zWindow1
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	LDY #0
 	LDA (zCurTrackAudioPointer), Y
 	STA zCurMusicByte
 	TXA
-	STA zWindow1
-	JMP SwitchLower16K
+	JMP PushLower16K
 
 AddAudioOffset:
 	TYA
@@ -45,10 +43,10 @@ AddAudioOffset:
 
 PlayMusic:
 	PSH
-	PHW
+	LDA zWindow1
+	PHA
 	LDA #PRG_Audio
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	TYA
 	BEQ @Skip
 	LDA #$0f
@@ -58,17 +56,17 @@ PlayMusic:
 @Skip:
 	JSR _InitSound
 @Done:
-	PLW
-	JSR SwitchLower16K
+	PLA
+	JSR PushLower16K
 	PLL
 	RTS
 
 PlayMusic2:
 	PSH
-	PHW
+	LDA zWindow1
+	PHA
 	LDA #PRG_Audio
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	JSR _InitSound
 	TYA
 	BEQ @Skip
@@ -76,17 +74,17 @@ PlayMusic2:
 	STA rMIX
 	JSR _PlayMusic
 @Skip:
-	PLW
-	JSR SwitchLower16K
+	PLA
+	JSR PushLower16K
 	PLL
 	RTS
 
 PlayCry:
 	PSH
-	PHW
+	LDA zWindow1
+	PHA
 	LDA #PRG_MonCries
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	LDA #>PokemonCries
 	STA zCurTrackAudioPointer + 1
 	LDA #<PokemonCries
@@ -112,17 +110,17 @@ ENDR
 	TXA
 	TAY
 	LDA #PRG_Audio
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	JSR _PlayCry
-	PLW
-	JSR SwitchLower16K
+	PLA
+	JSR PushLower16K
 	PLL
 	RTS
 
 PlaySFX:
 	PSH
-	PHW
+	LDA zWindow1
+	PHA
 	JSR CheckSFX
 	BCC @Play
 	CPY zCurSFX
@@ -131,12 +129,11 @@ PlaySFX:
 @Play:
 	STY zCurSFX
 	LDA #PRG_Audio
-	STA zWindow1
-	JSR SwitchLower16K
+	JSR PushLower16K
 	JSR _PlaySFX
 @Skip:
-	PLW
-	JSR SwitchLower16K
+	PLA
+	JSR PushLower16K
 	PLL
 	RTS
 

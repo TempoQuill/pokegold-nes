@@ -1,6 +1,45 @@
-.include "src/home/audio.asm"
+Farcall:
+Home1_Farcall:
+;        b hl
+; input: A(XY)
+	PHP
+	STY zSavedPointer
+	STX zSavedPointer + 1
+	JSR PushFarBank
+	LDA #<@Return
+	SEC
+	SBC #1
+	TAX
+	LDA #>@Return
+	SBC #0
+	PHA
+	PHX
+	JMP (zSavedPointer)
+@Return:
+	LDA zWindow1
+	JSR SwitchLower16K
+	PLP
+	RTS
+
+PushFarBank:
+Home1_PushFarBank:
+	STA zSavedBank
+	BPL SwitchLower16K
+
+PushLower16K:
+Home1_PushLower16K
+	STA zWindow1
+
+SwitchLower16K:
+Home1_SwitchLower16K:
+	ASL A
+	STA MMC5_PRGBankSwitch2
+	ORA #1
+	STA MMC5_PRGBankSwitch3
+	RTS
 
 NMI:
+Home1_NMI:
 	PSH
 	JSR UpdateSound
 	LDA zNMITimer
@@ -11,6 +50,7 @@ NMI:
 	RTI
 
 RESET:
+Home1_RESET:
 	LDA #3 ; all 8K switchable
 	STA MMC5_PRGMode
 	LDA #1 ; 4K mode (try not to use $5130)
@@ -111,13 +151,11 @@ RESET:
 	JSR PlayMusic
 	JMP MainTerminal
 
-BCDLayout:
-BCDLayout_End:
-	db 0
-
 DelayFrame:
+Home1_DelayFrame:
 	LDA #1
 DelayFrames:
+Home1_DelayFrames:
 ; stop for A frames
 	STA zNMITimer
 @Halt:
@@ -125,10 +163,24 @@ DelayFrames:
 	BNE @Halt
 	RTS
 
-MainTerminal:
+HomeTerminal:
+Home1_HomeTerminal:
+; input a(xy)
+	LDA zSavedPointer
+	BEQ +
+	DEC zSavedPointer + 1
++	DEC zSavedPointer
+	LDA zSavedPointer + 1
+	PHA
+	LDA zSavedPointer
+	PHA
+	LDA zSavedBank
+	STA MMC5_PRGBankSwitch5
+	RTS
 
 ; y, tile, attr, x
 HideSprites:
+Home1_HideSprites:
 	LDY #$f8
 	LDX #0
 	TXA
@@ -146,28 +198,19 @@ HideSprites:
 	BNE @Loop
 	RTS
 
-Farcall:
-;        b hl
-; input: A(XY)
-	PHP
-	STA zSavedBank
-	STY zSavedPointer
-	STX zSavedPointer + 1
-	JSR SwitchLower16K
-	LDA #<@Return
-	SEC
-	SBC #1
-	TAX
-	LDA #>@Return
-	SBC #0
-	PHA
-	PHX
-	JMP (zSavedPointer)
-@Return:
-	LDA zWindow1
-	JSR SwitchLower16K
-	PLP
+MainTerminal:
+Home1_MainTerminal:
+
+BCDLayout:
+BCDLayout_End:
+	db 0
+
+LoadTilemapToTempTilemap:
 	RTS
+
+SafeLoadTempTilemapToTilemap:
+	RTS
+
 ; ReadBuffer - VRAM buffer reading
 ; place a JSR to here in NMI somewhere
 ; OG routine by crySTAlmoon
@@ -237,15 +280,4 @@ ReadBuffer:
 @return:
 	RTS
 
-LoadTilemapToTempTilemap:
-	RTS
-
-SafeLoadTempTilemapToTilemap:
-	RTS
-
-SwitchLower16K:
-	ASL A
-	STA MMC5_PRGBankSwitch2
-	ORA #1
-	STA MMC5_PRGBankSwitch3
-	RTS
+.include "src/home/audio.asm"

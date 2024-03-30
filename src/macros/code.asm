@@ -32,7 +32,8 @@ MACRO PLL
 	PLP
 ENDM
 
-MACRO PHW
+MACRO LDA zWindow1
+	PHA
 	LDA zWindow1
 	PHA
 ENDM
@@ -194,14 +195,20 @@ m = $10
 ENDM
 
 MACRO farcall bank, memory
-	PHA
-	PHX
-	PHY
+	PSH
 	LDX #>memory
 	LDY #<memory
 	LDA #bank
 	JSR Farcall
-	PLY
-	PLX
-	PLA
+	PLL
+ENDM
+
+MACRO home_ref bank, memory
+	LDA #bank
+	STA zSavedBank
+	LDA #>memory
+	STA zSavedPointer + 1
+	LDA #<memory
+	STA zSavedPointer
+	JSR HomeTerminal
 ENDM

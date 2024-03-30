@@ -57,10 +57,10 @@ DoBattle:
 	JSR DelayFrames
 
 @player_2:
-	JSR LoadTilemapToTempTilemap
+	home_ref LoadTilemapToTempTilemap
 	JSR CheckPlayerPartyForFitMon
 	BEQ @lostbattle
-	JSR SafeLoadTempTilemapToTilemap
+	home_ref SafeLoadTempTilemapToTilemap
 	LDA wBattleType
 	CMP #BATTLETYPE_DEBUG
 	BEQ @tutorial_debug
@@ -88,7 +88,7 @@ DoBattle:
 	OGT 2, 1, 5
 	LDA #9
 	JSR SlideBattlePicOut
-	JSR LoadTilemapToTempTilemap
+	home_ref LoadTilemapToTempTilemap
 	JSR ResetBattleParticipants
 	JSR InitBattleMon
 	JSR ResetPlayerStatLevels
@@ -97,8 +97,8 @@ DoBattle:
 	JSR BreakAttraction
 	JSR SendOutPlayerMon
 	JSR EmptyBattleTextbox
-	JSR LoadTilemapToTempTilemap
-	JSR SetPlayerTurn
+	home_ref LoadTilemapToTempTilemap
+	home_ref SetPlayerTurn
 	JSR SpikesDamage
 	; wLinkMode check
 	; hSerialConnectionStatus check
@@ -108,7 +108,7 @@ DoBattle:
 	JSR ResetEnemyStatLevels
 	JSR BreakAttraction
 	JSR EnemySwitch
-	JSR SetEnemyTurn
+	home_ref SetEnemyTurn
 	JSR SpikesDamage
 @not_linked_2:		JMP BattleTurn
 @tutorial_debug:	JMP BattleMenu
@@ -116,7 +116,7 @@ DoBattle:
 
 WildFled_EnemyFled_LinkBattleCanceled:
 	CLC
-	JSR SafeLoadTempTilemapToTilemap
+	home_ref SafeLoadTempTilemapToTilemap
 	LDA wBattleResult
 	AND #BATTLERESULT_BITMASK
 	ADC #DRAW
@@ -131,11 +131,11 @@ WildFled_EnemyFled_LinkBattleCanceled:
 	LDA #<BattleText_EnemyFled
 	STA zTextPointer
 @print_text:
-	JSR StdBattleTextbox
+	home_ref StdBattleTextbox
 	JSR StopDangerSound
 	LDY #SFX_RUN
-	JSR PlaySFX
-	JSR SetPlayerTurn
+	home_ref PRG_Home1, PlaySFX
+	home_ref SetPlayerTurn
 ;	farcall DummyPredef38 ; macro
 	LDA #1
 	STA wBattleEnded
@@ -215,7 +215,7 @@ HandleBetweenTurnEffects:
 	JSR HandleStatBoostingHeldItems
 	JSR HandleHealingItems
 	JSR UpdateBattleMonInParty
-	JSR LoadTilemapToTempTilemap
+	home_ref LoadTilemapToTempTilemap
 	JMP HandleEncore
 	
 CheckFaint_PlayerThenEnemy:
@@ -269,7 +269,7 @@ HandleBerserkGene:
 	JMP @enemy
 	
 @player:
-	JSR SetPlayerTurn
+	home_ref SetPlayerTurn
 	LDA #>wPartyMon1 + MON_ITEM
 	STA zMonPointer + 1
 	LDA #<wPartyMon1 + MON_ITEM
@@ -278,7 +278,7 @@ HandleBerserkGene:
 	JMP @go
 	
 @enemy:
-	JSR SetEnemyTurn
+	home_ref SetEnemyTurn
 	LDA #>wOTPartyMon1 + MON_ITEM
 	STA zMonPointer + 1
 	LDA #<wOTPartyMon1 + MON_ITEM
@@ -300,18 +300,18 @@ HandleBerserkGene:
 	; ld h, d
 	; ld l, e
 	; ld a, b
-	JSR GetPartyLocation
+	home_ref GetPartyLocation
 	LDA #0
 	TAY
 	STA (zMonPointer), Y
 	LDA #BATTLE_VARS_SUBSTATUS3
-	JSR GetBattleVarAddr
+	home_ref GetBattleVarAddr
 	PHA
 	LDA (zMonPointer), Y
 	SSB SUBSTATUS_CONFUSED
 	STA (zMonPointer), Y
 	LDA #BATTLE_VARS_MOVE_ANIM
-	JSR GetBattleVarAddr
+	home_ref GetBattleVarAddr
 	PHA
 	LDA #0
 	TAY
@@ -321,12 +321,12 @@ HandleBerserkGene:
 ;	farcall BattleCommand_AttackUp2
 	PLA
 	STA (zMonPointer), Y
-	JSR GetItemName
+	home_ref GetItemName
 	LDA #<BattleText_UsersStringBuffer1Activated
 	STA zTextPointer + 1
 	LDA #<BattleText_UsersStringBuffer1Activated
 	STA zTextPointer
-	JSR StdBattleTextbox
+	home_ref StdBattleTextbox
 ;	farcall BattleCommand_StatUpMessage
 	PLA
 	AND #SUBSTATUS_CONFUSED
@@ -376,13 +376,13 @@ DetermineMoveOrder:
 	CMP #BATTLEPLAYERACTION_SWITCH
 	BNE @switch
 	; hSerialConnectionStatus check
-	JSR BattleRandom
+	home_ref BattleRandom
 	BPL +e
 	JMP @player_first
 +e	JMP @enemy_first
 @switch:
 ;	farcall AI_Switch
-	JSR SetEnemyTurn
+	home_ref SetEnemyTurn
 	JSR SpikesDamage
 	JMP @enemy_first
 @UseMove:
@@ -396,7 +396,7 @@ DetermineMoveOrder:
 +e	JMP @enemy_first
 
 @equal_priority:
-	JSR SetPlayerTurn
+	home_ref SetPlayerTurn
 ;	farcall GetUserItem
 ;	farcall GetOpponentItem
 	; ld a, d

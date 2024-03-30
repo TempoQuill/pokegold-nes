@@ -25,14 +25,14 @@ BattleMenuHeader:
 	
 @MenuData:
 	.db STATICMENU_CURSOR | STATICMENU_DISABLE_B ; flags
-	; dn 2, 2 ; rows, columns
+	.db $22 ; rows, columns
 	.db 6 ; spacing
 	; dba .Text
 	; dbw BANK(@), NULL
 	
 @Text:
 	.db "FIGHT@"
-	.db "POKéMON@"
+	.db "POK<MON@"
 	.db "PACK@"
 	.db "RUN@"
 	
@@ -46,7 +46,7 @@ ContestBattleMenuHeader:
 	
 @MenuData:
 	.db STATICMENU_CURSOR | STATICMENU_DISABLE_B ; flags
-	; dn 2, 2 ; rows, columns
+	.db $22 ; rows, columns
 	.db 12 ; spacing
 	; dba .Text
 	; dbw .PrintParkBallsRemaining
