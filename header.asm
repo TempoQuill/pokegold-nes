@@ -4,7 +4,7 @@ MACRO nsf_bank_define const
 ENDM
 .org 0
 
-NSF_TRACKS = 54
+NSF_TRACKS = 66
 IFDEF PLAY_NSF_CRIES
 	NSF_TRACKS = 251
 ENDIF
@@ -13,7 +13,7 @@ IFDEF PLAY_NSF_SFX
 ENDIF
 
 IFNDEF NSF_FILE
-; vulpreich header specs
+; pokemon gold header specs
 ; MAP: MMC5
 ; PRG: 1024K
 ; CHR: 1024K

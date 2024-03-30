@@ -1,0 +1,1143 @@
+Music_SSAqua:
+	db	080h
+	dw	$ffff & Music_SSAqua_Ch1
+	db	001h
+	dw	$ffff & Music_SSAqua_Ch2
+	db	002h
+	dw	$ffff & Music_SSAqua_Ch3
+	db	003h
+	dw	$ffff & Music_SSAqua_Ch4
+	db	004h
+	dw	$ffff & Music_SSAqua_Ch5
+;----------------------------------------
+Music_SSAqua_Ch1:
+;----------------------------------------
+	db	$da,$00,$75
+;	db	$e5,$77
+; P1-1
+;	db	$ef,$0f
+	db	$e6,$00,$01
+	db	$e1,$12,$33
+	db	$db,$02
+	db	$d8,$6,$97
+	db	$d5,$80
+	db	$00
+	db	$80
+	db	$00
+@loop:
+; P1-2
+	db	$d5,$8f
+	db	$07
+	db	$81
+	db	$01
+	db	$d8,$c,$97
+	db	$81
+; P1-3 -tie
+	db	$89
+	db	$03
+	db	$d8,$6,$97
+	db	$80
+	db	$00
+	db	$80
+	db	$00
+; P1-4
+	db	$8f
+	db	$07
+	db	$81
+	db	$01
+	db	$d8,$c,$97
+	db	$81
+; P1-5 -tie
+	db	$87
+	db	$07
+; P1-6
+	db	$db,$01
+	db	$dc,$61
+	db	$fe
+	dw	$ffff & Music_SSAqua_Sub1
+; P1-7
+; P1-8
+; P1-9
+	db	$d2,$80
+	db	$d3,$c0
+	db	$a0
+	db	$80
+	db	$d2,$80
+	db	$d3,$c0
+	db	$a0
+	db	$80
+	db	$d2,$80
+	db	$d3,$c0
+	db	$a0
+	db	$80
+	db	$d2,$80
+	db	$d3,$c0
+	db	$a0
+	db	$80
+	db	$fe
+	dw	$ffff & Music_SSAqua_Sub1
+; P1-10
+; P1-11
+; P1-12
+; P1-13
+	db	$fe
+	dw	$ffff & Music_SSAqua_Sub2
+; P1-14
+	db	$0f
+; P1-15
+	db	$0f
+; P1-16
+	db	$0f
+; P1-17
+	db	$dc,$97
+	db	$0d
+	db	$d8,$6,$97
+	db	$30
+	db	$00
+	db	$d4,$b0
+	db	$00
+; P1-18
+	db	$d8,$c,$97
+	db	$0f
+; P1-19
+	db	$0f
+; P1-20
+	db	$dc,$95
+	db	$01
+	db	$d3,$10
+	db	$50
+	db	$80
+	db	$00
+	db	$50
+	db	$10
+	db	$d4,$50
+	db	$10
+	db	$50
+	db	$80
+	db	$d3,$10
+	db	$50
+	db	$80
+	db	$d2,$10
+; P1-21
+	db	$d3,$55
+	db	$31
+	db	$10
+	db	$30
+	db	$70
+	db	$a0
+	db	$d2,$10
+	db	$30
+	db	$d3,$80
+	db	$70
+; P1-22
+	db	$db,$02
+	db	$dc,$97
+	db	$87
+	db	$77
+; P1-23
+	db	$57
+	db	$37
+; P1-24
+	db	$d4,$c7
+	db	$b1
+	db	$01
+	db	$c0
+	db	$00
+	db	$d3,$71
+; P1-25
+	db	$dc,$75
+	db	$d2,$a3
+	db	$73
+	db	$33
+	db	$d3,$b1
+	db	$d8,$6,$97
+	db	$30
+	db	$00
+	db	$d4,$b0
+	db	$00
+; P1-26
+	db	$dc,$97
+	db	$8f
+	db	$af
+; P1-27
+	db	$c3
+	db	$03
+	db	$c3
+	db	$03
+	db	$d3,$57
+	db	$87
+; P1-28
+	db	$70
+	db	$e1,$00,$00
+	db	$dc,$88
+	db	$89
+;      -tie
+	db	$e1,$02,$23
+	db	$dc,$87
+	db	$88
+	db	$e1,$08,$33
+	db	$13
+	db	$53
+	db	$13
+; P1-29
+	db	$3b
+	db	$7b
+	db	$07
+; P1-30
+	db	$d5,$c1
+	db	$d4,$31
+	db	$71
+	db	$a1
+	db	$31
+	db	$71
+	db	$a1
+	db	$d3,$31
+	db	$71
+	db	$d8,$c,$97
+	db	$06
+; P1-31
+	db	$0f
+; P1-32
+	db	$0f
+; P1-33
+	db	$87
+	db	$70
+	db	$30
+	db	$d4,$a0
+	db	$d3,$30
+	db	$d4,$a0
+	db	$70
+	db	$30
+	db	$d5,$a0
+; P1-34
+	db	$c0
+	db	$d4,$30
+	db	$70
+	db	$a0
+	db	$30
+	db	$70
+	db	$a0
+	db	$d3,$30
+	db	$70
+	db	$06
+; P1-35
+	db	$0f
+; P1-36
+	db	$01
+	db	$51
+	db	$80
+	db	$00
+	db	$50
+	db	$d8,$6,$97
+	db	$00
+	db	$10
+	db	$23
+	db	$d4,$c1
+	db	$01
+	db	$a2
+	db	$00
+	db	$81
+	db	$01
+; P1-37
+	db	$71
+	db	$31
+	db	$d5,$a1
+	db	$d4,$31
+	db	$a1
+	db	$71
+	db	$31
+	db	$a1
+	db	$d3,$31
+	db	$d4,$a1
+	db	$71
+	db	$a1
+	db	$d3,$11
+	db	$31
+	db	$71
+	db	$a1
+; P1-38
+	db	$fd,0
+	dw	$ffff & @loop
+;----------------------------------------
+Music_SSAqua_Ch2:
+;----------------------------------------
+;	db	$ef,$f0
+; P2-1
+	db	$db,$02
+	db	$e1,$08,$33
+	db	$d8,$c,$b7
+	db	$01
+@loop:
+	db	$d8,$c,$b7
+; P2-2
+	db	$db,$01
+	db	$dc,$61
+	db	$fe
+	dw	$ffff & Music_SSAqua_Sub1
+; P2-5
+	db	$fe
+	dw	$ffff & Music_SSAqua_Sub2
+; P2-6
+	db	$db,$02
+	db	$dc,$d7
+	db	$fe
+	dw	$ffff & @mero6_8
+; P2-9
+	db	$c0
+	db	$00
+	db	$80
+	db	$02
+	db	$d4,$85
+	db	$80
+	db	$c0
+	db	$d3,$20
+	db	$50
+; P2-10
+	db	$d9,$0c
+	db	$fe
+	dw	$ffff & @mero6_8
+	db	$d9,$00
+; P2-13
+	db	$d4,$c0
+	db	$00
+	db	$80
+	db	$02
+	db	$d3,$85
+	db	$01
+	db	$db,$03
+	db	$dc,$b7
+	db	$d4,$c0
+	db	$d3,$10
+; P2-14
+	db	$fe
+	dw	$ffff & @mero14_18
+; P2-19
+	db	$83
+	db	$03
+	db	$87
+	db	$a7
+	db	$c7
+; P2-20
+	db	$d8,$c,$b7
+	db	$d2,$19
+	db	$31
+	db	$11
+	db	$d3,$81
+; P2-21
+	db	$c5
+	db	$a5
+	db	$01
+	db	$d4,$c0
+	db	$d3,$10
+; P2-22
+	db	$fe
+	dw	$ffff & @mero14_18
+; P2-27
+	db	$83
+	db	$03
+	db	$87
+	db	$a7
+	db	$c7
+; P2-28
+	db	$d2,$40
+	db	$e1,$00,$00
+	db	$dc,$98
+	db	$59
+;      -tie
+	db	$e1,$04,$23
+	db	$dc,$97
+	db	$58
+	db	$e1,$08,$23
+	db	$33
+	db	$13
+	db	$d3,$83
+; P2-29
+	db	$cb
+	db	$ab
+	db	$03
+	db	$db,$00
+	db	$c1
+	db	$a1
+; P2-30
+	db	$fe
+	dw	$ffff & @mero30
+; P2-31
+	db	$d8,$6,$b7
+	db	$90
+	db	$aa
+	db	$81
+	db	$71
+	db	$8b
+	db	$03
+; P2-32
+	db	$03
+	db	$51
+	db	$01
+	db	$51
+	db	$01
+	db	$81
+	db	$01
+	db	$a1
+	db	$01
+	db	$51
+	db	$01
+	db	$71
+	db	$01
+	db	$81
+	db	$01
+; P2-33
+	db	$af
+	db	$bb
+	db	$c1
+	db	$a1
+; P2-34
+	db	$fe
+	dw	$ffff & @mero30
+; P2-35
+	db	$d8,$6,$b7
+	db	$90
+	db	$aa
+	db	$c3
+	db	$8b
+	db	$03
+; P2-36
+	db	$03
+	db	$d2,$13
+	db	$31
+	db	$01
+	db	$11
+	db	$00
+	db	$d3,$b0
+	db	$c3
+	db	$a1
+	db	$01
+	db	$83
+	db	$51
+	db	$01
+; P2-37
+	db	$77
+	db	$87
+	db	$a7
+	db	$07
+; P2-38
+	db	$fd,0
+	dw	$ffff & @loop
+;---------------------------------------
+;	sub ruuuuuuuu
+;---------------------------------------
+@mero14_18:
+	db	$35
+	db	$d4,$c0
+	db	$d3,$10
+	db	$31
+	db	$d4,$c0
+	db	$d3,$10
+	db	$31
+	db	$d4,$c0
+	db	$d3,$10
+; P2-15
+	db	$31
+	db	$01
+	db	$81
+	db	$01
+	db	$a1
+	db	$01
+	db	$b1
+	db	$01
+; P2-16
+	db	$c5
+	db	$75
+	db	$03
+; P2-17
+	db	$db,$01
+	db	$d8,$6,$b7
+	db	$d4,$a0
+	db	$00
+	db	$d3,$30
+	db	$00
+	db	$70
+	db	$00
+	db	$a0
+	db	$00
+	db	$30
+	db	$00
+	db	$70
+	db	$00
+	db	$a0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$70
+	db	$00
+	db	$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$70
+	db	$00
+	db	$b0
+	db	$00
+	db	$70
+	db	$00
+	db	$db,$03
+	db	$51
+	db	$71
+; P2-18
+	db	$8b
+	db	$51
+	db	$71
+	db	$83
+	db	$51
+	db	$71
+	db	$83
+	db	$51
+	db	$71
+	db	$ff
+@mero30:
+	db	$d8,$c,$b7
+	db	$c9
+	db	$70
+	db	$00
+	db	$c0
+	db	$00
+	db	$70
+	db	$00
+	db	$ff
+@mero6_8:
+	db	$d4,$39
+	db	$50
+	db	$02
+	db	$30
+	db	$00
+; P2-7
+	db	$2b
+	db	$d5,$a0
+	db	$00
+	db	$c0
+	db	$00
+; P2-8
+	db	$d4,$17
+	db	$01
+	db	$d5,$c0
+	db	$02
+	db	$a0
+	db	$00
+	db	$ff
+Music_SSAqua_Sub1:
+	db	$d2,$80
+	db	$30
+	db	$d3,$c0
+	db	$80
+	db	$d2,$80
+	db	$30
+	db	$d3,$c0
+	db	$80
+	db	$d2,$80
+	db	$30
+	db	$d3,$c0
+	db	$80
+	db	$d2,$80
+	db	$30
+	db	$d3,$c0
+	db	$80
+; P2-3
+	db	$d2,$80
+	db	$20
+	db	$d3,$b0
+	db	$80
+	db	$d2,$80
+	db	$20
+	db	$d3,$b0
+	db	$80
+	db	$d2,$80
+	db	$20
+	db	$d3,$b0
+	db	$80
+	db	$d2,$80
+	db	$20
+	db	$d3,$b0
+	db	$80
+; P2-4
+	db	$d2,$80
+	db	$10
+	db	$d3,$a0
+	db	$80
+	db	$d2,$80
+	db	$10
+	db	$d3,$a0
+	db	$80
+	db	$d2,$80
+	db	$10
+	db	$d3,$a0
+	db	$80
+	db	$d2,$80
+	db	$10
+	db	$d3,$a0
+	db	$80
+	db	$ff
+Music_SSAqua_Sub2:
+	db	$d2,$80
+	db	$d3,$c0
+	db	$a0
+	db	$80
+	db	$d2,$80
+	db	$d3,$c0
+	db	$a0
+	db	$80
+	db	$d2,$80
+	db	$30
+	db	$d3,$c0
+	db	$80
+	db	$c0
+	db	$80
+	db	$20
+	db	$d4,$80
+	db	$ff
+;----------------------------------------
+Music_SSAqua_Ch3:
+;----------------------------------------
+;	db	$ef,$ff
+; P3-1
+	db	$e1,$08,$34
+	db	$d8,$6,$81
+	db	$d5,$80
+	db	$00
+	db	$80
+	db	$00
+@loop:
+; P3-2
+	db	$dc,$81
+	db	$8f
+	db	$07
+	db	$81
+	db	$01
+	db	$d8,$c,$1e
+	db	$81
+; P3-3 -tie
+	db	$dc,$81
+	db	$89
+	db	$03
+	db	$d8,$6,$81
+	db	$80
+	db	$00
+	db	$80
+	db	$00
+; P3-4
+	db	$8f
+	db	$07
+	db	$81
+	db	$01
+	db	$d8,$c,$1e
+	db	$81
+; P3-5 -tie
+	db	$dc,$81
+	db	$87
+	db	$dc,$0f
+	db	$c0
+	db	$d4,$20
+	db	$30
+	db	$80
+	db	$30
+	db	$80
+	db	$c0
+	db	$d3,$50
+; P3-6
+	db	$fe
+	dw	$ffff & @bass6_7
+; P3-8
+; P3-9
+	db	$fe
+	dw	$ffff & @bass6_7
+; P3-10
+@bass10_13:
+	db	$81
+	db	$01
+	db	$d4,$80
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d4,$80
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d4,$80
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d4,$80
+	db	$00
+	db	$d5,$80
+	db	$00
+; P3-11
+; P3-12
+; P3-13
+	db	$fd,4
+	dw	$ffff & @bass10_13
+; P3-14
+	db	$fe
+	dw	$ffff & @bass14_21
+; P3-22
+	db	$fe
+	dw	$ffff & @bass14_21
+; P3-30
+	db	$fe
+	dw	$ffff & @bass30
+; P3-31
+	db	$d4,$51
+	db	$01
+	db	$d3,$50
+	db	$02
+	db	$d4,$41
+	db	$01
+	db	$d3,$40
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$30
+	db	$02
+	db	$d4,$41
+	db	$01
+	db	$d3,$40
+	db	$02
+; P3-32
+	db	$d5,$a1
+	db	$01
+	db	$d3,$10
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$10
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$20
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$20
+	db	$02
+; P3-33
+	db	$d4,$31
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$70
+	db	$02
+; P3-34
+	db	$fe
+	dw	$ffff & @bass30
+; P3-35
+	db	$d4,$51
+	db	$01
+	db	$d3,$50
+	db	$02
+	db	$d4,$51
+	db	$01
+	db	$d3,$40
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$20
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$20
+	db	$02
+; P3-36
+	db	$d4,$11
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$11
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$21
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$21
+	db	$01
+	db	$d3,$80
+	db	$02
+; P3-37
+	db	$d4,$31
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d5,$80
+	db	$00
+	db	$80
+	db	$00
+; P3-38
+	db	$fd,0
+	dw	$ffff & @loop
+;-------------------------------
+;	sub ruuuuuuuu
+;-------------------------------
+@bass6_7:
+	db	$d8,$6,$1e
+	db	$d5,$81
+	db	$05
+	db	$81
+	db	$05
+	db	$81
+	db	$01
+	db	$d4,$81
+	db	$01
+	db	$d5,$81
+	db	$03
+	db	$80
+	db	$00
+; P3-7
+	db	$81
+	db	$05
+	db	$81
+	db	$01
+	db	$d4,$80
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d4,$80
+	db	$02
+	db	$d5,$81
+	db	$03
+	db	$80
+	db	$00
+	db	$ff
+@bass14_21:
+	db	$d5,$81
+	db	$01
+	db	$d3,$30
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d3,$30
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d3,$50
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d3,$50
+	db	$00
+	db	$d5,$80
+	db	$00
+; P3-15
+	db	$81
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d5,$81
+	db	$01
+	db	$d3,$83
+	db	$73
+	db	$51
+	db	$01
+; P3-16
+	db	$d5,$c1
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d5,$c1
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d5,$b1
+	db	$01
+	db	$d4,$b0
+	db	$02
+	db	$d5,$b1
+	db	$01
+	db	$d4,$b0
+	db	$02
+; P3-17
+	db	$d5,$a1
+	db	$01
+	db	$d4,$a0
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d4,$a0
+	db	$02
+	db	$d5,$b1
+	db	$01
+	db	$d4,$b0
+	db	$02
+	db	$d5,$b1
+	db	$01
+	db	$d4,$b0
+	db	$00
+	db	$40
+	db	$00
+; P3-18
+	db	$51
+	db	$01
+	db	$d3,$50
+	db	$02
+	db	$d4,$51
+	db	$01
+	db	$d3,$50
+	db	$02
+	db	$d4,$41
+	db	$01
+	db	$d3,$40
+	db	$02
+	db	$d4,$41
+	db	$01
+	db	$d3,$40
+	db	$00
+	db	$d4,$20
+	db	$00
+; P3-19
+	db	$31
+	db	$01
+	db	$d3,$30
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$30
+	db	$02
+	db	$d4,$21
+	db	$01
+	db	$d3,$c3
+	db	$83
+	db	$51
+	db	$01
+; P3-20
+	db	$d4,$11
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$11
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$50
+	db	$02
+	db	$d5,$a1
+	db	$01
+	db	$d3,$50
+	db	$02
+; P3-21
+	db	$d4,$31
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$80
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d4,$31
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$ff
+@bass30:
+	db	$d5,$c1
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d5,$c1
+	db	$01
+	db	$d3,$70
+	db	$02
+	db	$d5,$c1
+	db	$01
+	db	$d3,$40
+	db	$02
+	db	$d5,$c1
+	db	$01
+	db	$d3,$40
+	db	$02
+	db	$ff
+;----------------------------------------
+Music_SSAqua_Ch4:
+;----------------------------------------
+	db	$e3,$003
+;----------------------------------------
+Music_SSAqua_Ch5:
+;----------------------------------------
+; P4-1
+	db	$d8,$c
+	db	$01
+@loop:
+; P4-2
+@drum2_13:
+	db	$90
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$80
+	db	$90
+	db	$80
+	db	$fd,12
+	dw	$ffff & @drum2_13
+; P4-3
+; P4-4
+; P4-5
+; P4-6
+; P4-7
+; P4-8
+; P4-9
+; P4-10
+; P4-11
+; P4-12
+; P4-13
+; P4-14
+	db	$fe
+	dw	$ffff & @drum14
+; P4-15
+	db	$fe
+	dw	$ffff & @drum14
+; P4-16
+	db	$fe
+	dw	$ffff & @drum14
+; P4-17
+	db	$fe
+	dw	$ffff & @drum17
+; P4-18
+	db	$fe
+	dw	$ffff & @drum14
+; P4-19
+	db	$fe
+	dw	$ffff & @drum14
+; P4-20
+	db	$fe
+	dw	$ffff & @drum14
+; P4-21
+	db	$fe
+	dw	$ffff & @drum17
+; P4-22
+	db	$fe
+	dw	$ffff & @drum14
+; P4-23
+	db	$fe
+	dw	$ffff & @drum14
+; P4-24
+	db	$fe
+	dw	$ffff & @drum14
+; P4-25
+	db	$fe
+	dw	$ffff & @drum17
+; P4-26
+	db	$fe
+	dw	$ffff & @drum14
+; P4-27
+	db	$fe
+	dw	$ffff & @drum14
+; P4-28
+	db	$fe
+	dw	$ffff & @drum14
+; P4-29
+	db	$fe
+	dw	$ffff & @drum29
+; P4-30
+	db	$fe
+	dw	$ffff & @drum14
+; P4-31
+	db	$fe
+	dw	$ffff & @drum14
+; P4-32
+	db	$fe
+	dw	$ffff & @drum14
+; P4-33
+	db	$fe
+	dw	$ffff & @drum17
+; P4-34
+	db	$fe
+	dw	$ffff & @drum14
+; P4-35
+	db	$fe
+	dw	$ffff & @drum14
+; P4-36
+	db	$fe
+	dw	$ffff & @drum14
+; P4-37
+	db	$fe
+	dw	$ffff & @drum29
+; P4-38
+	db	$fd,0
+	dw	$ffff & @loop
+@drum14:
+	db	$b1
+	db	$80
+	db	$80
+	db	$31
+	db	$80
+	db	$80
+	db	$b1
+	db	$80
+	db	$80
+	db	$31
+	db	$80
+	db	$80
+	db	$ff
+@drum17:
+	db	$b1
+	db	$80
+	db	$80
+	db	$31
+	db	$80
+	db	$80
+	db	$b1
+	db	$80
+	db	$80
+	db	$31
+	db	$71
+	db	$ff
+@drum29:
+	db	$b1
+	db	$80
+	db	$80
+	db	$31
+	db	$80
+	db	$80
+	db	$30
+	db	$30
+	db	$31
+	db	$31
+	db	$11
+	db	$ff
+
+

@@ -22,3 +22,8 @@
 ; dpcm
 .incbin "src/data/dmc/bank-5.bin"
 .align $2000, $55
+
+.base $c000
+	.db $55
+; dpcm
+.align $2000, $55
