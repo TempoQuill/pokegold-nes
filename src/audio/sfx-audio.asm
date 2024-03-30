@@ -28,8 +28,8 @@ Sfx_Menu:
 	db	008h
 	dw	$ffff & Sfx_Menu_Ch9
 Sfx_Menu_Ch9:
-	noise_note 1, 14, 2, 6
-	noise_note 8, 14, 1, 3
+	noise_note 1, 14, 2, 51
+	noise_note 8, 14, 1, 34
 	sound_ret
 Sfx_ReadText:
 	db	005h
@@ -178,30 +178,30 @@ Sfx_GrassRustle:
 	db	008h
 	dw	$ffff & Sfx_GrassRustle_Ch9
 Sfx_GrassRustle_Ch9:
-	noise_note 2, 15, 1, 6
+	noise_note 2, 15, 1, 50
 	noise_note 2, 0, 0, 0
-	noise_note 2, 15, 1, 4
+	noise_note 2, 15, 1, 34
 	noise_note 1, 0, 0, 0
 	sound_ret
 Sfx_Fly:
 	db	008h
 	dw	$ffff & Sfx_Fly_Ch9
 Sfx_Fly_Ch9:
-	noise_note 2, 15, 1, 3
+	noise_note 2, 15, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 10, 1, 3
+	noise_note 2, 10, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 13, 1, 3
+	noise_note 2, 13, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 8, 1, 3
+	noise_note 2, 8, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 11, 1, 3
+	noise_note 2, 11, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 6, 1, 3
+	noise_note 2, 6, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 9, 1, 3
+	noise_note 2, 9, 1, 18
 	noise_note 2, 0, 0, 0
-	noise_note 2, 4, 1, 3
+	noise_note 2, 4, 1, 18
 	noise_note 2, 0, 0, 0
 	sound_ret
 Sfx_Wrong:
@@ -238,15 +238,15 @@ Sfx_Strength:
 	db	008h
 	dw	$ffff & Sfx_Strength_Ch9
 Sfx_Strength_Ch9:
-	noise_note 4, 10, 2, 5
-	noise_note 8, 15, 1, 9
+	noise_note 4, 10, 2, 35
+	noise_note 8, 15, 1, 52
 	noise_note 15, 0, 0, 0
 Sfx_PlacePuzzlePieceDown_Ch9:
-	noise_note 2, 15, 7, 6
-	noise_note 2, 15, 7, 9
-	noise_note 4, 15, 7, 11
-	noise_note 8, 15, 4, 13
-	noise_note 8, 15, 1, 11
+	noise_note 2, 15, 7, 36
+	noise_note 2, 15, 7, 52
+	noise_note 4, 15, 7, 68
+	noise_note 8, 15, 4, 85
+	noise_note 8, 15, 1, 68
 	sound_ret
 Sfx_Boat:
 	db	025h
@@ -295,8 +295,8 @@ Sfx_EnterDoor:
 	db	008h
 	dw	$ffff & Sfx_EnterDoor_Ch9
 Sfx_EnterDoor_Ch9:
-	noise_note 9, 15, 1, 11
-	noise_note 8, 13, 1, 10
+	noise_note 9, 15, 1, 68
+	noise_note 8, 13, 1, 67
 	sound_ret
 Sfx_SwitchPokemon:
 	db	009h
@@ -320,11 +320,11 @@ Sfx_ExitBuilding:
 	db	008h
 	dw	$ffff & Sfx_ExitBuilding_Ch9
 Sfx_ExitBuilding_Ch9:
-	noise_note 2, 15, 1, 12
-	noise_note 12, 7, 1, 5
-	noise_note 2, 11, 1, 12
-	noise_note 12, 6, 1, 5
-	noise_note 6, 4, 1, 12
+	noise_note 2, 15, 1, 84
+	noise_note 12, 7, 1, 35
+	noise_note 2, 11, 1, 84
+	noise_note 12, 6, 1, 35
+	noise_note 6, 4, 1, 84
 	sound_ret
 Sfx_Bump:
 	db	005h
@@ -406,17 +406,17 @@ Sfx_Run:
 	db	008h
 	dw	$ffff & Sfx_Run_Ch9
 Sfx_Run_Ch9:
-	noise_note 2, 6, 1, 5
-	noise_note 2, 10, 1, 8
-	noise_note 2, 12, 1, 8
-	noise_note 2, 5, 1, 2
-	noise_note 2, 15, 1, 8
-	noise_note 2, 4, 1, 2
-	noise_note 2, 12, 1, 8
-	noise_note 2, 3, 1, 2
-	noise_note 2, 8, 1, 8
-	noise_note 2, 3, 1, 2
-	noise_note 8, 4, 1, 8
+	noise_note 2, 6, 1, 35
+	noise_note 2, 10, 1, 51
+	noise_note 2, 12, 1, 51
+	noise_note 2, 5, 1, 17
+	noise_note 2, 15, 1, 51
+	noise_note 2, 4, 1, 17
+	noise_note 2, 12, 1, 51
+	noise_note 2, 3, 1, 17
+	noise_note 2, 8, 1, 51
+	noise_note 2, 3, 1, 17
+	noise_note 8, 4, 1, 51
 	sound_ret
 Sfx_SlotMachineStart:
 	db	009h
@@ -428,7 +428,7 @@ Sfx_Peck:
 	db	008h
 	dw	$ffff & Sfx_Peck_Ch9
 Sfx_Peck_Ch9:
-	noise_note 2, 10, 1, 3
+	noise_note 2, 10, 1, 18
 	sound_ret
 Sfx_Kinesis:
 	db	005h
@@ -452,29 +452,29 @@ Sfx_Pound:
 	db	008h
 	dw	$ffff & Sfx_Pound_Ch9
 Sfx_Pound_Ch9:
-	noise_note 2, 10, 1, 4
+	noise_note 2, 10, 1, 34
 	sound_ret
 Sfx_MovePuzzlePiece:
 	db	008h
 	dw	$ffff & Sfx_MovePuzzlePiece_Ch9
 Sfx_MovePuzzlePiece_Ch9:
-	noise_note 8, 15, 1, 13
+	noise_note 8, 15, 1, 84
 	sound_ret
 Sfx_CometPunch:
 	db	008h
 	dw	$ffff & Sfx_CometPunch_Ch9
 Sfx_CometPunch_Ch9:
-	noise_note 15, 8, -7, 2
-	noise_note 4, 15, -7, 3
-	noise_note 10, 15, 1, 13
+	noise_note 15, 8, -7, 17
+	noise_note 4, 15, -7, 18
+	noise_note 10, 15, 1, 85
 	sound_ret
 Sfx_MegaPunch:
 	db	008h
 	dw	$ffff & Sfx_MegaPunch_Ch9
 Sfx_MegaPunch_Ch9:
-	noise_note 15, 8, -7, 9
-	noise_note 8, 15, 2, 10
-	noise_note 10, 15, 1, 13
+	noise_note 15, 8, -7, 52
+	noise_note 8, 15, 2, 53
+	noise_note 10, 15, 1, 85
 	sound_ret
 
 

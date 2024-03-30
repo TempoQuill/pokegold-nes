@@ -1285,7 +1285,7 @@ TranslateCryNoise:
 	RNE
 	LDY #CHANNEL_FLAGS1
 	LDA (zCurTrackAudioPointer), Y
-	TSB SOUND_CRY
+	AND #1 << SOUND_CRY | 1 << SOUND_READING_MODE
 	REQ
 	LDA zCurTrackRawPitch
 	AND #$f0
