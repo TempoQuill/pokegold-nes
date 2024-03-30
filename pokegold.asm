@@ -5,18 +5,26 @@
 .include "src/macros.asm"
 
 IFDEF NSF_FILE
+
 	.base $e000
 	.include "src/home/nsf.asm"
 	.include "src/home/audio.asm"
 	.pad $10000, $00
 	.dsb $2000, $00
+
+ELSE
+
+	.dsb (34 * $4000), $00
+
 ENDIF
 
 ; audio
 .include "src/audio.asm"
 
 IFNDEF NSF_FILE
-	.dsb (56 * $2000), $00
+
+	.dsb (21 * $4000), $00
+
 ENDIF
 
 .include "src/dmc.asm"
