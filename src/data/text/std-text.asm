@@ -1,3 +1,4 @@
+	;	command/RAM	string		text
 NurseMornText:
 	db	TX_START,			"Good morning! Welcome to our "
 	db	TX_LINE,	_POKE_,		"MON CENTER."
@@ -181,7 +182,8 @@ AskNumber2FText:
 RegisteredNumberMText:
 RegisteredNumberFText:
 	db	TX_START,	_PLAYER_,	" registered "
-	db	TX_RAM,				wStringBuffer3
+	db	TX_RAM
+	dw	wStringBuffer3
 	db	TX_LINE,			">"
 	db					"number."
 	db	TX_DONE
@@ -232,16 +234,19 @@ RematchFText:
 
 ContestResults_PlayerWonAPrizeText:
 	db	TX_START,	_PLAYER_,	" wins the No. "
-	db	TX_RAM,				wStringBuffer3
+	db	TX_RAM
+	dw	wStringBuffer3
 	db					" prize,"
 	db	TX_LINE,			"a "
-	db	TX_RAM,				wStringBuffer4
+	db	TX_RAM
+	dw	wStringBuffer4
 	db	TX_START,			"!"
 	db	TX_DONE
 
 ReceivedItemText:
 	db	TX_START,	_PLAYER_,	" received "
-	db	TX_RAM,				wStringBuffer4
+	db	TX_RAM
+	dw	wStringBuffer4
 	db					"."
 	db	TX_DONE
 
@@ -275,14 +280,16 @@ ContestResults_PartyFullText:
 
 GymStatue_CityGymText:
 	db	TX_START
-	db	TX_RAM,				wStringBuffer3
+	db	TX_RAM
+	dw	wStringBuffer3
 	db					" "
 	db			_POKE_,		"MON GYM"
 	db	TX_DONE
 
 GymStatue_WinningTrainersText:
 	db	TX_START,			"LEADER: "
-	db	TX_RAM,				wStringBuffer4
+	db	TX_RAM
+	dw	wStringBuffer4
 	db	TX_LINE,			"WINNING TRAINERS: "
 	db			_PLAYER_
 	db	TX_DONE

@@ -1,26 +1,30 @@
 BattleText:: ; used only for BANK(BattleText)
-
+	;	command/RAM	string		text
 BattleText_PlayerPickedUpPayDayMoney:
 	db	TX_START,	_PLAYER_,	" picked up $"
-	db	TX_DECIMAL,	wPayDayMoney,	$36
-	db					"!"
+	db	TX_DECIMAL
+	dw	wPayDayMoney
+	db			$36,		"!"
 	db	TX_PROMPT
 
 WildPokemonAppearedText:
 	db	TX_START,			"Wild "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					" appeared!"
 	db	TX_PROMPT
 
 HookedPokemonAttackedText:
 	db	TX_START,			"The hooked "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db	TX_LINE,			"attacked!"
 	db	TX_PROMPT
 
 PokemonFellFromTreeText:
 	db	TX_START
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					" fell out of the"
 	db	TX_LINE,			"tree!"
 	db	TX_PROMPT
@@ -32,13 +36,15 @@ WantsToBattleText::
 
 BattleText_WildFled:
 	db	TX_START,			"Wild "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					" fled!"
 	db	TX_PROMPT
 
 BattleText_EnemyFled:
 	db	TX_START,			"Enemy "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					" fled!"
 	db	TX_PROMPT
 
@@ -75,21 +81,24 @@ SandstormHitsText:
 PerishCountText:
 	db	TX_START,	_USER_,		"> perish count"
 	db	TX_LINE,			"is "
-	db	TX_DECIMAL,	wTextDecByte,	$11
-	db					"!"
+	db	TX_DECIMAL
+	dw	wTextDecByte
+	db			$11,		"!"
 	db	TX_PROMPT
 
 BattleText_TargetRecoveredWithItem:
 	db	TX_START,	_TARGET_,	" recovered"
 	db	TX_LINE,			"with "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"."
 	db	TX_PROMPT
 
 BattleText_UserRecoveredPPUsing:
 	db	TX_START,	_USER_,		" recovered PP
 	db	TX_LINE,			"using "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"."
 	db	TX_PROMPT
 
@@ -104,14 +113,16 @@ BattleText_SafeguardFaded:
 	db	TX_PROMPT
 
 BattleText_MonsLightScreenFell:
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db	TX_START,			" "
 	db			_POKE_,		"MON> LIGHT SCREEN"
 	db	TX_LINE,			"fell!"
 	db	TX_PROMPT
 
 BattleText_MonsReflectFaded:
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db	TX_START,			" "
 	db			_POKE_,		"MON> REFLECT faded!"
 	db	TX_PROMPT
@@ -142,14 +153,16 @@ BattleText_TheSandstormSubsided:
 
 BattleText_EnemyMonFainted:
 	db	TX_START,			"Enemy "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db	TX_LINE,			" fainted!"
 	db	TX_PROMPT
 
 GotMoneyForWinningText:
 	db	TX_START,	_PLAYER_,	" got $"
-	db	TX_DECIMAL,	 wBattleReward,	$36
-	db					" for"
+	db	TX_DECIMAL
+	dw	 wBattleReward
+	db			$36,		" for"
 	db	TX_LINE,			"winning!"
 	db	TX_PROMPT
 
@@ -165,8 +178,9 @@ TiedAgainstText:
 
 SentSomeToMomText:
 	db	TX_START,	_PLAYER_,	" got $"
-	db	TX_DECIMAL,	wBattleReward,	$36
-	db					" for"
+	db	TX_DECIMAL
+	dw	wBattleReward	
+	db			$36,		" for"
 	db	TX_LINE,			"winning! Sent some to MOM!"
 	db	TX_PROMPT
 
@@ -186,7 +200,8 @@ UnusedRivalLossText: ; unreferenced
 
 BattleText_MonFainted:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" fainted!"
 	db	TX_PROMPT
 
@@ -209,7 +224,8 @@ LostAgainstText:
 BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 	db	TX_START,	_ENEMY_,	" is about to"
 	db	TX_LINE,			"use "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					"."
 
 	db	TX_PARA,			"Will "
@@ -220,7 +236,8 @@ BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 BattleText_EnemySentOut:
 	db	TX_START,	_ENEMY_,	"sent out"
 	db	TX_LINE
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					"!"
 	db	TX_DONE
 
@@ -248,7 +265,8 @@ BattleText_GotAwaySafely:
 BattleText_UserFledUsingAStringBuffer1:
 	db	TX_START,	_USER_,		"fled using a"
 	db	TX_LINE
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -264,13 +282,15 @@ BattleText_UserHurtBySpikes:
 RecoveredUsingText:
 	db	TX_START,	_TARGET_	" recovered"
 	db	TX_LINE,			"using a "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
 BattleText_UsersStringBuffer1Activated:
 	db	TX_START,	_USER_,		"> "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db	TX_LINE,			"activated!"
 	db	TX_PROMPT
 
@@ -280,13 +300,15 @@ BattleText_ItemsCantBeUsedHere:
 
 BattleText_MonIsAlreadyOut:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" is already out."
 	db	TX_PROMPT
 
 BattleText_MonCantBeRecalled:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db	TX_LINE,			" can= be recalled!"
 	db	TX_PROMPT
 
@@ -301,7 +323,8 @@ BattleText_TheMoveIsDisabled:
 
 BattleText_MonHasNoMovesLeft:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" has no moves"
 	db	TX_LINE,			"left!"
 	db	TX_DONE
@@ -313,22 +336,26 @@ BattleText_TargetsEncoreEnded:
 
 BattleText_StringBuffer1GrewToLevel:
 	db	TX_START
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					" grew to level "
-	db	TX_DECIMAL,	wCurPartyLevel,	$13
-	db					"!"
+	db	TX_DECIMAL
+	dw	wCurPartyLevel
+	db			$13,		"!"
 	db	TX_SOUND_DEX_FANFARE_50_79
 	db	TX_END
 
 BattleText_WildMonIsEating:
 	db	TX_START,			"Wild "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					" is eating!"
 	db	TX_PROMPT
 
 BattleText_WildMonIsAngry:
 	db	TX_START,			"Wild "
-	db	TX_RAM,				wEnemyMonNickname
+	db	TX_RAM
+	dw	wEnemyMonNickname
 	db					" is angry!"
 	db	TX_PROMPT
 
@@ -381,7 +408,8 @@ BecameConfusedText:
 
 BattleText_ItemHealedConfusion:
 	db	TX_START,			"A "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					" rid"
 	db	TX_LINE,	_TARGET_,	" of its"
 	db	TX_CONT,			"confusion."
@@ -395,14 +423,16 @@ AlreadyConfusedText:
 BattleText_UsersHurtByStringBuffer1:
 	db	TX_START,	_USER_,		"> hurt by"
 	db	TX_LINE
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
 BattleText_UserWasReleasedFromStringBuffer1:
 	db	TX_START,	_USER_,		" was released"
 	db	TX_LINE,			"from "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -440,7 +470,8 @@ UnleashedEnergyText:
 HungOnText:
 	db	TX_START,	_TARGET_,	" hung on with"
 	db	TX_LINE
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -462,44 +493,51 @@ InfatuationText:
 
 DisabledMoveText:
 	db	TX_START,	_USER_,		"> "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db	TX_LINE,			"is DISABLED!"
 	db	TX_PROMPT
 
 LoafingAroundText:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" is loafing"
 	db	TX_LINE,			"around."
 	db	TX_PROMPT
 
 BeganToNapText:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" began to nap!"
 	db	TX_PROMPT
 
 WontObeyText:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" won= obey!"
 	db	TX_PROMPT
 
 TurnedAwayText:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" turned away!"
 	db	TX_PROMPT
 
 IgnoredOrdersText:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" ignored orders!"
 	db	TX_PROMPT
 
 IgnoredSleepingText:
 	db	TX_START
-	db	TX_RAM,				wBattleMonNickname
+	db	TX_RAM
+	dw	wBattleMonNickname
 	db					" ignored orders_"
 	db	TX_LINE,			"sleeping!"
 	db	TX_PROMPT
@@ -512,7 +550,8 @@ NoPPLeftText:
 HasNoPPLeftText:
 	db	TX_START,	_USER_,		" has no PP
 	db	TX_LINE,			"left for "
-	db	TX_RAM,				wStringBuffer2
+	db	TX_RAM
+	dw	wStringBuffer2
 	db					"!"
 	db	TX_PROMPT
 
@@ -594,7 +633,8 @@ TookAimText:
 SketchedText:
 	db	TX_START,	_USER_,		" SKETCHED"
 	db	TX_LINE,
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -605,10 +645,12 @@ DestinyBondEffectText:
 
 SpiteEffectText:
 	db	TX_START,	_TARGET_,	"> "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db	TX_LINE,			"was reduced by "
-	db	TX_DECIMAL,	wTextDecByte,	$11
-	db					"!"
+	db	TX_DECIMAL
+	dw	wTextDecByte
+	db			$11,		"!"
 	db	TX_PROMPT
 
 BellChimedText:
@@ -664,13 +706,15 @@ WasFrozenText:
 
 WontRiseAnymoreText:
 	db	TX_START,	_USER_,		"> "
-	db	TX_RAM,				wStringBuffer2
+	db	TX_RAM
+	dw	wStringBuffer2
 	db	TX_LINE,			" won= rise anymore!"
 	db	TX_PROMPT
 
 WontDropAnymoreText:
 	db	TX_START,	_TARGET_,	"> "
-	db	TX_RAM,				wStringBuffer2
+	db	TX_RAM
+	dw	wStringBuffer2
 	db	TX_LINE,			" won= drop anymore!"
 	db	TX_PROMPT
 
@@ -690,14 +734,16 @@ BlownAwayText:
 
 PlayerHitTimesText:
 	db	TX_START,			"Hit "
-	db	TX_DECIMAL,	wPlayerDamage,	$11
-	db					" times!"
+	db	TX_DECIMAL
+	dw	wPlayerDamage
+	db			$11,		" times!"
 	db	TX_PROMPT
 
 EnemyHitTimesText:
 	db	TX_START,			"Hit "
-	db	TX_DECIMAL,	wEnemyDamage,	$11
-	db					" times!"
+	db	TX_DECIMAL
+	dw	wEnemyDamage
+	db			$11,		" times!"
 	db	TX_PROMPT
 
 MistText:
@@ -748,7 +794,8 @@ SubFadedText:
 MimicLearnedMoveText:
 	db	TX_START,	_USER_,		" learned"
 	db	TX_LINE
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -763,7 +810,8 @@ EvadedText:
 
 WasDisabledText:
 	db	TX_START,	_TARGET_,	"> "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db	TX_LINE,			"was DISABLED!"
 	db	TX_PROMPT
 
@@ -774,7 +822,8 @@ CoinsScatteredText:
 TransformedTypeText:
 	db	TX_START,	_USER_,		" transformed"
 	db	TX_LINE,			"into the "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"-type!"
 	db	TX_PROMPT
 
@@ -786,7 +835,8 @@ EliminatedStatsText:
 TransformedText:
 	db	TX_START,	_USER_,		" TRANSFORMED"
 	db	TX_LINE,			"into "
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -845,7 +895,8 @@ AlreadyParalyzedText:
 ProtectedByText:
 	db	TX_START,	_TARGET_,	"> protected by"
 	db	TX_LINE
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					"!"
 	db	TX_PROMPT
 
@@ -856,7 +907,8 @@ MirrorMoveFailedText:
 StoleText:
 	db	TX_START,	_USER_,		" stole"
 	db	TX_LINE
-	db	TX_RAM,				wStringBuffer1
+	db	TX_RAM
+	dw	wStringBuffer1
 	db					" from its foe!"
 	db	TX_PROMPT
 
@@ -932,8 +984,9 @@ SafeguardProtectText:
 
 MagnitudeText:
 	db	TX_START,			"Magnitude "
-	db	TX_DECIMAL,	wTextDecByte,	$11
-	db					"!"
+	db	TX_DECIMAL
+	dw	wTextDecByte
+	db			$11,		"!"
 	db	TX_PROMPT
 
 ReleasedByText:
@@ -978,8 +1031,9 @@ ForesawAttackText:
 
 BeatUpAttackText::
 	db	TX_START
-	db	TX_RAM,				wStringBuffer1
-	db	TX_START,			"> attack!"
+	db	TX_RAM
+	dw	wStringBuffer1
+	db					"> attack!"
 	db	TX_DONE
 
 PresentFailedText:
