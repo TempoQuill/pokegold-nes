@@ -560,7 +560,7 @@ SilenceMusic:
 	REQ
 	LDY zMusicSilenceCount
 	BNE @Run
-	AND #$3f
+	AND #$7f
 	STA zMusicSilenceCount
 	LDA #5
 	STA zMusicSilenceOffset
@@ -570,6 +570,7 @@ SilenceMusic:
 	RNE
 	DEC zMusicSilenceOffset
 	BMI @NewSong
+	AND #$7f
 	STA zMusicSilenceCount
 	LDY zMusicSilenceOffset
 	LDA ChannelCutoffs, Y
