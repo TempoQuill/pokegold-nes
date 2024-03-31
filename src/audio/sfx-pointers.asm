@@ -52,4 +52,16 @@ SFX:
 	dba_audio Sfx_MovePuzzlePiece
 	dba_audio Sfx_CometPunch
 	dba_audio Sfx_MegaPunch
+	dba_audio Sfx_Scratch
+	dba_audio Sfx_Vicegrip
+	dba_audio Sfx_RazorWind
+	dba_audio Sfx_Cut
+	dba_audio Sfx_WingAttack
+	dba_audio Sfx_Whirlwind
+	dba_audio Sfx_Bind
+	dba_audio Sfx_VineWhip
+	dba_audio Sfx_DoubleKick
+	dba_audio Sfx_MegaKick
+	dba_audio Sfx_Headbutt
+	dba_audio Sfx_HornAttack
 	dba_audio Sfx_Elevator

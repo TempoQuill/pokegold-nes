@@ -476,5 +476,110 @@ Sfx_MegaPunch_Ch9:
 	noise_note 8, 15, 2, 53
 	noise_note 10, 15, 1, 85
 	sound_ret
+Sfx_Scratch:
+	db	008h
+	dw	$ffff & Sfx_Scratch_Ch9
+Sfx_Scratch_Ch9:
+	noise_note 15, 9, -7, 35
+	noise_note 8, 15, 1, 33
+	sound_ret
+Sfx_Vicegrip:
+	db	008h
+	dw	$ffff & Sfx_Vicegrip_Ch9
+Sfx_Vicegrip_Ch9:
+	noise_note 2, 14, 1, 75
+	noise_note 10, 15, 1, 68
+	noise_note 2, 14, 1, 58
+	noise_note 6, 15, 1, 52
+	sound_ret
+Sfx_RazorWind:
+	db	008h
+	dw	$ffff & Sfx_RazorWind_Ch9
+Sfx_RazorWind_Ch9:
+	noise_note 2, 15, 4, 68
+	noise_note 2, 15, 4, 20
+	noise_note 15, 15, 1, 50
+	sound_ret
+Sfx_Cut:
+	db	008h
+	dw	$ffff & Sfx_Cut_Ch9
+Sfx_Cut_Ch9:
+	noise_note 4, 8, -7, 85
+	noise_note 2, 15, 4, 68
+	noise_note 8, 15, 4, 34
+	noise_note 15, 15, 2, 33
+	sound_ret
+Sfx_WingAttack:
+	db	008h
+	dw	$ffff & Sfx_WingAttack_Ch9
+Sfx_WingAttack_Ch9:
+	noise_note 8, 4, -7, 35
+	noise_note 4, 12, 4, 34
+	noise_note 6, 15, 2, 35
+	sound_loop 4, Sfx_WingAttack_Ch9
+	sound_ret
+Sfx_Whirlwind:
+	db	008h
+	dw	$ffff & Sfx_Whirlwind_Ch9
+Sfx_Whirlwind_Ch9:
+	noise_note 8, 4, -7, 51
+	noise_note 4, 12, 4, 34
+	noise_note 6, 15, 2, 35
+	noise_note 15, 15, 2, 34
+	sound_ret
+Sfx_Bind:
+	db	008h
+	dw	$ffff & Sfx_Bind_Ch9
+Sfx_Bind_Ch9:
+	noise_note 8, 15, -7, 50
+	noise_note 8, 15, 4, 67
+	noise_note 8, 15, 2, 84
+	noise_note 8, 15, 1, 101
+	sound_ret
+Sfx_VineWhip:
+	db	008h
+	dw	$ffff & Sfx_VineWhip_Ch9
+Sfx_VineWhip_Ch9:
+	noise_note 1, 12, 2, 51
+	noise_note 2, 15, 2, 33
+	noise_note 1, 14, 2, 51
+	noise_note 1, 12, 2, 50
+	noise_note 1, 9, 2, 18
+	noise_note 1, 11, 2, 49
+	noise_note 12, 9, 1, 16
+	noise_note 8, 15, 2, 65
+	sound_ret
+Sfx_DoubleKick:
+	db	008h
+	dw	$ffff & Sfx_DoubleKick_Ch9
+Sfx_DoubleKick_Ch9:
+	noise_note 1, 9, 4, 35
+	noise_note 1, 11, 4, 34
+	noise_note 8, 15, 1, 68
+	sound_ret
+Sfx_MegaKick:
+	db	008h
+	dw	$ffff & Sfx_MegaKick_Ch9
+Sfx_MegaKick_Ch9:
+	noise_note 2, 9, 4, 51
+	noise_note 4, 11, 4, 34
+	noise_note 4, 15, 1, 68
+	noise_note 8, 15, 1, 85
+	sound_ret
+Sfx_Headbutt:
+	db	008h
+	dw	$ffff & Sfx_Headbutt_Ch9
+Sfx_Headbutt_Ch9:
+	noise_note 4, 15, -7, 85
+	noise_note 8, 15, 1, 101
+	sound_ret
+Sfx_HornAttack:
+	db	008h
+	dw	$ffff & Sfx_HornAttack_Ch9
+Sfx_HornAttack_Ch9:
+	noise_note 2, 8, 4, 67
+	noise_note 2, 12, 4, 34
+	noise_note 8, 15, 2, 52
+	sound_ret
 
 
