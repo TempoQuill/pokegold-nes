@@ -39,10 +39,6 @@ NurseGoodbyeText:
 	db	TX_START,			"We hope to see you again."
 	db	TX_DONE
 
-; not used
-	db	TX_START,			"We hope to see you again."
-	db	TX_DONE
-
 NursePokerusText:
 	db	TX_START,			"Your "
 	db			_POKE_,		"MON appear to have"
@@ -63,7 +59,7 @@ DifficultBookshelfText:
 
 PictureBookshelfText:
 	db	TX_START,			"A whole collection of "
-	db			_POKE_,		"MON
+	db			_POKE_,		"MON"
 	db	TX_LINE,			"picture books!"
 	db	TX_DONE
 
@@ -121,7 +117,7 @@ HomepageText:
 	db	TX_DONE
 
 ; not used
-	db	TX_START,	_POKE_,		"MON RADIO! Call in with "
+	db	TX_START,	_POKE_,		"MON RADIO! Call in with"
 	db	TX_LINE,			"your requests now!"
 	db	TX_DONE
 
