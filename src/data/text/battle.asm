@@ -64,7 +64,7 @@ LeechSeedSapsText:
 	db	TX_PROMPT
 
 HasANightmareText:
-	db	TX_START,	_USER_,		" has a
+	db	TX_START,	_USER_,		" has a"
 	db	TX_LINE,			"NIGHTMARE!"
 	db	TX_PROMPT
 
