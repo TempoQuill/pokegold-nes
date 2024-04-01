@@ -304,7 +304,7 @@ HandleBerserkGene:
 	LDA #0
 	TAY
 	STA (zMonPointer), Y
-	LDA #BATTLE_VARS_SUBSTATUS3
+	LDA #BATTLE_VARS_SubStatus3
 	home_ref GetBattleVarAddr
 	PHA
 	LDA (zMonPointer), Y
@@ -461,11 +461,43 @@ DetermineMoveOrder:
 	rts
 
 NewEnemyMonStatus:
-	LDA #0
-	RTS
+	lda #0
+	sta wLastPlayerCounterMove
+	sta wLastEnemyCounterMove
+	sta wLastEnemyMove
+	sta wEnemyMonSubStatus1
+	sta wEnemyMonSubStatus1 + 1
+	sta wEnemyMonSubStatus1 + 2
+	sta wEnemyMonSubStatus1 + 3
+	sta wEnemyMonSubStatus1 + 4
+	sta wEnemyMonSubStatus1 + 5
+	sta wEnemyDisableCount
+	sta wEnemyFuryCutterCount
+	sta wEnemyProtectCount
+	sta wEnemyRageCount
+	sta wEnemyDisabledMove
+	sta wEnemyMinimized
+	sta wPlayerWrapCount
+	sta wEnemyWrapCount
+	sta wEnemyTurnsTaken
+	lda wPlayerSubStatus5
+	ora #SUBSTATUS_CANT_RUN
+	eor #SUBSTATUS_CANT_RUN
+	rts
 
 ResetEnemyStatLevels:
-	RTS
+	lda #BASE_STAT_LEVEL
+	ldy #<wEnemyStatLevels
+	ldx #>wEnemyStatLevels
+	sty zScratchWord
+	stx zScratchWord + 1
+	ldx #NUM_LEVEL_STATS
+	ldy #0
+@loop:
+	sta (zScratchWord), y
+	dex
+	bne @loop
+	rts
 
 BreakAttraction:
 	RTS
@@ -474,7 +506,10 @@ EnemySwitch:
 	RTS
 
 CheckPlayerPartyForFitMon:
-	RTS
+; Has the player any mon in his Party that can fight?
+	ldx wPartyCount
+	lda #0
+	rts
 
 CheckIfCurPartyMonIsFitToFight:
 	RTS
@@ -536,10 +571,135 @@ UpdateBattleMonInParty:
 	RTS
 
 CheckPlayerLockedIn:
-	RTS
+	lda wPlayerSubStatus4
+	and #1 << SUBSTATUS_RECHARGE
+	bne @quit
+	
+	lda wEnemySubStatus3
+	ora #SUBSTATUS_FLINCHED
+	eor #SUBSTATUS_FLINCHED
+	sta wEnemySubStatus3
+	lda wPlayerSubStatus3
+	ora #SUBSTATUS_FLINCHED
+	eor #SUBSTATUS_FLINCHED
+	sta wPlayerSubStatus3
+	
+	and #1 << SUBSTATUS_CHARGED | #1 << SUBSTATUS_RAMPAGE
+	bne @quit
+	
+	lda wPlayerSubStatus1
+	bit #SUBSTATUS_ROLLOUT
+	bne @quit
+	
+	clc
+	rts
+
+@quit:
+	sec
+	rts
 
 ParsePlayerAction:
-	RTS
+	jsr CheckPlayerLockedIn
+	bcc +
+	jmp @locked_in
++	lda wPlayerSubStatus5
+	bit #SUBSTATUS_ENCORED
+	beq @not_encored
+	lda wLastPlayerMove
+	sta wCurPlayerMove
+	jmp @encored
+	
+@not_encored:
+	lda wBattlePlayerAction
+	bne @reset_bide
+	cmp #BATTLEPLAYERACTION_SWITCH
+	beq @reset_rage
+	lda wPlayerSubStatus3
+	and #1 << SUBSTATUS_BIDE
+	bne @locked_in
+	ldx #0
+	stx wMoveSelectionMenuType
+	inx ; POUND
+	stx wFXAnimID
+	jsr MoveSelectionScreen
+	pha
+	jsr SafeLoadTempTilemapToTilemap
+	jsr UpdateBattleHuds
+	lda wCurPlayerMove
+	cmp #STRUGGLE
+	beq @struggle
+	jsr PlayClickSFX
+
+@struggle:
+	lda #1
+	sta zBGMapMode
+	pla
+	RNE
+	
+@encored:
+	jsr SetPlayerTurn
+;	farcall UpdateMoveData
+	lda #0
+	sta wPlayerCharging
+	lda wPlayerMoveStruct + MOVE_EFFECT
+	cmp #EFFECT_FURY_CUTTER
+	beq @continue_fury_cutter
+	lda #0
+	sta wPlayerFuryCutterCount
+
+@continue_fury_cutter:
+	lda wPlayerMoveStruct + MOVE_EFFECT
+	cmp #EFFECT_RAGE
+	beq @continue_rage
+	lda wPlayerSubStatus4
+	ora #SUBSTATUS_RAGE
+	eor #SUBSTATUS_RAGE
+	sta wPlayerSubStatus4
+	lda #0
+	sta wPlayerRageCounter
+	
+@continue_rage:
+	lda wPlayerMoveStruct + MOVE_EFFECT
+	cmp #EFFECT_PROTECT
+	beq @continue_protect
+	cmp #EFFECT_ENDURE
+	beq @continue_protect
+	lda #0
+	sta wPlayerProtectCount
+	jmp @continue_protect
+	
+@reset_bide:
+	lda wPlayerSubStatus3
+	ora #SUBSTATUS_BIDE
+	eor #SUBSTATUS_BIDE
+	sta wPlayerSubStatus3
+	
+@locked_in:
+	lda #0
+	sta wPlayerFuryCutterCount
+	sta wPlayerProtectCount
+	sta wPlayerRageCounter
+	lda wPlayerSubStatus4
+	ora #SUBSTATUS_RAGE
+	eor #SUBSTATUS_RAGE
+	sta wPlayerSubStatus4
+	
+@continue_protect:
+	jsr ParseEnemyAction
+	lda #0 ; ???
+	rts
+	
+@reset_rage:
+	lda #0
+	sta wPlayerFuryCutterCount
+	sta wPlayerProtectCount
+	sta wPlayerRageCounter
+	lda wPlayerSubStatus4
+	ora #SUBSTATUS_RAGE
+	eor #SUBSTATUS_RAGE
+	sta wPlayerSubStatus4
+	lda #0 ; ???
+	rts
 
 Battle_EnemyFirst:
 	RTS
@@ -581,7 +741,61 @@ HandleHealingItems:
 	RTS
 
 HandleEncore:
-	RTS
+	; hSerialConnectionStatus check
+	jsr @do_player
+	jmp @do_enemy
+	
+@do_player:
+	lda wPlayerSubStatus5
+	bit #SUBSTATUS_ENCORED
+	REQ
+	dec wPlayerEncoreCount
+	beq @end_player_encore
+	lda #<wBattleMonPP
+	sta zScratchWord
+	lda #>wBattleMonPP
+	sta zScratchWord + 1
+	ldy wCurMoveNum
+	lda (zScratchWord), y
+	and #PP_MASK
+	RNE
+	
+@end_player_encore:
+	lda wPlayerSubStatus5
+	ora #SUBSTATUS_ENCORED
+	eor #SUBSTATUS_ENCORED
+	sta wPlayerSubStatus5
+	jsr SetEnemyTurn
+	jmp @end_encore
+	
+@do_enemy:
+	lda wEnemySubStatus5
+	bit #SUBSTATUS_ENCORED
+	REQ
+	dec wEnemyEncoreCount
+	beq @end_enemy_encore
+	lda #<wEnemyMonPP
+	sta zScratchWord
+	lda #>wEnemyMonPP
+	sta zScratchWord + 1
+	ldy wCurEnemyMoveNum
+	lda (zScratchWord), y
+	and #PP_MARK
+	RNE
+	
+@end_enemy_encore:
+	lda wEnemySubStatus5
+	ora #SUBSTATUS_ENCORED
+	eor #SUBSTATUS_ENCORED
+	sta wEnemySubStatus5
+	jsr SetPlayerTurn
+	
+@end_encore:
+	ldx #<BattleText_TargetsEncoreEnded
+	ldy #>BattleText_TargetsEncoreEnded
+	stx zTextPointer
+	sty zTextPointer + 1
+	jmp StdBattleTextbox
 
 HasPlayerFainted:
 	RTS
@@ -632,3 +846,66 @@ Call_PlayBattleAnim_OnlyIfVisible:
 
 SwitchTurnCore:
 	RTS
+	
+TryEnemyFlee:
+	ldx wBattleMode
+	dex
+	bne @Stay
+	
+	lda wPlayerSubStatus5
+	bit #SUBSTATUS_CANT_RUN
+	bne @Stay
+	
+	lda wEnemyWrapCount
+	bne @Stay
+	
+	lda wEnemyMonStatus
+	and 1 << FRZ | SLP_MASK
+	bne @Stay
+	
+	; not 100% confident on the arguments
+	lda wTempEnemyMonSpecies
+	ldx #<AlwaysFleeMons
+	ldy #>AlwaysFleeMons
+	stx zScratchWord
+	sty zScratchWord + 1
+	ldx #1
+	jsr IsInArray
+	bcs @Flee
+	
+	jsr BattleRandom
+	tax
+	cmp #50 percent + 1
+	bcc @Stay
+	
+	PHX
+	lda wTempEnemyMonSpecies
+	ldx #<OftenFleeMons
+	ldy #>OftenFleeMons
+	stx zScratchWord
+	sty zScratchWord + 1
+	ldx #1
+	jsr IsInArray
+	PLX
+	bcs @Flee
+	
+	txa
+	cmp #10 percent + 1
+	bcc @Stay
+	
+	lda wTempEnemyMonSpecies
+	ldx #<SometimesFleeMons
+	ldy #>SometimesFleeMons
+	stx zScratchWord
+	sty zScratchWord + 1
+	ldx #1
+	jsr IsInArray
+	bcs @Flee
+	
+@Stay:
+	clc
+	rts
+	
+@Flee:
+	sec
+	rts
