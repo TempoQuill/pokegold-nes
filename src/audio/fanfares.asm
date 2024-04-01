@@ -1,16 +1,16 @@
-SFX_LevelUp:
+Sfx_LevelUp:
 	db	085h
-	dw	$ffff & SFX_LevelUp_Ch6
+	dw	$ffff & Sfx_LevelUp_Ch6
 	db	006h
-	dw	$ffff & SFX_LevelUp_Ch7
+	dw	$ffff & Sfx_LevelUp_Ch7
 	db	007h
-	dw	$ffff & SFX_LevelUp_Ch8
+	dw	$ffff & Sfx_LevelUp_Ch8
 	db	008h
-	dw	$ffff & SFX_LevelUp_Ch9
+	dw	$ffff & Sfx_LevelUp_Ch9
 	db	009h
-	dw	$ffff & SFX_LevelUp_Ch10
+	dw	$ffff & Sfx_LevelUp_Ch10
 ;----------------------------------------
-SFX_LevelUp_Ch6:
+Sfx_LevelUp_Ch6:
 ;----------------------------------------
 	db	$df
 	db	$da,$00,$78
@@ -26,7 +26,7 @@ SFX_LevelUp_Ch6:
 	db	$d3,$9b
 	db	$ff
 ;----------------------------------------
-SFX_LevelUp_Ch7:
+Sfx_LevelUp_Ch7:
 ;----------------------------------------
 	db	$df
 ; P2-2
@@ -40,7 +40,7 @@ SFX_LevelUp_Ch7:
 	db	$cb
 	db	$ff
 ;----------------------------------------
-SFX_LevelUp_Ch8:
+Sfx_LevelUp_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
@@ -56,7 +56,7 @@ SFX_LevelUp_Ch8:
 	db	$03
 	db	$ff
 ;----------------------------------------
-SFX_LevelUp_Ch9:
+Sfx_LevelUp_Ch9:
 ;----------------------------------------
 	db	$df
 	db	$f0,$04
@@ -65,7 +65,7 @@ SFX_LevelUp_Ch9:
 	db	$1b
 	db	$ff
 ;----------------------------------------
-SFX_LevelUp_Ch10:
+Sfx_LevelUp_Ch10:
 ;----------------------------------------
 	db	$df
 ; P5-1
@@ -605,5 +605,289 @@ Sfx_Fanfare_Ch8:
 	db	$d8,$4,$54
 	db	$75
 	db	$ff
+Sfx_KeyItem:
+	db	085h
+	dw	$ffff & Sfx_KeyItem_Ch6
+	db	006h
+	dw	$ffff & Sfx_KeyItem_Ch7
+	db	007h
+	dw	$ffff & Sfx_KeyItem_Ch8
+	db	008h
+	dw	$ffff & Sfx_KeyItem_Ch9
+	db	009h
+	dw	$ffff & Sfx_KeyItem_Ch10
+;----------------------------------------
+Sfx_KeyItem_Ch6:
+;----------------------------------------
+	db	$df
+	db	$da,$00,$78
+;	db	$e5,$77
+	db	$db,$02
+; P1-2
+	db	$d8,$6,$b1
+	db	$d4,$c3
+	db	$c1
+	db	$c1
+	db	$c3
+	db	$d3,$53
+	db	$dc,$b3
+	db	$9f
+; P1-3
+	db	$ff
+;----------------------------------------
+Sfx_KeyItem_Ch7:
+;----------------------------------------
+	db	$df
+	db	$db,$02
+; P2-2
+	db	$d8,$6,$c1
+	db	$d3,$53
+	db	$51
+	db	$51
+	db	$53
+	db	$93
+	db	$dc,$c3
+	db	$cf
+; P2-3
+	db	$ff
+;----------------------------------------
+Sfx_KeyItem_Ch8:
+;----------------------------------------
+	db	$df
+; P3-2
+	db	$d8,$6,$81
+	db	$d3,$91
+	db	$01
+	db	$90
+	db	$00
+	db	$90
+	db	$00
+	db	$91
+	db	$01
+	db	$c1
+	db	$01
+	db	$d2,$57
+	db	$07
+; P3-3
+	db	$ff
+;----------------------------------------
+Sfx_KeyItem_Ch9:
+;----------------------------------------
+	db	$df
+	db	$f0,$04
+; P4-1
+	db	$d8,$c
+	db	$1f
+; P4-3
+	db	$ff
+;----------------------------------------
+Sfx_KeyItem_Ch10:
+;----------------------------------------
+	db	$df
+; P5-1
+	db	$d8,$c
+	db	$1f
+; P5-3
+	db	$ff
+Sfx_Fanfare2:
+	db	045h
+	dw	$ffff & Sfx_Fanfare2_Ch6
+	db	006h
+	dw	$ffff & Sfx_Fanfare2_Ch7
+	db	007h
+	dw	$ffff & Sfx_Fanfare2_Ch8
+Sfx_Fanfare2_Ch6:
+	db	$df
+	db	$ec
+	db	$da,$01,$00
+;	db	$e5,$77
+	db	$e6,$00,$01
+	db	$db,$03
+
+	db	$d8,$6,$b5
+	db	$d4,$93
+	db	$d8,$4,$b2
+	db	$61
+	db	$91
+	db	$a1
+	db	$b1
+	db	$71
+	db	$b1
+	db	$d3,$13
+	db	$11
+
+	db	$d8,$4,$b6
+	db	$2b
+	db	$ed
+	db	$ff
+Sfx_Fanfare2_Ch7:
+	db	$df
+	db	$db,$02
+
+	db	$d8,$6,$c5
+	db	$d3,$25
+	db	$d8,$4,$c1
+	db	$20
+	db	$20
+	db	$20
+	db	$d8,$4,$c2
+	db	$41
+	db	$21
+	db	$41
+	db	$53
+	db	$51
+
+	db	$d8,$4,$c6
+	db	$6b
+	db	$ff
+Sfx_Fanfare2_Ch8:
+	db	$df
+
+	db	$d8,$6,$81
+	db	$d2,$21
+	db	$01
+	db	$21
+	db	$01
+	db	$d8,$4,$1c
+	db	$21
+	db	$01
+	db	$21
+	db	$41
+	db	$01
+	db	$61
+
+	db	$d8,$4,$54
+	db	$95
+	db	$ff
+Sfx_RegisterPhoneNumber:
+	db	085h
+	dw	$ffff & Sfx_RegisterPhoneNumber_Ch6
+	db	006h
+	dw	$ffff & Sfx_RegisterPhoneNumber_Ch7
+	db	007h
+	dw	$ffff & Sfx_RegisterPhoneNumber_Ch8
+	db	008h
+	dw	$ffff & Sfx_RegisterPhoneNumber_Ch9
+	db	009h
+	dw	$ffff & Sfx_RegisterPhoneNumber_Ch10
+;----------------------------------------
+Sfx_RegisterPhoneNumber_Ch6:
+;----------------------------------------
+	db	$df
+	db	$da,$00,$7c
+;	db	$e5,$77
+; P1-2
+	db	$db,$03
+	db	$d8,$c,$a2
+	db	$01
+	db	$d4,$13
+	db	$93
+	db	$d3,$11
+	db	$d4,$60
+	db	$91
+	db	$10
+	db	$61
+; P1-3
+	db	$b2
+	db	$d3,$22
+	db	$11
+	db	$07
+; P1-4
+	db	$ff
+	db	$df
+;----------------------------------------
+Sfx_RegisterPhoneNumber_Ch7:
+;----------------------------------------
+; P2-1
+	db	$df
+; P2-2
+	db	$db,$03
+	db	$d8,$c,$c2
+	db	$01
+	db	$d3,$41
+	db	$21
+	db	$11
+	db	$41
+	db	$61
+	db	$00
+	db	$92
+	db	$d2,$11
+; P2-3
+	db	$42
+	db	$d3,$82
+	db	$91
+	db	$07
+; P2-4
+	db	$ff
+	db	$df
+;----------------------------------------
+Sfx_RegisterPhoneNumber_Ch8:
+;----------------------------------------
+; P3-1
+	db	$df
+; P3-2
+	db	$d8,$c,$81
+	db	$01
+	db	$d4,$46
+	db	$00
+	db	$dc,$20
+	db	$91
+	db	$00
+	db	$11
+	db	$00
+	db	$91
+; P3-3
+	db	$81
+	db	$00
+	db	$dc,$30
+	db	$b2
+	db	$91
+	db	$07
+; P3-4
+	db	$ff
+	db	$df
+;----------------------------------------
+Sfx_RegisterPhoneNumber_Ch9:
+;----------------------------------------
+	db	$df
+	db	$f0,$04
+	db	$d8,$c
+	db	$11
+	db	$0f
+	db	$0f
+	db	$ff
+	db	$df
+	db	$df
+	db	$d8,$c
+	db	$11
+	db	$0f
+	db	$0f
+	db	$ff
+	db	$df
+;----------------------------------------
+Sfx_RegisterPhoneNumber_Ch10:
+;----------------------------------------
+	db	$df
+;	db	$f0,$04
+; P4-2
+	db	$d8,$c
+	db	$11
+	db	$43
+	db	$31
+	db	$41
+	db	$31
+	db	$40
+	db	$31
+	db	$40
+	db	$31
+; P4-3
+	db	$31
+	db	$40
+	db	$32
+	db	$49
+; P4-4
+	db	$ff
+	db	$df
+
 
 

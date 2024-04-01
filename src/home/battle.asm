@@ -1,6 +1,6 @@
 SetPlayerTurn:
 	LDA #0
-	JMP SetTurn
+	BEQ SetTurn
 
 SetEnemyTurn:
 	LDA #1

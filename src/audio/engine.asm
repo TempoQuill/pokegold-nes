@@ -588,6 +588,8 @@ SilenceMusic:
 @NewSong:
 	JSR PreserveIDRestart
 	TAY
+	LDA #0
+	STA zMusicSilence
 	JMP _PlayMusic
 
 ChannelCutoffs:

@@ -227,12 +227,17 @@ DMC_BALL_POOF_END:
 DMC_FAINT:	.dsb $83
 DMC_FAINT_END:
 	.dsb 1
+DMC_BITE:	.dsb $3d
+DMC_BITE_END:
+	.dsb 3
 .ende
 
 .enum $800
 DMC_SLOT_MACHINE_START:	.dsb $8b
 DMC_SLOT_MACHINE_START_END:
 	.dsb 1
+DMC_WATER_GUN:		.dsb $8c
+DMC_WATER_GUN_END:
 .ende
 
 C_R = $d5b

@@ -1,5 +1,6 @@
 .include "src/def/audio-constants.asm"
 .include "src/def/cry-constants.asm"
+.include "src/def/sfx-constants.asm"
 .include "src/def/script-constants.asm"
 .include "src/def/pokemon-data-constants.asm"
 .include "src/def/map-object-constants.asm"

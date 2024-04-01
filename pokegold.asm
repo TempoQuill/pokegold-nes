@@ -9,6 +9,8 @@ IFDEF NSF_FILE
 	.base $e000
 	.include "src/home/nsf.asm"
 	.include "src/home/audio.asm"
+	.include "src/nsf/scripts.asm"
+	db	78 % 8
 	.pad $10000, $00
 	.dsb $2000, $00
 

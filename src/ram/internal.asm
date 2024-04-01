@@ -340,3 +340,27 @@ iStringBuffer:
 	.dsb $100
 .ende
 iVirtualOAM = $700
+
+; NSF only
+.enum $700
+; 00 - endscript
+; fa - silencce
+; fb - music
+; fc - cry
+; fd - sfx
+; fe - loop
+; ff - loop_end
+iNSF_Delay:
+	.dsb 1
+iNSF_Pointer:
+	.dsb 2
+iNSF_Offset:
+	.dsb 1
+iNSF_LoopOffset:
+	.dsb 1
+iNSF_LoopCounter:
+	.dsb 1
+iNSF_Cue:
+	.dsb 1
+iNSF_Timer:
+.ende
