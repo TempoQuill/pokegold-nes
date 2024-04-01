@@ -1,10 +1,11 @@
 SetPlayerTurn:
 	LDA #0
-	STA zBattleTurn
-	RTS
+	JMP SetTurn
 
 SetEnemyTurn:
 	LDA #1
+
+SetTurn:
 	STA zBattleTurn
 	RTS
 
