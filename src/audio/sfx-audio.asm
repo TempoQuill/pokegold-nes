@@ -581,5 +581,111 @@ Sfx_HornAttack_Ch9:
 	noise_note 2, 12, 4, 34
 	noise_note 8, 15, 2, 52
 	sound_ret
+Sfx_Tackle:
+	db	008h
+	dw	$ffff & Sfx_Tackle_Ch9
+Sfx_Tackle_Ch9:
+	noise_note 4, 15, 1, 52
+	noise_note 15, 15, 2, 100
+	sound_ret
+Sfx_PoisonSting:
+	db	008h
+	dw	$ffff & Sfx_PoisonSting_Ch9
+Sfx_PoisonSting_Ch9:
+	noise_note 2, 15, 1, 34
+	noise_note 15, 15, 2, 18
+	sound_ret
+Sfx_Powder:
+	db	008h
+	dw	$ffff & Sfx_Powder_Ch9
+Sfx_Powder_Ch9:
+	noise_note 2, 12, 2, 1
+	noise_note 15, 15, 4, 1
+	noise_note 15, 15, 2, 1
+	sound_ret
+Sfx_Doubleslap:
+	db	008h
+	dw	$ffff & Sfx_Doubleslap_Ch9
+Sfx_Doubleslap_Ch9:
+	noise_note 8, 15, 1, 50
+	noise_note 8, 15, 1, 51
+	sound_ret
+Sfx_Bite:
+	db	009h
+	dw	$ffff & Sfx_Bite_Ch10
+Sfx_Bite_Ch10:
+	dpcm_note 13, DMC_BITE, DMC_BITE_END
+	sound_ret
+Sfx_JumpKick:
+	db	008h
+	dw	$ffff & Sfx_JumpKick_Ch9
+Sfx_JumpKick_Ch9:
+	noise_note 3, 9, 2, 49
+	noise_note 3, 11, 2, 50
+	noise_note 3, 12, 2, 51
+	noise_note 8, 15, 1, 84
+	sound_ret
+Sfx_Stomp:
+	db	008h
+	dw	$ffff & Sfx_Stomp_Ch9
+Sfx_Stomp_Ch9:
+	noise_note 12, 15, 1, 84
+	noise_note 8, 15, 1, 100
+	sound_ret
+Sfx_TailWhip:
+	db	008h
+	dw	$ffff & Sfx_TailWhip_Ch9
+Sfx_TailWhip_Ch9:
+	noise_note 2, 15, 1, 51
+	noise_note 2, 12, 1, 50
+	noise_note 2, 10, 1, 49
+	noise_note 15, 8, 2, 50
+	noise_note 8, 15, 1, 52
+	sound_ret
+Sfx_KarateChop:
+	db	008h
+	dw	$ffff & Sfx_KarateChop_Ch9
+Sfx_KarateChop_Ch9:
+	noise_note 2, 13, 2, 50
+	noise_note 15, 15, 2, 67
+	sound_ret
+Sfx_Submission:
+	db	008h
+	dw	$ffff & Sfx_Submission_Ch9
+Sfx_Submission_Ch9:
+	noise_note 2, 15, 2, 67
+	noise_note 4, 11, 5, 50
+	noise_note 9, 8, 6, 49
+	noise_note 7, 6, 4, 0
+	noise_note 15, 15, 2, 85
+	sound_ret
+Sfx_WaterGun:
+	db	009h
+	dw	$ffff & Sfx_WaterGun_Ch10
+Sfx_WaterGun_Ch10:
+	dpcm_note 31, DMC_WATER_GUN, DMC_WATER_GUN_END
+	sound_ret
+Sfx_SwordsDance:
+	db	008h
+	dw	$ffff & Sfx_SwordsDance_Ch9
+Sfx_SwordsDance_Ch9:
+	noise_note 15, 4, -7, 65
+	noise_note 8, 8, -7, 65
+	noise_note 8, 12, -7, 65
+	noise_note 8, 15, 2, 66
+	noise_note 15, 15, 2, 65
+	sound_ret
+Sfx_Thunder:
+	db	008h
+	dw	$ffff & Sfx_Thunder_Ch9
+Sfx_Thunder_Ch9:
+	noise_note 10, 15, -7, 80
+	noise_note 15, 15, -7, 81
+	noise_note 8, 15, 2, 81
+	noise_note 6, 15, -7, 82
+	noise_note 6, 15, -7, 83
+	noise_note 8, 15, -7, 84
+	noise_note 15, 15, 2, 84
+	sound_ret
 
 

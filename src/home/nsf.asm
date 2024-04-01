@@ -6,30 +6,7 @@ INIT:
 
 PLAY:
 	JSR UpdateSound
-	LDY zSfxQueue
-	BNE @Sfx
-	LDY zCryQueue
-	REQ
-	DEY
-	TYA
-	CLC
-	ADC zCueOffset
-	TAY
-	JSR PlayCry
-	LDY #0
-	STY zCryQueue
-	RTS
-
-@Sfx:
-	DEY
-	TYA
-	CLC
-	ADC zCueOffset
-	TAY
-	JSR PlaySFX
-	LDY #0
-	STY zSfxQueue
-	RTS
+	JMP UpdateAudioScript
 
 NSF_Music:
 	LDY #0
