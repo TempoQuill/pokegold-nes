@@ -27,12 +27,13 @@ Home1_PushFarBank:
 	BPL SwitchLower16K
 
 PushLower16K:
-Home1_PushLower16K
+Home1_PushLower16K:
 	STA zWindow1
 
 SwitchLower16K:
 Home1_SwitchLower16K:
 	ASL A
+	ORA #$80
 	STA MMC5_PRGBankSwitch2
 	ORA #1
 	STA MMC5_PRGBankSwitch3
