@@ -12,11 +12,12 @@ NewGame:
 	LDA #MAPSETUP_WARP
 	STA zMapEntryMethod
 	JMP FinishContinueFunction
-	
-IFDEF DEBUG
+
+; now that I think about it, this is unreachable even with DEBUG defined, so why's it here?
+; IFDEF DEBUG
 	; farcall _DebugRoom
-	rts
-ENDIF
+	; rts
+; ENDIF
 
 ResetWRAM:
 	LDA #0
