@@ -25,13 +25,25 @@ ResetWRAM:
 	; ret
 	
 _ResetWRAM:
-	; ld hl, wShadowOAM
-	; ld bc, wOptions - wShadowOAM
+	ldx #<wShadowOAM
+	ldy #>ShadowOAM
+	stx zFillAddr
+	sty zFillAddr + 1
+	ldx #<(wOptions - wShadowOAM)
+	ldy #>(wOptions - wShadowOAM)
+	stx zFillSize
+	sty zFillSize + 1
 	LDA #0
 	JSR ByteFill
 	
-	; ld hl, wGameData
-	; ld bc, wGameDataEnd - wGameData
+	ldx #<wGameData
+	ldy #>wGameData
+	stx zFillAddr
+	sty zFillAddr + 1
+	ldx #<(wGameDataEnd - wGameData)
+	ldy #>(wGameDataEnd - wGameData)
+	stx zFillSize
+	sty zFillSize + 1
 	LDA #0
 	JSR ByteFill
 	
@@ -305,7 +317,7 @@ Continue:
 	jsr DisplaySaveInfoOnContinue
 	lda #1
 	sta zBGMapMode
-	ldy #20
+	lda #20
 	jsr DelayFrames
 	jsr ConfirmContinue
 	bcc @Check1Pass
@@ -320,7 +332,7 @@ Continue:
 	jsr ClearBGPalettes
 	jsr CloseWindow
 	jsr ClearTilemap
-	ldy #20
+	lda #20
 	jsr DelayFrames
 ;	farcall JumpRoamMons
 	lda wSpawnAfterChampion
@@ -351,9 +363,9 @@ ConfirmContinue:
 	jsr DelayFrame
 	jsr GetJoypad
 	lda zJoyPressed
-	bit #A_BUTTON_F
+	ora #A_BUTTON_F
 	bne @PressA
-	bit #B_BUTTON_F
+	ora #B_BUTTON_F
 	beq ConfirmContinue
 	sec
 @PressA:
@@ -395,7 +407,7 @@ Continue_LoadMenuHeader:
 	lda #>@MenuHeader_Dex
 	sta zScratchWord + 1
 	lda wStatusFlags
-	bit #STATUSFLAGS_POKEDEX_F
+	ora #STATUSFLAGS_POKEDEX_F
 	bne +
 	lda #<@MenuHeader_NoDex
 	sta zScratchWord
@@ -440,7 +452,7 @@ Continue_DisplayBadgesDex:
 	pha
 	lda zScratchWord + 1
 	pha
-;	decoord 13, 4, 0
+	OGN 0, 0, 13, 4
 ;	add hl, de
 	jsr Continue_DisplayBadgeCount
 	; pll zScratchWord
@@ -453,7 +465,7 @@ Continue_DisplayBadgesDex:
 	pha
 	lda zScratchWord + 1
 	pha
-;	deecord 12, 6, 0
+	OGN 0, 0, 12, 6
 ;	add hl, de
 	jsr Continue_DisplayPokedexNumCaught
 	; pll zScratchWord
@@ -464,7 +476,7 @@ Continue_DisplayBadgesDex:
 	rts
 	
 Continue_PrintGameTime:
-;	decoord 9, 8, 0
+	OGN 0, 0, 9, 8
 ;	add hl, de
 	jmp Continue_DisplayGameTime
 	
@@ -491,7 +503,7 @@ Continue_DisplayBadgeCount:
 	
 Continue_DisplayPokedexNumCaught:
 	lda wStatusFlags
-	bit #STATUSFLAGS_POKEDEX_F
+	ora #STATUSFLAGS_POKEDEX_F
 	REQ
 	; psh zScratchWord
 	lda zScratchWord
@@ -561,7 +573,7 @@ OakSpeech:
 	sta wCurPartySpecies
 	jsr GetBaseData
 	
-;	hlcoord 6, 4
+	OGT 0, 6, 4
 	jsr PrepMonFrontpic
 	
 	lda #0
@@ -713,3 +725,348 @@ NamePlayer:
 	jmp InitName
 	
 .include "src/data/player_names.asm"
+
+ShowPlayerNamingChoices:
+	jsr LoadMenuHeader
+	jsr VerticalMenu
+	ldx wMenuCursorY
+	dex
+	txa
+	jsr CopyNameFromMenu
+	jmp CloseWindow
+	
+StorePlayerName:
+;	ld hl, wStringBuffer2
+;	ld bc, NAME_LENGTH
+	jmp CopyBytes
+	
+ShrinkPlayer:
+	PHW
+	
+	lda #32
+	sta zMusicSilence
+	ldy #MUSIC_NONE
+	sta zMusicSilenceID
+	
+	ldy #SFX_ESCAPE_ROPE
+	jsr PlaySFX
+	pla
+	jsr PushLower16K
+	
+	lda #8
+	jsr DelayFrames
+	
+	lda #PRG_OakIntroGFX
+	ldx #<Shrink1Pic
+	ldy #>Shrink1Pic
+	stx zScratchWord
+	sty zScratchWord + 1
+	jsr ShrinkFrame
+	
+	lda #8
+	jsr DelayFrames
+	
+	lda #PRG_OakIntroGFX
+	ldx #<Shrink2Pic
+	dly #>Shrink2Pic
+	stx zScratchWord
+	sty zScratchWord + 1
+	jsr ShrinkFrame
+	
+	lda #8
+	jsr DelayFrames
+	
+	OGT 0, 6, 5
+	ldx #7
+	txy ; ldy #7 would be a waste of 1 byte here
+	jsr ClearBox
+	
+	lda #3
+	jsr DelayFrames
+	
+	jsr Intro_PlaceChrisSprite
+;	jsr LoadFontsExtra
+	
+	lda #50
+	jsr DelayFrames
+	
+	jsr RotateThreePalettesRight
+	jmp ClearTilemap
+	
+MovePlayerPicRight:
+	OGT 0, 6, 4
+	ldy #1
+	bne MovePlayerPic
+	
+MovePlayerPicLeft:
+	OGT 0, 6, 4
+	ldy #-1
+MovePlayerPic:
+	ldx #7 + 1
+@loop:
+	pha
+	PHX
+	PHY
+	lda #0
+	sta zBGMapMode
+	ldy #7
+	sty zScratchWord
+	sty zScratchWord + 1
+;	predef PlaceGraphic
+	lda #0
+	sta zBGMapThird
+	jsr WaitBGMap
+	jsr DelayFrame
+	PLY
+	PLX
+;	add hl, de ; de = y
+	pla
+	PHX
+	tax
+	dex
+	txa
+	PLX
+	bne @loop
+	rts
+	
+Intro_RotatePalettesLeftFrontpic:
+	; todo: add a nes-compatible version
+	; ld hl, IntroFadePalettes
+	; ld b, IntroFadePalettes.End - IntroFadePalettes
+@loop:
+	; ld a, [hli]
+	; call DmgToCgbBGPals
+	; ld c, 10
+	; call DelayFrames
+	; dec b
+	; jr nz, .loop
+	; ret
+
+IntroFadePalettes:
+	; dc 1, 1, 1, 0
+	; dc 2, 2, 2, 0
+	; dc 3, 3, 3, 0
+	; dc 3, 3, 2, 0
+	; dc 3, 3, 1, 0
+	; dc 3, 2, 1, 0
+@End:
+
+Intro_WipeInFrontpic:
+	lda #$77
+	sta zWX ; what's the NES equivalent?
+	jsr DelayFrame
+	lda #$e4
+	jsr DmgToCgbBGPals
+@loop:
+	jsr DelayFrame
+	lda zWX ; what's the NES equivalent?
+	sec
+	sbc #8
+	cmp #$ff
+	REQ
+	sta zWX ; what's the NES equivalent?
+	jmp @loop
+	
+Intro_PrepTrainerPic:
+;	ld de, vTiles2
+;	farcall GetTrainerPic
+	lda #0
+	sta zGraphicStartTile
+	OGT 0, 6, 4
+	ldy #7
+	tyx
+;	predef PlaceGraphic
+	rts
+	
+ShrinkFrame:
+;	ld de, vTiles2
+	ldx #7 * 7
+;	predef DecompressGet2bpp
+	lda #0
+	sta zGraphicStartTile
+	OGT 0, 6, 4
+	ldy #7
+	tyx
+;	predef PlaceGraphic
+	rts
+	
+Intro_PlaceChrisSprite:
+	; ld de, ChrisSpriteGFX
+	; lb bc, BANK(ChrisSpriteGFX), 12
+	; ld hl, vTiles0
+	jsr Request2bpp
+	
+	ldx #<wShadowOAMSprite00
+	ldy #>wShadowOAMSprite00
+	stx zScratchWord
+	sty zScratchWord + 1
+	ldx #<@sprites
+	ldy #>@sprites
+	stx zTemp16Bit1
+	sty zTemp16Bit1 + 1
+	ldx #0
+	txy
+	lda (zTemp16Bit1), y
+	iny
+	
+	sta zScratchByte
+@loop:
+	lda (zTemp16Bit1), y
+	iny
+	sta (zScratchWord, x) ; y
+	inx
+	lda (zTemp16Bit1), y
+	iny
+	sta (zScratchWord, x) ; tile id
+	inx
+	lda #PAL_OW_RED
+	sta (zScratchWord, x) ; attributes
+	inx
+	lda (zTemp16Bit1), y
+	iny
+	sta (zScratchWord, x) ; x
+	inx
+	dec zScratchByte
+	bne @loop
+	rts
+	
+@sprites:
+	.db 4
+	; y pxl, tile id, x pxl
+	.db 76, 0, 72
+	.db 76, 1, 80
+	.db 84, 2, 72
+	.db 84, 3, 80
+	
+TITLESCREENOPTION_MAIN_MENU 			= 0
+TITLESCREENOPTION_DELETE_SAVE_DATA		= 1
+TITLESCREENOPTION_RESTART				= 2
+NUM_TITLESCREENOPTIONS 					= 3
+
+IntroSequence:
+	farcall PRG_SplashScreen, SplashScreen
+	bcs StartTitleScreen
+	farcall PRG_Intro, GoldSilverIntro
+	
+StartTitleScreen:
+	jsr TitleScreen
+	jsr DelayFrame
+-	jsr RunTitleScreen
+	bcc -
+	
+	jsr ClearSprites
+	jsr ClearBGPalettes
+	
+; todo: figure out a way to know PPUCTRL's settings by this point, then switch to 8x8 sprites
+	jsr ClearTilemap
+	lda #0
+	sta zLCDCPointer ; what's the NES equivalent?
+	ldy wTitleScreenSelectedOption
+	cpy #NUM_TITLESCREENOPTIONS
+	bcs +
+	ldy #0
++	lda @ptrs_lo, y
+	sec
+	sbc #1
+	tax
+	lda @ptrs_hi, y
+	sbc #0
+	pha
+	PHX
+	rts
+
+@ptrs_hi:
+	.dh MainMenu
+	.dh DeleteSaveData
+	.dh IntroSequence
+
+@ptrs_lo:
+	.dl MainMenu
+	.dl DeleteSaveData
+	.dl IntroSequence
+	
+.include "src/engine/movie/title.asm"
+
+RunTitleScreen:
+	jsr ScrollTitleScreenClouds
+	lda wJumptableIndex
+	bmi +done
+	jsr TitleScreenScene
+	ldx #1
+	stx zOAMUpdate
+;	farcall PlaySpriteAnimations
+	dex ; I'm not certain that X won't be destroyed by PlaySpriteAnimations, if it will then fix this
+	stx zOAMUpdate
+	jsr UpdateTitleTrailSprite
+	jsr DelayFrame
+	clc
+	rts
+	
++done:
+	sec
+	rts
+	
+ScrollTitleScreenClouds:
+if GAME_VERSION = _VER_GOLD
+	lda zNMITimer
+	and #7
+	RNE
+endif
+	ldx wLYOverrides + $5f
+	lda #<(wLYOverrides + $5f)
+	ldy #>(wLYOverrides + $5f)
+	sta zScratchWord
+	sty zScratchWord + 1
+	dex
+	lda #0
+	ldy #$28
+	sta zTemp16Bit1
+	sty zTemp16Bit1 + 1
+	jmp ByteFill
+	
+TitleScreenScene:
+	ldx wJumptableIndex
+	lda @scenes_lo, x
+	sec
+	sbc #1
+	tay
+	lda @scenes_hi, x
+	sbc #0
+	pha
+	PHY
+	rts
+	
+@scenes_hi:
+	.dh TitleScreenTimer
+	.dh TitleScreenMain
+	.dh TitleScreenEnd
+
+@scenes_lo:
+	.dl TitleScreenTimer
+	.dl TitleScreenMain
+	.dl TitleScreenEnd
+	
+TitleScreenTimer:
+	inc wJumptableIndex
+	
+	ldx #<wTitleScreenTimer
+	ldy #>wTitleScreenTimer
+	stx zScratchWord
+	sty zScratchWord + 1
+if GAME_VERSION = _GOLD_VER
+	ldx #<(84 * 60 + 16)
+	lda #>(84 * 60 + 16)
+else
+	ldx #<(73 * 60 + 36)
+	lda #>(73 * 60 + 36)
+endif
+	ldy #0
+	stx (zScratchWord), y
+	inc zScratchWord
+	sta (zScratchWord), y
+	rts
+	
+TitleScreenMain:
+; Run the timer down.
+	; todo
+	
