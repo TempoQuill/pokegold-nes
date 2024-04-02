@@ -1,3 +1,7 @@
+_VER_GOLD    = 0 ; for building Gold Version
+_VER_SILVER  = 1 ; for building Silver Version
+VERSION = _VER_GOLD
+
 PLAYER_NORMAL    = 0
 PLAYER_BIKE      = 1
 PLAYER_SKATE     = 2
