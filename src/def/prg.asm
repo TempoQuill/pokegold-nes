@@ -3,7 +3,11 @@ IFDEF NSF_FILE
 	.dsb 1
 ELSE
 PRG_00:			.dsb 1	; 00 / 01
-PRG_SplashScreen_Intro:	.dsb 1	; 02 / 03
+
+PRG_SplashScreen:
+PRG_Intro:
+	.dsb 1	; 02 / 03
+
 PRG_02:			.dsb 1	; 04 / 05
 PRG_03:			.dsb 1	; 06 / 07
 
