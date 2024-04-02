@@ -147,22 +147,22 @@ SFX:
 	dba_audio Sfx_KeyItem
 	dba_audio Sfx_Fanfare2
 	dba_audio Sfx_RegisterPhoneNumber
-	;dba_audio Sfx_3rdPlace
-	;dba_audio Sfx_GetEgg
-	;dba_audio Sfx_GetEgg
-	;dba_audio Sfx_MoveDeleted
-	;dba_audio Sfx_2ndPlace
-	;dba_audio Sfx_1stPlace
-	;dba_audio Sfx_ChooseACard
-	;dba_audio Sfx_GetTm
-	;dba_audio Sfx_GetBadge
-	;dba_audio Sfx_QuitSlots
+	dba_audio Sfx_3rdPlace
+	dba_audio Sfx_UnincludedFanfare
+	dba_audio Sfx_GetEgg
+	dba_audio Sfx_MoveDeleted
+	dba_audio Sfx_2ndPlace
+	dba_audio Sfx_1stPlace
+	dba_audio Sfx_ChooseACard
+	dba_audio Sfx_GetTm
+	dba_audio Sfx_GetBadge
+	dba_audio Sfx_QuitSlots
 	;dba_audio Sfx_EggCrack
-	;dba_audio Sfx_DexFanfareLessThan20
-	;dba_audio Sfx_DexFanfare140169
-	;dba_audio Sfx_DexFanfare170199
-	;dba_audio Sfx_DexFanfare200229
-	;dba_audio Sfx_DexFanfare230Plus
+	dba_audio Sfx_DexFanfareLessThan20
+	dba_audio Sfx_DexFanfare140169
+	dba_audio Sfx_DexFanfare170199
+	dba_audio Sfx_DexFanfare200229
+	dba_audio Sfx_DexFanfare230Plus
 	;dba_audio Sfx_Evolved
 	;dba_audio Sfx_MasterBall
 	;dba_audio Sfx_EggHatch
