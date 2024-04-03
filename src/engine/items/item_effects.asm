@@ -459,7 +459,7 @@ ENDIF
 	sta zTextPointer
 	lda #>Text_GotchaMonWasCaught
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PrintText
 	
 	jsr ClearSprites
 	
@@ -482,7 +482,7 @@ ENDIF
 	sta zTextPointer
 	lda #>NewDexDataText
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PrintText
 	
 	jsr ClearSprites
 	
@@ -523,7 +523,7 @@ ENDIF
 	sta zTextPointer
 	lda #>AskGiveNicknameText
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PrintText
 	
 	lda wCurPartySpecies
 	sta wNamedObjectIndex
@@ -586,7 +586,7 @@ ENDIF
 	sta zTextPointer
 	lda #>AskGiveNicknameText
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PrintText
 	
 	lda wCurPartySpecies
 	sta wNamedObjectIndex
@@ -642,7 +642,7 @@ endif
 	sta zScratchWord
 	lda #>BallSentToPCText
 	sta zScratchWord + 1
-	jsr PrintText
+	home_ref PrintText
 	
 	jsr RotateThreePalettesRight
 	jsr LoadStandardFont
@@ -659,7 +659,7 @@ endif
 	sta zTextPointer + 1
 	
 @shake_and_break_free:
-	jsr PrintText
+	home_ref PrintText
 	jsr ClearSprites
 	
 @return_from_capture:

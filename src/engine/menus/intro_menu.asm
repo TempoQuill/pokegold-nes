@@ -565,7 +565,7 @@ OakSpeech:
 	sta zTextPointer
 	lda #>OakText1
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PrintText
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
 	
@@ -589,12 +589,12 @@ OakSpeech:
 	sta zTextPointer
 	lda #>OakText2
 	sta zTextPointer
-	jsr PrintText
+	home_ref PrintText
 	lda #<OakText4
 	sta zTextPointer
 	lda #>OakText4
 	sta zTextPointer
-	jsr PrintText
+	home_ref PrintText
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
 	
@@ -612,7 +612,7 @@ OakSpeech:
 	sta zTextPointer
 	lda #>OakText5
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PrintText
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
 	
@@ -630,13 +630,13 @@ OakSpeech:
 	sta zScratchWord
 	lda #>OakText6
 	sta zScratchWord + 1
-	jsr PrintText
+	home_ref PrintText
 	jsr NamePlayer
 	lda #<OakText7
 	sta zScratchWord
 	lda #>OakText7
 	sta zScratchWord + 1
-	jmp PrintText
+	home_jump PrintText
 	
 OakText1:
 	text_far _OakText1

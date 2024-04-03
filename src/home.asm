@@ -158,6 +158,10 @@ Home1_NMI:
 	PSH
 	JSR PushCHR
 	JSR ReadBuffer
+	LDA zScrollX
+	STA rSCROLL
+	LDA zScrollY
+	STA rSCROLL
 	JSR UpdateSound
 	LDA zNMITimer
 	BEQ @Quit

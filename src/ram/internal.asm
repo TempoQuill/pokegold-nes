@@ -114,6 +114,8 @@ zOriginHL:
 	.dsb 2
 zTextPointer:
 	.dsb 2
+	.dsb 2
+	.dsb 2
 zItemPointer:
 	.dsb 2
 zMovePointer:
@@ -243,11 +245,9 @@ zScratchWord:
 	.dsb 1
 	.dsb 1
 	.dsb 1
+zScrollX:
 	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
+zScrollY:
 	.dsb 1
 ; 0 - number of CHR banks to switch during NMI
 ; loop parse from here
@@ -317,7 +317,9 @@ iChannelsEnd:
 iTempMovePriority:
 	.dsb 1
 iTempMove:
-	.dsb $20a
+	.dsb $208
+iStringBufferBaseAddress:
+	.dsb 2
 iStringBufferFlag:
 	.dsb 1
 iStringBuffer:
