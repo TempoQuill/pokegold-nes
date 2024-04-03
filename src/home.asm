@@ -1,3 +1,77 @@
+; ReadBuffer - VRAM buffer reading
+; place a JSR to here in NMI somewhere
+; OG routine by crySTAlmoon
+; Optimizations by Tempo Quill
+; layout:
+; iStringBufferFlag = $05ff
+; iStringBuffer = $0600 - $06ff
+ReadBuffer:
+Home1_ReadBuffer:
+	LDA iStringBufferFlag
+	REQ
+	; byte 0 - data length
+	; byte 1 - target PPU addr hi
+	; byte 2 - target PPU addr lo
+	; byte 3 - flags
+	;	bit 0 - if set: inc 32, else: inc 1
+	;	bit 1 - rle
+	; byte 4 - byte(s)
+	LDY #0
+@checkloop:
+	LDA iStringBuffer, Y
+	REQ
+	TAX ; x = data length
+	INY
+	; hi
+	LDA iStringBuffer, Y
+	STA rWORD
+	INY
+	; lo
+	LDA iStringBuffer, Y
+	STA rWORD
+	INY
+	; direction
+	LDA iStringBuffer, Y
+	AND #1
+	BNE @inc32
+; inc1
+	LDA zPPUCtrlMirror
+	AND #$fb
+	STA zPPUCtrlMirror
+	STA rCTRL
+	; loop single byte?
+	LDA iStringBuffer, Y
+	AND #2
+	BNE @rle
+@loop:
+	; data stream
+	INY
+	LDA iStringBuffer, Y
+	STA rDATA
+	DEX
+	BNE @loop
+	BEQ @checkmore
+@inc32:
+	LDA zPPUCtrlMirror
+	ORA #4
+	STA zPPUCtrlMirror
+	STA rCTRL
+	LDA iStringBuffer, Y
+	AND #2
+	BEQ @loop
+@rle:
+	DEX
+	INY
+	LDA iStringBuffer, Y
+@rle_loop:
+	STA rDATA
+	DEX
+	BNE @rle_loop
+@checkmore:
+	INY
+	BPL @checkloop
+	RTS
+
 Farcall:
 Home1_Farcall:
 ;        b hl
@@ -21,6 +95,42 @@ Home1_Farcall:
 	PLP
 	RTS
 
+ClearCHR:
+Home1_ClearCHR:
+; clear CHR bankswitching queue
+	LDX #zCHRWindowQueue_End - zCHRWindowQueue - 1
+	LDA #0
+@Loop:
+	STA zCHRWindowQueue, X
+	DEX
+	BPL @Loop
+	RTS
+
+PushCHR:
+Home1_PushCHR:
+; switch CHR banks
+; zCHRWindowQueue(+0) = number of loops
+	LDA zCHRWindowQueue
+	REQ
+	CMP #(zCHRWindowQueue_End - zCHRWindowQueue) / 3 + 1
+	RCS ; step out if overloaded
+	LDY #1
+@loop:
+	; upper byte
+	LDA zCHRWindowQueue, Y
+	STA MMC5_CHRBankSwitchUpper
+	INY
+	; lower byte
+	LDA zCHRWindowQueue, Y
+	INY
+	; register offset
+	LDX zCHRWindowQueue, Y
+	STA MMC5_CHRBankSwitch1, X
+	INY
+	DEC zCHRWindowQueue
+	BNE @Loop
+	RTS
+
 PushFarBank:
 Home1_PushFarBank:
 	STA zSavedBank
@@ -42,11 +152,14 @@ Home1_SwitchLower16K:
 NMI:
 Home1_NMI:
 	PSH
+	JSR PushCHR
+	JSR ReadBuffer
 	JSR UpdateSound
 	LDA zNMITimer
 	BEQ @Quit
 	DEC zNMITimer
 @Quit:
+	JSR ClearCHR
 	PLL
 	RTI
 
@@ -54,16 +167,16 @@ RESET:
 Home1_RESET:
 	LDA #3 ; all 8K switchable
 	STA MMC5_PRGMode
-	LDA #1 ; 4K mode (try not to use $5130)
+	LDA #3 ; 1K mode (need the flexibility)
 	STA MMC5_CHRMode
 
 	; PRG RAM handshake
-	; Enable writable MMC5 exclusive RAM
 	LDA #2
 	STA MMC5_PRGRAMProtect1
-	STA MMC5_ExtendedRAMMode
 	LDA #1
 	STA MMC5_PRGRAMProtect2
+	; Extended attributes enabled
+	STA MMC5_ExtendedRAMMode
 
 	; Set nametable mapping
 	LDA #MMC5_HMirror
@@ -80,12 +193,26 @@ Home1_RESET:
 	STA rEXMIX
 
 	; select the first three CHR banks
-	; bank 0 is a mirror of 3
 	LDX #0
+	STX MMC5_CHRBankSwitch9
+	STX MMC5_CHRBankSwitch5
+	INX
+	STX MMC5_CHRBankSwitch10
+	STX MMC5_CHRBankSwitch6
+	INX
+	STX MMC5_CHRBankSwitch11
+	STX MMC5_CHRBankSwitch7
+	INX
 	STX MMC5_CHRBankSwitch12
 	STX MMC5_CHRBankSwitch8
 	INX
 	STX MMC5_CHRBankSwitch4
+	INX
+	STX MMC5_CHRBankSwitch3
+	INX
+	STX MMC5_CHRBankSwitch2
+	INX
+	STX MMC5_CHRBankSwitch1
 	LDX #0
 	TXA
 	; init RAM
@@ -125,6 +252,10 @@ Home1_RESET:
 	LDX #<iStackTop ; Reset stack pointer
 	TXS
 
+	; disable ExAttr
+	LDA #2
+	STA MMC5_ExtendedRAMMode
+
 @VBlankLoop:
 	; Wait for first VBlank
 	LDA rSTATE
@@ -141,6 +272,8 @@ Home1_RESET:
 	LDA #0
 	STA MMC5_FillModeTile
 	STA MMC5_FillModeColor
+	LDA #1 ; ExAttr enabled
+	STA MMC5_ExtendedRAMMode
 	; our game's configuration is now initialized
 	JSR InitSound
 	JSR HideSprites
@@ -199,86 +332,18 @@ Home1_HideSprites:
 	BNE @Loop
 	RTS
 
-MainTerminal:
-Home1_MainTerminal:
-
 BCDLayout:
 BCDLayout_End:
 	db 0
+
+MainTerminal:
+Home1_MainTerminal:
+
 
 LoadTilemapToTempTilemap:
 	RTS
 
 SafeLoadTempTilemapToTilemap:
-	RTS
-
-; ReadBuffer - VRAM buffer reading
-; place a JSR to here in NMI somewhere
-; OG routine by crySTAlmoon
-; Optimizations by Tempo Quill
-; layout:
-; iStringBufferFlag = $05ff
-; iStringBuffer = $0600 - $06ff
-ReadBuffer:
-	LDA iStringBufferFlag
-	BEQ @return
-	; byte 0 - data length
-	; byte 1 - target PPU addr hi
-	; byte 2 - target PPU addr lo
-	; byte 3 - flags
-	;	bit 0 - if set: inc 32, else: inc 1
-	;	bit 1 - rle
-	; byte 4 - byte(s)
-	LDY #0
-@checkloop:
-	LDA iStringBuffer, Y
-	BEQ @return
-	TAX
-	INY
-	LDA iStringBuffer, Y
-	STA rWORD
-	INY
-	LDA iStringBuffer, Y
-	STA rWORD
-	INY
-	LDA iStringBuffer, Y
-	AND #1
-	BNE @inc32
-	LDA zPPUCtrlMirror
-	AND #$fb
-	STA zPPUCtrlMirror
-	STA rCTRL
-	LDA iStringBuffer, Y
-	AND #2
-	BNE @rle
-@loop:
-	INY
-	LDA iStringBuffer, y
-	STA rDATA
-	DEX
-	BNE @loop
-	BEQ @checkmore
-@inc32:
-	LDA zPPUCtrlMirror
-	ORA #4
-	STA zPPUCtrlMirror
-	STA rCTRL
-	LDA iStringBuffer, Y
-	AND #2
-	BEQ @loop
-@rle:
-	DEX
-	INY
-	LDA iStringBuffer, Y
-@rle_loop:
-	STA rDATA
-	DEX
-	BNE @rle_loop
-@checkmore:
-	INY
-	CPY #128
-	BCC @checkloop
-@return:
 	RTS
 
 .include "src/home/audio.asm"

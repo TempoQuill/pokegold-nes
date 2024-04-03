@@ -128,9 +128,14 @@ rEXMIX = $5015 ; master expansion sound register: only uses bits 0, 1, and 5 if 
 ;
 MMC5_PRGMode = $5100
 MMC5_CHRMode = $5101
+
+; used to mitigate the need to hold reset during power off
 MMC5_PRGRAMProtect1 = $5102
 MMC5_PRGRAMProtect2 = $5103
+
+; 0 - Extra Nametable, 1 - Extended Attributes, 2 - Extra WRAM, 3 - ROM
 MMC5_ExtendedRAMMode = $5104
+
 MMC5_NametableMapping = $5105
 MMC5_FillModeTile = $5106
 MMC5_FillModeColor = $5107
@@ -172,13 +177,6 @@ NSF_PRGBank4 = $5ffc
 NSF_PRGBank5 = $5ffd
 NSF_PRGBank6 = $5ffe
 NSF_PRGBank7 = $5fff
-
-NMI_NORMAL = 0
-NMI_SOLID = 1
-NMI_SOUND = 2
-NMI_LIQUID = 3
-NMI_GAS = 4
-NMI_PLASMA = 5
 .ende
 
 TILE_WIDTH = 8

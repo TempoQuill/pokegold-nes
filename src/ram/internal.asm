@@ -249,46 +249,30 @@ zScratchWord:
 	.dsb 1
 	.dsb 1
 	.dsb 1
+; 0 - number of CHR banks to switch during NMI
+; loop parse from here
+; 1 - bank number 8-15 (autoswitch)
+; 2 - bank number 0-7
+; 3 - bank offset
+zCHRWindowQueue:
 	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
-	.dsb 1
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+	.dsb 3
+zCHRWindowQueue_End:
 zSavedPointer:
 	.dsb 2
 zSavedBank:
 	.dsb 1
-zCueOffset:
-	.dsb 1
-zSfxQueue:
 zBattleTurn:
 	.dsb 1
-zCryQueue:
 zNMITimer:
 	.dsb 1
 zPlayerState:
