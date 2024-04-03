@@ -1055,15 +1055,18 @@ TitleScreenTimer:
 	stx zScratchWord
 	sty zScratchWord + 1
 if GAME_VERSION = _GOLD_VER
-	ldx #<(84 * 60 + 16)
-	lda #>(84 * 60 + 16)
+	lda #<(84 * 60 + 16)
 else
-	ldx #<(73 * 60 + 36)
-	lda #>(73 * 60 + 36)
+	lda #<(73 * 60 + 36)
 endif
 	ldy #0
-	stx (zScratchWord), y
+	sta (zScratchWord), y
 	inc zScratchWord
+if GAME_VERSION = _GOLD_VER
+	lda #>(84 * 60 + 16)
+else
+	lda #>(73 * 60 + 36)
+endif
 	sta (zScratchWord), y
 	rts
 	
