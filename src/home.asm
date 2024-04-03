@@ -1,3 +1,7 @@
+IRQ:
+Home1_IRQ:
+	RTI
+
 ; ReadBuffer - VRAM buffer reading
 ; place a JSR to here in NMI somewhere
 ; OG routine by crySTAlmoon
