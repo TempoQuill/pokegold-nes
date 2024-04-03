@@ -350,4 +350,10 @@ LoadTilemapToTempTilemap:
 SafeLoadTempTilemapToTilemap:
 	RTS
 
+.include "src/home/battle-vars.asm"
+.include "src/home/battle.asm"
+.include "src/home/copy-name.asm"
+.include "src/home/math.asm"
+.include "src/home/names.asm"
+.include "src/home/text.asm"
 .include "src/home/audio.asm"
