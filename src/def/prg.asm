@@ -11,7 +11,7 @@ PRG_Intro:
 PRG_DeleteSave:			
 	.dsb 1	; 04 / 05
 
-PRG_03:			.dsb 1	; 06 / 07
+PRG_SaveFunctions:	.dsb 1	; 06 / 07
 
 PRG_Intro_Menu:
 PRG_OakIntroGFX:
