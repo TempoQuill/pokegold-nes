@@ -6,10 +6,11 @@ PRG_00:			.dsb 1	; 00 / 01
 
 PRG_SplashScreen:
 PRG_Intro:
-PRG_DeleteSave:
 	.dsb 1	; 02 / 03
 
-PRG_02:			.dsb 1	; 04 / 05
+PRG_DeleteSave:			
+	.dsb 1	; 04 / 05
+
 PRG_03:			.dsb 1	; 06 / 07
 
 PRG_Intro_Menu:
