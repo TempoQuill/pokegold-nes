@@ -565,7 +565,7 @@ OakSpeech:
 	sta zTextPointer
 	lda #>OakText1
 	sta zTextPointer + 1
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
 	
@@ -589,12 +589,12 @@ OakSpeech:
 	sta zTextPointer
 	lda #>OakText2
 	sta zTextPointer
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	lda #<OakText4
 	sta zTextPointer
 	lda #>OakText4
 	sta zTextPointer
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
 	
@@ -612,7 +612,7 @@ OakSpeech:
 	sta zTextPointer
 	lda #>OakText5
 	sta zTextPointer + 1
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
 	
@@ -630,13 +630,13 @@ OakSpeech:
 	sta zScratchWord
 	lda #>OakText6
 	sta zScratchWord + 1
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	jsr NamePlayer
 	lda #<OakText7
 	sta zScratchWord
 	lda #>OakText7
 	sta zScratchWord + 1
-	home_jump PrintText
+	home_jump PRG_HomeROM2, PrintText
 	
 OakText1:
 	text_far _OakText1
@@ -1204,7 +1204,7 @@ Copyright:
 	sta zTextPointer
 	lda #>CopyrightString
 	sta zTextPointer + 1
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	rts
 	
 CopyrightString:

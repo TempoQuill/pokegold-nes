@@ -57,10 +57,10 @@ DoBattle:
 	JSR DelayFrames
 
 @player_2:
-	home_ref LoadTilemapToTempTilemap
+	home_ref PRG_HomeROM2, LoadTilemapToTempTilemap
 	JSR CheckPlayerPartyForFitMon
 	BEQ @lostbattle
-	home_ref SafeLoadTempTilemapToTilemap
+	home_ref PRG_HomeROM2, SafeLoadTempTilemapToTilemap
 	LDA wBattleType
 	CMP #BATTLETYPE_DEBUG
 	BEQ @tutorial_debug
@@ -88,7 +88,7 @@ DoBattle:
 	OGT 2, 1, 5
 	LDA #9
 	JSR SlideBattlePicOut
-	home_ref LoadTilemapToTempTilemap
+	home_ref PRG_HomeROM2, LoadTilemapToTempTilemap
 	JSR ResetBattleParticipants
 	JSR InitBattleMon
 	JSR ResetPlayerStatLevels
@@ -97,8 +97,8 @@ DoBattle:
 	JSR BreakAttraction
 	JSR SendOutPlayerMon
 	JSR EmptyBattleTextbox
-	home_ref LoadTilemapToTempTilemap
-	home_ref SetPlayerTurn
+	home_ref PRG_HomeROM2, LoadTilemapToTempTilemap
+	home_ref PRG_HomeROM2, SetPlayerTurn
 	JSR SpikesDamage
 	; wLinkMode check
 	; hSerialConnectionStatus check
@@ -108,7 +108,7 @@ DoBattle:
 	JSR ResetEnemyStatLevels
 	JSR BreakAttraction
 	JSR EnemySwitch
-	home_ref SetEnemyTurn
+	home_ref PRG_HomeROM2, SetEnemyTurn
 	JSR SpikesDamage
 @not_linked_2:		JMP BattleTurn
 @tutorial_debug:	JMP BattleMenu
@@ -116,7 +116,7 @@ DoBattle:
 
 WildFled_EnemyFled_LinkBattleCanceled:
 	CLC
-	home_ref SafeLoadTempTilemapToTilemap
+	home_ref PRG_HomeROM2, SafeLoadTempTilemapToTilemap
 	LDA wBattleResult
 	AND #BATTLERESULT_BITMASK
 	ADC #DRAW
@@ -131,11 +131,11 @@ WildFled_EnemyFled_LinkBattleCanceled:
 	LDA #<BattleText_EnemyFled
 	STA zTextPointer
 @print_text:
-	home_ref StdBattleTextbox
+	home_ref PRG_HomeROM2, StdBattleTextbox
 	JSR StopDangerSound
 	LDY #SFX_RUN
-	home_ref PRG_Home1, PlaySFX
-	home_ref SetPlayerTurn
+	home_ref PRG_HomeROM2, PlaySFX
+	home_ref PRG_HomeROM2, SetPlayerTurn
 ;	farcall DummyPredef38 ; macro
 	LDA #1
 	STA wBattleEnded
@@ -215,7 +215,7 @@ HandleBetweenTurnEffects:
 	JSR HandleStatBoostingHeldItems
 	JSR HandleHealingItems
 	JSR UpdateBattleMonInParty
-	home_ref LoadTilemapToTempTilemap
+	home_ref PRG_HomeROM2, LoadTilemapToTempTilemap
 	JMP HandleEncore
 	
 CheckFaint_PlayerThenEnemy:
@@ -269,7 +269,7 @@ HandleBerserkGene:
 	JMP @enemy
 	
 @player:
-	home_ref SetPlayerTurn
+	home_ref PRG_HomeROM2, SetPlayerTurn
 	LDA #>wPartyMon1 + MON_ITEM
 	STA zMonPointer + 1
 	LDA #<wPartyMon1 + MON_ITEM
@@ -278,7 +278,7 @@ HandleBerserkGene:
 	JMP @go
 	
 @enemy:
-	home_ref SetEnemyTurn
+	home_ref PRG_HomeROM2, SetEnemyTurn
 	LDA #>wOTPartyMon1 + MON_ITEM
 	STA zMonPointer + 1
 	LDA #<wOTPartyMon1 + MON_ITEM
@@ -300,18 +300,18 @@ HandleBerserkGene:
 	; ld h, d
 	; ld l, e
 	; ld a, b
-	home_ref GetPartyLocation
+	home_ref PRG_HomeROM2, GetPartyLocation
 	LDA #0
 	TAY
 	STA (zMonPointer), Y
 	LDA #BATTLE_VARS_SubStatus3
-	home_ref GetBattleVarAddr
+	home_ref PRG_HomeROM2, GetBattleVarAddr
 	PHA
 	LDA (zMonPointer), Y
 	SSB SUBSTATUS_CONFUSED
 	STA (zMonPointer), Y
 	LDA #BATTLE_VARS_MOVE_ANIM
-	home_ref GetBattleVarAddr
+	home_ref PRG_HomeROM2, GetBattleVarAddr
 	PHA
 	LDA #0
 	TAY
@@ -321,12 +321,12 @@ HandleBerserkGene:
 ;	farcall BattleCommand_AttackUp2
 	PLA
 	STA (zMonPointer), Y
-	home_ref GetItemName
+	home_ref PRG_HomeROM2, GetItemName
 	LDA #<BattleText_UsersStringBuffer1Activated
 	STA zTextPointer + 1
 	LDA #<BattleText_UsersStringBuffer1Activated
 	STA zTextPointer
-	home_ref StdBattleTextbox
+	home_ref PRG_HomeROM2, StdBattleTextbox
 ;	farcall BattleCommand_StatUpMessage
 	PLA
 	AND #SUBSTATUS_CONFUSED
@@ -344,7 +344,7 @@ HandleBerserkGene:
 	STA zTextPointer + 1
 	LDA #<BecameConfusedText
 	STA zTextPointer
-	JMP StdBattleTextbox
+	home_jump PRG_HomeROM2, StdBattleTextbox
 @end1:
 	PLA
 @end2:
@@ -376,13 +376,13 @@ DetermineMoveOrder:
 	CMP #BATTLEPLAYERACTION_SWITCH
 	BNE @switch
 	; hSerialConnectionStatus check
-	home_ref BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	BPL +e
 	JMP @player_first
 +e	JMP @enemy_first
 @switch:
 ;	farcall AI_Switch
-	home_ref SetEnemyTurn
+	home_ref PRG_HomeROM2, SetEnemyTurn
 	JSR SpikesDamage
 	JMP @enemy_first
 @UseMove:
@@ -396,7 +396,7 @@ DetermineMoveOrder:
 +e	JMP @enemy_first
 
 @equal_priority:
-	home_ref SetPlayerTurn
+	home_ref PRG_HomeROM2, SetPlayerTurn
 ;	farcall GetUserItem
 ;	farcall GetOpponentItem
 	; ld a, d
@@ -405,7 +405,7 @@ DetermineMoveOrder:
 	; ld a, b
 	cmp #HELD_QUICK_CLAW
 	beq @both_have_quick_claw
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	; cp e
 	bcc @speed_check
 	jmp @player_first
@@ -414,26 +414,26 @@ DetermineMoveOrder:
 	; ld a, b
 	cmp #HELD_QUICK_CLAW
 	bne @speed_check
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	; cp c
 	bcc @speed_check
 	jmp @enemy_first
 	
 @both_have_quick_claw:
 	; hSerialConnectionStatus check
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	; cp c
 	bcs @enemy_first
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	; cp e
 	bcs @player_first
 	jmp @speed_check
 	
 @player_2b: ; this isn't referenced, but something in the future might reference it, so I'm keeping it
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	; cp e
 	bcs @player_first
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	; cp c
 	bcs @enemy_first
 	
@@ -448,7 +448,7 @@ DetermineMoveOrder:
 	jmp @enemy_first
 	
 @player_2c: ; this isn't referenced, but something in the future might reference it, so I'm keeping it
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	cmp #50 percent + 1
 	bcs @enemy_first
 	
@@ -623,7 +623,7 @@ ParsePlayerAction:
 	stx wFXAnimID
 	jsr MoveSelectionScreen
 	pha
-	jsr SafeLoadTempTilemapToTilemap
+	home_ref PRG_HomeROM2, SafeLoadTempTilemapToTilemap
 	jsr UpdateBattleHuds
 	lda wCurPlayerMove
 	cmp #STRUGGLE
@@ -637,7 +637,7 @@ ParsePlayerAction:
 	RNE
 	
 @encored:
-	jsr SetPlayerTurn
+	home_ref PRG_HomeROM2, SetPlayerTurn
 ;	farcall UpdateMoveData
 	lda #0
 	sta wPlayerCharging
@@ -765,7 +765,7 @@ HandleEncore:
 	ora #SUBSTATUS_ENCORED
 	eor #SUBSTATUS_ENCORED
 	sta wPlayerSubStatus5
-	jsr SetEnemyTurn
+	home_ref PRG_HomeROM2, SetEnemyTurn
 	jmp @end_encore
 	
 @do_enemy:
@@ -788,14 +788,14 @@ HandleEncore:
 	ora #SUBSTATUS_ENCORED
 	eor #SUBSTATUS_ENCORED
 	sta wEnemySubStatus5
-	jsr SetPlayerTurn
+	home_ref PRG_HomeROM2, SetPlayerTurn
 	
 @end_encore:
 	ldx #<BattleText_TargetsEncoreEnded
 	ldy #>BattleText_TargetsEncoreEnded
 	stx zTextPointer
 	sty zTextPointer + 1
-	jmp StdBattleTextbox
+	home_jump PRG_HomeROM2, StdBattleTextbox
 
 HasPlayerFainted:
 	RTS
@@ -873,7 +873,7 @@ TryEnemyFlee:
 	jsr IsInArray
 	bcs @Flee
 	
-	jsr BattleRandom
+	home_ref PRG_HomeROM2, BattleRandom
 	tax
 	cmp #50 percent + 1
 	bcc @Stay
