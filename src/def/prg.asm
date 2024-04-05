@@ -14,7 +14,8 @@ PRG_DeleteSave:
 PRG_03:			.dsb 1	; 06 / 07
 
 PRG_Intro_Menu:
-PRG_OakIntroGFX:	
+PRG_OakIntroGFX:
+PRG_GameInit:
 	.dsb 1	; 08 / 09
 
 PRG_Tilesets_1:		.dsb 1	; 0a / 0b
