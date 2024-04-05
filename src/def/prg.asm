@@ -8,11 +8,14 @@ PRG_SplashScreen:
 PRG_Intro:
 	.dsb 1	; 02 / 03
 
-PRG_02:			.dsb 1	; 04 / 05
-PRG_03:			.dsb 1	; 06 / 07
+PRG_DeleteSave:			
+	.dsb 1	; 04 / 05
+
+PRG_SaveFunctions:	.dsb 1	; 06 / 07
 
 PRG_Intro_Menu:
-PRG_OakIntroGFX:	
+PRG_OakIntroGFX:
+PRG_GameInit:
 	.dsb 1	; 08 / 09
 
 PRG_Tilesets_1:		.dsb 1	; 0a / 0b

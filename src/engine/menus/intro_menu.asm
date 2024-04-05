@@ -181,9 +181,9 @@ SetDefaultBoxNames:
 	lda zScratchWord + 1
 	pha
 	lda #<@Box
-	sta zCopySrcAddr
+	sta zSrcAddr
 	lda #>@Box
-	sta zCopySrcAddr + 1
+	sta zSrcAddr + 1
 	jsr CopyName2
 	ldy #0
 	dec zScratchWord
@@ -223,9 +223,9 @@ InitializeMagikarpHouse:
 	lda #6
 	sta wBestMagikarpLengthFeet + 1
 	lda #<@Ralph
-	sta zCopySrcAddr
+	sta zSrcAddr
 	lda #>@Ralph
-	sta zCopySrcAddr + 1
+	sta zSrcAddr + 1
 	jmp CopyName2
 	
 @Ralph:
@@ -233,43 +233,43 @@ InitializeMagikarpHouse:
 	
 InitializeNPCNames:
 	lda #<@Rival
-	sta zCopySrcAddr
+	sta zSrcAddr
 	lda #>@Rival
-	sta zCopySrcAddr + 1
+	sta zSrcAddr + 1
 	lda #<wRivalName
-	sta zCopyDestAddr
+	sta zDestAddr
 	lda #>wRivalName
-	sta zCopyDestAddr + 1
+	sta zDestAddr + 1
 	jsr @Copy
 	
 	lda #<@Mom
-	sta zCopySrcAddr
+	sta zSrcAddr
 	lda #>@Mom
-	sta zCopySrcAddr + 1
+	sta zSrcAddr + 1
 	lda #<wMomName
-	sta zCopyDestAddr
+	sta zDestAddr
 	lda #>wMomName
-	sta zCopyDestAddr + 1
+	sta zDestAddr + 1
 	jsr @Copy
 	
 	lda #<@Red
-	sta zCopySrcAddr
+	sta zSrcAddr
 	lda #>@Red
-	sta zCopySrcAddr + 1
+	sta zSrcAddr + 1
 	lda #<wRedsName
-	sta zCopyDestAddr
+	sta zDestAddr
 	lda #>wRedsName
-	sta zCopyDestAddr + 1
+	sta zDestAddr + 1
 	jsr @Copy
 	
 	lda #<@Green
-	sta zCopySrcAddr
+	sta zSrcAddr
 	lda #>@Green
-	sta zCopySrcAddr + 1
+	sta zSrcAddr + 1
 	lda #<wGreenName
-	sta zCopyDestAddr
+	sta zDestAddr
 	lda #>wGreenName
-	sta zCopyDestAddr + 1
+	sta zDestAddr + 1
 
 @Copy:
 	lda #NAME_LENGTH
@@ -685,9 +685,9 @@ NamePlayer:
 	dex
 	beq @NewName
 	lda #<wPlayerName
-	sta zCopyDestAddr
+	sta zDestAddr
 	lda #>wPlayerName
-	sta zCopyDestAddr + 1
+	sta zDestAddr + 1
 	jsr StorePlayerName
 ;	farcall ApplyMonOrTrainerPals
 	jmp MovePlayerPicLeft
@@ -696,8 +696,8 @@ NamePlayer:
 	ldx #NAME_PLAYER
 	lda #<wPlayerName
 	ldy #>wPlayerName
-	sta zCopyDestAddr
-	sty zCopyDestAddr + 1
+	sta zDestAddr
+	sty zDestAddr + 1
 ;	farcall NamingScreen
 	jsr RotateThreePalettesRight
 	jsr ClearTilemap
@@ -717,12 +717,12 @@ NamePlayer:
 	
 	lda #<wPlayerName
 	ldy #>wPlayerName
-	sta zCopyDestAddr
-	sty zCopyDestAddr + 1
+	sta zDestAddr
+	sty zDestAddr + 1
 	lda #<PlayerNameArray
 	ldy #>PlayerNameArray
-	sta zCopySrcAddr
-	sta zCopySrcAddr + 1
+	sta zSrcAddr
+	sta zSrcAddr + 1
 	jmp InitName
 	
 .include "src/data/player_names.asm"
@@ -1072,5 +1072,157 @@ endif
 	
 TitleScreenMain:
 ; Run the timer down.
-	; todo
+	lda wTitleScreenTimer
+	ldx wTitleScreenTimer + 1
+	stx wScratchByte
+	ora wScratchByte
+	beq @end
 	
+	dex
+	stx wTitleScreenTimer + 1
+	sta wTitleScreenTimer
+	
+; Save data can be deleted by pressing Up + B + Select.
+	jsr GetJoypad
+	lda zJoyDown
+	and #D_UP + B_BUTTON + SELECT
+	cmp #D_UP + B_BUTTON + SELECT
+	beq @delete_save_data	
+
+; Press Start or A to reset the game.
+	lda zJoyDown
+	and #START | A_BUTTON
+	bne @incave
+	rts
+	
+@incave:
+	lda #TITLESCREENOPTION_MAIN_MENU
+	beq @done
+	
+@delete_save_data:
+	lda #TITLESCREENOPTION_DELETE_SAVE_DATA
+	
+@done:
+	sta wTitleScreenSelectedOption
+	
+; Return to the intro sequence.
+	lda wJumptableIndex
+	ora #%10000000
+	sta wJumptableIndex
+	rts
+	
+@end:
+; Next scene
+	inc wJumptableIndex
+	
+; Fade out the title screen music
+	ldy #MUSIC_NONE
+	lda #8 ; 1 second
+	sty wMusicFadeID
+	sty wMusicFadeID + 1
+	sta wMusicFade
+	
+	inc wTitleScreenTimer
+	rts
+	
+TitleScreenEnd:
+; Wait until the music is done fading.
+	inc wTitleScreenTimer
+	
+	lda wMusicFade
+	RNE
+	
+	lda #TITLESCREENOPTION_RESTART
+	sta wTitleScreenSelectedOption
+	
+; Back to the intro.
+	lda wJumptableIndex
+	ora #%10000000
+	sta wJumptableIndex
+	rts
+	
+DeleteSaveData:
+	farcall PRG_DeleteSave, _DeleteSaveData
+	jmp Init
+	
+UpdateTitleTrailSprite:
+	; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
+	lda wTitleScreenTimer
+	and #%00000011
+	RNE
+	
+if GAME_VERSION = _VER_GOLD
+	; todo
+	; ld bc, wSpriteAnim10
+	; ld hl, SPRITEANIMSTRUCT_FRAME
+	; add hl, bc
+	; ld l, [hl]
+	; ld h, 0
+	; add hl, hl
+	; add hl, hl
+	; ld de, .TitleTrailCoords
+	; add hl, de
+	; If bit 2 of [wTitleScreenTimer] is set, get the second coords; else, get the first coords
+	; ld a, [wTitleScreenTimer]
+	; and %00000100
+	; srl a
+	; srl a
+	; ld e, a
+	; ld d, 0
+	; add hl, de
+	; add hl, de
+	; ld a, [hli]
+	; and a
+	; ret z
+	; ld e, a
+	; ld d, [hl]
+else
+;	depixel 15, 11, 4, 0
+endif
+	lda #SPRITE_ANIM_OBJ_GS_TITLE_TRAIL
+	jmp InitSpriteAnimStruct
+	
+if GAME_VERSION = _VER_GOLD
+@TitleTrailCoords:
+	; trail_coords 11, 10,  0,  0
+	; trail_coords 11, 13, 11, 11
+	; trail_coords 11, 13, 11, 15
+	; trail_coords 11, 17, 11, 15
+	; trail_coords  0,  0, 11, 15
+	; trail_coords  0,  0, 11, 11
+endif
+
+Copyright:
+	jsr ClearTilemap
+	jsr LoadFontsExtra
+;	ld de, CopyrightGFX
+;	ld hl, vTiles2 tile $60
+; 	lb bc, BANK(CopyrightGFX), 30
+; 	call Request2bpp
+	OGT 0, 2, 7
+	lda #<CopyrightString
+	sta zTextPointer
+	lda #>CopyrightString
+	sta zTextPointer + 1
+	home_ref PrintText
+	rts
+	
+CopyrightString:
+	; ©1995-2000 Nintendo
+	.db  		 $60, $61, $62, $63, $7a, $7b, $7c, $7d
+	.db  		 $65, $66, $67, $68, $69, $6a
+
+	; ©1995-2000 Creatures inc.
+	.db TX_NEXT, $60, $61, $62, $63, $7a, $7b, $7c, $7d
+	.db  		 $6b, $6c, $6d, $6e, $6f, $70, $71, $72
+
+	; ©1995-2000 GAME FREAK inc.
+	.db TX_NEXT, $60, $61, $62, $63, $7a, $7b, $7c, $7d
+	.db   		 $73, $74, $75, $76, $77, $78, $79, $71, $72
+
+	.db "@"
+	
+GameInit:
+	jsr ClearWindowData
+	farcall PRG_SaveFunctions, TryLoadSaveData
+	jmp IntroSequence
