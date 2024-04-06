@@ -8,6 +8,7 @@ PRG_SplashScreen:
 PRG_Intro:
 	.dsb 1	; 02 / 03
 
+PRG_PokedexDataPointerTable:
 PRG_DeleteSave:			
 	.dsb 1	; 04 / 05
 
