@@ -55,21 +55,21 @@ Music:
 	dba_audio Music_Route34
 	dba_audio Music_SSAqua
 	dba_audio Music_LookYoungster
-	;dba_audio Music_LookBeauty
-	;dba_audio Music_LookRocket
+	dba_audio Music_LookBeauty
+	dba_audio Music_LookRocket
 	dba_audio Music_LookPokemaniac
 	dba_audio Music_LookSage
 	dba_audio Music_NewBarkTown
 	dba_audio Music_GoldenrodCity
 	dba_audio Music_VermilionCity
-	;dba_audio Music_PokemonChannel
-	;dba_audio Music_PokeFluteChannel
+	dba_audio Music_PokemonChannel
+	dba_audio Music_PokeFluteChannel
 	dba_audio Music_TinTower
 	;dba_audio Music_SproutTower
 	;dba_audio Music_BurnedTower
-	;dba_audio Music_Lighthouse
-	;dba_audio Music_LakeOfRage
-	;dba_audio Music_IndigoPlateau
+	dba_audio Music_Lighthouse
+	dba_audio Music_LakeOfRage
+	dba_audio Music_IndigoPlateau
 	;dba_audio Music_Route37
 	;dba_audio Music_RocketHideout
 	;dba_audio Music_DragonsDen
@@ -85,7 +85,7 @@ Music:
 	;dba_audio Music_GoldSilverOpening2
 	;dba_audio Music_MainMenu
 	dba_audio Music_RuinsOfAlphInterior
-	;dba_audio Music_RocketTheme
+	dba_audio Music_RocketTheme
 	;dba_audio Music_DancingHall
 	;dba_audio Music_ContestResults
 	;dba_audio Music_BugCatchingContest
