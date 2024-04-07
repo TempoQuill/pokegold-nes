@@ -42,7 +42,7 @@ ENDIF
 .include "src/audio/music/lavendertown.asm"
 ;.include "src/audio/music/dancinghall.asm"
 ;.include "src/audio/music/contestresults.asm"
-;.include "src/audio/music/route30.asm"
+.include "src/audio/music/route30.asm"
 Music0_End:
 IF Music0_End > $1c000
 	ERROR "Bank grew too big. Must be within 8K of memory."

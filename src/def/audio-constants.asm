@@ -137,9 +137,8 @@ MUSIC_CUT_IN_F = 7
 .enum 0
 DMC_3_0:
 DMC_3_0_END:
-DMC_3_1:	.dsb $21
+DMC_3_1:	.dsb $20
 DMC_3_1_END:
-	.dsb 3
 DMC_3_2:	.dsb $13
 DMC_3_2_END:
 	.dsb 1
@@ -173,26 +172,23 @@ DMC_1_12_END:
 	.dsb 1
 DMC_0_3:	.dsb $18
 DMC_0_3_END:
+DMC_FULL_HEAL_1:	.dsb $8
+DMC_FULL_HEAL_1_END:
 .ende
 
 .enum $200
 DMC_0_5:		.dsb $98
 DMC_0_5_END:
-DMC_0_1:		.dsb $29
+DMC_0_1:		.dsb $28
 DMC_0_1_END:
-	.dsb 3
 DMC_0_2:		.dsb $24
 DMC_0_2_END:
 DMC_0_4:		.dsb $10
 DMC_0_4_END:
-DMC_0_9:		.dsb $25
+DMC_0_9:		.dsb $24
 DMC_0_9_END:
-	.dsb 3
 DMC_0_11:		.dsb $34
 DMC_0_11_END:
-DMC_FULL_HEAL_1:	.dsb $9
-DMC_FULL_HEAL_1_END:
-	.dsb 3
 DMC_FULL_HEAL_2:	.dsb $46
 DMC_FULL_HEAL_2_END:
 	.dsb 2
@@ -214,12 +210,12 @@ DMC_TRANSACTION_END:
 	.dsb 1
 DMC_BALL_BOUNCE_4:	.dsb $13
 DMC_BALL_BOUNCE_4_END:
+	.dsb 1
 .ende
 
 .enum $600
-DMC_SAVE:	.dsb $95
+DMC_SAVE:	.dsb $94
 DMC_SAVE_END:
-	.dsb 3
 DMC_THROW_BALL:	.dsb $47
 DMC_THROW_BALL_END:
 	.dsb 1
@@ -229,9 +225,8 @@ DMC_BALL_POOF_END:
 DMC_FAINT:	.dsb $83
 DMC_FAINT_END:
 	.dsb 1
-DMC_BITE:	.dsb $3d
+DMC_BITE:	.dsb $3c
 DMC_BITE_END:
-	.dsb 3
 .ende
 
 .enum $800
@@ -245,7 +240,7 @@ DMC_BALL_BOUNCE_1_END:
 DMC_BALL_BOUNCE_2:	.dsb $2d
 DMC_BALL_BOUNCE_2_END:
 	.dsb 3
-DMC_BALL_BOUNCE_3:	.dsb $21
+DMC_BALL_BOUNCE_3:	.dsb $20
 DMC_BALL_BOUNCE_3_END:
 .ende
 
