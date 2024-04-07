@@ -158,6 +158,9 @@ SFX_CHOOSE_A_CARD:			.dsb 1 ; 9a
 SFX_GET_TM:				.dsb 1 ; 9b
 SFX_GET_BADGE:				.dsb 1 ; 9c
 SFX_QUIT_SLOTS:				.dsb 1 ; 9d
+IFDEF BETA_SFX
+	SFX_RBY_POKEMON_CAUGHT:		.dsb 1
+ENDIF
 SFX_EGG_CRACK:				.dsb 1 ; 9e
 SFX_DEX_FANFARE_LESS_THAN_20:		.dsb 1 ; 9f
 SFX_DEX_FANFARE_140_169:		.dsb 1 ; a0

@@ -157,6 +157,9 @@ SFX:
 	dba_audio Sfx_GetTm
 	dba_audio Sfx_GetBadge
 	dba_audio Sfx_QuitSlots
+IFDEF BETA_SFX
+	dba_audio Sfx_RBYPokemonCaught
+ENDIF
 	dba_audio Sfx_EggCrack
 	dba_audio Sfx_DexFanfareLessThan20
 	dba_audio Sfx_DexFanfare140169

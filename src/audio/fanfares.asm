@@ -3146,6 +3146,111 @@ Sfx_DexFanfare230Plus_Ch10:
 ; P5-6
 	db	$ff
 	db	$df
+Sfx_RBYPokemonCaught:
+	db	0c5h
+	dw	$ffff & Sfx_RBYPokemonCaught_Ch6
+	db	006h
+	dw	$ffff & Sfx_RBYPokemonCaught_Ch7
+	db	007h
+	dw	$ffff & Sfx_RBYPokemonCaught_Ch8
+	db	008h
+	dw	$ffff & Sfx_RBYPokemonCaught_Ch9
+	db	009h
+	dw	$ffff & Sfx_RBYPokemonCaught_Ch10
+;----------------------------------------
+Sfx_RBYPokemonCaught_Ch6:
+;----------------------------------------
+	db	$df
+	db	$da,$00,$7c
+;	db	$e5,$77
+	db	$e1,$8,$27
+	db	$db,$02
+; P1-2
+	db	$d8,$c,$b1
+	db	$d3,$61
+	db	$60
+	db	$60
+	db	$11
+	db	$10
+	db	$10
+	db	$51
+	db	$80
+	db	$80
+	db	$11
+	db	$50
+	db	$50
+; P1-3
+	db	$dc,$a5
+	db	$6f
+; P1-4
+	db	$ff
+;----------------------------------------
+Sfx_RBYPokemonCaught_Ch7:
+;----------------------------------------
+	db	$df
+	db	$e1,$8,$27
+	db	$db,$02
+; P2-2
+	db	$d8,$c,$c1
+	db	$d3,$a1
+	db	$a0
+	db	$a0
+	db	$61
+	db	$60
+	db	$60
+	db	$d2,$11
+	db	$10
+	db	$10
+	db	$d3,$b1
+	db	$b0
+	db	$b0
+; P2-3
+	db	$dc,$b5
+	db	$af
+; P2-4
+	db	$ff
+;----------------------------------------
+Sfx_RBYPokemonCaught_Ch8:
+;----------------------------------------
+	db	$df
+; P3-2
+	db	$d8,$c,$81
+	db	$d3,$67
+	db	$dc,$20
+	db	$11
+	db	$51
+	db	$81
+	db	$b1
+; P3-3
+	db	$dc,$81
+	db	$a4
+	db	$01
+	db	$08
+; P3-4
+	db	$ff
+;----------------------------------------
+Sfx_RBYPokemonCaught_Ch9:
+;----------------------------------------
+	db	$df
+	db	$f0,$04
+; P4-2
+	db	$d8,$c
+	db	$1f
+; P4-3
+	db	$0f
+; P4-4
+	db	$ff
+;----------------------------------------
+Sfx_RBYPokemonCaught_Ch10:
+;----------------------------------------
+	db	$df
+; P5-2
+	db	$d8,$c
+	db	$1f
+; P5-3
+	db	$0f
+; P5-4
+	db	$ff
 
 
 
