@@ -95,7 +95,7 @@ _UpdateSound:
 	STA zCurTrackRawPitch + 1
 	; vibrato, envelope, pitch, chorus, etc
 	JSR GeneralHandler
-	JSR TranslateCryNoise
+	JSR TranslateNoise
 	JSR HandleNoise
 	JSR HandleDPCM
 	; turn off music when playing sfx?
@@ -1035,7 +1035,7 @@ ENDIF
 	SSB NOTE_NOISE_SAMPLING
 	STA (zCurTrackAudioPointer), Y
 @Quit:
-	RTS
+	JMP TranslateNoise
 
 HandleDPCM:
 	; is DPCM sampling on?
@@ -1277,7 +1277,7 @@ ParseDPCM:
 	STA zDPCMPitch
 	RTS
 
-TranslateCryNoise:
+TranslateNoise:
 ; CRY NOISE PARAMS
 ;	xxxxyzzz
 ;	x - divisor(power of 2)
@@ -1285,10 +1285,12 @@ TranslateCryNoise:
 ;	z - divisor(multiple of 2, 1 if 0)
 	LDA zCurChannel
 	CMP #CHAN9
+	BEQ +
+	CMP #CHAN4
 	RNE
-	LDY #CHANNEL_FLAGS1
++	LDY #CHANNEL_FLAGS1
 	LDA (zCurTrackAudioPointer), Y
-	AND #1 << SOUND_CRY | 1 << SOUND_READING_MODE
+	AND #1 << SOUND_CRY | 1 << SOUND_READING_MODE | 1 << SOUND_NOISE
 	REQ
 	LDA zCurTrackRawPitch
 	AND #$f0
@@ -1297,7 +1299,7 @@ TranslateCryNoise:
 	LDA zCurTrackRawPitch
 	AND #$07
 	ORA zCurTrackTemp
-	CMP #$51
+	CMP #CryNoise_End - CryNoise
 	BCS @Rest
 	STA zCurTrackTemp
 	TAY
