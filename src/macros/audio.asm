@@ -158,7 +158,7 @@ MACRO pitch_sweep period, inc
 p = ((period + 7) & %1111) << 4
 	IF inc < 0
 	i = 8 - inc
-		.db p + (i * -1)
+		.db p + ($0f & (i * -1))
 	ELSE
 	i = 8 - inc
 		.db p | %1000 + i

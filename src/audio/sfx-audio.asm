@@ -4,7 +4,7 @@ Sfx_PokeballsPlacedOnTable:
 	dw	$ffff & Sfx_PokeballsPlacedOnTable_Ch6
 Sfx_PokeballsPlacedOnTable_Ch6:
 	duty_cycle 2
-	pitch_sweep 3, -2
+	pitch_sweep 2, -2
 	square_note 4, 15, 2, 512
 	pitch_sweep 3, 6
 	square_note 8, 14, 2, 512
@@ -123,7 +123,7 @@ Sfx_SecondPartOfItemfinder:
 	dw	$ffff & Sfx_SecondPartOfItemfinder_Ch6
 Sfx_SecondPartOfItemfinder_Ch6:
 	duty_cycle 2
-	pitch_sweep 2, -4
+	pitch_sweep 1, -4
 	square_note 4, 15, 2, $57a
 	pitch_sweep 2, 6
 	square_note 2, 15, 1, $57a
@@ -211,7 +211,7 @@ Sfx_Wrong:
 	dw	$ffff & Sfx_Wrong_Ch7
 Sfx_Wrong_Ch6:
 	duty_cycle 3
-	pitch_sweep 5, -2
+	pitch_sweep 4, -2
 	square_note 4, 15, 0, $57a
 	pitch_sweep 0, 1
 	square_note 4, 0, 0, 0
@@ -278,11 +278,11 @@ Sfx_WallOpen:
 	dw	$ffff & Sfx_WallOpen_Ch6
 Sfx_WallOpen_Ch6:
 	duty_cycle 1
-	pitch_sweep 3, -6
+	pitch_sweep 2, -6
 	square_note 4, 15, 2, $500
 	pitch_sweep 2, 6
 	square_note 4, 14, 2, $500
-	pitch_sweep 3, -6
+	pitch_sweep 2, -6
 	square_note 4, 15, 2, $700
 	pitch_sweep 2, 6
 	square_note 15, 14, 2, $3700
@@ -331,7 +331,7 @@ Sfx_Bump:
 	dw	$ffff & Sfx_Bump_Ch6
 Sfx_Bump_Ch6:
 	duty_cycle 2
-	pitch_sweep 5, -4
+	pitch_sweep 4, -4
 	square_note 15, 15, 1, 768
 	pitch_sweep 0, 1
 	sound_ret
@@ -357,7 +357,7 @@ Sfx_Elevator:
 	dw	$ffff & Sfx_Elevator_Ch10
 Sfx_Elevator_Ch6:
 	duty_cycle 2
-	pitch_sweep 5, -2
+	pitch_sweep 4, -2
 @loop:
 	square_note 2, 15, 1, 768
 	db sound_loop_cmd, 48
@@ -435,7 +435,7 @@ Sfx_Kinesis:
 	dw	$ffff & Sfx_Kinesis_Ch6
 Sfx_Kinesis_Ch6:
 	duty_cycle 1
-	pitch_sweep 2, -3
+	pitch_sweep 1, -3
 	square_note 15, 15, 2, $794
 	pitch_sweep 0, 1
 	sound_ret
@@ -990,7 +990,7 @@ Sfx_BoneClub:
 	dw	$ffff & Sfx_BoneClub_Ch7
 Sfx_BoneClub_Ch6:
 	duty_cycle 2
-	pitch_sweep 2, -3
+	pitch_sweep 1, -3
 	square_note 8, 15, 1, 1830
 	pitch_sweep 0, 1
 	sound_ret
@@ -1249,7 +1249,7 @@ Sfx_Metronome:
 	dw	$ffff & Sfx_Metronome_Ch6
 Sfx_Metronome_Ch6:
 	duty_cycle 2
-	pitch_sweep 5, -6
+	pitch_sweep 4, -6
 	square_note 4, 4, 0, 2021
 	square_note 4, 6, 0, 2021
 	square_note 4, 8, 0, 2021
@@ -1568,7 +1568,7 @@ Sfx_BellyDrum:
 	dw	$ffff & Sfx_BellyDrum_Ch9
 Sfx_BellyDrum_Ch6:
 	duty_cycle 2
-	pitch_sweep 2, -4
+	pitch_sweep 1, -4
 	square_note 12, 15, 1, 1443
 	pitch_sweep 0, 1
 	sound_ret
@@ -1596,7 +1596,7 @@ Sfx_SludgeBomb_Ch6:
 	pitch_sweep 4, 5
 	square_note 3, 15, 8, 1409
 	square_note 1, 0, 0, 0
-	pitch_sweep 4, -5
+	pitch_sweep 3, -5
 	square_note 16, 15, 2, 1489
 	pitch_sweep 0, 1
 	sound_ret
@@ -1624,7 +1624,7 @@ Sfx_Spite_Ch6:
 	toggle_music
 	vibrato 0, 1, 1
 	duty_cycle 3
-	pitch_sweep 6, -5
+	pitch_sweep 5, -5
 	note_type 3, 15, 8
 	octave 3
 	note F_, 3
@@ -1719,7 +1719,7 @@ Sfx_Attract_Ch6:
 	pitch_sweep 7, 4
 	square_note 4, 10, -1, 1816
 	square_note 12, 15, 8, 1857
-	pitch_sweep 7, -4
+	pitch_sweep 6, -4
 	square_note 8, 15, 1, 1900
 	pitch_sweep 0, 1
 	sound_ret
@@ -1777,7 +1777,7 @@ Sfx_Return:
 Sfx_Return_Ch6:
 	duty_cycle 0
 @loop1:
-	pitch_sweep 3, -4
+	pitch_sweep 2, -4
 	square_note 8, 15, 1, 1906
 	pitch_sweep 5, 5
 	square_note 8, 15, 1, 1906
@@ -1813,7 +1813,7 @@ Sfx_MilkDrink_Ch6:
 	pitch_sweep 2, 4
 	square_note 2, 14, -2, 1248
 	square_note 13, 15, 7, 656
-	pitch_sweep 4, -6
+	pitch_sweep 3, -6
 	square_note 4, 12, -1, 1505
 	square_note 2, 0, 0, 0
 	db	sound_loop_cmd, 6
@@ -1974,7 +1974,7 @@ Sfx_Flash:
 	dw	$ffff & Sfx_Flash_Ch6
 Sfx_Flash_Ch6:
 	duty_cycle 1
-	pitch_sweep 6, -6
+	pitch_sweep 5, -6
 	square_note 1, 4, 0, 2024
 	square_note 1, 6, 0, 2024
 	square_note 2, 8, 0, 2024
@@ -1991,7 +1991,7 @@ Sfx_GameFreakLogoGs:
 	dw	$ffff & Sfx_GameFreakLogoGs_Ch6
 Sfx_GameFreakLogoGs_Ch6:
 	duty_cycle 3
-	pitch_sweep 7, -6
+	pitch_sweep 6, -6
 	square_note 4, 5, 5, 2018
 	square_note 5, 7, 5, 2018
 	square_note 6, 9, 4, 2018
@@ -2061,7 +2061,7 @@ Sfx_Encore:
 	dw	$ffff & Sfx_Encore_Ch9
 Sfx_Encore_Ch6:
 	duty_cycle 2
-	pitch_sweep 4, -6
+	pitch_sweep 3, -6
 	square_note 16, 0, 0, 0
 @loop1:
 	square_note 2, 15, 8, 1950
@@ -2108,7 +2108,7 @@ Sfx_BallWobble:
 	dw	$ffff & Sfx_BallWobble_Ch6
 Sfx_BallWobble_Ch6:
 	duty_cycle 2
-	pitch_sweep 2, -4
+	pitch_sweep 1, -4
 	square_note 4, 15, 2, 1174
 	pitch_sweep 2, 6
 	square_note 8, 14, 2, $4496
@@ -2122,7 +2122,7 @@ Sfx_SweetScent_Ch6:
 	pitch_sweep 1, 6
 	square_note 6, 15, 8, $3000 | 1888
 	square_note 6, 14, 8, $4000 | 1824
-	pitch_sweep 5, -4
+	pitch_sweep 4, -4
 	square_note 22, 15, 1, 1840
 	pitch_sweep 0, 1
 	sound_ret
@@ -2132,7 +2132,7 @@ Sfx_SweetScent2:
 	db	008h
 	dw	$ffff & Sfx_SweetScent2_Ch9
 Sfx_SweetScent2_Ch6:
-	pitch_sweep 4, -4
+	pitch_sweep 3, -4
 	duty_cycle 1
 	square_note 6, 15, 8, 1597
 	square_note 2, 15, 1, 1638
@@ -2193,7 +2193,7 @@ Sfx_GetTrademon:
 Sfx_GetTrademon_Ch6:
 	square_note 32, 0, 0, 0
 	duty_cycle 2
-	pitch_sweep 5, -5
+	pitch_sweep 4, -5
 	square_note 27, 1, 4, 1990
 	square_note 27, 3, 4, 1990
 	square_note 27, 5, 4, 1990
@@ -2248,7 +2248,7 @@ Sfx_2Boops:
 Sfx_2Boops_Ch6:
 	duty_cycle 2
 @loop1:
-	pitch_sweep 9, -6
+	pitch_sweep 8, -6
 	square_note 1, 9, -1, 1379
 	square_note 4, 15, 2, 1205
 	pitch_sweep 4, 6
