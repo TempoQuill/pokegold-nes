@@ -34,8 +34,6 @@ ENDIF
 IFNDEF NSF_FILE
 	.base $e000
 	.include "src/home.asm"
-	IRQ:
-		RTI
 	.pad $fffa, $00
 	NESVectorTables:
 		.dw NMI   ; runs every frame

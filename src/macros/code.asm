@@ -211,3 +211,13 @@ MACRO home_ref bank, memory
 	STA zSavedPointer
 	JSR HomeTerminal
 ENDM
+
+MACRO home_jump bank, memory
+	LDA #bank
+	STA zSavedBank
+	LDA #>memory
+	STA zSavedPointer + 1
+	LDA #<memory
+	STA zSavedPointer
+	JMP HomeTerminal
+ENDM

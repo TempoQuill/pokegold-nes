@@ -64,7 +64,7 @@ LeechSeedSapsText:
 	db	TX_PROMPT
 
 HasANightmareText:
-	db	TX_START,	_USER_,		" has a
+	db	TX_START,	_USER_,		" has a"
 	db	TX_LINE,			"NIGHTMARE!"
 	db	TX_PROMPT
 
@@ -95,7 +95,7 @@ BattleText_TargetRecoveredWithItem:
 	db	TX_PROMPT
 
 BattleText_UserRecoveredPPUsing:
-	db	TX_START,	_USER_,		" recovered PP
+	db	TX_START,	_USER_,		" recovered PP"
 	db	TX_LINE,			"using "
 	db	TX_RAM
 	dw	wStringBuffer1
@@ -206,7 +206,7 @@ BattleText_MonFainted:
 	db	TX_PROMPT
 
 BattleText_UseNextMon:
-	db	TX_START,			"Use db	TX_NEXT,			"
+	db	TX_START,			"Use next "
 	db			_POKE_,		"MON?"
 	db	TX_DONE
 

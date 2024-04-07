@@ -1,8 +1,8 @@
 _DoItemEffect:
 	LDA wCurItem
 	STA wNamedObjectIndex
-	home_ref GetItemName
-	home_ref CopyName1
+	home_ref PRG_HomeROM2, GetItemName
+	home_ref PRG_HomeROM2, CopyName1
 	LDA #1
 	STA wItemEffectSucceeded
 	LDX wCurItem
@@ -107,7 +107,7 @@ PokeBallEffect:
 	STA zTextPointer
 	LDA #>ItemUsedText
 	STA zTextPointer + 1
-	home_ref PrintText
+	home_ref PRG_HomeROM2, PrintText
 	
 	LDX wEnemyMonCatchRate
 	LDA wBattleMode
@@ -256,12 +256,12 @@ PokeBallEffect:
 	; ldh [hDividend], a
 	; ldh [hMultiplicand], a
 	; ldh [hMultiplicand + 1], a
-	home_ref Multiply
+	home_ref PRG_HomeROM2, Multiply
 	; call Multiply
 	PLA
 	; pop bc
 	STA hDivisor
-	home_ref Divide
+	home_ref PRG_HomeROM2, Divide
 	; ld a, b
 	; ldh [hDivisor], a
 	; ld b, 4
@@ -459,7 +459,7 @@ ENDIF
 	sta zTextPointer
 	lda #>Text_GotchaMonWasCaught
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PRG_HomeROM2, PrintText
 	
 	jsr ClearSprites
 	
@@ -482,7 +482,7 @@ ENDIF
 	sta zTextPointer
 	lda #>NewDexDataText
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PRG_HomeROM2, PrintText
 	
 	jsr ClearSprites
 	
@@ -523,7 +523,7 @@ ENDIF
 	sta zTextPointer
 	lda #>AskGiveNicknameText
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PRG_HomeROM2, PrintText
 	
 	lda wCurPartySpecies
 	sta wNamedObjectIndex
@@ -586,7 +586,7 @@ ENDIF
 	sta zTextPointer
 	lda #>AskGiveNicknameText
 	sta zTextPointer + 1
-	jsr PrintText
+	home_ref PRG_HomeROM2, PrintText
 	
 	lda wCurPartySpecies
 	sta wNamedObjectIndex
@@ -642,7 +642,7 @@ endif
 	sta zScratchWord
 	lda #>BallSentToPCText
 	sta zScratchWord + 1
-	jsr PrintText
+	home_ref PRG_HomeROM2, PrintText
 	
 	jsr RotateThreePalettesRight
 	jsr LoadStandardFont
@@ -659,7 +659,7 @@ endif
 	sta zTextPointer + 1
 	
 @shake_and_break_free:
-	jsr PrintText
+	home_ref PRG_HomeROM2, PrintText
 	jsr ClearSprites
 	
 @return_from_capture:
