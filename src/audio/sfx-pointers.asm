@@ -77,19 +77,19 @@ SFX:
 	dba_audio Sfx_WaterGun
 	dba_audio Sfx_SwordsDance
 	dba_audio Sfx_Thunder
-	;dba_audio Sfx_Supersonic
-	;dba_audio Sfx_Leer
-	;dba_audio Sfx_Ember
-	;dba_audio Sfx_Bubblebeam
-	;dba_audio Sfx_HydroPump
-	;dba_audio Sfx_Surf
-	;dba_audio Sfx_Psybeam
-	;dba_audio Sfx_Charge
-	;dba_audio Sfx_Thundershock
-	;dba_audio Sfx_Psychic
-	;dba_audio Sfx_Screech
-	;dba_audio Sfx_BoneClub
-	;dba_audio Sfx_Sharpen
+	dba_audio Sfx_Supersonic
+	dba_audio Sfx_Leer
+	dba_audio Sfx_Ember
+	dba_audio Sfx_Bubblebeam
+	dba_audio Sfx_HydroPump
+	dba_audio Sfx_Surf
+	dba_audio Sfx_Psybeam
+	dba_audio Sfx_Charge
+	dba_audio Sfx_Thundershock
+	dba_audio Sfx_Psychic
+	dba_audio Sfx_Screech
+	dba_audio Sfx_BoneClub
+	dba_audio Sfx_Sharpen
 	;dba_audio Sfx_EggBomb
 	;dba_audio Sfx_Sing
 	;dba_audio Sfx_HyperBeam
@@ -110,9 +110,9 @@ SFX:
 	;dba_audio Sfx_NoSignal
 	;dba_audio Sfx_Sandstorm
 	dba_audio Sfx_Elevator
-	;dba_audio Sfx_Protect
-	;dba_audio Sfx_Sketch
-	;dba_audio Sfx_RainDance
+	dba_audio Sfx_Protect
+	dba_audio Sfx_Sketch
+	dba_audio Sfx_RainDance
 	;dba_audio Sfx_Aeroblast
 	;dba_audio Sfx_Spark
 	;dba_audio Sfx_Curse
@@ -157,23 +157,23 @@ SFX:
 	dba_audio Sfx_GetTm
 	dba_audio Sfx_GetBadge
 	dba_audio Sfx_QuitSlots
-	;dba_audio Sfx_EggCrack
+	dba_audio Sfx_EggCrack
 	dba_audio Sfx_DexFanfareLessThan20
 	dba_audio Sfx_DexFanfare140169
 	dba_audio Sfx_DexFanfare170199
 	dba_audio Sfx_DexFanfare200229
 	dba_audio Sfx_DexFanfare230Plus
-	;dba_audio Sfx_Evolved
-	;dba_audio Sfx_MasterBall
-	;dba_audio Sfx_EggHatch
-	;dba_audio Sfx_GsIntroCharizardFireball
-	;dba_audio Sfx_GsIntroPokemonAppears
-	;dba_audio Sfx_Flash
-	;dba_audio Sfx_GameFreakLogoGs
-	;dba_audio Sfx_NotVeryEffective
-	;dba_audio Sfx_Damage
-	;dba_audio Sfx_SuperEffective
-	;dba_audio Sfx_BallBounce
+	dba_audio Sfx_Evolved
+	dba_audio Sfx_MasterBall
+	dba_audio Sfx_EggHatch
+	dba_audio Sfx_GsIntroCharizardFireball
+	dba_audio Sfx_GsIntroPokemonAppears
+	dba_audio Sfx_Flash
+	dba_audio Sfx_GameFreakLogoGs
+	dba_audio Sfx_NotVeryEffective
+	dba_audio Sfx_Damage
+	dba_audio Sfx_SuperEffective
+	dba_audio Sfx_BallBounce
 	;dba_audio Sfx_Moonlight
 	;dba_audio Sfx_Encore
 	;dba_audio Sfx_BeatUp
