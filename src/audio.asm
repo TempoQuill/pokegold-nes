@@ -6,7 +6,7 @@
 .include "src/audio/sfx-pointers.asm"
 Audio_SFX_END:
 IF Audio_SFX_END > $c000
-	ERROR "Bank grew too big. Must be within 8K of memory."
+	ERROR "Bank grew too big. Must be within 16K of memory."
 ENDIF
 .align $4000, $00
 
@@ -45,7 +45,7 @@ ENDIF
 .include "src/audio/music/route30.asm"
 Music0_End:
 IF Music0_End > $1c000
-	ERROR "Bank grew too big. Must be within 8K of memory."
+	ERROR "Bank grew too big. Must be within 16K of memory."
 ENDIF
 .align $4000, $00
 
@@ -62,7 +62,7 @@ ENDIF
 .include "src/audio/cries.asm"
 Music1_End:
 IF Music1_End > $2c000
-	ERROR "Bank grew too big. Must be within 8K of memory."
+	ERROR "Bank grew too big. Must be within 16K of memory."
 ENDIF
 .align $4000, $00
 
@@ -101,7 +101,7 @@ ENDIF
 ;.include "src/audio/music/bugcatchingcontest.asm"
 Music2_End:
 IF Music2_End > $3c000
-	ERROR "Bank grew too big. Must be within 8K of memory."
+	ERROR "Bank grew too big. Must be within 16K of memory."
 ENDIF
 .align $4000, $00
 
@@ -126,6 +126,6 @@ ENDIF
 .include "src/audio/music/trainervictory.asm"
 Music3_End:
 IF Music3_End > $4c000
-	ERROR "Bank grew too big. Must be within 8K of memory."
+	ERROR "Bank grew too big. Must be within 16K of memory."
 ENDIF
 .align $4000, $00
