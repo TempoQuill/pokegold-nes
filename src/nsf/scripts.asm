@@ -7,10 +7,6 @@ nsf_loop_cmd = $fe
 nsf_break_cmd = $ff
 
 UpdateAudioScript:
-;	DEC iNSF_Timer
-;	LDA iNSF_Timer
-;	AND #1
-;	RNE
 	LDA iNSF_Cue
 	REQ
 	LDA iNSF_Pointer
@@ -111,11 +107,15 @@ NSF_Silence:
 	RTS
 
 NSF_PlayMusic:
+	LDA (zCurTrackAudioPointer), Y
+	INY
+	STY iNSF_Offset
 	LDY #0
 	JSR PlayMusic
+	TAY
+	JSR PlayMusic
 	LDY iNSF_Offset
-	JSR NSF_GetSoundID
-	JMP PlayMusic
+	RTS
 
 NSF_PlayCry:
 	JSR NSF_GetSoundID
@@ -148,3 +148,4 @@ NSF_GetSoundID:
 	RTS
 
 CuePointers:
+	dw	iNSF_ScriptArea

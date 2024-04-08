@@ -348,5 +348,5 @@ iNSF_LoopCounter:
 	.dsb 1
 iNSF_Cue:
 	.dsb 1
-iNSF_Timer:
+iNSF_ScriptArea:
 .ende
