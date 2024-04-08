@@ -65,13 +65,13 @@ Music:
 	dba_audio Music_PokemonChannel
 	dba_audio Music_PokeFluteChannel
 	dba_audio Music_TinTower
-	;dba_audio Music_SproutTower
+	dba_audio Music_SproutTower
 	;dba_audio Music_BurnedTower
 	dba_audio Music_Lighthouse
 	dba_audio Music_LakeOfRage
 	dba_audio Music_IndigoPlateau
-	;dba_audio Music_Route37
-	;dba_audio Music_RocketHideout
+	dba_audio Music_Route38
+	dba_audio Music_RocketHideout
 	;dba_audio Music_DragonsDen
 	dba_audio Music_JohtoWildBattleNight
 	;dba_audio Music_RuinsOfAlphRadio
