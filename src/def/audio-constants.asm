@@ -155,9 +155,6 @@ DMC_3_12_END:
 DMC_4_5:	.dsb $23
 DMC_4_5_END:
 	.dsb 1
-DMC_4_8:	.dsb $b
-DMC_4_8_END:
-	.dsb 1
 DMC_4_9:	.dsb $16
 DMC_4_9_END:
 	.dsb 2
@@ -170,7 +167,7 @@ DMC_1_11_END:
 DMC_1_12:	.dsb $13
 DMC_1_12_END:
 	.dsb 1
-DMC_0_3:	.dsb $18
+DMC_0_3:	.dsb $24
 DMC_0_3_END:
 DMC_FULL_HEAL_1:	.dsb $8
 DMC_FULL_HEAL_1_END:
@@ -179,11 +176,11 @@ DMC_FULL_HEAL_1_END:
 .enum $200
 DMC_0_5:		.dsb $98
 DMC_0_5_END:
-DMC_0_1:		.dsb $28
+DMC_0_1:		.dsb $24
 DMC_0_1_END:
 DMC_0_2:		.dsb $24
 DMC_0_2_END:
-DMC_0_4:		.dsb $10
+DMC_0_4:		.dsb $24
 DMC_0_4_END:
 DMC_0_9:		.dsb $24
 DMC_0_9_END:
@@ -227,6 +224,9 @@ DMC_FAINT_END:
 	.dsb 1
 DMC_BITE:	.dsb $3c
 DMC_BITE_END:
+DMC_4_8:	.dsb $b
+DMC_4_8_END:
+	.dsb 1
 .ende
 
 .enum $800
