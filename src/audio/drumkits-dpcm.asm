@@ -40,7 +40,7 @@ SampleSet2:
 	.dw SMP_1_10
 	.dw SMP_1_11
 	.dw SMP_1_12
-	.dw SMP_0_5
+	.dw SMP_2_5
 	.dw NoSample
 	.dw NoSample
 	.dw NoSample
@@ -101,7 +101,7 @@ SMP_0_3:
 SMP_0_4:
 	dpcm_entry $f, DMC_0_4, DMC_0_4_END
 SMP_0_5:
-	dpcm_entry $e, DMC_0_5, DMC_0_5_END
+	dpcm_entry $f, DMC_0_5, DMC_0_5_END
 SMP_0_9:
 	dpcm_entry $f, DMC_0_9, DMC_0_9_END
 SMP_0_10:
@@ -116,6 +116,8 @@ SMP_1_11:
 	dpcm_entry $e, DMC_1_11, DMC_1_11_END
 SMP_1_12:
 	dpcm_entry $e, DMC_1_12, DMC_1_12_END
+SMP_2_5:
+	dpcm_entry $e, DMC_0_5, DMC_0_5_END
 SMP_3_1:
 	dpcm_entry $f, DMC_3_1, DMC_3_1_END
 SMP_3_2:
