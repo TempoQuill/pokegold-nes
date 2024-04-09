@@ -110,6 +110,14 @@ wPlayerDamage:
 	.dsb 1
 wEnemyDamage:
 	.dsb 1
+
+wStatusFlags:
+	.dsb 1
+
+wMapGroup:
+	.dsb 1
+wMapNumber:
+	.dsb 1
 .ende
 wTilemap = $7c00
 

@@ -1,4 +1,5 @@
 .include "src/def/audio-constants.asm"
+.include "src/def/music-constants.asm"
 .include "src/def/cry-constants.asm"
 .include "src/def/sfx-constants.asm"
 .include "src/def/script-constants.asm"

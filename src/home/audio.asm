@@ -137,6 +137,134 @@ PlaySFX:
 	PLL
 	RTS
 
+SkipMusic:
+	REQ
+	SEC
+	SBC #1
+	JSR UpdateSound
+	BCS SkipMusic
+
+CutToMapMusic:
+	PSH
+	JSR GetMapMusic_MaybeSpecial
+	CPY zMapMusic
+	BEQ @done
+	LDA #8
+	STA zMusicSilence
+	STY zMusicSilenceID
+	STY zMapMusic
+@done
+	PLL
+	RTS
+
+PlayMapMusic:
+	PSH
+	JSR GetMapMusic_MaybeSpecial
+	CPY zMapMusic
+	BEQ @done
+	PHY
+	LDY #0
+	JSR PlayMusic
+IFNDEF NSF_FILE
+	JSR DelayFrame
+ENDIF
+	PLY
+	STY zMapMusic
+	JSR PlayMusic
+@done
+	PLL
+	RTS
+
+PlayMapMusicBike:
+	PSH
+	LDA #0
+	STA zDontPlayMusicOnReload
+	LDY #MUSIC_BICYCLE
+	LDA zPlayerState
+	CMP #PLAYER_BIKE
+	BEQ @Play
+	JSR GetMapMusic_MaybeSpecial
+@Play:
+	PHY
+	LDY #0
+	JSR PlayMusic
+IFNDEF NSF_FILE
+	JSR DelayFrame
+ENDIF
+	PLY
+	STY zMapMusic
+	JSR PlayMusic
+	PLL
+	RTS
+
+TryRestartMapMusic:
+	LDA zDontPlayMusicOnReload
+	BEQ RestartMapMusic
+	LDY #0
+	STY zMapMusic
+	JSR PlayMusic
+IFNDEF NSF_FILE
+	JSR DelayFrame
+ENDIF
+	LDA #0
+	STA zDontPlayMusicOnReload
+	RTS
+
+RestartMapMusic:
+	PSH
+	LDY #0
+	JSR PlayMusic
+IFNDEF NSF_FILE
+	JSR DelayFrame
+ENDIF
+	LDY zMapMusic
+	JSR PlayMusic
+	PLL
+	RTS
+
+SpecialMapMusic:
+	LDA zPlayerState
+	CMP #PLAYER_SURF
+	BEQ @Surf
+	CMP #PLAYER_SURF_PIKA
+	BEQ @Surf
+	LDA wStatusFlags
+	TSB STATUSFLAGS2_BUG_CONTEST_TIMER_F
+	BNE @Contest
+@No:
+	CLC
+	RTS
+@Bike:
+	LDY #MUSIC_BICYCLE
+	SEC
+	RTS
+@Surf:
+	LDY #MUSIC_SURF
+	SEC
+	RTS
+@Contest:
+	LDA wMapGroup
+	CMP #10
+	BNE @No
+	LDA wMapNumber
+	CMP #15
+	BEQ @Ranking
+	CMP #17
+	BNE @No
+@Ranking:
+	LDY #MUSIC_BUG_CATCHING_CONTEST_RANKING
+	SEC
+	RTS
+
+GetMapMusic_MaybeSpecial:
+	JSR SpecialMapMusic
+	RCS
+IFNDEF NSF_FILE
+	JMP GetMapMusic
+ELSE
+	RTS
+ENDIF
+
 CheckSFX:
 	LDA iChannel6 + CHANNEL_FLAGS1
 	ORA iChannel7 + CHANNEL_FLAGS1
@@ -144,4 +272,18 @@ CheckSFX:
 	ORA iChannel9 + CHANNEL_FLAGS1
 	ORA iChannel10 + CHANNEL_FLAGS1
 	LSR A
+	RTS
+
+TerminateExpBarSound:
+	LDA rMIX
+	RSB CHAN1
+	STA rMIX
+	LDA #$10
+	STA rNR10
+	LDA #0
+	STA iChannel6 + CHANNEL_FLAGS1
+	STA iChannel6 + CHANNEL_SWEEP
+	STA rNR11
+	STA rNR12
+	STA rNR13
 	RTS
