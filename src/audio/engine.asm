@@ -1320,6 +1320,9 @@ ENDR
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
+	TSB NOTE_NOISE_SAMPLING
+	REQ
+	LDA (zCurTrackAudioPointer), Y
 	SSB NOTE_REST
 	STA (zCurTrackAudioPointer), Y
 	RTS
