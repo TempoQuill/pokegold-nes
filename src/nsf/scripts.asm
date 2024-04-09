@@ -1,8 +1,13 @@
 nsf_script_end_cmd = 0
-nsf_silence_cmd = $fa
-nsf_music_cmd = $fb
-nsf_cry_cmd = $fc
-nsf_sfx_cmd = $fd
+nsf_cmd_start = $f6
+nsf_silence_cmd = $f6
+nsf_music_cmd = $f7
+nsf_cry_cmd = $f8
+nsf_sfx_cmd = $f9
+nsf_extend_script_cmd = $fa
+nsf_restart_script_cmd = $fb
+nsf_new_script_cmd = $fc
+nsf_offset_jump_cmd = $fd
 nsf_loop_cmd = $fe
 nsf_break_cmd = $ff
 
@@ -28,7 +33,7 @@ UpdateAudioScript:
 	LDY iNSF_Offset
 	LDA (zCurTrackAudioPointer), Y
 	JEQ EndAudioScript
-	CMP #nsf_silence_cmd
+	CMP #nsf_cmd_start
 	BCC @Delay
 	JSR LoadAudioScriptCommand
 	JMP @Loop
@@ -70,7 +75,7 @@ EndAudioScript:
 LoadAudioScriptCommand:
 	INY
 	STY iNSF_Offset
-	SBC #nsf_silence_cmd
+	SBC #nsf_cmd_start
 	ASL A
 	TAY
 	LDA AudioScriptCommandPointers, Y
@@ -92,8 +97,63 @@ AudioScriptCommandPointers:
 	dw	NSF_PlayMusic
 	dw	NSF_PlayCry
 	dw	NSF_PlaySfx
+	dw	NSF_ExtendScript
+	dw	NSF_RestartScript
+	dw	NSF_NewScript
+	dw	NSF_OffsetJump
 	dw	NSF_Loop
 	dw	NSF_Break
+
+NSF_None:
+	RTS
+
+NSF_ExtendScript:
+	LDA iNSF_Offset
+	CLC
+	ADC iNSF_Pointer
+	STA iNSF_Pointer
+	LDA #0
+	ADC iNSF_Pointer + 1
+	STA iNSF_Pointer + 1
+	LDA iNSF_Pointer
+	STA zCurTrackAudioPointer
+	LDA iNSF_Pointer + 1
+	STA zCurTrackAudioPointer + 1
+	RTS
+
+NSF_RestartScript:
+	LDA (zCurTrackAudioPointer), Y
+	STA iNSF_Pointer
+	INY
+	LDA (zCurTrackAudioPointer), Y
+	STA iNSF_Pointer + 1
+	LDA #0
+	STA iNSF_Offset
+	LDA iNSF_Pointer
+	STA zCurTrackAudioPointer
+	LDA iNSF_Pointer + 1
+	STA zCurTrackAudioPointer + 1
+	RTS
+
+NSF_OffsetJump:
+	LDA (zCurTrackAudioPointer), Y
+	TAY
+	STY iNSF_Offset
+	RTS
+
+NSF_NewScript:
+	LDA (zCurTrackAudioPointer), Y
+	STA iNSF_Cue
+	; initialize area
+	LDY #iNSF_WorkAreaEnd - iNSF_WorkArea
+	LDA #0
+@Loop:
+	DEY
+	STA iNSF_WorkArea, Y
+	BNE @Loop
+	PLA ; returning would glitch out the audio script engine
+	PLA
+	JMP UpdateAudioScript
 
 NSF_Silence:
 	LDA (zCurTrackAudioPointer), Y

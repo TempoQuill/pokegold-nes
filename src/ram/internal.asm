@@ -328,7 +328,7 @@ iStringBuffer:
 iVirtualOAM = $700
 
 ; NSF only
-.enum $700
+.enum iChannelsEnd
 ; 00 - endscript
 ; fa - silencce
 ; fb - music
@@ -336,6 +336,7 @@ iVirtualOAM = $700
 ; fd - sfx
 ; fe - loop
 ; ff - loop_end
+iNSF_WorkArea:
 iNSF_Delay:
 	.dsb 1
 iNSF_Pointer:
@@ -346,6 +347,7 @@ iNSF_LoopOffset:
 	.dsb 1
 iNSF_LoopCounter:
 	.dsb 1
+iNSF_WorkAreaEnd:
 iNSF_Cue:
 	.dsb 1
 iNSF_ScriptArea:
