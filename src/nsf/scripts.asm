@@ -1,15 +1,17 @@
 nsf_script_end_cmd = 0
-nsf_cmd_start = $f6
-nsf_silence_cmd = $f6
-nsf_music_cmd = $f7
-nsf_cry_cmd = $f8
-nsf_sfx_cmd = $f9
-nsf_extend_script_cmd = $fa
-nsf_restart_script_cmd = $fb
-nsf_new_script_cmd = $fc
-nsf_offset_jump_cmd = $fd
-nsf_loop_cmd = $fe
-nsf_break_cmd = $ff
+nsf_cmd_start = $f4
+nsf_wait_sfx = $f4		; f4
+nsf_skip_frames = $f5		; f5 xx
+nsf_silence_cmd = $f6		; f6 xxyy
+nsf_music_cmd = $f7		; f7 xx
+nsf_cry_cmd = $f8		; f8 xx
+nsf_sfx_cmd = $f9		; f9 xx
+nsf_extend_script_cmd = $fa	; fa
+nsf_restart_script_cmd = $fb	; fb llhh
+nsf_new_script_cmd = $fc	; fc xx
+nsf_offset_jump_cmd = $fd	; fd xx
+nsf_loop_cmd = $fe		; fe xx
+nsf_break_cmd = $ff		; ff
 
 UpdateAudioScript:
 	LDA iNSF_Cue
@@ -93,6 +95,8 @@ LoadAudioScriptCommand:
 	RTS
 
 AudioScriptCommandPointers:
+	dw	NSF_WaitSFX
+	dw	NSF_SkipFrames
 	dw	NSF_Silence
 	dw	NSF_PlayMusic
 	dw	NSF_PlayCry
@@ -106,6 +110,18 @@ AudioScriptCommandPointers:
 
 NSF_None:
 	RTS
+
+NSF_WaitSFX:
+	JSR CheckSFX
+	RCC
+	DEC iNSF_Offset
+	RTS
+
+NSF_SkipFrames:
+	LDA (zCurTrackAudioPointer), Y
+	INY
+	STY iNSF_Offset
+	JMP SkipMusic
 
 NSF_ExtendScript:
 	LDA iNSF_Offset
