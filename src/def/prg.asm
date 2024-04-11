@@ -92,7 +92,7 @@ PRG_27:			.dsb 1	; 4e / 4f
 PRG_28:			.dsb 1	; 50 / 51
 PRG_StandardScripts:	.dsb 1	; 52 / 53
 PRG_PhoneScripts:	.dsb 1	; 54 / 55
-	.dsb 17
+	.dsb 18
 
 ENDIF
 
