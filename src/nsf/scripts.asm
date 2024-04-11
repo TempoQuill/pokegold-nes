@@ -1,5 +1,7 @@
 nsf_script_end_cmd = 0
-nsf_cmd_start = $f4
+nsf_cmd_start = $f2
+nsf_music_off_cmd = $f2
+nsf_music_on_cmd = $f3
 nsf_wait_sfx = $f4		; f4
 nsf_skip_frames = $f5		; f5 xx
 nsf_silence_cmd = $f6		; f6 xxyy
@@ -95,6 +97,8 @@ LoadAudioScriptCommand:
 	RTS
 
 AudioScriptCommandPointers:
+	dw	NSF_MusicOff
+	dw	NSF_MusicOn
 	dw	NSF_WaitSFX
 	dw	NSF_SkipFrames
 	dw	NSF_Silence
@@ -109,6 +113,16 @@ AudioScriptCommandPointers:
 	dw	NSF_Break
 
 NSF_None:
+	RTS
+
+NSF_MusicOff:
+	LDA #0
+	STA zMusicPlaying
+	RTS
+
+NSF_MusicOn:
+	LDA #1
+	STA zMusicPlaying
 	RTS
 
 NSF_WaitSFX:
