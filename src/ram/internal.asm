@@ -140,7 +140,10 @@ zRemainder:
 	.dsb 1
 zScratchWord:
 	.dsb 6
-	.dsb 4
+zRNGPointer:
+	.dsb 2
+	.dsb 1
+	.dsb 1
 	.dsb 1
 	.dsb 1
 	.dsb 1
