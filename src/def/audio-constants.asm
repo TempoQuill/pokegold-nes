@@ -134,7 +134,7 @@ LINEAR_LOOP = $80
 ; zMusicSilence
 MUSIC_CUT_IN_F = 7
 
-.enum 0
+.enum (PRG_DPCM0 - PRG_DPCM0) << 9
 DMC_3_0:
 DMC_3_0_END:
 DMC_3_1:	.dsb $20
@@ -167,20 +167,24 @@ DMC_1_11_END:
 DMC_1_12:	.dsb $13
 DMC_1_12_END:
 	.dsb 1
-DMC_0_3:	.dsb $24
+DMC_0_3:	.dsb $1b
+	.dsb 1
 DMC_0_3_END:
 DMC_FULL_HEAL_1:	.dsb $8
 DMC_FULL_HEAL_1_END:
 .ende
 
-.enum $200
+.enum (PRG_DPCM1 - PRG_DPCM0) << 9
 DMC_0_5:		.dsb $98
 DMC_0_5_END:
-DMC_0_1:		.dsb $24
+DMC_0_1:		.dsb $25
 DMC_0_1_END:
-DMC_0_2:		.dsb $24
+	dsb	3
+DMC_0_2:		.dsb $25
 DMC_0_2_END:
-DMC_0_4:		.dsb $24
+	dsb	3
+DMC_0_4:		.dsb $1b
+	dsb	1
 DMC_0_4_END:
 DMC_0_9:		.dsb $24
 DMC_0_9_END:
@@ -196,7 +200,7 @@ DMC_TALLY_END:
 	.dsb 1
 .ende
 
-.enum $400
+.enum (PRG_DPCM2 - PRG_DPCM0) << 9
 DMC_POTION:		.dsb $83
 DMC_POTION_END:
 	.dsb 1
@@ -210,7 +214,7 @@ DMC_BALL_BOUNCE_4_END:
 	.dsb 1
 .ende
 
-.enum $600
+.enum (PRG_DPCM3 - PRG_DPCM0) << 9
 DMC_SAVE:	.dsb $94
 DMC_SAVE_END:
 DMC_THROW_BALL:	.dsb $47
@@ -229,7 +233,7 @@ DMC_4_8_END:
 	.dsb 1
 .ende
 
-.enum $800
+.enum (PRG_DPCM4 - PRG_DPCM0) << 9
 DMC_SLOT_MACHINE_START:	.dsb $8b
 DMC_SLOT_MACHINE_START_END:
 	.dsb 1

@@ -1,3 +1,4 @@
+.include "src/def/prg.asm"
 .include "src/def/audio-constants.asm"
 .include "src/def/music-constants.asm"
 .include "src/def/cry-constants.asm"
@@ -6,7 +7,6 @@
 .include "src/def/pokemon-data-constants.asm"
 .include "src/def/map-object-constants.asm"
 .include "src/def/hardware.asm"
-.include "src/def/prg.asm"
 .include "src/def/misc.asm"
 .include "src/def/battle.asm"
 .include "src/def/text.asm"

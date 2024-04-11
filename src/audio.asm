@@ -129,7 +129,10 @@ ENDIF
 .include "src/audio/music/vermilioncity.asm"
 .include "src/audio/music/titlescreen.asm"
 Music3_End:
-IF Music3_End > $4c000
+IF Music3_End > $4a000
 	ERROR "Bank grew too big. Must be within 16K of memory."
 ENDIF
-.align $4000, $00
+.align $2000, $00
+; dpcm
+.incbin "src/data/dmc/bank-1.bin"
+.align $2000, $55

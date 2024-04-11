@@ -99,12 +99,11 @@ ENDIF
 PRG_16K_End:
 .ende
 .enum (PRG_16K_End << 1)
-PRG_DPCM0:	.dsb 1
+PRG_DPCM0 = PRG_Music4 * 2 + 1
 PRG_DPCM1:	.dsb 1
 PRG_DPCM2:	.dsb 1
 PRG_DPCM3:	.dsb 1
 PRG_DPCM4:	.dsb 1
-		.dsb 1
 IFNDEF NSF_FILE
 	PRG_Home:
 	PRG_HomeROM1:	.dsb 1
