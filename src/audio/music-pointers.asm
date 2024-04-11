@@ -74,21 +74,21 @@ Music:
 	dba_audio Music_RocketHideout
 	dba_audio Music_DragonsDen
 	dba_audio Music_JohtoWildBattleNight
-	;dba_audio Music_RuinsOfAlphRadio
+	dba_audio Music_RuinsOfAlphRadio
 	dba_audio Music_SuccessfulCapture
-	;dba_audio Music_Route26
-	;dba_audio Music_Mom
-	;dba_audio Music_VictoryRoad
-	;dba_audio Music_PokemonLullaby
+	dba_audio Music_Route26
+	dba_audio Music_Mom
+	dba_audio Music_VictoryRoad
+	dba_audio Music_PokemonLullaby
 	dba_audio Music_PokemonMarch
-	;dba_audio Music_GoldSilverOpening
-	;dba_audio Music_GoldSilverOpening2
-	;dba_audio Music_MainMenu
+	dba_audio Music_GoldSilverOpening
+	dba_audio Music_GoldSilverOpening2
+	dba_audio Music_MainMenu
 	dba_audio Music_RuinsOfAlphInterior
 	dba_audio Music_RocketTheme
-	;dba_audio Music_DancingHall
-	;dba_audio Music_ContestResults
-	;dba_audio Music_BugCatchingContest
-	;dba_audio Music_LakeOfRageRocketRadio
+	dba_audio Music_DancingHall
+	dba_audio Music_ContestResults
+	dba_audio Music_BugCatchingContest
+	dba_audio Music_LakeOfRageRocketRadio
 	dba_audio Music_Printer
 	dba_audio Music_TheEnd

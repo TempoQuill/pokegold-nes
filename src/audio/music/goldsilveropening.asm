@@ -1,0 +1,558 @@
+Music_GoldSilverOpening:
+	db	040h
+	dw	$ffff & Music_GoldSilverOpening_Ch1
+	db	001h
+	dw	$ffff & Music_GoldSilverOpening_Ch2
+	db	002h
+	dw	$ffff & Music_GoldSilverOpening_Ch3
+;----------------------------------------
+Music_GoldSilverOpening_Ch1:
+;----------------------------------------
+	db	$da,$01,$00
+	;db	$e5,$77
+	db	$e6,$00,$01
+	db	$db,$02
+	;db	$ef,$f0
+; P1-2
+	db	$d8,$c,$b7
+	db	$d6,$9f		;kane
+; P1-3
+	db	$9f		;kane
+	db	$da,$00,$a8
+	db	$db,$03
+; P1-4
+	db	$d8,$6,$c7
+	db	$d4,$6b
+	db	$a3
+	db	$d3,$1b
+	db	$d4,$c1
+	db	$b1
+; P1-5
+	db	$8b
+	db	$b3
+	db	$d3,$4b
+	db	$31
+	db	$21
+; P1-6
+	db	$d8,$6,$b5
+	db	$17
+	db	$d4,$67
+	db	$a7
+	db	$c3
+	db	$d3,$13
+; P1-7
+	db	$d8,$6,$b3
+	db	$d4,$b7
+	db	$27
+	db	$d5,$77
+	db	$d6,$c7
+; P1-8
+	db	$d8,$6,$b2
+	db	$03
+	db	$d4,$b3
+	db	$b7
+	db	$93
+	db	$97
+	db	$83
+; P1-9
+	db	$87
+	db	$73
+	db	$77
+	db	$d5,$a3
+	db	$a7
+; P1-10
+	db	$93
+	db	$97
+	db	$83
+	db	$87
+	db	$73
+	db	$a7
+; P1-11
+	db	$a3
+	db	$a7
+	db	$95
+	db	$95
+	db	$73
+; P1-12
+	db	$83
+	db	$63
+	db	$d8,$8,$b3
+	db	$d3,$60
+	db	$80
+	db	$a0
+	db	$b0
+	db	$c0
+	db	$d2,$10
+	db	$db,$02
+	db	$d8,$c,$b3
+	db	$30
+	db	$20
+	db	$33
+	db	$a0
+	db	$90
+; P1-13
+	db	$a3
+	db	$d3,$b1
+	db	$d2,$31
+	db	$61
+	db	$85
+; P1-14
+	db	$41
+	db	$31
+	db	$11
+	db	$43
+	db	$71
+	db	$db,$03
+	db	$d8,$8,$92
+	db	$a0
+	db	$60
+	db	$40
+	db	$10
+	db	$d3,$a0
+	db	$80
+; P1-15
+	db	$60
+	db	$40
+	db	$10
+	db	$d4,$a2
+	db	$d8,$c,$b2
+	db	$b1
+	db	$c1
+	db	$d3,$11
+	db	$31
+	db	$41
+	db	$dc,$c2
+	db	$61
+; P1-16
+	db	$81
+	db	$af
+	db	$ff
+;----------------------------------------
+Music_GoldSilverOpening_Ch2:
+;----------------------------------------
+	db	$e6,$00,$01
+	;db	$ef,$0f
+; P2-1
+	db	$d8,$c,$b7
+	db	$db,$02
+; P2-2
+	db	$d5,$1f
+; P2-3
+	db	$1f
+; P2-4
+	db	$db,$03
+	db	$d8,$c,$b2
+	db	$01
+	db	$d8,$6,$62
+	db	$d6,$61
+	db	$a1
+	db	$d5,$11
+	db	$51
+	db	$61
+	db	$a1
+	db	$d4,$11
+	db	$51
+	db	$61
+	db	$a1
+	db	$d3,$11
+	db	$51
+	db	$61
+	db	$a1
+; P2-5
+	db	$d2,$11
+	db	$51
+	db	$d6,$41
+	db	$81
+	db	$b1
+	db	$d5,$31
+	db	$41
+	db	$81
+	db	$b1
+	db	$d4,$31
+	db	$41
+	db	$81
+	db	$b1
+	db	$d3,$31
+	db	$41
+	db	$81
+; P2-6
+	db	$d8,$c,$b7
+	db	$d6,$6f
+; P2-7
+	db	$dc,$83
+	db	$d3,$61
+	db	$dc,$81
+	db	$31
+	db	$dc,$93
+	db	$91
+	db	$dc,$91
+	db	$61
+	db	$dc,$a3
+	db	$d2,$21
+	db	$dc,$a1
+	db	$d3,$b1
+	db	$dc,$b3
+	db	$d2,$71
+	db	$dc,$c1
+	db	$41
+; P2-8
+	db	$dc,$b3
+	db	$d6,$b1
+	db	$d8,$6,$b2
+	db	$d3,$33
+	db	$33
+	db	$d6,$63
+	db	$d3,$33
+	db	$33
+	db	$d5,$13
+	db	$d3,$43
+; P2-9
+	db	$43
+	db	$d6,$63
+	db	$d3,$43
+	db	$43
+	db	$d6,$b3
+	db	$d4,$33
+	db	$33
+	db	$d6,$c3
+; P2-10
+	db	$d4,$33
+	db	$33
+	db	$d5,$13
+	db	$d4,$43
+	db	$43
+	db	$d6,$c3
+	db	$d4,$43
+	db	$73
+; P2-11
+	db	$d6,$b3
+	db	$d4,$33
+	db	$33
+	db	$d6,$c3
+	db	$d4,$35
+	db	$31
+	db	$d5,$13
+	db	$d4,$43
+; P2-12
+	db	$4f
+	db	$d5,$41
+	db	$d4,$83
+	db	$83
+	db	$81
+	db	$d5,$43
+; P2-13
+	db	$d4,$73
+	db	$73
+	db	$d5,$31
+	db	$d4,$63
+	db	$63
+	db	$61
+	db	$d5,$83
+	db	$d4,$c3
+	db	$c3
+; P2-14
+	db	$d5,$13
+	db	$d4,$43
+	db	$43
+	db	$d5,$13
+	db	$d4,$43
+	db	$4f
+; P2-15-tie
+	db	$d8,$6,$a2
+	db	$63
+	db	$83
+	db	$93
+	db	$d8,$6,$c2
+	db	$a3
+	db	$b3
+	db	$d3,$13
+	db	$d8,$6,$d2
+	db	$d4,$a3
+; P2-16
+	db	$d3,$13
+	db	$4f
+	db	$ff
+;----------------------------------------
+Music_GoldSilverOpening_Ch3:
+;----------------------------------------
+; P3-2
+	db	$d8,$6,$7f
+	db	$d5,$3b
+	db	$0b
+	db	$07
+;		init 6 10
+;		tempo 8			d
+;		init 6 20
+;		tempo 4			d
+;		init 6 30
+;		tempo 4			d
+; P3-3
+	db	$d8,$6,$81
+	db	$d5,$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d4,$30
+	db	$00
+	db	$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d3,$30
+	db	$00
+	db	$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d1,$30
+	db	$00
+; P3-4
+	db	$d5,$60
+	db	$00
+	db	$a0
+	db	$00
+	db	$d4,$10
+	db	$00
+	db	$50
+	db	$00
+	db	$60
+	db	$00
+	db	$a0
+	db	$00
+	db	$d3,$10
+	db	$00
+	db	$50
+	db	$00
+	db	$60
+	db	$00
+	db	$a0
+	db	$00
+	db	$d2,$10
+	db	$00
+	db	$50
+	db	$00
+	db	$60
+	db	$00
+	db	$a0
+	db	$00
+	db	$d1,$10
+	db	$00
+	db	$50
+	db	$00
+; P3-5
+	db	$d5,$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d4,$30
+	db	$00
+	db	$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d3,$30
+	db	$00
+	db	$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$40
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$d1,$30
+	db	$00
+; P3-6
+	db	$d8,$8,$0e
+	db	$60
+	db	$d2,$c0
+	db	$a0
+	db	$c0
+	db	$a0
+	db	$60
+	db	$a0
+	db	$60
+	db	$d3,$c0
+	db	$d2,$60
+	db	$d3,$c0
+	db	$a0
+	db	$c0
+	db	$a0
+	db	$60
+	db	$a0
+	db	$60
+	db	$d4,$c0
+	db	$d3,$60
+	db	$d4,$c0
+	db	$a0
+	db	$c0
+	db	$a0
+	db	$60
+; P3-7
+	db	$d8,$c,$4b
+	db	$d2,$a1
+	db	$80
+	db	$00
+	db	$d1,$11
+	db	$d2,$b0
+	db	$00
+	db	$d1,$61
+	db	$40
+	db	$00
+	db	$b1
+	db	$90
+	db	$00
+; P3-8
+	db	$0f
+; P3-9
+	db	$03
+	db	$d8,$6,$81
+	db	$d5,$80
+	db	$02
+	db	$a1
+	db	$01
+	db	$d2,$6b
+	db	$33
+; P3-10 -tie
+	db	$35
+	db	$dc,$15
+	db	$61
+	db	$dc,$81
+	db	$4b
+	db	$dc,$40
+	db	$91
+	db	$01
+	db	$75
+	db	$dc,$15
+	db	$41
+; P3-11
+	db	$dc,$81
+	db	$6b
+	db	$dc,$40
+	db	$31
+	db	$01
+	db	$45
+	db	$dc,$15
+	db	$61
+	db	$81
+	db	$01
+	db	$71
+	db	$01
+; P3-12
+	db	$81
+	db	$01
+	db	$dc,$2b
+	db	$a3
+	db	$43
+	db	$61
+	db	$01
+	db	$d3,$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$10
+	db	$00
+; P3-13
+	db	$d3,$b0
+	db	$00
+	db	$d2,$10
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$10
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$30
+	db	$00
+	db	$d3,$b0
+	db	$00
+	db	$d2,$10
+	db	$00
+	db	$30
+	db	$00
+	db	$60
+	db	$00
+	db	$30
+	db	$00
+	db	$60
+	db	$00
+; P3-14
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$80
+	db	$00
+	db	$b0
+	db	$00
+	db	$70
+	db	$00
+	db	$b0
+	db	$00
+	db	$70
+	db	$00
+	db	$b0
+	db	$00
+	db	$70
+	db	$00
+	db	$b0
+	db	$08
+; P3-15
+	db	$d8,$c,$2b
+	db	$0d
+	db	$d4,$61
+; P3-16
+	db	$40
+	db	$00
+	db	$10
+	db	$0c
+	db	$ff
+
+
