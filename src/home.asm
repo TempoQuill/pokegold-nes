@@ -307,7 +307,7 @@ Home1_DelayFrames:
 
 HomeTerminal:
 Home1_HomeTerminal:
-; input a(xy)
+; input zSavedBank(zSavedPointer)
 	LDA zSavedPointer
 	BEQ +
 	DEC zSavedPointer + 1

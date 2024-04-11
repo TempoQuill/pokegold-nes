@@ -142,8 +142,8 @@ zScratchWord:
 	.dsb 6
 zRNGPointer:
 	.dsb 2
-	.dsb 1
-	.dsb 1
+zNameTablePointer:
+	.dsb 2
 	.dsb 1
 	.dsb 1
 	.dsb 1

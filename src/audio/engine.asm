@@ -1,3 +1,5 @@
+; The entire sound engine.  Interfaces are located on PRG_HomeROM2 (ROM bank $7f)
+
 _InitSound:
 	PSH
 @ClearAPU:

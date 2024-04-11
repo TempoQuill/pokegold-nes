@@ -135,10 +135,11 @@ ClearBattleRAM:
 	; farcall ResetEnemyStatLevels
 	
 	JSR ClearWindowData
-	
-	LDA #<vBGMap0
-	STA hBGMapAddress
-	LDA #>vBGMap0
-	STA hBGMapAddress + 1
+; TEMPO's NOTE: Must make a fresh label for nametables
+; Also must make a fresh label for the nametable pointer in Zero-Page RAM.
+	LDA #<NT0
+	STA zNameTablePointer
+	LDA #>NT0
+	STA zNameTablePointer + 1
 	RTS
 	

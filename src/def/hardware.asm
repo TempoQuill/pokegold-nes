@@ -33,6 +33,13 @@ IGNORE_MIRRORING = 8
 
 NES_2_0 = 8
 
+NT0 = $2000
+NT1 = $2400
+NT2 = $2800
+NT3 = $2c00
+PAL_BG = $3f00
+PAL_OBJ = $3f10
+
 ; reference: NTSC NES runs at 1,789,773 Hz
 ; each frame contains 29,780 cycles
 ; therefore NTSC NES runs at 60,099.832 mHz

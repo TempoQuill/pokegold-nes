@@ -996,6 +996,8 @@ RunTitleScreen:
 	ldx #1
 	stx zOAMUpdate
 ;	farcall PlaySpriteAnimations
+; TEMPO's NOTE: farcall macros push/restore with PSH and PLL
+;	so no register can be destroyed
 	dex ; I'm not certain that X won't be destroyed by PlaySpriteAnimations, if it will then fix this
 	stx zOAMUpdate
 	jsr UpdateTitleTrailSprite
