@@ -12,7 +12,9 @@ PRG_PokedexDataPointerTable:
 PRG_DeleteSave:			
 	.dsb 1	; 04 / 05
 
-PRG_SaveFunctions:	.dsb 1	; 06 / 07
+PRG_SaveFunctions:
+PRG_Tools1: ; SmallFarFlagAction
+	.dsb 1	; 06 / 07
 
 PRG_Intro_Menu:
 PRG_OakIntroGFX:
