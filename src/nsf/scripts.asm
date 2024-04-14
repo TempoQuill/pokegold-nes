@@ -239,3 +239,29 @@ NSF_GetSoundID:
 
 CuePointers:
 	dw	iNSF_ScriptArea
+	dw	NSF_GSIntro
+
+NSF_GSIntro:
+	db	$f7,$52,$f1
+	db	$f1
+	db	$f1
+	db	$f1
+	db	$f1
+	db	$f1
+	db	$1c
+	db	$f2,$08
+	db	$f3,$f1
+	db	$ec
+	db	$f7,$53,$06
+	db	$0e
+	db	$f9,$a8,$50
+	db	$f9,$a8,$50
+	db	$f9,$a8,$52
+	db	$04
+	db	$81
+	db	$04
+	db	$f9,$a7,$40
+	db	$80
+	db	$40
+	db	$f7,$01,$01
+	db	$00

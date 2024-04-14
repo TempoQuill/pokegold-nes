@@ -9,7 +9,7 @@ PRG_Intro:
 	.dsb 1	; 02 / 03
 
 PRG_PokedexDataPointerTable:
-PRG_DeleteSave:			
+PRG_DeleteSave:
 	.dsb 1	; 04 / 05
 
 PRG_SaveFunctions:	.dsb 1	; 06 / 07
@@ -28,6 +28,7 @@ PRG_Tilesets_2:
 PRG_ClockReset:
 PRG_Tilesets_3:
 PRG_CatchTutorial:
+PRG_EggMoves:
 	.dsb 1	; 0e / 0f
 
 PRG_PokedexEntries_001_064:	.dsb 1	; 10 / 11
@@ -43,7 +44,7 @@ PRG_BattleCore:			.dsb 1	; 1e / 1f
 PRG_EvolutionsAndAttacks:	.dsb 1	; 20 / 21
 
 PRG_PicPointers:	.dsb 1	; 22 / 23
-PRG_12:			.dsb 1  ; 24 / 25
+PRG_12:			.dsb 1	; 24 / 25
 PRG_UnownPicPointers:	.dsb 1	; 26 / 27
 PRG_TrainerPicPointers:	.dsb 1	; 28 / 29
 
@@ -63,7 +64,10 @@ PRG_MapBlocks_2:	.dsb 1	; 34 / 35
 PRG_1b:			.dsb 1	; 36 / 37
 PRG_1c:			.dsb 1	; 38 / 39
 PRG_1d:			.dsb 1	; 3a / 3b
-PRG_MoveAnimations:	.dsb 1	; 3c / 3d
+
+PRG_MoveAnimations:
+PRG_PokepicMapping:
+	.dsb 1	; 3c / 3d
 
 PRG_MapBlocks_3:
 PRG_Tilesets_5:

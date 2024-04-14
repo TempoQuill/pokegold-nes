@@ -318,6 +318,7 @@ Home1_HomeTerminal:
 	PHA
 	LDA zSavedBank
 	STA MMC5_PRGBankSwitch5
+	LDA zABackup
 	RTS
 
 ; y, tile, attr, x

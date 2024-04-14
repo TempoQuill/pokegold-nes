@@ -203,6 +203,7 @@ MACRO farcall bank, memory
 ENDM
 
 MACRO home_ref bank, memory
+	STA zABackup
 	LDA #bank
 	STA zSavedBank
 	LDA #>memory
@@ -213,6 +214,7 @@ MACRO home_ref bank, memory
 ENDM
 
 MACRO home_jump bank, memory
+	STA zABackup
 	LDA #bank
 	STA zSavedBank
 	LDA #>memory

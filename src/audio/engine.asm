@@ -2540,3 +2540,20 @@ FetchSFXEquivalent:
 	JSR UpdateTrackPointer
 	PLA
 	RTS
+
+IFNDEF
+PlayTrainerEncounterMusic:
+	LDA #0
+	STA zMusicSilence
+	; play nothing for one frame
+	PHY
+	LDY #0
+	JSR PlayMusic
+	JSR DelayFrame
+	; play new song
+	JSR MaxVolume
+	PLY
+	LDA TrainerEncounterMusic, Y
+	TAY
+	JMP PlayMusic
+ENDIF

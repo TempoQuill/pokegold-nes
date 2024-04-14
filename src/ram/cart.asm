@@ -1,5 +1,28 @@
 ; RAM_MAIN
 .enum $6000
+wInputType:		.dsb 1
+wAutoInputAddress:	.dsb 1
+wAutoInputBank:		.dsb 1
+wAutoInputLength:	.dsb 1
+
+wDebugFlags:		.dsb 1
+wGameLogicPaused:	.dsb 1
+wSpriteUpdatesEnabled:	.dsb 1
+
+wUnusedScriptByte:	.dsb 1
+
+wMapTimeOfDay:		.dsb 1
+
+wPrevDexEntry:			.dsb 1
+wDisableTextAcceleration:	.dsb 1
+wPCItemsCursor:			.dsb 1
+wPCItemsScrollPosition:		.dsb 1
+
+wBGPals1:	.dsb 4 * 4
+wOBPals1:	.dsb 4 * 4
+wBGPals2:	.dsb 4 * 4
+wOBPals2:	.dsb 4 * 4
+
 wBattleParticipantsNotFainted:
 	.dsb 1
 wBattleParticipantsIncludingFainted:

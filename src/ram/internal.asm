@@ -144,8 +144,9 @@ zRNGPointer:
 	.dsb 2
 zNameTablePointer:
 	.dsb 2
-	.dsb 1
-	.dsb 1
+zScriptPointer:
+	.dsb 2
+zOAMUpdate:
 	.dsb 1
 	.dsb 1
 	.dsb 1
@@ -288,7 +289,7 @@ zPPUDataBufferPointer:
 	.dsb 2
 zWindow1:
 	.dsb 1
-zWindow2:
+zABackup:
 	.dsb 1
 iStack:
 iStackBottom:

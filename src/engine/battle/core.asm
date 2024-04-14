@@ -270,9 +270,9 @@ HandleBerserkGene:
 	
 @player:
 	home_ref PRG_HomeROM2, SetPlayerTurn
-	LDA #>wPartyMon1 + MON_ITEM
+	LDA #>(wPartyMon1 + MON_ITEM)
 	STA zMonPointer + 1
-	LDA #<wPartyMon1 + MON_ITEM
+	LDA #<(wPartyMon1 + MON_ITEM)
 	STA zMonPointer
 	LDA wCurBattleMon
 	JMP @go

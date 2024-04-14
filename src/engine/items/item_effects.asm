@@ -507,16 +507,27 @@ ENDIF
 	lda wCurItem
 	cmp #FRIEND_BALL
 	bne @SkipPartyMonFriendBall
-	
+
 	ldx wPartyCount
 	dex
 	; don't know the arguments to AddNTimes
 	; ld hl, wPartyMon1Happiness
 	; ld bc, PARTYMON_STRUCT_LENGTH
-	jsr AddNTimes
+
+	; TEMPO's NOTE: I've figured out AddNTimes' arguments
+	; input - y, a, zScratchWord
+	; output - zScratchWord
+	LDA #>(wPartyMon1 + MON_HAPPINESS)
+	STA zScratchWord + 1
+	LDA #<(wPartyMon1 + MON_HAPPINESS)
+	STA zScratchWord
+	TXA
+	LDY #PARTYMON_STRUCT_LENGTH
+	home_ref PRG_HomeROM2, AddNTimes
 	
 	lda #FRIEND_BALL_HAPPINESS
-	sta wPartyMon1Happiness
+	LDY #0
+	STA (zScratchWord), Y
 	
 @SkipPartyMonFriendBall:
 	lda #<AskGiveNicknameText
@@ -537,7 +548,13 @@ ENDIF
 	stx wCurPartyMon
 	; ld hl, wPartyMonNicknames
 	; ld bc, MON_NAME_LENGTH
-	jsr AddNTimes
+	LDA #>wPartyMonNicknames
+	STA zScratchWord + 1
+	LDA #<wPartyMonNicknames
+	STA zScratchWord
+	TXA
+	LDY #MON_NAME_LENGTH
+	home_ref PRG_HomeROM2, AddNTimes
 	
 	; these next are probably unnecessary, since the pointer will probably be in RAM
 	; ld d, h
