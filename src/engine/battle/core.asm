@@ -500,10 +500,92 @@ ResetEnemyStatLevels:
 	rts
 
 BreakAttraction:
+	lda wPlayerSubStatus1
+	ora #SUBSTATUS_IN_LOVE
+	eor #SUBSTATUS_IN_LOVE
+	sta wPlayerSubStatus1
+	lda wEnemySubStatus1
+	ora #SUBSTATUS_IN_LOVE
+	eor #SUBSTATUS_IN_LOVE
+	sta wEnemySubStatus1
 	RTS
 
 EnemySwitch:
-	RTS
+	jsr CheckWhetherToSwitch
+	bcc EnemySwitch_SetMode
+	; Shift Mode
+	jsr ResetEnemyBattleVars
+	jsr CheckWhetherSwitchmonIsPredetermined
+	bcs +
+	jsr FindMonInOTPartyToSwitchIntoBattle
++	; x contains the PartyNr of the mon the AI will switch to
+	jsr LoadEnemyMonToSwitchTo
+	jsr OfferSwitch
+	php
+	jsr ClearEnemyMonBox
+	jsr ShowBattleTextEnemySentOut
+	jsr ShowSetEnemyMonAndSendOutAnimation
+	plp
+	RCS
+	; If we're here, then we're switching too
+	lda #0
+	sta wBattleParticipantsNotFainted
+	sta wBattleParticipantsIncludingFainted
+	sta wBattlePlayerAction
+	lda #1
+	sta wEnemyIsSwitching
+	jsr LoadTilemapToTempTilemap
+	jmp PlayerSwitch
+	
+EnemySwitch_SetMode:
+	jsr ResetEnemyBattleVars
+	jsr CheckWhetherSwitchmonIsPredetermined
+	bcs +
+	jsr FindMonInOTPartyToSwitchIntoBattle
++	; x contains the PartyNr of the mon the AI will switch to
+	jsr LoadEnemyMonToSwitchTo
+	lda #1
+	sta wEnemyIsSwitching
+	jsr ClearEnemyMonBox
+	jsr ShowBattleTextEnemySentOut
+	jmp ShowSetEnemyMonAndSendOutAnimation
+	
+CheckWhetherSwitchmonIsPredetermined:
+; returns the enemy switchmon index in b, or
+; returns carry if the index is not yet determined.
+	; wLinkMode check
+	ldx wEnemySwitchMonIndex
+	beq @check_wBattleHasJustStarted
+	dex
+	jmp @return_carry
+	
+@check_wBattleHasJustStarted:
+	ldx #0
+	lda wBattleHasJustStarted
+	bne @return_carry
+	clc
+	rts
+	
+@return_carry:
+	sec
+	rts
+	
+ResetEnemyBattleVars:
+; and draw empty Textbox
+	ldx #0
+	stx wLastPlayerCounterMove
+	stx wLastEnemyCounterMove
+	stx wLastEnemyMove
+	stx wCurEnemyMove
+	dex ; #255
+	stx wEnemyItemState
+	inx ; #0
+	stx wPlayerWrapCount
+	OGT 0, 18, 0
+	lda #8
+	jsr SlideBattlePicOut
+	jsr EmptyBattleTextbox
+	jmp LoadStandardMenuHeader
 
 CheckPlayerPartyForFitMon:
 ; Has the player any mon in his Party that can fight?
@@ -518,7 +600,26 @@ SlideBattlePicOut:
 	RTS
 
 ResetBattleParticipants:
-	RTS
+	lda #0
+	sta wBattleParticipantsNotFainted
+	sta wBattleParticipantsIncludingFainted
+AddBattleParticipant:
+	ldy wCurBattleMon
+	lda #<wBattleParticipantsNotFainted
+	ldx #>wBattleParticipantsNotFainted
+	sta zScratchWord
+	stx zScratchWord + 1
+	ldx #SET_FLAG
+	PHX
+	PHY
+	predef PRG_Tools1, SmallFarFlagAction
+	PLY
+	PLX
+	lda #<wBattleParticipantsIncludingFainted
+	ldx #>wBattleParticipantsIncludingFainted
+	sta zScratchWord
+	stx zScratchWord
+	predef_jump PRG_Tools1, SmallFarFlagAction
 
 InitBattleMon:
 	RTS
@@ -539,7 +640,52 @@ EmptyBattleTextbox:
 	RTS
 
 SpikesDamage:
-	RTS
+	lda zBattleTurn
+	bne @enemy
+	lda wPlayerScreens
+	and #SCREENS_SPIKES
+	cmp #SCREENS_SPIKES
+	RNE
+	; Flying-types aren't effected by Spikes.
+	lda wPlayerMonType
+	cmp #FLYING
+	REQ
+	lda wPlayerMonType + 1 ; TYPE2 also counts
+	cmp #FLYING
+	REQ
+	ldx #<UpdatePlayerHUD
+	ldy #>UpdatePlayerHUD
+	jmp @continue
+	
+@enemy:
+	lda wEnemyScreens
+	and #SCREENS_SPIKES
+	cmp #SCREENS_SPIKES
+	RNE
+	; Flying-types aren't effected by Spikes.
+	lda wEnemyMonType
+	cmp #FLYING
+	REQ
+	lda wEnemyMonType + 1 ; TYPE2 also counts
+	cmp #FLYING
+	REQ
+	ldx #<UpdateEnemyHUD
+	ldy #>UpdateEnemyHUD
+@continue:
+	stx zScratchWord
+	sty zScratchWord + 1
+	ldx #<BattleText_HurtBySpikes
+	ldy #>BattleText_HurtBySpikes
+	stx zTextPointer
+	sty zTextPointer + 1
+	jsr StdBattleTextbox
+	jsr GetEighthMaxHP
+	jsr SubtractHPFromTarget
+	jsr @zScratchWord
+	jmp WaitBGMap
+	
+@zScratchWord:
+	jmp (zScratchWord)
 
 BattleMenu:
 	RTS
