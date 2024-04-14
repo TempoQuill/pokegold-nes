@@ -2541,7 +2541,7 @@ FetchSFXEquivalent:
 	PLA
 	RTS
 
-IFNDEF
+IFNDEF NSF_FILE
 PlayTrainerEncounterMusic:
 	LDA #0
 	STA zMusicSilence
