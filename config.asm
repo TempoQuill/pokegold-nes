@@ -1,4 +1,4 @@
-NSF_FILE = 1
+; NSF_FILE = 1
 ; PLAY_NSF_CRIES = 1
 ; PLAY_NSF_SFX = 1
 ; BETA_SFX = 1

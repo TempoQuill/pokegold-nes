@@ -71,6 +71,9 @@ wEnemyMonCatchRate:	.dsb 1
 wEnemyMonBaseExp:	.dsb 1
 wEnemyMonEnd:
 
+wPlayerName: .dsb PLAYER_NAME_LENGTH
+wRivalName:  .dsb PLAYER_NAME_LENGTH
+
 wStringBuffer1:	.dsb STRING_BUFFER_LENGTH
 
 wNumHits:
