@@ -788,12 +788,12 @@ Script_hangup:
 
 Script_askforphonenumber:
 	JSR YesNoBox
-;	jr c, @refused
+	BCS @refused
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
 ;	ld c, a
 	farcall PRG_17, AddPhoneNumber
-;	jr c, @phonefull
+	BCS @phonefull
 	LDA #0 ; PHONE_CONTACT_GOT
 ;	jr @done
 @phonefull
@@ -819,9 +819,10 @@ Script_describedecoration:
 Script_fruittree:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
-;	ld [wCurFruitTree], a
-;	ld b, BANK(FruitTreeScript)
-;	ld hl, FruitTreeScript
+	STA wCurFruitTree
+	LDA #$11
+	LDX #<FruitTreeScript
+	LDY #>FruitTreeScript
 	JMP ScriptJump
 
 Script_swarm:
@@ -870,8 +871,7 @@ Script_trainerflagaction:
 ;	ld b, a
 	JSR EventFlagAction
 ;	ld a, c
-;	and a
-;	ret z
+	REQ
 ;	ld a, TRUE
 	STA wScriptVar
 	RTS
@@ -895,8 +895,7 @@ Script_winlosstext:
 
 Script_endifjustbattled:
 ;	ld a, [wRunningTrainerBattleScript]
-;	and a
-;	ret z
+	REQ
 	JMP Script_end
 
 Script_checkjustbattled:
@@ -1006,23 +1005,22 @@ UnfreezeFollowerObject:
 Script_applymovementlasttalked:
 ; apply movement to last talked
 
-;	ldh a, [hLastTalked]
+	LDA zLastTalked
 ;	ld c, a
 	JMP ApplyMovement
 
 Script_faceplayer:
-;	ldh a, [hLastTalked]
-;	and a
-;	ret z
+	LDA zLastTalked
+	REQ
 ;	ld d, $0
-;	ldh a, [hLastTalked]
+	LDA zLastTalked
 ;	ld e, a
 	farcall $01, GetRelativeFacing
 ;	ld a, d
 ;	add a
 ;	add a
 ;	ld e, a
-;	ldh a, [hLastTalked]
+	LDA zLastTalked
 ;	ld d, a
 	JSR ApplyObjectFacing
 	RTS
@@ -1031,15 +1029,15 @@ Script_faceobject:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
 	CMP #LAST_TALKED
-;	jr c, @ok
-;	ldh a, [hLastTalked]
+	BCS @ok
+	LDA zLastTalked
 @ok
 ;	ld e, a
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
 	CMP #LAST_TALKED
 	BNE @ok2
-;	ldh a, [hLastTalked]
+	LDA zLastTalked
 @ok2
 ;	ld d, a
 ;	push de
@@ -1059,7 +1057,7 @@ Script_turnobject:
 	LDA zScratchByte
 	CMP #LAST_TALKED
 	BNE @ok
-;	ldh a, [hLastTalked]
+	LDA zLastTalked
 @ok
 ;	ld d, a
 	home_ref PRG_HomeROM2, GetScriptByte
@@ -1074,14 +1072,14 @@ ApplyObjectFacing:
 ;	ld a, d
 ;	push de
 	JSR CheckObjectVisibility
-;	jr c, @not_visible
+	BCS @not_visible
 ;	ld hl, OBJECT_SPRITE
 ;	add hl, bc
 ;	ld a, [hl]
 ;	push bc
 	JSR DoesSpriteHaveFacings
 ;	pop bc
-;	jr c, @not_visible ; STILL_SPRITE
+	BCS @not_visible ; STILL_SPRITE
 ;	ld hl, OBJECT_FLAGS1
 ;	add hl, bc
 ;	bit FIXED_FACING_F, [hl]
@@ -1123,7 +1121,7 @@ Script_disappear:
 	LDA zScratchByte
 	CMP #LAST_TALKED
 	BNE @ok
-;	ldh a, [hLastTalked]
+	LDA zLastTalked
 @ok
 	JSR DeleteObjectStruct
 ;	ldh a, [hMapObjectIndex]
@@ -1221,11 +1219,11 @@ Script_showemote:
 	LDA zScratchByte
 	CMP #LAST_TALKED
 ;	jr z, @ok
-;	ldh [hLastTalked], a
+	STA zLastTalked
 @ok
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
-;	ld [wScriptDelay], a
+	STA wScriptDelay
 ;	ld b, BANK(ShowEmoteScript)
 ;	ld de, ShowEmoteScript
 	JMP ScriptCall
@@ -1515,7 +1513,7 @@ Script_ifgreater:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
 ;	cp b
-;	jr c, Script_sjump
+	BCS Script_sjump
 ;	jr SkipTwoScriptBytes
 
 Script_ifless:
@@ -1524,7 +1522,7 @@ Script_ifless:
 ;	ld b, a
 ;	ld a, [wScriptVar]
 ;	cp b
-;	jr c, Script_sjump
+	BCS Script_sjump
 ;	jr SkipTwoScriptBytes
 
 Script_jumpstd:
@@ -1687,16 +1685,13 @@ Script_random:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
 	STA wScriptVar
-;	and a
-;	ret z
+	REQ
 
-;	ld c, a
 	JSR @Divide256byC
-;	and a
-;	jr z, @no_restriction ; 256 % b == 0
+	BEQ @no_restriction ; 256 % b == 0
 ;	ld b, a
 	LDA #0
-	sub b
+;	sub b
 ;	ld b, a
 @loop
 ;	push bc
@@ -1724,14 +1719,16 @@ Script_random:
 
 @Divide256byC:
 	LDA #0
-;	ld b, a
-	sub c
+	TAX
+	SEC
+	SBC zScriptVar
+	SEC
 @mod_loop
-;	inc b
-	sub c
-;	jr nc, @mod_loop
-;	dec b
-;	add c
+	INX
+	SBC zScriptVar
+	BCS @mod_loop
+	DEX
+	ADC zScriptVar
 	RTS
 
 Script_readvar:
@@ -1787,7 +1784,7 @@ GetStringBuffer:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
 ;	cp NUM_STRING_BUFFERS
-;	jr c, @ok
+	BCS @ok
 	LDA #0
 @ok
 
@@ -1984,7 +1981,7 @@ Script_checkmoney:
 	;farcall CompareMoney
 
 CompareMoneyAction:
-;	jr c, @less
+	BCS @less
 ;	jr z, @exact
 ;	ld a, HAVE_MORE
 ;	jr @done
@@ -2123,9 +2120,8 @@ Script_specialphoneJSR:
 Script_checkphoneJSR:
 ; returns false if no special phone JSR is stored
 
-;	ld a, [wSpecialPhoneCallID]
-;	and a
-;	jr z, @ok
+	LDA wSpecialPhoneCallID
+	BEQ @ok
 ;	ld a, TRUE
 @ok
 	STA wScriptVar
@@ -2214,8 +2210,7 @@ Script_checkevent:
 ;	ld b, CHECK_FLAG
 	JSR EventFlagAction
 ;	ld a, c
-;	and a
-;	jr z, @false
+	BEQ @false
 ;	ld a, TRUE
 @false
 	STA wScriptVar
@@ -2253,8 +2248,7 @@ Script_checkflag:
 ;	ld b, CHECK_FLAG
 	JSR _EngineFlagAction
 ;	ld a, c
-;	and a
-;	jr z, @false
+	BEQ @false
 ;	ld a, TRUE
 @false
 	STA wScriptVar
@@ -2298,8 +2292,7 @@ Script_warp:
 ; This seems to be some sort of error handling case.
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
-;	and a
-;	jr z, @not_ok
+	BEQ @not_ok
 ;	ld [wMapGroup], a
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
@@ -2490,23 +2483,20 @@ Script_autoinput:
 Script_pause:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
-;	and a
-;	jr z, @loop
-;	ld [wScriptDelay], a
+	BEQ @loop
+	STA wScriptDelay
 @loop
-;	ld c, 2
+	LDA #2
 	JSR DelayFrames
-;	ld hl, wScriptDelay
-;	dec [hl]
+	DEC wScriptDelay
 	BNE @loop
 	RTS
 
 Script_deactivatefacing:
 	home_ref PRG_HomeROM2, GetScriptByte
 	LDA zScratchByte
-;	and a
-;	jr z, @no_time
-;	ld [wScriptDelay], a
+	BEQ @no_time
+	STA wScriptDelay
 @no_time
 	LDA #SCRIPT_WAIT
 	STA wScriptMode
@@ -2518,7 +2508,7 @@ Script_stopandsjump:
 
 Script_end:
 	JSR ExitScriptSubroutine
-;	jr c, @resume
+	BCS @resume
 	RTS
 
 @resume
@@ -2549,21 +2539,15 @@ ExitScriptSubroutine:
 	STA MMC5_Multiplier1
 	STY MMC5_Multiplier2
 	LDY MMC5_Multiplier1
-;	ld hl, wScriptStack
-;	add hl, de
-;	add hl, de
-;	add hl, de
-;	ld a, [hli]
-;	ld b, a
-;	and $7f
+	LDA wScriptStack, Y
+	INY
+	AND #$7f
 	STA wScriptBank
-;	ld a, [hli]
-;	ld e, a
-;	ld [wScriptPos], a
-;	ld a, [hl]
-;	ld d, a
-;	ld [wScriptPos + 1], a
-;	and a
+	LDA wScriptStack, Y
+	INY
+	STA wScriptPos
+	LDA wScriptStack, Y
+	CLC
 	RTS
 @done
 	SEC
