@@ -132,7 +132,7 @@ Home1_PushCHR:
 	STA MMC5_CHRBankSwitch1, X
 	INY
 	DEC zCHRWindowQueue
-	BNE @Loop
+	BNE @loop
 	RTS
 
 PushFarBank:

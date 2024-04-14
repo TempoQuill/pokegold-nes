@@ -287,3 +287,6 @@ TerminateExpBarSound:
 	STA rNR12
 	STA rNR13
 	RTS
+	
+GetMapMusic:
+	RTS

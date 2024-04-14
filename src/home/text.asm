@@ -47,7 +47,7 @@ StartString:
 	LDA zTextPointer, Y
 	STA zTextPointer + 2, Y
 	DEY
-	BPL @Loop
+	BPL @loop
 	RTS
 
 TextCommands:
@@ -126,8 +126,12 @@ s_Green:	db	"GREEN",	TX_END
 s_Enemy:	db	"Enemy ",	TX_END
 s_Mom:		db	"MOM",		TX_END
 s_PK_MN:	db	$7b,$7c,	TX_END
-s_Player:	db	TX_RAM,		wPlayersName,	TX_END
-s_Rival:	db	TX_RAM,		wRivalsName,	TX_END
+s_Player:	db	TX_RAM
+			dw	wPlayerName
+			db	TX_END
+s_Rival:	db	TX_RAM
+			dw	wRivalName
+			db	TX_END
 s_Poke:		db	"POK<",		TX_END
 s_SlotElispses:	db	"__",		TX_END
 s_PC:		db	"PC",		TX_END
