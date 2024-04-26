@@ -51,6 +51,10 @@ PlayMusic:
 	BEQ @Skip
 	LDA #$0f
 	STA rMIX
+IFDEF EXPAND_AUDIO
+	LDA #$13
+	STA rEXMIX
+ENDIF
 	JSR _PlayMusic
 	BNE @Done
 @Skip:

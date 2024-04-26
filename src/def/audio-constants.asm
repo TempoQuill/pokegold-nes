@@ -82,6 +82,7 @@ SOUND_READING_MODE:	.dsb 1
 SOUND_NOISE:		.dsb 1
 SOUND_CRY:		.dsb 1
 SOUND_DPCM:		.dsb 1
+SOUND_NOTE_START:	.dsb 1
 .ende
 
 .enum $0000
