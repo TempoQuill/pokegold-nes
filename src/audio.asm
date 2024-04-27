@@ -21,7 +21,6 @@
 .include "src/audio/music/looksage.asm"
 .include "src/audio/music/pokemonchannel.asm"
 .include "src/audio/music/lighthouse.asm"
-.include "src/audio/music/lookyoungster.asm"
 Audio_SFX_END:
 IF Audio_SFX_END > $c000
 	ERROR "Bank grew too big. Must be within 16K of memory."
@@ -128,6 +127,7 @@ ENDIF
 .include "src/audio/music/ssaqua.asm"
 .include "src/audio/music/vermilioncity.asm"
 .include "src/audio/music/titlescreen.asm"
+.include "src/audio/music/lookyoungster.asm"
 Music3_End:
 IF Music3_End > $4a000
 	ERROR "Bank grew too big. Must be within 16K of memory."

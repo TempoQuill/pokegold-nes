@@ -124,12 +124,17 @@ _UpdateSound:
 @Next:
 	; are we in a sfx channel right now?
 	LDA zCurChannel
+IFDEF EXPAND_AUDIO
+	CMP #CHAN3
+	BCC @PulseChannel
+ENDIF
 	CMP #NUM_MUSIC_CHANS
 	BCS @SFXChannel
 	LDY #CHANNEL_FLAGS1
 	JSR FetchSFXEquivalent
 	LSR A
 	BCS @SoundChannelOn
+@PulseChannel:
 @SFXChannel:
 	JSR UpdateChannels
 @SoundChannelOn:
@@ -180,9 +185,10 @@ UpdateChannels:
 	.dw @Ch10
 
 @Ch1:
+IFNDEF EXPAND_AUDIO
 	LDA zLowHealthAlarm
 	RMI
-@Ch6:
+ELSE
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
 	TAY
@@ -200,13 +206,71 @@ UpdateChannels:
 	BEQ @Ch1_Check_Duty
 @Ch1_FREQ:
 	LDA zCurTrackRawPitch
+	STA rNR62
+	LDA zCurTrackRawPitch + 1
+	ORA #$08
+	STA rNR63
+@Ch1_Check_Duty:
+	TYA
+	TSB NOTE_DUTY_OVERRIDE
+	REQ
+	LDA zCurTrackVolumeEnvAndDuty
+	STA rNR60
+	RTS
+
+@Ch1_VIB:
+	LDA zCurTrackRawPitch
+	STA rNR62
+	TYA
+	BNE @Ch1_Check_Duty
+
+@Ch1_REST:
+	LDA #$12
+	STA rEXMIX
+	LDX #CHAN1*4
+	JMP ClearMMC5Square
+
+@Ch1_SMP:
+	LDA #$12
+	STA rEXMIX
+	LDY #$10
+	STY rNR60
+	LDY zCurTrackRawPitch
+	STY rNR62
+	LDY zCurTrackVolumeEnvAndDuty
+	STY rNR60
+	ORA #$1
+	STA rEXMIX
+	LDA zCurTrackRawPitch + 1
+	ORA #$08
+	STA rNR63
+	RTS
+ENDIF
+@Ch6:
+	LDY #CHANNEL_NOTE_FLAGS
+	LDA (zCurTrackAudioPointer), Y
+	TAY
+	TSB NOTE_REST
+	BNE @Ch6_REST
+	TYA
+	TSB NOTE_NOISE_SAMPLING
+	BNE @Ch6_SMP
+	TYA
+	TSB NOTE_FREQ_OVERRIDE
+	BNE @Ch6_FREQ
+	TYA
+	TSB NOTE_VIBRATO_OVERRIDE
+	BNE @Ch6_VIB
+	BEQ @Ch6_Check_Duty
+@Ch6_FREQ:
+	LDA zCurTrackRawPitch
 	STA rNR12
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
 	STA rNR13
 	LDA zCurTrackPitchSweep
 	STA rNR11
-@Ch1_Check_Duty:
+@Ch6_Check_Duty:
 	TYA
 	TSB NOTE_DUTY_OVERRIDE
 	REQ
@@ -214,25 +278,20 @@ UpdateChannels:
 	STA rNR10
 	RTS
 
-@Ch1_VIB:
+@Ch6_VIB:
 	LDA zCurTrackRawPitch
 	STA rNR12
 	TYA
-	BNE @Ch1_Check_Duty
+	BNE @Ch6_Check_Duty
 
-@Ch1_REST:
+@Ch6_REST:
 	LDA rMIX
 	AND #$1e
 	STA rMIX
-	LDY #0
-	LDA #$10
-	STA rNR10
-	STY rNR11
-	STY rNR12
-	STY rNR13
-	RTS
+	LDX #CHAN1*4
+	JMP ClearSquareNoise
 
-@Ch1_SMP:
+@Ch6_SMP:
 	LDA rMIX
 	AND #$1e
 	STA rMIX
@@ -252,7 +311,7 @@ UpdateChannels:
 	RTS
 
 @Ch2:
-@Ch7:
+IFDEF EXPAND_AUDIO
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
 	TAY
@@ -274,17 +333,15 @@ ENDIF
 	TSB NOTE_DUTY_OVERRIDE
 	REQ
 	LDA zCurTrackVolumeEnvAndDuty
-	STA rNR20
+	STA rNR70
 	RTS
 
 @Ch2_FREQ: ; unreferenced
 	LDA zCurTrackRawPitch
-	STA rNR22
+	STA rNR72
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
-	STA rNR23
-	LDA zCurTrackPitchSweep
-	STA rNR21
+	STA rNR73
 IFDEF BUGFIXES
 	CLV
 	BVC @Ch2_Check_Duty
@@ -294,23 +351,86 @@ ENDIF
 
 @Ch2_VIB:
 	LDA zCurTrackRawPitch
-	STA rNR22
+	STA rNR72
 	TYA
 	BNE @Ch2_Check_Duty
 
 @Ch2_REST:
+	LDA #$11
+	STA rEXMIX
+	LDX #CHAN2*4
+	JMP ClearMMC5Square
+
+@Ch2_SMP:
+	LDA #$11
+	STA rEXMIX
+	LDY #$10
+	STY rNR70
+	LDY zCurTrackRawPitch
+	STY rNR72
+	LDY zCurTrackVolumeEnvAndDuty
+	STY rNR70
+	ORA #$02
+	STA rEXMIX
+	LDA zCurTrackRawPitch + 1
+	ORA #$08
+	STA rNR73
+	RTS
+ENDIF
+@Ch7:
+	LDY #CHANNEL_NOTE_FLAGS
+	LDA (zCurTrackAudioPointer), Y
+	TAY
+	TSB NOTE_REST
+	BNE @Ch7_REST
+	TYA
+	TSB NOTE_NOISE_SAMPLING
+	BNE @Ch7_SMP
+IFDEF BUGFIXES
+	TYA
+	TSB NOTE_FREQ_OVERRIDE
+	BNE @Ch7_FREQ
+ENDIF
+	TYA
+	TSB NOTE_VIBRATO_OVERRIDE
+	BNE @Ch7_VIB
+	TYA
+@Ch7_Check_Duty:
+	TSB NOTE_DUTY_OVERRIDE
+	REQ
+	LDA zCurTrackVolumeEnvAndDuty
+	STA rNR20
+	RTS
+
+@Ch7_FREQ: ; unreferenced
+	LDA zCurTrackRawPitch
+	STA rNR22
+	LDA zCurTrackRawPitch + 1
+	ORA #$08
+	STA rNR23
+	LDA zCurTrackPitchSweep
+	STA rNR21
+IFDEF BUGFIXES
+	CLV
+	BVC @Ch7_Check_Duty
+ELSE
+	RTS
+ENDIF
+
+@Ch7_VIB:
+	LDA zCurTrackRawPitch
+	STA rNR22
+	TYA
+	BNE @Ch7_Check_Duty
+
+@Ch7_REST:
 	LDA rMIX
 	AND #$1d
 	STA rMIX
-	LDY #0
-	LDA #$10
-	STA rNR20
-	STY rNR21
-	STY rNR22
-	STY rNR23
-	RTS
+	LDX #CHAN2*4
+	JMP ClearSquareNoise
 
-@Ch2_SMP:
+@Ch7_SMP:
 	LDA rMIX
 	AND #$1d
 	STA rMIX
@@ -407,12 +527,8 @@ ENDIF
 	LDA rMIX
 	AND #$17
 	STA rMIX
-	LDY #0
-	LDA #$10
-	STA rNR40
-	STY rNR42
-	STY rNR43
-	RTS
+	LDX #CHAN4*4
+	JMP ClearSquareNoise
 
 @Ch4_SMP:
 	LDA rMIX
@@ -442,14 +558,10 @@ ENDIF
 	RTS
 
 @Ch5_REST:
-	LDY #0
 	LDA #$0f
 	STA rMIX
-	STY rNR50
-	STY rNR51
-	STY rNR52
-	STY rNR53
-	RTS
+	LDX #CHAN5*4
+	JMP ClearTriangleDPCM
 
 @Ch5_SMP:
 	LDA #$0f
@@ -462,8 +574,6 @@ ENDIF
 	STA rNR52
 	LDA zDPCMLength
 	STA rNR53
-	LDA #0
-	STA rNR51
 	LDA #$1f
 	STA rMIX
 	RTS
@@ -1318,7 +1428,7 @@ ENDR
 	RTS
 @Rest:
 	LDY #CHANNEL_VOLUME_ENVELOPE
-	LDA #$10
+	LDA #$30
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
@@ -1880,7 +1990,7 @@ ENDR
 REPT 4
 	LSR A
 ENDR
-	ORA #$10
+	ORA #$30
 	LDY #CHANNEL_VOLUME_ENVELOPE
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_ENV_BACKUP
@@ -2449,27 +2559,48 @@ ChannelPointers:
 	.dw iChannel10
 
 ClearChannels:
-	LDY #0
-	LDA #$10
-	STY rMIX
-	STA rNR10
-	STY rNR11
-	STY rNR12
-	STY rNR13
-	STA rNR20
-	STY rNR21
-	STY rNR22
-	STY rNR23
-	STY rNR30
-	STY rNR32
-	STY rNR33
-	STA rNR40
-	STY rNR42
-	STY rNR43
-	STY rNR50
-	STY rNR52
-	STY rNR53
+	LDX #CHAN1*4
+	JSR ClearSquareNoise
+IFDEF EXPAND_AUDIO
+	JSR ClearMMC5Square
+ENDIF
+	LDX #CHAN2*4
+	JSR ClearSquareNoise
+IFDEF EXPAND_AUDIO
+	JSR ClearMMC5Square
+ENDIF
+	LDX #CHAN3*4
+	JSR ClearTriangleDPCM
+	LDX #CHAN4*4
+	JSR ClearSquareNoise
+	LDX #CHAN5*4
+	; fallthrough
+ClearTriangleDPCM:
+	LDA #0
+	STA rNR10, X
+	STA rNR11, X
+	STA rNR12, X
+	STA rNR13, X
 	RTS
+
+ClearSquareNoise:
+	LDA #$10
+	STA rNR10, X
+	LDA #0
+	STA rNR11, X
+	STA rNR12, X
+	STA rNR13, X
+	RTS
+
+IFDEF EXPAND_AUDIO
+ClearMMC5Square:
+	LDA #$10
+	STA rNR60, X
+	LDA #0
+	STA rNR62, X
+	STA rNR63, X
+	RTS
+ENDIF
 
 ApplyEnvLength:
 	LDA zCurChannel
@@ -2493,8 +2624,8 @@ ApplyEnvLength:
 	JSR @ResetTimer
 	DEX
 	TXA
-	AND #$1f
-	CMP #$10
+	AND #$3f
+	CMP #$30
 	BCS @Apply
 	RTS
 @FadeIn:
@@ -2506,7 +2637,7 @@ ApplyEnvLength:
 	JSR @ResetTimer
 	INX
 	TXA
-	AND #$1f
+	AND #$3f
 	REQ
 @Apply:
 	STA (zCurTrackAudioPointer), Y
