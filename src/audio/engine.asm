@@ -215,6 +215,7 @@ ELSE
 	TSB NOTE_DUTY_OVERRIDE
 	REQ
 	LDA zCurTrackVolumeEnvAndDuty
+	ORA #$30
 	STA rNR60
 	RTS
 
@@ -233,13 +234,14 @@ ELSE
 @Ch1_SMP:
 	LDA #$12
 	STA rEXMIX
-	LDY #$10
-	STY rNR60
-	LDY zCurTrackRawPitch
-	STY rNR62
-	LDY zCurTrackVolumeEnvAndDuty
-	STY rNR60
-	ORA #$1
+	LDA #$10
+	STA rNR60
+	LDA zCurTrackRawPitch
+	STA rNR62
+	LDA zCurTrackVolumeEnvAndDuty
+	ORA #$30
+	STA rNR60
+	LDA #$13
 	STA rEXMIX
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
@@ -333,6 +335,7 @@ ENDIF
 	TSB NOTE_DUTY_OVERRIDE
 	REQ
 	LDA zCurTrackVolumeEnvAndDuty
+	ORA #$30
 	STA rNR70
 	RTS
 
@@ -364,13 +367,14 @@ ENDIF
 @Ch2_SMP:
 	LDA #$11
 	STA rEXMIX
-	LDY #$10
-	STY rNR70
-	LDY zCurTrackRawPitch
-	STY rNR72
-	LDY zCurTrackVolumeEnvAndDuty
-	STY rNR70
-	ORA #$02
+	LDA #$10
+	STA rNR70
+	LDA zCurTrackRawPitch
+	STA rNR72
+	LDA zCurTrackVolumeEnvAndDuty
+	ORA #$30
+	STA rNR70
+	LDA #$13
 	STA rEXMIX
 	LDA zCurTrackRawPitch + 1
 	ORA #$08
@@ -1428,7 +1432,7 @@ ENDR
 	RTS
 @Rest:
 	LDY #CHANNEL_VOLUME_ENVELOPE
-	LDA #$30
+	LDA #$10
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_NOTE_FLAGS
 	LDA (zCurTrackAudioPointer), Y
@@ -1990,7 +1994,7 @@ ENDR
 REPT 4
 	LSR A
 ENDR
-	ORA #$30
+	ORA #$10
 	LDY #CHANNEL_VOLUME_ENVELOPE
 	STA (zCurTrackAudioPointer), Y
 	LDY #CHANNEL_ENV_BACKUP
@@ -2625,7 +2629,7 @@ ApplyEnvLength:
 	DEX
 	TXA
 	AND #$3f
-	CMP #$30
+	CMP #$10
 	BCS @Apply
 	RTS
 @FadeIn:
@@ -2637,7 +2641,7 @@ ApplyEnvLength:
 	JSR @ResetTimer
 	INX
 	TXA
-	AND #$3f
+	AND #$1f
 	REQ
 @Apply:
 	STA (zCurTrackAudioPointer), Y
