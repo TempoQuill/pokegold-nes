@@ -78,7 +78,7 @@ ENDIF
 .include "src/audio/music/azaleatown.asm"
 
 .include "src/audio/sfx-audio.asm"
-.include "src/data/pokemon-cries.asm"
+.include "src/data/pokemon/pokemon-cries.asm"
 .include "src/audio/cries.asm"
 Music1_End:
 IF Music1_End > $2c000
