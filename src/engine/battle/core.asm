@@ -594,6 +594,42 @@ CheckPlayerPartyForFitMon:
 	rts
 
 CheckIfCurPartyMonIsFitToFight:
+	lda wCurPartyMon
+	ldx #<wPartyMon1HP
+	ldy #>wPartyMon1HP
+	stx zScratchWord
+	sty zScratchWord + 1
+	jsr GetPartyLocation
+	lda wPartyMon1HP
+	ora wPartyMon1HP + 1
+	RNE
+	lda wBattleHasJustStarted
+	bne @finish_fail
+	ldx wCurPartyMon
+	lda #<(wPartySpecies, x)
+	ldy #>(wPartySpecies, x)
+	sta zScratchWord
+	sty zScratchWord + 1
+	ldx #0
+	lda (zScratchWord), x
+	cmp #EGG
+	php
+	ldx $<BattleText_AnEGGCantBattle
+	ldy #>BattleText_AnEGGCantBattle
+	stx zTextPointer
+	sty zTextPointer + 1
+	plp
+	beq @print_textbox
+	
+	ldx $<BattleText_TheresNoWillToBattle
+	ldy #>BattleText_TheresNoWillToBattle
+	stx zTextPointer
+	sty zTextPointer + 1
+@print_textbox:
+	jsr StdBattleTextbox
+	
+@finish_fail:
+	lda #0
 	RTS
 
 SlideBattlePicOut:
