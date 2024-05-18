@@ -202,3 +202,92 @@ LoadUsedSpritesGFX:
 	jsr LoadStillSpriteTiles
 	jmp LoadMiscTiles
 	
+GetUsedSprites:
+	lda #0
+	sta zUsedSpriteTile
+	ldx #<wUsedSprites
+	ldy #>wUsedSprites
+	stx zScratchWord
+	sty zScratchWord + 1
+	lda #SPRITE_GFX_LIST_CAPACITY - 2
+	ldy #0
+
+@loop:
+	pha
+	lda (zScratchWord), y
+	iny
+	sta zUsedSpriteIndex
+	beq @dont_set
+	
+	sty zTemp8Bit1 ; back up Y
+	jsr GetSprite
+	stx zTemp16Bit1 ; back up X, use word as 2 byte area
+	ldx zScratchWord
+	ldy zScratchWord + 1
+	PHX
+	PHY
+	lda zUsedSpriteTile
+	jsr CopyToVram
+	PLY
+	PLX
+	stx zScratchWord
+	sty zScratchWord + 1
+	ldy zTemp8Bit1 ; back up Y
+	lda zUsedSpriteTile
+	sta (zScratchWord), y
+	clc
+	adc zTemp16Bit1
+	sta zUsedSpriteTile
+	cmp #128
+	bcc @done
+	
+@dont_set:
+	iny
+	pla
+	sec
+	sbc #0 ; dec a
+	bne @loop
+	
+	clc
+	rts
+	
+@done:
+	pla
+	sec
+	rts
+	
+LoadStillSpriteTiles:
+	; crazy addresses
+	lda wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 2) * 2
+	beq +
+	jsr GetSprite
+	
++	lda #$78
+	sta wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 2) * 2 + 1
+	
+	lda wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 1) * 2
+	beq +
+	jsr GetSprite
+	
++	lda #$7C
+	sta wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 1) * 2 + 1
+	rts
+	
+LoadMiscTiles:
+	lda wSpriteFlags
+	and #%1000000
+	RNE
+	
+	ldx #EMOTE_SHADOW
+	; farcall LoadEmote
+	jsr GetMapEnvironment
+	jsr CheckOutdoorMap
+	php ; save flags
+	ldx #EMOTE_GRASS_RUSTLE
+	plp
+	beq @outdoor
+	ldx #EMOTE_BOULDER_DUST
+@outdoor:
+	; farcall LoadEmote
+	rts
+	
