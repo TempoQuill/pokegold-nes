@@ -334,10 +334,18 @@ iVirtualOAM = $700
 ; NSF only
 .enum iChannelsEnd
 ; 00 - endscript
-; fa - silencce
-; fb - music
-; fc - cry
-; fd - sfx
+; f2 - music off
+; f3 - music on
+; f4 - wait for sfx
+; f5 - skip frames
+; f6 - silence
+; f7 - music
+; f8 - cry
+; f9 - sfx
+; fa - extend script
+; fb - restart script
+; fc - new script
+; fd - offset jump
 ; fe - loop
 ; ff - loop_end
 iNSF_WorkArea:
