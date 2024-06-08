@@ -129,6 +129,9 @@ NSF_WaitSFX:
 	JSR CheckSFX
 	RCC
 	DEC iNSF_Offset
+	INC iNSF_Delay
+	PLA ; returning means running the same script byte
+	PLA
 	RTS
 
 NSF_SkipFrames:
@@ -143,12 +146,9 @@ NSF_ExtendScript:
 	ADC iNSF_Pointer
 	STA iNSF_Pointer
 	LDA #0
+	STA iNSF_Offset
 	ADC iNSF_Pointer + 1
 	STA iNSF_Pointer + 1
-	LDA iNSF_Pointer
-	STA zCurTrackAudioPointer
-	LDA iNSF_Pointer + 1
-	STA zCurTrackAudioPointer + 1
 	RTS
 
 NSF_RestartScript:
@@ -159,10 +159,6 @@ NSF_RestartScript:
 	STA iNSF_Pointer + 1
 	LDA #0
 	STA iNSF_Offset
-	LDA iNSF_Pointer
-	STA zCurTrackAudioPointer
-	LDA iNSF_Pointer + 1
-	STA zCurTrackAudioPointer + 1
 	RTS
 
 NSF_OffsetJump:
@@ -209,6 +205,7 @@ NSF_PlayMusic:
 
 NSF_PlayCry:
 	JSR NSF_GetSoundID
+	DEY
 	JMP PlayCry
 
 NSF_PlaySfx:
@@ -240,14 +237,17 @@ NSF_GetSoundID:
 CuePointers:
 	dw	iNSF_ScriptArea
 	dw	NSF_GSIntro
+	dw	NSF_GSIntroWCries
+	dw	NSF_HallOfFame
+	dw	NSF_TI1
+	dw	NSF_TI2
+	dw	NSF_TI3
 
 NSF_GSIntro:
 	db	$f7,$52,$f1
+	db	$fe,5
 	db	$f1
-	db	$f1
-	db	$f1
-	db	$f1
-	db	$f1
+	db	$ff
 	db	$1c
 	db	$f2,$08
 	db	$f3,$f1
@@ -264,4 +264,119 @@ NSF_GSIntro:
 	db	$80
 	db	$40
 	db	$f7,$01,$01
+	db	$00
+
+NSF_GSIntroWCries:
+	db	$f7,$52,$f1
+	db	$fe,5
+	db	$f1
+	db	$ff
+	db	$1c
+	db	$f2,$08
+	db	$f3,$f1
+	db	$ec
+	db	$f7,$53,$06
+	db	$0e
+	db	$f8,$98,$50
+	db	$f8,$9b,$50
+	db	$f8,$9e,$52
+	db	$04
+	db	$81
+	db	$04
+	db	$f9,$a7,$40
+	db	$80
+	db	$40
+	db	$f7,$01,$01
+	db	$00
+
+NSF_HallOfFame:
+	db	$f7,	MUSIC_HALL_OF_FAME,	$f1
+	db	$f8,	MACHAMP,$f4,		$f1
+	db	$f8,	TYPHLOSION,$f4,		$f1
+	db	$f8,	AMPHAROS,$f4,		$f1
+	db	$f8,	GENGAR,$f4,		$f1
+	db	$f8,	ALAKAZAM,$f4,		$f1
+	db	$f8,	GOLEM,$f4,		$f1
+	db	$40
+	db	$f7,	MUSIC_NONE
+	db	$f9,	SFX_ITEM
+	db	$f4
+	db	$30
+	db	$f7,	MUSIC_CREDITS
+	db	$00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NSF_TI1:
+	db	$f1
+	db	$f1
+	db	$f9,SFX_TACKLE
+	db	$fe,6
+
+	db	2*60
+	db	$f9,SFX_HIT_END_OF_EXP_BAR
+
+REPT 7 ; 7*4 = 28
+	db	4*60
+ENDR
+	db	2*60
+	db	$f9,SFX_SHINE
+
+	db	$ff
+	db	$f9,SFX_ITEM
+	db	$00
+
+NSF_TI2:
+	db	$f1
+	db	$f1
+	db	$f9,SFX_TACKLE
+	db	$fe,30
+
+	db	2*60
+	db	$f9,SFX_HIT_END_OF_EXP_BAR
+
+	db	3*60
+	db	$f9,SFX_SHINE
+
+	db	$ff
+	db	$f9,SFX_ITEM
+	db	$00
+
+NSF_TI3:
+	db	$f1
+	db	$f1
+	db	$f9,SFX_TACKLE
+	db	$fe,30
+
+	db	1*60
+	db	$f9,SFX_HIT_END_OF_EXP_BAR
+
+	db	3*60
+	db	$f9,SFX_SHINE
+
+	db	$ff
+	db	$f9,SFX_ITEM
 	db	$00
