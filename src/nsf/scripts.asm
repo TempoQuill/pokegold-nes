@@ -239,54 +239,51 @@ CuePointers:
 	dw	NSF_GSIntro
 	dw	NSF_GSIntroWCries
 	dw	NSF_HallOfFame
-	dw	NSF_TI1
-	dw	NSF_TI2
-	dw	NSF_TI3
 
 NSF_GSIntro:
-	db	$f7,$52,$f1
+	db	$f7,	MUSIC_GS_OPENING,			$f1
 	db	$fe,5
-	db	$f1
+	db							$f1
 	db	$ff
-	db	$1c
-	db	$f2,$08
-	db	$f3,$f1
-	db	$ec
-	db	$f7,$53,$06
-	db	$0e
-	db	$f9,$a8,$50
-	db	$f9,$a8,$50
-	db	$f9,$a8,$52
-	db	$04
-	db	$81
-	db	$04
-	db	$f9,$a7,$40
-	db	$80
-	db	$40
-	db	$f7,$01,$01
+	db							$1c
+	db	$f2,	8
+	db	$f3,						$f1
+	db							$ec
+	db	$f7,	MUSIC_GS_OPENING_2,			$06
+	db							$0e
+	db	$f9,	SFX_GS_INTRO_POKEMON_APPEARS,		$50
+	db	$f9,	SFX_GS_INTRO_POKEMON_APPEARS,		$50
+	db	$f9,	SFX_GS_INTRO_POKEMON_APPEARS,		$52
+	db							$04
+	db							$81
+	db							$04
+	db	$f9,	SFX_GS_INTRO_CHARIZARD_FIREBALL,	$40
+	db							$80
+	db							$40
+	db	$f7,	MUSIC_TITLE,				$01
 	db	$00
 
 NSF_GSIntroWCries:
-	db	$f7,$52,$f1
+	db	$f7,	MUSIC_GS_OPENING,			$f1
 	db	$fe,5
-	db	$f1
+	db							$f1
 	db	$ff
-	db	$1c
-	db	$f2,$08
-	db	$f3,$f1
-	db	$ec
-	db	$f7,$53,$06
-	db	$0e
-	db	$f8,$98,$50
-	db	$f8,$9b,$50
-	db	$f8,$9e,$52
-	db	$04
-	db	$81
-	db	$04
-	db	$f9,$a7,$40
-	db	$80
-	db	$40
-	db	$f7,$01,$01
+	db							$1c
+	db	$f2,	8
+	db	$f3,						$f1
+	db							$ec
+	db	$f7,	MUSIC_GS_OPENING_2,			$06
+	db							$0e
+	db	$f8,	CHIKORITA,				$50
+	db	$f8,	CYNDAQUIL,				$50
+	db	$f8,	TOTODILE,				$52
+	db							$04
+	db							$81
+	db							$04
+	db	$f9,	SFX_GS_INTRO_CHARIZARD_FIREBALL,	$40
+	db							$80
+	db							$40
+	db	$f7,	MUSIC_TITLE,				$01
 	db	$00
 
 NSF_HallOfFame:
@@ -303,80 +300,4 @@ NSF_HallOfFame:
 	db	$f4
 	db	$30
 	db	$f7,	MUSIC_CREDITS
-	db	$00
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-NSF_TI1:
-	db	$f1
-	db	$f1
-	db	$f9,SFX_TACKLE
-	db	$fe,6
-
-	db	2*60
-	db	$f9,SFX_HIT_END_OF_EXP_BAR
-
-REPT 7 ; 7*4 = 28
-	db	4*60
-ENDR
-	db	2*60
-	db	$f9,SFX_SHINE
-
-	db	$ff
-	db	$f9,SFX_ITEM
-	db	$00
-
-NSF_TI2:
-	db	$f1
-	db	$f1
-	db	$f9,SFX_TACKLE
-	db	$fe,30
-
-	db	2*60
-	db	$f9,SFX_HIT_END_OF_EXP_BAR
-
-	db	3*60
-	db	$f9,SFX_SHINE
-
-	db	$ff
-	db	$f9,SFX_ITEM
-	db	$00
-
-NSF_TI3:
-	db	$f1
-	db	$f1
-	db	$f9,SFX_TACKLE
-	db	$fe,30
-
-	db	1*60
-	db	$f9,SFX_HIT_END_OF_EXP_BAR
-
-	db	3*60
-	db	$f9,SFX_SHINE
-
-	db	$ff
-	db	$f9,SFX_ITEM
 	db	$00

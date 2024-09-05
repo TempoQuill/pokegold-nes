@@ -78,7 +78,9 @@ ENDIF
 .include "src/audio/music/azaleatown.asm"
 
 .include "src/audio/sfx-audio.asm"
-.include "src/data/pokemon/pokemon-cries.asm"
+IFNDEF BETA_SFX
+	.include "src/data/pokemon/pokemon-cries.asm"
+ENDIF
 .include "src/audio/cries.asm"
 Music1_End:
 IF Music1_End > $2c000
@@ -128,9 +130,12 @@ ENDIF
 .include "src/audio/music/vermilioncity.asm"
 .include "src/audio/music/titlescreen.asm"
 .include "src/audio/music/mtmoon.asm"
+IFDEF BETA_SFX
+	.include "src/data/pokemon/pokemon-cries.asm"
+ENDIF
 Music3_End:
 IF Music3_End > $4a000
-	ERROR "Bank grew too big. Must be within 16K of memory."
+	ERROR "Bank grew too big. Must be within 8K of memory."
 ENDIF
 .align $2000, $00
 ; dpcm

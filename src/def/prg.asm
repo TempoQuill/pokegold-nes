@@ -86,10 +86,15 @@ PRG_Music1:	.dsb 1	; 46 / 47
 PRG_Music2:
 PRG_SFX:
 PRG_Cries:
-PRG_MonCries:
+IFNDEF BETA_SFX
+	PRG_MonCries:
+ENDIF
 	.dsb 1	; 48 / 49
 
 PRG_Music3:	.dsb 1	; 4a / 4b
+IFDEF BETA_SFX
+	PRG_MonCries:
+ENDIF
 PRG_Music4:	.dsb 1	; 4c / 4d
 
 IFNDEF NSF_FILE
