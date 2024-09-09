@@ -256,16 +256,16 @@ Music_NewBarkTown_Ch3:
 ;----------------------------------------
 ;	db	$ef,$f0
 ; P3-1
-	db	$d8,$c,$31
+	db	$d8,$c,$3f
 	db	$d2,$31
 	db	$51
 @loop:
 	db	$e1,$16,$23
 ; P3-2
-	db	$dc,$63
+	db	$dc,$7f
 	db	$73
 	db	$a3
-	db	$dc,$31
+	db	$dc,$3f
 	db	$81
 	db	$71
 	db	$51
@@ -273,18 +273,18 @@ Music_NewBarkTown_Ch3:
 ; P3-3
 	db	$dc,$81
 	db	$75
-	db	$dc,$31
+	db	$dc,$3f
 	db	$31
 	db	$dc,$81
 	db	$d3,$a5
-	db	$dc,$18
+	db	$dc,$1f
 	db	$80
 	db	$a0
 ; P3-4
-	db	$dc,$63
+	db	$dc,$7f
 	db	$c3
 	db	$d2,$33
-	db	$dc,$31
+	db	$dc,$3f
 	db	$51
 	db	$31
 	db	$21
@@ -295,14 +295,14 @@ Music_NewBarkTown_Ch3:
 	db	$71
 	db	$53
 	db	$01
-	db	$dc,$18
+	db	$dc,$1f
 	db	$30
 	db	$50
 ; P3-6
-	db	$dc,$63
+	db	$dc,$7f
 	db	$73
 	db	$a3
-	db	$dc,$31
+	db	$dc,$3f
 	db	$b1
 	db	$a1
 	db	$81
@@ -310,23 +310,23 @@ Music_NewBarkTown_Ch3:
 ; P3-7
 	db	$dc,$81
 	db	$a5
-	db	$dc,$31
+	db	$dc,$3f
 	db	$d1,$21
 	db	$dc,$81
 	db	$35
-	db	$dc,$18
+	db	$dc,$1f
 	db	$d2,$50
 	db	$70
 ; P3-8
 	db	$dc,$81
 	db	$85
-	db	$dc,$31
+	db	$dc,$3f
 	db	$a1
 	db	$dc,$81
 	db	$c7
 ; P3-9
 	db	$a5
-	db	$dc,$18
+	db	$dc,$1f
 	db	$80
 	db	$70
 	db	$dc,$81
@@ -349,7 +349,7 @@ Music_NewBarkTown_Ch3:
 	db	$8f
 ; P3-17
 	db	$ad
-	db	$dc,$18
+	db	$dc,$1f
 	db	$e1,$16,$23
 	db	$d2,$30
 	db	$50

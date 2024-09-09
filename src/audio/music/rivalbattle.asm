@@ -552,21 +552,21 @@ Music_RivalBattle_Ch2:
 Music_RivalBattle_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$19
+	db	$d8,$c,$1f
 ;
 	db	$d4,$71
 	db	$b1
 	db	$01
-	db	$dc,$7f
+	db	$dc,$81
 	db	$b9
 ; P3-2
-	db	$dc,$19
+	db	$dc,$1f
 	db	$d4,$71
 	db	$d3,$21
 	db	$01
-	db	$dc,$4b
+	db	$dc,$5f
 	db	$25
-	db	$dc,$19
+	db	$dc,$1f
 	db	$d4,$21
 	db	$31
 ; P3-3
@@ -574,9 +574,9 @@ Music_RivalBattle_Ch3:
 	db	$41
 	db	$21
 	db	$41
-	db	$dc,$32
+	db	$dc,$3f
 	db	$73
-	db	$dc,$19
+	db	$dc,$1f
 	db	$51
 	db	$41
 	db	$21
@@ -587,9 +587,9 @@ Music_RivalBattle_Ch3:
 	db	$d4,$21
 	db	$d5,$c1
 	db	$d4,$21
-	db	$dc,$32
+	db	$dc,$3f
 	db	$53
-	db	$dc,$19
+	db	$dc,$1f
 	db	$31
 	db	$21
 	db	$d5,$c1
@@ -599,9 +599,9 @@ Music_RivalBattle_Ch3:
 	db	$d4,$21
 	db	$51
 	db	$21
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d5,$c3
-	db	$dc,$19
+	db	$dc,$1f
 	db	$d4,$11
 	db	$21
 	db	$31
@@ -625,9 +625,9 @@ Music_RivalBattle_Ch3:
 	db	$21
 	db	$91
 	db	$d3,$21
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d4,$93
-	db	$dc,$19
+	db	$dc,$1f
 	db	$21
 	db	$11
 	db	$d5,$c1
@@ -778,7 +778,7 @@ Music_RivalBattle_Ch3:
 	db	$d4,$c1
 	db	$91
 ; P3-41
-	db	$dc,$64
+	db	$dc,$7f
 	db	$87
 	db	$47
 ; P3-42
@@ -792,7 +792,7 @@ Music_RivalBattle_Ch3:
 	db	$67
 ; P3-45
 @loop38:
-	db	$dc,$19
+	db	$dc,$1f
 	db	$d5,$b1
 	db	$d4,$41
 	db	$fd,7
@@ -829,9 +829,9 @@ Music_RivalBattle_Ch3:
 	db	$d5,$c1
 	db	$91
 	db	$c1
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d4,$63
-	db	$dc,$19
+	db	$dc,$1f
 	db	$51
 	db	$41
 	db	$31
@@ -847,9 +847,9 @@ Music_RivalBattle_Ch3:
 	db	$21
 	db	$91
 	db	$d3,$21
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d4,$93
-	db	$dc,$19
+	db	$dc,$1f
 	db	$d3,$21
 	db	$d4,$21
 	db	$91

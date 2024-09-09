@@ -42,7 +42,7 @@ Music_Mom_Ch3:
 ;----------------------------------------
 ; P3-1
 	;db	$ef,$f0
-	db	$d8,$6,$4b
+	db	$d8,$6,$66
 	db	$d4,$50
 	db	$30
 	db	$d5,$c0
@@ -50,7 +50,7 @@ Music_Mom_Ch3:
 	db	$57
 ; P3-2
 @mainloop:
-	db	$dc,$4b
+	db	$dc,$66
 	db	$d5,$a1
 	db	$05
 	db	$d3,$51
@@ -63,7 +63,7 @@ Music_Mom_Ch3:
 	db	$41
 	db	$01
 ; P3-3
-	db	$dc,$25
+	db	$dc,$33
 	db	$d5,$a1
 	db	$01
 	db	$d3,$51

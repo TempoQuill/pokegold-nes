@@ -921,7 +921,7 @@ Music_Credits_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$16,$23
-	db	$d8,$c,$12
+	db	$d8,$c,$16
 ;	db	$ef,$ff
 ; P3-2
 	db	$d1,$80
@@ -949,16 +949,16 @@ Music_Credits_Ch3:
 	db	$d2,$c0
 	db	$80
 	db	$30
-	db	$d8,$6,$3f
+	db	$d8,$6,$4d
 	db	$40
 	db	$56
-	db	$dc,$48
+	db	$dc,$58
 	db	$67
 ; P3-4
 	db	$fe
 	dw	$ffff & @bass4_10
 ; P3-11
-	db	$dc,$12
+	db	$dc,$16
 	db	$d3,$80
 	db	$00
 	db	$d2,$80
@@ -971,7 +971,7 @@ Music_Credits_Ch3:
 	db	$d8,$6,$09
 	db	$60
 	db	$50
-	db	$dc,$24
+	db	$dc,$2c
 	db	$53
 	db	$03
 	db	$63
@@ -988,12 +988,12 @@ Music_Credits_Ch3:
 	db	$fe
 	dw	$ffff & @bass24
 ; P3-25
-	db	$dc,$24
+	db	$dc,$81
 	db	$d5,$83
 	db	$01
 	db	$80
 	db	$00
-	db	$dc,$12
+	db	$dc,$16
 	db	$81
 	db	$d4,$81
 	db	$01
@@ -1001,20 +1001,20 @@ Music_Credits_Ch3:
 	db	$00
 	db	$81
 	db	$d4,$81
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d5,$83
-	db	$dc,$12
+	db	$dc,$16
 	db	$c1
 	db	$d4,$31
 	db	$71
 	db	$81
 ; P3-26
-	db	$dc,$24
+	db	$dc,$81
 	db	$d5,$53
 	db	$01
 	db	$50
 	db	$00
-	db	$dc,$12
+	db	$dc,$16
 	db	$51
 	db	$d4,$51
 	db	$01
@@ -1022,19 +1022,19 @@ Music_Credits_Ch3:
 	db	$00
 	db	$51
 	db	$d4,$51
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d5,$53
-	db	$dc,$12
+	db	$dc,$16
 	db	$91
 	db	$c1
 	db	$d4,$41
 	db	$51
 ; P3-27
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d5,$a3
 	db	$d4,$51
 	db	$01
-	db	$dc,$12
+	db	$dc,$16
 	db	$d5,$91
 	db	$d4,$51
 	db	$01
@@ -1043,7 +1043,7 @@ Music_Credits_Ch3:
 	db	$d4,$51
 	db	$01
 	db	$d5,$81
-	db	$dc,$24
+	db	$dc,$2c
 	db	$73
 	db	$d4,$53
 ; P3-28
@@ -1055,10 +1055,10 @@ Music_Credits_Ch3:
 ; P3-33
 	db	$fe
 	dw	$ffff & @bass33_35
-	db	$dc,$3f
+	db	$dc,$4d
 	db	$40
 	db	$56
-	db	$dc,$48
+	db	$dc,$58
 	db	$67
 ; P3-36
 	db	$d5,$a1
@@ -1069,10 +1069,10 @@ Music_Credits_Ch3:
 	db	$01
 	db	$d3,$21
 	db	$01
-	db	$dc,$3f
+	db	$dc,$4d
 	db	$d2,$60
 	db	$76
-	db	$dc,$48
+	db	$dc,$58
 	db	$87
 ;; P3-37
 	db	$d9,$02
@@ -1118,7 +1118,7 @@ Music_Credits_Ch3:
 	db	$87
 	db	$a7
 ; P3-65
-	db	$dc,$50
+	db	$dc,$58
 	db	$03
 	db	$d3,$73
 	db	$83
@@ -1151,12 +1151,12 @@ Music_Credits_Ch3:
 	db	$b0
 ; P3-71
 	db	$a7
-	db	$dc,$15
+	db	$dc,$18
 	db	$d5,$a0
 	db	$00
 	db	$a0
 	db	$00
-	db	$d8,$8,$0e
+	db	$d8,$8,$18
 	db	$d4,$70
 	db	$00
 	db	$70
@@ -1164,12 +1164,12 @@ Music_Credits_Ch3:
 	db	$70
 	db	$00
 ; P3-72
-	db	$d8,$c,$14
+	db	$d8,$c,$1a
 	db	$d2,$80
 	db	$02
 	db	$50
 	db	$02
-	db	$d8,$8,$14
+	db	$d8,$8,$1a
 	db	$50
 	db	$00
 	db	$50
@@ -1183,7 +1183,7 @@ Music_Credits_Ch3:
 	db	$90
 	db	$00
 ; P3-73
-	db	$d8,$c,$14
+	db	$d8,$c,$18
 	db	$a0
 ;		tempo 15 		r
 ; P3-74
@@ -1197,52 +1197,52 @@ Music_Credits_Ch3:
 @bass4_10:
 	db	$dc,$81
 	db	$8f
-	db	$dc,$1b
+	db	$dc,$21
 	db	$d1,$20
 	db	$32
-	db	$dc,$24
+	db	$dc,$2c
 	db	$13
 	db	$d2,$c3
 	db	$d1,$13
 ; P3-5
 	db	$d8,$c,$81
 	db	$d2,$89
-	db	$dc,$24
+	db	$dc,$2c
 	db	$51
 	db	$01
 	db	$61
 ; P3-6
 	db	$dc,$81
 	db	$89
-	db	$d8,$6,$3f
+	db	$d8,$6,$4d
 	db	$90
 	db	$a6
-	db	$dc,$24
+	db	$dc,$2c
 	db	$53
 ; P3-7
-	db	$dc,$6c
+	db	$dc,$81
 	db	$8b
-	db	$dc,$48
+	db	$dc,$58
 	db	$67
-	db	$dc,$24
+	db	$dc,$2c
 	db	$33
 	db	$03
 	db	$53
 ; P3-8
 	db	$d8,$c,$81
 	db	$69
-	db	$d8,$6,$3f
+	db	$d8,$6,$4d
 	db	$70
 	db	$86
-	db	$dc,$24
+	db	$dc,$2c
 	db	$63
 ; P3-9
 	db	$53
 	db	$43
 	db	$53
-	db	$dc,$6c
+	db	$dc,$81
 	db	$cb
-	db	$dc,$48
+	db	$dc,$58
 	db	$a7
 ; P3-10
 	db	$d8,$c,$81
@@ -1252,21 +1252,21 @@ Music_Credits_Ch3:
 	db	$d8,$6,$1b
 	db	$70
 	db	$82
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d3,$83
 	db	$d2,$33
-	db	$dc,$6c
+	db	$dc,$81
 	db	$8b
-	db	$dc,$48
+	db	$dc,$58
 	db	$97
 	db	$ff
 @bass20_23:
-	db	$dc,$24
+	db	$dc,$81
 	db	$d4,$63
 	db	$01
 	db	$61
 	db	$01
-	db	$dc,$12
+	db	$dc,$16
 	db	$d3,$11
 	db	$d4,$a1
 	db	$61
@@ -1276,14 +1276,14 @@ Music_Credits_Ch3:
 	db	$01
 	db	$d4,$a1
 	db	$d3,$11
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d4,$63
 ; P3-21
 	db	$83
 	db	$01
 	db	$81
 	db	$01
-	db	$dc,$12
+	db	$dc,$16
 	db	$d3,$31
 	db	$d4,$c1
 	db	$81
@@ -1293,14 +1293,14 @@ Music_Credits_Ch3:
 	db	$01
 	db	$d4,$c1
 	db	$d3,$31
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d4,$83
 ; P3-22
 	db	$53
 	db	$01
 	db	$51
 	db	$01
-	db	$dc,$12
+	db	$dc,$16
 	db	$c1
 	db	$81
 	db	$51
@@ -1310,14 +1310,14 @@ Music_Credits_Ch3:
 	db	$01
 	db	$81
 	db	$c1
-	db	$dc,$24
+	db	$dc,$2c
 	db	$53
 ; P3-23
 	db	$a3
 	db	$01
 	db	$a1
 	db	$01
-	db	$dc,$12
+	db	$dc,$16
 	db	$d3,$51
 	db	$11
 	db	$d4,$91
@@ -1331,12 +1331,12 @@ Music_Credits_Ch3:
 	db	$d4,$91
 	db	$ff
 @bass24:
-	db	$dc,$24
+	db	$dc,$81
 	db	$d5,$63
 	db	$01
 	db	$60
 	db	$00
-	db	$dc,$12
+	db	$dc,$16
 	db	$61
 	db	$d4,$61
 	db	$01
@@ -1344,21 +1344,21 @@ Music_Credits_Ch3:
 	db	$00
 	db	$61
 	db	$d4,$61
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d5,$63
-	db	$dc,$12
+	db	$dc,$16
 	db	$a1
 	db	$d4,$11
 	db	$51
 	db	$61
 	db	$ff
 @bass33_35:
-	db	$dc,$24
+	db	$dc,$81
 	db	$d5,$73
 	db	$01
 	db	$70
 	db	$00
-	db	$dc,$12
+	db	$dc,$16
 	db	$71
 	db	$d4,$71
 	db	$01
@@ -1366,21 +1366,21 @@ Music_Credits_Ch3:
 	db	$00
 	db	$71
 	db	$d4,$71
-	db	$dc,$24
+	db	$dc,$2c
 	db	$d5,$73
-	db	$dc,$12
+	db	$dc,$16
 	db	$a1
 	db	$d4,$11
 	db	$61
 	db	$71
 ; P3-34
-	db	$dc,$48
+	db	$dc,$58
 	db	$87
 	db	$d3,$17
 	db	$37
 	db	$67
 ; P3-35
-	db	$dc,$12
+	db	$dc,$16
 	db	$d1,$81
 	db	$31
 	db	$d2,$c1

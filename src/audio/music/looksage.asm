@@ -133,7 +133,7 @@ Music_LookSage_Ch3:
 ;	db	$ef,$f0
 ; P3-1
 	db	$e1,$16,$23
-	db	$d8,$c,$12
+	db	$d8,$c,$19
 	db	$d2,$c0
 	db	$d1,$10
 ; P3-2
@@ -143,12 +143,10 @@ Music_LookSage_Ch3:
 	db	$e1,$07,$23
 	db	$c7
 	db	$e1,$14,$23
-	db	$dc,$72
 	db	$d1,$35
 	db	$50
 	db	$60
 ; P3-4
-	db	$dc,$81
 	db	$5d
 	db	$80
 	db	$90

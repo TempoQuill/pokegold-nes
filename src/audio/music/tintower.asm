@@ -185,7 +185,7 @@ Music_TinTower_Ch2:
 Music_TinTower_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$38
+	db	$d8,$c,$47
 @mainloop:
 	db	$0f
 ; P3-2
@@ -203,7 +203,7 @@ Music_TinTower_Ch3:
 	db	$27
 ; P3-6
 	db	$57
-	db	$dc,$38
+	db	$dc,$47
 	db	$d5,$b1
 	db	$d4,$11
 	db	$21
@@ -216,7 +216,6 @@ Music_TinTower_Ch3:
 	db	$57
 	db	$d3,$17
 ; P3-9
-	db	$dc,$70
 	db	$d4,$10
 	db	$02
 	db	$10
@@ -245,7 +244,7 @@ Music_TinTower_Ch3:
 	db	$10
 	db	$0a
 ; P3-14
-	db	$dc,$38
+	db	$dc,$47
 	db	$10
 	db	$02
 	db	$10

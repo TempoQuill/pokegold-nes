@@ -224,7 +224,7 @@ Music_LookRocket_Ch3:
 	db	$d9,$02
 ; P3-1
 	db	$e1,$04,$22
-	db	$d8,$c,$62
+	db	$d8,$c,$77
 ;	db	$ef,$f0
 	db	$01
 ; P3-2
@@ -340,7 +340,7 @@ bass3_4:
 	db	$00
 	db	$ff
 bass7:
-	db	$dc,$10
+	db	$dc,$13
 	db	$d5,$90
 	db	$00
 	db	$d4,$90
@@ -803,7 +803,7 @@ Music_RocketTheme_Ch3:
 	db	$01
 ; P3-2
 @loop:
-	db	$d8,$c,$65
+	db	$d8,$c,$77
 	db	$fe
 	dw	$ffff & ro_bass2
 ; P3-3
@@ -850,7 +850,7 @@ Music_RocketTheme_Ch3:
 	db	$fe
 	dw	$ffff & ro_bass8
 ; P3-23
-	db	$dc,$10
+	db	$dc,$15
 	db	$d4,$10
 	db	$00
 	db	$d3,$10
@@ -885,7 +885,7 @@ Music_RocketTheme_Ch3:
 	db	$70
 	db	$40
 ; P3-25
-	db	$dc,$21
+	db	$dc,$2a
 	db	$50
 	db	$00
 	db	$d3,$20

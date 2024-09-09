@@ -367,7 +367,7 @@ Music_ElmsLab_Ch3:
 ;----------------------------------------
 ;	db	$ef,$0f
 ; P3-1
-	db	$d8,$c,$25
+	db	$d8,$c,$32
 	db	$07
 ; P3-2
 	db	$0d
@@ -392,7 +392,7 @@ Music_ElmsLab_Ch3:
 	db	$51
 @loop30:
 ; P3-5
-	db	$dc,$25
+	db	$dc,$32
 	db	$61
 	db	$a1
 	db	$11
@@ -458,12 +458,12 @@ Music_ElmsLab_Ch3:
 ; P3-12
 	db	$d3,$11
 	db	$01
-	db	$dc,$4b
+	db	$dc,$64
 	db	$13
 	db	$d4,$b3
 	db	$83
 ; P3-13
-	db	$dc,$25
+	db	$dc,$32
 	db	$61
 	db	$a1
 	db	$11
@@ -518,7 +518,7 @@ Music_ElmsLab_Ch3:
 	db	$a1
 	db	$81
 ; P3-19
-	db	$dc,$4a
+	db	$dc,$64
 	db	$13
 	db	$33
 	db	$53
@@ -529,7 +529,7 @@ Music_ElmsLab_Ch3:
 	db	$73
 	db	$83
 ; P3-21
-	db	$dc,$25
+	db	$dc,$32
 	db	$61
 	db	$a1
 	db	$11

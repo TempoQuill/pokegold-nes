@@ -464,7 +464,7 @@ Music_EcruteakCity_Ch3:
 ; P3-1
 @mainloop:
 	db	$e1,$12,$25
-	db	$d8,$c,$37
+	db	$d8,$c,$45
 ; P3-2
 	db	$d4,$11
 	db	$81
@@ -472,25 +472,24 @@ Music_EcruteakCity_Ch3:
 	db	$dc,$81
 	db	$59
 ; P3-3
-	db	$dc,$37
+	db	$dc,$45
 	db	$d4,$11
 	db	$a1
 	db	$d3,$51
 	db	$dc,$81
 	db	$69
 ; P3-4
-	db	$dc,$37
+	db	$dc,$45
 	db	$d4,$11
 	db	$81
 	db	$d3,$31
 	db	$dc,$81
 	db	$59
 ; P3-5
-	db	$dc,$6e
 	db	$83
 	db	$73
 	db	$63
-	db	$dc,$37
+	db	$dc,$45
 	db	$d4,$c1
 	db	$81
 ; P3-6
@@ -500,7 +499,7 @@ Music_EcruteakCity_Ch3:
 	db	$dc,$81
 	db	$59
 ; P3-7
-	db	$dc,$37
+	db	$dc,$45
 	db	$d4,$21
 	db	$81
 	db	$b1
@@ -519,7 +518,7 @@ Music_EcruteakCity_Ch3:
 	db	$00
 	db	$97
 ; P3-9
-	db	$dc,$37
+	db	$dc,$45
 	db	$d4,$81
 	db	$d3,$31
 	db	$61
@@ -530,7 +529,7 @@ Music_EcruteakCity_Ch3:
 	db	$dc,$81
 	db	$94
 ; P3-10
-	db	$dc,$37
+	db	$dc,$45
 	db	$d4,$11
 	db	$81
 	db	$d3,$31
@@ -559,7 +558,7 @@ Music_EcruteakCity_Ch3:
 	db	$50
 	db	$00
 ; P3-13
-	db	$dc,$37
+	db	$dc,$45
 	db	$d5,$81
 	db	$d4,$31
 	db	$81

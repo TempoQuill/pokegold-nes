@@ -611,7 +611,7 @@ Music_SSAqua_Ch3:
 	db	$07
 	db	$81
 	db	$01
-	db	$d8,$c,$1e
+	db	$d8,$c,$24
 	db	$81
 ; P3-3 -tie
 	db	$dc,$81
@@ -627,12 +627,12 @@ Music_SSAqua_Ch3:
 	db	$07
 	db	$81
 	db	$01
-	db	$d8,$c,$1e
+	db	$d8,$c,$24
 	db	$81
 ; P3-5 -tie
 	db	$dc,$81
 	db	$87
-	db	$dc,$0f
+	db	$dc,$12
 	db	$c0
 	db	$d4,$20
 	db	$30
@@ -796,7 +796,7 @@ Music_SSAqua_Ch3:
 ;	sub ruuuuuuuu
 ;-------------------------------
 @bass6_7:
-	db	$d8,$6,$1e
+	db	$d8,$6,$24
 	db	$d5,$81
 	db	$05
 	db	$81

@@ -39,7 +39,7 @@ UNloop20:
 Music_RuinsOfAlphInterior_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$3a
+	db	$d8,$c,$4f
 @mainloop:
 	db	$d5,$91
 	db	$d4,$21

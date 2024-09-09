@@ -851,50 +851,50 @@ Music_KantoTrainerBattle_Ch3:
 ; P3-1
 	db	$d9,$1b
 	db	$e1,$12,$23
-	db	$d8,$c,$10
+	db	$d8,$c,$11
 ; P3-2
 	db	$d5,$b0
 	db	$d3,$b0
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$b1
-	db	$dc,$10
+	db	$dc,$11
 	db	$d5,$a0
 	db	$d3,$a0
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$a1
-	db	$dc,$10
+	db	$dc,$11
 	db	$d5,$90
 	db	$d3,$90
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$91
-	db	$dc,$10
+	db	$dc,$11
 	db	$d5,$80
 	db	$d3,$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$81
 ; P3-3
-	db	$dc,$10
+	db	$dc,$11
 	db	$d5,$70
 	db	$d3,$70
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$71
-	db	$dc,$10
+	db	$dc,$11
 	db	$d5,$60
 	db	$d3,$60
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$61
-	db	$dc,$10
+	db	$dc,$11
 	db	$d5,$50
 	db	$d3,$50
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$51
-	db	$dc,$10
+	db	$dc,$11
 	db	$30
 	db	$60
 	db	$c0
 	db	$d3,$30
 ; P3-4
-	db	$dc,$18
+	db	$dc,$22
 	db	$d1,$11
 	db	$d4,$10
 	db	$00
@@ -1052,7 +1052,7 @@ Music_KantoTrainerBattle_Ch3:
 	db	$d8,$c,$81
 	db	$bf
 ; P3-21
-	db	$dc,$10
+	db	$dc,$11
 	db	$30
 	db	$d3,$b0
 	db	$60
@@ -1065,9 +1065,9 @@ Music_KantoTrainerBattle_Ch3:
 	db	$60
 	db	$30
 	db	$60
-	db	$dc,$20
+	db	$dc,$22
 	db	$d1,$31
-	db	$dc,$10
+	db	$dc,$11
 	db	$20
 	db	$10
 ; P3-22
@@ -1089,7 +1089,7 @@ Music_KantoTrainerBattle_Ch3:
 	db	$3b
 	db	$90
 	db	$60
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$b0
 	db	$60
 ; P3-25
@@ -1304,7 +1304,7 @@ Music_KantoTrainerBattle_Ch3:
 	db	$a0
 	db	$80
 ; P3-40
-	db	$dc,$08
+	db	$dc,$11
 	db	$81
 	db	$d4,$80
 	db	$00

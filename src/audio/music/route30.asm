@@ -290,7 +290,7 @@ Music_Route30_Ch2:
 Music_Route30_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$12
+	db	$d8,$c,$17
 	db	$d5,$80
 	db	$04
 	db	$80
@@ -321,10 +321,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$c1
 	db	$01
-	db	$dc,$12
+	db	$dc,$17
 	db	$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$80
@@ -338,12 +338,12 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$31
 	db	$a1
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$60
 	db	$60
 	db	$60
 	db	$00
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d4,$11
 	db	$d5,$60
 	db	$00
@@ -354,10 +354,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$c1
 	db	$d4,$31
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$d4,$31
@@ -370,10 +370,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$51
 	db	$31
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$80
@@ -387,10 +387,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$11
 	db	$d5,$a1
-	db	$dc,$12
+	db	$dc,$17
 	db	$60
 	db	$60
-	db	$dc,$25
+	db	$dc,$2f
 	db	$60
 	db	$00
 	db	$d4,$11
@@ -403,10 +403,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$11
 	db	$61
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$60
 	db	$60
-	db	$dc,$25
+	db	$dc,$2f
 	db	$60
 	db	$00
 	db	$d4,$51
@@ -417,10 +417,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$c1
 	db	$d4,$81
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$c1
@@ -433,10 +433,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d3,$31
 	db	$d4,$c1
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$d4,$81
@@ -447,10 +447,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$11
 	db	$d5,$c1
-	db	$dc,$12
+	db	$dc,$17
 	db	$a0
 	db	$a0
-	db	$dc,$25
+	db	$dc,$2f
 	db	$a0
 	db	$00
 	db	$d4,$31
@@ -463,10 +463,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$61
 	db	$51
-	db	$dc,$12
+	db	$dc,$17
 	db	$10
 	db	$10
-	db	$dc,$25
+	db	$dc,$2f
 	db	$10
 	db	$00
 	db	$a1
@@ -479,10 +479,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$51
 	db	$31
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$c0
 	db	$c0
-	db	$dc,$25
+	db	$dc,$2f
 	db	$c0
 	db	$00
 	db	$c0
@@ -496,10 +496,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$c1
 	db	$a1
-	db	$dc,$12
+	db	$dc,$17
 	db	$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$c1
@@ -512,10 +512,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$11
 	db	$d5,$c1
-	db	$dc,$12
+	db	$dc,$17
 	db	$a0
 	db	$a0
-	db	$dc,$25
+	db	$dc,$2f
 	db	$a0
 	db	$00
 	db	$d4,$31
@@ -528,10 +528,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$61
 	db	$51
-	db	$dc,$12
+	db	$dc,$17
 	db	$10
 	db	$10
-	db	$dc,$25
+	db	$dc,$2f
 	db	$10
 	db	$00
 	db	$a1
@@ -544,10 +544,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$11
 	db	$31
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$80
@@ -561,10 +561,10 @@ Music_Route30_Ch3:
 	db	$00
 	db	$d4,$51
 	db	$31
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$80
 	db	$80
-	db	$dc,$25
+	db	$dc,$2f
 	db	$80
 	db	$00
 	db	$d4,$31

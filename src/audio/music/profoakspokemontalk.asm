@@ -219,7 +219,7 @@ Music_ProfOaksPokemonTalk_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$06,$38
-	db	$d8,$c,$14
+	db	$d8,$c,$1b
 ;	db	$ef,$f0
 ; P3-2
 	db	$07
@@ -233,38 +233,38 @@ Music_ProfOaksPokemonTalk_Ch3:
 	db	$d5,$b0
 @mainloop:
 ; P3-3
-	db	$dc,$7d
+	db	$dc,$81
 	db	$c5
-	db	$dc,$14
+	db	$dc,$1b
 	db	$d4,$40
 	db	$70
-	db	$dc,$7d
+	db	$dc,$81
 	db	$c5
-	db	$dc,$14
+	db	$dc,$1b
 	db	$40
 	db	$20
 ; P3-4
-	db	$dc,$53
+	db	$dc,$6f
 	db	$d5,$c3
 	db	$dc,$81
 	db	$d4,$c7
-	db	$dc,$53
+	db	$dc,$6f
 	db	$d3,$43
 ; P3-5
-	db	$dc,$7d
+	db	$dc,$81
 	db	$d4,$95
-	db	$dc,$14
+	db	$dc,$1b
 	db	$40
 	db	$90
-	db	$dc,$7d
+	db	$dc,$81
 	db	$d5,$95
-	db	$dc,$14
+	db	$dc,$1b
 	db	$d4,$40
 	db	$90
 ; P3-6
-	db	$dc,$7d
+	db	$dc,$81
 	db	$45
-	db	$dc,$29
+	db	$dc,$37
 	db	$71
 	db	$b1
 	db	$91
@@ -273,29 +273,29 @@ Music_ProfOaksPokemonTalk_Ch3:
 ; P3-7
 	db	$51
 	db	$03
-	db	$dc,$14
+	db	$dc,$1b
 	db	$50
 	db	$50
 	db	$50
 	db	$00
 	db	$50
 	db	$00
-	db	$dc,$53
+	db	$dc,$6f
 	db	$c3
 ; P3-8
 	db	$71
 	db	$03
-	db	$dc,$14
+	db	$dc,$1b
 	db	$70
 	db	$70
 	db	$d5,$c0
 	db	$00
 	db	$c0
 	db	$00
-	db	$dc,$53
+	db	$dc,$6f
 	db	$d4,$c3
 ; P3-9
-	db	$dc,$29
+	db	$dc,$37
 	db	$71
 	db	$d3,$71
 	db	$d4,$51

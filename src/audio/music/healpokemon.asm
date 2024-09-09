@@ -29,7 +29,7 @@ Music_HealPokemon_Ch2:
 	db	$d2,$57
 	db	$ff
 Music_HealPokemon_Ch3:
-	db	$d8,$c,$32
+	db	$d8,$c,$2e
 	db	$d3,$51
 	db	$01
 	db	$51

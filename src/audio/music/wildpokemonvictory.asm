@@ -164,7 +164,7 @@ Music_WildPokemonVictory_Ch3_start:
 	dw	$ffff & @base3
 	db	$51
 	db	$01
-	db	$dc,$4a
+	db	$dc,$4f
 	db	$13
 ; P3-7-8
 	db	$d9,$01
@@ -180,13 +180,13 @@ Music_WildPokemonVictory_Ch3_start:
 	db	$51
 	db	$01
 	db	$d9,$00
-	db	$dc,$4a
+	db	$dc,$4f
 	db	$d5,$c3
 ; P3-11
 	db	$fd,0
 	dw	$ffff & @loop
 @base3:
-	db	$dc,$25
+	db	$dc,$27
 	db	$d4,$51
 	db	$03
 	db	$51

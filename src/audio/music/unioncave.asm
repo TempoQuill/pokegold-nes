@@ -195,7 +195,7 @@ Music_UnionCave_Ch2:
 ;----------------------------------------
 Music_UnionCave_Ch3:
 ;----------------------------------------
-	db	$d8,$c,$2c
+	db	$d8,$c,$37
 ; P3-1
 @mainloop:
 	db	$0f
@@ -244,10 +244,10 @@ Music_UnionCave_Ch3:
 	db	$b7
 ; P3-21
 @loop3:
-	db	$dc,$54
+	db	$dc,$6f
 	db	$a3
 	db	$83
-	db	$dc,$2c
+	db	$dc,$37
 	db	$b1
 	db	$d3,$11
 	db	$d4,$a1
@@ -255,14 +255,14 @@ Music_UnionCave_Ch3:
 	db	$fd,3
 	dw	$ffff & @loop3
 ; P3-24
-	db	$dc,$54
+	db	$dc,$6f
 	db	$a3
 	db	$83
-	db	$dc,$7f
+	db	$dc,$81
 	db	$b7
 ; P3-25
 @loop4:
-	db	$dc,$2c
+	db	$dc,$37
 	db	$0f
 	db	$fd,4
 	dw	$ffff & @loop4

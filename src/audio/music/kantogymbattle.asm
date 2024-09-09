@@ -468,7 +468,7 @@ Music_KantoGymBattle_Ch2:
 Music_KantoGymBattle_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$38
+	db	$d8,$c,$81
 ; P3-2
 	db	$d5,$50
 	db	$00
@@ -477,12 +477,13 @@ Music_KantoGymBattle_Ch3:
 	db	$00
 	db	$fd,6
 	dw	$ffff & @loop301
+	db	$dc,$1d
 	db	$c1
 	db	$91
 	db	$c1
 ; P3-4
 @loop302:
-	db	$dc,$38
+	db	$dc,$3b
 	db	$40
 	db	$00
 	db	$40
@@ -501,14 +502,14 @@ Music_KantoGymBattle_Ch3:
 	db	$c3
 	db	$30
 	db	$00
-	db	$dc,$19
+	db	$dc,$1d
 	db	$61
 	db	$40
 	db	$00
 	db	$40
 	db	$00
 ; P3-6
-	db	$dc,$38
+	db	$dc,$3b
 	db	$73
 	db	$40
 	db	$00
@@ -523,14 +524,14 @@ Music_KantoGymBattle_Ch3:
 	db	$c3
 	db	$40
 	db	$00
-	db	$dc,$19
+	db	$dc,$1d
 	db	$51
 	db	$fd,2
 	dw	$ffff & @loop302
 ; P3-11
 ;	db	$ef,$0f
 @mainloop:
-	db	$dc,$19
+	db	$dc,$1d
 	db	$d5,$41
 	db	$b1
 	db	$fd,8
@@ -545,9 +546,9 @@ Music_KantoGymBattle_Ch3:
 	db	$d6,$c1
 	db	$d5,$51
 	db	$d6,$c1
-	db	$dc,$38
+	db	$dc,$3b
 	db	$d5,$53
-	db	$dc,$19
+	db	$dc,$1d
 	db	$c1
 	db	$d4,$51
 	db	$d5,$c1
@@ -567,7 +568,7 @@ Music_KantoGymBattle_Ch3:
 	db	$d5,$c1
 ; P3-19
 @loop34:
-	db	$dc,$38
+	db	$dc,$3b
 	db	$40
 	db	$00
 	db	$40
@@ -586,7 +587,7 @@ Music_KantoGymBattle_Ch3:
 	db	$b3
 	db	$40
 	db	$00
-	db	$dc,$19
+	db	$dc,$1d
 	db	$51
 	db	$fd,2
 	dw	$ffff & @loop34

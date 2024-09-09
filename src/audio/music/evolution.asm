@@ -124,7 +124,7 @@ Music_Evolution_Ch2:
 ;----------------------------------------
 Music_Evolution_Ch3:
 ;----------------------------------------
-	db	$d8,$c,$16
+	db	$d8,$c,$53
 	db	$07
 @mainloop:
 	db	$fe
@@ -144,7 +144,6 @@ Music_Evolution_Ch3:
 	db	$fd,0
 	dw	$ffff & @mainloop
 @sub1:
-	db	$dc,$20
 	db	$d5,$a1
 	db	$01
 	db	$d4,$31
@@ -159,10 +158,8 @@ Music_Evolution_Ch3:
 	db	$01
 	db	$d5,$a1
 	db	$01
-	db	$dc,$40
 	db	$ff
 @sub2:
-	db	$dc,$20
 	db	$d5,$c1
 	db	$01
 	db	$d4,$51
@@ -177,7 +174,6 @@ Music_Evolution_Ch3:
 	db	$01
 	db	$d5,$a1
 	db	$01
-	db	$dc,$40
 	db	$ff
 ;----------------------------------------
 Music_Evolution_Ch4:

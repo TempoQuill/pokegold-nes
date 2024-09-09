@@ -225,12 +225,12 @@ ENDIF
 	db	$51
 	db	$d8,$c,$81
 	db	$5b
-	db	$d8,$6,$15
+	db	$d8,$6,$1b
 	db	$d2,$31
 	db	$51
 ; P3-4
 @loop:
-	db	$dc,$2b
+	db	$dc,$36
 	db	$d2,$33
 	db	$53
 	db	$63
@@ -240,40 +240,40 @@ ENDIF
 	db	$c3
 	db	$d1,$33
 ; P3-5
-	db	$dc,$57
+	db	$dc,$6c
 	db	$57
-	db	$dc,$15
+	db	$dc,$1b
 	db	$60
 	db	$70
 	db	$61
-	db	$dc,$2b
+	db	$dc,$36
 	db	$33
-	db	$dc,$57
+	db	$dc,$6c
 	db	$57
-	db	$dc,$2b
+	db	$dc,$36
 	db	$33
 	db	$53
 ; P3-6
-	db	$dc,$57
+	db	$dc,$6c
 	db	$67
 	db	$a7
-	db	$dc,$15
+	db	$dc,$1b
 	db	$c0
 	db	$d0,$10
 	db	$d1,$c1
-	db	$dc,$2b
+	db	$dc,$36
 	db	$a3
 	db	$63
 	db	$33
 ; P3-7
-	db	$dc,$6d
+	db	$dc,$7f
 	db	$50
 	db	$60
 	db	$59
-	db	$dc,$15
+	db	$dc,$1b
 	db	$61
 	db	$51
-	db	$dc,$57
+	db	$dc,$6c
 	db	$37
 	db	$57
 ; P3-8

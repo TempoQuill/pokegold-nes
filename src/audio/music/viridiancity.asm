@@ -515,7 +515,7 @@ Music_ViridianCity_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$12,$24
-	db	$d8,$c,$26
+	db	$d8,$c,$81
 ; P3-2
 	db	$d3,$a0
 	db	$02
@@ -526,10 +526,8 @@ Music_ViridianCity_Ch3:
 	db	$a0
 	db	$00
 ; P3-3
-	db	$dc,$4c
 	db	$a3
 	db	$01
-	db	$dc,$26
 	db	$d2,$71
 	db	$01
 	db	$21
@@ -547,34 +545,33 @@ Music_ViridianCity_Ch3:
 	db	$00
 ; P3-5
 	db	$03
-	db	$dc,$81
 	db	$37
-	db	$dc,$26
+	db	$dc,$32
 	db	$71
 	db	$81
 @mainloop:
 ; P3-6
-	db	$dc,$26
+	db	$dc,$32
 	db	$fe
 	dw	$ffff & @sub1
-	db	$dc,$26
+	db	$dc,$32
 	db	$d2,$71
 	db	$81
 ; P3-14
 	db	$fe
 	dw	$ffff & @sub1
-	db	$dc,$4c
+	db	$dc,$65
 	db	$53
 ; P3-22
 	db	$e1,$18,$25
 	db	$dc,$81
 	db	$cb
-	db	$dc,$4c
+	db	$dc,$65
 	db	$83
 ; P3-23
 	db	$dc,$81
 	db	$d1,$37
-	db	$dc,$26
+	db	$dc,$32
 	db	$51
 	db	$31
 	db	$21
@@ -582,46 +579,45 @@ Music_ViridianCity_Ch3:
 ; P3-24
 	db	$dc,$81
 	db	$ab
-	db	$dc,$4c
+	db	$dc,$65
 	db	$73
 ; P3-25
 	db	$dc,$81
-	db	$a6
-	db	$00
-	db	$dc,$4c
+	db	$a7
+	db	$dc,$65
 	db	$a3
 	db	$93
 ; P3-26
 	db	$dc,$81
-	db	$58
-	db	$00
-	db	$dc,$26
+	db	$59
+	db	$dc,$32
 	db	$51
 	db	$71
 	db	$81
 ; P3-27
 	db	$01
 	db	$81
-	db	$dc,$4c
+	db	$dc,$65
 	db	$73
 	db	$53
 	db	$83
 ; P3-28
 	db	$dc,$81
 	db	$7b
-	db	$dc,$4c
+	db	$dc,$65
 	db	$33
 ; P3-29
+	db	$dc,$81
 	db	$a3
 	db	$03
-	db	$dc,$81
 	db	$d1,$17
 ; P3-30
 	db	$d2,$cb
-	db	$dc,$26
+	db	$dc,$32
 	db	$d1,$21
 	db	$31
 ; P3-31
+	db	$dc,$81
 	db	$51
 	db	$01
 	db	$31
@@ -631,12 +627,11 @@ Music_ViridianCity_Ch3:
 	db	$d2,$c1
 	db	$01
 ; P3-32
-	db	$dc,$81
-	db	$a8
-	db	$00
-	db	$dc,$26
+	db	$a9
+	db	$dc,$32
 	db	$a1
 	db	$c1
+	db	$dc,$81
 	db	$d1,$11
 ; P3-33
 	db	$01
@@ -646,21 +641,19 @@ Music_ViridianCity_Ch3:
 	db	$01
 	db	$71
 	db	$01
-	db	$dc,$81
-	db	$8a
-	db	$00
+	db	$8b
 ; P3-34 -tie
 ;		tempo 10 		g
-	db	$dc,$26
+	db	$dc,$32
 	db	$81
 	db	$a1
-	db	$dc,$72
+	db	$dc,$81
 	db	$b5
 ; P3-35 -tie
-	db	$dc,$26
 ;		tempo 4 		a#
 	db	$a1
 	db	$01
+	db	$dc,$32
 	db	$81
 	db	$b1
 	db	$01
@@ -674,7 +667,7 @@ Music_ViridianCity_Ch3:
 	db	$30
 	db	$02
 	db	$37
-	db	$dc,$4c
+	db	$dc,$65
 	db	$53
 ; P3-38
 	db	$fd,0
@@ -698,6 +691,7 @@ Music_ViridianCity_Ch3:
 ; P3-8
 	db	$81
 	db	$51
+	db	$dc,$65
 	db	$d3,$c1
 	db	$03
 	db	$c1
@@ -709,9 +703,8 @@ Music_ViridianCity_Ch3:
 	db	$01
 	db	$d3,$c0
 	db	$00
-	db	$dc,$4c
 	db	$c3
-	db	$dc,$26
+	db	$dc,$32
 	db	$d2,$51
 	db	$71
 ; P3-10
@@ -733,6 +726,7 @@ Music_ViridianCity_Ch3:
 ; P3-12
 	db	$71
 	db	$31
+	db	$dc,$81
 	db	$d3,$a1
 	db	$03
 	db	$a1
@@ -741,7 +735,6 @@ Music_ViridianCity_Ch3:
 	db	$00
 ; P3-13
 	db	$03
-	db	$dc,$81
 	db	$37
 	db	$ff
 ;----------------------------------------

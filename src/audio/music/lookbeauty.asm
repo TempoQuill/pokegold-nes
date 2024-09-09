@@ -182,7 +182,7 @@ Music_LookBeauty_Ch3:
 ;	db	$ef,$ff
 ; P3-1
 	db	$e1,$08,$12
-	db	$d8,$c,$76
+	db	$d8,$c,$81
 ; P3-2
 	db	$0f
 ; P3-3
@@ -198,7 +198,7 @@ Music_LookBeauty_Ch3:
 	db	$70
 @loop:
 ; P3-4
-	db	$dc,$43
+	db	$dc,$54
 	db	$83
 	db	$d3,$c0
 	db	$00
@@ -210,13 +210,13 @@ Music_LookBeauty_Ch3:
 	db	$00
 	db	$d4,$30
 	db	$00
-	db	$dc,$21
+	db	$dc,$2a
 	db	$81
 ; P3-5 -tie
-	db	$dc,$10
+	db	$dc,$15
 	db	$80
 	db	$d3,$b0
-	db	$dc,$43
+	db	$dc,$54
 	db	$c0
 	db	$00
 	db	$d4,$80
@@ -238,13 +238,13 @@ Music_LookBeauty_Ch3:
 	db	$00
 	db	$d5,$c0
 	db	$00
-	db	$dc,$21
+	db	$dc,$2a
 	db	$d4,$51
 ; P3-7 -tie
-	db	$dc,$10
+	db	$dc,$15
 	db	$50
 	db	$d3,$80
-	db	$dc,$21
+	db	$dc,$2a
 	db	$90
 	db	$00
 	db	$d4,$50
@@ -255,7 +255,7 @@ Music_LookBeauty_Ch3:
 	db	$01
 	db	$c1
 ; P3-8
-	db	$dc,$43
+	db	$dc,$54
 	db	$d4,$a3
 	db	$d2,$10
 	db	$00
@@ -267,13 +267,13 @@ Music_LookBeauty_Ch3:
 	db	$00
 	db	$d4,$50
 	db	$00
-	db	$dc,$21
+	db	$dc,$2a
 	db	$a1
 ; P3-9 -tie
-	db	$dc,$10
+	db	$dc,$15
 	db	$a0
 	db	$d3,$c0
-	db	$dc,$43
+	db	$dc,$54
 	db	$d2,$10
 	db	$00
 	db	$d4,$a0
@@ -295,7 +295,7 @@ Music_LookBeauty_Ch3:
 	db	$00
 	db	$d5,$a0
 	db	$00
-	db	$dc,$21
+	db	$dc,$2a
 	db	$d3,$a1
 ; P3-11 -tie
 	db	$a0

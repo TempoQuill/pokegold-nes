@@ -162,7 +162,7 @@ Music_LookYoungster_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$02,$24
-	db	$d8,$c,$12
+	db	$d8,$c,$7f
 	db	$03
 ; P3-2
 	db	$d5,$80
@@ -184,14 +184,11 @@ Music_LookYoungster_Ch3:
 ; P3-3
 	db	$30
 	db	$02
-	db	$dc,$54
 	db	$33
 	db	$01
-	db	$dc,$7f
 	db	$95
 @mainloop:
 ; P3-4
-	db	$dc,$12
 	db	$d5,$80
 	db	$00
 	db	$d4,$80

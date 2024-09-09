@@ -280,13 +280,13 @@ Music_GoldenrodCity_Ch3:
 	db	$40
 	db	$80
 	db	$90
-	db	$dc,$28
+	db	$dc,$3a
 	db	$41
 ; P3-14
 	db	$fe
 	dw	$ffff & @sub2
 	db	$00
-	db	$dc,$28
+	db	$dc,$3a
 	db	$d4,$91
 	db	$71
 	db	$41
@@ -334,7 +334,7 @@ Music_GoldenrodCity_Ch3:
 	db	$00
 	db	$ff
 @sub2:
-	db	$dc,$14
+	db	$dc,$1d
 	db	$20
 	db	$00
 	db	$d3,$20
@@ -344,10 +344,10 @@ Music_GoldenrodCity_Ch3:
 	db	$04
 	db	$d3,$10
 	db	$20
-	db	$dc,$28
+	db	$dc,$3a
 	db	$d4,$91
 ; P3-11
-	db	$dc,$14
+	db	$dc,$1d
 	db	$10
 	db	$00
 	db	$d3,$10
@@ -357,10 +357,10 @@ Music_GoldenrodCity_Ch3:
 	db	$04
 	db	$c0
 	db	$d3,$10
-	db	$dc,$28
+	db	$dc,$3a
 	db	$d4,$91
 ; P3-12
-	db	$dc,$14
+	db	$dc,$1d
 	db	$d5,$b0
 	db	$00
 	db	$d4,$b0
@@ -370,10 +370,10 @@ Music_GoldenrodCity_Ch3:
 	db	$04
 	db	$d4,$a0
 	db	$b0
-	db	$dc,$28
+	db	$dc,$3a
 	db	$71
 ; P3-13
-	db	$dc,$14
+	db	$dc,$1d
 	db	$d5,$90
 	db	$00
 	db	$d4,$90

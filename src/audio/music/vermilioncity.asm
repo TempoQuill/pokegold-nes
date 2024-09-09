@@ -242,16 +242,16 @@ Music_VermilionCity_Ch3:
 ;----------------------------------------
 ;	db	$ef,$f0
 	db	$e1,$22,$23
-	db	$d8,$c,$5b
+	db	$d8,$c,$7f
 	db	$d5,$53
 	db	$c3
 	db	$d4,$53
 	db	$c3
 	db	$33
 	db	$53
-	db	$dc,$2d
+	db	$dc,$3f
 	db	$31
-	db	$dc,$16
+	db	$dc,$1f
 	db	$d4,$c0
 	db	$90
 	db	$70
@@ -264,7 +264,7 @@ Music_VermilionCity_Ch3:
 	db	$fe
 	dw	$ffff & @bass2_5
 	db	$d2,$a5
-	db	$dc,$16
+	db	$dc,$1f
 	db	$50
 	db	$90
 ; P3-6
@@ -272,7 +272,7 @@ Music_VermilionCity_Ch3:
 	dw	$ffff & @bass2_5
 	db	$a7
 ; P3-10
-	db	$dc,$5b
+	db	$dc,$7f
 	db	$d4,$33
 	db	$23
 	db	$d5,$c3
@@ -280,13 +280,13 @@ Music_VermilionCity_Ch3:
 ; P3-11
 	db	$d4,$31
 	db	$03
-	db	$dc,$16
+	db	$dc,$1f
 	db	$30
 	db	$30
 	db	$fe
 	dw	$ffff & @bass11_12
 ; P3-13
-	db	$dc,$2d
+	db	$dc,$3f
 	db	$d3,$31
 	db	$d4,$31
 	db	$01
@@ -304,7 +304,7 @@ Music_VermilionCity_Ch3:
 	db	$d5,$5f
 ; P3-18
 	db	$d4,$5d
-	db	$dc,$16
+	db	$dc,$1f
 	db	$d2,$50
 	db	$90
 ; P3-19
@@ -313,32 +313,32 @@ Music_VermilionCity_Ch3:
 @bass2_5:
 	db	$d8,$c,$81
 	db	$d2,$a7
-	db	$dc,$5b
+	db	$dc,$7f
 	db	$d1,$33
 	db	$23
 ; P3-3
 	db	$dc,$81
 	db	$d2,$c5
-	db	$dc,$16
+	db	$dc,$1f
 	db	$a0
 	db	$c0
 	db	$dc,$81
 	db	$d1,$27
 ; P3-4
 	db	$d2,$a7
-	db	$dc,$5b
+	db	$dc,$7f
 	db	$d1,$33
 	db	$23
 ; P3-5
 	db	$dc,$81
 	db	$d2,$c5
-	db	$dc,$16
+	db	$dc,$1f
 	db	$d1,$20
 	db	$d2,$c0
 	db	$dc,$81
 	db	$ff
 @bass11_12:
-	db	$dc,$2d
+	db	$dc,$3f
 	db	$a0
 	db	$00
 	db	$a1
@@ -347,7 +347,7 @@ Music_VermilionCity_Ch3:
 ; P3-12
 	db	$51
 	db	$03
-	db	$dc,$16
+	db	$dc,$1f
 	db	$50
 	db	$50
 	db	$dc,$81
@@ -355,7 +355,7 @@ Music_VermilionCity_Ch3:
 	db	$00
 	db	$31
 	db	$01
-	db	$dc,$16
+	db	$dc,$1f
 	db	$d4,$c0
 	db	$d3,$20
 	db	$ff

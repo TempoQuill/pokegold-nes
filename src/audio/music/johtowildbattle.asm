@@ -430,7 +430,7 @@ Fsub21:
 Music_JohtoWildBattle_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$19
+	db	$d8,$c,$1f
 ;	db	$ef,$f0
 Floop3000:
 	db	$d3,$81
@@ -510,7 +510,7 @@ Floop3000:
 	db	$fd,7
 	dw	$ffff & @mainloop
 ; P3-12
-	db	$dc,$33
+	db	$dc,$3e
 	db	$73
 ; P3-13
 	db	$fe
@@ -550,11 +550,11 @@ Floop3000:
 	db	$91
 	db	$41
 	db	$91
-	db	$dc,$33
+	db	$dc,$3e
 	db	$83
 ; P3-21
 @loop4:
-	db	$dc,$19
+	db	$dc,$1f
 	db	$51
 	db	$a1
 	db	$fd,8
@@ -605,14 +605,14 @@ Floop3000:
 	db	$51
 	db	$11
 ; P3-31
-	db	$dc,$33
+	db	$dc,$3e
 	db	$33
 	db	$83
 	db	$33
 	db	$83
 ; P3-32
 @loop7:
-	db	$dc,$19
+	db	$dc,$1f
 	db	$31
 	db	$81
 	db	$fd,12
@@ -640,7 +640,7 @@ Floop3000:
 	db	$fd,0
 	dw	$ffff & @mainloop
 @sub1:
-	db	$dc,$19
+	db	$dc,$1f
 @sub1loop1:
 	db	$41
 	db	$91

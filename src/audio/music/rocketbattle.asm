@@ -687,7 +687,7 @@ Music_RocketBattle_Ch2:
 Music_RocketBattle_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$19
+	db	$d8,$c,$1f
 	db	$d4,$a1
 	db	$d3,$51
 	db	$d4,$91
@@ -850,9 +850,9 @@ Music_RocketBattle_Ch3:
 	dw	$ffff & @loop331
 ; P3-40
 	db	$d5,$a1
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d4,$53
-	db	$dc,$19
+	db	$dc,$1f
 	db	$31
 	db	$11
 	db	$d5,$b1
@@ -866,9 +866,9 @@ Music_RocketBattle_Ch3:
 	db	$d5,$a1
 	db	$d3,$31
 	db	$d4,$a1
-	db	$dc,$32
+	db	$dc,$3f
 	db	$b3
-	db	$dc,$19
+	db	$dc,$1f
 	db	$a1
 	db	$81
 	db	$b1
@@ -889,9 +889,9 @@ Music_RocketBattle_Ch3:
 	dw	$ffff & @loop36
 ; P3-46
 	db	$d4,$b1
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d3,$33
-	db	$dc,$19
+	db	$dc,$1f
 	db	$11
 	db	$d4,$b1
 	db	$81

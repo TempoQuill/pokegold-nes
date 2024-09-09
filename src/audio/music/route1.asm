@@ -361,7 +361,7 @@ Music_Route1_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$10,$23
-	db	$d8,$c,$1a
+	db	$d8,$c,$1f
 	db	$01
 ; P3-2
 	db	$d4,$30
@@ -419,7 +419,7 @@ Music_Route1_Ch3:
 	db	$a0
 	db	$d3,$20
 	db	$80
-	db	$dc,$2e
+	db	$dc,$3f
 	db	$71
 	db	$a0
 	db	$00
@@ -518,60 +518,60 @@ Music_Route1_Ch3:
 	db	$c0
 ; P3-13
 	db	$d3,$21
-	db	$dc,$17
+	db	$dc,$1f
 	db	$50
 	db	$20
 	db	$d4,$a0
 	db	$80
 	db	$50
 	db	$20
-	db	$dc,$2e
+	db	$dc,$3f
 	db	$31
 	db	$d3,$70
 	db	$00
 	db	$70
 	db	$02
 ; P3-14
-	db	$dc,$5c
+	db	$dc,$7f
 	db	$d4,$33
 	db	$73
-	db	$dc,$2e
+	db	$dc,$3f
 	db	$81
 	db	$a1
-	db	$dc,$45
+	db	$dc,$5f
 	db	$c2
-	db	$dc,$17
+	db	$dc,$1f
 	db	$80
 ; P3-15
-	db	$dc,$2e
+	db	$dc,$3f
 	db	$71
 	db	$31
-	db	$dc,$45
+	db	$dc,$5f
 	db	$d5,$a2
-	db	$dc,$17
+	db	$dc,$1f
 	db	$d4,$30
 	db	$a0
 	db	$c0
 	db	$a0
 	db	$c0
-	db	$dc,$45
+	db	$dc,$5f
 	db	$a2
-	db	$dc,$17
+	db	$dc,$1f
 	db	$80
 ; P3-16
-	db	$dc,$2e
+	db	$dc,$3f
 	db	$71
 	db	$31
 	db	$d5,$a1
 	db	$d4,$31
 	db	$81
 	db	$71
-	db	$dc,$45
+	db	$dc,$5f
 	db	$52
-	db	$dc,$17
+	db	$dc,$1f
 	db	$20
 ; P3-17
-	db	$dc,$2e
+	db	$dc,$3f
 	db	$31
 	db	$71
 	db	$a1

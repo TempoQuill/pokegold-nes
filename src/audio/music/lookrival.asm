@@ -238,19 +238,19 @@ Rloop20:
 Music_LookRival_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$1d
+	db	$d8,$c,$24
 	db	$01
 	db	$d3,$11
 	db	$d4,$91
 	db	$71
 ; P3-2
-	db	$dc,$3b
+	db	$dc,$48
 	db	$63
-	db	$dc,$1d
+	db	$dc,$24
 	db	$91
-	db	$dc,$3b
+	db	$dc,$48
 	db	$43
-	db	$dc,$1d
+	db	$dc,$24
 	db	$11
 	db	$31
 	db	$41
@@ -262,7 +262,7 @@ Music_LookRival_Ch3:
 	db	$49
 ; P3-4 -tie
 	db	$49
-	db	$dc,$1d
+	db	$dc,$24
 	db	$11
 	db	$41
 	db	$71
@@ -273,13 +273,13 @@ Rloop30:
 	db	$fd,3
 	dw	$ffff & Rloop30
 ; P3-8
-	db	$dc,$3b
+	db	$dc,$48
 	db	$63
-	db	$dc,$1d
+	db	$dc,$24
 	db	$11
-	db	$dc,$3b
+	db	$dc,$48
 	db	$43
-	db	$dc,$1d
+	db	$dc,$24
 	db	$91
 	db	$81
 	db	$71
@@ -290,12 +290,12 @@ Rloop30:
 	db	$b1
 	db	$61
 	db	$81
-	db	$dc,$3b
+	db	$dc,$48
 	db	$93
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
 	db	$81
-	db	$dc,$0e
+	db	$dc,$11
 	db	$90
 	db	$a0
 ; P3-11
@@ -305,34 +305,34 @@ Rloop30:
 	db	$b1
 	db	$61
 	db	$81
-	db	$dc,$3b
+	db	$dc,$48
 	db	$93
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
 	db	$b1
 	db	$c1
 ; P3-13
-	db	$dc,$3b
+	db	$dc,$48
 	db	$d3,$13
-	db	$dc,$1d
+	db	$dc,$24
 	db	$d4,$81
-	db	$dc,$3b
+	db	$dc,$48
 	db	$b3
-	db	$dc,$1d
+	db	$dc,$24
 	db	$81
 	db	$a1
 	db	$b1
 ; P3-14
-	db	$dc,$3b
+	db	$dc,$48
 	db	$d3,$13
-	db	$dc,$1d
+	db	$dc,$24
 	db	$d4,$81
-	db	$dc,$3b
+	db	$dc,$48
 	db	$b3
-	db	$dc,$1d
+	db	$dc,$24
 	db	$81
 	db	$a1
-	db	$dc,$0e
+	db	$dc,$11
 	db	$b0
 	db	$a0
 ; P3-15
@@ -351,59 +351,59 @@ Rloop30:
 	db	$61
 	db	$11
 	db	$31
-	db	$dc,$3b
+	db	$dc,$48
 	db	$43
-	db	$dc,$1d
+	db	$dc,$24
 	db	$11
 	db	$31
-	db	$dc,$0e
+	db	$dc,$11
 	db	$40
 	db	$50
 ; P3-20
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
 	db	$11
 	db	$31
-	db	$dc,$3b
+	db	$dc,$48
 	db	$43
-	db	$dc,$1d
+	db	$dc,$24
 	db	$11
 	db	$71
 	db	$51
 	db	$fd,0
 	dw	$ffff & Rloop30
 @sub1:
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
 	db	$11
 	db	$31
-	db	$dc,$3b
+	db	$dc,$48
 	db	$43
-	db	$dc,$1d
+	db	$dc,$24
 	db	$11
 	db	$31
 	db	$41
 	db	$ff
 @sub2:
-	db	$dc,$1d
+	db	$dc,$24
 	db	$b1
 	db	$61
 	db	$81
-	db	$dc,$3b
+	db	$dc,$48
 	db	$93
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
 	db	$81
 	db	$91
 	db	$ff
 @sub3:
-	db	$dc,$3b
+	db	$dc,$48
 	db	$b3
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
-	db	$dc,$3b
+	db	$dc,$48
 	db	$93
-	db	$dc,$1d
+	db	$dc,$24
 	db	$61
 	db	$81
 	db	$91
@@ -533,7 +533,7 @@ Music_AfterTheRivalFight_Ch2:
 ;----------------------------------------
 Music_AfterTheRivalFight_Ch3:
 ;----------------------------------------
-	db	$d8,$c,$1d
+	db	$d8,$c,$24
 	db	$d4,$41
 	db	$01
 	db	$41

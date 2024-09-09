@@ -405,7 +405,7 @@ Music_LavenderTown_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$12,$24
-	db	$d8,$c,$50
+	db	$d8,$c,$70
 ;	db	$ef,$f0
 ; P3-2
 	db	$0f
@@ -419,7 +419,7 @@ Music_LavenderTown_Ch3:
 	db	$63
 ; P3-6
 @loop:
-	db	$dc,$50
+	db	$dc,$70
 	db	$d2,$83
 	db	$03
 	db	$83
@@ -438,37 +438,37 @@ Music_LavenderTown_Ch3:
 	db	$dc,$81
 	db	$27
 	db	$01
-	db	$dc,$28
+	db	$dc,$38
 	db	$21
 	db	$31
 	db	$51
 ; P3-10
 	db	$dc,$81
 	db	$69
-	db	$dc,$28
+	db	$dc,$38
 	db	$81
 	db	$61
 	db	$51
 ; P3-11
 	db	$dc,$81
 	db	$37
-	db	$dc,$50
+	db	$dc,$70
 	db	$d3,$a3
 	db	$d2,$33
 ; P3-12
 	db	$dc,$81
 	db	$5b
-	db	$dc,$28
+	db	$dc,$38
 	db	$61
 	db	$51
 ; P3-13
 	db	$dc,$81
 	db	$3b
-	db	$dc,$28
+	db	$dc,$38
 	db	$51
 	db	$61
 ; P3-14
-	db	$dc,$50
+	db	$dc,$70
 	db	$83
 	db	$03
 	db	$83
@@ -487,21 +487,21 @@ Music_LavenderTown_Ch3:
 	db	$dc,$81
 	db	$27
 	db	$01
-	db	$dc,$28
+	db	$dc,$38
 	db	$21
 	db	$31
 	db	$51
 ; P3-18
 	db	$dc,$81
 	db	$69
-	db	$dc,$28
+	db	$dc,$38
 	db	$81
 	db	$61
 	db	$51
 ; P3-19
 	db	$dc,$81
 	db	$3b
-	db	$dc,$28
+	db	$dc,$38
 	db	$11
 	db	$31
 ; P3-20
@@ -511,12 +511,12 @@ Music_LavenderTown_Ch3:
 	db	$1b
 	db	$03
 ; P3-22
-	db	$dc,$24
+	db	$dc,$36
 	db	$a1
 	db	$81
 	db	$a1
 	db	$c1
-	db	$dc,$48
+	db	$dc,$6c
 	db	$d1,$13
 	db	$d2,$83
 ; P3-23
@@ -525,50 +525,50 @@ Music_LavenderTown_Ch3:
 	db	$33
 	db	$13
 ; P3-24
-	db	$dc,$24
+	db	$dc,$36
 	db	$a1
 	db	$81
 	db	$a1
 	db	$c1
-	db	$dc,$48
+	db	$dc,$6c
 	db	$d1,$13
 	db	$d2,$83
 ; P3-25
 	db	$d1,$63
-	db	$d8,$8,$18
+	db	$d8,$8,$24
 	db	$51
 	db	$61
 	db	$51
-	db	$d8,$c,$48
+	db	$d8,$c,$6c
 	db	$33
 	db	$13
 ; P3-26
-	db	$dc,$24
+	db	$dc,$36
 	db	$d2,$a1
 	db	$81
 	db	$a1
 	db	$c1
-	db	$dc,$48
+	db	$dc,$6c
 	db	$d1,$13
 	db	$d2,$83
 ; P3-27
-	db	$dc,$24
+	db	$dc,$36
 	db	$a1
 	db	$81
 	db	$a1
 	db	$c1
-	db	$dc,$48
+	db	$dc,$6c
 	db	$d1,$13
 	db	$23
 ; P3-28
 	db	$dc,$81
 	db	$3b
-	db	$dc,$48
+	db	$dc,$6c
 	db	$13
 ; P3-29
 	db	$dc,$81
 	db	$d2,$cb
-	db	$dc,$24
+	db	$dc,$36
 	db	$51
 	db	$61
 ; P3-30

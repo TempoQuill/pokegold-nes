@@ -202,7 +202,7 @@ Music_LakeOfRage_Ch3:
 ;----------------------------------------
 ;	db	$ef,$0f
 ; P3-1
-	db	$d8,$c,$4b
+	db	$d8,$c,$5c
 	db	$d4,$83
 	db	$01
 	db	$83
@@ -215,35 +215,35 @@ Music_LakeOfRage_Ch3:
 	db	$53
 ; P3-3
 @loop30:
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$d4,$33
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d5,$a1
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$d4,$33
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d5,$a1
 	db	$d4,$31
 	db	$51
 ; P3-4
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$63
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$63
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
 	db	$61
 	db	$71
 ; P3-5
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
 	db	$81
 	db	$c1
@@ -251,9 +251,9 @@ Music_LakeOfRage_Ch3:
 	db	$a1
 	db	$31
 	db	$71
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$a3
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
 	db	$51
 	db	$71
@@ -261,42 +261,42 @@ Music_LakeOfRage_Ch3:
 	db	$a1
 	db	$71
 	db	$a1
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$d3,$33
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d4,$a1
 	db	$d3,$31
 	db	$71
 ; P3-8
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$d4,$53
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$53
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
 	db	$51
 	db	$11
 ; P3-9
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
 	db	$81
 	db	$11
 ; P3-10
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$73
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$73
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
 	db	$71
 	db	$31
@@ -304,53 +304,53 @@ Music_LakeOfRage_Ch3:
 	db	$a1
 	db	$31
 	db	$71
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$d3,$33
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d4,$31
 	db	$51
 	db	$71
 ; P3-12
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
 	db	$81
 	db	$11
 ; P3-13
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
-	db	$dc,$25
+	db	$dc,$2e
 	db	$11
 	db	$81
 	db	$11
 ; P3-14
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$73
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$73
-	db	$dc,$25
+	db	$dc,$2e
 	db	$31
 	db	$71
 	db	$31
 ; P3-15
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$33
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d5,$a1
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$d4,$33
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d5,$a1
 	db	$d4,$31
 	db	$d5,$a1

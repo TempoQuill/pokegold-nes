@@ -286,33 +286,33 @@ Music_CeladonCity_Ch3:
 	dw	$ffff & @sub1
 ; P3-5-6
 @loop1:
-	db	$dc,$4a
+	db	$dc,$5c
 	db	$d5,$a1
 	db	$01
 	db	$d4,$33
 	db	$fd,3
 	dw	$ffff & @loop1
-	db	$dc,$37
+	db	$dc,$45
 	db	$d5,$80
 	db	$00
 	db	$c0
 	db	$00
 	db	$d4,$32
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$70
 ; P3-7-8
 	db	$fe
 	dw	$ffff & @sub1
 ; P3-9
-	db	$dc,$37
+	db	$dc,$45
 	db	$a0
 	db	$00
 	db	$d4,$30
 	db	$00
 	db	$d4,$72
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$90
-	db	$dc,$25
+	db	$dc,$2e
 	db	$a0
 	db	$00
 	db	$d4,$20
@@ -337,7 +337,7 @@ Music_CeladonCity_Ch3:
 	db	$03
 ; P3-13
 	db	$17
-	db	$dc,$27
+	db	$dc,$2e
 	db	$d3,$a1
 	db	$c1
 	db	$d2,$11
@@ -354,7 +354,7 @@ Music_CeladonCity_Ch3:
 	db	$fe
 	dw	$ffff & @sub2
 ; P3-16
-	db	$dc,$27
+	db	$dc,$2e
 	db	$d2,$51
 	db	$01
 	db	$31
@@ -364,7 +364,7 @@ Music_CeladonCity_Ch3:
 	db	$03
 ; P3-17
 	db	$17
-	db	$dc,$27
+	db	$dc,$2e
 	db	$a1
 	db	$81
 	db	$71
@@ -380,25 +380,25 @@ Music_CeladonCity_Ch3:
 	db	$fd,0
 	dw	$ffff & @mainloop
 @sub1:
-	db	$dc,$4a
+	db	$dc,$5c
 	db	$d5,$81
 	db	$01
 	db	$d4,$33
 	db	$fd,3
 	dw	$ffff & @sub1
-	db	$dc,$37
+	db	$dc,$45
 	db	$d5,$a0
 	db	$00
 	db	$d4,$30
 	db	$00
 	db	$72
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$90
 	db	$ff
 @sub2:
 	db	$dc,$81
 	db	$d2,$37
-	db	$dc,$27
+	db	$dc,$2e
 	db	$11
 	db	$d3,$c1
 	db	$a1

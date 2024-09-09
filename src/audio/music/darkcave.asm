@@ -411,10 +411,10 @@ Music_DarkCave_Ch3:
 	db	$61
 	db	$01
 	db	$d5,$b3
-	db	$dc,$21
+	db	$dc,$28
 	db	$d4,$21
 	db	$11
-	db	$dc,$43
+	db	$dc,$50
 	db	$23
 @loop302:
 ; P3-45
@@ -424,10 +424,10 @@ Music_DarkCave_Ch3:
 	db	$41
 	db	$01
 	db	$d5,$b3
-	db	$dc,$21
+	db	$dc,$28
 	db	$b1
 	db	$d4,$11
-	db	$dc,$43
+	db	$dc,$50
 	db	$23
 ; P3-47
 	db	$fe
@@ -436,10 +436,10 @@ Music_DarkCave_Ch3:
 	db	$61
 	db	$01
 	db	$d5,$b3
-	db	$dc,$21
+	db	$dc,$28
 	db	$d4,$21
 	db	$11
-	db	$dc,$43
+	db	$dc,$50
 	db	$23
 ; P3-49
 	db	$fd,2
@@ -447,15 +447,15 @@ Music_DarkCave_Ch3:
 	db	$fd,0
 	dw	$ffff & @loop30
 @sub31:
-	db	$dc,$43
+	db	$dc,$50
 	db	$d4,$13
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$43
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$63
 	db	$ff
 @sub32:
@@ -466,55 +466,55 @@ Music_DarkCave_Ch3:
 	db	$d5,$bb
 ; P3-39
 @sub34:
-	db	$dc,$43
+	db	$dc,$50
 	db	$d4,$13
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$43
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$43
 	db	$ff
 @sub33:
-	db	$dc,$43
+	db	$dc,$50
 	db	$d5,$13
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$43
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$63
 ; P3-2
 	db	$41
 	db	$01
 	db	$d6,$b3
-	db	$dc,$21
+	db	$dc,$28
 	db	$b1
 	db	$d5,$11
-	db	$dc,$43
+	db	$dc,$50
 	db	$23
 ; P3-3
 	db	$13
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$43
-	db	$dc,$21
+	db	$dc,$28
 	db	$81
-	db	$dc,$43
+	db	$dc,$50
 	db	$43
 ; P3-4
 	db	$61
 	db	$01
 	db	$d6,$b3
-	db	$dc,$21
+	db	$dc,$28
 	db	$d5,$21
 	db	$11
-	db	$dc,$43
+	db	$dc,$50
 	db	$23
 	db	$ff
 	db	$ff

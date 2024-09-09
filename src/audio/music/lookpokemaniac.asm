@@ -107,31 +107,31 @@ Music_LookPokemaniac_Ch3:
 ;	db	$ef,$f0
 ; P3-1
 	db	$e1,$06,$33
-	db	$d8,$c,$12
+	db	$d8,$c,$19
 ; P3-2
 	db	$d3,$10
 	db	$40
 	db	$70
 	db	$a0
-	db	$dc,$4b
+	db	$dc,$64
 	db	$d2,$13
 @loop:
 ; P3-3
-	db	$dc,$71
+	db	$dc,$81
 	db	$b5
-	db	$dc,$25
+	db	$dc,$32
 	db	$a1
 	db	$91
 	db	$81
 ; P3-4
-	db	$dc,$71
+	db	$dc,$81
 	db	$75
-	db	$dc,$25
+	db	$dc,$32
 	db	$61
 	db	$71
 	db	$a1
 ; P3-5
-	db	$dc,$4b
+	db	$dc,$64
 	db	$d3,$43
 	db	$10
 	db	$00
@@ -152,21 +152,21 @@ Music_LookPokemaniac_Ch3:
 	db	$70
 	db	$00
 ; P3-7
-	db	$dc,$71
+	db	$dc,$81
 	db	$85
-	db	$dc,$25
+	db	$dc,$32
 	db	$71
 	db	$61
 	db	$51
 ; P3-8
-	db	$dc,$71
+	db	$dc,$81
 	db	$45
-	db	$dc,$25
+	db	$dc,$32
 	db	$31
 	db	$41
 	db	$71
 ; P3-9
-	db	$dc,$4b
+	db	$dc,$64
 	db	$13
 	db	$d3,$a0
 	db	$00

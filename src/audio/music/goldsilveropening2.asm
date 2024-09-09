@@ -135,7 +135,7 @@ Music_GoldSilverOpening2_Ch3:
 	db	$b7
 	db	$01
 ; P3-3
-	db	$dc,$31
+	db	$dc,$35
 	db	$a0
 	db	$00
 	db	$a0
@@ -144,7 +144,7 @@ Music_GoldSilverOpening2_Ch3:
 	db	$00
 	db	$33
 	db	$63
-	db	$dc,$18
+	db	$dc,$1a
 	db	$a1
 ; P3-4
 	db	$31

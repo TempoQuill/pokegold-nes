@@ -331,19 +331,19 @@ Music_Gym_Ch3:
 ; P3-1
 	db	$e1,$14,$23
 @mainloop:
-	db	$d8,$c,$28
+	db	$d8,$c,$32
 ; P3-2
 	db	$d1,$31
-	db	$dc,$14
+	db	$dc,$19
 	db	$d3,$30
 	db	$30
 	db	$30
 	db	$00
 	db	$d2,$a0
 	db	$d1,$30
-	db	$dc,$28
+	db	$dc,$32
 	db	$11
-	db	$dc,$14
+	db	$dc,$19
 	db	$d3,$10
 	db	$10
 	db	$10
@@ -351,16 +351,16 @@ Music_Gym_Ch3:
 	db	$d2,$a0
 	db	$d1,$10
 ; P3-3
-	db	$dc,$28
+	db	$dc,$32
 	db	$d2,$c1
-	db	$dc,$14
+	db	$dc,$19
 	db	$d4,$80
 	db	$80
 	db	$80
 	db	$00
 	db	$d2,$c0
 	db	$c0
-	db	$dc,$77
+	db	$dc,$65
 	db	$c3
 	db	$d1,$23
 ; P3-4
@@ -369,11 +369,11 @@ Music_Gym_Ch3:
 	db	$d3,$a1
 	db	$d2,$31
 ; P3-5
-	db	$dc,$14
+	db	$dc,$19
 	db	$50
 	db	$01
 	db	$10
-	db	$dc,$50
+	db	$dc,$65
 	db	$13
 	db	$83
 	db	$53
@@ -383,7 +383,7 @@ Music_Gym_Ch3:
 	db	$d3,$a1
 	db	$d2,$31
 ; P3-7
-	db	$dc,$14
+	db	$dc,$19
 	db	$10
 	db	$00
 	db	$10
@@ -396,17 +396,17 @@ Music_Gym_Ch3:
 	db	$51
 	db	$71
 ; P3-9
-	db	$dc,$14
+	db	$dc,$19
 	db	$80
 	db	$01
 	db	$50
-	db	$dc,$77
+	db	$dc,$65
 	db	$53
-	db	$dc,$14
+	db	$dc,$19
 	db	$d1,$10
 	db	$01
 	db	$d2,$80
-	db	$dc,$77
+	db	$dc,$65
 	db	$83
 ; P3-10
 	db	$dc,$81
@@ -422,13 +422,13 @@ Music_Gym_Ch3:
 ; P3-12
 	db	$fe
 	dw	$ffff & @sub1
-	db	$dc,$26
+	db	$dc,$32
 	db	$01
 	db	$a1
 	db	$d1,$31
 	db	$d2,$a1
 ; P3-15
-	db	$dc,$4c
+	db	$dc,$65
 	db	$d1,$13
 	db	$d2,$b3
 	db	$a3
@@ -436,15 +436,15 @@ Music_Gym_Ch3:
 ; P3-16
 	db	$fe
 	dw	$ffff & @sub1
-	db	$dc,$13
+	db	$dc,$19
 	db	$a0
 	db	$00
 	db	$a0
 	db	$c0
-	db	$dc,$4c
+	db	$dc,$65
 	db	$d1,$13
 ; P3-19
-	db	$dc,$13
+	db	$dc,$19
 	db	$30
 	db	$00
 	db	$30
@@ -456,23 +456,23 @@ Music_Gym_Ch3:
 	db	$fd,0
 	dw	$ffff & @mainloop
 @sub1:
-	db	$dc,$7f
+	db	$dc,$81
 	db	$d2,$a5
 	db	$d1,$35
 	db	$d2,$a3
 ; P3-13
-	db	$dc,$4c
+	db	$dc,$65
 	db	$d1,$13
 	db	$d2,$c3
 	db	$a3
 	db	$83
 ; P3-14
-	db	$dc,$13
+	db	$dc,$19
 	db	$70
 	db	$00
 	db	$70
 	db	$80
-	db	$dc,$4c
+	db	$dc,$65
 	db	$a3
 	db	$ff
 ;----------------------------------------

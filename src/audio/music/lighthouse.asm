@@ -220,7 +220,7 @@ Music_Lighthouse_Ch2:
 Music_Lighthouse_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$25
+	db	$d8,$c,$32
 ;	db	$ef,$f0
 @loop30:
 	db	$d5,$91

@@ -109,7 +109,7 @@ Music_PokemonLullaby_Ch2:
 Music_PokemonLullaby_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$3a
+	db	$d8,$c,$4f
 @loop30:
 	db	$d3,$11
 	db	$51

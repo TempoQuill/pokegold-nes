@@ -439,7 +439,7 @@ Music_NationalPark_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$16,$24
-	db	$d8,$c,$19
+	db	$d8,$c,$20
 	db	$d3,$90
 	db	$b0
 ;	db	$ef,$ff
@@ -449,7 +449,7 @@ Music_NationalPark_Ch3:
 ; P3-13
 	db	$dc,$81
 	db	$d2,$bd
-	db	$dc,$19
+	db	$dc,$22
 	db	$d3,$90
 	db	$b0
 ; P3-14
@@ -463,14 +463,14 @@ Music_NationalPark_Ch3:
 ; P3-26
 	db	$fe
 	dw	$ffff & @bass26_29
-	db	$dc,$19
+	db	$dc,$22
 	db	$d3,$30
-	db	$dc,$4d
+	db	$dc,$66
 	db	$d4,$62
 ; P3-30
 	db	$fe
 	dw	$ffff & @bass26_29
-	db	$dc,$19
+	db	$dc,$22
 	db	$d3,$30
 	db	$d4,$60
 	db	$d3,$90
@@ -484,7 +484,7 @@ Music_NationalPark_Ch3:
 	db	$d2,$1f
 ; P3-3
 	db	$2d
-	db	$dc,$19
+	db	$dc,$22
 	db	$90
 	db	$b0
 ; P3-4
@@ -492,7 +492,7 @@ Music_NationalPark_Ch3:
 	db	$d1,$1f
 ; P3-5
 	db	$29
-	db	$dc,$33
+	db	$dc,$44
 	db	$11
 	db	$21
 	db	$41
@@ -503,7 +503,7 @@ Music_NationalPark_Ch3:
 	db	$dc,$81
 	db	$d2,$b9
 ; P3-7
-	db	$dc,$33
+	db	$dc,$44
 	db	$d1,$61
 	db	$41
 	db	$21
@@ -511,88 +511,88 @@ Music_NationalPark_Ch3:
 	db	$d2,$a8
 	db	$d1,$30
 ; P3-8
-	db	$dc,$33
+	db	$dc,$44
 	db	$d1,$41
 	db	$21
 	db	$11
-	db	$dc,$67
+	db	$dc,$81
 	db	$d2,$93
 	db	$d1,$93
-	db	$dc,$33
+	db	$dc,$44
 	db	$41
 ; P3-9
 	db	$dc,$81
 	db	$6d
-	db	$dc,$19
+	db	$dc,$22
 	db	$30
 	db	$40
 ; P3-10
-	db	$dc,$33
+	db	$dc,$44
 	db	$61
 	db	$41
 	db	$21
 	db	$dc,$81
 	db	$d2,$b9
 ; P3-11
-	db	$dc,$33
+	db	$dc,$44
 	db	$d1,$61
 	db	$41
 	db	$21
 	db	$dc,$81
 	db	$d2,$a9
 ; P3-12
-	db	$dc,$33
+	db	$dc,$44
 	db	$d1,$41
 	db	$21
 	db	$11
-	db	$dc,$67
+	db	$dc,$81
 	db	$d2,$93
 	db	$b3
-	db	$dc,$33
+	db	$dc,$44
 	db	$d1,$11
 	db	$ff
 @bass26_29:
-	db	$dc,$4d
+	db	$dc,$66
 	db	$d5,$72
 	db	$d4,$21
 	db	$00
-	db	$dc,$67
+	db	$dc,$81
 	db	$b3
 	db	$20
 	db	$00
-	db	$dc,$19
+	db	$dc,$22
 	db	$b0
-	db	$dc,$4d
+	db	$dc,$66
 	db	$22
 ; P3-27
 	db	$d5,$72
 	db	$d4,$21
 	db	$00
-	db	$dc,$67
+	db	$dc,$81
 	db	$a3
 	db	$20
 	db	$00
-	db	$dc,$19
+	db	$dc,$22
 	db	$a0
-	db	$dc,$4d
+	db	$dc,$66
 	db	$22
 ; P3-28
 	db	$d5,$62
 	db	$d4,$11
 	db	$00
-	db	$dc,$67
+	db	$dc,$81
 	db	$93
 	db	$10
 	db	$00
-	db	$dc,$19
+	db	$dc,$22
 	db	$90
-	db	$dc,$4d
+	db	$dc,$66
 	db	$12
 ; P3-29
 	db	$d5,$b2
 	db	$d4,$61
 	db	$00
-	db	$dc,$67
+	db	$dc,$81
 	db	$d3,$33
 	db	$d4,$60
 	db	$00

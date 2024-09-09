@@ -244,7 +244,7 @@ Music_RocketHideout_Ch2:
 ;----------------------------------------
 Music_RocketHideout_Ch3:
 ;----------------------------------------
-	db	$d8,$c,$4b
+	db	$d8,$c,$5f
 ; P3-2
 @loop30:
 	db	$d5,$41
@@ -253,9 +253,9 @@ Music_RocketHideout_Ch3:
 	db	$a1
 	db	$05
 ; P3-3
-	db	$dc,$25
+	db	$dc,$2f
 	db	$41
-	db	$dc,$4b
+	db	$dc,$5f
 	db	$b3
 	db	$a1
 	db	$07
@@ -269,9 +269,9 @@ Music_RocketHideout_Ch3:
 	db	$d5,$c1
 	db	$05
 ; P3-15
-	db	$dc,$25
+	db	$dc,$2f
 	db	$61
-	db	$dc,$4b
+	db	$dc,$5f
 	db	$d4,$13
 	db	$d5,$c1
 	db	$07
@@ -279,7 +279,7 @@ Music_RocketHideout_Ch3:
 	dw	$ffff & @loop31
 ; P3-18
 @loop32:
-	db	$dc,$4b
+	db	$dc,$5f
 	db	$21
 	db	$01
 	db	$93
@@ -292,16 +292,16 @@ Music_RocketHideout_Ch3:
 	dw	$ffff & @loop32
 ; P3-22
 @loop33:
-	db	$dc,$4b
+	db	$dc,$5f
 	db	$d5,$21
 	db	$01
 	db	$93
 	db	$81
 	db	$05
 ; P3-23
-	db	$dc,$25
+	db	$dc,$2f
 	db	$21
-	db	$dc,$4b
+	db	$dc,$5f
 	db	$93
 	db	$81
 	db	$07

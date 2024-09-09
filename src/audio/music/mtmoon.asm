@@ -77,7 +77,7 @@ DUNloop:
 Music_MtMoon_Ch3:
 ;----------------------------------------
 @mainloop:
-	db	$d8,$c,$3a
+	db	$d8,$c,$46
 ; P3-1
 @loop1:
 	db	$d5,$c1

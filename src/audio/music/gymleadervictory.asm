@@ -238,14 +238,14 @@ Music_GymLeaderVictory_Ch3:
 	db	$d4,$7f
 ; P3-3
 	db	$39
-	db	$dc,$20
+	db	$dc,$23
 	db	$d5,$a1
 	db	$c1
 	db	$d4,$21
 ; P3-4-11
 ;	db	$ef,$f0
 @loop:
-	db	$dc,$20
+	db	$dc,$23
 	db	$31
 	db	$03
 	db	$d5,$a1
@@ -258,10 +258,10 @@ Music_GymLeaderVictory_Ch3:
 	db	$81
 	db	$a1
 	db	$01
-	db	$dc,$40
+	db	$dc,$47
 	db	$d4,$23
 ; P3-6
-	db	$dc,$20
+	db	$dc,$23
 	db	$31
 	db	$03
 	db	$d5,$a1
@@ -322,7 +322,7 @@ Music_GymLeaderVictory_Ch3:
 	db	$fd,0
 	dw	$ffff & @loop
 @base12:
-	db	$dc,$20
+	db	$dc,$23
 	db	$d4,$31
 	db	$01
 	db	$31

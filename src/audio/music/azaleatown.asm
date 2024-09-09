@@ -441,7 +441,7 @@ Music_AzaleaTown_Ch3:
 ; P3-1
 ;	db	$ef,$ff
 	db	$e1,$06,$26
-	db	$d8,$c,$12
+	db	$d8,$c,$1a
 	db	$d5,$90
 	db	$d4,$10
 ; P3-2
@@ -501,12 +501,12 @@ Music_AzaleaTown_Ch3:
 	db	$d5,$b1
 	db	$d4,$40
 	db	$02
-	db	$dc,$25
+	db	$dc,$34
 	db	$81
 ; P3-24
 	db	$d5,$70
 	db	$04
-	db	$dc,$12
+	db	$dc,$1a
 	db	$70
 	db	$70
 	db	$70
@@ -514,7 +514,7 @@ Music_AzaleaTown_Ch3:
 	db	$dc,$81
 	db	$d4,$21
 	db	$01
-	db	$dc,$12
+	db	$dc,$1a
 	db	$d5,$60
 	db	$70
 ; P3-25
@@ -527,7 +527,7 @@ Music_AzaleaTown_Ch3:
 	db	$dc,$81
 	db	$d4,$21
 	db	$01
-	db	$dc,$12
+	db	$dc,$1a
 	db	$d5,$70
 	db	$80
 ; P3-26
@@ -540,7 +540,7 @@ Music_AzaleaTown_Ch3:
 	db	$dc,$81
 	db	$d4,$41
 	db	$01
-	db	$dc,$12
+	db	$dc,$1a
 	db	$d5,$70
 	db	$80
 ; P3-27
@@ -553,7 +553,7 @@ Music_AzaleaTown_Ch3:
 	db	$dc,$81
 	db	$d4,$41
 	db	$01
-	db	$dc,$12
+	db	$dc,$1a
 	db	$d5,$c0
 	db	$d4,$10
 	db	$fd,0

@@ -592,7 +592,7 @@ Music_TitleScreen_Ch3:
 ;----------------------------------------
 	db	$e1,$10,$14
 	db	$e6,$00,$01
-	db	$d8,$c,$7f
+	db	$d8,$c,$81
 ; P3-10
 	db	$d4,$c5
 	db	$31
@@ -621,30 +621,30 @@ Music_TitleScreen_Ch3:
 	db	$d4,$b3
 	db	$91
 ; P3-14
-	db	$dc,$24
+	db	$dc,$2a
 	db	$d5,$81
-	db	$dc,$12
+	db	$dc,$15
 	db	$30
 	db	$20
 	db	$30
 	db	$00
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$12
+	db	$dc,$15
 	db	$30
 	db	$00
 	db	$31
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$31
 ; P3-15
 	db	$61
-	db	$dc,$12
+	db	$dc,$15
 	db	$10
 	db	$d6,$c0
 	db	$d5,$10
 	db	$00
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
 	db	$10
 	db	$00
@@ -653,194 +653,194 @@ Music_TitleScreen_Ch3:
 	db	$11
 ; P3-16
 	db	$81
-	db	$dc,$12
+	db	$dc,$15
 	db	$30
 	db	$20
 	db	$30
 	db	$00
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$12
+	db	$dc,$15
 	db	$30
 	db	$00
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
 	db	$81
 	db	$31
 ; P3-17
 	db	$a1
-	db	$dc,$12
+	db	$dc,$15
 	db	$60
 	db	$50
 	db	$60
 	db	$00
-	db	$dc,$24
+	db	$dc,$2a
 	db	$a1
 	db	$61
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$d4,$11
 ; P3-18
-	db	$dc,$48
+	db	$dc,$54
 	db	$d5,$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
-	db	$dc,$48
+	db	$dc,$54
 	db	$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
 	db	$81
 	db	$31
 ; P3-19
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
 	db	$a1
 	db	$d4,$11
 ; P3-20
-	db	$dc,$48
+	db	$dc,$54
 	db	$d5,$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$c1
 	db	$81
 ; P3-21
-	db	$dc,$48
+	db	$dc,$54
 	db	$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$c1
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$c1
-	db	$dc,$48
+	db	$dc,$54
 	db	$d4,$13
 ; P3-22
 	db	$d5,$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
-	db	$dc,$48
+	db	$dc,$54
 	db	$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
 	db	$81
 	db	$31
 ; P3-23
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
 	db	$a1
 	db	$d4,$11
 ; P3-24
-	db	$dc,$48
+	db	$dc,$54
 	db	$d5,$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$c1
 	db	$d4,$11
 ; P3-25
-	db	$dc,$48
+	db	$dc,$54
 	db	$d5,$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$d4,$33
 ; P3-26
 	db	$d5,$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
-	db	$dc,$48
+	db	$dc,$54
 	db	$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
 	db	$81
 	db	$31
 ; P3-27
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
 	db	$a1
 	db	$d4,$11
 ; P3-28
-	db	$dc,$48
+	db	$dc,$54
 	db	$d5,$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$c1
 	db	$81
 ; P3-29
-	db	$dc,$48
+	db	$dc,$54
 	db	$d4,$33
-	db	$dc,$24
+	db	$dc,$2a
 	db	$d5,$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$d4,$33
-	db	$dc,$24
+	db	$dc,$2a
 	db	$d5,$81
 	db	$d4,$31
 	db	$d5,$a1
 ; P3-30
-	db	$dc,$48
+	db	$dc,$54
 	db	$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
-	db	$dc,$48
+	db	$dc,$54
 	db	$83
-	db	$dc,$24
+	db	$dc,$2a
 	db	$31
 	db	$81
 	db	$31
 ; P3-31
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$61
 	db	$a1
 	db	$d4,$11
 ; P3-32
-	db	$dc,$48
+	db	$dc,$54
 	db	$d5,$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
-	db	$dc,$48
+	db	$dc,$54
 	db	$c3
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$d4,$31
 	db	$d5,$81
@@ -854,97 +854,97 @@ Music_TitleScreen_Ch3:
 	db	$a1
 	db	$d4,$11
 ; P3-34
-	db	$dc,$6c
+	db	$dc,$7e
 	db	$35
 	db	$d5,$b5
-	db	$dc,$48
+	db	$dc,$54
 	db	$d4,$63
 ; P3-35
-	db	$dc,$6c
+	db	$dc,$7e
 	db	$b5
 	db	$65
-	db	$dc,$48
+	db	$dc,$54
 	db	$33
 ; P3-36
-	db	$dc,$6c
+	db	$dc,$7e
 	db	$55
 	db	$15
-	db	$dc,$48
+	db	$dc,$54
 	db	$53
 ; P3-37
-	db	$dc,$6c
+	db	$dc,$7e
 	db	$d3,$15
 	db	$d4,$85
-	db	$dc,$48
+	db	$dc,$54
 	db	$53
 ; P3-38
 	db	$30
 	db	$00
-	db	$d8,$c,$24
+	db	$d8,$c,$2a
 	db	$e6,$00,$00
 	db	$d3,$a1
 	db	$d2,$31
-	db	$dc,$6c
+	db	$dc,$7e
 	db	$a5
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$71
 ; P3-39
-	db	$dc,$12
+	db	$dc,$15
 	db	$30
 	db	$01
 	db	$50
-	db	$dc,$48
+	db	$dc,$54
 	db	$73
-	db	$d8,$8,$30
+	db	$d8,$8,$3a
 	db	$d4,$13
 	db	$13
 	db	$23
 ; P3-40
-	db	$d8,$c,$24
+	db	$d8,$c,$2a
 	db	$30
 	db	$00
 	db	$d3,$a1
 	db	$d2,$31
-	db	$dc,$6c
+	db	$dc,$7e
 	db	$a5
-	db	$dc,$24
+	db	$dc,$2a
 	db	$81
 	db	$71
 ; P3-41
-	db	$dc,$12
+	db	$dc,$15
 	db	$c0
 	db	$01
 	db	$a0
-	db	$dc,$48
+	db	$dc,$54
 	db	$a3
-	db	$d8,$8,$30
+	db	$d8,$8,$3a
 	db	$d4,$13
 	db	$13
 	db	$23
 ; P3-42
-	db	$d8,$c,$30
+	db	$d8,$c,$3a
 	db	$30
 	db	$00
-	db	$d8,$c,$24
+	db	$d8,$c,$2e
 	db	$d3,$a1
 	db	$d2,$31
-	db	$dc,$6c
+	db	$dc,$81
 	db	$85
-	db	$dc,$24
+	db	$dc,$2a
 	db	$51
 	db	$81
 ; P3-43
-	db	$dc,$12
+	db	$dc,$15
 	db	$70
 	db	$50
-	db	$dc,$6c
+	db	$dc,$81
 	db	$35
 	db	$e6,$00,$01
-	db	$d8,$8,$30
+	db	$d8,$8,$3a
 	db	$d4,$13
 	db	$13
-	db	$dc,$18
+	db	$dc,$1d
 	db	$51
 	db	$71
 ; P3-44
@@ -976,7 +976,7 @@ Music_TitleScreen_Ch3:
 ; P3-51
 	db	$6f
 ; P3-52
-	db	$dc,$12
+	db	$dc,$15
 	db	$80
 	db	$02
 	db	$80
@@ -1008,7 +1008,7 @@ Music_TitleScreen_Ch3:
 	db	$02
 	db	$80
 	db	$02
-	db	$d8,$8,$18
+	db	$d8,$8,$1d
 	db	$61
 	db	$61
 	db	$61
@@ -1016,7 +1016,7 @@ Music_TitleScreen_Ch3:
 	db	$61
 	db	$a1
 ; P3-56
-	db	$d8,$c,$12
+	db	$d8,$c,$15
 	db	$80
 	db	$02
 	db	$d6,$80

@@ -552,9 +552,8 @@ Music_Surf_Ch3:
 ; P3-3
 	db	$d2,$1b
 ; P3-4
-	db	$dc,$77
 	db	$37
-	db	$dc,$3b
+	db	$dc,$49
 	db	$43
 ; P3-5
 	db	$63
@@ -564,163 +563,161 @@ Music_Surf_Ch3:
 	db	$dc,$81
 	db	$bb
 ; P3-7
-	db	$dc,$3b
+	db	$dc,$49
 	db	$03
 	db	$93
 	db	$83
 ; P3-8
-	db	$d8,$6,$6f
+	db	$d8,$6,$81
 	db	$70
 	db	$8e
-	db	$dc,$1d
+	db	$dc,$24
 	db	$93
 	db	$83
 ; P3-9
-	db	$dc,$77
+	db	$dc,$81
 	db	$6f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d3,$b7
 ; P3-10
 	db	$d8,$c,$81
 	db	$d2,$9f
 ; P3-11 -tie
 ;		tempo 4 		g#
-	db	$dc,$3b
+	db	$dc,$49
 	db	$83
 	db	$63
 ; P3-12
-	db	$d8,$6,$6f
+	db	$d8,$6,$81
 	db	$50
 	db	$6e
-	db	$dc,$1d
+	db	$dc,$24
 	db	$83
 	db	$63
 ; P3-13
-	db	$dc,$77
+	db	$dc,$81
 	db	$4f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$67
 ; P3-14
 	db	$d8,$c,$81
 	db	$bb
 ; P3-15
-	db	$dc,$3b
+	db	$dc,$49
 	db	$03
 	db	$93
 	db	$83
 ; P3-16
-	db	$d8,$6,$6f
+	db	$d8,$6,$81
 	db	$70
 	db	$8e
-	db	$dc,$1d
+	db	$dc,$24
 	db	$93
 	db	$83
 ; P3-17
-	db	$dc,$77
+	db	$dc,$81
 	db	$6f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d3,$b7
 ; P3-18
 	db	$d8,$c,$81
 	db	$d2,$9f
 ; P3-19 -tie
 ;		tempo 4 		g#
-	db	$dc,$3b
+	db	$dc,$49
 	db	$83
 	db	$63
 ; P3-20
-	db	$d8,$6,$6f
+	db	$d8,$6,$81
 	db	$50
 	db	$6e
-	db	$dc,$1d
+	db	$dc,$24
 	db	$83
 	db	$63
 ; P3-21
-	db	$dc,$77
+	db	$dc,$81
 	db	$4f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d1,$47
 ; P3-22
 	db	$d8,$c,$81
 	db	$1f
 ; P3-23 -tie
 ;		tempo 4 		c
-	db	$dc,$3b
+	db	$dc,$49
 	db	$33
 	db	$43
 ; P3-24
-	db	$d8,$6,$6f
+	db	$d8,$6,$81
 	db	$30
 	db	$4e
-	db	$dc,$1d
+	db	$dc,$24
 	db	$33
 	db	$13
 ; P3-25
-	db	$dc,$77
+	db	$dc,$81
 	db	$d2,$3f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d1,$37
 ; P3-26
 	db	$d8,$c,$81
 	db	$d2,$bb
 ; P3-27
-	db	$d8,$6,$33
+	db	$d8,$6,$3f
 	db	$a0
 	db	$b6
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d1,$17
 	db	$37
 ; P3-28
-	db	$dc,$77
+	db	$dc,$81
 	db	$6f
-	db	$dc,$1d
+	db	$dc,$24
 	db	$43
 	db	$33
 ; P3-29
-	db	$dc,$77
+	db	$dc,$81
 	db	$4f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$37
 ; P3-30
 	db	$d8,$c,$81
 	db	$1b
 ; P3-31 -tie
-	db	$dc,$3b
+	db	$dc,$49
 	db	$13
 	db	$33
 	db	$43
 ; P3-32
-	db	$d8,$6,$6f
+	db	$d8,$6,$81
 	db	$30
 	db	$4e
-	db	$dc,$1d
+	db	$dc,$24
 	db	$33
 	db	$13
 ; P3-33
-	db	$dc,$77
+	db	$dc,$81
 	db	$d2,$3f
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d1,$37
 ; P3-34
 	db	$d8,$c,$81
 	db	$d2,$bb
 ; P3-35
-	db	$d8,$6,$33
+	db	$d8,$6,$3f
 	db	$a0
 	db	$b6
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d1,$17
 	db	$37
 ; P3-36
 	db	$d8,$c,$81
 	db	$6b
 ; P3-37
-	db	$dc,$77
 	db	$87
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d2,$b3
 ; P3-38
-	db	$dc,$3b
 	db	$fe
 	dw	$ffff & @bass38_43
 ; P3-44
@@ -744,9 +741,8 @@ Music_Surf_Ch3:
 ; P3-54
 	db	$d5,$cb
 ; P3-55
-	db	$dc,$77
 	db	$d4,$47
-	db	$dc,$3b
+	db	$dc,$49
 	db	$d5,$c3
 ; P3-56
 	db	$fd,0

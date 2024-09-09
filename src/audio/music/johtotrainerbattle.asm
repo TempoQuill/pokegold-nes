@@ -967,7 +967,7 @@ Music_JohtoTrainerBattle_Ch3:
 ;----------------------------------------
 ;	db	$ef,$f0
 ; P3-1
-	db	$d8,$c,$0d
+	db	$d8,$c,$0f
 	db	$d3,$50
 	db	$40
 	db	$30
@@ -993,7 +993,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$60
 	db	$50
 	db	$40
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$51
 	db	$b1
 	db	$a1
@@ -1045,7 +1045,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$81
 @loop30:
 ; P3-11
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$fe
 	dw	$ffff & @sub3_11_12
 	db	$51
@@ -1138,7 +1138,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$41
 	db	$31
 ; P3-31
-	db	$dc,$6b
+	db	$dc,$79
 	db	$87
 	db	$67
 ; P3-32
@@ -1146,7 +1146,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$47
 ; P3-33
 @loop31:
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$d4,$41
 	db	$b1
 	db	$41
@@ -1193,7 +1193,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$a1
 ; P3-41
 @loop34:
-	db	$dc,$35
+	db	$dc,$3c
 	db	$b3
 	db	$43
 	db	$fd,4
@@ -1209,13 +1209,13 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$fe
 	dw	$ffff & @sub3_45_46
 	db	$41
-	db	$dc,$6b
+	db	$dc,$79
 	db	$67
 ; P3-47
 	db	$fe
 	dw	$ffff & @sub3_45_46
 	db	$d3,$11
-	db	$dc,$6b
+	db	$dc,$79
 	db	$d4,$b7
 	db	$fd,2
 	dw	$ffff & @loop36
@@ -1235,18 +1235,18 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$67
 	db	$87
 ; P3-58
-	db	$dc,$35
+	db	$dc,$3c
 	db	$93
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$41
 	db	$91
-	db	$dc,$47
+	db	$dc,$79
 	db	$d3,$17
 ; P3-59 -tie
 	db	$17
 	db	$47
 ; P3-60
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$d4,$b1
 	db	$91
 	db	$81
@@ -1324,7 +1324,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$91
 	db	$b1
 	db	$d3,$11
-	db	$dc,$6b
+	db	$dc,$79
 	db	$d4,$47
 ; P3-73
 	db	$27
@@ -1348,7 +1348,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$87
 	db	$47
 ; P3-80 -tie
-	db	$dc,$35
+	db	$dc,$3c
 	db	$43
 	db	$b3
 	db	$dc,$81
@@ -1369,7 +1369,7 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$d3,$37
 ; P3-88
 	db	$01
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$d4,$a1
 	db	$b1
 	db	$d3,$31
@@ -1432,9 +1432,9 @@ Music_JohtoTrainerBattle_Ch3:
 	dw	$ffff & @sub3_27_27
 	db	$ff
 @sub3_45_46:
-	db	$dc,$35
+	db	$dc,$3c
 	db	$b3
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$41
 	db	$b1
 	db	$d3,$21
@@ -1442,12 +1442,12 @@ Music_JohtoTrainerBattle_Ch3:
 	db	$d4,$b1
 	db	$91
 ; P3-46
-	db	$dc,$0d
+	db	$dc,$0f
 	db	$80
 	db	$90
 	db	$80
 	db	$90
-	db	$dc,$1a
+	db	$dc,$1e
 	db	$b1
 	db	$ff
 

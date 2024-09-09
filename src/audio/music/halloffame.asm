@@ -94,7 +94,7 @@ Music_HallOfFame_Ch3:
 ;----------------------------------------
 ; P3-1
 @mainloop:
-	db	$d8,$c,$1e
+	db	$d8,$c,$22
 @loop1:
 	db	$d4,$31
 	db	$81
@@ -131,7 +131,7 @@ Music_HallOfFame_Ch3:
 	db	$fd,3
 	dw	$ffff & @loop1
 ; P3-9
-	db	$dc,$3c
+	db	$dc,$44
 	db	$33
 	db	$83
 	db	$33

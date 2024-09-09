@@ -359,16 +359,16 @@ Music_Route2_Ch3:
 	db	$fe
 	dw	$ffff & @bass4_5
 	db	$d4,$31
-	db	$dc,$12
+	db	$dc,$19
 	db	$d1,$10
 	db	$30
 ; P3-10
 	db	$fe
 	dw	$ffff & @bass10_13
 	db	$03
-	db	$dc,$48
+	db	$dc,$66
 	db	$87
-	db	$dc,$12
+	db	$dc,$19
 	db	$61
 	db	$81
 ; P3-14
@@ -381,21 +381,21 @@ Music_Route2_Ch3:
 	db	$fe
 	dw	$ffff & @bass18_20
 	db	$03
-	db	$dc,$3f
+	db	$dc,$59
 	db	$40
 	db	$56
-	db	$dc,$24
+	db	$dc,$33
 	db	$33
 ; P3-21
-	db	$dc,$1b
+	db	$dc,$26
 	db	$d2,$c0
 	db	$d1,$12
-	db	$dc,$24
+	db	$dc,$33
 	db	$d2,$c3
 	db	$a3
-	db	$dc,$48
+	db	$dc,$66
 	db	$c7
-	db	$dc,$24
+	db	$dc,$33
 	db	$83
 	db	$d1,$a3
 	db	$83
@@ -403,10 +403,10 @@ Music_Route2_Ch3:
 	db	$fe
 	dw	$ffff & @bass18_20
 	db	$03
-	db	$dc,$3f
+	db	$dc,$59
 	db	$90
 	db	$a6
-	db	$dc,$24
+	db	$dc,$33
 	db	$c3
 ; P3-25
 	db	$dc,$81
@@ -438,7 +438,7 @@ Music_Route2_Ch3:
 @bass10_13:
 	db	$dc,$81
 	db	$d1,$59
-	db	$dc,$24
+	db	$dc,$33
 	db	$31
 	db	$01
 	db	$11
@@ -446,11 +446,11 @@ Music_Route2_Ch3:
 	db	$d8,$6,$81
 	db	$d2,$70
 	db	$8e
-	db	$dc,$24
+	db	$dc,$33
 	db	$a3
 	db	$b3
 	db	$03
-	db	$dc,$12
+	db	$dc,$19
 	db	$d1,$11
 	db	$31
 ; P3-12
@@ -458,15 +458,16 @@ Music_Route2_Ch3:
 	db	$40
 	db	$5f
 ;      -tie
+	db	$dc,$59
 	db	$56
-	db	$dc,$24
+	db	$dc,$33
 	db	$63
 	db	$53
 ; P3-13
-	db	$dc,$1b
+	db	$dc,$26
 	db	$40
 	db	$52
-	db	$dc,$24
+	db	$dc,$33
 	db	$33
 	db	$13
 	db	$33
@@ -475,19 +476,19 @@ Music_Route2_Ch3:
 	db	$dc,$81
 	db	$d2,$cf
 	db	$03
-	db	$dc,$3f
+	db	$dc,$59
 	db	$d1,$20
 	db	$36
-	db	$dc,$24
+	db	$dc,$33
 	db	$53
 ; P3-19
 	db	$dc,$81
 	db	$d2,$c0
 	db	$d1,$1f
 ;      -tie
-	db	$dc,$1b
+	db	$dc,$26
 	db	$12
-	db	$dc,$24
+	db	$dc,$33
 	db	$33
 	db	$03
 	db	$53

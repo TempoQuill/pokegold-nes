@@ -602,7 +602,7 @@ Music_ChampionBattle_Ch2:
 Music_ChampionBattle_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$33
+	db	$d8,$c,$40
 @loop301:
 	db	$d4,$40
 	db	$06
@@ -656,13 +656,13 @@ Music_ChampionBattle_Ch3:
 	db	$00
 	db	$d3,$23
 ; P3-17
-	db	$dc,$67
+	db	$dc,$7f
 	db	$47
 	db	$d4,$47
 ; P3-18
-	db	$dc,$33
+	db	$dc,$40
 	db	$c3
-	db	$dc,$19
+	db	$dc,$20
 	db	$81
 	db	$c1
 	db	$71
@@ -726,7 +726,7 @@ Music_ChampionBattle_Ch3:
 	db	$21
 	db	$11
 ; P3-31
-	db	$dc,$67
+	db	$dc,$7f
 	db	$d4,$b7
 	db	$47
 ; P3-32
@@ -734,7 +734,7 @@ Music_ChampionBattle_Ch3:
 	db	$47
 ; P3-33
 @loop35:
-	db	$dc,$19
+	db	$dc,$20
 	db	$41
 	db	$71
 	db	$fd,16

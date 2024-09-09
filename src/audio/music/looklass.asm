@@ -60,7 +60,7 @@ Music_LookLass_Ch2:
 Music_LookLass_Ch3:
 ;----------------------------------------
 ; P3-2
-	db	$d8,$c,$20
+	db	$d8,$c,$29
 	db	$07
 	db	$d1,$51
 	db	$41

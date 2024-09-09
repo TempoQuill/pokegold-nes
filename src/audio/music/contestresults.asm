@@ -126,10 +126,10 @@ Music_ContestResults_Ch3:
 ; P3-2
 	db	$d3,$54
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$50
 	db	$60
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$83
 	db	$d2,$13
 ; P3-3
@@ -139,10 +139,10 @@ Music_ContestResults_Ch3:
 ; P3-4
 	db	$34
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$30
 	db	$50
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$63
 	db	$c3
 ; P3-5

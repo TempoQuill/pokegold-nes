@@ -132,21 +132,21 @@ Music_DragonsDen_Ch3:
 ;----------------------------------------
 ; P3-1
 @loop30:
-	db	$d8,$c,$25
+	db	$d8,$c,$2e
 	db	$d3,$21
-	db	$dc,$12
+	db	$dc,$17
 	db	$d4,$90
 	db	$d3,$20
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d4,$91
 	db	$d3,$21
-	db	$dc,$12
+	db	$dc,$17
 	db	$d4,$90
 	db	$d3,$20
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d4,$91
 	db	$d3,$21
-	db	$dc,$12
+	db	$dc,$17
 	db	$d4,$90
 	db	$d3,$20
 	db	$fd,15
@@ -154,21 +154,21 @@ Music_DragonsDen_Ch3:
 	db	$0f
 	db	$d8,$6,$27
 @loop32:
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d4,$23
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$91
 	db	$d4,$21
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d5,$93
 	db	$d4,$23
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$91
 	db	$d4,$21
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d5,$93
 	db	$d4,$23
-	db	$dc,$12
+	db	$dc,$17
 	db	$d5,$91
 	db	$d4,$21
 	db	$fd,16

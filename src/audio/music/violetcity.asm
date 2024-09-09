@@ -463,7 +463,7 @@ Music_VioletCity_Ch2:
 Music_VioletCity_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$5e
+	db	$d8,$c,$6f
 	db	$0f
 ; P3-2
 	db	$05
@@ -482,15 +482,15 @@ Music_VioletCity_Ch3:
 	db	$d4,$20
 	db	$00
 	db	$b3
-	db	$dc,$16
+	db	$dc,$1b
 	db	$a0
 	db	$90
-	db	$dc,$25
+	db	$dc,$37
 	db	$71
 	db	$d5,$b1
 ; P3-6
 @mainloop:
-	db	$d8,$c,$16
+	db	$d8,$c,$1b
 	db	$c0
 	db	$04
 	db	$c0
@@ -498,12 +498,12 @@ Music_VioletCity_Ch3:
 	db	$01
 	db	$c0
 	db	$00
-	db	$dc,$25
+	db	$dc,$37
 	db	$d4,$71
 	db	$d5,$70
 	db	$00
 ; P3-7
-	db	$dc,$16
+	db	$dc,$1b
 	db	$d4,$20
 	db	$04
 	db	$20
@@ -511,12 +511,12 @@ Music_VioletCity_Ch3:
 	db	$01
 	db	$20
 	db	$00
-	db	$dc,$25
+	db	$dc,$37
 	db	$91
 	db	$d5,$90
 	db	$00
 ; P3-8
-	db	$dc,$16
+	db	$dc,$1b
 	db	$70
 	db	$04
 	db	$70
@@ -525,12 +525,12 @@ Music_VioletCity_Ch3:
 	db	$00
 	db	$70
 	db	$00
-	db	$dc,$25
+	db	$dc,$37
 	db	$d4,$71
 	db	$20
 	db	$00
 ; P3-9
-	db	$dc,$16
+	db	$dc,$1b
 	db	$d5,$c0
 	db	$04
 	db	$c0
@@ -538,10 +538,10 @@ Music_VioletCity_Ch3:
 	db	$01
 	db	$c0
 	db	$00
-	db	$dc,$5e
+	db	$dc,$6f
 	db	$d4,$c3
 ; P3-10
-	db	$dc,$16
+	db	$dc,$1b
 	db	$90
 	db	$04
 	db	$90
@@ -550,12 +550,12 @@ Music_VioletCity_Ch3:
 	db	$00
 	db	$80
 	db	$00
-	db	$dc,$25
+	db	$dc,$37
 	db	$71
 	db	$70
 	db	$00
 ; P3-11
-	db	$d8,$6,$16
+	db	$d8,$6,$1b
 ;-----------------------------------------
 	db	$d4,$21
 	db	$61
@@ -565,12 +565,12 @@ Music_VioletCity_Ch3:
 	db	$61
 	db	$91
 	db	$c1
-	db	$dc,$4e
+	db	$dc,$53
 	db	$d3,$25
 	db	$d8,$c,$25
 	db	$04
 ;-----------------------------------------
-	db	$d8,$6,$16
+	db	$d8,$6,$17
 ; P3-12
 	db	$d5,$51
 	db	$09
@@ -580,11 +580,11 @@ Music_VioletCity_Ch3:
 	db	$01
 	db	$71
 	db	$01
-	db	$dc,$25
+	db	$dc,$37
 	db	$d4,$23
 	db	$13
 ; P3-13
-	db	$dc,$16
+	db	$dc,$1b
 	db	$d5,$c1
 	db	$09
 	db	$c1
@@ -592,38 +592,38 @@ Music_VioletCity_Ch3:
 	db	$03
 	db	$c1
 	db	$01
-	db	$dc,$5e
+	db	$dc,$6f
 	db	$a7
 ; P3-14
 	db	$fe
 	dw	$ffff & @sub1
 ; P3-15
-	db	$dc,$16
+	db	$dc,$1b
 	db	$71
 	db	$09
 	db	$c1
 	db	$c1
 	db	$c1
 	db	$01
-	db	$dc,$5e
+	db	$dc,$6f
 	db	$b7
-	db	$dc,$16
+	db	$dc,$1b
 	db	$a1
 	db	$01
 ; P3-16
 	db	$fe
 	dw	$ffff & @sub1
 ; P3-17
-	db	$dc,$16
+	db	$dc,$1b
 	db	$71
 	db	$09
 	db	$c1
 	db	$c1
 	db	$c1
 	db	$01
-	db	$dc,$5e
+	db	$dc,$6f
 	db	$b7
-	db	$dc,$16
+	db	$dc,$1b
 	db	$a1
 	db	$01
 ; P3-18
@@ -634,9 +634,9 @@ Music_VioletCity_Ch3:
 	db	$03
 	db	$51
 	db	$01
-	db	$dc,$25
+	db	$dc,$37
 	db	$c3
-	db	$dc,$16
+	db	$dc,$1b
 	db	$91
 	db	$71
 ; P3-19
@@ -647,9 +647,9 @@ Music_VioletCity_Ch3:
 	db	$03
 	db	$61
 	db	$01
-	db	$dc,$25
+	db	$dc,$37
 	db	$d3,$23
-	db	$dc,$16
+	db	$dc,$1b
 	db	$d4,$b1
 	db	$91
 ; P3-20
@@ -661,21 +661,21 @@ Music_VioletCity_Ch3:
 	db	$01
 	db	$71
 	db	$01
-	db	$dc,$25
+	db	$dc,$37
 	db	$d4,$73
-	db	$dc,$16
+	db	$dc,$1b
 	db	$d5,$71
 	db	$91
 ; P3-21
-	db	$dc,$7f
+	db	$dc,$81
 	db	$d4,$7b
-	db	$dc,$16
+	db	$dc,$1b
 	db	$91
 	db	$a1
-	db	$dc,$5e
+	db	$dc,$6f
 	db	$b7
 	db	$03
-	db	$dc,$25
+	db	$dc,$37
 	db	$d5,$b3
 	db	$fd,0
 	dw	$ffff & @mainloop
@@ -683,7 +683,7 @@ Music_VioletCity_Ch3:
 ;	SUB 
 ;----------------------------------
 @sub1:
-	db	$dc,$16
+	db	$dc,$1b
 	db	$81
 	db	$09
 	db	$81
@@ -692,7 +692,7 @@ Music_VioletCity_Ch3:
 	db	$01
 	db	$a1
 	db	$01
-	db	$dc,$25
+	db	$dc,$37
 	db	$d4,$53
 	db	$d5,$a3
 	db	$ff

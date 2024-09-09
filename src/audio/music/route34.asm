@@ -317,48 +317,48 @@ Music_Route34_Ch2:
 Music_Route34_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$c,$4a
+	db	$d8,$c,$5f
 ; P3-2
 	db	$d4,$60
 	db	$02
 	db	$60
 	db	$00
 	db	$d3,$13
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d4,$11
 	db	$61
 	db	$11
 ; P3-3
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$40
 	db	$02
 	db	$40
 	db	$00
 	db	$d3,$63
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d5,$b1
 	db	$d4,$41
 	db	$51
 @loop30:
 ; P3-4
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$63
-	db	$dc,$25
+	db	$dc,$2f
 	db	$11
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$63
-	db	$dc,$25
+	db	$dc,$2f
 	db	$11
 	db	$61
 	db	$11
 ; P3-5
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$41
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$41
 	db	$81
 	db	$41
@@ -366,24 +366,24 @@ Music_Route34_Ch3:
 	db	$fd,2
 	dw	$ffff & @loop30
 ; P3-8
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$a3
-	db	$dc,$25
+	db	$dc,$2f
 	db	$61
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$a3
-	db	$dc,$25
+	db	$dc,$2f
 	db	$61
 	db	$a1
 	db	$61
 ; P3-9
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$b3
-	db	$dc,$25
+	db	$dc,$2f
 	db	$81
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$b3
-	db	$dc,$25
+	db	$dc,$2f
 	db	$81
 	db	$b1
 	db	$81
@@ -391,13 +391,13 @@ Music_Route34_Ch3:
 	db	$fe
 	dw	$ffff & @bass10
 ; P3-11
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$33
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d5,$a1
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$d4,$33
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d5,$a1
 	db	$d4,$31
 	db	$d5,$a1
@@ -411,13 +411,13 @@ Music_Route34_Ch3:
 	db	$fe
 	dw	$ffff & @bass10
 ; P3-15
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$73
-	db	$dc,$25
+	db	$dc,$2f
 	db	$31
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$73
-	db	$dc,$25
+	db	$dc,$2f
 	db	$31
 	db	$51
 	db	$a1
@@ -434,69 +434,69 @@ Music_Route34_Ch3:
 	db	$fe
 	dw	$ffff & @bass10
 ; P3-20
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$11
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$11
 	db	$81
 	db	$11
 ; P3-21
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$11
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$11
 	db	$51
 	db	$81
 ; P3-22
-	db	$dc,$6f
+	db	$dc,$81
 	db	$a5
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$d3,$73
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d4,$31
 	db	$a1
 	db	$d3,$31
 ; P3-23
-	db	$dc,$37
+	db	$dc,$47
 	db	$12
-	db	$dc,$12
+	db	$dc,$17
 	db	$50
-	db	$dc,$6f
+	db	$dc,$81
 	db	$75
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d4,$31
 	db	$41
 	db	$51
 	db	$fd,0
 	dw	$ffff & @loop30
 @bass10:
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$d4,$73
-	db	$dc,$25
+	db	$dc,$2f
 	db	$31
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$73
-	db	$dc,$25
+	db	$dc,$2f
 	db	$31
 	db	$71
 	db	$31
 	db	$ff
 @bass13:
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$51
-	db	$dc,$4a
+	db	$dc,$5f
 	db	$83
-	db	$dc,$25
+	db	$dc,$2f
 	db	$51
 	db	$81
 	db	$51

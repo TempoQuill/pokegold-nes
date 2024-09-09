@@ -103,7 +103,7 @@ Music_LookOfficer_Ch3:
 	db	$e1,$14,$14
 ;	db	$ef,$f0
 ; P3-2
-	db	$d8,$c,$20
+	db	$d8,$c,$23
 	db	$09
 	db	$d4,$c1
 	db	$01
@@ -121,13 +121,13 @@ Music_LookOfficer_Ch3:
 	db	$41
 ; P3-4
 @mainloop:
-	db	$dc,$60
+	db	$dc,$6a
 	db	$55
 	db	$45
-	db	$dc,$40
+	db	$dc,$47
 	db	$23
 ; P3-5
-	db	$dc,$20
+	db	$dc,$23
 	db	$d2,$c1
 	db	$a1
 	db	$91
@@ -137,7 +137,7 @@ Music_LookOfficer_Ch3:
 	db	$c1
 	db	$d1,$21
 ; P3-6
-	db	$dc,$7f
+	db	$dc,$81
 	db	$67
 	db	$37
 ; P3-7

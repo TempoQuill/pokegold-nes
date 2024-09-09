@@ -641,7 +641,7 @@ Music_KantoWildBattle_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$14,$23
-	db	$d8,$c,$10
+	db	$d8,$c,$11
 ; P3-2
 	db	$d4,$10
 	db	$00
@@ -678,7 +678,7 @@ Music_KantoWildBattle_Ch3:
 	db	$d3,$80
 ; P3-4
 @loop:
-	db	$d8,$c,$10
+	db	$d8,$c,$11
 	db	$d2,$80
 	db	$01
 	db	$d3,$80
@@ -695,9 +695,9 @@ Music_KantoWildBattle_Ch3:
 	db	$c0
 	db	$d3,$10
 	db	$30
-	db	$dc,$60
+	db	$dc,$66
 	db	$45
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$41
 	db	$01
 	db	$81
@@ -714,9 +714,9 @@ Music_KantoWildBattle_Ch3:
 	db	$01
 	db	$d3,$90
 ; P3-7
-	db	$dc,$60
+	db	$dc,$66
 	db	$d1,$25
-	db	$dc,$10
+	db	$dc,$11
 	db	$d2,$90
 	db	$60
 	db	$c0
@@ -744,9 +744,9 @@ Music_KantoWildBattle_Ch3:
 	db	$30
 	db	$40
 	db	$60
-	db	$dc,$60
+	db	$dc,$66
 	db	$85
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$41
 	db	$01
 	db	$81
@@ -763,51 +763,51 @@ Music_KantoWildBattle_Ch3:
 	db	$01
 	db	$d3,$80
 ; P3-11
-	db	$dc,$40
+	db	$dc,$44
 	db	$23
 	db	$93
-	db	$dc,$70
+	db	$dc,$77
 	db	$d2,$66
-	db	$dc,$10
+	db	$dc,$11
 	db	$70
 ; P3-12
-	db	$dc,$20
+	db	$dc,$22
 	db	$81
-	db	$dc,$10
+	db	$dc,$11
 	db	$10
 	db	$d3,$80
 	db	$d2,$10
 	db	$d3,$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$71
-	db	$dc,$10
+	db	$dc,$11
 	db	$10
 	db	$d3,$80
 	db	$d2,$10
 	db	$d3,$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$51
-	db	$dc,$10
+	db	$dc,$11
 	db	$10
 	db	$d3,$80
 ; P3-13
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$81
-	db	$dc,$10
+	db	$dc,$11
 	db	$10
 	db	$d3,$80
 	db	$d2,$10
 	db	$d3,$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$a1
-	db	$dc,$10
+	db	$dc,$11
 	db	$10
 	db	$d3,$80
 	db	$d2,$10
 	db	$d3,$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$81
-	db	$dc,$10
+	db	$dc,$11
 	db	$10
 	db	$d3,$90
 ; P3-14
@@ -818,75 +818,75 @@ Music_KantoWildBattle_Ch3:
 ; P3-15
 	db	$91
 	db	$81
-	db	$dc,$10
+	db	$dc,$11
 	db	$20
 	db	$60
 	db	$90
 	db	$d1,$10
-	db	$dc,$7f
+	db	$dc,$81
 	db	$27
 ; P3-16
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$11
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$50
 	db	$80
 	db	$50
 	db	$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$b1
-	db	$dc,$10
+	db	$dc,$11
 	db	$50
 	db	$80
 	db	$50
 	db	$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$91
-	db	$dc,$10
+	db	$dc,$11
 	db	$50
 	db	$80
 ; P3-17
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$21
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$50
 	db	$80
 	db	$50
 	db	$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$11
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$50
 	db	$80
 	db	$50
 	db	$80
-	db	$dc,$20
+	db	$dc,$22
 	db	$b1
-	db	$dc,$10
+	db	$dc,$11
 	db	$50
 	db	$80
 ; P3-18
-	db	$dc,$20
+	db	$dc,$22
 	db	$d2,$61
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$80
 	db	$d2,$10
 	db	$d3,$80
 	db	$d2,$10
-	db	$dc,$20
+	db	$dc,$22
 	db	$51
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$80
 	db	$d2,$10
 	db	$d3,$80
 	db	$d2,$10
-	db	$dc,$20
+	db	$dc,$22
 	db	$31
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$80
 	db	$d2,$10
 ; P3-19
-	db	$dc,$40
+	db	$dc,$44
 	db	$d3,$b3
 	db	$d2,$13
 	db	$33
@@ -933,7 +933,7 @@ Music_KantoWildBattle_Ch3:
 	db	$20
 	db	$00
 ; P3-22
-	db	$dc,$10
+	db	$dc,$11
 	db	$d2,$81
 	db	$61
 	db	$51
@@ -941,7 +941,6 @@ Music_KantoWildBattle_Ch3:
 	db	$d8,$c,$81
 	db	$8b
 ; P3-23 -tie
-	db	$dc,$7f
 	db	$87
 	db	$d8,$6,$08
 	db	$80
@@ -981,12 +980,12 @@ Music_KantoWildBattle_Ch3:
 ; P3-26
 	db	$10
 	db	$01
-	db	$d8,$6,$10
+	db	$d8,$6,$11
 	db	$10
 	db	$00
 	db	$11
 	db	$d3,$11
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$13
 	db	$01
 	db	$11
@@ -1000,15 +999,15 @@ Music_KantoWildBattle_Ch3:
 	db	$03
 	db	$10
 	db	$00
-	db	$dc,$10
+	db	$dc,$11
 	db	$11
 	db	$d3,$11
-	db	$dc,$20
+	db	$dc,$22
 	db	$d4,$13
 	db	$01
 	db	$11
 	db	$01
-	db	$dc,$10
+	db	$dc,$11
 	db	$11
 	db	$d5,$b1
 	db	$01
@@ -1046,9 +1045,9 @@ Music_KantoWildBattle_Ch3:
 	db	$d4,$c0
 	db	$00
 ; P3-32
-	db	$dc,$40
+	db	$dc,$44
 	db	$d2,$53
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$10
 	db	$50
 	db	$80
@@ -1058,11 +1057,11 @@ Music_KantoWildBattle_Ch3:
 	db	$50
 	db	$04
 ; P3-33
-	db	$dc,$20
+	db	$dc,$22
 	db	$61
 	db	$50
 	db	$00
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$10
 	db	$d4,$80
 	db	$d3,$10
@@ -1076,9 +1075,9 @@ Music_KantoWildBattle_Ch3:
 	db	$50
 	db	$80
 ; P3-34
-	db	$dc,$40
+	db	$dc,$44
 	db	$63
-	db	$dc,$10
+	db	$dc,$11
 	db	$d3,$20
 	db	$60
 	db	$90
@@ -1088,14 +1087,14 @@ Music_KantoWildBattle_Ch3:
 	db	$60
 	db	$04
 ; P3-35
-	db	$dc,$20
+	db	$dc,$22
 	db	$91
 	db	$80
 	db	$04
-	db	$dc,$7f
+	db	$dc,$81
 	db	$67
 ; P3-36
-	db	$dc,$60
+	db	$dc,$66
 	db	$85
 	db	$75
 	db	$51
@@ -1108,17 +1107,17 @@ Music_KantoWildBattle_Ch3:
 ; P3-38
 	db	$dc,$81
 	db	$9b
-	db	$dc,$20
+	db	$dc,$22
 	db	$81
 	db	$61
 ; P3-39
 	db	$91
 	db	$81
 	db	$03
-	db	$dc,$7f
+	db	$dc,$81
 	db	$d1,$27
 ; P3-40
-	db	$dc,$60
+	db	$dc,$66
 	db	$d2,$15
 	db	$d3,$b5
 	db	$91
@@ -1134,7 +1133,7 @@ Music_KantoWildBattle_Ch3:
 	db	$31
 	db	$01
 ; P3-43
-	db	$dc,$40
+	db	$dc,$44
 	db	$d3,$b3
 	db	$d2,$13
 	db	$33

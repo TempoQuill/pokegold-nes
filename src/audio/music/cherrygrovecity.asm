@@ -179,7 +179,7 @@ Music_CherrygroveCity_Ch3:
 ;----------------------------------------
 ; P3-1
 ;		init c 25
-	db	$d8,$c,$26
+	db	$d8,$c,$35
 	db	$03
 	db	$d3,$11
 	db	$d4,$b1
@@ -189,13 +189,13 @@ Music_CherrygroveCity_Ch3:
 	db	$51
 @mainloop:
 ; P3-2
-	db	$dc,$26
+	db	$dc,$35
 	db	$a1
 	db	$61
 	db	$a1
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$d3,$13
-	db	$dc,$26
+	db	$dc,$35
 	db	$d4,$61
 	db	$81
 	db	$a1
@@ -203,9 +203,9 @@ Music_CherrygroveCity_Ch3:
 	db	$a1
 	db	$61
 	db	$a1
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$d3,$13
-	db	$dc,$26
+	db	$dc,$35
 	db	$d4,$61
 	db	$81
 	db	$a1
@@ -213,16 +213,16 @@ Music_CherrygroveCity_Ch3:
 	db	$b1
 	db	$81
 	db	$b1
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$d3,$13
-	db	$dc,$26
+	db	$dc,$35
 	db	$d4,$61
 	db	$81
 	db	$a1
 ; P3-5
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$b3
-	db	$dc,$26
+	db	$dc,$35
 	db	$d3,$11
 	db	$d4,$b1
 	db	$a1
@@ -231,9 +231,9 @@ Music_CherrygroveCity_Ch3:
 	db	$51
 ; P3-6
 	db	$31
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$63
-	db	$dc,$26
+	db	$dc,$35
 	db	$b1
 	db	$61
 	db	$b1
@@ -241,9 +241,9 @@ Music_CherrygroveCity_Ch3:
 	db	$81
 ; P3-7
 	db	$61
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$a3
-	db	$dc,$26
+	db	$dc,$35
 	db	$61
 	db	$a1
 	db	$61
@@ -251,9 +251,9 @@ Music_CherrygroveCity_Ch3:
 	db	$41
 ; P3-8
 	db	$31
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$63
-	db	$dc,$26
+	db	$dc,$35
 	db	$b1
 	db	$61
 	db	$b1
@@ -270,9 +270,9 @@ Music_CherrygroveCity_Ch3:
 	db	$61
 ; P3-10
 	db	$31
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$63
-	db	$dc,$26
+	db	$dc,$35
 	db	$b1
 	db	$61
 	db	$b1
@@ -280,9 +280,9 @@ Music_CherrygroveCity_Ch3:
 	db	$81
 ; P3-11
 	db	$61
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$a3
-	db	$dc,$26
+	db	$dc,$35
 	db	$61
 	db	$a1
 	db	$61
@@ -290,9 +290,9 @@ Music_CherrygroveCity_Ch3:
 	db	$41
 ; P3-12
 	db	$21
-	db	$dc,$4a
+	db	$dc,$6a
 	db	$63
-	db	$dc,$26
+	db	$dc,$35
 	db	$b1
 	db	$61
 	db	$b1

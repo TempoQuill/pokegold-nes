@@ -147,7 +147,7 @@ Music_PokemonChannel_Ch3:
 ;----------------------------------------
 ; P3-1
 	db	$e1,$08,$38
-	db	$d8,$c,$10
+	db	$d8,$c,$15
 ;	db	$ef,$f0
 ; P3-2
 	db	$d5,$80
@@ -159,7 +159,7 @@ Music_PokemonChannel_Ch3:
 	db	$85
 	db	$03
 ; P3-3
-	db	$dc,$10
+	db	$dc,$15
 	db	$10
 	db	$01
 	db	$d5,$80
@@ -169,7 +169,7 @@ Music_PokemonChannel_Ch3:
 	db	$55
 	db	$03
 ; P3-4
-	db	$dc,$43
+	db	$dc,$55
 	db	$d3,$80
 	db	$00
 	db	$30
@@ -184,7 +184,7 @@ Music_PokemonChannel_Ch3:
 	db	$90
 	db	$00
 ; P3-5
-	db	$dc,$10
+	db	$dc,$15
 	db	$30
 	db	$d4,$c0
 	db	$80

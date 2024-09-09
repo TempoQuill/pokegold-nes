@@ -387,7 +387,7 @@ Music_GoldSilverOpening_Ch3:
 	db	$d1,$30
 	db	$00
 ; P3-6
-	db	$d8,$8,$0e
+	db	$d8,$8,$12
 	db	$60
 	db	$d2,$c0
 	db	$a0
@@ -413,7 +413,7 @@ Music_GoldSilverOpening_Ch3:
 	db	$a0
 	db	$60
 ; P3-7
-	db	$d8,$c,$4b
+	db	$d8,$c,$52
 	db	$d2,$a1
 	db	$80
 	db	$00
@@ -439,24 +439,24 @@ Music_GoldSilverOpening_Ch3:
 	db	$33
 ; P3-10 -tie
 	db	$35
-	db	$dc,$15
+	db	$dc,$1b
 	db	$61
 	db	$dc,$81
 	db	$4b
-	db	$dc,$40
+	db	$dc,$52
 	db	$91
 	db	$01
 	db	$75
-	db	$dc,$15
+	db	$dc,$1b
 	db	$41
 ; P3-11
 	db	$dc,$81
 	db	$6b
-	db	$dc,$40
+	db	$dc,$52
 	db	$31
 	db	$01
 	db	$45
-	db	$dc,$15
+	db	$dc,$1b
 	db	$61
 	db	$81
 	db	$01
@@ -465,7 +465,7 @@ Music_GoldSilverOpening_Ch3:
 ; P3-12
 	db	$81
 	db	$01
-	db	$dc,$2b
+	db	$dc,$37
 	db	$a3
 	db	$43
 	db	$61
@@ -545,7 +545,7 @@ Music_GoldSilverOpening_Ch3:
 	db	$b0
 	db	$08
 ; P3-15
-	db	$d8,$c,$2b
+	db	$d8,$c,$37
 	db	$0d
 	db	$d4,$61
 ; P3-16

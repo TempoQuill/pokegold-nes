@@ -252,9 +252,9 @@ Music_PokemonMarch_Ch2:
 ;----------------------------------------
 Music_PokemonMarch_Ch3:
 ;----------------------------------------
-	db	$d8,$c,$16
+	db	$d8,$c,$1c
 	db	$0f
-	db	$d8,$8,$16
+	db	$d8,$8,$1c
 @mainloop:
 ; P3-1
 	db	$fe

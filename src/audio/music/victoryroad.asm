@@ -145,20 +145,20 @@ Music_VictoryRoad_Ch3:
 	dw	$ffff & @loop30
 ; P3-7
 @loop31:
-	db	$dc,$12
+	db	$dc,$17
 	db	$30
 	db	$00
 	db	$c0
 	db	$00
 	db	$60
-	db	$dc,$38
+	db	$dc,$47
 	db	$a2
-	db	$dc,$12
+	db	$dc,$17
 	db	$30
 	db	$c0
 	db	$01
 	db	$30
-	db	$dc,$38
+	db	$dc,$47
 	db	$c2
 	db	$fd,2
 	dw	$ffff & @loop31
@@ -171,20 +171,20 @@ Music_VictoryRoad_Ch3:
 	db	$fd,0
 	dw	$ffff & @loop30
 @sub3_1_1:
-	db	$d8,$c,$12
+	db	$d8,$c,$17
 	db	$d4,$10
 	db	$00
 	db	$a0
 	db	$00
 	db	$40
-	db	$dc,$38
+	db	$dc,$47
 	db	$82
-	db	$dc,$12
+	db	$dc,$17
 	db	$10
 	db	$a0
 	db	$01
 	db	$10
-	db	$dc,$38
+	db	$dc,$47
 	db	$a2
 	db	$ff
 ;----------------------------------------

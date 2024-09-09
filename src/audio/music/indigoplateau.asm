@@ -137,7 +137,7 @@ Music_IndigoPlateau_Ch2:
 Music_IndigoPlateau_Ch3:
 ;----------------------------------------
 ;		init c 28
-	db	$d8,$c,$43
+	db	$d8,$c,$50
 ; P3-1
 @loop30:
 	db	$fe

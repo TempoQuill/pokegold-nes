@@ -217,7 +217,7 @@ Music_DancingHall_Ch3:
 ; P3-1
 ;	db	$ef,$ff
 	db	$e1,$16,$24
-	db	$d8,$6,$0d
+	db	$d8,$6,$0f
 	db	$d2,$a0
 	db	$c0
 	db	$d1,$30
@@ -225,7 +225,7 @@ Music_DancingHall_Ch3:
 ; P3-2
 	db	$dc,$81
 	db	$5c
-	db	$dc,$0d
+	db	$dc,$0f
 	db	$30
 	db	$50
 	db	$a0
@@ -234,13 +234,13 @@ Music_DancingHall_Ch3:
 ; P3-3
 	db	$d4,$6f
 	db	$5d
-	db	$dc,$0d
+	db	$dc,$0f
 	db	$d1,$50
 	db	$60
 ; P3-4
 	db	$dc,$81
 	db	$5c
-	db	$dc,$0d
+	db	$dc,$0f
 	db	$30
 	db	$50
 	db	$a0
@@ -250,7 +250,7 @@ Music_DancingHall_Ch3:
 	db	$d4,$6f
 	db	$5f
 ; P3-6
-	db	$dc,$1a
+	db	$dc,$23
 	db	$d3,$61
 	db	$a1
 	db	$c1
@@ -259,32 +259,32 @@ Music_DancingHall_Ch3:
 	db	$31
 	db	$51
 	db	$a1
-	db	$dc,$28
+	db	$dc,$35
 	db	$b0
 	db	$c2
-	db	$d8,$8,$11
+	db	$d8,$8,$17
 	db	$a0
 	db	$c0
 	db	$a0
-	db	$dc,$35
+	db	$dc,$46
 	db	$62
 	db	$32
 ; P3-7
-	db	$d8,$c,$1a
+	db	$d8,$c,$23
 	db	$50
 	db	$30
 	db	$d3,$a0
 	db	$c0
-	db	$dc,$35
+	db	$dc,$46
 	db	$d2,$a1
-	db	$d8,$8,$11
+	db	$d8,$8,$17
 	db	$60
 	db	$a0
 	db	$60
-	db	$d8,$6,$28
+	db	$d8,$6,$35
 	db	$40
 	db	$52
-	db	$dc,$35
+	db	$dc,$46
 	db	$33
 	db	$d3,$c3
 	db	$d2,$33
@@ -296,7 +296,7 @@ Music_DancingHall_Ch3:
 	db	$5f
 ;      -tie
 	db	$5c
-	db	$dc,$0d
+	db	$dc,$0f
 	db	$d2,$a0
 	db	$c0
 	db	$d1,$30

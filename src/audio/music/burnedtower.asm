@@ -229,7 +229,7 @@ Music_BurnedTower_Ch3:
 ;----------------------------------------
 ;	db	$ef,$0f
 ; P3-1
-	db	$d8,$c,$57
+	db	$d8,$c,$7a
 	db	$0f
 ; P3-2
 	db	$0f
@@ -240,47 +240,47 @@ Music_BurnedTower_Ch3:
 	db	$d4,$43
 @loop30:
 ; P3-5
-	db	$dc,$27
+	db	$dc,$34
 	db	$d5,$a1
 	db	$d4,$51
 	db	$01
 	db	$51
 	db	$01
 	db	$51
-	db	$dc,$4f
+	db	$dc,$68
 	db	$63
 ; P3-6
-	db	$dc,$27
+	db	$dc,$34
 	db	$d5,$a1
 	db	$d4,$51
 	db	$01
 	db	$51
 	db	$01
 	db	$51
-	db	$dc,$4f
+	db	$dc,$68
 	db	$43
 	db	$fd,4
 	dw	$ffff & @loop30
 ; P3-13
 @loop31:
-	db	$dc,$27
+	db	$dc,$34
 	db	$d5,$c1
 	db	$d4,$71
 	db	$01
 	db	$71
 	db	$01
 	db	$71
-	db	$dc,$4f
+	db	$dc,$68
 	db	$83
 ; P3-14
-	db	$dc,$27
+	db	$dc,$34
 	db	$d5,$c1
 	db	$d4,$71
 	db	$01
 	db	$71
 	db	$01
 	db	$71
-	db	$dc,$4f
+	db	$dc,$68
 	db	$63
 	db	$fd,2
 	dw	$ffff & @loop31

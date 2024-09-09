@@ -156,7 +156,7 @@ Music_SproutTower_Ch2:
 Music_SproutTower_Ch3:
 ;----------------------------------------
 	db	$e1,$14,$e8
-	db	$d8,$c,$2d
+	db	$d8,$c,$3f
 ; P3-2
 	db	$d4,$61
 	db	$01
@@ -215,20 +215,20 @@ Music_SproutTower_Ch3:
 ; P3-8
 	db	$dc,$81
 	db	$67
-	db	$dc,$5b
+	db	$dc,$7f
 	db	$73
 	db	$b3
 ; P3-9
 	db	$dc,$81
 	db	$47
-	db	$dc,$5b
+	db	$dc,$7f
 	db	$63
 	db	$73
 ; P3-10
 	db	$dc,$81
 	db	$6f
 ; P3-11
-	db	$dc,$2d
+	db	$dc,$3f
 	db	$61
 	db	$01
 	db	$11

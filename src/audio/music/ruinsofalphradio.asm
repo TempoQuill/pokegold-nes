@@ -73,7 +73,7 @@ UNloop20_1:
 Music_RuinsOfAlphRadio_Ch3:
 ;----------------------------------------
 ; P3-1
-	db	$d8,$6,$0a
+	db	$d8,$6,$0b
 @mainloop:
 	db	$d5,$10
 	db	$20

@@ -77,14 +77,14 @@ Music_LookHiker_Ch3:
 ;----------------------------------------
 	db	$e1,$12,$24
 ; P3-1
-	db	$d8,$c,$24
+	db	$d8,$c,$29
 	db	$d3,$c1
 	db	$b1
 ; P3-2
-	db	$dc,$7f
+	db	$dc,$81
 	db	$c7
 @mainloop:
-	db	$dc,$24
+	db	$dc,$29
 	db	$d2,$41
 	db	$31
 	db	$21

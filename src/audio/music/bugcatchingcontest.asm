@@ -348,7 +348,7 @@ Music_BugCatchingContest_Ch3:
 	db	$00
 	db	$a2
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$a0
 	db	$a0
 	db	$dc,$81
@@ -356,7 +356,7 @@ Music_BugCatchingContest_Ch3:
 	db	$00
 	db	$c2
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$c0
 	db	$c0
 ; P3-3
@@ -365,7 +365,7 @@ Music_BugCatchingContest_Ch3:
 	db	$00
 	db	$12
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$10
 	db	$10
 	db	$dc,$81
@@ -373,7 +373,7 @@ Music_BugCatchingContest_Ch3:
 	db	$00
 	db	$22
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$20
 	db	$20
 @loop:
@@ -381,16 +381,16 @@ Music_BugCatchingContest_Ch3:
 ; P3-4
 	db	$74
 	db	$00
-	db	$dc,$12
+	db	$dc,$17
 	db	$70
 	db	$80
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$a3
 	db	$d2,$33
 ; P3-5
-	db	$dc,$25
+	db	$dc,$2e
 	db	$21
-	db	$dc,$12
+	db	$dc,$17
 	db	$50
 	db	$80
 	db	$c0
@@ -410,15 +410,15 @@ Music_BugCatchingContest_Ch3:
 ; P3-6
 	db	$d3,$59
 	db	$01
-	db	$dc,$12
+	db	$dc,$17
 	db	$51
 	db	$71
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$87
 	db	$d2,$27
 ; P3-7
 	db	$03
-	db	$dc,$12
+	db	$dc,$17
 	db	$51
 	db	$81
 	db	$a1
@@ -445,12 +445,12 @@ Music_BugCatchingContest_Ch3:
 	db	$d1,$33
 	db	$03
 ; P3-9
-	db	$dc,$71
+	db	$dc,$81
 	db	$2b
-	db	$dc,$12
+	db	$dc,$17
 	db	$d2,$c1
 	db	$d1,$21
-	db	$dc,$25
+	db	$dc,$2e
 	db	$d2,$c3
 	db	$03
 	db	$d1,$83
@@ -463,16 +463,16 @@ Music_BugCatchingContest_Ch3:
 	db	$d1,$53
 	db	$33
 	db	$23
-	db	$dc,$12
+	db	$dc,$17
 	db	$d2,$c1
 	db	$d1,$21
 ; P3-11
-	db	$dc,$25
+	db	$dc,$2e
 	db	$33
 	db	$07
 	db	$d2,$c3
 	db	$a3
-	db	$dc,$4b
+	db	$dc,$5c
 	db	$00
 	db	$40
 	db	$70
@@ -535,7 +535,7 @@ Music_BugCatchingContest_Ch3:
 	db	$01
 	db	$a5
 	db	$01
-	db	$dc,$12
+	db	$dc,$17
 	db	$a1
 	db	$a1
 	db	$dc,$81
@@ -543,7 +543,7 @@ Music_BugCatchingContest_Ch3:
 	db	$01
 	db	$c5
 	db	$01
-	db	$dc,$12
+	db	$dc,$17
 	db	$c1
 	db	$c1
 ; P3-16
@@ -552,7 +552,7 @@ Music_BugCatchingContest_Ch3:
 	db	$01
 	db	$15
 	db	$01
-	db	$dc,$12
+	db	$dc,$17
 	db	$11
 	db	$11
 	db	$dc,$81
@@ -560,7 +560,7 @@ Music_BugCatchingContest_Ch3:
 	db	$01
 	db	$25
 	db	$01
-	db	$dc,$12
+	db	$dc,$17
 	db	$21
 	db	$21
 ; P3-17

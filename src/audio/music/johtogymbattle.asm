@@ -644,7 +644,7 @@ Music_JohtoGymBattle_Ch3:
 ;----------------------------------------
 ;	db	$ef,$0f
 ; P3-1
-	db	$d8,$c,$1a
+	db	$d8,$c,$1d
 	db	$d3,$60
 	db	$00
 	db	$d4,$a1
@@ -666,10 +666,10 @@ Music_JohtoGymBattle_Ch3:
 	db	$d4,$51
 	db	$61
 	db	$81
-	db	$dc,$35
+	db	$dc,$3b
 	db	$93
 ; P3-3
-	db	$dc,$1a
+	db	$dc,$1d
 	db	$fe
 	dw	$ffff & @sub31
 ; P3-5
@@ -688,10 +688,10 @@ Music_JohtoGymBattle_Ch3:
 	db	$81
 	db	$91
 	db	$41
-	db	$dc,$35
+	db	$dc,$3b
 	db	$73
 ; P3-7
-	db	$dc,$1a
+	db	$dc,$1d
 	db	$fe
 	dw	$ffff & @sub31
 ; P3-9
@@ -714,7 +714,7 @@ Music_JohtoGymBattle_Ch3:
 	db	$91
 @loop30:
 ; P3-11
-	db	$dc,$1a
+	db	$dc,$1d
 	db	$fe
 	dw	$ffff & @sub32
 ; P3-12
@@ -865,10 +865,10 @@ Music_JohtoGymBattle_Ch3:
 	db	$d3,$41
 	db	$d4,$41
 	db	$d3,$41
-	db	$dc,$35
+	db	$dc,$3b
 	db	$33
 ; P3-41
-	db	$dc,$1a
+	db	$dc,$1d
 	db	$fe
 	dw	$ffff & @sub39
 ; P3-42

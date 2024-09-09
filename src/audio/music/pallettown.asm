@@ -243,7 +243,7 @@ Music_PalletTown_Ch3:
 	db	$e1,$14,$24
 ; P3-2
 @loop:
-	db	$d8,$c,$32
+	db	$d8,$c,$3f
 	db	$d1,$31
 	db	$11
 	db	$d2,$c1
@@ -255,7 +255,7 @@ Music_PalletTown_Ch3:
 ; P3-3
 	db	$dc,$81
 	db	$35
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d2,$c1
 	db	$80
 	db	$00
@@ -268,7 +268,7 @@ Music_PalletTown_Ch3:
 ; P3-4
 	db	$dc,$81
 	db	$d1,$17
-	db	$dc,$32
+	db	$dc,$3f
 	db	$01
 	db	$d2,$71
 	db	$81
@@ -276,13 +276,13 @@ Music_PalletTown_Ch3:
 ; P3-5
 	db	$dc,$81
 	db	$c5
-	db	$dc,$19
+	db	$dc,$1f
 	db	$d1,$10
 	db	$d2,$c0
 	db	$dc,$81
 	db	$a7
 ; P3-6
-	db	$dc,$32
+	db	$dc,$3f
 	db	$d1,$31
 	db	$11
 	db	$d2,$c1
@@ -302,7 +302,7 @@ Music_PalletTown_Ch3:
 	db	$00
 	db	$37
 ; P3-8
-	db	$dc,$32
+	db	$dc,$3f
 	db	$11
 	db	$d2,$c1
 	db	$a1
@@ -315,7 +315,7 @@ Music_PalletTown_Ch3:
 	db	$dc,$81
 	db	$87
 	db	$01
-	db	$dc,$32
+	db	$dc,$3f
 	db	$81
 	db	$a1
 	db	$c1
@@ -323,44 +323,44 @@ Music_PalletTown_Ch3:
 	db	$dc,$81
 	db	$d1,$17
 	db	$35
-	db	$dc,$32
+	db	$dc,$3f
 	db	$11
 ; P3-11
 	db	$dc,$81
 	db	$d2,$c7
 	db	$01
-	db	$dc,$32
+	db	$dc,$3f
 	db	$81
 	db	$a1
 	db	$c1
 ; P3-12
 	db	$d1,$11
 	db	$01
-	db	$dc,$64
+	db	$dc,$7f
 	db	$13
 	db	$dc,$81
 	db	$35
-	db	$dc,$19
+	db	$dc,$1f
 	db	$10
 	db	$30
 ; P3-13
 	db	$dc,$81
 	db	$d2,$c7
 	db	$01
-	db	$dc,$32
+	db	$dc,$3f
 	db	$c1
 	db	$a1
 	db	$81
 ; P3-14
 	db	$dc,$81
 	db	$a7
-	db	$dc,$64
+	db	$dc,$7f
 	db	$53
 	db	$c3
 ; P3-15
 	db	$dc,$81
 	db	$a7
-	db	$dc,$64
+	db	$dc,$7f
 	db	$83
 	db	$53
 ; P3-16

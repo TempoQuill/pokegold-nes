@@ -44,14 +44,13 @@ Sfx_LevelUp_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$8,$25
+	db	$d8,$8,$81
 	db	$d3,$90
 	db	$00
 	db	$90
 	db	$00
 	db	$90
 	db	$00
-	db	$dc,$35
 	db	$d2,$57
 	db	$03
 	db	$ff
@@ -128,7 +127,7 @@ SFX_Item_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$8,$25
+	db	$d8,$8,$81
 	db	$d3,$63
 	db	$01
 	db	$60
@@ -144,7 +143,6 @@ SFX_Item_Ch8:
 	db	$51
 	db	$01
 ; P3-3
-	db	$dc,$35
 	db	$69
 	db	$0d
 	db	$ff
@@ -235,14 +233,14 @@ SFX_Evolution_Ch8:
 ; P3-2
 	db	$d8,$8,$81
 	db	$d4,$1b
-	db	$dc,$3f
+	db	$dc,$49
 	db	$15
-	db	$dc,$15
+	db	$dc,$18
 	db	$d5,$a1
 	db	$d4,$11
 	db	$61
 ; P3-3
-	db	$dc,$3f
+	db	$dc,$49
 	db	$85
 	db	$b5
 	db	$a8
@@ -334,7 +332,7 @@ Sfx_DexFanfare2049_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$c,$7f
+	db	$d8,$c,$81
 ; P3-2
 	db	$d3,$63
 	db	$01
@@ -443,7 +441,7 @@ Sfx_DexFanfare80109_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$c,$1c
+	db	$d8,$c,$24
 	db	$d3,$40
 	db	$00
 	db	$d4,$b1
@@ -457,7 +455,7 @@ Sfx_DexFanfare80109_Ch8:
 	db	$00
 	db	$d4,$b1
 ; P3-3
-	db	$dc,$54
+	db	$dc,$7f
 	db	$46
 	db	$08
 ; P3-4
@@ -594,7 +592,7 @@ Sfx_Fanfare_Ch8:
 	db	$43
 	db	$03
 
-	db	$d8,$4,$38
+	db	$d8,$4,$3d
 	db	$63
 	db	$43
 	db	$23
@@ -602,7 +600,7 @@ Sfx_Fanfare_Ch8:
 	db	$93
 	db	$63
 
-	db	$d8,$4,$54
+	db	$d8,$4,$5c
 	db	$75
 	db	$ff
 Sfx_KeyItem:
@@ -748,7 +746,7 @@ Sfx_Fanfare2_Ch8:
 	db	$01
 	db	$21
 	db	$01
-	db	$d8,$4,$1c
+	db	$d8,$4,$1e
 	db	$21
 	db	$01
 	db	$21
@@ -756,7 +754,7 @@ Sfx_Fanfare2_Ch8:
 	db	$01
 	db	$61
 
-	db	$d8,$4,$54
+	db	$d8,$4,$5c
 	db	$95
 	db	$ff
 Sfx_RegisterPhoneNumber:
@@ -830,16 +828,16 @@ Sfx_RegisterPhoneNumber_Ch8:
 	db	$01
 	db	$d4,$46
 	db	$00
-	db	$dc,$20
 	db	$91
 	db	$00
 	db	$11
 	db	$00
+	db	$dc,$26
 	db	$91
 ; P3-3
+	db	$dc,$39
 	db	$81
 	db	$00
-	db	$dc,$30
 	db	$b2
 	db	$91
 	db	$07
@@ -940,14 +938,14 @@ Sfx_3rdPlace_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$c,$0f
+	db	$d8,$c,$12
 	db	$d4,$a0
 	db	$60
 	db	$a0
 	db	$d3,$10
 	db	$00
 	db	$d4,$a0
-	db	$dc,$5f
+	db	$dc,$81
 	db	$c5
 	db	$ff
 	db	$df
@@ -1024,9 +1022,9 @@ Sfx_UnincludedFanfare_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$6,$3d
+	db	$d8,$6,$49
 	db	$d5,$c7
-	db	$dc,$1e
+	db	$dc,$24
 	db	$a3
 ; P3-2
 	db	$83
@@ -1167,15 +1165,15 @@ Sfx_GetEgg_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$8,$41
+	db	$d8,$8,$4a
 	db	$01
 	db	$d4,$15
 	db	$d5,$b5
-	db	$dc,$15
+	db	$dc,$18
 	db	$d4,$11
 	db	$61
 	db	$81
-	db	$dc,$41
+	db	$dc,$4a
 	db	$b5
 ; P3-3
 	db	$dc,$81
@@ -1292,7 +1290,7 @@ Sfx_MoveDeleted_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$6,$3d
+	db	$d8,$6,$49
 	db	$d5,$97
 	db	$a7
 ; P3-2
@@ -1439,7 +1437,7 @@ Sfx_2ndPlace_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$8,$1e
+	db	$d8,$8,$18
 	db	$d4,$10
 	db	$00
 	db	$10
@@ -1613,7 +1611,7 @@ Sfx_1stPlace_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$c,$62
+	db	$d8,$c,$77
 	db	$d5,$80
 	db	$00
 	db	$80
@@ -1767,7 +1765,7 @@ Sfx_ChooseACard_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$6,$27
+	db	$d8,$6,$33
 	db	$d4,$20
 	db	$00
 	db	$20
@@ -1783,7 +1781,7 @@ Sfx_ChooseACard_Ch8:
 	db	$10
 	db	$00
 	db	$d5,$a3
-	db	$dc,$13
+	db	$dc,$19
 	db	$d4,$51
 	db	$d5,$91
 	db	$c1
@@ -1912,12 +1910,12 @@ Sfx_GetTm_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$6,$12
+	db	$d8,$6,$17
 	db	$d5,$c1
 	db	$01
 	db	$81
 	db	$c1
-	db	$dc,$25
+	db	$dc,$2f
 	db	$d4,$33
 	db	$d5,$80
 	db	$00
@@ -2078,7 +2076,7 @@ Sfx_GetBadge_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$6,$3f
+	db	$d8,$6,$4f
 	db	$d5,$92
 	db	$02
 	db	$d4,$20
@@ -2088,13 +2086,13 @@ Sfx_GetBadge_Ch8:
 	db	$01
 	db	$61
 	db	$01
-	db	$dc,$0f
+	db	$dc,$13
 	db	$21
 	db	$11
 	db	$d5,$b1
 	db	$91
 ; P3-3
-	db	$dc,$3f
+	db	$dc,$4f
 	db	$82
 	db	$02
 	db	$d4,$40
@@ -2104,7 +2102,7 @@ Sfx_GetBadge_Ch8:
 	db	$01
 	db	$81
 	db	$01
-	db	$dc,$0f
+	db	$dc,$13
 	db	$81
 	db	$61
 	db	$81
@@ -2246,7 +2244,7 @@ Sfx_QuitSlots_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$8,$17
+	db	$d8,$8,$1f
 	db	$d4,$21
 	db	$01
 	db	$61
@@ -2374,17 +2372,17 @@ Sfx_DexFanfareLessThan20_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-2
-	db	$d8,$8,$41
+	db	$d8,$8,$4f
 	db	$d3,$35
 	db	$d4,$a1
 	db	$01
-	db	$dc,$15
+	db	$dc,$1a
 	db	$a1
-	db	$dc,$2b
+	db	$dc,$35
 	db	$b3
-	db	$dc,$15
+	db	$dc,$1a
 	db	$81
-	db	$dc,$41
+	db	$dc,$4f
 	db	$d3,$45
 ; P3-3
 	db	$31
@@ -2497,30 +2495,30 @@ Sfx_DexFanfare140169_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$c,$0f
+	db	$d8,$c,$13
 	db	$03
 ; P3-2
 	db	$d5,$a0
 	db	$d4,$20
 	db	$50
-	db	$dc,$2f
+	db	$dc,$3b
 	db	$a2
 	db	$20
 	db	$00
-	db	$dc,$0f
+	db	$dc,$13
 	db	$30
 	db	$70
 	db	$a0
-	db	$dc,$2f
+	db	$dc,$3b
 	db	$d3,$32
 	db	$d5,$a0
 	db	$00
 ; P3-3
-	db	$dc,$0f
+	db	$dc,$13
 	db	$80
 	db	$c0
 	db	$d4,$30
-	db	$dc,$2f
+	db	$dc,$3b
 	db	$82
 	db	$d5,$c0
 	db	$00
@@ -2795,7 +2793,7 @@ Sfx_DexFanfare200229_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$8,$15
+	db	$d8,$8,$1a
 	db	$d4,$10
 	db	$00
 	db	$10
@@ -2807,17 +2805,17 @@ Sfx_DexFanfare200229_Ch8:
 	db	$51
 	db	$81
 	db	$d3,$11
-	db	$dc,$2b
+	db	$dc,$35
 	db	$d4,$13
-	db	$dc,$15
+	db	$dc,$1a
 	db	$41
 	db	$81
 	db	$b1
 	db	$d3,$41
-	db	$dc,$2b
+	db	$dc,$35
 	db	$d4,$43
 ; P3-3
-	db	$dc,$15
+	db	$dc,$1a
 	db	$30
 	db	$00
 	db	$30
@@ -3002,14 +3000,14 @@ Sfx_DexFanfare230Plus_Ch8:
 ;----------------------------------------
 	db	$df
 ; P3-1
-	db	$d8,$8,$3b
+	db	$d8,$8,$49
 	db	$d4,$85
 ; P3-2
-	db	$dc,$27
+	db	$dc,$30
 	db	$b3
-	db	$dc,$13
+	db	$dc,$18
 	db	$61
-	db	$dc,$3b
+	db	$dc,$49
 	db	$b0
 	db	$00
 	db	$b0
@@ -3022,11 +3020,11 @@ Sfx_DexFanfare230Plus_Ch8:
 	db	$00
 	db	$35
 ; P3-3
-	db	$dc,$27
+	db	$dc,$30
 	db	$a3
-	db	$dc,$13
+	db	$dc,$18
 	db	$61
-	db	$dc,$3b
+	db	$dc,$49
 	db	$a0
 	db	$00
 	db	$a0
@@ -3039,11 +3037,11 @@ Sfx_DexFanfare230Plus_Ch8:
 	db	$00
 	db	$15
 ; P3-4
-	db	$dc,$27
+	db	$dc,$30
 	db	$83
-	db	$dc,$13
+	db	$dc,$18
 	db	$41
-	db	$dc,$27
+	db	$dc,$30
 	db	$80
 	db	$00
 	db	$80
@@ -3216,7 +3214,7 @@ Sfx_RBYPokemonCaught_Ch8:
 ; P3-2
 	db	$d8,$c,$81
 	db	$d3,$67
-	db	$dc,$20
+	db	$dc,$27
 	db	$11
 	db	$51
 	db	$81

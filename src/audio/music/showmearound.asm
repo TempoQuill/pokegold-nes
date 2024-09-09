@@ -203,7 +203,7 @@ Music_ShowMeAround_Ch3:
 ;	db	$ef,$f0
 	db	$e1,$10,$22
 ; P3-2
-	db	$d8,$6,$12
+	db	$d8,$6,$19
 	db	$d5,$c0
 	db	$02
 	db	$d4,$30
@@ -259,7 +259,7 @@ Music_ShowMeAround_Ch3:
 	dw	$ffff & @mainloop
 @sub1:
 ; P3-4
-	db	$dc,$4b
+	db	$dc,$66
 	db	$d5,$a1
 	db	$05
 	db	$d3,$51
@@ -272,7 +272,7 @@ Music_ShowMeAround_Ch3:
 	db	$41
 	db	$01
 ; P3-5
-	db	$dc,$25
+	db	$dc,$33
 	db	$d5,$a1
 	db	$01
 	db	$d3,$51
@@ -286,7 +286,7 @@ Music_ShowMeAround_Ch3:
 	db	$01
 	db	$ff
 @sub2:
-	db	$dc,$4b
+	db	$dc,$66
 	db	$d5,$a1
 	db	$05
 	db	$d3,$51
