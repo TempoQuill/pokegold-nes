@@ -37,8 +37,13 @@ Music_LookPokemaniac_Ch1:
 	db	$02
 	db	$80
 	db	$02
+IFNDEF BUGFIXES
 	db	$fd,4
 	dw	$ffff & @sub3_6
+ELSE
+	db	$fd,4
+	dw	$ffff & @sub7_10
+ENDIF
 ; P1-8
 ; P1-9
 ; P1-10
