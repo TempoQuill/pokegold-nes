@@ -149,8 +149,6 @@ Home1_SwitchLower16K:
 	ASL A
 	ORA #$80
 	STA MMC5_PRGBankSwitch2
-	ORA #1
-	STA MMC5_PRGBankSwitch3
 	RTS
 
 NMI:
@@ -173,13 +171,12 @@ Home1_NMI:
 
 RESET:
 Home1_RESET:
-	LDA #3 ; all 8K switchable
-	STA MMC5_PRGMode
 	LDA #3 ; 1K mode (need the flexibility)
 	STA MMC5_CHRMode
 
 	; PRG RAM handshake
 	LDA #2
+	STA MMC5_PRGMode ; 16K + dual 8K mode (need the speed)
 	STA MMC5_PRGRAMProtect1
 	LDA #1
 	STA MMC5_PRGRAMProtect2
@@ -235,15 +232,16 @@ Home1_RESET:
 	STA $500, X
 	STA $600, X
 	STA $700, X
+	STA $5c00, X ; mmc5 RAM
+	STA $5d00, X ; mmc5 RAM
 	STA $5e00, X ; mmc5 RAM
+	STA $5f00, X ; mmc5 RAM
 	BNE @Loop
 
 	; select the starter PRG banks
-	LDA #0
+	LDA #$80
 	STA zWindow1
 	STA MMC5_PRGBankSwitch2
-	ORA #1
-	STA MMC5_PRGBankSwitch3
 	; starter DPCM bank
 	LDA #PRG_DPCM0
 	STA MMC5_PRGBankSwitch4
