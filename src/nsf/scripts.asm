@@ -1,7 +1,7 @@
 nsf_script_end_cmd = 0
 nsf_cmd_start = $f2
-nsf_music_off_cmd = $f2
-nsf_music_on_cmd = $f3
+nsf_music_off_cmd = $f2		; f2
+nsf_music_on_cmd = $f3		; f3
 nsf_wait_sfx = $f4		; f4
 nsf_skip_frames = $f5		; f5 xx
 nsf_silence_cmd = $f6		; f6 xxyy
