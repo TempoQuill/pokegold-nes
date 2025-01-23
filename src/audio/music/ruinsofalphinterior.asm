@@ -1,5 +1,5 @@
 Music_RuinsOfAlphInterior:
-	db	080h
+	db	040h
 	dw	$ffff & Music_RuinsOfAlphInterior_Ch1
 	db	001h
 	dw	$ffff & Music_RuinsOfAlphInterior_Ch2

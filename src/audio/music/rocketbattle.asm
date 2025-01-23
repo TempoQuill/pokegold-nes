@@ -1,5 +1,5 @@
 Music_RocketBattle:
-	db	080h
+	db	040h
 	dw	$ffff & Music_RocketBattle_Ch1
 	db	001h
 	dw	$ffff & Music_RocketBattle_Ch2

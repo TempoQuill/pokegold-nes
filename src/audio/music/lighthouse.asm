@@ -1,5 +1,5 @@
 Music_Lighthouse:
-	db	0c0h
+	db	080h
 	dw	$ffff & Music_Lighthouse_Ch1
 	db	001h
 	dw	$ffff & Music_Lighthouse_Ch2
