@@ -1,4 +1,12 @@
 .enum $0000
+IRAM_Begin = $0000
+IRAM_End = $0800
+; hardware registers $4000-$5c00 - see below
+MRAM_Begin = $5c00
+MRAM_End = $6000
+WRAM_Begin = $6000
+WRAM_End = $8000
+
 MMC5 = $05
 
 MMC5_VMirror = %01000100
@@ -185,9 +193,3 @@ NSF_PRGBank5 = $5ffd
 NSF_PRGBank6 = $5ffe
 NSF_PRGBank7 = $5fff
 .ende
-
-TILE_WIDTH = 8
-SCREEN_WIDTH = 32
-SCREEN_HEIGHT = 30
-SCREEN_WIDTH_PX = SCREEN_WIDTH * TILE_WIDTH
-SCREEN_HEIGHT_PX = SCREEN_HEIGHT * TILE_WIDTH

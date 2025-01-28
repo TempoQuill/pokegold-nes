@@ -1,0 +1,49 @@
+TILE_WIDTH = 8 ; pixels
+; unused - pertains to VRAM, which is only used for tilemaps
+LEN_1BPP_TILE = 1 * TILE_WIDTH ; bytes
+LEN_2BPP_TILE = 2 * TILE_WIDTH ; bytes
+
+NUM_PAL_COLORS = 4
+PAL_COLOR_SIZE = 2
+PALETTE_SIZE = NUM_PAL_COLORS * PAL_COLOR_SIZE
+
+PALRGB_WHITE = $30
+
+SCREEN_WIDTH  = 32 ; tiles
+SCREEN_HEIGHT = 30 ; tiles
+SCREEN_WIDTH_PX  = SCREEN_WIDTH  * TILE_WIDTH ; pixels
+SCREEN_HEIGHT_PX = SCREEN_HEIGHT * TILE_WIDTH ; pixels
+
+BG_MAP_WIDTH  = 32 ; tiles
+BG_MAP_HEIGHT = 32 ; tiles
+
+METATILE_WIDTH = 4 ; tiles
+SCREEN_META_WIDTH = 8 ; metatiles
+SCREEN_META_HEIGHT = 8 ; metatiles
+SURROUNDING_WIDTH  = SCREEN_META_WIDTH * METATILE_WIDTH ; tiles
+SURROUNDING_HEIGHT = SCREEN_META_HEIGHT * METATILE_WIDTH ; tiles
+MAP_CONNECTION_PADDING_WIDTH = 3 ; metatiles
+
+HP_BAR_LENGTH  = 6 ; tiles
+EXP_BAR_LENGTH = 8 ; tiles
+HP_BAR_LENGTH_PX  = HP_BAR_LENGTH  * TILE_WIDTH ; pixels
+EXP_BAR_LENGTH_PX = EXP_BAR_LENGTH * TILE_WIDTH ; pixels
+
+; GetHPPal return values (see home/tilemap.asm)
+HP_GREEN  = 0
+HP_YELLOW = 1
+HP_RED    = 2
+
+; sprite_oam_struct members (see macros/ram.asm)
+.enum 0
+SPRITEOAMSTRUCT_YCOORD:		.dsb 1 ; 0
+SPRITEOAMSTRUCT_TILE_ID:	.dsb 1 ; 1
+SPRITEOAMSTRUCT_ATTRIBUTES:	.dsb 1 ; 2
+SPRITEOAMSTRUCT_XCOORD:		.dsb 1 ; 3
+SPRITEOAMSTRUCT_LENGTH:
+.ende
+NUM_SPRITE_OAM_STRUCTS = 64 ; see wShadowOAM
+
+SPRITE_GFX_LIST_CAPACITY = 12 ; see wUsedSprites
+
+OAM_YCOORD_HIDDEN = 255 ; hides an OAM offscreen
