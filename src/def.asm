@@ -7,6 +7,7 @@
 .include "src/def/pokemon-constants.asm"
 .include "src/def/pokemon-data-constants.asm"
 .include "src/def/map-object-constants.asm"
+.include "src/def/gfx-constants.asm"
 .include "src/def/hardware.asm"
 .include "src/def/misc.asm"
 .include "src/def/battle.asm"
